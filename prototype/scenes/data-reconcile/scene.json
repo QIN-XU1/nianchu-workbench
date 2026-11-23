@@ -1,0 +1,11 @@
+{
+  "id": "data-reconcile",
+  "name": "数据核对",
+  "desc": "两份数据记录集合与金额是否一致",
+  "check": "check.mjs",
+  "protects": [
+    "completeness",
+    "uniqueness"
+  ],
+  "baselineDir": "baseline"
+}

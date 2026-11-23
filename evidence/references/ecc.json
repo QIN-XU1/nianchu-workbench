@@ -1,0 +1,118 @@
+{
+  "id": "ecc",
+  "name": "ECC",
+  "url": "https://github.com/affaan-m/ECC",
+  "target": "D:\\refs\\ecc.git",
+  "at": "2026-11-19T01:08:45.157Z",
+  "materialize": {
+    "materialized": false,
+    "onDisk": 87
+  },
+  "dir": "D:\\refs\\ecc.git",
+  "git": {
+    "isGit": true,
+    "head": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7",
+    "committedAt": "2026-11-17 01:41:46 -0500",
+    "subject": "Merge pull request #3969 from shoyann/fix/validate-duplicate-hook-events",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 4878,
+    "mb": 61.9,
+    "topExt": [
+      {
+        "ext": ".md",
+        "files": 2919,
+        "kb": 19020
+      },
+      {
+        "ext": ".js",
+        "files": 1098,
+        "kb": 12347
+      },
+      {
+        "ext": ".json",
+        "files": 276,
+        "kb": 1620
+      },
+      {
+        "ext": ".py",
+        "files": 191,
+        "kb": 1898
+      },
+      {
+        "ext": ".yaml",
+        "files": 59,
+        "kb": 31
+      },
+      {
+        "ext": ".cjs",
+        "files": 37,
+        "kb": 149
+      },
+      {
+        "ext": ".txt",
+        "files": 35,
+        "kb": 128
+      },
+      {
+        "ext": ".sh",
+        "files": 34,
+        "kb": 231
+      },
+      {
+        "ext": ".png",
+        "files": 34,
+        "kb": 22657
+      },
+      {
+        "ext": "(none)",
+        "files": 24,
+        "kb": 27
+      },
+      {
+        "ext": ".yml",
+        "files": 23,
+        "kb": 87
+      },
+      {
+        "ext": ".ts",
+        "files": 23,
+        "kb": 155
+      }
+    ],
+    "largestFile": {
+      "path": "assets/images/longform/01-header.png",
+      "kb": 5557
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [
+      "plugins"
+    ],
+    "agentLoop": [],
+    "subagent": [
+      "agents"
+    ],
+    "memory": [],
+    "mcp": [],
+    "skills": [
+      "skills"
+    ],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [
+      "docs"
+    ],
+    "tests": [
+      "tests"
+    ],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

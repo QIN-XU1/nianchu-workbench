@@ -1,0 +1,62 @@
+{
+  "id": "reverse-eng",
+  "name": "逆向分析",
+  "description": "逆向分析：拆解成熟作品的目录结构、关键模块、数据流。产出发给「架构梳理」与「实施计划」。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "re-board",
+      "title": "管线位置",
+      "sub": "我收到了什么 / 我要产出什么",
+      "type": "sf-board",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3
+    },
+    {
+      "id": "re-doc",
+      "title": "源码预览",
+      "sub": "看拆解出来的文件",
+      "type": "review-doc",
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "docDir": "数据/.dsh/场景记忆/逆向分析/文档"
+    },
+    {
+      "id": "re-files",
+      "title": "库",
+      "sub": "",
+      "type": "review-files",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2,
+      "docDir": "数据/.dsh/场景记忆/逆向分析/文档"
+    },
+    {
+      "id": "re-ai",
+      "title": "AI·逆向分析",
+      "sub": "拆实现细节 / 找可复用模式",
+      "type": "harness",
+      "sessionTitle": "逆向分析",
+      "pinTarget": [
+        "逆向分析"
+      ],
+      "col": 3,
+      "row": 4,
+      "w": 2,
+      "h": 2,
+      "sessionId": "session-82189326-e23c-4531-b0be-642232a82ec2"
+    }
+  ],
+  "first": false,
+  "meta": {
+    "pendingSession": true,
+    "pendingReason": "还没有跑过任务，引擎里暂无该场景会话。跑一次后会自动绑定。"
+  },
+  "domain": "调研"
+}

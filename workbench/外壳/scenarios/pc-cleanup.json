@@ -1,0 +1,65 @@
+{
+  "id": "pc-cleanup",
+  "name": "本地电脑",
+  "description": "本地电脑：分区容量 + 磁盘大户排行 + 可清理体检 + 清理台账 + AI 助手（电脑清理 + 本机杂事）",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "pc-drives",
+      "title": "磁盘分区（C 系统 · D 软件 · E 文件 · F 游戏）",
+      "type": "pc-drives",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3
+    },
+    {
+      "id": "pc-r1",
+      "title": "磁盘大户排行",
+      "type": "pc-toplarge",
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 3
+    },
+    {
+      "id": "pc-r2",
+      "title": "可清理体检",
+      "type": "pc-junk",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "id": "pc-r3",
+      "title": "清理台账",
+      "type": "pc-ledger",
+      "col": 3,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "id": "pc-ai",
+      "title": "AI·本地电脑",
+      "type": "harness",
+      "sessionTitle": "本地电脑",
+      "pinTarget": [
+        "本地电脑"
+      ],
+      "col": 1,
+      "row": 6,
+      "w": 4,
+      "h": 2,
+      "sessionId": "session-f89a8e74-e4bd-46e9-9cb1-b912ec1873fb"
+    }
+  ],
+  "first": false,
+  "meta": {
+    "pendingSession": true,
+    "pendingReason": "还没有跑过任务，引擎里暂无该场景会话。跑一次后会自动绑定。"
+  },
+  "domain": "运维"
+}

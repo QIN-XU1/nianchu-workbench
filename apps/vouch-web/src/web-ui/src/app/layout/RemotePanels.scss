@@ -1,0 +1,44 @@
+/* UI 插件宿主（运行时加载，不参与构建） */
+
+.rp {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+.rp__host {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rp__err {
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: #b42318;
+  padding: 2px 14px 0;
+  cursor: help;
+}
+
+/* 插件自己的样式也写在插件目录里（随插件加载，不构建）；
+   这里只给示范插件 status-bar 一个兜底外观，避免插件没带样式时散架。 */
+.uip-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 14px;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: rgba(29, 33, 41, 0.42);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-variant-numeric: tabular-nums;
+}
+.uip-status__label {
+  flex: 0 0 auto;
+  color: #0369a1;
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.uip-status__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

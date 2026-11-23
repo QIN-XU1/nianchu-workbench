@@ -1,0 +1,21 @@
+Using CPython 3.14.6 interpreter at: D:\file\env\Python\Python314\python.exe
+Creating virtual environment at: .venv
+   Updating https://github.com/giampaolo/psutil.git (380bd2b59c67b0e1b04bbf3a90b11744f4f96644)
+  × Failed to download and build `psutil @
+  │ git+https://github.com/giampaolo/psutil.git@380bd2b59c67b0e1b04bbf3a90b11744f4f96644`
+  ├─▶ Git operation failed
+  ├─▶ failed to clone into:
+  │   C:\Users\15282\AppData\Local\uv\cache\git-v0\db\7d3b3876de1b5270
+  ├─▶ failed to fetch commit `380bd2b59c67b0e1b04bbf3a90b11744f4f96644`
+  ╰─▶ process didn't exit successfully: `D:\file\env\Git\cmd\git.exe fetch
+      --force --update-head-ok https://github.com/giampaolo/psutil.git
+      +380bd2b59c67b0e1b04bbf3a90b11744f4f96644:refs/commit/380bd2b59c67b0e1b04bbf3a90b11744f4f96644`
+      (exit code: 128)
+      --- stderr
+      error: RPC failed; curl 92 HTTP/2 stream 5 reset by server (error 0x1
+      PROTOCOL_ERROR)
+      error: 7107 bytes of body are still expected
+      fetch-pack: unexpected disconnect while reading sideband packet
+      fatal: early EOF
+      fatal: fetch-pack: invalid index-pack output
+

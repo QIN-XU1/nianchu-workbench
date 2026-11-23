@@ -1,0 +1,92 @@
+[
+  {
+    "name": "720px 无横向溢出",
+    "pass": true,
+    "detail": "scrollWidth=720"
+  },
+  {
+    "name": "720px 无竖排文字",
+    "pass": true,
+    "detail": "0 个"
+  },
+  {
+    "name": "720px 右栏自动收起",
+    "pass": true,
+    "detail": "display=none"
+  },
+  {
+    "name": "1024px 无竖排",
+    "pass": true,
+    "detail": "0 个"
+  },
+  {
+    "name": "1024px 无溢出",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "神经元过滤降级",
+    "pass": true,
+    "detail": "过滤前 23 节点"
+  },
+  {
+    "name": "清空过滤可恢复",
+    "pass": true,
+    "detail": "23 节点"
+  },
+  {
+    "name": "空 sessionId 被拒",
+    "pass": true,
+    "detail": "{\"code\":\"no-session\",\"message\":\"缺少 sessionId\"}"
+  },
+  {
+    "name": "不抛异常",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "空文本被拒",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "非法方法名被拒",
+    "pass": true,
+    "detail": "rejected"
+  },
+  {
+    "name": "缩放极小不崩",
+    "pass": true,
+    "detail": "zoom=0.01"
+  },
+  {
+    "name": "缩放极大不崩",
+    "pass": true,
+    "detail": "zoom=100"
+  },
+  {
+    "name": "快速切换不崩",
+    "pass": true,
+    "detail": "最终场景 command"
+  },
+  {
+    "name": "切换后无降级面板",
+    "pass": true,
+    "detail": "0 个降级"
+  },
+  {
+    "name": "监听器数量合理",
+    "pass": true,
+    "detail": "1 个"
+  },
+  {
+    "name": "活跃面板数量合理",
+    "pass": true,
+    "detail": "2 个"
+  },
+  {
+    "name": "边界测试期间无异常",
+    "pass": true,
+    "detail": "无"
+  }
+]

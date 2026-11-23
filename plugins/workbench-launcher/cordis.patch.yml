@@ -1,0 +1,3 @@
+- insert:
+    - id: workbench-launcher
+      name: '@local/dsh-workbench-launcher'

@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-06T15:21:38.577Z",
+  "baseline": {
+    "privMB": 691,
+    "procs": 8
+  },
+  "results": [
+    {
+      "i": 2,
+      "host": "www.doubao.com",
+      "src": "https://www.doubao.com/chat/",
+      "deltaMB": 56,
+      "procDelta": 0
+    },
+    {
+      "i": 1,
+      "host": "127.0.0.1",
+      "src": "http://127.0.0.1:31238/chat",
+      "deltaMB": 12,
+      "procDelta": 0
+    },
+    {
+      "i": 0,
+      "host": "127.0.0.1",
+      "src": "http://127.0.0.1:31238/chat",
+      "deltaMB": 4,
+      "procDelta": 0
+    }
+  ],
+  "totalMarginalMB": 72
+}

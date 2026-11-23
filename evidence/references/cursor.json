@@ -1,0 +1,9 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "url": "https://cursor.com",
+  "target": "D:\\refs\\cursor.git",
+  "at": "2026-11-19T01:08:43.975Z",
+  "state": "noSource",
+  "reason": "不是 GitHub 仓库（https://cursor.com），拿不到源码"
+}

@@ -1,0 +1,38 @@
+﻿dsh : file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/dsh-app-boot/lib/ind
+ex.js:4745
+所在位置 行:9 字符: 1
++ dsh --profile sea --patch "verification\f1-bogus.yml" --dump-config 2 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (file:///D:/file...b/index.js:4745:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+		throw new Error(`${binName}: failed to parse ${label} ${file}: ${String(error)}`);
+		      ^
+
+Error: dsh: failed to parse overlay D:\file\AI Temp\DeepSeek\Agent自研\verification\f1-bogus.yml: YAMLException: duplicat
+ed mapping key (23:7)
+
+ 20 |         default: standard
+ 21 | 
+ 22 |     # 2) 鍦烘櫙 A 鐨?preset锛氳繖灏辨槸"鍦烘櫙"鐨勫叏 ...
+ 23 |       name: '@deepseek-ai/dsh-agent-p ...
+------------^
+ 24 |       config:
+ 25 |         id: sea-data-reconcile
+    at parsePatchList (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/dsh
+-app-boot/lib/index.js:4745:9)
+    at loadOverlayPatches (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai
+/dsh-app-boot/lib/index.js:4715:9)
+    at collectConfigDumpLayers (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepse
+ek-ai/dsh/lib/dump-config-D97dwXdd.js:56:14)
+    at runDumpConfig (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/dsh/
+lib/dump-config-D97dwXdd.js:26:17)
+    at runCli (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/dsh/lib/bin
+.js:241:4)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async runDesktopCli (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-a
+i/dsh-desktop-host/lib/cli.js:96:2)
+    at async file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/dsh-desktop-h
+ost/lib/cli.js:115:2
+
+Node.js v24.21.0

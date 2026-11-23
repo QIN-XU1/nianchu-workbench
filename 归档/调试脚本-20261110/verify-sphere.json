@@ -1,0 +1,76 @@
+{
+  "results": [
+    {
+      "name": "场景已加载",
+      "pass": true,
+      "detail": "10 个"
+    },
+    {
+      "name": "关系边已建立",
+      "pass": true,
+      "detail": "10 条"
+    },
+    {
+      "name": "全部在球面",
+      "pass": true,
+      "detail": "10/10"
+    },
+    {
+      "name": "领域已分类",
+      "pass": true,
+      "detail": "{\"eng\":4,\"content\":3,\"tool\":1,\"social\":2}"
+    },
+    {
+      "name": "可旋转",
+      "pass": true,
+      "detail": "yaw -0.60 → 0.60"
+    },
+    {
+      "name": "节点可拖拽",
+      "pass": true,
+      "detail": "架构梳理 位置已变，dragged=true"
+    },
+    {
+      "name": "整理清除拖拽标记",
+      "pass": true,
+      "detail": "1 → 0"
+    },
+    {
+      "name": "整理后回到球面",
+      "pass": true,
+      "detail": "10/10"
+    },
+    {
+      "name": "节点有附属信息",
+      "pass": true,
+      "detail": "{\"memory\":true,\"identity\":true,\"skills\":[],\"mcp\":[],\"panels\":4}"
+    },
+    {
+      "name": "可点亮",
+      "pass": true,
+      "detail": "架构梳理"
+    },
+    {
+      "name": "可熄灭",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "交互期无异常",
+      "pass": true,
+      "detail": "无"
+    }
+  ],
+  "base": {
+    "scenes": 10,
+    "edges": 10,
+    "domains": {
+      "eng": 4,
+      "content": 3,
+      "tool": 1,
+      "social": 2
+    },
+    "R": 158,
+    "onSphere": 10
+  }
+}

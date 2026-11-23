@@ -1,0 +1,1 @@
+{"id":"NTC-mwldpfbs","at":"2026-11-18T00:24:15.832Z","hash":"20b218860f6afc49","content":"面板族从 6 种扩到 10 种（file/chart/embed/flow/requests/pc-*），场景配置改为 tools/gen-scene-panels.py 生成 —— 你们改场景前先跑它","affected":["hub","frontend-craft","tool-forge"],"delivered":"board-only","note":"已写看板 + 各场景信箱；**没有打扰它们的会话**（默认行为，照搬原文）"}

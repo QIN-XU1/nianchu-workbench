@@ -1,0 +1,44 @@
+{
+  "scenes": {
+    "hub": {
+      "scene": "hub",
+      "tasks": 0,
+      "acked": 0,
+      "sent": 1,
+      "rework": 0,
+      "firstPass": 0,
+      "firstPassRate": null,
+      "reworkRate": null,
+      "crossBoundary": 0,
+      "verdict": "no-data",
+      "hasEnoughSamples": false
+    },
+    "arch-review": {
+      "scene": "arch-review",
+      "tasks": 1,
+      "acked": 1,
+      "sent": 0,
+      "rework": 0,
+      "firstPass": 1,
+      "firstPassRate": 1,
+      "reworkRate": 0,
+      "crossBoundary": 0,
+      "verdict": "no-data",
+      "hasEnoughSamples": false
+    }
+  },
+  "window": {
+    "from": "2026-11-02T11:08:14.452Z",
+    "to": "2026-11-09T11:08:14.452Z",
+    "days": 7
+  },
+  "summary": {
+    "scenes": 2,
+    "withData": 0,
+    "ok": 0,
+    "warn": 0,
+    "bad": 0,
+    "noData": 2
+  },
+  "_at": "2026-11-09T11:08:14.452Z"
+}

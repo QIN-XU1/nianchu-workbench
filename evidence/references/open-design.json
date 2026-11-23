@@ -1,0 +1,121 @@
+{
+  "id": "open-design",
+  "name": "open-design",
+  "url": "https://github.com/nexu-io/open-design",
+  "target": "D:\\refs\\open-design.git",
+  "at": "2026-11-19T01:08:45.651Z",
+  "materialize": {
+    "materialized": true,
+    "onDiskBefore": 0,
+    "onDiskAfter": 52
+  },
+  "dir": "D:\\refs\\open-design.git",
+  "git": {
+    "isGit": true,
+    "head": "07258801b9e4ae80553816bb1606af7aa9a63dff",
+    "committedAt": "2026-11-18 08:18:42 +0000",
+    "subject": "[OPEND-4759] fix(daemon): avoid blocking proxy queries during log discovery (#9532)",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 14290,
+    "mb": 323.9,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 4221,
+        "kb": 58375
+      },
+      {
+        "ext": ".html",
+        "files": 2494,
+        "kb": 24255
+      },
+      {
+        "ext": ".md",
+        "files": 2393,
+        "kb": 23455
+      },
+      {
+        "ext": ".json",
+        "files": 1909,
+        "kb": 14957
+      },
+      {
+        "ext": ".tsx",
+        "files": 1177,
+        "kb": 20935
+      },
+      {
+        "ext": ".css",
+        "files": 565,
+        "kb": 4769
+      },
+      {
+        "ext": ".png",
+        "files": 421,
+        "kb": 91999
+      },
+      {
+        "ext": "(none)",
+        "files": 131,
+        "kb": 127
+      },
+      {
+        "ext": ".py",
+        "files": 118,
+        "kb": 1640
+      },
+      {
+        "ext": ".woff2",
+        "files": 107,
+        "kb": 3098
+      },
+      {
+        "ext": ".js",
+        "files": 85,
+        "kb": 6083
+      },
+      {
+        "ext": ".mjs",
+        "files": 81,
+        "kb": 581
+      }
+    ],
+    "largestFile": {
+      "path": "data/cards/lefarcen-signal-1785911256163.svg",
+      "kb": 3117
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "packages",
+      "apps",
+      "pnpm-workspace.yaml"
+    ],
+    "plugin": [
+      "plugins"
+    ],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [
+      "skills"
+    ],
+    "telemetry": [],
+    "guard": [],
+    "ui": [
+      "apps/web"
+    ],
+    "docs": [
+      "docs"
+    ],
+    "tests": [],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "c1-order-ledger",
+  "name": "订单台账",
+  "desc": "订单与发货记录必须一一对应，金额一致",
+  "check": "check.mjs",
+  "baselineDir": "baseline",
+  "protects": [
+    "completeness",
+    "uniqueness",
+    "referential-integrity"
+  ]
+}

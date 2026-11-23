@@ -1,0 +1,12 @@
+{
+  "id": "self-review",
+  "name": "自我复盘",
+  "desc": "自己的档案必须有索引；索引不得指向不存在的档案；档案名不得重复",
+  "check": "check.mjs",
+  "baselineDir": "baseline",
+  "protects": [
+    "completeness",
+    "uniqueness",
+    "required-field"
+  ]
+}

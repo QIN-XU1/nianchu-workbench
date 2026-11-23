@@ -1,0 +1,16 @@
+{
+  "name": "dsh-profile-sea",
+  "private": true,
+  "dependencies": {
+    "dsh-superagent": "link:D:/file/AI Temp/DeepSeek/Agent自研/verification/sa-build"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dsh-superagent"
+      ]
+    }
+  }
+}

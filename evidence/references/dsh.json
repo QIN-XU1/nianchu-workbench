@@ -1,0 +1,128 @@
+{
+  "id": "dsh",
+  "name": "DeepSeek Harness",
+  "url": "https://github.com/deepseek-ai/deepseek-harness",
+  "target": "D:\\refs\\dsh.git",
+  "at": "2026-11-19T01:08:43.975Z",
+  "materialize": {
+    "materialized": false,
+    "onDisk": 61
+  },
+  "dir": "D:\\refs\\dsh.git",
+  "git": {
+    "isGit": true,
+    "head": "2e39e70496aa02986ca6a820c5d497e816b69d7e",
+    "committedAt": "2026-11-18 18:58:42 +0800",
+    "subject": "Merge pull request #8736 from deepseek-harness/worktree-sync-release-dsh-0.2.2-0.2.2-rc.5-to-master",
+    "branch": "master",
+    "commits": 1
+  },
+  "measure": {
+    "files": 22166,
+    "mb": 151.7,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 6721,
+        "kb": 66459
+      },
+      {
+        "ext": ".md",
+        "files": 5379,
+        "kb": 40671
+      },
+      {
+        "ext": ".json",
+        "files": 3892,
+        "kb": 9233
+      },
+      {
+        "ext": ".yaml",
+        "files": 2286,
+        "kb": 4086
+      },
+      {
+        "ext": ".tsx",
+        "files": 926,
+        "kb": 10941
+      },
+      {
+        "ext": ".yml",
+        "files": 820,
+        "kb": 756
+      },
+      {
+        "ext": ".jsonl",
+        "files": 797,
+        "kb": 8027
+      },
+      {
+        "ext": ".css",
+        "files": 277,
+        "kb": 1118
+      },
+      {
+        "ext": ".mjs",
+        "files": 224,
+        "kb": 920
+      },
+      {
+        "ext": ".txt",
+        "files": 209,
+        "kb": 103
+      },
+      {
+        "ext": ".svg",
+        "files": 85,
+        "kb": 3728
+      },
+      {
+        "ext": ".py",
+        "files": 84,
+        "kb": 904
+      }
+    ],
+    "largestFile": {
+      "path": "pnpm-lock.yaml",
+      "kb": 1250
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "packages",
+      "apps",
+      "pnpm-workspace.yaml"
+    ],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [
+      "packages/subagent"
+    ],
+    "memory": [
+      "packages/context"
+    ],
+    "mcp": [
+      "packages/mcp"
+    ],
+    "skills": [],
+    "telemetry": [
+      "packages/telemetry"
+    ],
+    "guard": [
+      "packages/guard"
+    ],
+    "ui": [
+      "apps/web"
+    ],
+    "docs": [
+      "docs",
+      "website"
+    ],
+    "tests": [],
+    "ci": [
+      ".github/workflows",
+      ".gitlab-ci.yml"
+    ]
+  },
+  "state": "PASS"
+}

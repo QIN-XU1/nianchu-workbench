@@ -1,0 +1,104 @@
+{
+  "id": "weknora",
+  "name": "WeKnora",
+  "url": "https://github.com/Tencent/WeKnora",
+  "target": "D:\\refs\\weknora.git",
+  "at": "2026-11-19T01:00:50.485Z",
+  "materialize": {
+    "materialized": false,
+    "reason": "索引为空（clone 未完成）"
+  },
+  "note": "克隆目录只有 .git 元数据、工作区为空（materialize={\"materialized\":false,\"reason\":\"索引为空（clone 未完成）\"}），改用本地解压目录；用的是本地解压目录（非 git），拿不到 HEAD —— 结论只能算快照，不能复算到提交",
+  "fallbackDir": "D:\\refs\\WeKnora",
+  "dir": "D:\\refs\\WeKnora",
+  "git": {
+    "isGit": false
+  },
+  "measure": {
+    "files": 6244,
+    "mb": 168.9,
+    "topExt": [
+      {
+        "ext": ".go",
+        "files": 3735,
+        "kb": 32326
+      },
+      {
+        "ext": ".ts",
+        "files": 647,
+        "kb": 6835
+      },
+      {
+        "ext": ".sql",
+        "files": 383,
+        "kb": 428
+      },
+      {
+        "ext": ".vue",
+        "files": 272,
+        "kb": 5898
+      },
+      {
+        "ext": ".md",
+        "files": 163,
+        "kb": 2715
+      },
+      {
+        "ext": ".png",
+        "files": 163,
+        "kb": 85989
+      },
+      {
+        "ext": ".svg",
+        "files": 162,
+        "kb": 1101
+      },
+      {
+        "ext": ".py",
+        "files": 153,
+        "kb": 1224
+      },
+      {
+        "ext": ".mjs",
+        "files": 117,
+        "kb": 571
+      },
+      {
+        "ext": ".sh",
+        "files": 64,
+        "kb": 282
+      },
+      {
+        "ext": ".json",
+        "files": 56,
+        "kb": 2748
+      },
+      {
+        "ext": "(none)",
+        "files": 38,
+        "kb": 56
+      }
+    ],
+    "largestFile": {
+      "path": "WeKnora-main/website-docs/public/videos/weknora-v0.9.0-en.mp4",
+      "kb": 23619
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [],
+    "tests": [],
+    "ci": []
+  },
+  "state": "WARN",
+  "reason": "目录存在但不是 git 仓库：可拆解，但拿不到 HEAD，结论不可复算到具体提交"
+}

@@ -1,0 +1,76 @@
+{
+  "what": "拆解文档清单",
+  "at": "2026-11-15T02:15:04.181Z",
+  "total": 17,
+  "totalKB": 707,
+  "docs": [
+    {
+      "name": "closed.md",
+      "kb": 25.7
+    },
+    {
+      "name": "dsh-openclaw.md",
+      "kb": 26.7
+    },
+    {
+      "name": "hermes-ecc.md",
+      "kb": 44.8
+    },
+    {
+      "name": "new3.md",
+      "kb": 71.4
+    },
+    {
+      "name": "omp-aion.md",
+      "kb": 28.4
+    },
+    {
+      "name": "openbitfun.md",
+      "kb": 89
+    },
+    {
+      "name": "orca.md",
+      "kb": 38.2
+    },
+    {
+      "name": "spec.md",
+      "kb": 73.2
+    },
+    {
+      "name": "three.md",
+      "kb": 106.1
+    },
+    {
+      "name": "汇总.md",
+      "kb": 14.5
+    },
+    {
+      "name": "补-codebuddy.md",
+      "kb": 9.9
+    },
+    {
+      "name": "补-cursor.md",
+      "kb": 16.7
+    },
+    {
+      "name": "补-exec-1.md",
+      "kb": 38.5
+    },
+    {
+      "name": "补-exec-2.md",
+      "kb": 38.3
+    },
+    {
+      "name": "补-exec-3.md",
+      "kb": 51.8
+    },
+    {
+      "name": "补-luanyujia.md",
+      "kb": 16.8
+    },
+    {
+      "name": "补-trae.md",
+      "kb": 16.8
+    }
+  ]
+}

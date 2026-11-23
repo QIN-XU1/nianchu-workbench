@@ -1,0 +1,78 @@
+{
+  "at": "2026-11-18T00:08:02.189Z",
+  "host": "Nian",
+  "drives": [
+    {
+      "root": "C:\\",
+      "totalGB": 215,
+      "usedGB": 113,
+      "freeGB": 102,
+      "ratio": 0.527,
+      "tone": "ok"
+    },
+    {
+      "root": "D:\\",
+      "totalGB": 788,
+      "usedGB": 561,
+      "freeGB": 226,
+      "ratio": 0.713,
+      "tone": "ok"
+    }
+  ],
+  "topLarge": [
+    {
+      "path": ".git",
+      "mb": 590,
+      "files": 320
+    },
+    {
+      "path": "C:\\Users\\15282\\.dsh",
+      "mb": 351,
+      "files": 16329
+    },
+    {
+      "path": "research",
+      "mb": 279,
+      "files": 5373
+    },
+    {
+      "path": "apps",
+      "mb": 201,
+      "files": 13229
+    },
+    {
+      "path": "evidence",
+      "mb": 75,
+      "files": 10326
+    },
+    {
+      "path": "prototype",
+      "mb": 27,
+      "files": 363
+    },
+    {
+      "path": "tools",
+      "mb": 1,
+      "files": 164
+    }
+  ],
+  "junk": [
+    {
+      "name": "web-ui node_modules",
+      "mb": 83,
+      "files": 7987,
+      "kind": "可再生（编译产物）",
+      "action": "建议：先看清单再决定（本工具不删）"
+    },
+    {
+      "name": "Vite 构建缓存",
+      "mb": 82,
+      "files": 7959,
+      "kind": "可再生（缓存）",
+      "action": "建议：先看清单再决定（本工具不删）"
+    }
+  ],
+  "ledger": [],
+  "state": "PASS",
+  "why": "2 个盘都读到，无 >90% 的"
+}

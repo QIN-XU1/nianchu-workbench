@@ -1,0 +1,95 @@
+{
+  "at": "2026-11-06T14:56:38.801Z",
+  "gpuProcess": {
+    "WS_MB": 478,
+    "Priv_MB": 438,
+    "Threads": 34,
+    "Handles": 1702,
+    "CPU_s": 506.5
+  },
+  "pages": [
+    {
+      "host": "127.0.0.1",
+      "type": "webview",
+      "dom": 12,
+      "imgs": 0,
+      "vids": 0,
+      "canv": 0,
+      "svgs": 0,
+      "anims": 0,
+      "title": "等待引擎…"
+    },
+    {
+      "host": "www.kimi.com",
+      "type": "webview",
+      "dom": 1027,
+      "imgs": 3,
+      "vids": 0,
+      "canv": 0,
+      "svgs": 31,
+      "anims": 14,
+      "title": "Kimi AI 官网：K3.1 Pro 上线，编程与智能体任"
+    },
+    {
+      "host": "chatglm.cn",
+      "type": "webview",
+      "dom": 1377,
+      "imgs": 18,
+      "vids": 0,
+      "canv": 3,
+      "svgs": 40,
+      "anims": 0,
+      "title": "智谱清言"
+    },
+    {
+      "host": "www.qianwen.com",
+      "type": "webview",
+      "dom": 7330,
+      "imgs": 0,
+      "vids": 0,
+      "canv": 0,
+      "svgs": 11,
+      "anims": 15,
+      "title": "$!seotitle"
+    },
+    {
+      "host": "www.doubao.com",
+      "type": "webview",
+      "dom": 386,
+      "imgs": 5,
+      "vids": 0,
+      "canv": 0,
+      "svgs": 15,
+      "anims": 2,
+      "title": "豆包 - 字节跳动旗下 AI 智能助手"
+    },
+    {
+      "host": "127.0.0.1",
+      "type": "webview",
+      "dom": 12,
+      "imgs": 0,
+      "vids": 0,
+      "canv": 0,
+      "svgs": 0,
+      "anims": 0,
+      "title": "等待引擎…"
+    },
+    {
+      "host": "",
+      "type": "page",
+      "dom": 327,
+      "imgs": 11,
+      "vids": 0,
+      "canv": 1,
+      "svgs": 11,
+      "anims": 3,
+      "title": "DSH 引擎 · DeepSeek 工作台"
+    }
+  ],
+  "totals": {
+    "imgs": 37,
+    "videos": 0,
+    "canvases": 4,
+    "animations": 34
+  }
+}

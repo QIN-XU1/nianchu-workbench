@@ -1,0 +1,19 @@
+{
+  "id": "self-review",
+  "name": "自我复盘",
+  "role": "读全部电子数据，形成懂我的判断",
+  "description": "把散落的个人数据整理成画像洞察。",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "profile-insight",
+      "name": "画像洞察",
+      "type": "profile",
+      "format": "markdown",
+      "to": [
+        "hub"
+      ],
+      "note": "中枢据此调整调度策略（原契约指向不存在的 command 场景，已修正）"
+    }
+  ]
+}

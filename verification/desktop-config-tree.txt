@@ -1,0 +1,7 @@
+﻿dsh : error: profile "desktop" is managed exclusively by the Electron application
+所在位置 行:4 字符: 1
++ dsh --profile desktop --dump-config 2>&1 | Out-File -Encoding UTF8 "v ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: profile ...ron application:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

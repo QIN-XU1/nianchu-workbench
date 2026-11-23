@@ -1,0 +1,97 @@
+[
+  {
+    "name": "应用已初始化",
+    "pass": true,
+    "detail": "phase=ready"
+  },
+  {
+    "name": "骨架三段式",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "右栏有宽度",
+    "pass": true,
+    "detail": "300px"
+  },
+  {
+    "name": "11 个场景标签",
+    "pass": true,
+    "detail": "11 个"
+  },
+  {
+    "name": "有激活场景",
+    "pass": true,
+    "detail": "◦命令"
+  },
+  {
+    "name": "面板已渲染",
+    "pass": true,
+    "detail": "2 个"
+  },
+  {
+    "name": "无降级卡片",
+    "pass": true,
+    "detail": "全部正常"
+  },
+  {
+    "name": "神经元有实例",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "神经元节点数",
+    "pass": true,
+    "detail": "23 个"
+  },
+  {
+    "name": "有 3D 深度（z 轴）",
+    "pass": true,
+    "detail": "z range -0.90..0.97"
+  },
+  {
+    "name": "canvas 存在",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "点亮 API 可用",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "主 Agent 面板存在",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "11 个子 Agent",
+    "pass": true,
+    "detail": "11 行"
+  },
+  {
+    "name": "派发控件齐全",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "dsh-TUI 已挂载",
+    "pass": true,
+    "detail": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.xterm-d"
+  },
+  {
+    "name": "engine.rpc 通道",
+    "pass": true,
+    "detail": "0 个会话"
+  },
+  {
+    "name": "设计令牌生效",
+    "pass": true,
+    "detail": "txt-1=#E9EDF2 base=#0D0F12"
+  },
+  {
+    "name": "控制台零异常",
+    "pass": true,
+    "detail": "无"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "artifacts": [
+    {
+      "id": "competitor-list-c59db7a9",
+      "logicalId": "competitor-list",
+      "name": "竞品清单",
+      "type": "competitor-list",
+      "fromScene": "research",
+      "toScenes": [
+        "competitor-analyze"
+      ],
+      "path": "产物/竞品清单-2026-11-06-4f263847.md",
+      "summary": "",
+      "createdAt": "2026-11-06T23:38:18.599Z",
+      "status": "ready",
+      "consumedBy": [
+        "competitor-analyze"
+      ]
+    },
+    {
+      "id": "feature-matrix-d8f52b3d",
+      "logicalId": "feature-matrix",
+      "name": "功能矩阵",
+      "type": "feature-matrix",
+      "fromScene": "competitor-analyze",
+      "toScenes": [
+        "arch-review"
+      ],
+      "path": "产物/功能矩阵-2026-11-06-e6f5e007.md",
+      "summary": "",
+      "createdAt": "2026-11-06T23:38:18.832Z",
+      "status": "ready",
+      "consumedBy": []
+    }
+  ]
+}

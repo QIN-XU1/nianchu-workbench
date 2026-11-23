@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "name": "神经元已加载",
+      "pass": true,
+      "detail": "11 个场景"
+    },
+    {
+      "name": "有 refresh 方法",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "自动刷新已启动",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "记录了场景 id 基线",
+      "pass": true,
+      "detail": "11 个"
+    },
+    {
+      "name": "场景孵化成功",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "刷新检测到新增",
+      "pass": true,
+      "detail": "e2e-new-mw7lnc3d"
+    },
+    {
+      "name": "场景数增加",
+      "pass": true,
+      "detail": "11 → 12"
+    },
+    {
+      "name": "新场景被标记",
+      "pass": true,
+      "detail": "e2e-new-mw7lnc3d"
+    },
+    {
+      "name": "新场景有坐标",
+      "pass": true,
+      "detail": "dist=191.4"
+    },
+    {
+      "name": "删除被检测到",
+      "pass": true,
+      "detail": "e2e-new-mw7lnc3d"
+    },
+    {
+      "name": "节点已清理",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "场景数恢复",
+      "pass": true,
+      "detail": "11 → 11"
+    },
+    {
+      "name": "全程无异常",
+      "pass": true,
+      "detail": "无"
+    }
+  ],
+  "before": {
+    "count": 11,
+    "ids": [
+      "arch-review",
+      "bilibili",
+      "build-plan",
+      "competitor-analyze",
+      "e2e-new-mw7llvya",
+      "pc-cleanup",
+      "pipeline",
+      "relationship",
+      "research",
+      "reverse-eng",
+      "self-review"
+    ],
+    "hasRefresh": true,
+    "hasAutoRefresh": true,
+    "hasLastIds": 11
+  },
+  "refreshed": {
+    "added": [
+      "e2e-new-mw7lnc3d"
+    ],
+    "removed": []
+  }
+}

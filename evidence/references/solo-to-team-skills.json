@@ -1,0 +1,113 @@
+{
+  "id": "solo-to-team-skills",
+  "name": "solo-to-team-skills",
+  "url": "https://github.com/dabingfy-dot/solo-to-team-skills",
+  "target": "D:\\refs\\solo-to-team-skills.git",
+  "at": "2026-11-19T01:44:32.848Z",
+  "materialize": {
+    "materialized": true,
+    "onDiskBefore": 0,
+    "onDiskAfter": 22
+  },
+  "dir": "D:\\refs\\solo-to-team-skills.git",
+  "git": {
+    "isGit": true,
+    "head": "fedfd4e299f0f0ad9ecd0d3106668f1c4d060576",
+    "committedAt": "2026-11-17 07:54:09 -0500",
+    "subject": "docs: link live documentation from English README",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 837,
+    "mb": 117.6,
+    "topExt": [
+      {
+        "ext": ".md",
+        "files": 288,
+        "kb": 2278
+      },
+      {
+        "ext": ".png",
+        "files": 111,
+        "kb": 4752
+      },
+      {
+        "ext": ".js",
+        "files": 96,
+        "kb": 1004
+      },
+      {
+        "ext": ".json",
+        "files": 79,
+        "kb": 7567
+      },
+      {
+        "ext": ".mjs",
+        "files": 54,
+        "kb": 417
+      },
+      {
+        "ext": ".patch",
+        "files": 45,
+        "kb": 509
+      },
+      {
+        "ext": ".html",
+        "files": 40,
+        "kb": 8145
+      },
+      {
+        "ext": "(none)",
+        "files": 38,
+        "kb": 260
+      },
+      {
+        "ext": ".zip",
+        "files": 19,
+        "kb": 68078
+      },
+      {
+        "ext": ".in",
+        "files": 13,
+        "kb": 57
+      },
+      {
+        "ext": ".css",
+        "files": 12,
+        "kb": 60
+      },
+      {
+        "ext": ".py",
+        "files": 11,
+        "kb": 104
+      }
+    ],
+    "largestFile": {
+      "path": "mas/releases/rc15-skills-rc5-grok-design2-doc1-adapter5/Solo-to-Team-MAS-rc15-skills-rc5-grok-design2-doc1-adapter5-candidate.zip",
+      "kb": 24593
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [
+      "skills"
+    ],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [
+      "docs"
+    ],
+    "tests": [],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

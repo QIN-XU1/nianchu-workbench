@@ -1,0 +1,19 @@
+/**
+ * Auto-generated version info. Do not edit.
+ * Generated: 2026-11-23T08:24:44.164Z
+ */
+
+import type { VersionInfo } from '../shared/types/version';
+
+export const VERSION_INFO: VersionInfo = {
+  "name": "@vouch/web",
+  "version": "0.1.0",
+  "buildDate": "2026-11-23T08:24:44.163Z",
+  "buildTimestamp": 1795422284163,
+  "buildEnv": "production",
+  "releaseChannel": "stable",
+  "isDev": false,
+  "gitCommit": "d421d33",
+  "gitCommitFull": "d421d33f837670d46f4a6900551af9a4d1622b83",
+  "gitBranch": "master"
+};

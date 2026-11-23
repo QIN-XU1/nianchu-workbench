@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-15T15:23:35.709Z",
+  "repos": [
+    {
+      "id": "openclaw",
+      "label": "openclaw",
+      "state": "PASS",
+      "ccRate": 97,
+      "scopeRate": 93,
+      "formatLabel": "格式严格",
+      "covLabel": "高",
+      "covNote": "词表覆盖 94%"
+    },
+    {
+      "id": "weknora",
+      "label": "WeKnora",
+      "state": "PASS",
+      "ccRate": 100,
+      "scopeRate": 99,
+      "formatLabel": "格式严格",
+      "covLabel": "低",
+      "covNote": "词表覆盖 65%（该项目的 scope 不在通用词表内）"
+    },
+    {
+      "id": "omp",
+      "label": "omp-studio",
+      "state": "PASS",
+      "ccRate": 88,
+      "scopeRate": 83,
+      "formatLabel": "格式规范",
+      "covLabel": "中",
+      "covNote": "词表覆盖 83%"
+    },
+    {
+      "id": "ecc",
+      "label": "ECC",
+      "state": "PASS",
+      "ccRate": 55,
+      "scopeRate": 69,
+      "formatLabel": "半规范",
+      "covLabel": "高",
+      "covNote": "词表覆盖 100%"
+    },
+    {
+      "id": "orca",
+      "label": "orca",
+      "state": "PASS",
+      "ccRate": 93,
+      "scopeRate": 100,
+      "formatLabel": "格式严格",
+      "covLabel": "低",
+      "covNote": "词表覆盖 60%（该项目的 scope 不在通用词表内）"
+    },
+    {
+      "id": "craft",
+      "label": "craft-anything",
+      "state": "PASS",
+      "ccRate": 0,
+      "scopeRate": 0,
+      "formatLabel": "自由格式",
+      "covLabel": "低",
+      "covNote": "词表覆盖 0%（该项目的 scope 不在通用词表内）"
+    }
+  ]
+}

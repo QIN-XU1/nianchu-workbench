@@ -1,0 +1,50 @@
+{
+  "id": "reverse-eng",
+  "name": "逆向分析",
+  "role": "拆解成熟作品的实现细节：目录结构、关键模块、数据流",
+  "description": "从成品反推做法。产出：实现细节报告、可复用模式。",
+  "inputs": [
+    {
+      "id": "tech-candidates",
+      "name": "tech-candidates",
+      "from": [
+        "research"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "impl-details",
+      "name": "实现细节",
+      "type": "reverse-report",
+      "to": [
+        "arch-review"
+      ],
+      "format": "markdown",
+      "schema": [
+        "模块",
+        "职责",
+        "关键实现",
+        "可复用的点",
+        "坑"
+      ]
+    },
+    {
+      "id": "reusable-patterns",
+      "name": "可复用模式",
+      "type": "architecture",
+      "to": [
+        "arch-review",
+        "build-plan"
+      ],
+      "format": "markdown",
+      "schema": [
+        "模式名",
+        "出处",
+        "如何用在我们的项目"
+      ]
+    }
+  ]
+}

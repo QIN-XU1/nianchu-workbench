@@ -1,0 +1,42 @@
+{
+  "id": "research",
+  "name": "调研",
+  "description": "调研：左边搜网页，右边 AI 帮你收拢成竞品清单/资料索引。产出会自动发给「竞品拆解」与「架构梳理」。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "rs-web",
+      "title": "网页",
+      "sub": "搜竞品 / 查资料 / 看文档（可切换地址）",
+      "type": "embed",
+      "url": "https://cn.bing.com/",
+      "userAgent": "chrome",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 4
+    },
+    {
+      "id": "rs-ai",
+      "title": "AI·调研",
+      "sub": "把搜到的汇成结构化产物",
+      "type": "harness",
+      "sessionTitle": "调研",
+      "pinTarget": [
+        "调研"
+      ],
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 4,
+      "sessionId": "session-35165f92-7759-4d98-be93-413f4b0f5674"
+    }
+  ],
+  "first": false,
+  "meta": {
+    "pendingSession": true,
+    "pendingReason": "还没有跑过任务，引擎里暂无该场景会话。跑一次后会自动绑定。"
+  },
+  "domain": "调研"
+}

@@ -1,0 +1,110 @@
+{
+  "at": "2026-11-07T00:30:21.705Z",
+  "memory": {
+    "real": 0,
+    "skeleton": 11
+  },
+  "panels": {
+    "total": 37,
+    "aiUnbound": 11
+  },
+  "sessions": 0,
+  "findings": [
+    {
+      "cat": "A-记忆",
+      "item": "B站",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "关系军师",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "命令",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "实施计划",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "本地电脑",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "架构梳理",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "竞品拆解",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "管线",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "自我复盘",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "调研",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "A-记忆",
+      "item": "逆向分析",
+      "verdict": "SCAFFOLD",
+      "detail": "只有骨架"
+    },
+    {
+      "cat": "B-产物",
+      "item": "competitor-list-c59db7a9",
+      "verdict": "CONSUMED",
+      "detail": "被领 1"
+    },
+    {
+      "cat": "B-产物",
+      "item": "feature-matrix-d8f52b3d",
+      "verdict": "READY",
+      "detail": "被领 0"
+    },
+    {
+      "cat": "B-产物",
+      "item": "x-27917889",
+      "verdict": "READY",
+      "detail": "被领 0"
+    },
+    {
+      "cat": "B-事件",
+      "item": "events.jsonl",
+      "verdict": "HAS_EVENTS",
+      "detail": "4 条"
+    },
+    {
+      "cat": "C-技能",
+      "item": "relationship-advisor.md",
+      "verdict": "REFERENCED",
+      "detail": "relationship"
+    }
+  ]
+}

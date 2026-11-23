@@ -1,0 +1,3 @@
+- insert:
+    - id: memory-neuron
+      name: '@local/dsh-memory-neuron'

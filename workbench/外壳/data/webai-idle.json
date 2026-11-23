@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "idleMinutes": 15,
+  "note": "闲置回收：免费 AI 站闲置 N 分钟未使用 → 销毁其 webview 元素以释放进程。默认关闭。",
+  "measured": "实测（本轮关键发现）：导航到 about:blank 无效（进程不变，只省28MB）；销毁元素有效（进程 -1，省 262MB）。",
+  "enable": "改 enabled 为 true 并重启，或运行时 window.__webaiIdleGC_API.setEnabled(true)",
+  "updatedAt": "2026-08-15"
+}

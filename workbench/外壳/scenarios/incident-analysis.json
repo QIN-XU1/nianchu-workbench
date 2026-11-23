@@ -1,0 +1,47 @@
+{
+  "id": "incident-analysis",
+  "name": "故障分析",
+  "description": "故障分析：读 crash-log.jsonl，分类统计、找共同模式、归因、提修复建议。边界：只分析不改代码（改代码归开发场景），不重启 GUI（用户操作），不删日志（证据）。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "in-report",
+      "title": "崩溃分析报告",
+      "sub": "workbench/产物/崩溃分析报告.md",
+      "type": "review-doc",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 5,
+      "file": "产物/崩溃分析报告.md",
+      "docDir": "数据/.dsh/场景记忆/故障分析/文档"
+    },
+    {
+      "id": "in-chat",
+      "title": "AI·故障分析",
+      "sub": "只分析不改代码",
+      "type": "harness",
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 5,
+      "sessionTitle": "故障分析",
+      "pinTarget": [
+        "故障分析"
+      ],
+      "sessionId": "session-052ebe7f-813e-4180-8550-a2c3dbbc54c1"
+    }
+  ],
+  "hatchedAt": "2026-11-09T11:18:28.044Z",
+  "cols": 4,
+  "meta": {
+    "note": "数据源：workbench/外壳/data/crash-log.jsonl",
+    "boundary": "只分析不改代码",
+    "pendingSession": true,
+    "pendingSessionReason": "新场景的专属会话尚未创建。原因：2026-11-09 尝试通过 engine.rpc 创建时返回 \"no cookie (token 可能失效)\"。解决方式：引擎 token 恢复后，进入该场景时引擎会自动创建会话并写回 sessionId，或手工运行 scene-bind.mjs 绑定。",
+    "pendingSessionSince": "2026-11-09",
+    "pendingSessionBlocker": "engine token 失效（no cookie）"
+  },
+  "domain": "运维"
+}

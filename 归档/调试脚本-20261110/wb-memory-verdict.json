@@ -1,0 +1,140 @@
+{
+  "at": "2026-11-06T15:00:37.787Z",
+  "processes": [
+    {
+      "Id": 11052,
+      "PrivMB": 387,
+      "WSMB": 432,
+      "Threads": 29,
+      "Handles": 1662,
+      "CPU": 617.5,
+      "IsMain": false
+    },
+    {
+      "Id": 5468,
+      "PrivMB": 103,
+      "WSMB": 145,
+      "Threads": 49,
+      "Handles": 1683,
+      "CPU": 24.3,
+      "IsMain": true
+    },
+    {
+      "Id": 7984,
+      "PrivMB": 79,
+      "WSMB": 146,
+      "Threads": 20,
+      "Handles": 363,
+      "CPU": 322.6,
+      "IsMain": false
+    },
+    {
+      "Id": 16612,
+      "PrivMB": 67,
+      "WSMB": 132,
+      "Threads": 23,
+      "Handles": 430,
+      "CPU": 9.7,
+      "IsMain": false
+    },
+    {
+      "Id": 17452,
+      "PrivMB": 65,
+      "WSMB": 146,
+      "Threads": 20,
+      "Handles": 335,
+      "CPU": 5.5,
+      "IsMain": false
+    },
+    {
+      "Id": 4684,
+      "PrivMB": 65,
+      "WSMB": 122,
+      "Threads": 21,
+      "Handles": 310,
+      "CPU": 18.6,
+      "IsMain": false
+    },
+    {
+      "Id": 14720,
+      "PrivMB": 63,
+      "WSMB": 117,
+      "Threads": 21,
+      "Handles": 355,
+      "CPU": 6.6,
+      "IsMain": false
+    },
+    {
+      "Id": 13436,
+      "PrivMB": 48,
+      "WSMB": 125,
+      "Threads": 12,
+      "Handles": 535,
+      "CPU": 0.2,
+      "IsMain": false
+    },
+    {
+      "Id": 16760,
+      "PrivMB": 41,
+      "WSMB": 110,
+      "Threads": 20,
+      "Handles": 295,
+      "CPU": 0.5,
+      "IsMain": false
+    },
+    {
+      "Id": 14332,
+      "PrivMB": 30,
+      "WSMB": 102,
+      "Threads": 20,
+      "Handles": 291,
+      "CPU": 0.2,
+      "IsMain": false
+    },
+    {
+      "Id": 17580,
+      "PrivMB": 23,
+      "WSMB": 62,
+      "Threads": 19,
+      "Handles": 598,
+      "CPU": 4.3,
+      "IsMain": false
+    },
+    {
+      "Id": 2144,
+      "PrivMB": 10,
+      "WSMB": 56,
+      "Threads": 8,
+      "Handles": 259,
+      "CPU": 0.2,
+      "IsMain": false
+    },
+    {
+      "Id": 13668,
+      "PrivMB": 9,
+      "WSMB": 31,
+      "Threads": 6,
+      "Handles": 232,
+      "CPU": 0,
+      "IsMain": false
+    }
+  ],
+  "totals": {
+    "privMB": 990,
+    "wsMB": 1726
+  },
+  "byRole": {
+    "gpuMB": 387,
+    "mainMB": 103,
+    "renderMB": 500,
+    "gpuCount": 1,
+    "mainCount": 1,
+    "renderCount": 11
+  },
+  "provableSaving": 52,
+  "verdict": {
+    "controllableMB": 52,
+    "chromiumFixedMB": 387,
+    "otherMB": 551
+  }
+}

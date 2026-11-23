@@ -1,0 +1,68 @@
+{
+  "_note": "进化台账 —— 每次进化都必须登记，否则无法回滚",
+  "_levels": {
+    "L1": "记忆（自动，只追加）",
+    "L2": "技能（回测通过才写）",
+    "L3": "身份（人工确认）"
+  },
+  "_guard": {
+    "OBSERVE_TASKS": 3,
+    "DEGRADE_THRESHOLD": 0.15,
+    "MAX_CONSECUTIVE_DEGRADE": 2
+  },
+  "evolutions": [
+    {
+      "id": "ev-20261109-110831",
+      "scene": "arch-review",
+      "level": "L1",
+      "type": "memory",
+      "target": "引擎数据/.dsh/场景记忆/架构梳理/场景私有记忆.md",
+      "change": "追加坑与决策：状态机末端要显式处理（acked 之后还有 closed）",
+      "trigger": "健康度把 closed 记录误算成未回执，真实数据暴露的 bug",
+      "backtest": null,
+      "humanConfirmed": false,
+      "confirmedBy": null,
+      "at": "2026-11-09T11:08:31.446Z",
+      "observeUntil": "2026-11-12",
+      "result": "stable",
+      "rolledBack": false,
+      "observedAt": "2026-11-11T16:16:53.151Z",
+      "sealedDelta": 0,
+      "samples": 36,
+      "evidence": {
+        "sealedDelta": 0,
+        "samples": 36,
+        "threshold": 0.15,
+        "decidedBy": "DEGRADE_THRESHOLD（自动判定，非人工指定）",
+        "at": "2026-11-11T16:16:53.151Z"
+      }
+    },
+    {
+      "id": "ev-20261111-173315",
+      "scene": "arch-review",
+      "level": "L1",
+      "type": "memory",
+      "target": "数据/.dsh/场景记忆/架构梳理/场景私有记忆.md",
+      "change": "闭环验证自动登记-1794418395709",
+      "trigger": "端到端闭环验证（建单→投递→回复→回执→销账→进化）",
+      "backtest": null,
+      "humanConfirmed": false,
+      "confirmedBy": null,
+      "at": "2026-11-11T17:33:15.754Z",
+      "observeUntil": "2026-11-14",
+      "result": "stable",
+      "rolledBack": false,
+      "observedAt": "2026-11-11T17:33:15.806Z",
+      "sealedDelta": 0,
+      "samples": 68,
+      "evidence": {
+        "sealedDelta": 0,
+        "samples": 68,
+        "threshold": 0.15,
+        "decidedBy": "DEGRADE_THRESHOLD（自动判定，非人工指定）",
+        "at": "2026-11-11T17:33:15.806Z"
+      }
+    }
+  ],
+  "frozen": {}
+}

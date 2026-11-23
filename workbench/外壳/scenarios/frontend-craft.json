@@ -1,0 +1,59 @@
+{
+  "id": "frontend-craft",
+  "name": "前端工坊",
+  "description": "前端工坊：左边看真实页面（可切本地文件或网址），右边 AI 做设计判断与改法。产出「前端改法单」给「实施计划」，「可视验收标准」给「架构梳理」。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "fe-preview",
+      "title": "页面预览",
+      "sub": "查 CSS / 布局 / 可访问性规范",
+      "type": "embed",
+      "url": "https://developer.mozilla.org/zh-CN/docs/Web/CSS",
+      "userAgent": "chrome",
+      "col": 1,
+      "row": 1,
+      "w": 3,
+      "h": 5
+    },
+    {
+      "id": "fe-files",
+      "title": "源码",
+      "sub": "看要改的那几个文件",
+      "type": "review-files",
+      "col": 1,
+      "row": 6,
+      "w": 2,
+      "h": 2,
+      "docDir": "数据/.dsh/场景记忆/前端工坊/文档"
+    },
+    {
+      "id": "fe-board",
+      "title": "管线位置",
+      "sub": "该等谁、该给谁",
+      "type": "sf-board",
+      "col": 3,
+      "row": 6,
+      "w": 1,
+      "h": 2
+    },
+    {
+      "id": "fe-ai",
+      "title": "AI·前端工坊",
+      "sub": "出改法单与可判定验收标准",
+      "type": "harness",
+      "sessionTitle": "前端工坊",
+      "pinTarget": [
+        "前端工坊"
+      ],
+      "col": 4,
+      "row": 1,
+      "w": 2,
+      "h": 7,
+      "sessionId": "session-02e2e12b-1554-449e-8783-9ae1bb1e79c9"
+    }
+  ],
+  "hatchedAt": "2026-11-13T02:49:44.018Z",
+  "domain": "实现"
+}

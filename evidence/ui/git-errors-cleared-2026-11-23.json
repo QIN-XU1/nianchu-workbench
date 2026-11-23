@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-20T00:51:32.134Z",
+  "url": "http://127.0.0.1:47124/",
+  "screenshot": "evidence/ui/git-errors-cleared-2026-11-23.png",
+  "before": {
+    "at": "2026-11-23T04:15 (第102轮)",
+    "consoleTotal": 10,
+    "gitErrors": 3,
+    "tauriIpcErrors": 6,
+    "pluginStatus": "宿主 77 个方法"
+  },
+  "after": {
+    "at": "2026-11-23T08:55 (第115轮)",
+    "consoleTotal": 7,
+    "gitErrors": 0,
+    "tauriIpcErrors": 6,
+    "pluginStatus": "宿主 89 个方法"
+  },
+  "delta": {
+    "consoleTotal": "10 → 7（-3，全部是 git 错误）",
+    "gitErrors": "3 → 0",
+    "methods": "77 → 89"
+  },
+  "conclusion": "第 103-114 轮补的 git 方法（isRepository/repository_basic/branches/status/changed_files/tracked_count/file_content/diff/commits/resolve_revision）在真实界面里生效：GitStateManager 不再报错。剩余 7 条控制台记录全部来自 Tauri IPC（transformCallback undefined），与 git 无关。"
+}

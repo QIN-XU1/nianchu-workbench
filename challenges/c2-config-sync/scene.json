@@ -1,0 +1,11 @@
+{
+  "id": "c2-config-sync",
+  "name": "配置同步",
+  "desc": "三个环境的配置键集合必须一致",
+  "check": "check.mjs",
+  "baselineDir": "baseline",
+  "protects": [
+    "completeness",
+    "uniqueness"
+  ]
+}

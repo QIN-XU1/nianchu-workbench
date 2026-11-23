@@ -1,0 +1,67 @@
+{
+  "areas": [
+    {
+      "panel": "ar-ai",
+      "scene": "架构梳理",
+      "privateMemory": [
+        "架构梳理\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "bp-ai",
+      "scene": "实施计划",
+      "privateMemory": [
+        "实施计划\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "ca-ai",
+      "scene": "竞品拆解",
+      "privateMemory": [
+        "竞品拆解\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "shell-side",
+      "scene": "中枢",
+      "privateMemory": [
+        "中枢\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "in-chat",
+      "scene": "故障分析",
+      "privateMemory": [
+        "故障分析\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "pc-ai",
+      "scene": "本地电脑",
+      "privateMemory": [
+        "本地电脑\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "rs-ai",
+      "scene": "调研",
+      "privateMemory": [
+        "调研\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "re-ai",
+      "scene": "逆向分析",
+      "privateMemory": [
+        "逆向分析\\场景私有记忆.md"
+      ]
+    },
+    {
+      "panel": "sr-ai",
+      "scene": "自我复盘",
+      "privateMemory": [
+        "自我复盘\\场景私有记忆.md"
+      ]
+    }
+  ]
+}

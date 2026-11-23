@@ -1,0 +1,8 @@
+{
+  "name": "probe-audit",
+  "version": "1.0.0",
+  "description": "依赖 probe-reader：把它读到的结果写成审计记录。声明 fs.read:** + fs.write:evidence/**。",
+  "entry": "index.mjs",
+  "caps": ["fs.read:**", "fs.write:evidence/**"],
+  "requires": ["probe-reader"]
+}

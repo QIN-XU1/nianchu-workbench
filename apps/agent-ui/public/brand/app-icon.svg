@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="四鉴 Vouch">
+  <!--
+    四鉴 / Vouch —— 应用图标
+
+    概念：一枚被切成四份的印鉴。
+      三份实心 = 通过 / 待补 / 失败（确定的）
+      一份虚线 = 判不了（UNKNOWN，不确定的）
+
+    为什么用虚线而不是"空着"：空着看起来像画漏了；
+    虚线在任何尺寸下都能读成"这一格还没有结论"。
+    「判不了」必须永远可见 —— accepted ≠ success。
+  -->
+  <title>四鉴 Vouch</title>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1c1f26"/>
+      <stop offset="1" stop-color="#0d0e12"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#base)"/>
+  </g>
+
+  <!--
+    四象：中心 (512,512)，半对角 300 → 主体占 600/1024 ≈ 59%
+    四个顶点：上(512,212) 右(812,512) 下(512,812) 左(212,512)
+    用 16px 的底色描边切出缝隙，缝隙随尺寸等比缩放
+  -->
+  <g stroke="#131419" stroke-width="18" stroke-linejoin="round">
+    <path d="M512 512 L512 212 L812 512 Z" fill="#ffffff"/>
+    <path d="M512 512 L812 512 L512 812 Z" fill="#ffffff"/>
+    <path d="M512 512 L212 512 L512 212 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- 判不了：只描边、虚线 -->
+  <path d="M512 512 L512 812 L212 512 Z"
+        fill="none" stroke="#ffffff" stroke-opacity="0.62"
+        stroke-width="22" stroke-linejoin="round"
+        stroke-dasharray="30 26"/>
+</svg>

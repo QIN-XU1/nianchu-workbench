@@ -1,0 +1,9 @@
+{
+  "id": "trae",
+  "name": "Trae",
+  "url": "https://trae.ai",
+  "target": "D:\\refs\\trae.git",
+  "at": "2026-11-19T01:08:43.975Z",
+  "state": "noSource",
+  "reason": "不是 GitHub 仓库（https://trae.ai），拿不到源码"
+}

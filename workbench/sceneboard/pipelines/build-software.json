@@ -1,0 +1,96 @@
+{
+  "id": "build-software",
+  "name": "造一个软件",
+  "description": "从零开始做一个软件：调研 → 拆竞品/逆向 → 汇总架构 → 定实施计划 → 三个工坊分头实施。",
+  "nodes": [
+    {
+      "scene": "research",
+      "role": "调研：搜架构/竞品/资料"
+    },
+    {
+      "scene": "competitor-analyze",
+      "role": "拆解竞品：功能矩阵/交互模式"
+    },
+    {
+      "scene": "reverse-eng",
+      "role": "逆向成熟作品：实现细节/可复用模式"
+    },
+    {
+      "scene": "arch-review",
+      "role": "架构梳理：汇总裁判"
+    },
+    {
+      "scene": "build-plan",
+      "role": "实施计划：里程碑/验收"
+    },
+    {
+      "scene": "backend-craft",
+      "role": "实施·后端：正确性/性能/接口契约"
+    },
+    {
+      "scene": "frontend-craft",
+      "role": "实施·前端：界面质量/可判定验收"
+    },
+    {
+      "scene": "tool-forge",
+      "role": "实施·工具：造工具/注册体检/淘汰"
+    }
+  ],
+  "edges": [
+    {
+      "from": "research",
+      "to": "competitor-analyze",
+      "artifact": "competitor-list"
+    },
+    {
+      "from": "research",
+      "to": "reverse-eng",
+      "artifact": "tech-candidates"
+    },
+    {
+      "from": "research",
+      "to": "arch-review",
+      "artifact": "reference-index"
+    },
+    {
+      "from": "competitor-analyze",
+      "to": "arch-review",
+      "artifact": "feature-matrix"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "arch-review",
+      "artifact": "impl-details"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "arch-review",
+      "artifact": "reusable-patterns"
+    },
+    {
+      "from": "arch-review",
+      "to": "build-plan",
+      "artifact": "architecture-plan"
+    },
+    {
+      "from": "arch-review",
+      "to": "build-plan",
+      "artifact": "risk-list"
+    },
+    {
+      "from": "build-plan",
+      "to": "backend-craft",
+      "artifact": "backend-tasks"
+    },
+    {
+      "from": "build-plan",
+      "to": "frontend-craft",
+      "artifact": "frontend-tasks"
+    },
+    {
+      "from": "build-plan",
+      "to": "tool-forge",
+      "artifact": "tool-gaps"
+    }
+  ]
+}

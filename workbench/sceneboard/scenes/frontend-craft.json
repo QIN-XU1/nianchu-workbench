@@ -1,0 +1,45 @@
+{
+  "id": "frontend-craft",
+  "name": "前端工坊",
+  "role": "前端工坊：把「能用」做成「好用」——页面结构、组件、样式、交互、响应式、可访问性，都由这里负责并给出可判定的验收标准。",
+  "description": "前端工坊：左边看真实页面（可切本地文件或网址），右边 AI 做设计判断与改法。产出「前端改法单」给「实施计划」，「可视验收标准」给「架构梳理」。",
+  "inputs": [
+    {
+      "id": "architecture-plan",
+      "from": "架构梳理",
+      "why": "页面结构要服从整体架构"
+    },
+    {
+      "id": "impl-details",
+      "from": "逆向分析",
+      "why": "要改别人的前端，先知道它怎么实现的"
+    },
+    {
+      "id": "design-reference",
+      "from": "调研",
+      "why": "参考优秀产品的界面做法"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "frontend-plan",
+      "name": "前端改法单",
+      "files": [
+        "前端改法单.md"
+      ],
+      "why": "具体到「改哪个文件、改成什么、为什么」"
+    },
+    {
+      "id": "visual-acceptance",
+      "name": "可视验收标准",
+      "files": [
+        "可视验收标准.md"
+      ],
+      "why": "什么算「好看」必须是可判定的，不能靠感觉"
+    }
+  ],
+  "capabilities": [],
+  "notDo": [],
+  "hatchedAt": "2026-11-13T02:49:44.009Z",
+  "hatchedBy": "scene-hatch"
+}

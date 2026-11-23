@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-06T14:19:25.735Z",
+  "base": {
+    "wv": 6,
+    "zeroWv": 1,
+    "dom": 327,
+    "heap": 10,
+    "panels": 2
+  },
+  "rows": [
+    {
+      "i": 1,
+      "scene": "bilibili",
+      "wv": 7,
+      "zeroWv": 1,
+      "dom": 274,
+      "heap": 10,
+      "panels": 2,
+      "dwv": 1
+    },
+    {
+      "i": 2,
+      "scene": "command",
+      "wv": 6,
+      "zeroWv": 1,
+      "dom": 327,
+      "heap": 10,
+      "panels": 2,
+      "dwv": 0
+    },
+    {
+      "i": 3,
+      "scene": "pc-cleanup",
+      "wv": 6,
+      "zeroWv": 1,
+      "dom": 374,
+      "heap": 10,
+      "panels": 5,
+      "dwv": 0
+    },
+    {
+      "i": 4,
+      "scene": "self-review",
+      "wv": 7,
+      "zeroWv": 1,
+      "dom": 314,
+      "heap": 10,
+      "panels": 4,
+      "dwv": 1
+    },
+    {
+      "i": 5,
+      "scene": "bilibili",
+      "wv": 7,
+      "zeroWv": 1,
+      "dom": 274,
+      "heap": 10,
+      "panels": 2,
+      "dwv": 1
+    },
+    {
+      "i": 6,
+      "scene": "command",
+      "wv": 6,
+      "zeroWv": 1,
+      "dom": 327,
+      "heap": 10,
+      "panels": 2,
+      "dwv": 0
+    }
+  ],
+  "wvGrowth": 0,
+  "heapGrowth": 0
+}

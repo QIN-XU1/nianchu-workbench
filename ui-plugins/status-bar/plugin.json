@@ -1,0 +1,9 @@
+{
+  "id": "status-bar",
+  "name": "插件状态条",
+  "slot": "agent-bar",
+  "order": 10,
+  "entry": "index.js",
+  "permissions": ["ui.render", "ui.hostMethods"],
+  "note": "示范插件：证明 /ui-plugins 下的界面改动无需重新构建即可生效"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "aionui",
+  "name": "AionUi",
+  "url": "https://github.com/iOfficeAI/AionUi",
+  "target": "D:\\refs\\aionui.git",
+  "at": "2026-11-19T01:00:50.366Z",
+  "materialize": {
+    "materialized": false,
+    "reason": "不是 git 仓库"
+  },
+  "note": "克隆目录只有 .git 元数据、工作区为空（materialize={\"materialized\":false,\"reason\":\"不是 git 仓库\"}），改用本地解压目录；用的是本地解压目录（非 git），拿不到 HEAD —— 结论只能算快照，不能复算到提交",
+  "fallbackDir": "D:\\refs\\aionui",
+  "dir": "D:\\refs\\aionui",
+  "git": {
+    "isGit": false
+  },
+  "measure": {
+    "files": 1518,
+    "mb": 69.1,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 588,
+        "kb": 2885
+      },
+      {
+        "ext": ".tsx",
+        "files": 356,
+        "kb": 3054
+      },
+      {
+        "ext": ".json",
+        "files": 317,
+        "kb": 2879
+      },
+      {
+        "ext": ".md",
+        "files": 96,
+        "kb": 1102
+      },
+      {
+        "ext": ".svg",
+        "files": 42,
+        "kb": 96
+      },
+      {
+        "ext": ".css",
+        "files": 34,
+        "kb": 174
+      },
+      {
+        "ext": ".yml",
+        "files": 24,
+        "kb": 157
+      },
+      {
+        "ext": "(none)",
+        "files": 21,
+        "kb": 35
+      },
+      {
+        "ext": ".js",
+        "files": 15,
+        "kb": 66
+      },
+      {
+        "ext": ".html",
+        "files": 10,
+        "kb": 56
+      },
+      {
+        "ext": ".png",
+        "files": 7,
+        "kb": 231
+      },
+      {
+        "ext": ".lock",
+        "files": 2,
+        "kb": 706
+      }
+    ],
+    "largestFile": {
+      "path": "AionUi-main/resources/AionUi_team.gif",
+      "kb": 59293
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [],
+    "tests": [],
+    "ci": []
+  },
+  "state": "WARN",
+  "reason": "目录存在但不是 git 仓库：可拆解，但拿不到 HEAD，结论不可复算到具体提交"
+}

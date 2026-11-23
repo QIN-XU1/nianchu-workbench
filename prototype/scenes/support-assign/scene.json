@@ -1,0 +1,12 @@
+{
+  "id": "support-assign",
+  "name": "客服分派",
+  "desc": "每单有 owner、owner 在值班表、无重复单",
+  "check": "check.mjs",
+  "protects": [
+    "referential-integrity",
+    "required-field",
+    "uniqueness"
+  ],
+  "baselineDir": "baseline"
+}

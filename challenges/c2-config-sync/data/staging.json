@@ -1,0 +1,14 @@
+[
+  {
+    "key": "timeout",
+    "value": 60
+  },
+  {
+    "key": "retries",
+    "value": 3
+  },
+  {
+    "key": "logLevel",
+    "value": "info"
+  }
+]

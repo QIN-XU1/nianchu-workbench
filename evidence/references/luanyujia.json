@@ -1,0 +1,107 @@
+{
+  "id": "luanyujia",
+  "name": "luanyujia-workbench",
+  "url": "https://github.com/mashanglinyu/luanyujia-workbench",
+  "target": "D:\\refs\\luanyujia.git",
+  "at": "2026-11-19T01:47:41.953Z",
+  "materialize": {
+    "materialized": true,
+    "onDiskBefore": 0,
+    "onDiskAfter": 23
+  },
+  "dir": "D:\\refs\\luanyujia.git",
+  "git": {
+    "isGit": true,
+    "head": "873b53f11a7cf73f9e08efe472025ccf589a4c7d",
+    "committedAt": "2026-11-16 16:01:02 +0800",
+    "subject": "机制文档 + 三张配图更新（消息与交付/九环）",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 198,
+    "mb": 20.7,
+    "topExt": [
+      {
+        "ext": ".md",
+        "files": 94,
+        "kb": 533
+      },
+      {
+        "ext": ".js",
+        "files": 22,
+        "kb": 2055
+      },
+      {
+        "ext": ".mjs",
+        "files": 21,
+        "kb": 290
+      },
+      {
+        "ext": ".png",
+        "files": 19,
+        "kb": 2144
+      },
+      {
+        "ext": ".json",
+        "files": 15,
+        "kb": 13
+      },
+      {
+        "ext": ".svg",
+        "files": 9,
+        "kb": 81
+      },
+      {
+        "ext": "(none)",
+        "files": 4,
+        "kb": 4
+      },
+      {
+        "ext": ".css",
+        "files": 2,
+        "kb": 292
+      },
+      {
+        "ext": ".html",
+        "files": 2,
+        "kb": 32
+      },
+      {
+        "ext": ".vbs",
+        "files": 2,
+        "kb": 1
+      },
+      {
+        "ext": ".ico",
+        "files": 2,
+        "kb": 182
+      },
+      {
+        "ext": ".mp4",
+        "files": 2,
+        "kb": 15586
+      }
+    ],
+    "largestFile": {
+      "path": "12-源码照搬/外壳/renderer/assets/boot-video.mp4",
+      "kb": 13052
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [],
+    "tests": [],
+    "ci": []
+  },
+  "state": "PASS"
+}

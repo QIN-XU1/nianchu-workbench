@@ -1,0 +1,17 @@
+{
+  "projects": [
+    {
+      "id": "dsh-workbench",
+      "name": "DeepSeek 工作台",
+      "owner": "命令",
+      "status": "active",
+      "paths": [
+        "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\workbench"
+      ],
+      "aliases": [
+        "工作台",
+        "workbench"
+      ]
+    }
+  ]
+}

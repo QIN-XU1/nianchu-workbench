@@ -1,0 +1,97 @@
+[
+  {
+    "name": "场景有面板",
+    "pass": true,
+    "detail": "4 个场景抽查"
+  },
+  {
+    "name": "场景有绑定会话",
+    "pass": true,
+    "detail": "1,1,1,1"
+  },
+  {
+    "name": "网格有列定义",
+    "pass": true,
+    "detail": "306.5px 306.5px 306.5px 306.5px"
+  },
+  {
+    "name": "面板都有宽度",
+    "pass": true,
+    "detail": "neuron:614 harness:614"
+  },
+  {
+    "name": "神经元场景数 === 场景列表数",
+    "pass": true,
+    "detail": "11 vs 11"
+  },
+  {
+    "name": "场景 ID 一一对应",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "每个场景有记忆节点",
+    "pass": true,
+    "detail": "11 个记忆"
+  },
+  {
+    "name": "lightScene 返回成功",
+    "pass": true,
+    "detail": "true"
+  },
+  {
+    "name": "点亮后节点真的亮起",
+    "pass": true,
+    "detail": "[true,true]"
+  },
+  {
+    "name": "可以熄灭",
+    "pass": true,
+    "detail": "[false,false]"
+  },
+  {
+    "name": "主 Agent 能点亮神经元",
+    "pass": true,
+    "detail": "{\"channel\":\"main-agent.lightNeuron\",\"litCount\":2}"
+  },
+  {
+    "name": "总线 emit/on 正常",
+    "pass": true,
+    "detail": "收到 1"
+  },
+  {
+    "name": "解绑生效",
+    "pass": true,
+    "detail": "解绑后仍收到 0 次"
+  },
+  {
+    "name": "批量更新只派发一次",
+    "pass": true,
+    "detail": "hits=[\"test.deep.a\",\"test.deep.b\"]"
+  },
+  {
+    "name": "状态值正确",
+    "pass": true,
+    "detail": "{\"a\":1,\"b\":2}"
+  },
+  {
+    "name": "命令可执行",
+    "pass": true,
+    "detail": "run={\"ran\":0,\"canUndo\":true,\"undoOk\":true,\"history\":0}"
+  },
+  {
+    "name": "命令可撤销",
+    "pass": true,
+    "detail": "true"
+  },
+  {
+    "name": "核心类名都有实现",
+    "pass": true,
+    "detail": "全部存在"
+  },
+  {
+    "name": "三轮全程零异常",
+    "pass": true,
+    "detail": "无"
+  }
+]

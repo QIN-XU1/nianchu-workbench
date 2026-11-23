@@ -1,0 +1,33 @@
+{
+  "logs": [
+    {
+      "at": "2026-11-10T15:48:35.854Z",
+      "target": "main",
+      "by": "调研",
+      "allowed": false,
+      "reason": "「调研」只能写副画像（主画像只允许：中枢 / hub / 自我复盘 / self-review）"
+    },
+    {
+      "at": "2026-11-10T15:48:39.242Z",
+      "target": "main",
+      "by": "自我复盘",
+      "allowed": true,
+      "sha": "4b3b7e86301dcd16",
+      "bytes": 812
+    },
+    {
+      "at": "2026-11-10T15:48:39.724Z",
+      "target": "sub",
+      "scene": "调研",
+      "allowed": true,
+      "bytes": 242
+    },
+    {
+      "at": "2026-11-10T15:48:40.332Z",
+      "target": "sub",
+      "scene": "架构梳理",
+      "allowed": true,
+      "bytes": 245
+    }
+  ]
+}

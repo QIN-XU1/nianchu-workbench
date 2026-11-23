@@ -1,0 +1,8 @@
+{
+  "name": "probe-reader",
+  "version": "1.0.0",
+  "description": "读一个文件并统计行数/字节数。声明 fs.read:** — 只能读，不能写。",
+  "entry": "index.mjs",
+  "caps": ["fs.read:**"],
+  "requires": []
+}

@@ -1,0 +1,18 @@
+# 四鉴 Vouch 的 OpenBitFun 前端 fork —— 只保留我们实际拷进来的 workspace
+packages:
+  - "src/web-ui"
+  - "design-system"
+  - "design-system/packages/*"
+  - "design-system/tooling/*"
+  - "design-system/apps/*"
+  - "packages/flow-chat-presentation"
+
+allowBuilds:
+  '@openuidev/lang-core': true
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+
+patchedDependencies:
+  "@xterm/xterm@6.1.0-beta.141": patches/@xterm__xterm@6.1.0-beta.141.patch
+  mdast-util-gfm-autolink-literal@2.0.1: patches/mdast-util-gfm-autolink-literal@2.0.1.patch

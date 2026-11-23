@@ -1,0 +1,9 @@
+{
+  "id": "qoder",
+  "name": "Qoder",
+  "url": "https://qoder.com",
+  "target": "D:\\refs\\qoder.git",
+  "at": "2026-11-19T01:08:43.975Z",
+  "state": "noSource",
+  "reason": "不是 GitHub 仓库（https://qoder.com），拿不到源码"
+}

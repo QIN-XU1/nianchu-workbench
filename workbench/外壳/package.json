@@ -1,0 +1,29 @@
+{
+  "name": "dsh-workbench",
+  "version": "0.2.1-rc.3",
+  "private": true,
+  "description": "DeepSeek 工作台（4 场景：命令 / B站 / 自我复盘 / 本地电脑）",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --config electron-builder.config.js",
+    "build:win": "electron-builder --win --config electron-builder.config.js",
+    "pack": "electron-builder --dir --config electron-builder.config.js"
+  },
+  "devDependencies": {
+    "electron": "^43.4.0",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.11.0",
+    "electron-updater": "^6.8.9",
+    "xterm": "^5.3.0"
+  },
+  "productName": "DeepSeek 工作台",
+  "engines": {
+    "node": ">=24.9 <25"
+  },
+  "_removedNativeDeps": {
+    "node-pty": "移除于 2026-11-17：原生模块重编译需 VS 导致打包失败；仅 tui-bridge.cjs 用（TUI 已废弃，加载失败优雅降级）。原版本 ^1.1.0"
+  }
+}

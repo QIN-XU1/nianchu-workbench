@@ -1,0 +1,5 @@
+{"at":"2026-11-18T06:43:54.604Z","role":"meta","type":"session-created","sessionName":"别名验证","workspaceId":"nianchu-assistant"}
+{"at":"2026-11-18T06:43:54.606Z","role":"user","content":"只回复两个字：收到"}
+{"at":"2026-11-18T06:44:00.139Z","role":"assistant","content":"收到","model":"group/auto-claude-haiku-5-5","usage":{"prompt_tokens":1176,"completion_tokens":2,"total_tokens":1178,"prompt_tokens_details":{"cached_tokens":0}}}
+{"at":"2026-11-18T07:05:47.969Z","role":"user","content":"用一句话说明你在做什么"}
+{"at":"2026-11-18T07:05:55.372Z","role":"assistant","content":"我是念初，一个运行在自有工作台上的主 agent，直接、具体地回应你的需求。","model":"group/auto-claude-haiku-5-5","usage":{"prompt_tokens":211,"completion_tokens":22,"total_tokens":233,"prompt_tokens_details":{"cached_tokens":0}}}

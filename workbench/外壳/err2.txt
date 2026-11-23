@@ -1,0 +1,16 @@
+D:\file\AI Temp\DeepSeek\Agent自研\workbench\外壳\main.js:94
+app.setAppUserModelId('deepseek.harness.gui.v2');   // 2026-10-13 换新身份：旧的 deepseek.harness.gui 已被 Windows 按身份缓存成原子图标，绕开它
+    ^
+
+TypeError: Cannot read properties of undefined (reading 'setAppUserModelId')
+    at Object.<anonymous> (D:\file\AI Temp\DeepSeek\Agent自研\workbench\外壳\main.js:94:5)
+    at Module._compile (node:internal/modules/cjs/loader:1879:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:2012:10)
+    at Module.load (node:internal/modules/cjs/loader:1601:32)
+    at Module._load (node:internal/modules/cjs/loader:1403:12)
+    at c._load (node:electron/js2c/node_init:2:18068)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:262:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:169:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.18.1

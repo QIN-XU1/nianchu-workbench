@@ -1,0 +1,9 @@
+{
+  "id": "chatgpt-codex",
+  "name": "ChatGPT / Codex",
+  "url": "https://chatgpt.com/codex",
+  "target": "D:\\refs\\chatgpt-codex.git",
+  "at": "2026-11-19T01:08:43.974Z",
+  "state": "noSource",
+  "reason": "不是 GitHub 仓库（https://chatgpt.com/codex），拿不到源码"
+}

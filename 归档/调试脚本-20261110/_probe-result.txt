@@ -1,0 +1,10 @@
+execPath=D:\file\software\DeepSeek Harness\DeepSeek Harness.exe
+argv=["D:\\file\\software\\DeepSeek Harness\\DeepSeek Harness.exe","D:\\file\\AI Temp\\DeepSeek\\Agent自研\\prototype\\_probe.cjs"]
+ELECTRON_RUN_AS_NODE=1
+stdin.isTTY=undefined
+stdin.setRawMode=undefined
+stdin.fd=0
+stdout.isTTY=true
+stdout.columns=120
+stdout.rows=50
+setRawMode=MISSING

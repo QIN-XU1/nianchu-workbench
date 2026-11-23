@@ -1,0 +1,36 @@
+{
+  "id": "hub",
+  "name": "中枢",
+  "description": "中枢（Hub）：超级智能体的唯一交互入口。你在这里交办需求，AI 自主判断需要哪些场景、调度它们、汇总结果。左侧 3D 记忆神经元显示全部场景地图，被调度的场景节点会亮起。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "hub-neuron",
+      "title": "记忆神经元",
+      "sub": "拖拽旋转 · 滚轮缩放 · 点击节点看详情 · 场景亮起=正在调度",
+      "type": "neuron",
+      "col": 1,
+      "row": 1,
+      "w": 1,
+      "h": 2
+    },
+    {
+      "id": "hub-dispatch",
+      "title": "任务分派",
+      "sub": "谁在做什么 · 交办给哪个场景",
+      "type": "dispatch-board",
+      "col": 2,
+      "row": 1,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "first": true,
+  "meta": {
+    "hubSessionId": "session-34f35b09-9c83-46f3-a5f3-9570a0c6de90",
+    "note": "本场景只有 3D 神经元；中枢对话由 shell.sideEl 固定挂载（index.js 第 251-269 行）",
+    "sessionId": "session-34f35b09-9c83-46f3-a5f3-9570a0c6de90"
+  },
+  "domain": "中枢"
+}

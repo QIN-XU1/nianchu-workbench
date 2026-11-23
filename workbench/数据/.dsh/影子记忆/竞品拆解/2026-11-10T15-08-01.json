@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-10T15:08:01.379Z",
+  "scene": "竞品拆解",
+  "totalChars": 646,
+  "totalItems": 15,
+  "density": 23.22,
+  "freshness": 1,
+  "consistency": 1,
+  "noConflict": 1,
+  "avgPerSection": 2.14,
+  "sectionCount": 7,
+  "freshCount": 2,
+  "datedCount": 2,
+  "voidMarkers": 0,
+  "score": 1,
+  "hash": "e7dca6f992744c4c",
+  "content": "# 竞品拆解 · 场景私有记忆\n\n> 场景：竞品拆解（competitor-analyze）｜这份文件只有本场景写。\n> 结构：§〇 当前交接（≤4KB）｜核心职责｜§一 职责边界｜§二 现状/接口｜§五 坑与决策（只追加）｜§八 项目索引\n\n## §〇 当前交接\n\n### 1) 上次交接\n- （新场景，还没有交接记录）  ·  2026-11-07\n\n### 2) 当前项目\n| 项目 | 记忆文件 | 状态 | 下一步 |\n|---|---|---|---|\n| 无 | — | — | — |\n\n### 3) 私有记忆变更\n- 2026-11-07：初始化场景记忆骨架\n\n### 4) 下一步 / 卡点\n- 下一步：跟这个场景的 AI 说第一句\"我要用它做什么\"，让它写进这里\n- 卡点：（无）\n\n### 5) 全貌\n- 项目记忆 0 个 · 归档 0 份\n\n## 核心职责\n\n- 负责：把竞品清单拆成功能矩阵、交互结构、技术实现线索\n- 不碰：（待补）\n- 一句话：能用一句话说清\"什么事找我、什么别找我\"才算立住。\n\n## 一、职责边界\n\n- （待填）\n\n## 二、现状 / 接口\n\n- 面板文件：外壳\\scenarios\\competitor-analyze.json\n- 面板清单：ca-board(sf-board) · ca-web(embed) · ca-ai(harness)\n- 记忆目录：引擎数据\\.dsh\\场景记忆\\竞品拆解\n- 上游输入：「competitor-list」\n- 我的产出：\n- 「feature-matrix」（功能矩阵）→ arch-review\n- 「ux-patterns」（交互模式）→ arch-review\n\n## 五、坑与决策\n\n- （只追加：症状 → 根因 → 修法）\n\n## 八、项目索引\n\n- （空）\n"
+}

@@ -1,0 +1,2 @@
+{"id":"NTC-mwle6rm5","at":"2026-11-18T00:37:44.909Z","hash":"93ea1c85b547b3a2","content":"回执闭环已落地：request.mjs 支持 --ack/--show/--receipts，改协作前先查请求","affected":["hub","tool-forge"],"delivered":"woken","note":"已写看板 + 各场景信箱，并标记 wake（会花它们一轮 token）"}
+{"id":"NTC-mwldpfbs","at":"2026-11-18T00:24:15.832Z","hash":"20b218860f6afc49","content":"面板族从 6 种扩到 10 种（file/chart/embed/flow/requests/pc-*），场景配置改为 tools/gen-scene-panels.py 生成 —— 你们改场景前先跑它","affected":["hub","frontend-craft","tool-forge"],"delivered":"board-only","note":"已写看板 + 各场景信箱；**没有打扰它们的会话**（默认行为，照搬原文）"}

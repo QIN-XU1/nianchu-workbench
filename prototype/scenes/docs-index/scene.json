@@ -1,0 +1,11 @@
+{
+  "id": "docs-index",
+  "name": "文档索引",
+  "desc": "README 索引必须覆盖全部文档，且不得重复",
+  "check": "check.mjs",
+  "baselineDir": "baseline",
+  "protects": [
+    "completeness",
+    "uniqueness"
+  ]
+}

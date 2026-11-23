@@ -1,0 +1,14 @@
+{
+  "sceneId": "inventory-ledger",
+  "sceneName": "库存台账",
+  "panelId": "inventory-ledger-ai",
+  "panelTitle": "AI·库存台账",
+  "sessionId": null,
+  "sessionTitle": "库存台账 常驻",
+  "contextCard": "CONTEXT.md",
+  "skill": "SKILL.md",
+  "memory": "MEMORY.md",
+  "check": "check.mjs",
+  "createdAt": "2026-11-06T09:34:16.944Z",
+  "note": "sessionId 建立常驻会话后回写；换会话必须回写"
+}

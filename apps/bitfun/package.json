@@ -1,0 +1,26 @@
+{
+  "name": "@vouch/bitfun",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "BitFun 全量复刻 · 独立可运行 app",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5181 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

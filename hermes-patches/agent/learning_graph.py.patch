@@ -1,0 +1,41 @@
+diff --git a/agent/learning_graph.py b/agent/learning_graph.py
+index 618cb90..e457e3e 100644
+--- a/agent/learning_graph.py
++++ b/agent/learning_graph.py
+@@ -228,8 +228,19 @@ def build_learning_graph() -> dict[str, Any]:
+     clusters = Counter(node.category for node in learned_skills.values())
+     if memory_cards:
+         clusters["memory"] = len(memory_cards)
+ 
++    # DSH 场景神经元：12 个场景 + 契约边 + 领域，与技能节点同构，直接并进同一张图。
++    # 只读、失败即空层 —— 星图不能因为我们这边的数据问题而白屏。
++    try:
++        from agent.neuron_graph import build_neuron_layer
++
++        neuron = build_neuron_layer()
++    except Exception:
++        neuron = {"nodes": [], "edges": [], "clusters": [], "stats": {}}
++    for cluster in neuron.get("clusters") or []:
++        clusters[str(cluster.get("category"))] += int(cluster.get("count") or 0)
++
+     graph_nodes = [
+         {
+             "id": n.name, "label": n.name, "kind": "skill", "timestamp": n.timestamp, "category": n.category,
+             "useCount": n.use_count, "state": n.state, "createdBy": n.created_by, "pinned": n.pinned,
+@@ -243,13 +254,14 @@ def build_learning_graph() -> dict[str, Any]:
+         }
+         for i, card in enumerate(memory_cards)
+     ]
+     return {
+-        "nodes": graph_nodes,
+-        "edges": [{"source": a, "target": b} for a, b in skill_edges + memory_edges],
++        "nodes": graph_nodes + list(neuron.get("nodes") or []),
++        "edges": [{"source": a, "target": b} for a, b in skill_edges + memory_edges] + list(neuron.get("edges") or []),
+         "clusters": [{"category": c, "count": n} for c, n in sorted(clusters.items(), key=lambda kv: -kv[1])],
+         "memory": memory_cards,
+         "stats": {
+             **density_stats(learned_skills, skill_edges),
+             "memory_nodes": len(memory_cards), "memory_skill_edges": len(memory_edges), "learned_skills": len(learned_skills),
++            **dict(neuron.get("stats") or {}),
+         },
+     }

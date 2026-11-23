@@ -1,0 +1,23 @@
+{
+  "id": "bilibili",
+  "name": "B站",
+  "role": "看视频/理解视频",
+  "description": "看完视频后把要点提炼成可用的笔记。",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "video-notes",
+      "name": "视频笔记",
+      "type": "research",
+      "to": [
+        "research"
+      ],
+      "format": "markdown",
+      "schema": [
+        "视频",
+        "要点",
+        "可用信息"
+      ]
+    }
+  ]
+}

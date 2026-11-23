@@ -1,0 +1,122 @@
+{
+  "id": "openclaw",
+  "name": "openclaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "target": "D:\\refs\\openclaw.git",
+  "at": "2026-11-19T01:08:44.383Z",
+  "materialize": {
+    "materialized": false,
+    "onDisk": 100
+  },
+  "dir": "D:\\refs\\openclaw.git",
+  "git": {
+    "isGit": true,
+    "head": "da8fd166f5bca52a464470cf9172bdd7a58106cf",
+    "committedAt": "2026-11-18 13:10:32 -0800",
+    "subject": "fix(agents): stop sessions_send from blocking turns past its timeout (#201373)",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 65901,
+    "mb": 745.1,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 52101,
+        "kb": 431918
+      },
+      {
+        "ext": ".md",
+        "files": 2529,
+        "kb": 48686
+      },
+      {
+        "ext": ".swift",
+        "files": 1840,
+        "kb": 22714
+      },
+      {
+        "ext": ".tsx",
+        "files": 1665,
+        "kb": 14942
+      },
+      {
+        "ext": ".mjs",
+        "files": 1232,
+        "kb": 13028
+      },
+      {
+        "ext": ".json",
+        "files": 1119,
+        "kb": 17264
+      },
+      {
+        "ext": ".mts",
+        "files": 819,
+        "kb": 8937
+      },
+      {
+        "ext": ".kt",
+        "files": 657,
+        "kb": 10122
+      },
+      {
+        "ext": ".yaml",
+        "files": 651,
+        "kb": 3606
+      },
+      {
+        "ext": ".txt",
+        "files": 420,
+        "kb": 2217
+      },
+      {
+        "ext": ".svg",
+        "files": 416,
+        "kb": 1262
+      },
+      {
+        "ext": ".png",
+        "files": 338,
+        "kb": 16772
+      }
+    ],
+    "largestFile": {
+      "path": "ui/src/i18n/.i18n/th.tm.jsonl",
+      "kb": 5827
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "packages",
+      "apps",
+      "pnpm-workspace.yaml"
+    ],
+    "plugin": [
+      "extensions"
+    ],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [
+      "skills"
+    ],
+    "telemetry": [],
+    "guard": [],
+    "ui": [
+      "ui"
+    ],
+    "docs": [
+      "docs"
+    ],
+    "tests": [
+      "test"
+    ],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

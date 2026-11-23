@@ -1,0 +1,53 @@
+{
+  "id": "backend-craft",
+  "name": "后端工坊",
+  "role": "后端工坊：接口、数据模型、并发、错误处理、性能、可观测性——后端的东西都由这里维护并给出可验证的证据。",
+  "description": "后端工坊：左边看源码与日志，右边 AI 做后端判断与改法。产出「后端改法单」给「实施计划」，「接口契约」给「前端工坊」与「架构梳理」。",
+  "inputs": [
+    {
+      "id": "architecture-plan",
+      "from": "架构梳理",
+      "why": "后端结构要服从整体架构"
+    },
+    {
+      "id": "impl-details",
+      "from": "逆向分析",
+      "why": "要改别人的后端，先知道它怎么实现的"
+    },
+    {
+      "id": "incident-root-cause",
+      "from": "故障分析",
+      "why": "故障归因直接指向要改的后端代码"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "backend-plan",
+      "name": "后端改法单",
+      "files": [
+        "后端改法单.md"
+      ],
+      "why": "具体到接口/函数/表结构的改动"
+    },
+    {
+      "id": "api-contract",
+      "name": "接口契约",
+      "files": [
+        "接口契约.md"
+      ],
+      "why": "前端按它接、架构按它评"
+    },
+    {
+      "id": "perf-evidence",
+      "name": "性能证据",
+      "files": [
+        "性能证据.md"
+      ],
+      "why": "说「更快了」必须给数字，不能靠感觉"
+    }
+  ],
+  "capabilities": [],
+  "notDo": [],
+  "hatchedAt": "2026-11-13T02:49:50.012Z",
+  "hatchedBy": "scene-hatch"
+}

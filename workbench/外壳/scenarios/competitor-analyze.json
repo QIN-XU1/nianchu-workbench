@@ -1,0 +1,54 @@
+{
+  "id": "competitor-analyze",
+  "name": "竞品拆解",
+  "description": "竞品拆解：左边看竞品，右边 AI 拆功能矩阵。产出发给「架构梳理」。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "ca-board",
+      "title": "管线位置",
+      "sub": "我收到了什么 / 我要产出什么",
+      "type": "sf-board",
+      "col": 1,
+      "row": 1,
+      "w": 1,
+      "h": 4
+    },
+    {
+      "id": "ca-web",
+      "title": "竞品网页",
+      "sub": "打开竞品看它的功能与交互",
+      "type": "embed",
+      "url": "https://www.bilibili.com",
+      "userAgent": "chrome",
+      "col": 2,
+      "row": 1,
+      "w": 1,
+      "h": 4
+    },
+    {
+      "id": "ca-ai",
+      "title": "AI·竞品拆解",
+      "sub": "拆功能矩阵 / 交互模式",
+      "type": "harness",
+      "sessionTitle": "竞品拆解",
+      "pinTarget": [
+        "竞品拆解"
+      ],
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 4,
+      "sessionId": "session-32bfa7a6-fc07-4eab-ac67-21691dfd992d"
+    }
+  ],
+  "first": false,
+  "meta": {
+    "pendingSession": true,
+    "pendingReason": "还没有跑过任务，引擎里暂无该场景会话。跑一次后会自动绑定。"
+  },
+  "cols": 4,
+  "rows": 4,
+  "domain": "调研"
+}

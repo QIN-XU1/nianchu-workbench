@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "name": "应用就绪",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "11 场景",
+      "pass": true,
+      "detail": "11 个"
+    },
+    {
+      "name": "面板渲染无降级",
+      "pass": true,
+      "detail": "5 面板 / 0 降级"
+    },
+    {
+      "name": "神经元 23 节点",
+      "pass": true,
+      "detail": "23 个"
+    },
+    {
+      "name": "派单成功",
+      "pass": true,
+      "detail": "true "
+    },
+    {
+      "name": "神经元已亮起",
+      "pass": true,
+      "detail": "2 个节点亮起"
+    },
+    {
+      "name": "会话有消息序号",
+      "pass": true,
+      "detail": "asOfSeq=28"
+    },
+    {
+      "name": "执行已完成",
+      "pass": true,
+      "detail": "running=false"
+    },
+    {
+      "name": "神经元可复位",
+      "pass": true,
+      "detail": "0 个仍亮"
+    },
+    {
+      "name": "全程零异常",
+      "pass": true,
+      "detail": "无"
+    }
+  ],
+  "dispatch": {
+    "ok": true,
+    "sessionId": "session-86202c87-4dd3-4966-92bc-d57d152fd65f",
+    "error": null,
+    "neuronLit": 2
+  },
+  "verify": {
+    "seq": 28,
+    "running": false,
+    "tokens": {
+      "uncachedInputTokens": 21495,
+      "outputTokens": 15,
+      "cacheReadTokens": 12928,
+      "cacheWriteTokens": 0
+    }
+  }
+}

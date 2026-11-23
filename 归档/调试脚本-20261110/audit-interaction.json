@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "name": "悬停识别正确",
+      "detail": "✓ 架构梳理",
+      "severity": "ok"
+    },
+    {
+      "name": "点击选中正确",
+      "detail": "✓ 架构梳理",
+      "severity": "ok"
+    },
+    {
+      "name": "再次点击取消选中",
+      "detail": "✓",
+      "severity": "ok"
+    },
+    {
+      "name": "旋转有响应",
+      "detail": "✓ yaw Δ=0.96",
+      "severity": "ok"
+    },
+    {
+      "name": "滚轮缩放有效",
+      "detail": "✓ 1 → 1.07",
+      "severity": "ok"
+    },
+    {
+      "name": "节点可拖拽",
+      "detail": "✓ 1 个已移动",
+      "severity": "ok"
+    },
+    {
+      "name": "整理复位成功",
+      "detail": "✓ draggedCount=0",
+      "severity": "ok"
+    },
+    {
+      "name": "快速点击无异常",
+      "detail": "✓ 20 次点击",
+      "severity": "ok"
+    },
+    {
+      "name": "极端缩放无异常",
+      "detail": "✓ zoom=0.5",
+      "severity": "ok"
+    }
+  ],
+  "errors": []
+}

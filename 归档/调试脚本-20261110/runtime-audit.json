@@ -1,0 +1,69 @@
+{
+  "at": "2026-11-07T05:51:41.159Z",
+  "problems": [],
+  "webview": {
+    "wvCount": 3,
+    "wvs": [
+      {
+        "src": "http://127.0.0.1:3080/",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "http://127.0.0.1:3080/",
+        "w": 1097,
+        "h": 336
+      },
+      {
+        "src": "https://www.doubao.com/chat/",
+        "w": 772,
+        "h": 668
+      }
+    ],
+    "dom": 395,
+    "heapMB": 10
+  },
+  "bar": {
+    "statusText": "(无)",
+    "hintText": "❯/help帮助Ctrl+B侧栏Tab补全↑↓历史Esc关闭11 场景 · 无故障",
+    "theme": "dark",
+    "faultCount": 0
+  },
+  "fill": [
+    {
+      "id": "pc-drives",
+      "kind": "pc-drives",
+      "panelH": 389,
+      "contentH": 336,
+      "ratio": 87
+    },
+    {
+      "id": "pc-r1",
+      "kind": "pc-toplarge",
+      "panelH": 389,
+      "contentH": 336,
+      "ratio": 86
+    },
+    {
+      "id": "pc-r2",
+      "kind": "pc-junk",
+      "panelH": 191,
+      "contentH": 138,
+      "ratio": 72
+    },
+    {
+      "id": "pc-r3",
+      "kind": "pc-ledger",
+      "panelH": 191,
+      "contentH": 138,
+      "ratio": 72
+    },
+    {
+      "id": "pc-ai",
+      "kind": "harness",
+      "panelH": 389,
+      "contentH": 336,
+      "ratio": 86
+    }
+  ]
+}

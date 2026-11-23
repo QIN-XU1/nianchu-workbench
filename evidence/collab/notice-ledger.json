@@ -1,0 +1,25 @@
+{
+  "sent": {
+    "20b218860f6afc49": {
+      "at": "2026-11-18T00:24:15.832Z",
+      "affected": [
+        "hub",
+        "frontend-craft",
+        "tool-forge"
+      ]
+    },
+    "93ea1c85b547b3a2": {
+      "at": "2026-11-18T00:37:44.909Z",
+      "affected": [
+        "hub",
+        "tool-forge"
+      ]
+    },
+    "44bba408e27230e8": {
+      "at": "2026-11-18T00:38:10.968Z",
+      "affected": [
+        "hub"
+      ]
+    }
+  }
+}

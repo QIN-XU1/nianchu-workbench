@@ -1,0 +1,62 @@
+{
+  "id": "build-plan",
+  "name": "实施计划",
+  "description": "实施计划：把架构方案拆成阶段、里程碑、验收标准。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "bp-board",
+      "title": "管线位置",
+      "sub": "上游给齐了没",
+      "type": "sf-board",
+      "col": 1,
+      "row": 1,
+      "w": 1,
+      "h": 2
+    },
+    {
+      "id": "bp-doc",
+      "title": "计划文档",
+      "sub": "里程碑与验收",
+      "type": "review-doc",
+      "col": 2,
+      "row": 1,
+      "w": 1,
+      "h": 2,
+      "docDir": "数据/.dsh/场景记忆/实施计划/文档"
+    },
+    {
+      "id": "bp-files",
+      "title": "库",
+      "sub": "",
+      "type": "review-files",
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 2,
+      "docDir": "数据/.dsh/场景记忆/实施计划/文档"
+    },
+    {
+      "id": "bp-ai",
+      "title": "AI·实施计划",
+      "sub": "拆阶段/定验收",
+      "type": "harness",
+      "sessionTitle": "实施计划",
+      "pinTarget": [
+        "实施计划"
+      ],
+      "col": 1,
+      "row": 3,
+      "w": 4,
+      "h": 2,
+      "sessionId": "session-0c91b59a-0733-4330-86c5-06878f31e778"
+    }
+  ],
+  "first": false,
+  "meta": {
+    "pendingSession": true,
+    "pendingReason": "还没有跑过任务，引擎里暂无该场景会话。跑一次后会自动绑定。"
+  },
+  "domain": "设计"
+}

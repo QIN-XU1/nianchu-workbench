@@ -1,0 +1,12 @@
+{
+  "id": "c3-inventory-count",
+  "name": "库存盘点",
+  "desc": "账面库存与实盘记录一致，且 SKU 必须在主数据",
+  "check": "check.mjs",
+  "baselineDir": "baseline",
+  "protects": [
+    "completeness",
+    "referential-integrity",
+    "required-field"
+  ]
+}

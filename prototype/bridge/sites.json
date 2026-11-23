@@ -1,0 +1,19 @@
+{
+  "deepseek": {
+    "id": "deepseek",
+    "name": "DeepSeek 网页版",
+    "url": "https://chat.deepseek.com/",
+    "profileDir": ".profiles/deepseek",
+    "inputSel": "textarea",
+    "answerHint": "DeepSeek 把最新消息渲染在最上面，且会显示思考草稿，需要切掉",
+    "quietMs": 20000,
+    "quietCapMs": 90000,
+    "knownIssues": [
+      "纯文字回答可能 45~60s（思考期页面完全不动）",
+      "最新消息在最上面（文档顺序是反的，位置才是真的）",
+      "会渲染「已思考（用时 N 秒）」草稿，必须切掉",
+      "发送键是纯 SVG 图标，需按几何位置点",
+      "必须真实用户聚焦，只 focus() 有时不算"
+    ]
+  }
+}

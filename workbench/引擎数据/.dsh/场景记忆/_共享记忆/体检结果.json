@@ -1,0 +1,76 @@
+{
+  "at": "2026-11-06T23:49:52.851Z",
+  "redlines": {
+    "mainKB": 25,
+    "handoffKB": 4,
+    "projectKB": 8
+  },
+  "scenes": [
+    {
+      "scene": "B站",
+      "bytes": 1085,
+      "handoffBytes": 429,
+      "ok": true
+    },
+    {
+      "scene": "命令",
+      "bytes": 1100,
+      "handoffBytes": 440,
+      "ok": true
+    },
+    {
+      "scene": "实施计划",
+      "bytes": 1474,
+      "handoffBytes": 476,
+      "ok": true
+    },
+    {
+      "scene": "本地电脑",
+      "bytes": 1113,
+      "handoffBytes": 429,
+      "ok": true
+    },
+    {
+      "scene": "架构梳理",
+      "bytes": 1594,
+      "handoffBytes": 476,
+      "ok": true
+    },
+    {
+      "scene": "竞品拆解",
+      "bytes": 1496,
+      "handoffBytes": 476,
+      "ok": true
+    },
+    {
+      "scene": "管线",
+      "bytes": 1275,
+      "handoffBytes": 476,
+      "ok": true
+    },
+    {
+      "scene": "自我复盘",
+      "bytes": 1115,
+      "handoffBytes": 429,
+      "ok": true
+    },
+    {
+      "scene": "调研",
+      "bytes": 1509,
+      "handoffBytes": 476,
+      "ok": true
+    },
+    {
+      "scene": "逆向分析",
+      "bytes": 1538,
+      "handoffBytes": 476,
+      "ok": true
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "ok": 10,
+    "maxBytes": 1594,
+    "maxHandoff": 476
+  }
+}

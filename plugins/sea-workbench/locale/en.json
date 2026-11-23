@@ -1,0 +1,13 @@
+{
+  "seaWorkbench": {
+    "title": "sea 体检",
+    "description": "一眼看到有没有事、检查可不可信、资产有没有超红线。",
+    "idle": "现在没事",
+    "action": "有事待办",
+    "untrusted": "检查不可信",
+    "broken": "配置有误",
+    "empty": "无场景",
+    "error": "读取失败",
+    "refresh": "重新体检"
+  }
+}

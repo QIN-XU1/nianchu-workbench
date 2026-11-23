@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "steps": [
+    {
+      "name": "键盘两次 ←",
+      "expected": "+32",
+      "got": 32
+    },
+    {
+      "name": "左拖 120px",
+      "expected": "+120（夹到 46vw 内）",
+      "got": 120
+    },
+    {
+      "name": "刷新后宽度",
+      "expected": 552,
+      "got": 552
+    }
+  ],
+  "widths": {
+    "before": {
+      "width": 400,
+      "left": 1014,
+      "var": "400px",
+      "stored": null
+    },
+    "afterKeys": {
+      "width": 432,
+      "left": 982,
+      "var": "432px",
+      "stored": "432"
+    },
+    "afterDrag": {
+      "width": 552,
+      "left": 862,
+      "var": "552px",
+      "stored": "552"
+    },
+    "afterReload": {
+      "width": 552,
+      "left": 862,
+      "var": "552px",
+      "stored": "552"
+    }
+  },
+  "shots": [
+    "z29-panel-width-before.png",
+    "z29-panel-width-after-drag.png",
+    "z29-panel-width-after-reload.png"
+  ],
+  "errors": []
+}

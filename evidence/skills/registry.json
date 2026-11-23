@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-19T16:31:21.567Z",
+  "total": 30,
+  "categories": [
+    {
+      "category": "工程",
+      "count": 10,
+      "skills": [
+        "api-contract",
+        "ci-pipeline",
+        "cross-repo-refactor",
+        "debug-repro",
+        "dep-upgrade",
+        "multi-host-project",
+        "perf-profile",
+        "refactor-plan",
+        "release-pipeline",
+        "test-writing"
+      ]
+    },
+    {
+      "category": "审查",
+      "count": 8,
+      "skills": [
+        "code-review",
+        "design-review",
+        "evidence-audit",
+        "project-verdict",
+        "release-gate",
+        "security-review",
+        "self-review",
+        "threat-model"
+      ]
+    },
+    {
+      "category": "写作",
+      "count": 6,
+      "skills": [
+        "adr",
+        "changelog",
+        "doc-write",
+        "docs-index",
+        "readme-bootstrap",
+        "release-notes"
+      ]
+    },
+    {
+      "category": "数据",
+      "count": 6,
+      "skills": [
+        "data-migration",
+        "data-reconcile",
+        "doc-consistency",
+        "inventory-ledger",
+        "schema-design",
+        "support-assign"
+      ]
+    }
+  ],
+  "uncategorized": [],
+  "errors": []
+}

@@ -1,0 +1,84 @@
+{
+  "id": "arch-review",
+  "name": "架构梳理",
+  "role": "汇总裁判：把三路输入合成一套可执行的架构方案",
+  "description": "这是管线的汇合点。所有上游产物的结论在这里被整合、判断、定稿。",
+  "inputs": [
+    {
+      "id": "feature-matrix",
+      "name": "feature-matrix",
+      "from": [
+        "competitor-analyze"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "impl-details",
+      "name": "impl-details",
+      "from": [
+        "reverse-eng"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "reusable-patterns",
+      "name": "reusable-patterns",
+      "from": [
+        "reverse-eng"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "reference-index",
+      "name": "reference-index",
+      "from": [
+        "research"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "tech-candidates",
+      "name": "tech-candidates",
+      "from": [
+        "research"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "architecture-plan",
+      "name": "架构方案",
+      "type": "architecture",
+      "to": [
+        "build-plan"
+      ],
+      "format": "markdown",
+      "schema": [
+        "分层",
+        "每层职责",
+        "关键决策",
+        "放弃的方案及理由"
+      ]
+    },
+    {
+      "id": "risk-list",
+      "name": "风险清单",
+      "type": "architecture",
+      "to": [
+        "build-plan"
+      ],
+      "format": "markdown",
+      "schema": [
+        "风险",
+        "影响",
+        "缓解措施"
+      ]
+    }
+  ]
+}

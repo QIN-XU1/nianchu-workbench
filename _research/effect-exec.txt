@@ -1,0 +1,66 @@
+ner={
+epoch:"0",getOuterStack:n,execute:()=>{
+}
+,collect:s}
+,this.dispose=()=>this.restart()}
+get name(){
+let e=this;
+do{
+if(e.runtime?.name)return e.runtime.name;
+e=e.parent.fiber}
+while(e!==e.parent.fiber);
+return"root"}
+assertActive(){
+if(this.uid===null)throw new Xs("INACTIVE_EFFECT")}
+_execute(e){
+const t=e.epoch;
+return R1(r=>{
+const i=s=>{
+if(typeof s=="function")e.collect(s);
+else if(!ur(s))throw new TypeError("Invalid effect")}
+,n=e.execute.call(this);
+if(typeof n=="function")return e.collect(n);
+if(!ur(n))if(hi(n)){
+if("then"in n)return n.then(i);
+if(Symbol.iterator in n){
+r.error=new Error;
+const s=n[Symbol.iterator]();
+for(;
+;
+){
+const l=s.next();
+if(i(l.value),l.done)return}
+}
+else if(Symbol.asyncIterator in n){
+const s=n[Symbol.asyncIterator]();
+return(async()=>{
+for(await Promise.resolve(),r.error=new Error;
+;
+){
+if(e.epoch!==t)return;
+const l=await s.next();
+if(i(l.value),l.done)return}
+}
+)()}
+else throw new TypeError("Invalid effect")}
+else throw new TypeError("Invalid effect")}
+,e.getOuterStack)}
+effect(e,t="anonymous"){
+if(this.assertActive(),this.state===5)throw new Xs("INACTIVE_EFFECT");
+const r=[];
+let i=!1,n;
+const s=()=>{
+if(i)return n;
+i=!0;
+let L;
+for(const F of r.splice(0).reverse())if(L)L=L.then(()=>b0(F));
+else{
+const B=b0(F);
+hi(B)&&"then"in B&&(L=B)}
+return n=L}
+,l={
+label:t,children:[]}
+,u={
+execute:e,epoch:!0,collect:L=>{
+r.push(L),this._disposables.delete(L),L[oe.effect]&&l.children.push(L[oe.effect])}
+,getO

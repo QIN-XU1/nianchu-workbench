@@ -1,0 +1,25 @@
+{
+  "id": "probe-hatch",
+  "name": "探针孵化",
+  "role": "验证场景孵化器能否从零创建完整五件套：契约/定义/身份卡/私有记忆/注册表",
+  "description": "这是一个测试场景，用来验证自我进化机制。创建后立即校验，校验通过则证明孵化器可用。",
+  "inputs": ["用户需求描述"],
+  "outputs": [
+    {
+      "id": "hatch-report",
+      "name": "孵化报告",
+      "type": "report",
+      "to": ["hub"],
+      "format": "markdown",
+      "schema": ["五件套清单", "校验结果"]
+    }
+  ],
+  "capabilities": [
+    "从 spec 创建场景五件套",
+    "自动注册到索引.json",
+    "自动生成 §〇 交接骨架"
+  ],
+  "notDo": ["不做真实业务，仅验证孵化能力"],
+  "reason": "验证自我进化机制：任务需要但场景不存在时能否自动构建",
+  "hatchedBy": "lead-verification"
+}

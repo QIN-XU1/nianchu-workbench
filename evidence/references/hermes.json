@@ -1,0 +1,123 @@
+{
+  "id": "hermes",
+  "name": "hermes-agent",
+  "url": "https://github.com/nousresearch/hermes-agent",
+  "target": "D:\\refs\\hermes.git",
+  "at": "2026-11-19T01:08:45.335Z",
+  "materialize": {
+    "materialized": false,
+    "onDisk": 112
+  },
+  "dir": "D:\\refs\\hermes.git",
+  "git": {
+    "isGit": true,
+    "head": "31ce88f86e6cf4a66ef6aa315e4657a31bcf9915",
+    "committedAt": "2026-11-18 23:53:19 +0100",
+    "subject": "Merge pull request #157551 from NousResearch/ci/manifest-jobs-blacksmith",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 26900,
+    "mb": 253.5,
+    "topExt": [
+      {
+        "ext": ".py",
+        "files": 12684,
+        "kb": 134513
+      },
+      {
+        "ext": ".ts",
+        "files": 4041,
+        "kb": 29904
+      },
+      {
+        "ext": ".yaml",
+        "files": 2677,
+        "kb": 12215
+      },
+      {
+        "ext": ".com",
+        "files": 2470,
+        "kb": 49
+      },
+      {
+        "ext": ".tsx",
+        "files": 1587,
+        "kb": 14264
+      },
+      {
+        "ext": ".md",
+        "files": 1554,
+        "kb": 21871
+      },
+      {
+        "ext": ".mjs",
+        "files": 302,
+        "kb": 2736
+      },
+      {
+        "ext": ".json",
+        "files": 264,
+        "kb": 4824
+      },
+      {
+        "ext": ".png",
+        "files": 133,
+        "kb": 21773
+      },
+      {
+        "ext": "(none)",
+        "files": 100,
+        "kb": 139
+      },
+      {
+        "ext": ".local",
+        "files": 92,
+        "kb": 2
+      },
+      {
+        "ext": ".sh",
+        "files": 85,
+        "kb": 632
+      }
+    ],
+    "largestFile": {
+      "path": "apps/desktop/public/ds-assets/filler-bg0.jpg",
+      "kb": 3781
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "apps",
+      "pnpm-workspace.yaml"
+    ],
+    "plugin": [
+      "plugins"
+    ],
+    "agentLoop": [
+      "agent"
+    ],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [
+      "skills"
+    ],
+    "telemetry": [],
+    "guard": [],
+    "ui": [
+      "web"
+    ],
+    "docs": [
+      "website"
+    ],
+    "tests": [
+      "tests"
+    ],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

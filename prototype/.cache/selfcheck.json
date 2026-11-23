@@ -1,0 +1,14 @@
+{
+  "fingerprint": "0b3f95f93811292c",
+  "at": 1793971277373,
+  "gate": {
+    "ok": true,
+    "passed": "24",
+    "total": "24"
+  },
+  "floor": {
+    "ok": true,
+    "passed": "4",
+    "total": "4"
+  }
+}

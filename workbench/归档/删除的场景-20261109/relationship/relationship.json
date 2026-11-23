@@ -1,0 +1,65 @@
+{
+  "id": "relationship",
+  "name": "关系军师",
+  "description": "先接住情绪，再分清事实，最后给能执行的选择。左边是聊天记录/截图分析，右边 AI 按「事实-推测-未知」三分给建议。记忆分 5 类 scope，需明确同意才启用。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "rl-doc",
+      "title": "聊天记录 / 截图",
+      "sub": "把要分析的原文贴这里，或看已存的记录",
+      "type": "review-doc",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3
+    },
+    {
+      "id": "rl-files",
+      "title": "档案库",
+      "sub": "关系档案 / 记忆快照",
+      "type": "review-files",
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 3
+    },
+    {
+      "id": "rl-ai",
+      "title": "AI·关系军师",
+      "sub": "情绪落地 → 事实拆分 → 利益判断 → 明确建议 → 行动收束",
+      "type": "harness",
+      "sessionTitle": "关系军师",
+      "pinTarget": [
+        "关系军师"
+      ],
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2,
+      "sessionId": "session-425aa91c-3237-49bb-8c15-7b3da3a44ecd"
+    },
+    {
+      "id": "rl-board",
+      "title": "场景位置",
+      "sub": "我收到了什么 / 我要产出什么",
+      "type": "sf-board",
+      "col": 3,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "id": "rl-mem",
+      "title": "记忆规范",
+      "sub": "五类 scope · 硬限量 · 同意门禁",
+      "type": "review-doc",
+      "col": 1,
+      "row": 6,
+      "w": 4,
+      "h": 2
+    }
+  ],
+  "first": false
+}

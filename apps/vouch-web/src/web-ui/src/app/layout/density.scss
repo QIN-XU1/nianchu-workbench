@@ -1,0 +1,44 @@
+/**
+ * 密度作用域（D2）
+ *
+ * 把 `--nb-dens` 系数乘到**间距**上，不乘字号。
+ * 只作用于我们自己的 agent 面板根节点，避免影响宿主外壳（它有自己的设计系统）。
+ *
+ * 为什么用 CSS 变量而不是给每个组件传 prop：
+ *   间距散落在十几处 SCSS 里，逐处改 prop 会漏；变量是"一处定义、全局生效"，
+ *   而且能直接被浏览器读出来验证（getComputedStyle 可断言）。
+ */
+
+.ncc,
+.dp,
+.tp {
+  /* 三档密度：compact 0.78 / cozy 1 / comfy 1.18，由根元素 data-nb-density 决定（命名空间独立，避免与既有 data-density 冲突） */
+  --ncc-dens: var(--nb-dens, 1);
+
+  /* 间距尺度：都乘密度系数 */
+  --ncc-gap-1: calc(2px * var(--ncc-dens));
+  --ncc-gap-2: calc(4px * var(--ncc-dens));
+  --ncc-gap-3: calc(6px * var(--ncc-dens));
+  --ncc-gap-4: calc(10px * var(--ncc-dens));
+  --ncc-gap-5: calc(14px * var(--ncc-dens));
+
+  /* 行高随密度微调（不改字号，只改行距 —— 这是"只缩间距不动字号"的关键） */
+  --ncc-line: calc(1.5em * var(--ncc-dens));
+
+  /**
+   * WCAG 2.5.8 最小命中区：24px 是**下限**，不随密度缩小。
+   * 密度再怎么紧，可点目标也不许低于它 —— 这是安全的红线，不是可调项。
+   */
+  --ncc-tap: max(var(--nb-tap-min, 24px), 24px);
+}
+
+/* 可点目标统一守门（只列我们自己面板里的按钮类元素，不碰外壳） */
+.ncc button,
+.ncc [role='button'],
+.dp button,
+.dp [role='button'],
+.tp button,
+.tp [role='button'] {
+  min-height: var(--ncc-tap);
+  min-width: var(--ncc-tap);
+}

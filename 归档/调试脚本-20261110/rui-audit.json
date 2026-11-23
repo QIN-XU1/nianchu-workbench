@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-07T02:30:25.490Z",
+  "data": {
+    "textColors": [
+      "rgb(125, 161, 222)",
+      "rgb(145, 158, 172)",
+      "rgb(246, 251, 253)",
+      "rgb(177, 192, 200)"
+    ],
+    "fontWeights": [
+      "600",
+      "400"
+    ],
+    "fontSizes": [
+      "11px",
+      "12px",
+      "14px"
+    ],
+    "spacings": [
+      "p12px",
+      "m0px",
+      "gnormal"
+    ],
+    "radii": [],
+    "shadows": [],
+    "primaryButtons": 0,
+    "titleColor": "rgb(177, 192, 200)",
+    "titleWeight": "600",
+    "bodyColor": "rgb(246, 251, 253)"
+  },
+  "findings": [
+    {
+      "lens": "hierarchy",
+      "severity": "P1",
+      "rule": "2.2.a",
+      "location": "全站文字色",
+      "now": "4 种",
+      "proposed": "压到 3 种（primary/secondary/tertiary）"
+    }
+  ]
+}

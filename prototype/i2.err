@@ -1,0 +1,6 @@
+Error: ERR_PNPM_STORE_DIR_OPEN_OPERATION_LOCK
+
+  × installing dependencies
+  ╰─▶ Failed to open the store operation lock at "pnpm-store-operation-locks":
+      拒绝访问。 (os error 5)
+

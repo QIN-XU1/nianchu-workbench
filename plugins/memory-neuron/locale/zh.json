@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "记忆神经元",
+    "description": "场景星图与依赖关系：每个场景的契约状态、面板数与记忆体量一目了然。"
+  },
+  "title": "记忆神经元",
+  "subtitle": "场景星图与依赖关系",
+  "refresh": "刷新",
+  "loading": "读场景数据中…",
+  "panels": "面板",
+  "contract": "有契约",
+  "memory": "记忆",
+  "failed": "加载失败"
+}

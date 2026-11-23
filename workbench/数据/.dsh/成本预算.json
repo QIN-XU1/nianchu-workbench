@@ -1,0 +1,8 @@
+{
+  "perTask": 200000,
+  "perDay": 2000000,
+  "maxRounds": 30,
+  "loopWindow": 2,
+  "loopSimilarity": 0.75,
+  "maxWallClockMin": 120
+}

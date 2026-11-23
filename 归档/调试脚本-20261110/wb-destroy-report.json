@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-06T15:25:11.416Z",
+  "before": {
+    "procs": 8,
+    "mem": 717
+  },
+  "after": {
+    "procs": 7,
+    "mem": 455
+  },
+  "freedProcs": 1,
+  "freedMB": 262,
+  "targetInfo": {
+    "src": "https://www.doubao.com/chat/",
+    "index": 2,
+    "parentTag": "DIV",
+    "parentCls": "webai-body",
+    "grandTag": "DIV",
+    "grandCls": "webai-win warm",
+    "parentId": "",
+    "siblingIndex": 1
+  },
+  "restoredOk": true
+}

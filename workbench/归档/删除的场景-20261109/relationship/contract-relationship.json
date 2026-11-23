@@ -1,0 +1,52 @@
+{
+  "id": "relationship",
+  "name": "关系军师",
+  "role": "情感/关系咨询：接住情绪、分清事实、给出可执行选择",
+  "description": "转译自 goutoujunshi（9.3k 星）：SKILL 行为内核 + 按需加载路由 + 四类证据分级 + 五类记忆 scope。",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "relationship-advice",
+      "name": "建议报告",
+      "type": "advice",
+      "to": [],
+      "format": "markdown",
+      "schema": [
+        "情绪落点",
+        "已知事实",
+        "合理推测",
+        "关键未知",
+        "首选建议",
+        "观察窗口"
+      ]
+    },
+    {
+      "id": "relationship-archive",
+      "name": "关系档案",
+      "type": "memory",
+      "to": [],
+      "format": "markdown",
+      "schema": [
+        "scope",
+        "field",
+        "value",
+        "source",
+        "confidence"
+      ]
+    }
+  ],
+  "skill": "技能/relationship-advisor.md",
+  "evidenceLevels": [
+    "较强证据",
+    "理论框架",
+    "流行说法",
+    "经验策略"
+  ],
+  "memoryScopes": [
+    "user",
+    "object",
+    "relationship",
+    "event",
+    "hypothesis"
+  ]
+}

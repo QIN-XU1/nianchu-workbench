@@ -1,0 +1,3 @@
+- insert:
+    - id: sea-workbench
+      name: '@local/sea-workbench'

@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-20T01:02:45.455Z",
+  "url": "http://127.0.0.1:47124/ (场景 标签)",
+  "screenshot": "evidence/ui/scenes-view-2026-11-23.png",
+  "question": "第115轮遗留 UNKNOWN：git UI 入口在哪？",
+  "method": "点「场景」标签 → 读场景列表 DOM；同时扫 bundle 里 destination.sceneId 与 scenes/*.md 交叉核对",
+  "catalog": {
+    "file": "interactiveCapabilityCatalog-B5WI4b5I.js",
+    "sceneIds": [
+      "git",
+      "pages",
+      "profile",
+      "session"
+    ]
+  },
+  "realScenes": {
+    "dir": "scenes/",
+    "count": 12,
+    "ids": [
+      "arch-review",
+      "backend-craft",
+      "build-plan",
+      "competitor-analyze",
+      "frontend-craft",
+      "hub",
+      "incident-analysis",
+      "pc-cleanup",
+      "research",
+      "reverse-eng",
+      "self-review",
+      "tool-forge"
+    ]
+  },
+  "uiSceneBar": [
+    "架构梳理",
+    "后端工坊",
+    "实施计划",
+    "竞品拆解",
+    "前端工坊",
+    "中枢",
+    "故障分析",
+    "本地…"
+  ],
+  "conclusion": "git 面板**不存在于念初**。能力目录声明的 4 个 sceneId（git/pages/profile/session）与真实 12 个场景**完全不重叠** —— 该目录是上游 OpenBitFun 的功能目录，与念初自己的场景体系脱节。",
+  "implication": "第 103-114 轮补的 11 个 git 方法服务的是**上游后台子系统**（GitStateManager 等启动时调用），不是念初自身功能。它们的真实收益只有「控制台少 3 条错误」，不构成念初的能力。"
+}

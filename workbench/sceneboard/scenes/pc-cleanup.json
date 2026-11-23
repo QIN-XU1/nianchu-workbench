@@ -1,0 +1,32 @@
+{
+  "id": "pc-cleanup",
+  "name": "本地电脑",
+  "role": "磁盘/大件/可清理体检",
+  "description": "磁盘分区、大件排行、可清理体检。",
+  "inputs": [
+    {
+      "id": "cleanup-request",
+      "name": "清理请求",
+      "from": [
+        "hub",
+        "build-plan",
+        "incident-analysis"
+      ],
+      "required": false,
+      "note": "任何场景都可以发清理请求；也支持定期自动巡检"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cleanup-ledger",
+      "name": "清理台账",
+      "type": "ledger",
+      "format": "json",
+      "to": [
+        "hub"
+      ],
+      "path": "workbench/外壳/data/pc-cleanup-log.json",
+      "note": "每次清理的处置记录，供中枢汇总"
+    }
+  ]
+}

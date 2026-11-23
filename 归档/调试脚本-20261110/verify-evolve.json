@@ -1,0 +1,132 @@
+[
+  {
+    "name": "--list 可执行",
+    "pass": true,
+    "detail": "exit=0"
+  },
+  {
+    "name": "返回 JSON 可解析",
+    "pass": true,
+    "detail": "12 个场景"
+  },
+  {
+    "name": "每个场景有 role（AI 判断依据）",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "中枢排第一",
+    "pass": true,
+    "detail": "hub"
+  },
+  {
+    "name": "中枢五件套齐全",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "中枢有 isHub 标记",
+    "pass": true,
+    "detail": "契约里 isHub: true"
+  },
+  {
+    "name": "绑定状态可查",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "孵化命令成功",
+    "pass": true,
+    "detail": "exit=0"
+  },
+  {
+    "name": "五件套全部创建",
+    "pass": true,
+    "detail": "5 步都有输出"
+  },
+  {
+    "name": "注册表已更新",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "五件套校验通过",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "准确报告唯一缺口",
+    "pass": true,
+    "detail": "harness 未绑定 sessionId"
+  },
+  {
+    "name": "其他四件套都齐",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "会话创建成功",
+    "pass": true,
+    "detail": "session-14123de8-590f-44af-a51"
+  },
+  {
+    "name": "绑定后完全齐备",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "新场景在索引里",
+    "pass": true,
+    "detail": "进化验证-3xq0"
+  },
+  {
+    "name": "索引含 isHub 中枢",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "契约 文件存在",
+    "pass": true,
+    "detail": "583B"
+  },
+  {
+    "name": "场景定义 文件存在",
+    "pass": true,
+    "detail": "806B"
+  },
+  {
+    "name": "身份卡 文件存在",
+    "pass": true,
+    "detail": "540B"
+  },
+  {
+    "name": "私有记忆 文件存在",
+    "pass": true,
+    "detail": "1561B"
+  },
+  {
+    "name": "有 §〇 小节",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "四问题都在",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "§〇 未超 4KB 红线",
+    "pass": true,
+    "detail": "1.52KB"
+  },
+  {
+    "name": "测试文件已清理",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "name": "索引已清理",
+    "pass": true,
+    "detail": "12 个场景"
+  }
+]

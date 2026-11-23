@@ -1,0 +1,58 @@
+{
+  "id": "backend-craft",
+  "name": "后端工坊",
+  "description": "后端工坊：左边看源码与日志，右边 AI 做后端判断与改法。产出「后端改法单」给「实施计划」，「接口契约」给「前端工坊」与「架构梳理」。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "be-files",
+      "title": "源码",
+      "sub": "看要改的那几个文件",
+      "type": "review-files",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 4,
+      "docDir": "数据/.dsh/场景记忆/后端工坊/文档"
+    },
+    {
+      "id": "be-doc",
+      "title": "文档",
+      "sub": "接口契约 / 改法单",
+      "type": "review-doc",
+      "col": 1,
+      "row": 5,
+      "w": 2,
+      "h": 3,
+      "docDir": "数据/.dsh/场景记忆/后端工坊/文档"
+    },
+    {
+      "id": "be-board",
+      "title": "管线位置",
+      "sub": "该等谁、该给谁",
+      "type": "sf-board",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3
+    },
+    {
+      "id": "be-ai",
+      "title": "AI·后端工坊",
+      "sub": "出改法单、接口契约、性能证据",
+      "type": "harness",
+      "sessionTitle": "后端工坊",
+      "pinTarget": [
+        "后端工坊"
+      ],
+      "col": 4,
+      "row": 1,
+      "w": 2,
+      "h": 7,
+      "sessionId": "session-51d8db47-46bb-4676-a434-10d631704019"
+    }
+  ],
+  "hatchedAt": "2026-11-13T02:49:50.014Z",
+  "domain": "实现"
+}

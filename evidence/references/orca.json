@@ -1,0 +1,114 @@
+{
+  "id": "orca",
+  "name": "orca",
+  "url": "https://github.com/stablyai/orca",
+  "target": "D:\\refs\\orca.git",
+  "at": "2026-11-19T01:19:37.371Z",
+  "materialize": {
+    "materialized": false,
+    "reason": "不是 git 仓库"
+  },
+  "note": "克隆目录只有 .git 元数据、工作区为空（materialize={\"materialized\":false,\"reason\":\"不是 git 仓库\"}），改用本地解压目录；用的是本地解压目录（非 git），拿不到 HEAD —— 结论只能算快照，不能复算到提交",
+  "fallbackDir": "D:\\refs\\orca",
+  "dir": "D:\\refs\\orca",
+  "git": {
+    "isGit": false
+  },
+  "measure": {
+    "files": 37169,
+    "mb": 253,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 30529,
+        "kb": 129266
+      },
+      {
+        "ext": ".tsx",
+        "files": 3807,
+        "kb": 21026
+      },
+      {
+        "ext": ".mjs",
+        "files": 906,
+        "kb": 5710
+      },
+      {
+        "ext": ".json",
+        "files": 617,
+        "kb": 23296
+      },
+      {
+        "ext": ".txt",
+        "files": 230,
+        "kb": 9147
+      },
+      {
+        "ext": ".md",
+        "files": 180,
+        "kb": 1484
+      },
+      {
+        "ext": ".yml",
+        "files": 125,
+        "kb": 836
+      },
+      {
+        "ext": ".jsonl",
+        "files": 91,
+        "kb": 1304
+      },
+      {
+        "ext": ".swift",
+        "files": 77,
+        "kb": 482
+      },
+      {
+        "ext": ".png",
+        "files": 62,
+        "kb": 3195
+      },
+      {
+        "ext": ".cjs",
+        "files": 61,
+        "kb": 332
+      },
+      {
+        "ext": ".mdx",
+        "files": 60,
+        "kb": 358
+      }
+    ],
+    "largestFile": {
+      "path": "docs/assets/readme-feature-showcase.gif",
+      "kb": 8407
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "pnpm-workspace.yaml"
+    ],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [
+      "skills"
+    ],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [
+      "docs"
+    ],
+    "tests": [
+      "tests"
+    ],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "WARN",
+  "reason": "目录存在但不是 git 仓库：可拆解，但拿不到 HEAD，结论不可复算到具体提交"
+}

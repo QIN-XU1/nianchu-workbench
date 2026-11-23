@@ -1,0 +1,45 @@
+warning: Failed to parse `pyproject.toml` during settings discovery:
+  TOML parse error at line 699, column 17
+      |
+  699 | exclude-newer = 2100-01-01
+      |                 ^^^^^^^^^^
+  data did not match any variant of untagged enum Helper
+
+  × Failed to build `spacy==2.0.17`
+  ├─▶ The build backend returned an error
+  ╰─▶ Call to `setuptools.build_meta:__legacy__.build_wheel` failed (exit
+      code: 1)
+
+      [stderr]
+      Traceback (most recent call last):
+        File "<string>", line 14, in <module>
+          requires = get_requires_for_build({})
+        File
+      "C:\Users\15282\AppData\Local\uv\cache\builds-v0\.tmpp44P05\Lib\site-packages\setuptools\build_meta.py",
+      line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "C:\Users\15282\AppData\Local\uv\cache\builds-v0\.tmpp44P05\Lib\site-packages\setuptools\build_meta.py",
+      line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File
+      "C:\Users\15282\AppData\Local\uv\cache\builds-v0\.tmpp44P05\Lib\site-packages\setuptools\build_meta.py",
+      line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "C:\Users\15282\AppData\Local\uv\cache\builds-v0\.tmpp44P05\Lib\site-packages\setuptools\build_meta.py",
+      line 317, in run_setup
+          exec(code, locals())  # noqa: S102 # exec is intentional here
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 10, in <module>
+          import json
+      ImportError: cannot import name 'msvccompiler' from 'distutils'
+      (C:\Users\15282\AppData\Local\uv\cache\builds-v0\.tmpp44P05\Lib\site-packages\setuptools\_distutils\__init__.py).
+      Did you mean: 'ccompiler'?
+
+
+hint: `spacy` (v2.0.17) was included because `hermes-agent[kittentts]` (v0.0.0) depends on `kittentts` (v0.8.1) which depends on `spacy`
+hint: Build failures usually indicate a problem with the package or the build environment

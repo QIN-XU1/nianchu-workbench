@@ -1,0 +1,95 @@
+{
+  "at": "2026-11-07T04:12:37.639Z",
+  "ok": 11,
+  "fail": 0,
+  "results": [
+    {
+      "scene": "arch-review",
+      "name": "架构梳理",
+      "sessionId": "session-30ec85ee-18d4-4011-954d-911a6e7f76f4",
+      "title": "架构梳理",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "bilibili",
+      "name": "B站",
+      "sessionId": "session-53a145e4-55e9-46c0-935f-20bcf6f335bc",
+      "title": "B站",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "build-plan",
+      "name": "实施计划",
+      "sessionId": "session-617469db-c910-4f9f-a288-bde488b6addd",
+      "title": "实施计划",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "command",
+      "name": "命令",
+      "sessionId": "session-42458b47-a7a1-4f32-ae9a-eeb15bdc467d",
+      "title": "命令",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "competitor-analyze",
+      "name": "竞品拆解",
+      "sessionId": "session-25481518-84fc-4d22-8b44-1e87649bda56",
+      "title": "竞品拆解",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "pc-cleanup",
+      "name": "本地电脑",
+      "sessionId": "session-ab88b9c2-2a9d-459c-9c30-4318464dab5b",
+      "title": "本地电脑",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "pipeline",
+      "name": "管线",
+      "sessionId": "session-6175dacf-d1a8-472a-b9fa-16e58f2eaabf",
+      "title": "管线",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "relationship",
+      "name": "关系军师",
+      "sessionId": "session-bb317d8a-3c8d-450b-bad2-28298415fc13",
+      "title": "关系军师",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "research",
+      "name": "调研",
+      "sessionId": "session-05e3d653-ddf8-4add-8161-1cd2f0f74a26",
+      "title": "调研",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "reverse-eng",
+      "name": "逆向分析",
+      "sessionId": "session-ecca58d7-2ec5-41c9-8e0f-b8fbf6f2028e",
+      "title": "逆向分析",
+      "seeded": true,
+      "status": 200
+    },
+    {
+      "scene": "self-review",
+      "name": "自我复盘",
+      "sessionId": "session-b2e5f073-77f7-46fc-8200-88b293bc4059",
+      "title": "自我复盘",
+      "seeded": true,
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+  × Failed to download `kittentts @
+  │ https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl`
+  ├─▶ Request failed after 3 retries in 29.3s
+  ├─▶ Failed to fetch:
+  │   `https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl`
+  ├─▶ error sending request for url
+  │   (https://release-assets.githubusercontent.com/github-production-release-asset/1032248449/95a790d8-8f6c-431b-892a-342376c13b1a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-13T16%3A58%3A05Z&rscd=attachment%3B+filename%3Dkittentts-0.8.1-py3-none-any.whl&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-13T15%3A57%3A23Z&ske=2026-11-13T16%3A58%3A05Z&sks=b&skv=2018-11-09&sig=6WozbcI7ngRXC56ROciFIdX765rrlxcuq0A8zbeXgmM%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDU4NTc1MywibmJmIjoxNzk0NTg1NDUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.z8MWotBg0V-Tf1ADOPfHSncpTnsMg2FJULV80EjwV0U&response-content-disposition=attachment%3B%20filename%3Dkittentts-0.8.1-py3-none-any.whl&response-content-type=application%2Foctet-stream)
+  ├─▶ client error (Connect)
+  ╰─▶ tls handshake eof

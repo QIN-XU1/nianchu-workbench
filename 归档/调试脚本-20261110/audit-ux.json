@@ -1,0 +1,111 @@
+{
+  "issues": [
+    {
+      "level": "mid",
+      "name": "悬停与选中差异小",
+      "detail": "sel +0.1 vs hover +0.1"
+    },
+    {
+      "level": "mid",
+      "name": "边点亮后变化不明显",
+      "detail": "亮度仅 +0.1"
+    },
+    {
+      "level": "ok",
+      "name": "场景有职责描述",
+      "detail": ""
+    },
+    {
+      "level": "ok",
+      "name": "有操作提示",
+      "detail": "工程 4内容 3工具 1关系 2整理更新⟳拖动旋转 · 拖节点移动 · 滚轮缩放 · 点击展开详情测试面板内容"
+    },
+    {
+      "level": "ok",
+      "name": "帧率正常",
+      "detail": "57fps"
+    }
+  ],
+  "checks": {
+    "detailCheck": {
+      "found": true,
+      "display": "block",
+      "width": 260,
+      "height": 58,
+      "x": 957,
+      "y": 98,
+      "inBounds": true,
+      "scrollH": 56,
+      "clientH": 56,
+      "overflow": false,
+      "textLen": 6
+    },
+    "labelCheck": {
+      "visibleCount": 5,
+      "totalCount": 10,
+      "overlaps": [],
+      "overlapCount": 0,
+      "sample": [
+        {
+          "name": "B站",
+          "sx": 641,
+          "sy": 444,
+          "fontSize": 10.5,
+          "width": 13
+        },
+        {
+          "name": "竞品拆解",
+          "sx": 582,
+          "sy": 435,
+          "fontSize": 10.5,
+          "width": 26
+        },
+        {
+          "name": "调研",
+          "sx": 508,
+          "sy": 562,
+          "fontSize": 10.5,
+          "width": 13
+        },
+        {
+          "name": "逆向分析",
+          "sx": 876,
+          "sy": 400,
+          "fontSize": 10.5,
+          "width": 26
+        },
+        {
+          "name": "自我复盘",
+          "sx": 874,
+          "sy": 331,
+          "fontSize": 10.5,
+          "width": 26
+        }
+      ]
+    },
+    "edgeCheck": {
+      "edgeCount": 10,
+      "darkBrightness": 8.9,
+      "litBrightness": 9,
+      "litDelta": 0.1
+    },
+    "infoCheck": {
+      "name": "架构梳理",
+      "hasRole": true,
+      "hasDesc": true,
+      "roleLen": 39,
+      "attachments": {
+        "memory": true,
+        "identity": true,
+        "skills": [],
+        "mcp": [],
+        "panels": 4
+      }
+    },
+    "fps": {
+      "fps": 57,
+      "minDelta": 1,
+      "maxDelta": 33
+    }
+  }
+}

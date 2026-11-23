@@ -1,0 +1,13 @@
+{
+  "id": "inventory-ledger",
+  "name": "库存台账",
+  "desc": "每种物料的账面量与仓库记录一致，且物料号在物料主数据里",
+  "check": "check.mjs",
+  "protects": [
+    "completeness",
+    "referential-integrity",
+    "required-field",
+    "uniqueness"
+  ],
+  "baselineDir": "baseline"
+}

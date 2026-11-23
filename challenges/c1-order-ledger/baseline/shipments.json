@@ -1,0 +1,17 @@
+[
+  {
+    "id": "S-1",
+    "orderId": "O-1",
+    "amount": 120
+  },
+  {
+    "id": "S-2",
+    "orderId": "O-2",
+    "amount": 80
+  },
+  {
+    "id": "S-3",
+    "orderId": "O-3",
+    "amount": 200
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "O-1",
+    "amount": 120,
+    "status": "paid"
+  },
+  {
+    "id": "O-2",
+    "amount": 80,
+    "status": "paid"
+  },
+  {
+    "id": "O-3",
+    "amount": 200,
+    "status": "pending"
+  }
+]

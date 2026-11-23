@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Memory neuron",
+    "description": "Scene star map with dependency graph, contract status, and memory size for every scene."
+  },
+  "title": "Memory neuron",
+  "subtitle": "Scene star map and dependency graph",
+  "refresh": "Refresh",
+  "loading": "Loading scenes…",
+  "panels": "panels",
+  "contract": "contract",
+  "memory": "memory",
+  "failed": "Failed to load"
+}

@@ -1,0 +1,11 @@
+dsh: warning: 2 entries did not activate
+dsh-superagent (dsh-superagent): Error: ENOENT: no such file or directory, mkdir 'D:\D:\file\AI Temp\DeepSeek\Agent自研\verification\sa-state'
+    at mkdirSync (node:fs:1410:26)
+    at node:electron/js2c/node_init:1:18152
+    at new Runtime (file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/verification/sa-build/lib/index.js:10126:3)
+    at Object.apply [as callback] (file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/verification/sa-build/lib/index.js:10551:18)
+    at Fiber.execute (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:365:28)
+    at file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:436:34
+    at file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/verification/sea-home/profiles/sea/#dsh-superagent
+    at file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/verification/sea-home/profiles/sea/#include
+dsh-superagent-github (dsh-superagent/github-watch): pending (waiting for service: orchestrator)

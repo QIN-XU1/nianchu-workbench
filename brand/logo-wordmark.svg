@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" width="520" height="128" role="img" aria-label="四鉴 Vouch">
+  <g transform="translate(16,16) scale(0.09375)" stroke-linejoin="round">
+    <path d="M512 512 L512 212 L812 512 Z" fill="#161616"/>
+    <path d="M512 512 L812 512 L512 812 Z" fill="#161616"/>
+    <path d="M512 512 L212 512 L512 212 Z" fill="#161616"/>
+    <path d="M512 512 L512 812 L212 512 Z" fill="none" stroke="#161616" stroke-opacity="0.6" stroke-width="22" stroke-dasharray="30 26"/>
+  </g>
+  <text x="132" y="66" font-family="'PingFang SC','Microsoft YaHei',system-ui,sans-serif"
+        font-size="42" font-weight="600" letter-spacing="2" fill="#161616">四鉴</text>
+  <text x="134" y="98" font-family="'Inter','Segoe UI',system-ui,sans-serif"
+        font-size="17" font-weight="500" letter-spacing="5.5" fill="#161616" fill-opacity="0.55">VOUCH</text>
+</svg>

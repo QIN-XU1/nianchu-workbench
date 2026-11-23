@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="64" height="64" fill="none" role="img" aria-label="四鉴">
+  <g stroke="currentColor" stroke-width="18" stroke-linejoin="round" stroke-opacity="0">
+    <path d="M512 512 L512 212 L812 512 Z" fill="currentColor"/>
+    <path d="M512 512 L812 512 L512 812 Z" fill="currentColor"/>
+    <path d="M512 512 L212 512 L512 212 Z" fill="currentColor"/>
+  </g>
+  <path d="M512 512 L512 812 L212 512 Z" stroke="currentColor" stroke-opacity="0.62"
+        stroke-width="22" stroke-linejoin="round" stroke-dasharray="30 26"/>
+</svg>

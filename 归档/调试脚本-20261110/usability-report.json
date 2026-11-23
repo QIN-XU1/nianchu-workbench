@@ -1,0 +1,86 @@
+{
+  "at": "2026-11-06T11:10:13.762Z",
+  "passed": 13,
+  "total": 13,
+  "scenes": 6,
+  "results": [
+    {
+      "id": "U1",
+      "name": "首值时间",
+      "pass": true,
+      "detail": "316ms，6 个场景"
+    },
+    {
+      "id": "U2",
+      "name": "零配置",
+      "pass": true,
+      "detail": "剥离全部环境变量后仍运行"
+    },
+    {
+      "id": "U3",
+      "name": "不撒谎",
+      "pass": true,
+      "detail": "全绿说通过=true 注入(移除alice)后改口=true 退出码变化=true"
+    },
+    {
+      "id": "U4",
+      "name": "安静",
+      "pass": true,
+      "detail": "健康时 2 行（目标 ≤2）"
+    },
+    {
+      "id": "U5",
+      "name": "可撤回",
+      "pass": true,
+      "detail": "发现问题=true 显示撤销点=true 恢复=true 85ms"
+    },
+    {
+      "id": "U6",
+      "name": "人话失败",
+      "pass": true,
+      "detail": "给可选命令、无堆栈"
+    },
+    {
+      "id": "U7",
+      "name": "渐进披露",
+      "pass": true,
+      "detail": "默认 5 行 → --more 10 行"
+    },
+    {
+      "id": "U8",
+      "name": "门禁可信",
+      "pass": true,
+      "detail": "元验证 24/24（真 check 通过 / 说谎·说不清·静默全被拒）"
+    },
+    {
+      "id": "U10",
+      "name": "不变量下限可信",
+      "pass": true,
+      "detail": "元验证 4/4（合规通过 / 三种过弱声明被拦）"
+    },
+    {
+      "id": "U11",
+      "name": "弱声明被拦下",
+      "pass": true,
+      "detail": "声明过弱的场景被门禁 REJECT（G0.5）"
+    },
+    {
+      "id": "U12",
+      "name": "check 改坏必须说不可信",
+      "pass": true,
+      "detail": "报不可信=true 点名=docs-index:true exit=2:true"
+    },
+    {
+      "id": "U13",
+      "name": "热启动 < 1s",
+      "pass": true,
+      "detail": "315ms（目标 <1000ms，冷启动会慢）"
+    },
+    {
+      "id": "U9",
+      "name": "放文件即新增",
+      "pass": true,
+      "detail": "自动发现=true 门禁认证=true（零代码改动）"
+    }
+  ]
+}

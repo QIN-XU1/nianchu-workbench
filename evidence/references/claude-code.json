@@ -1,0 +1,9 @@
+{
+  "id": "claude-code",
+  "name": "Claude Code 桌面版",
+  "url": "https://claude.com/product/claude-code",
+  "target": "D:\\refs\\claude-code.git",
+  "at": "2026-11-19T01:08:43.974Z",
+  "state": "noSource",
+  "reason": "不是 GitHub 仓库（https://claude.com/product/claude-code），拿不到源码"
+}

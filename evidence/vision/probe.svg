@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#ffffff"/>
+  <rect x="20"  y="20"  width="120" height="120" fill="#e5342a" rx="8"/>
+  <rect x="180" y="20"  width="120" height="120" fill="#1aa73e" rx="8"/>
+  <rect x="340" y="20"  width="120" height="120" fill="#2b6cf0" rx="8"/>
+  <text x="240" y="250" font-family="Arial, sans-serif" font-size="96" font-weight="bold"
+        fill="#000000" text-anchor="middle">7429</text>
+  <text x="240" y="300" font-family="Arial, sans-serif" font-size="20" fill="#555555"
+        text-anchor="middle">NIANCHU-VISION-TEST</text>
+</svg>

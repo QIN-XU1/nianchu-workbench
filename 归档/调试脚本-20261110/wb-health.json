@@ -1,0 +1,89 @@
+{
+  "at": "2026-11-06T23:38:22.474Z",
+  "sections": {
+    "observability": {
+      "ok": true,
+      "targets": 6
+    },
+    "ui": {
+      "title": "DSH 引擎 · DeepSeek 工作台",
+      "panels": [
+        {
+          "id": "pl-board",
+          "kind": "sf-board",
+          "w": 1084,
+          "h": 804
+        },
+        {
+          "id": "pl-ai",
+          "kind": "harness",
+          "w": 353,
+          "h": 804
+        }
+      ],
+      "webviews": [
+        {
+          "w": 0,
+          "h": 0,
+          "src": "http://127.0.0.1:31238/chat",
+          "hiddenAncestor": 1
+        },
+        {
+          "w": 352,
+          "h": 738,
+          "src": "http://127.0.0.1:31238/chat",
+          "hiddenAncestor": 0
+        },
+        {
+          "w": 772,
+          "h": 668,
+          "src": "https://www.doubao.com/chat/",
+          "hiddenAncestor": 0
+        }
+      ],
+      "dom": 299,
+      "renderers": 37,
+      "zeroInVisible": 0,
+      "zeroInHidden": 1
+    },
+    "memory": {
+      "pageHeapMB": 10,
+      "totalRssMB": 1153
+    },
+    "fault": {
+      "hasOnFault": true,
+      "hasShow": true,
+      "count": 0,
+      "recent": []
+    },
+    "stability": {
+      "domBefore": 299,
+      "domAfter": 299,
+      "grow": 0
+    }
+  },
+  "ok": true,
+  "checks": [
+    {
+      "name": "可观测性",
+      "ok": true
+    },
+    {
+      "name": "可见容器内无 0 尺寸 webview",
+      "ok": true
+    },
+    {
+      "name": "容错 IPC 已订阅",
+      "ok": true
+    },
+    {
+      "name": "容错层已安装",
+      "ok": true
+    },
+    {
+      "name": "无 DOM 泄漏",
+      "ok": true
+    }
+  ],
+  "score": "5/5"
+}

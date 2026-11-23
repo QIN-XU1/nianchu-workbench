@@ -1,0 +1,120 @@
+{
+  "id": "openbitfun",
+  "name": "OpenBitFun",
+  "url": "https://github.com/openBitFun/OpenBitFun",
+  "target": "D:\\refs\\openbitfun.git",
+  "at": "2026-11-19T01:08:43.713Z",
+  "materialize": {
+    "materialized": false,
+    "onDisk": 42
+  },
+  "dir": "D:\\refs\\openbitfun.git",
+  "git": {
+    "isGit": true,
+    "head": "15fd95d6eab3a95eea03f164c11b452e270a6408",
+    "committedAt": "2026-11-19 00:08:23 +0800",
+    "subject": "Merge pull request #3995 from bobleer/bob/dispatch-ui-account-renewal",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 9486,
+    "mb": 177.7,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 3194,
+        "kb": 16803
+      },
+      {
+        "ext": ".rs",
+        "files": 2428,
+        "kb": 44499
+      },
+      {
+        "ext": ".tsx",
+        "files": 1396,
+        "kb": 15342
+      },
+      {
+        "ext": ".md",
+        "files": 450,
+        "kb": 5320
+      },
+      {
+        "ext": ".mjs",
+        "files": 435,
+        "kb": 4807
+      },
+      {
+        "ext": ".scss",
+        "files": 357,
+        "kb": 2333
+      },
+      {
+        "ext": ".json",
+        "files": 349,
+        "kb": 11794
+      },
+      {
+        "ext": ".css",
+        "files": 199,
+        "kb": 1908
+      },
+      {
+        "ext": ".js",
+        "files": 123,
+        "kb": 2526
+      },
+      {
+        "ext": ".png",
+        "files": 113,
+        "kb": 18429
+      },
+      {
+        "ext": ".toml",
+        "files": 64,
+        "kb": 151
+      },
+      {
+        "ext": ".svg",
+        "files": 51,
+        "kb": 129
+      }
+    ],
+    "largestFile": {
+      "path": "src/web-ui/src/assets/fonts/harmonyos-sans/sc/HarmonyOS_Sans_SC.ttf",
+      "kb": 20134
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "packages",
+      "pnpm-workspace.yaml"
+    ],
+    "plugin": [
+      "extensions"
+    ],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [
+      "src/web-ui"
+    ],
+    "docs": [
+      "docs",
+      "website"
+    ],
+    "tests": [
+      "tests"
+    ],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

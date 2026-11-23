@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-14T00:08:54.563Z",
+  "scene": "架构梳理",
+  "totalChars": 23,
+  "totalItems": 1,
+  "density": 43.478,
+  "freshness": 0,
+  "consistency": 1,
+  "noConflict": 1,
+  "avgPerSection": 1,
+  "sectionCount": 1,
+  "freshCount": 0,
+  "datedCount": 0,
+  "voidMarkers": 0,
+  "score": 0.8,
+  "hash": "31d07b55eced0e22",
+  "content": "# 架构梳理 · 场景私有记忆\n\n（清空：模拟记忆丢失）\n"
+}

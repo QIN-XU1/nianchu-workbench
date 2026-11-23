@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-06T09:10:04.589Z",
+  "root": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\challenges",
+  "total": 3,
+  "present": 3,
+  "accepted": 3,
+  "rate": 1,
+  "verdict": "PASS",
+  "rows": [
+    {
+      "id": "c1-order-ledger",
+      "state": "ACCEPT",
+      "accept": true,
+      "runs": true,
+      "floorOk": true,
+      "gates": {
+        "G0_declares_invariants": true,
+        "G0_5_meets_floor": true,
+        "G1_baseline_pass": true,
+        "G2_all_mutations_caught": true,
+        "G3_all_failures_have_diffset": true
+      },
+      "caught": "4/4",
+      "reasons": [],
+      "failures": []
+    },
+    {
+      "id": "c2-config-sync",
+      "state": "ACCEPT",
+      "accept": true,
+      "runs": true,
+      "floorOk": true,
+      "gates": {
+        "G0_declares_invariants": true,
+        "G0_5_meets_floor": true,
+        "G1_baseline_pass": true,
+        "G2_all_mutations_caught": true,
+        "G3_all_failures_have_diffset": true
+      },
+      "caught": "3/3",
+      "reasons": [],
+      "failures": []
+    },
+    {
+      "id": "c3-inventory-count",
+      "state": "ACCEPT",
+      "accept": true,
+      "runs": true,
+      "floorOk": true,
+      "gates": {
+        "G0_declares_invariants": true,
+        "G0_5_meets_floor": true,
+        "G1_baseline_pass": true,
+        "G2_all_mutations_caught": true,
+        "G3_all_failures_have_diffset": true
+      },
+      "caught": "4/4",
+      "reasons": [],
+      "failures": []
+    }
+  ]
+}

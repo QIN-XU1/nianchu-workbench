@@ -1,0 +1,35 @@
+{
+  "name": "@local/dsh-memory-neuron",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "记忆神经元 —— 场景星图、依赖关系与六件套完整度运营面板",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "loader.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "external": [
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  }
+}

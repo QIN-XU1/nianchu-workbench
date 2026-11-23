@@ -1,0 +1,85 @@
+{
+  "at": "2026-11-07T06:16:00.493Z",
+  "limits": {
+    "injectBytes": 2048,
+    "handoffBytes": 4096,
+    "mainBytes": 25600,
+    "projectBytes": 8192
+  },
+  "inject": {
+    "bytes": 1709,
+    "path": "引擎数据\\.dsh\\AGENTS.md"
+  },
+  "private": [
+    {
+      "scene": "arch-review",
+      "total": 1594,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "bilibili",
+      "total": 1085,
+      "handoff": 429,
+      "ok": true
+    },
+    {
+      "scene": "build-plan",
+      "total": 1474,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "command",
+      "total": 1100,
+      "handoff": 440,
+      "ok": true
+    },
+    {
+      "scene": "competitor-analyze",
+      "total": 1496,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "pc-cleanup",
+      "total": 1113,
+      "handoff": 429,
+      "ok": true
+    },
+    {
+      "scene": "pipeline",
+      "total": 1275,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "relationship",
+      "total": 1557,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "research",
+      "total": 1509,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "reverse-eng",
+      "total": 1538,
+      "handoff": 476,
+      "ok": true
+    },
+    {
+      "scene": "self-review",
+      "total": 1115,
+      "handoff": 429,
+      "ok": true
+    }
+  ],
+  "shared": {
+    "ok": 4,
+    "total": 4
+  }
+}

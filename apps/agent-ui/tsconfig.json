@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "react": [
+        "./node_modules/react/index.d.ts"
+      ],
+      "react/jsx-runtime": [
+        "./node_modules/@types/react/jsx-runtime.d.ts"
+      ],
+      "react-dom": [
+        "./node_modules/@types/react-dom/index.d.ts"
+      ],
+      "react-dom/client": [
+        "./node_modules/@types/react-dom/client.d.ts"
+      ],
+      "lucide-react": [
+        "./node_modules/lucide-react/dist/lucide-react.d.ts"
+      ],
+      "@vouch/*": [
+        "src/*"
+      ],
+      "@openbitfun/ui": [
+        "../../design-system/packages/ui/src/index.ts"
+      ],
+      "@openbitfun/ui/*": [
+        "../../design-system/packages/ui/src/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}

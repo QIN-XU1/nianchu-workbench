@@ -1,0 +1,35 @@
+{
+  "id": "pipeline",
+  "name": "管线",
+  "description": "管线：看场景数据管线的整体进度。左侧是 DAG 节点与就绪状态，右侧是产物与收件箱。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "pl-board",
+      "title": "管线进度",
+      "sub": "DAG 节点 · 就绪状态 · 产物与收件箱（只读）",
+      "type": "sf-board",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 4
+    },
+    {
+      "id": "pl-ai",
+      "title": "AI·管线",
+      "sub": "帮你判断下一步该做哪个场景",
+      "type": "harness",
+      "sessionTitle": "管线",
+      "pinTarget": [
+        "管线"
+      ],
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 4,
+      "sessionId": "session-1ee2562c-cc98-4940-b1af-f95dae170eeb"
+    }
+  ],
+  "first": false
+}

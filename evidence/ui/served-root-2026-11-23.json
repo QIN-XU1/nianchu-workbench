@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-23T04:15:00+08:00",
+  "url": "http://127.0.0.1:47124/",
+  "screenshot": "evidence/ui/served-root-2026-11-23.png",
+  "renders": {
+    "layout3col": true,
+    "g6Network": {
+      "nodes": 28,
+      "edges": 62
+    },
+    "statusBadge": "PASS",
+    "pluginStatus": "宿主 77 个方法 · 插件 v1 · 免构建加载",
+    "tabs": [
+      "对话",
+      "协同",
+      "动手"
+    ]
+  },
+  "console": {
+    "total": 10,
+    "byRootCause": {
+      "Tauri IPC 缺失（transformCallback undefined）": 6,
+      "服务未实现 git/isRepository": 3,
+      "Chrome 扩展 info（无关）": 1
+    }
+  },
+  "subsystemsFailing": [
+    "WorkspaceManager",
+    "GitStateManager",
+    "WorkspaceGitInitializer",
+    "IdeControlEventBus",
+    "DeferredStartupSystems(ide_control)"
+  ],
+  "honest": "界面渲染正常（三栏/G6 记忆网络/状态徽章/主题），但浏览器环境下有 10 条控制台记录：6 条因 Tauri IPC 在 HTTP 环境不存在（应优雅降级），3 条因我们自己的服务未实现 git/isRepository（如实报错不编造）。"
+}

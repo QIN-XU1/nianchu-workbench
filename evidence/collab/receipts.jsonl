@@ -1,0 +1,2 @@
+{"id":"RCP-mwle6fhi","reqId":"REQ-mwldp68j","at":"2026-11-18T00:37:29.190Z","from":"self-review","to":"hub","kind":"progress","note":"已核查 H-0187：notes 自认不算独立但记了 closed，属待复核状态"}
+{"id":"RCP-mwle6rkq","reqId":"REQ-mwlcoyee","at":"2026-11-18T00:37:44.858Z","from":"tool-forge","to":"hub","kind":"decision","note":"已复跑 verify-goal 两轮结果一致（通过20/待补1/失败0/无法判断1），验收器未见抖动"}

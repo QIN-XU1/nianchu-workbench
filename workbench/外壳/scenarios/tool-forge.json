@@ -1,0 +1,58 @@
+{
+  "id": "tool-forge",
+  "name": "工具工坊",
+  "description": "工具工坊：左边看现有工具与体检状态，右边 AI 造新工具/修旧工具。产出「新工具」直接进 工具/ 目录并注册进机制体检，「工具清理单」给「自我复盘」。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "tf-files",
+      "title": "工具目录",
+      "sub": "146 个工具的现状",
+      "type": "review-files",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 4,
+      "docDir": "数据/.dsh/场景记忆/工具工坊/文档"
+    },
+    {
+      "id": "tf-doc",
+      "title": "文档",
+      "sub": "机制清单 / 造工具账本",
+      "type": "review-doc",
+      "col": 1,
+      "row": 5,
+      "w": 2,
+      "h": 3,
+      "docDir": "数据/.dsh/场景记忆/工具工坊/文档"
+    },
+    {
+      "id": "tf-board",
+      "title": "管线位置",
+      "sub": "该等谁、该给谁",
+      "type": "sf-board",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3
+    },
+    {
+      "id": "tf-ai",
+      "title": "AI·工具工坊",
+      "sub": "造工具 / 修工具 / 淘汰工具",
+      "type": "harness",
+      "sessionTitle": "工具工坊",
+      "pinTarget": [
+        "工具工坊"
+      ],
+      "col": 4,
+      "row": 1,
+      "w": 2,
+      "h": 7,
+      "sessionId": "session-af90b6fc-75f5-42b0-ac90-7422b8836a18"
+    }
+  ],
+  "hatchedAt": "2026-11-13T02:49:50.150Z",
+  "domain": "实现"
+}

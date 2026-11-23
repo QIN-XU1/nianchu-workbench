@@ -1,0 +1,27 @@
+{
+  "name": "@vouch/agent-ui",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "四鉴 Vouch —— agent 工作台前端（自己的项目，复用 @openbitfun/ui 组件基线）",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5180 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gen:tokens": "node ../../tools/gen-tokens.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^0.560.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

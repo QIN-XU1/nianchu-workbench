@@ -1,0 +1,61 @@
+{
+  "id": "arch-review",
+  "name": "架构梳理",
+  "description": "架构梳理：三路输入（竞品/逆向/资料）在这里汇总结论，产出架构方案与风险清单。",
+  "layout": "grid",
+  "theme": "dark",
+  "panels": [
+    {
+      "id": "ar-board",
+      "title": "管线位置",
+      "sub": "我在等谁 / 我收到了谁",
+      "type": "sf-board",
+      "col": 1,
+      "row": 1,
+      "w": 1,
+      "h": 2
+    },
+    {
+      "id": "ar-doc",
+      "title": "架构文档",
+      "sub": "沉淀下来的方案",
+      "type": "review-doc",
+      "col": 2,
+      "row": 1,
+      "w": 1,
+      "h": 2,
+      "docDir": "数据/.dsh/场景记忆/架构梳理/文档"
+    },
+    {
+      "id": "ar-web",
+      "title": "参考网页",
+      "sub": "查规范/查方案",
+      "type": "embed",
+      "url": "https://developer.mozilla.org/",
+      "userAgent": "chrome",
+      "col": 1,
+      "row": 3,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "id": "ar-ai",
+      "title": "AI·架构梳理",
+      "sub": "汇总裁判",
+      "type": "harness",
+      "sessionTitle": "架构梳理",
+      "pinTarget": [
+        "架构梳理"
+      ],
+      "col": 3,
+      "row": 1,
+      "w": 2,
+      "h": 4,
+      "sessionId": "session-2585d3ae-fe8e-4540-97cb-2555b1d1a142"
+    }
+  ],
+  "first": false,
+  "cols": 4,
+  "rows": 4,
+  "domain": "设计"
+}

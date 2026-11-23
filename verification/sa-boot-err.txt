@@ -1,0 +1,14 @@
+dsh: warning: 2 entries did not activate
+dsh-superagent (dsh-superagent): ValidationError: invalid config:
+  - $.stateDir missing required value (at stateDir)
+    at resolveConfig (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:248:27)
+    at file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:826:27
+    at Object.apply (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:1508:20)
+    at dispatch (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:915:19)
+    at Proxy.waterfall (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:917:10)
+    at Fiber.resolveConfig (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:666:24)
+    at Fiber.execute (file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:359:26)
+    at file:///D:/file/software/DeepSeek%20Harness/resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:436:34
+    at file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/verification/sea-home/profiles/sea/#dsh-superagent
+    at file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/verification/sea-home/profiles/sea/#include
+dsh-superagent-github (dsh-superagent/github-watch): pending (waiting for service: orchestrator)

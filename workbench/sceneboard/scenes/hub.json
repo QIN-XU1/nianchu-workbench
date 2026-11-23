@@ -1,0 +1,61 @@
+{
+  "id": "hub",
+  "name": "中枢",
+  "role": "总控中枢：唯一交互入口，自主判断需要哪些场景、调度它们、汇总结果",
+  "inputs": [
+    {
+      "id": "feature-matrix",
+      "name": "feature-matrix",
+      "from": [
+        "competitor-analyze"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "impl-details",
+      "name": "impl-details",
+      "from": [
+        "reverse-eng"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "architecture-plan",
+      "name": "architecture-plan",
+      "from": [
+        "arch-review"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "milestones",
+      "name": "milestones",
+      "from": [
+        "build-plan"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    }
+  ],
+  "outputs": [],
+  "description": "超级智能体的管理层。用户只在这里说话。中枢负责：① 判断需求属于哪些场景 ② 场景不存在则先孵化 ③ 调度并点亮神经元 ④ 汇总产物回给用户。",
+  "capabilities": [
+    "需求分解：把用户一句话拆成可调度的子任务",
+    "场景发现：查 _共享记忆/索引.json 找到匹配的场景",
+    "场景孵化：没有合适场景时，用 scene-hatch.mjs 先造场景",
+    "任务派发：把子任务给对应场景的独立会话",
+    "状态汇总：收集各场景结果，合成一个回答",
+    "记忆写回：更新各场景 §〇 交接 + 共享层台账"
+  ],
+  "notDo": [
+    "不亲自做具体业务（那是场景的事）",
+    "不越过场景直接改场景私有记忆"
+  ],
+  "isHub": true,
+  "hatchedAt": "2026-11-08T04:25:32.857Z",
+  "sessionId": "session-6b9e702a-f8ac-47b9-b3bf-39c600f6160d",
+  "uiMode": "hub-single-dialog"
+}

@@ -1,0 +1,100 @@
+{
+  "areas": [
+    {
+      "id": "arch-review",
+      "name": "架构梳理",
+      "owner": "ar-ai",
+      "memory": "场景记忆/架构梳理",
+      "file": "areas/arch-review.md",
+      "panel": "ar-ai"
+    },
+    {
+      "id": "backend-craft",
+      "name": "后端工坊",
+      "owner": "be-ai",
+      "memory": "场景记忆/后端工坊",
+      "file": "areas/backend-craft.md",
+      "panel": "be-ai"
+    },
+    {
+      "id": "build-plan",
+      "name": "实施计划",
+      "owner": "bp-ai",
+      "memory": "场景记忆/实施计划",
+      "file": "areas/build-plan.md",
+      "panel": "bp-ai"
+    },
+    {
+      "id": "competitor-analyze",
+      "name": "竞品拆解",
+      "owner": "ca-ai",
+      "memory": "场景记忆/竞品拆解",
+      "file": "areas/competitor-analyze.md",
+      "panel": "ca-ai"
+    },
+    {
+      "id": "frontend-craft",
+      "name": "前端工坊",
+      "owner": "fe-ai",
+      "memory": "场景记忆/前端工坊",
+      "file": "areas/frontend-craft.md",
+      "panel": "fe-ai"
+    },
+    {
+      "id": "hub",
+      "name": "中枢",
+      "owner": "shell-side",
+      "memory": "场景记忆/中枢",
+      "file": "areas/hub.md",
+      "panel": "shell-side"
+    },
+    {
+      "id": "incident-analysis",
+      "name": "故障分析",
+      "owner": "in-chat",
+      "memory": "场景记忆/故障分析",
+      "file": "areas/incident-analysis.md",
+      "panel": "in-chat"
+    },
+    {
+      "id": "pc-cleanup",
+      "name": "本地电脑",
+      "owner": "pc-ai",
+      "memory": "场景记忆/本地电脑",
+      "file": "areas/pc-cleanup.md",
+      "panel": "pc-ai"
+    },
+    {
+      "id": "research",
+      "name": "调研",
+      "owner": "rs-ai",
+      "memory": "场景记忆/调研",
+      "file": "areas/research.md",
+      "panel": "rs-ai"
+    },
+    {
+      "id": "reverse-eng",
+      "name": "逆向分析",
+      "owner": "re-ai",
+      "memory": "场景记忆/逆向分析",
+      "file": "areas/reverse-eng.md",
+      "panel": "re-ai"
+    },
+    {
+      "id": "self-review",
+      "name": "自我复盘",
+      "owner": "sr-ai",
+      "memory": "场景记忆/自我复盘",
+      "file": "areas/self-review.md",
+      "panel": "sr-ai"
+    },
+    {
+      "id": "tool-forge",
+      "name": "工具工坊",
+      "owner": "tf-ai",
+      "memory": "场景记忆/工具工坊",
+      "file": "areas/tool-forge.md",
+      "panel": "tf-ai"
+    }
+  ]
+}

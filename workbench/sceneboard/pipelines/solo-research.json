@@ -1,0 +1,22 @@
+{
+  "id": "solo-research",
+  "name": "单点调研",
+  "description": "只想搞清楚一个东西时用：调研 → 架构梳理。",
+  "nodes": [
+    {
+      "scene": "research",
+      "role": "调研"
+    },
+    {
+      "scene": "arch-review",
+      "role": "架构梳理"
+    }
+  ],
+  "edges": [
+    {
+      "from": "research",
+      "to": "arch-review",
+      "artifact": "reference-index"
+    }
+  ]
+}

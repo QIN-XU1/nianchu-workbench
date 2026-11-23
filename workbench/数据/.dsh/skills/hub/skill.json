@@ -1,0 +1,24 @@
+{
+  "_note": "技能元数据 —— triggers 是检索键（中枢判断该不该用这个技能的依据）",
+  "id": "hub",
+  "name": "---",
+  "description": "",
+  "triggers": [
+    "中枢",
+    "Hub",
+    "超级智能体的唯一交互入口",
+    "你在这里交办需求",
+    "调度它们",
+    "汇总结果",
+    "hub",
+    "调度",
+    "分派任务",
+    "派单",
+    "统筹"
+  ],
+  "does": [],
+  "doesNot": [],
+  "verify": [],
+  "executable": true,
+  "checkPath": "check.mjs"
+}

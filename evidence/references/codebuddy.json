@@ -1,0 +1,9 @@
+{
+  "id": "codebuddy",
+  "name": "CodeBuddy",
+  "url": "https://copilot.tencent.com",
+  "target": "D:\\refs\\codebuddy.git",
+  "at": "2026-11-19T01:08:43.975Z",
+  "state": "noSource",
+  "reason": "不是 GitHub 仓库（https://copilot.tencent.com），拿不到源码"
+}

@@ -1,0 +1,18 @@
+{
+  "_what": "MCP 服务器白名单。客户端只能传 serverId，**不能传命令** —— 否则 /api/mcp 就成了无鉴权的任意进程执行端点。",
+  "_note": "越界拦截类安全机制按用户要求不做；这里是 API 设计约束（不暴露任意命令执行），不是安全网关。 command 是**字符串**：McpSession 用 spawn(cmd, [], { shell: true })，数组会报 'The \"file\" argument must be of type string'（本轮实测踩到）。",
+  "servers": [
+    {
+      "id": "realserver",
+      "name": "念初真 server（官方 SDK）",
+      "command": "node evidence/mcp-realserver/server.mjs",
+      "cwd": ".",
+      "description": "用 @modelcontextprotocol/sdk 起的真 MCP server，供 verify-mcp 与产品端点使用。",
+      "tools": [
+        "nianchu-real-probe",
+        "echo",
+        "add"
+      ]
+    }
+  ]
+}

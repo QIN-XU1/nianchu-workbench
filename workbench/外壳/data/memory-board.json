@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "at": "2026-11-06T15:33:25.805Z",
+  "total": {
+    "count": 13,
+    "privMB": 1606,
+    "wsMB": 2555
+  },
+  "byRole": {
+    "gpu": {
+      "count": 3,
+      "privMB": 915,
+      "share": 57
+    },
+    "main": {
+      "count": 1,
+      "privMB": 98,
+      "share": 6
+    },
+    "renderers": {
+      "count": 9,
+      "privMB": 593,
+      "share": 37,
+      "perProcessMB": 66
+    }
+  },
+  "targets": [
+    {
+      "type": "webview",
+      "host": "www.kimi.com"
+    },
+    {
+      "type": "webview",
+      "host": "chatglm.cn"
+    },
+    {
+      "type": "webview",
+      "host": "www.qianwen.com"
+    },
+    {
+      "type": "webview",
+      "host": "www.doubao.com"
+    },
+    {
+      "type": "webview",
+      "host": "127.0.0.1"
+    },
+    {
+      "type": "webview",
+      "host": "127.0.0.1"
+    },
+    {
+      "type": "page",
+      "host": ""
+    }
+  ],
+  "aiSites": [
+    "www.kimi.com",
+    "chatglm.cn",
+    "www.qianwen.com",
+    "www.doubao.com"
+  ],
+  "suggestions": [
+    {
+      "action": "reduce-warm",
+      "label": "把预热从 4 个降到 0 个",
+      "savingMB": 1045,
+      "note": "实测对照：warmCount=0 → 457MB，=1 → 722MB，=4 → 1502MB。改 外壳/data/webai-warm.json"
+    },
+    {
+      "action": "reduce-renderers",
+      "label": "渲染进程 9 个（每多一个约 66MB）",
+      "savingMB": 198,
+      "note": "每个 webview 是独立进程；不用的应销毁"
+    }
+  ],
+  "verdict": {
+    "controllableMB": 1243,
+    "chromiumFixedMB": 915,
+    "note": "GPU 进程是 Chromium 合成基础设施，基本不可压缩"
+  }
+}

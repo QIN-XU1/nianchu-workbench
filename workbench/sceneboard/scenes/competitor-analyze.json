@@ -1,0 +1,48 @@
+{
+  "id": "competitor-analyze",
+  "name": "竞品拆解",
+  "role": "把竞品清单拆成功能矩阵、交互结构、技术实现线索",
+  "description": "不只看它有什么功能，要看它为什么这样设计。产出：功能矩阵、交互模式。",
+  "inputs": [
+    {
+      "id": "competitor-list",
+      "name": "competitor-list",
+      "from": [
+        "research"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "feature-matrix",
+      "name": "功能矩阵",
+      "type": "feature-matrix",
+      "to": [
+        "arch-review"
+      ],
+      "format": "markdown",
+      "schema": [
+        "功能",
+        "各竞品支持情况",
+        "差异点",
+        "取舍理由"
+      ]
+    },
+    {
+      "id": "ux-patterns",
+      "name": "交互模式",
+      "type": "design",
+      "to": [
+        "arch-review"
+      ],
+      "format": "markdown",
+      "schema": [
+        "场景",
+        "做法",
+        "为什么这样做"
+      ]
+    }
+  ]
+}

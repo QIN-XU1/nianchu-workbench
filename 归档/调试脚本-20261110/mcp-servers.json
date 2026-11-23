@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "filesystem": {
+      "label": "文件系统（本地只读）",
+      "command": "node",
+      "args": [
+        "prototype/mcp-fs-server.mjs"
+      ],
+      "cost": "约 3k token/轮",
+      "note": "演示用的最小 MCP 服务器，只读"
+    }
+  }
+}

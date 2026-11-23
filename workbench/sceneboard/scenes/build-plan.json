@@ -1,0 +1,86 @@
+{
+  "id": "build-plan",
+  "name": "实施计划",
+  "role": "把架构变成可执行的阶段任务",
+  "description": "架构定稿后，拆成可落地的阶段、里程碑、验收标准。",
+  "inputs": [
+    {
+      "id": "architecture-plan",
+      "name": "architecture-plan",
+      "from": [
+        "arch-review"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "risk-list",
+      "name": "risk-list",
+      "from": [
+        "arch-review"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    },
+    {
+      "id": "reusable-patterns",
+      "name": "reusable-patterns",
+      "from": [
+        "reverse-eng"
+      ],
+      "required": true,
+      "note": "由场景契约自动补全格式（2026-11-09）"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "milestones",
+      "name": "里程碑",
+      "type": "plan",
+      "to": [],
+      "format": "markdown",
+      "schema": [
+        "阶段",
+        "产出",
+        "验收标准",
+        "预计工作量"
+      ]
+    },
+    {
+      "id": "backend-tasks",
+      "name": "后端任务单",
+      "files": [
+        "后端任务单.md"
+      ],
+      "why": "实施阶段交给后端工坊的可派单任务（接口/表结构/性能项）",
+      "to": [
+        "backend-craft"
+      ],
+      "note": "2026-11-14 补 to：原来只写 files 没写 to，导致神经元不知道交给谁（管线里有但契约没声明）"
+    },
+    {
+      "id": "frontend-tasks",
+      "name": "前端任务单",
+      "files": [
+        "前端任务单.md"
+      ],
+      "why": "实施阶段交给前端工坊的可派单任务（页面/组件/交互）",
+      "to": [
+        "frontend-craft"
+      ],
+      "note": "2026-11-14 补 to：原来只写 files 没写 to，导致神经元不知道交给谁（管线里有但契约没声明）"
+    },
+    {
+      "id": "tool-gaps",
+      "name": "工具缺口单",
+      "files": [
+        "工具缺口单.md"
+      ],
+      "why": "实施阶段暴露的工具缺口，交给工具工坊造",
+      "to": [
+        "tool-forge"
+      ],
+      "note": "2026-11-14 补 to：原来只写 files 没写 to，导致神经元不知道交给谁（管线里有但契约没声明）"
+    }
+  ]
+}

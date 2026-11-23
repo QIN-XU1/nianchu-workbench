@@ -1,0 +1,104 @@
+{
+  "id": "craft-anything",
+  "name": "craft-anything",
+  "url": "https://github.com/storytold/craft-anything",
+  "target": "D:\\refs\\craft-anything.git",
+  "at": "2026-11-19T01:00:50.175Z",
+  "materialize": {
+    "materialized": false,
+    "reason": "索引为空（clone 未完成）"
+  },
+  "note": "克隆目录只有 .git 元数据、工作区为空（materialize={\"materialized\":false,\"reason\":\"索引为空（clone 未完成）\"}），改用本地解压目录；用的是本地解压目录（非 git），拿不到 HEAD —— 结论只能算快照，不能复算到提交",
+  "fallbackDir": "D:\\refs\\craft-anything",
+  "dir": "D:\\refs\\craft-anything",
+  "git": {
+    "isGit": false
+  },
+  "measure": {
+    "files": 986,
+    "mb": 19.3,
+    "topExt": [
+      {
+        "ext": ".rs",
+        "files": 708,
+        "kb": 11806
+      },
+      {
+        "ext": ".svg",
+        "files": 90,
+        "kb": 242
+      },
+      {
+        "ext": ".md",
+        "files": 45,
+        "kb": 1143
+      },
+      {
+        "ext": ".toml",
+        "files": 29,
+        "kb": 39
+      },
+      {
+        "ext": ".tsv",
+        "files": 16,
+        "kb": 1709
+      },
+      {
+        "ext": "(none)",
+        "files": 13,
+        "kb": 34
+      },
+      {
+        "ext": ".png",
+        "files": 13,
+        "kb": 1810
+      },
+      {
+        "ext": ".sh",
+        "files": 12,
+        "kb": 51
+      },
+      {
+        "ext": ".yml",
+        "files": 9,
+        "kb": 13
+      },
+      {
+        "ext": ".txt",
+        "files": 9,
+        "kb": 24
+      },
+      {
+        "ext": ".ttf",
+        "files": 7,
+        "kb": 833
+      },
+      {
+        "ext": ".ps1",
+        "files": 4,
+        "kb": 24
+      }
+    ],
+    "largestFile": {
+      "path": "craft-anything-main/packaging/macos/dmg/background.tiff",
+      "kb": 933
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [],
+    "tests": [],
+    "ci": []
+  },
+  "state": "WARN",
+  "reason": "目录存在但不是 git 仓库：可拆解，但拿不到 HEAD，结论不可复算到具体提交"
+}

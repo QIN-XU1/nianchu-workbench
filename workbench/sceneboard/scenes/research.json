@@ -1,0 +1,55 @@
+{
+  "id": "research",
+  "name": "调研",
+  "role": "全网搜索：架构方案、竞品、技术资料、社区讨论",
+  "description": "把散落在网络上的信息收拢成结构化清单。产出：竞品清单、技术方案候选、资料索引。",
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "competitor-list",
+      "name": "竞品清单",
+      "type": "competitor-list",
+      "to": [
+        "competitor-analyze"
+      ],
+      "format": "markdown",
+      "schema": [
+        "名称",
+        "官网/仓库",
+        "定位",
+        "技术栈线索",
+        "值得拆的点"
+      ]
+    },
+    {
+      "id": "tech-candidates",
+      "name": "技术方案候选",
+      "type": "research",
+      "to": [
+        "reverse-eng",
+        "arch-review"
+      ],
+      "format": "markdown",
+      "schema": [
+        "方案名",
+        "来源",
+        "核心思路",
+        "适用场景"
+      ]
+    },
+    {
+      "id": "reference-index",
+      "name": "资料索引",
+      "type": "research",
+      "to": [
+        "arch-review"
+      ],
+      "format": "markdown",
+      "schema": [
+        "标题",
+        "链接",
+        "要点"
+      ]
+    }
+  ]
+}

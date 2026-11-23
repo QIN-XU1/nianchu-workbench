@@ -1,0 +1,14 @@
+{
+  "id": "pipeline",
+  "name": "管线",
+  "role": "总览：看场景数据管线的整体进度",
+  "description": "DAG 节点就绪状态、产物与收件箱。",
+  "inputs": [
+    "competitor-list",
+    "feature-matrix",
+    "impl-details",
+    "architecture-plan",
+    "milestones"
+  ],
+  "outputs": []
+}

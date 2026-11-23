@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-07T05:48:02.867Z",
+  "base": "http://127.0.0.1:3080",
+  "provider": "raccoon",
+  "model": "sn-deepseek-v4-1-flash-1017",
+  "results": [
+    {
+      "id": "arch-review",
+      "name": "架构梳理",
+      "sessionId": "session-a0656d6f-0f32-48e0-9ce6-aebf0019f86c",
+      "title": "架构梳理"
+    },
+    {
+      "id": "bilibili",
+      "name": "B站",
+      "sessionId": "session-86202c87-4dd3-4966-92bc-d57d152fd65f",
+      "title": "B站"
+    },
+    {
+      "id": "build-plan",
+      "name": "实施计划",
+      "sessionId": "session-f957223a-5b93-4005-a254-96e205c16cd1",
+      "title": "实施计划"
+    },
+    {
+      "id": "command",
+      "name": "命令",
+      "sessionId": "session-6b9e702a-f8ac-47b9-b3bf-39c600f6160d",
+      "title": "命令"
+    },
+    {
+      "id": "competitor-analyze",
+      "name": "竞品拆解",
+      "sessionId": "session-abcc920c-d56a-49e0-8bdb-66cb43a0902c",
+      "title": "竞品拆解"
+    },
+    {
+      "id": "pc-cleanup",
+      "name": "本地电脑",
+      "sessionId": "session-62618ece-2a86-4d1e-94ce-1ab34cceec03",
+      "title": "本地电脑"
+    },
+    {
+      "id": "pipeline",
+      "name": "管线",
+      "sessionId": "session-1ee2562c-cc98-4940-b1af-f95dae170eeb",
+      "title": "管线"
+    },
+    {
+      "id": "relationship",
+      "name": "关系军师",
+      "sessionId": "session-425aa91c-3237-49bb-8c15-7b3da3a44ecd",
+      "title": "关系军师"
+    },
+    {
+      "id": "research",
+      "name": "调研",
+      "sessionId": "session-e635e90a-040d-4f2f-b4d9-b00b56abb562",
+      "title": "调研"
+    },
+    {
+      "id": "reverse-eng",
+      "name": "逆向分析",
+      "sessionId": "session-9cdc7576-cd05-4274-a942-f9ed498703b2",
+      "title": "逆向分析"
+    },
+    {
+      "id": "self-review",
+      "name": "自我复盘",
+      "sessionId": "session-df6160a8-fc3c-4d79-b8a9-b8aabac08c8d",
+      "title": "自我复盘"
+    }
+  ],
+  "fails": []
+}

@@ -1,0 +1,75 @@
+{
+  "note": "进化账本：每一版改变了什么、分数多少、保留还是回滚",
+  "versions": [
+    {
+      "at": "2026-11-13T04:23:13.214Z",
+      "kind": "baseline",
+      "note": "（基线）",
+      "score": 98.6,
+      "parts": {
+        "coverage": 1,
+        "honesty": 0.9595959595959596,
+        "complete": 1
+      },
+      "tools": 155,
+      "guards": "99（其中只跑 selftest 4 项）",
+      "scenes": "12（六件套齐全 12）",
+      "skills": 12,
+      "delta": 0,
+      "verdict": "first"
+    },
+    {
+      "at": "2026-11-13T07:05:14.592Z",
+      "kind": "record",
+      "note": "hermes 逆向 + 3 个新检查（提示词/技能lint/模型健康）+ 深色主题 + 场景升级方案",
+      "score": 98.6,
+      "parts": {
+        "coverage": 1,
+        "honesty": 0.9611650485436893,
+        "complete": 1
+      },
+      "tools": 159,
+      "guards": "103（其中只跑 selftest 4 项）",
+      "scenes": "12（六件套齐全 12）",
+      "skills": 12,
+      "delta": 0,
+      "verdict": "flat"
+    },
+    {
+      "at": "2026-11-13T07:10:20.094Z",
+      "kind": "record",
+      "note": "加 behavior 维度（记忆召回+封存集）；159工具/103体检项/深色主题/技能lint/模型健康/面板地址体检",
+      "score": 80.7,
+      "parts": {
+        "structure": 1,
+        "honesty": 0.9611650485436893,
+        "complete": 1,
+        "behavior": 0.3888888888888889
+      },
+      "tools": 159,
+      "guards": "103（其中只跑 selftest 4 项）",
+      "scenes": "12（六件套齐全 12）",
+      "skills": 12,
+      "delta": -17.9,
+      "verdict": "worse"
+    },
+    {
+      "at": "2026-11-13T07:12:36.366Z",
+      "kind": "record",
+      "note": "修 behavior 度量的两个 bug（封存集调用参数+字段）",
+      "score": 95.7,
+      "parts": {
+        "structure": 1,
+        "honesty": 0.9611650485436893,
+        "complete": 1,
+        "behavior": 0.8888888888888888
+      },
+      "tools": 159,
+      "guards": "103（其中只跑 selftest 4 项）",
+      "scenes": "12（六件套齐全 12）",
+      "skills": 12,
+      "delta": 15,
+      "verdict": "better"
+    }
+  ]
+}

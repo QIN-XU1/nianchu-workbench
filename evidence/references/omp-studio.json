@@ -1,0 +1,115 @@
+{
+  "id": "omp-studio",
+  "name": "omp-studio",
+  "url": "https://github.com/the-snowpear/omp-studio",
+  "target": "D:\\refs\\omp-studio.git",
+  "at": "2026-11-19T01:18:11.085Z",
+  "materialize": {
+    "materialized": true,
+    "onDiskBefore": 0,
+    "onDiskAfter": 33
+  },
+  "dir": "D:\\refs\\omp-studio.git",
+  "git": {
+    "isGit": true,
+    "head": "64170f9a5791b4711a0385129254fd26dea38772",
+    "committedAt": "2026-11-18 17:54:38 +0800",
+    "subject": "chore(release): prepare 0.2.4 desktop release",
+    "branch": "main",
+    "commits": 1
+  },
+  "measure": {
+    "files": 2819,
+    "mb": 46.6,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 1422,
+        "kb": 13770
+      },
+      {
+        "ext": ".tsx",
+        "files": 570,
+        "kb": 6466
+      },
+      {
+        "ext": ".md",
+        "files": 146,
+        "kb": 2051
+      },
+      {
+        "ext": ".css",
+        "files": 135,
+        "kb": 1869
+      },
+      {
+        "ext": ".mjs",
+        "files": 133,
+        "kb": 835
+      },
+      {
+        "ext": ".svg",
+        "files": 72,
+        "kb": 270
+      },
+      {
+        "ext": ".json",
+        "files": 67,
+        "kb": 3301
+      },
+      {
+        "ext": ".png",
+        "files": 48,
+        "kb": 7151
+      },
+      {
+        "ext": ".html",
+        "files": 43,
+        "kb": 170
+      },
+      {
+        "ext": ".js",
+        "files": 43,
+        "kb": 1012
+      },
+      {
+        "ext": ".webp",
+        "files": 41,
+        "kb": 8817
+      },
+      {
+        "ext": ".yml",
+        "files": 18,
+        "kb": 67
+      }
+    ],
+    "largestFile": {
+      "path": "docs/readme/demo-windows.webp",
+      "kb": 3375
+    }
+  },
+  "structure": {
+    "monorepo": [
+      "packages",
+      "apps"
+    ],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [
+      "docs",
+      "website"
+    ],
+    "tests": [],
+    "ci": [
+      ".github/workflows"
+    ]
+  },
+  "state": "PASS"
+}

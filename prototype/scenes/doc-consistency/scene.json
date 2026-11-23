@@ -1,0 +1,11 @@
+{
+  "id": "doc-consistency",
+  "name": "文档一致性",
+  "desc": "术语是否出现、有无未登记缩写",
+  "check": "check.mjs",
+  "protects": [
+    "term-presence",
+    "no-unregistered-token"
+  ],
+  "baselineDir": "baseline"
+}

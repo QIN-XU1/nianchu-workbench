@@ -1,0 +1,69 @@
+{
+  "id": "cl4r1t4s",
+  "name": "CL4R1T4S",
+  "url": "https://github.com/elder-plinius/CL4R1T4S",
+  "target": "D:\\refs\\cl4r1t4s.git",
+  "at": "2026-11-19T01:00:50.358Z",
+  "materialize": {
+    "materialized": false,
+    "reason": "不是 git 仓库"
+  },
+  "note": "克隆目录只有 .git 元数据、工作区为空（materialize={\"materialized\":false,\"reason\":\"不是 git 仓库\"}），改用本地解压目录；用的是本地解压目录（非 git），拿不到 HEAD —— 结论只能算快照，不能复算到提交",
+  "fallbackDir": "D:\\refs\\CL4R1T4S",
+  "dir": "D:\\refs\\CL4R1T4S",
+  "git": {
+    "isGit": false
+  },
+  "measure": {
+    "files": 82,
+    "mb": 8,
+    "topExt": [
+      {
+        "ext": ".md",
+        "files": 36,
+        "kb": 4170
+      },
+      {
+        "ext": ".txt",
+        "files": 35,
+        "kb": 2164
+      },
+      {
+        "ext": "(none)",
+        "files": 4,
+        "kb": 61
+      },
+      {
+        "ext": ".json",
+        "files": 4,
+        "kb": 1740
+      },
+      {
+        "ext": ".mkd",
+        "files": 3,
+        "kb": 47
+      }
+    ],
+    "largestFile": {
+      "path": "CL4R1T4S-main/ANTHROPIC/CLAUDE-OPUS-5.5.md",
+      "kb": 1907
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [],
+    "tests": [],
+    "ci": []
+  },
+  "state": "WARN",
+  "reason": "目录存在但不是 git 仓库：可拆解，但拿不到 HEAD，结论不可复算到具体提交"
+}

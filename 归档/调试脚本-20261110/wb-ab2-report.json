@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-06T15:05:56.914Z",
+  "baseline": {
+    "count": 13,
+    "total": 1499,
+    "gpu": {
+      "n": 1,
+      "mb": 410
+    },
+    "main": {
+      "n": 1,
+      "mb": 97
+    },
+    "render": {
+      "n": 11,
+      "mb": 992,
+      "perMB": 90
+    }
+  },
+  "after": {
+    "count": 13,
+    "total": 1176,
+    "gpu": {
+      "n": 1,
+      "mb": 345
+    },
+    "main": {
+      "n": 1,
+      "mb": 96
+    },
+    "render": {
+      "n": 11,
+      "mb": 735,
+      "perMB": 67
+    }
+  },
+  "delta": {
+    "total": 323,
+    "gpu": 65,
+    "render": 257,
+    "renderCount": 0
+  }
+}
