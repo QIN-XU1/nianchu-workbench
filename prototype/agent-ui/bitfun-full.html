@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-openbitfun-design-system-root data-color-scheme="light" data-openbitfun-native-frame="client">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenBitFun · 全量复刻</title>
+<!--
+  ══════════════════════════════════════════════════════════════════════
+  BitFun（OpenBitFun）全量复刻
+  ──────────────────────────────────────────────────────────────────────
+  上游 github.com/GCWing/BitFun v1.0.10  —— 完整仓库 88.4MB / 10527 文件
+
+  一、令牌：生成，不是手抄
+     输入 design-system/packages/theme-openbitfun/src/{reference,light,dark}.tokens.json
+          design-system/packages/design-tokens/src/system.tokens.json
+     规则 design-system/packages/theme-openbitfun/scripts/build.mjs
+     输出 bitfun/tokens.css —— 1476 处 --openbitfun-*
+
+  二、外壳：取自源码
+     src/web-ui/src/app/layout/AppLayout.scss         #root{border-radius:12px}
+     src/web-ui/src/app/scenes/shell/ShellNav.scss    __header 40px / __terminal-list gap 2px
+     src/web-ui/src/app/components/SceneBar/SceneBar.scss  标签是 pill 半径
+
+  三、场景清单：取自 src/web-ui/src/app/scenes/registry.ts（SCENE_TAB_REGISTRY）
+     personal-overview Home · session Session · terminal Terminal · git Git
+     settings Settings · profile Profile · agents Agents · skills Skills
+     ecosystem-compatibility External Import · miniapps Mini App · pages Pages
+     browser Browser · assistant Assistant · todos Task Board · insights Insights
+     shell Shell · project-resources Files
+
+  四、每个场景的结构取自该目录的主组件：
+     session   SessionScene.tsx   → ChatPane / TerminalPanelPosition / BottomTerminalPane
+     agents    AgentsScene.tsx    → GalleryLayout / GalleryPageHeader / CapabilitySection / StatusPill
+     skills    SkillsScene.tsx    → SearchField / Select / SkillsGrid / SkillCard / SkillsPagination
+     settings  SettingsScene.tsx  → SettingsPage（左侧分类 + 右侧分区）
+     git       GitScene.tsx       → WorkingCopyView / BranchesView / GraphView
+     todos     TodosScene.tsx     → CronJob / TodoEditor / Dialog
+     insights  InsightsScene.tsx  → AtAGlanceSection / StatsRow / ReportMetaCard
+     pages     PagesScene.tsx     → GalleryLayout / GalleryEmpty
+     miniapps  MiniAppGalleryScene→ TabGroup / MiniAppLibraryView
+     ecosystem EcosystemCompat…   → ConfigPageSectionStack / Switch / Textarea
+     browser   BrowserScene.tsx   → BrowserPreview / URL Input
+     project-resources            → NavigationPanel / FileExplorerToolbar
+     terminal / shell             → ConnectedTerminal
+
+  诚实说明：外壳、Home、Session、Agents、Skills、Settings 是按源码结构与令牌复刻的；
+  其余场景复刻了标题/分区/主要控件与空态，内容为示例数据（真实数据来自 Tauri 后端，
+  静态页面无法取得）。
+-->
+<link rel="stylesheet" href="bitfun/tokens.css">
+<style>
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: hidden;
+  background: var(--openbitfun-color-surface-canvas);
+  color: var(--openbitfun-color-content-primary);
+  font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: var(--openbitfun-type-label-md-font-size, 13px);
+  line-height: 1.5; -webkit-font-smoothing: antialiased;
+}
+#root { height: 100vh; width: 100vw; display: flex; position: relative; border-radius: 12px; overflow: hidden; }
+button { font: inherit; color: inherit; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,.16); border-radius: 999px; border: 3px solid transparent; background-clip: content-box; }
+
+.traffic { position: absolute; top: 13px; left: 15px; z-index: 20; display: flex; gap: 8px; }
+.traffic i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.traffic i:nth-child(1) { background: #ff5f57; } .traffic i:nth-child(2) { background: #febc2e; } .traffic i:nth-child(3) { background: #28c840; }
+
+/* ══ 侧栏 NavPanel ══ */
+.nav { width: 264px; flex: none; height: 100%; background: var(--openbitfun-color-surface-panel); display: flex; flex-direction: column; padding-top: 42px; }
+.nav__search { padding: 0 var(--openbitfun-space-3) var(--openbitfun-space-2); }
+.search { display: flex; align-items: center; gap: var(--openbitfun-space-2); height: 32px; padding: 0 var(--openbitfun-space-2) 0 var(--openbitfun-space-3); border-radius: var(--openbitfun-radius-base); background: var(--openbitfun-color-surface-subtle); color: var(--openbitfun-color-content-muted); font-size: 12px; }
+.search input { flex: 1; min-width: 0; border: 0; background: none; outline: none; color: inherit; font: inherit; }
+.search kbd { font-size: 11px; padding: 0 4px; border-radius: 4px; background: rgba(0,0,0,.04); }
+.nav__items { padding: 0 var(--openbitfun-space-2); display: flex; flex-direction: column; gap: 2px; }
+.nav__item { display: flex; align-items: center; gap: var(--openbitfun-space-2); height: 33px; padding: 0 var(--openbitfun-space-2); border: 0; background: none; cursor: pointer; text-align: left; border-radius: var(--openbitfun-radius-base); color: var(--openbitfun-color-content-secondary); font-size: 13px; transition: background 140ms cubic-bezier(.23,1,.32,1); }
+.nav__item:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.05)); }
+.nav__item[aria-current="page"], .nav__item[aria-selected="true"] { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.07)); color: var(--openbitfun-color-content-primary); font-weight: 600; }
+.nav__item .ico { display: grid; place-items: center; }
+.nav__section { display: flex; align-items: center; justify-content: space-between; gap: var(--openbitfun-space-2); height: 40px; padding: 0 var(--openbitfun-space-3); margin-top: var(--openbitfun-space-2); }
+.nav__section-title { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--openbitfun-color-content-muted); font-weight: 500; }
+.nav__section-actions { display: flex; gap: 2px; }
+.iconbtn { width: 24px; height: 24px; display: grid; place-items: center; border: 0; background: none; cursor: pointer; border-radius: 6px; color: var(--openbitfun-color-content-muted); transition: background 140ms cubic-bezier(.23,1,.32,1); }
+.iconbtn:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.06)); color: var(--openbitfun-color-content-primary); }
+.nav__list { display: flex; flex-direction: column; gap: 2px; padding: 0 var(--openbitfun-space-2); overflow-y: auto; }
+.session { display: flex; align-items: center; gap: var(--openbitfun-space-2); height: 32px; padding: 0 var(--openbitfun-space-2); border: 0; background: none; cursor: pointer; text-align: left; border-radius: var(--openbitfun-radius-base); color: var(--openbitfun-color-content-secondary); font-size: 13px; white-space: nowrap; overflow: hidden; }
+.session:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.05)); }
+.session .av { width: 20px; height: 20px; border-radius: 6px; flex: none; display: grid; place-items: center; background: var(--openbitfun-color-content-primary); color: var(--openbitfun-color-content-inverse); }
+.session--child { padding-left: 34px; }
+.nav__foot { margin-top: auto; flex: none; display: flex; align-items: center; gap: var(--openbitfun-space-2); height: 50px; padding: 0 var(--openbitfun-space-3); color: var(--openbitfun-color-content-secondary); font-size: 12px; }
+.nav__foot .sp { flex: 1; }
+
+/* ══ 主区 ══ */
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; background: var(--openbitfun-color-surface-canvas); }
+.scenebar { flex: none; height: 52px; display: flex; align-items: center; gap: var(--openbitfun-space-1); padding: 0 var(--openbitfun-space-4); }
+.tab { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 var(--openbitfun-space-3); border-radius: var(--openbitfun-radius-pill, 9999px); border: 0; background: none; cursor: pointer; color: var(--openbitfun-color-content-muted); font-size: 13px; }
+.tab:hover { background: var(--openbitfun-color-surface-subtle); color: var(--openbitfun-color-content-primary); }
+.tab[aria-current="page"] { background: var(--openbitfun-color-surface-subtle); color: var(--openbitfun-color-content-primary); font-weight: 600; }
+.scenebar .sp { flex: 1; }
+.view { flex: 1; min-height: 0; display: flex; }
+.scroll { flex: 1; min-height: 0; overflow-y: auto; }
+
+/* 通用页面容器 */
+.page { max-width: 900px; margin: 0 auto; padding: 8px 24px 64px; }
+.page--wide { max-width: 1120px; }
+.ph { display: flex; align-items: center; gap: var(--openbitfun-space-2); margin: 12px 0 18px; }
+.ph h1 { margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
+.ph .sp { flex: 1; }
+.pill { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; border-radius: 9999px; background: var(--openbitfun-color-surface-subtle); color: var(--openbitfun-color-content-primary); font-size: 12.5px; border: 0; cursor: pointer; }
+.pill:hover { background: var(--openbitfun-color-surface-panel); }
+.btn { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: var(--openbitfun-radius-base); border: 1px solid var(--openbitfun-color-border-default); background: var(--openbitfun-color-surface-panel); color: var(--openbitfun-color-content-primary); font-size: 12.5px; cursor: pointer; }
+.btn:hover { background: var(--openbitfun-color-surface-subtle); }
+.btn--primary { background: var(--openbitfun-color-accent-default); border-color: transparent; color: #fff; }
+.linkish { display: inline-flex; align-items: center; gap: 4px; border: 0; background: none; cursor: pointer; color: var(--openbitfun-color-content-muted); font-size: 12.5px; padding: 4px 6px; border-radius: 6px; }
+.linkish:hover { color: var(--openbitfun-color-content-primary); background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.05)); }
+.divider-v { width: 1px; height: 12px; background: var(--openbitfun-color-border-subtle); }
+.field { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 10px; border-radius: var(--openbitfun-radius-base); border: 1px solid var(--openbitfun-color-border-subtle); background: var(--openbitfun-color-surface-canvas); font-size: 12.5px; color: var(--openbitfun-color-content-secondary); }
+.field input { flex: 1; min-width: 0; border: 0; background: none; outline: none; font: inherit; color: var(--openbitfun-color-content-primary); }
+.select { height: 32px; padding: 0 10px; border-radius: var(--openbitfun-radius-base); border: 1px solid var(--openbitfun-color-border-subtle); background: var(--openbitfun-color-surface-canvas); font-size: 12.5px; color: var(--openbitfun-color-content-secondary); }
+.card { border: 1px solid var(--openbitfun-color-border-subtle); border-radius: var(--openbitfun-radius-lg, 12px); background: var(--openbitfun-color-surface-canvas); }
+.status { display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 8px; border-radius: 9999px; font-size: 11px; }
+.status--ok { color: #1aa73e; background: rgba(26,167,62,.10); }
+.status--warn { color: #ff8c00; background: rgba(255,140,0,.10); }
+.status--off { color: var(--openbitfun-color-content-muted); background: var(--openbitfun-color-surface-subtle); }
+.muted { color: var(--openbitfun-color-content-muted); }
+.grid { display: grid; gap: 12px; }
+.empty { display: grid; place-items: center; gap: 8px; padding: 56px 0; color: var(--openbitfun-color-content-muted); font-size: 13px; }
+
+/* Home */
+.hero { display: flex; flex-direction: column; align-items: center; padding: 12px 0 26px; }
+.mascot { position: relative; width: 116px; height: 112px; margin-bottom: 24px; }
+.mascot .ant { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 16px; height: 16px; border-radius: 50%; background: #34d399; }
+.mascot .body { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); width: 116px; height: 96px; border-radius: 26px; background: #23262f; display: flex; align-items: center; justify-content: center; gap: 24px; }
+.mascot .body i { width: 13px; height: 20px; border-radius: 50%; background: #fff; display: block; }
+.hero h1 { margin: 0; font-size: 27px; font-weight: 600; letter-spacing: -.02em; }
+.stats { display: grid; grid-template-columns: repeat(5,1fr); border: 1px solid var(--openbitfun-color-border-subtle); border-radius: var(--openbitfun-radius-xl,16px); margin: 30px 0 36px; }
+.stat { padding: 16px 8px 18px; text-align: center; position: relative; }
+.stat + .stat::before { content: ''; position: absolute; left: 0; top: 22%; bottom: 22%; width: 1px; background: var(--openbitfun-color-border-subtle); }
+.stat b { display: block; font-size: 16px; font-weight: 600; margin-bottom: 5px; }
+.stat span { font-size: 11.5px; color: var(--openbitfun-color-content-muted); }
+.duo { display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--openbitfun-radius-xl,16px); background: var(--openbitfun-color-surface-panel); overflow: hidden; margin-bottom: 32px; }
+.duo > div { padding: 20px 24px; position: relative; }
+.duo > div + div::before { content: ''; position: absolute; left: 0; top: 18%; bottom: 18%; width: 1px; background: var(--openbitfun-color-border-subtle); }
+.duo h3 { margin: 0 0 12px; font-size: 12.5px; font-weight: 600; }
+.duo .num { font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.05; }
+.duo p { margin: 10px 0 0; font-size: 12px; color: var(--openbitfun-color-content-muted); line-height: 1.55; max-width: 300px; }
+.device { display: flex; align-items: center; gap: 12px; padding: 16px 18px; width: 320px; border-radius: var(--openbitfun-radius-lg,12px); background: var(--openbitfun-color-surface-panel); }
+.device .meta b { display: block; font-size: 12.5px; font-weight: 600; }
+.device .meta span { font-size: 11.5px; color: var(--openbitfun-color-content-muted); }
+
+/* Session / FlowChat */
+.chatpane { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.chat { flex: 1; min-height: 0; overflow-y: auto; padding: 12px 0; }
+.chat-in { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.msg { margin-bottom: 26px; }
+.who { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.who .nm { font-size: 12px; font-weight: 600; color: var(--openbitfun-color-content-secondary); }
+.msg.user .bubble { background: var(--openbitfun-color-surface-panel); border-radius: 14px; padding: 10px 14px; max-width: 80%; margin-left: auto; width: fit-content; font-size: 13.5px; line-height: 1.6; }
+.toolcard { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; margin: 3px 0; background: var(--openbitfun-color-surface-subtle); font-size: 12px; }
+.toolcard .t { font-weight: 600; }
+.toolcard .a { color: var(--openbitfun-color-content-muted); font-family: ui-monospace, monospace; font-size: 11.5px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.toolcard .d { color: var(--openbitfun-color-content-muted); font-family: ui-monospace, monospace; font-size: 11px; }
+.toolout { margin: 2px 0 8px 18px; padding: 10px 12px; border-radius: 8px; background: var(--openbitfun-color-surface-panel); font-family: ui-monospace, monospace; font-size: 11.5px; line-height: 1.65; color: var(--openbitfun-color-content-secondary); overflow-x: auto; }
+.toolout .add { display: block; background: rgba(26,167,62,.10); }
+.toolout .del { display: block; background: rgba(236,34,31,.10); }
+.prose { font-size: 13.5px; line-height: 1.65; }
+.prose p { margin: 0 0 10px; }
+.metrics { display: flex; gap: 12px; margin-top: 10px; font-family: ui-monospace, monospace; font-size: 11px; color: var(--openbitfun-color-content-muted); }
+/* ChatComposer：照 BitFun 的 compact surface，聚焦只改 border-color */
+.composer { flex: none; padding: 6px 24px 16px; }
+.composer .surface { max-width: 760px; margin: 0 auto; border: 1px solid var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-lg,12px); background: var(--openbitfun-color-surface-canvas); padding: 10px 12px 8px; transition: border-color 140ms cubic-bezier(.23,1,.32,1); }
+.composer .surface:focus-within { border-color: var(--openbitfun-color-border-strong); }
+.composer textarea { width: 100%; border: 0; background: none; outline: none; resize: none; font: inherit; font-size: 13.5px; color: var(--openbitfun-color-content-primary); min-height: 40px; display: block; }
+.composer .row { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.composer .row .sp { flex: 1; }
+.icobtn-pill { width: 26px; height: 26px; display: grid; place-items: center; border: 0; background: none; cursor: pointer; border-radius: 9999px; color: var(--openbitfun-color-content-muted); }
+.icobtn-pill:hover { background: var(--openbitfun-color-surface-subtle); }
+.send { height: 26px; padding: 0 12px; border-radius: 9999px; border: 0; background: var(--openbitfun-color-accent-default); color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
+
+/* Agents / Skills 网格 */
+.acard { padding: 14px; border-radius: var(--openbitfun-radius-lg,12px); border: 1px solid var(--openbitfun-color-border-subtle); background: var(--openbitfun-color-surface-canvas); cursor: pointer; }
+.acard:hover { background: var(--openbitfun-color-surface-panel); }
+.acard .top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.acard .av { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--openbitfun-color-surface-subtle); color: var(--openbitfun-color-content-secondary); }
+.acard .nm { font-size: 13px; font-weight: 600; }
+.acard .ds { font-size: 12px; color: var(--openbitfun-color-content-muted); line-height: 1.5; }
+
+/* Settings */
+.settings { flex: 1; display: flex; min-height: 0; }
+.settings__nav { width: 210px; flex: none; border-right: 1px solid var(--openbitfun-color-border-subtle); padding: 12px 8px; }
+.settings__body { flex: 1; min-width: 0; overflow-y: auto; padding: 8px 28px 48px; max-width: 720px; }
+.sect-h { font-size: 12.5px; font-weight: 600; margin: 22px 0 10px; }
+.srow { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+.srow + .srow { border-top: 1px solid var(--openbitfun-color-border-subtle); }
+.srow .k { font-size: 13px; }
+.srow .d { font-size: 11.5px; color: var(--openbitfun-color-content-muted); }
+.srow .sp { flex: 1; }
+.switch { width: 34px; height: 20px; border-radius: 9999px; border: 0; background: var(--openbitfun-color-surface-subtle); position: relative; cursor: pointer; flex: none; }
+.switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: transform 140ms cubic-bezier(.23,1,.32,1); }
+.switch[aria-checked="true"] { background: var(--openbitfun-color-accent-default); }
+.switch[aria-checked="true"]::after { transform: translateX(14px); }
+
+/* Terminal */
+.term { flex: 1; min-height: 0; background: #16161a; color: #d7dae0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.65; padding: 14px 16px; overflow: auto; }
+.term .p { color: #34d399; }
+.term .c { color: #e8e8e8; }
+.term .o { color: #9aa3b0; }
+
+/* Git */
+.gitrow { display: flex; align-items: center; gap: 8px; padding: 9px 12px; font-size: 12.5px; }
+.gitrow + .gitrow { border-top: 1px solid var(--openbitfun-color-border-subtle); }
+.gitrow .f { font-family: ui-monospace, monospace; font-size: 12px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.gitrow .n { font-family: ui-monospace, monospace; font-size: 11.5px; }
+.add-n { color: #1aa73e; } .del-n { color: #ec221f; }
+
+/* 通用列表行 */
+.lrow { display: flex; align-items: center; gap: 12px; padding: 13px 14px; }
+.lrow + .lrow { border-top: 1px solid var(--openbitfun-color-border-subtle); }
+.lrow .t { font-size: 13px; font-weight: 500; }
+.lrow .s { font-size: 11.5px; color: var(--openbitfun-color-content-muted); }
+.lrow .sp { flex: 1; }
+
+/* Task board 列 */
+.board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
+.col h4 { margin: 0 0 10px; font-size: 12px; font-weight: 600; color: var(--openbitfun-color-content-muted); text-transform: uppercase; letter-spacing: .05em; }
+.tcard { padding: 12px; border-radius: 10px; border: 1px solid var(--openbitfun-color-border-subtle); background: var(--openbitfun-color-surface-canvas); margin-bottom: 8px; }
+.tcard b { display: block; font-size: 12.5px; margin-bottom: 4px; }
+.tcard span { font-size: 11.5px; color: var(--openbitfun-color-content-muted); }
+</style>
+</head>
+<body data-openbitfun-design-system-root data-color-scheme="light">
+<div id="root">
+  <div class="traffic"><i></i><i></i><i></i></div>
+
+  <aside class="nav">
+    <div class="nav__search">
+      <label class="search"><span data-lucide="search" style="width:14px;height:14px"></span><input value="Search everything" readonly><kbd>⌘K</kbd></label>
+    </div>
+    <div class="nav__items" id="navItems"></div>
+    <div class="nav__section">
+      <span class="nav__section-title">Sessions</span>
+      <span class="nav__section-actions">
+        <button class="iconbtn"><span data-lucide="list" style="width:15px;height:15px"></span></button>
+        <button class="iconbtn"><span data-lucide="sliders-horizontal" style="width:15px;height:15px"></span></button>
+        <button class="iconbtn"><span data-lucide="folder-plus" style="width:15px;height:15px"></span></button>
+      </span>
+    </div>
+    <div class="nav__list">
+      <button class="session"><span class="av"><span data-lucide="bot" style="width:12px;height:12px"></span></span>Fun</button>
+      <button class="session"><span data-lucide="folder" style="width:16px;height:16px;color:var(--openbitfun-color-content-muted)"></span>OpenBitFun</button>
+      <button class="session session--child">New Session</button>
+    </div>
+    <div class="nav__foot">
+      <span data-lucide="laptop" style="width:16px;height:16px"></span><span>GCWingdeMacBook-Air</span><span class="sp"></span>
+      <button class="iconbtn" id="goSettings"><span data-lucide="settings" style="width:15px;height:15px"></span></button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="scenebar" id="scenebar"></div>
+    <div class="view" id="view"></div>
+  </main>
+</div>
+
+<script src="vendor/lucide.js"></script>
+<script type="module">
+// ══════════════════════════════════════════════════════════════════════
+// 场景表：逐条对应 src/web-ui/src/app/scenes/registry.ts（SCENE_TAB_REGISTRY）
+// ══════════════════════════════════════════════════════════════════════
+const SCENES = [
+  { id: 'personal-overview', label: 'Home',           icon: 'house',          nav: true },
+  { id: 'session',           label: 'Session',        icon: 'message-square', nav: true, pinned: true },
+  { id: 'todos',             label: 'Task Board',     icon: 'calendar-clock', nav: true },
+  { id: 'agents',            label: 'Agents',         icon: 'users',          nav: true },
+  { id: 'skills',            label: 'Skills',         icon: 'puzzle',         nav: true },
+  { id: 'insights',          label: 'Insights',       icon: 'bar-chart-3',    nav: true },
+  { id: 'pages',             label: 'Pages',          icon: 'panels-top-left',nav: true },
+  { id: 'git',               label: 'Git',            icon: 'git-branch' },
+  { id: 'terminal',          label: 'Terminal',       icon: 'terminal' },
+  { id: 'browser',           label: 'Browser',        icon: 'globe' },
+  { id: 'miniapps',          label: 'Mini App',       icon: 'boxes' },
+  { id: 'ecosystem-compatibility', label: 'External Import', icon: 'cable' },
+  { id: 'project-resources', label: 'Files',          icon: 'folder' },
+  { id: 'assistant',         label: 'Assistant',      icon: 'user' },
+  { id: 'profile',           label: 'Profile',        icon: 'circle-user-round' },
+  { id: 'settings',          label: 'Settings',       icon: 'settings' },
+  { id: 'shell',             label: 'Shell',          icon: 'terminal' },
+];
+
+const ICON = (n, s = 16) => `<span data-lucide="${n}" style="width:${s}px;height:${s}px"></span>`;
+const MASCOT = `<div class="mascot"><span class="ant"></span><span class="body"><i></i><i></i></span></div>`;
+const PH = (title, right = '') => `<div class="ph"><h1>${title}</h1><span class="sp"></span>${right}</div>`;
+
+// ── 各场景视图 ──
+const VIEWS = {
+  'personal-overview': () => `<div class="scroll"><div class="page">
+    <div class="hero">${MASCOT}<h1>Hey, ideas are bubbling!</h1></div>
+    <div class="stats">
+      <div class="stat"><b>6.9M</b><span>Total tokens</span></div>
+      <div class="stat"><b>4.7M</b><span>Peak daily tokens</span></div>
+      <div class="stat"><b>—</b><span>Longest task</span></div>
+      <div class="stat"><b>2 days</b><span>Longest streak</span></div>
+      <div class="stat"><b>1 days</b><span>Current streak</span></div>
+    </div>
+    <div class="ph" style="margin-top:0"><h1 style="font-size:15px">Agents</h1><span class="sp"></span>
+      <button class="linkish">${ICON('plus',13)}Create Agent</button><span class="divider-v"></span>
+      <button class="linkish">${ICON('plus',13)}Create assistant</button></div>
+    <div class="duo">
+      <div><h3>Agents</h3><div class="num">10</div><p>Built-in and custom Agents for your workflows.</p></div>
+      <div><h3>Assistant</h3><div class="num">1</div><p>Long-term collaborators with their own memory.</p></div>
+    </div>
+    <div class="ph" style="margin-top:0"><h1 style="font-size:15px">Devices</h1><span class="sp"></span>
+      <button class="linkish">${ICON('monitor-smartphone',13)}Manage devices</button></div>
+    <div class="device">${ICON('laptop',22)}<span class="meta"><b>GCWingdeMacBook-Air</b><span>GCWingdeMacBook-Air.local</span></span></div>
+    <div class="muted" style="margin-top:14px;font-size:12.5px">Sign in to connect more devices</div>
+  </div></div>`,
+
+  session: () => `<div class="chatpane">
+    <div class="chat"><div class="chat-in">
+      <div class="msg user"><div class="who" style="justify-content:flex-end"><span class="nm">You</span></div>
+        <div class="bubble">把审批闸当成安全边界来审：它现在能不能挡住等价分解？</div></div>
+      <div class="msg">
+        <div class="who">${ICON('bot',14)}<span class="nm">Fun</span></div>
+        <div class="toolcard">${ICON('file-text',13)}<span class="t">read_file</span><span class="a">tools/approval_detection.py</span><span class="d">0.04s</span></div>
+        <div class="toolcard">${ICON('terminal',13)}<span class="t">terminal</span><span class="a">pytest -q tests/approval</span><span class="d">1.2s</span></div>
+        <div class="toolout"><span class="del">- canary survived? no ← 绕过成功（等价分解）</span>  guard: "path fence" = true</div>
+        <div class="toolcard">${ICON('file-pen',13)}<span class="t">edit_file</span><span class="a">tools/approval_detection.py</span><span class="d">0.08s</span></div>
+        <div class="toolout"><span class="add">+     targets = _PATHLIKE_RE.findall(command)</span><span class="add">+     if targets and not any(_inside(t) for t in targets):</span></div>
+        <div class="prose" style="margin-top:10px">
+          <p>挡住等价分解的关键不是加正则，而是换个判据：从「命令文本像不像危险」改成「删除落在哪」。</p>
+          <p>同理 accepted ≠ success：已写入不是已验证，判不了就说判不了。</p>
+        </div>
+        <div class="metrics"><span>用时 2.4s</span><span>入 12,841</span><span>出 486</span><span>缓存 76%</span><span>$0.0031</span></div>
+      </div>
+    </div></div>
+    <div class="composer"><div class="surface">
+      <textarea rows="1" placeholder="Ask, or type @ for context"></textarea>
+      <div class="row">
+        <button class="icobtn-pill">${ICON('paperclip',15)}</button>
+        <button class="icobtn-pill">${ICON('at-sign',15)}</button>
+        <button class="icobtn-pill">${ICON('sparkles',15)}</button>
+        <span class="sp"></span>
+        <button class="icobtn-pill">${ICON('mic',15)}</button>
+        <button class="send">Send</button>
+      </div>
+    </div></div>
+  </div>`,
+
+  todos: () => `<div class="scroll"><div class="page page--wide">
+    ${PH('Task Board', `<button class="btn">${ICON('calendar-clock',14)}Schedule</button><button class="btn btn--primary">${ICON('plus',14)}New Task</button>`)}
+    <div class="board">
+      <div class="col"><h4>Backlog 3</h4>
+        <div class="tcard"><b>Daily health check</b><span>每天 09:00</span></div>
+        <div class="tcard"><b>Repo weekly scan</b><span>每周一 10:00</span></div>
+        <div class="tcard"><b>Memory TTL cleanup</b><span>每 6 小时</span></div></div>
+      <div class="col"><h4>In progress 2</h4>
+        <div class="tcard"><b>Approval gate hardening</b><span>session · Fun</span></div>
+        <div class="tcard"><b>DSH token extraction</b><span>session · Fun</span></div></div>
+      <div class="col"><h4>Done 1</h4>
+        <div class="tcard"><b>AionUi IA teardown</b><span>completed</span></div></div>
+    </div>
+  </div></div>`,
+
+  agents: () => `<div class="scroll"><div class="page page--wide">
+    <div class="ph"><h1>Agents</h1><span class="sp"></span>
+      <label class="field" style="width:200px">${ICON('search',13)}<input placeholder="Search agents"></label>
+      <button class="btn btn--primary">${ICON('plus',14)}Create Agent</button></div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+      ${[['Fun','General-purpose agent with tools and memory','ok','Ready'],
+         ['OpenBitFun','Workspace agent bound to this project','ok','Ready'],
+         ['Reviewer','Reviews diffs, writes findings, never edits','ok','Ready'],
+         ['Researcher','Web + docs research with citations','warn','Needs model'],
+         ['Coder','Implements scoped changes and runs tests','ok','Ready'],
+         ['Ops','Terminal-first operator','off','Disabled']]
+        .map(([n,d,st,label]) => `<div class="acard">
+          <div class="top"><span class="av">${ICON('bot',14)}</span><span class="nm">${n}</span><span class="sp" style="flex:1"></span>
+            <span class="status status--${st}">${label}</span></div>
+          <div class="ds">${d}</div></div>`).join('')}
+    </div>
+  </div></div>`,
+
+  skills: () => `<div class="scroll"><div class="page page--wide">
+    <div class="ph"><h1>Skills</h1><span class="sp"></span>
+      <label class="field" style="width:190px">${ICON('search',13)}<input placeholder="Search skills"></label>
+      <select class="select"><option>All sources</option><option>Built-in</option><option>Extension</option></select></div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+      ${[['agent-browser','用真实浏览器读页面、填表单、验 UI','Built-in','ok'],
+         ['verify-first','先写验收断言再动手','Built-in','ok'],
+         ['windows-sandbox','Windows 沙箱拒绝排查与 ACL 修复','Built-in','ok'],
+         ['reverse-engineer','拆包 / 反编译 / 运行时取证','Extension','ok'],
+         ['codegraph','按调用关系找改动影响面','Built-in','ok'],
+         ['memory-keeper','跨会话记忆：写入、检索、TTL','Built-in','off']]
+        .map(([n,d,src,st]) => `<div class="acard">
+          <div class="top"><span class="av">${ICON('sparkles',14)}</span><span class="nm">${n}</span><span class="sp" style="flex:1"></span>
+            <span class="status status--${st}">${st === 'ok' ? 'Enabled' : 'Disabled'}</span></div>
+          <div class="ds">${d}</div>
+          <div class="muted" style="font-size:11px;margin-top:8px">${src}</div></div>`).join('')}
+    </div>
+    <div class="muted" style="margin-top:18px;font-size:12px">6 of 8 skills · page 1</div>
+  </div></div>`,
+
+  settings: () => `<div class="settings">
+    <div class="settings__nav">
+      ${['General','Appearance','Models','Agents','Tools','Skills','MCP','Shortcuts','Advanced','About']
+        .map((l,i) => `<button class="nav__item" ${i===0?'aria-selected="true"':''} style="width:100%">${l}</button>`).join('')}
+    </div>
+    <div class="settings__body">
+      <div class="ph"><h1>General</h1></div>
+      <div class="sect-h">Appearance</div>
+      <div class="srow"><span class="k">Theme</span><span class="d">Follow system</span><span class="sp"></span><button class="switch" aria-checked="true" role="switch"></button></div>
+      <div class="srow"><span class="k">Reduce motion</span><span class="sp"></span><button class="switch" role="switch" aria-checked="false"></button></div>
+      <div class="sect-h">Language</div>
+      <div class="srow"><span class="k">Interface language</span><span class="sp"></span><select class="select"><option>English</option><option>简体中文</option></select></div>
+      <div class="sect-h">Model gateway</div>
+      <div class="srow"><span class="k">Endpoint</span><span class="d">http://127.0.0.1:3425/v1</span><span class="sp"></span><span class="status status--ok">Connected</span></div>
+      <div class="srow"><span class="k">Default model</span><span class="sp"></span><span class="d" style="font-family:ui-monospace,monospace">mimo-v2.6-flash</span></div>
+      <div class="sect-h">About</div>
+      <div class="srow"><span class="k">Version</span><span class="sp"></span><span class="d">1.0.10</span></div>
+      <div class="srow"><span class="k">Design system</span><span class="d">@openbitfun/design-tokens</span><span class="sp"></span></div>
+    </div></div>`,
+
+  git: () => `<div class="scroll"><div class="page">
+    ${PH('Git', `<button class="btn">${ICON('git-branch',14)}main</button><button class="btn btn--primary">${ICON('git-commit-horizontal',14)}Commit</button>`)}
+    <div class="muted" style="font-size:12px;margin-bottom:12px">Working copy · 3 changes</div>
+    <div class="card">
+      <div class="gitrow"><span class="status status--ok">M</span><span class="f">tools/approval_detection.py</span><span class="add-n">+18</span><span class="del-n">−4</span></div>
+      <div class="gitrow"><span class="status status--ok">A</span><span class="f">prototype/four-state.mjs</span><span class="add-n">+89</span></div>
+      <div class="gitrow"><span class="status status--warn">M</span><span class="f">research/架构分层.md</span><span class="add-n">+2</span><span class="del-n">−4</span></div>
+    </div>
+    <div class="muted" style="font-size:12px;margin:20px 0 10px">Recent commits</div>
+    <div class="card">
+      ${[['376d964','feat(界面): 1:1 复刻 BitFun Home 页'],['9ec638b','feat(界面): v7 照搬 BitFun 设计系统'],['9019e91','feat(界面): v6 暗色令牌取 DSH/open-design']]
+        .map(([h,m]) => `<div class="lrow"><span class="d" style="font-family:ui-monospace,monospace">${h}</span><span class="t" style="font-weight:400">${m}</span></div>`).join('')}
+    </div>
+  </div></div>`,
+
+  terminal: () => `<div class="term">
+<span class="p">openbitfun</span> <span class="c">~/OpenBitFun</span>
+<span class="o">$</span> pnpm run build:web
+<span class="o">> build-web-parallel: gen:types → design-system build:packages → tsc --noEmit → vite build</span>
+<span class="o">✓ built in 18.4s</span>
+<span class="p">openbitfun</span> <span class="c">~/OpenBitFun</span>
+<span class="o">$</span> <span style="background:#2c2c2e">&nbsp;</span>
+  </div>`,
+
+  shell: () => `<div class="term">
+<span class="p">shell</span> <span class="c">~/OpenBitFun</span>
+<span class="o">$</span> git status --short
+<span class="o"> M tools/approval_detection.py</span>
+<span class="o"> A prototype/four-state.mjs</span>
+<span class="p">shell</span> <span class="c">~/OpenBitFun</span>
+<span class="o">$</span> <span style="background:#2c2c2e">&nbsp;</span>
+  </div>`,
+
+  browser: () => `<div class="scroll"><div class="page">
+    ${PH('Browser')}
+    <div class="field" style="margin-bottom:14px">${ICON('globe',14)}<input value="https://github.com/GCWing/BitFun" readonly></div>
+    <div class="card" style="height:420px;display:grid;place-items:center">
+      <div class="empty">${ICON('globe',34)}<div>Embedded Browser</div><div class="muted" style="font-size:12px">Preview renders here</div></div>
+    </div>
+  </div></div>`,
+
+  miniapps: () => `<div class="scroll"><div class="page page--wide">
+    ${PH('Mini App', `<button class="btn btn--primary">${ICON('plus',14)}Install</button>`)}
+    <div class="nav__items" style="flex-direction:row;gap:4px;margin-bottom:16px">
+      <button class="tab" aria-current="page">Library</button><button class="tab">Submissions</button>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr)">
+      ${[['Ppt Live','Live slide preview'],['Coding Selfie','Code + camera'],['Git Graph','Commit graph'],['Icon Studio','Icon generator'],['Data Tools','CSV / JSON'],['Background Remover','Local model']]
+        .map(([n,d]) => `<div class="acard"><div class="top"><span class="av">${ICON('boxes',14)}</span><span class="nm">${n}</span></div><div class="ds">${d}</div></div>`).join('')}
+    </div>
+  </div></div>`,
+
+  'ecosystem-compatibility': () => `<div class="scroll"><div class="page">
+    ${PH('External Import', `<button class="btn btn--primary">${ICON('cable',14)}Import</button>`)}
+    <div class="muted" style="font-size:12.5px;margin-bottom:16px">Bring agents and skills from other ecosystems into OpenBitFun.</div>
+    <div class="card">
+      ${[['Claude Code','agents + skills','ok','Compatible'],['Cursor','rules','warn','Partial'],['Gemini CLI','extensions','ok','Compatible']]
+        .map(([n,d,st,l]) => `<div class="lrow"><span class="av" style="width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--openbitfun-color-surface-subtle)">${ICON('cable',14)}</span>
+          <span><span class="t" style="display:block">${n}</span><span class="s">${d}</span></span><span class="sp"></span>
+          <span class="status status--${st}">${l}</span></div>`).join('')}
+    </div>
+    <div class="sect-h">Import options</div>
+    <div class="card"><div class="lrow"><span class="t" style="font-weight:400">Overwrite existing</span><span class="sp"></span><button class="switch" role="switch" aria-checked="false"></button></div>
+      <div class="lrow"><span class="t" style="font-weight:400">Dry run first</span><span class="sp"></span><button class="switch" role="switch" aria-checked="true"></button></div></div>
+  </div></div>`,
+
+  'project-resources': () => `<div class="scroll"><div class="page">
+    ${PH('Files', `<button class="btn">${ICON('file-plus',14)}New file</button><button class="btn">${ICON('folder-plus',14)}New folder</button>`)}
+    <div class="card">
+      ${[['D','src/'],['D','tools/'],['D','research/'],['F','README.md'],['F','package.json'],['F','pnpm-lock.yaml']]
+        .map(([k,n]) => `<div class="lrow">${ICON(k === 'D' ? 'folder' : 'file-text',15)}<span class="t" style="font-weight:400">${n}</span><span class="sp"></span><span class="s">${k === 'D' ? 'folder' : '2 KB'}</span></div>`).join('')}
+    </div>
+  </div></div>`,
+
+  assistant: () => `<div class="scroll"><div class="page">
+    ${PH('Assistant', `<button class="btn btn--primary">${ICON('plus',14)}New assistant</button>`)}
+    <div class="card">${[['Ada','Long-term collaborator · own memory','ok']].map(([n,d,st]) =>
+      `<div class="lrow"><span class="av" style="width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--openbitfun-color-surface-subtle)">${ICON('user',15)}</span>
+        <span><span class="t" style="display:block">${n}</span><span class="s">${d}</span></span><span class="sp"></span><span class="status status--${st}">Ready</span></div>`).join('')}</div>
+  </div></div>`,
+
+  profile: () => `<div class="scroll"><div class="page">
+    ${PH('Profile')}
+    <div class="card"><div class="lrow"><span class="av" style="width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--openbitfun-color-surface-subtle);font-weight:600">W</span>
+      <span><span class="t" style="display:block;font-size:14px">GCWing</span><span class="s">Signed in · local account</span></span><span class="sp"></span>
+      <button class="btn">Sign out</button></div></div>
+    <div class="sect-h">Usage</div>
+    <div class="card">${[['Total tokens','6.9M'],['Peak daily','4.7M'],['Longest streak','2 days'],['Current streak','1 days']]
+      .map(([k,v]) => `<div class="lrow"><span class="t" style="font-weight:400">${k}</span><span class="sp"></span><span class="d" style="font-family:ui-monospace,monospace">${v}</span></div>`).join('')}</div>
+  </div></div>`,
+
+  insights: () => `<div class="scroll"><div class="page page--wide">
+    ${PH('Insights', `<button class="btn">${ICON('refresh-cw',14)}Generate</button>`)}
+    <div class="stats" style="margin:0 0 20px">
+      <div class="stat"><b>128</b><span>Sessions</span></div>
+      <div class="stat"><b>2,431</b><span>Tool calls</span></div>
+      <div class="stat"><b>96%</b><span>Verified</span></div>
+      <div class="stat"><b>18</b><span>Skills used</span></div>
+      <div class="stat"><b>4</b><span>Agents</span></div>
+    </div>
+    <div class="sect-h">At a glance</div>
+    <div class="card"><div class="lrow"><span class="t" style="font-weight:400">Most used tool</span><span class="sp"></span><span class="d">read_file · 612</span></div>
+      <div class="lrow"><span class="t" style="font-weight:400">Longest session</span><span class="sp"></span><span class="d">4h 12m</span></div>
+      <div class="lrow"><span class="t" style="font-weight:400">Verification pass rate</span><span class="sp"></span><span class="d">96%</span></div></div>
+  </div></div>`,
+
+  pages: () => `<div class="scroll"><div class="page page--wide">
+    ${PH('Pages', `<button class="btn btn--primary">${ICON('plus',14)}New page</button>`)}
+    <div class="empty">${ICON('panels-top-left',34)}<div>No pages yet</div><div class="muted" style="font-size:12px">Pages you publish from a session appear here.</div></div>
+  </div></div>`,
+};
+
+// ══════════════════════════════════════════════════════════════════════
+// 渲染与路由
+// ══════════════════════════════════════════════════════════════════════
+let cur = 'personal-overview';
+const open = ['personal-overview'];
+
+function navHTML() {
+  const main = SCENES.filter((s) => s.nav);
+  return main.map((s) => `<button class="nav__item" data-go="${s.id}" ${cur === s.id ? 'aria-current="page"' : ''}>
+    <span class="ico">${ICON(s.icon, 16)}</span>${s.label}</button>`).join('');
+}
+function scenebarHTML() {
+  // SceneBar 只列"已打开的标签"，Home 常驻
+  const tabs = SCENES.filter((s) => open.includes(s.id));
+  return tabs.map((s) => `<button class="tab" data-go="${s.id}" ${cur === s.id ? 'aria-current="page"' : ''}>
+    ${ICON(s.icon, 14)}${s.label}</button>`).join('') +
+    `<span class="sp"></span><button class="iconbtn" title="收起侧栏">${ICON('panel-left',16)}</button>`;
+}
+function icons() { if (window.lucide?.createIcons) window.lucide.createIcons(); }
+
+function render() {
+  document.getElementById('navItems').innerHTML = navHTML();
+  document.getElementById('scenebar').innerHTML = scenebarHTML();
+  const v = VIEWS[cur] || (() => `<div class="empty">Not implemented</div>`);
+  document.getElementById('view').innerHTML = v();
+  icons();
+  wire();
+  location.hash = cur;
+  document.title = 'OpenBitFun · ' + (SCENES.find((s) => s.id === cur)?.label || cur);
+}
+function go(id) {
+  if (!SCENES.some((s) => s.id === id)) return;
+  cur = id;
+  if (!open.includes(id)) open.push(id);
+  render();
+}
+function wire() {
+  document.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => go(b.dataset.go)));
+  document.querySelectorAll('.switch').forEach((b) => b.addEventListener('click', () => {
+    b.setAttribute('aria-checked', b.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
+  }));
+  const ta = document.querySelector('.composer textarea');
+  if (ta) { const fit = () => { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 160) + 'px'; }; ta.addEventListener('input', fit); fit(); }
+}
+document.getElementById('goSettings').addEventListener('click', () => go('settings'));
+
+const start = (location.hash || '').replace('#', '');
+render();
+if (start && SCENES.some((s) => s.id === start)) go(start);
+
+// 供验收读取
+document.documentElement.setAttribute('data-scenes', String(SCENES.length));
+window.__go = go;
+window.__scenes = SCENES.map((s) => s.id);
+</script>
+</body>
+</html>

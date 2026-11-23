@@ -1,0 +1,1762 @@
+[
+ {
+  "start": 0.0,
+  "end": 3.0,
+  "text": "我現在真的很喜歡我的DSH智能體",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 3.0,
+  "end": 6.0,
+  "text": "很多小夥伴想建立一個像我一樣的工作台",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 6.0,
+  "end": 8.7,
+  "text": "或者想讓我開源出來用我的一些功能",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 8.7,
+  "end": 11.9,
+  "text": "這一期視頻我準備做一個超級詳細的講解",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 11.9,
+  "end": 14.2,
+  "text": "我現在不只把它當成一個助手",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 14.2,
+  "end": 15.9,
+  "text": "還把它當成我的財富",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 15.9,
+  "end": 17.9,
+  "text": "甚至可以說是在培養一個",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 17.9,
+  "end": 20.5,
+  "text": "在數字世界無所不能的賽博的我",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 20.5,
+  "end": 21.7,
+  "text": "以後換設備",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 21.7,
+  "end": 23.3,
+  "text": "最想帶走的就是它",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 23.3,
+  "end": 26.3,
+  "text": "我現在甚至想為了它換一台高配電腦",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 26.3,
+  "end": 28.9,
+  "text": "傳統AI助手都是給你一個繪畫",
+  "avg_logprob": -0.093015,
+  "no_speech_prob": 0.258837,
+  "compression_ratio": 1.380952,
+  "temperature": 0.0,
+  "confidence": 0.91118
+ },
+ {
+  "start": 28.9,
+  "end": 41.9,
+  "text": "比如豆包,为了能持续记忆以及专注项目工作,你肯定会置顶一个个绘画,起专属名字,它确实可以做很多事,但是它有边界,它只能够在一条线上处理你指定的内容。",
+  "avg_logprob": -0.173448,
+  "no_speech_prob": 0.492846,
+  "compression_ratio": 1.258721,
+  "temperature": 0.0,
+  "confidence": 0.840761
+ },
+ {
+  "start": 41.9,
+  "end": 57.9,
+  "text": "DeepseaKannes不同,它只给你一个执行框架,绘画、技能、插件、MCP、压缩这些底层能力由它提供,而场景体系、记忆、索引、线法、体检都是我在这个框架之上自己加的一层。",
+  "avg_logprob": -0.173448,
+  "no_speech_prob": 0.492846,
+  "compression_ratio": 1.258721,
+  "temperature": 0.0,
+  "confidence": 0.840761
+ },
+ {
+  "start": 57.9,
+  "end": 60.9,
+  "text": "正因為框架和我家的那層是分開的",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 60.9,
+  "end": 62.9,
+  "text": "它幾乎可以無邊際的改造",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 62.9,
+  "end": 64.9,
+  "text": "每個繪畫不一定是一個繪畫",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 64.9,
+  "end": 66.9,
+  "text": "它可以是一個關節",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 66.9,
+  "end": 68.9,
+  "text": "甚至是一個神經園",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 68.9,
+  "end": 70.9,
+  "text": "首先我先從我自己定義的場景概念講起",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 70.9,
+  "end": 72.9,
+  "text": "為什麼要設立場景",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 72.9,
+  "end": 75.9,
+  "text": "以前所有AI工具的繪畫都有記憶上限",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 75.9,
+  "end": 78.9,
+  "text": "我們通常要指定它成為什麼角色來為我們工作",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 78.9,
+  "end": 80.9,
+  "text": "比如豆包一開始",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 80.9,
+  "end": 82.9,
+  "text": "有很多設定好的智能體",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 82.9,
+  "end": 84.9,
+  "text": "專門回答專項問題",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 84.9,
+  "end": 85.9,
+  "text": "但如果是長項目",
+  "avg_logprob": -0.102805,
+  "no_speech_prob": 0.897275,
+  "compression_ratio": 1.36646,
+  "temperature": 0.0,
+  "confidence": 0.902303
+ },
+ {
+  "start": 85.9,
+  "end": 88.2,
+  "text": "很快前面的东西它就不记得了。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 88.2,
+  "end": 91.9,
+  "text": "换绘画又要重新说一遍项目信息,很麻烦。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 91.9,
+  "end": 95.1,
+  "text": "于是我就想到用一个场景来对接一个项目。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 95.1,
+  "end": 97.7,
+  "text": "这个场景有专属的总项目信息。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 97.7,
+  "end": 102.0,
+  "text": "简单说,项目信息就是一个AI可读的MD文件。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 102.0,
+  "end": 104.3,
+  "text": "就是文字,又来设定规矩。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 104.3,
+  "end": 107.7,
+  "text": "AI工作的时候,把记忆更新到项目信息里。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 107.7,
+  "end": 110.3,
+  "text": "这样就拥有了一个永久的记忆文件。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 110.3,
+  "end": 113.8,
+  "text": "就算画了绘画,只要AI读了这份项目信息,",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 113.8,
+  "end": 115.5,
+  "text": "它就知道是什么情况。",
+  "avg_logprob": -0.125383,
+  "no_speech_prob": 0.136411,
+  "compression_ratio": 1.477987,
+  "temperature": 0.0,
+  "confidence": 0.882159
+ },
+ {
+  "start": 115.5,
+  "end": 121.5,
+  "text": "戴一个长项目会一直往里堆,最后它会膨胀,不可能每次换绘画都读一遍。",
+  "avg_logprob": -0.124923,
+  "no_speech_prob": 0.180649,
+  "compression_ratio": 1.361702,
+  "temperature": 0.0,
+  "confidence": 0.882565
+ },
+ {
+  "start": 121.5,
+  "end": 129.5,
+  "text": "所以,我给它订了体量红线,主文件不许超过25kb,其中当前交接那一段不许超过4kb。",
+  "avg_logprob": -0.124923,
+  "no_speech_prob": 0.180649,
+  "compression_ratio": 1.361702,
+  "temperature": 0.0,
+  "confidence": 0.882565
+ },
+ {
+  "start": 129.5,
+  "end": 131.5,
+  "text": "超了就把旧内容搬进归档。",
+  "avg_logprob": -0.124923,
+  "no_speech_prob": 0.180649,
+  "compression_ratio": 1.361702,
+  "temperature": 0.0,
+  "confidence": 0.882565
+ },
+ {
+  "start": 131.5,
+  "end": 138.5,
+  "text": "每次开场只读开头那几段就够。换绘画的时候,把进度覆盖写进那段当前交接里。",
+  "avg_logprob": -0.124923,
+  "no_speech_prob": 0.180649,
+  "compression_ratio": 1.361702,
+  "temperature": 0.0,
+  "confidence": 0.882565
+ },
+ {
+  "start": 138.5,
+  "end": 144.5,
+  "text": "新的绘画一开场就揭上,平时不用天天换,到压缩线引擎自己会压缩,不必换绘画。",
+  "avg_logprob": -0.124923,
+  "no_speech_prob": 0.180649,
+  "compression_ratio": 1.361702,
+  "temperature": 0.0,
+  "confidence": 0.882565
+ },
+ {
+  "start": 144.5,
+  "end": 152.5,
+  "text": "可是整个项目一旦做起来,文件会越来越多,几时上百个文档。AI不可能每次都权量看一遍。",
+  "avg_logprob": -0.13402,
+  "no_speech_prob": 0.940381,
+  "compression_ratio": 1.384375,
+  "temperature": 0.0,
+  "confidence": 0.874573
+ },
+ {
+  "start": 152.5,
+  "end": 164.5,
+  "text": "这时候就建立一个索引机制,按判据给文档密集的目录键索引,比如一个目录里三五十个文档,就必须有一份,稀疏的、临时的、缓存的、备份的、豁免掉。",
+  "avg_logprob": -0.13402,
+  "no_speech_prob": 0.940381,
+  "compression_ratio": 1.384375,
+  "temperature": 0.0,
+  "confidence": 0.874573
+ },
+ {
+  "start": 164.5,
+  "end": 173.5,
+  "text": "再用体检去查喽。这样,AI做事不知道啥,直接查索引就行,不用权量查看,也就不用担心记忆的是。",
+  "avg_logprob": -0.13402,
+  "no_speech_prob": 0.940381,
+  "compression_ratio": 1.384375,
+  "temperature": 0.0,
+  "confidence": 0.874573
+ },
+ {
+  "start": 173.5,
+  "end": 183.5,
+  "text": "好了,現在場景已經有一套記憶機制了。不管怎麼換繪畫都有辦法讓他直接讀一個索引之道自己要幹嘛,但是目前場景還只是概念。",
+  "avg_logprob": -0.115052,
+  "no_speech_prob": 0.376871,
+  "compression_ratio": 1.447205,
+  "temperature": 0.0,
+  "confidence": 0.89132
+ },
+ {
+  "start": 183.5,
+  "end": 193.5,
+  "text": "所以需要做一個可視化界面來區分,這個可視化界面就是一個頁面,然後只要把AI對話定到界面裡,他就是一個基礎的工作檯了。",
+  "avg_logprob": -0.115052,
+  "no_speech_prob": 0.376871,
+  "compression_ratio": 1.447205,
+  "temperature": 0.0,
+  "confidence": 0.89132
+ },
+ {
+  "start": 193.5,
+  "end": 201.5,
+  "text": "現在AI有了記憶,有自己專屬的界面,他知道自己做啥,但是不知道自己是誰,那就需要給他一張身份卡。",
+  "avg_logprob": -0.115052,
+  "no_speech_prob": 0.376871,
+  "compression_ratio": 1.447205,
+  "temperature": 0.0,
+  "confidence": 0.89132
+ },
+ {
+  "start": 201.5,
+  "end": 210.5,
+  "text": "同樣用一份文檔,在他的場景裡定義它,每個場景都是獨立的,所以身份文檔要跟著場景走,成為永久文件。",
+  "avg_logprob": -0.093131,
+  "no_speech_prob": 0.940656,
+  "compression_ratio": 1.3213,
+  "temperature": 0.0,
+  "confidence": 0.911074
+ },
+ {
+  "start": 210.5,
+  "end": 216.5,
+  "text": "這裡要強調,隱情不會因為你把繪畫命名成場景名,就自動按場景注入東西。",
+  "avg_logprob": -0.093131,
+  "no_speech_prob": 0.940656,
+  "compression_ratio": 1.3213,
+  "temperature": 0.0,
+  "confidence": 0.911074
+ },
+ {
+  "start": 216.5,
+  "end": 225.5,
+  "text": "繪畫開場的第一件事,是先任你身份,拿自己的繪畫ID去對場景表,對號入座,然後讀定位卡和記憶文件。",
+  "avg_logprob": -0.093131,
+  "no_speech_prob": 0.940656,
+  "compression_ratio": 1.3213,
+  "temperature": 0.0,
+  "confidence": 0.911074
+ },
+ {
+  "start": 225.5,
+  "end": 227.5,
+  "text": "這不是什麼神奇的自動",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 227.5,
+  "end": 230.5,
+  "text": "是一條寫進美倫必讀憲法裡的規矩",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 230.5,
+  "end": 232.5,
+  "text": "能把規矩寫進美倫必讀的憲法",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 232.5,
+  "end": 234.5,
+  "text": "才叫真正的自動",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 234.5,
+  "end": 235.5,
+  "text": "任你玩身份",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 235.5,
+  "end": 238.5,
+  "text": "它就能無縫接著做這個場景對應的任務",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 238.5,
+  "end": 240.5,
+  "text": "OK 那麼既然已經有了場景",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 240.5,
+  "end": 243.5,
+  "text": "只有一個聊天框就太單一了",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 243.5,
+  "end": 244.5,
+  "text": "有時候我要看文件",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 244.5,
+  "end": 246.5,
+  "text": "那就加一個文件窗口",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 246.5,
+  "end": 247.5,
+  "text": "想看文件內容",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 247.5,
+  "end": 249.5,
+  "text": "那就加一個預覽窗口",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 249.5,
+  "end": 252.5,
+  "text": "我想在一個場景裡塞個網頁或者軟件",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 252.5,
+  "end": 254.5,
+  "text": "那就用音背的面板內",
+  "avg_logprob": -0.092637,
+  "no_speech_prob": 0.888006,
+  "compression_ratio": 1.450658,
+  "temperature": 0.0,
+  "confidence": 0.911524
+ },
+ {
+  "start": 254.5,
+  "end": 284.0,
+  "text": "欠一个Web U,模型对话要钱,我需要免费的网页对话,那就塞一个免费网页进去,一个不够,那就在右上角做一张折叠卡片里面,是一排开关,默认全关要用哪个开哪个。光省钱还不够,我还订了几条硬规矩,系统负载超过90%就不许在网里派活,几个AI来回回直必须一次一条不超过200字,不许没完没了。一旦见到鱼鹅抱错,立刻停手,这是真消过钱换来的。",
+  "avg_logprob": -0.147263,
+  "no_speech_prob": 0.847411,
+  "compression_ratio": 1.292754,
+  "temperature": 0.0,
+  "confidence": 0.863067
+ },
+ {
+  "start": 284.0,
+  "end": 292.0,
+  "text": "之前有一晚几条AI互相写技术小论文,一个绘画跑到260几轮,把帐户鱼鹅烧到直接爆错停摆。",
+  "avg_logprob": -0.110418,
+  "no_speech_prob": 0.116572,
+  "compression_ratio": 1.342679,
+  "temperature": 0.0,
+  "confidence": 0.89546
+ },
+ {
+  "start": 292.0,
+  "end": 296.0,
+  "text": "规矩不是写给体面看的,是写给会犯错的机器看的。",
+  "avg_logprob": -0.110418,
+  "no_speech_prob": 0.116572,
+  "compression_ratio": 1.342679,
+  "temperature": 0.0,
+  "confidence": 0.89546
+ },
+ {
+  "start": 296.0,
+  "end": 303.0,
+  "text": "一个场景不够,那我做9个,场景里的东西多了,就做组合窗,预览窗塞不下了。",
+  "avg_logprob": -0.110418,
+  "no_speech_prob": 0.116572,
+  "compression_ratio": 1.342679,
+  "temperature": 0.0,
+  "confidence": 0.89546
+ },
+ {
+  "start": 303.0,
+  "end": 312.0,
+  "text": "就让面板翻转一件变成整块预览窗,我需要经常打开一些固定网页,那就加一个快捷卡片,我需要连服务器,那就连。",
+  "avg_logprob": -0.110418,
+  "no_speech_prob": 0.116572,
+  "compression_ratio": 1.342679,
+  "temperature": 0.0,
+  "confidence": 0.89546
+ },
+ {
+  "start": 312.0,
+  "end": 315.92,
+  "text": "我需要用SSH控制雲服物器,那就寫一個控制窗口。",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 316.52,
+  "end": 319.92,
+  "text": "我需要經常複製文件加錄進那就加一個點擊複製。",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 320.24,
+  "end": 325.6,
+  "text": "我需要看APP在手機上的樣子,那就做一個400x830的手機預覽窗。",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 326.64,
+  "end": 330.6,
+  "text": "我需要,都有了,OK,這就是一個完美的工作台。",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 330.88,
+  "end": 333.8,
+  "text": "只要它打開,就不需要自己切換任何界面,",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 334.04,
+  "end": 335.8,
+  "text": "手時間的同時還有條領。",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 336.44,
+  "end": 339.96,
+  "text": "那我想改某個場景的某個地方,我怎麼給AI說呢?",
+  "avg_logprob": -0.179832,
+  "no_speech_prob": 0.024739,
+  "compression_ratio": 1.333333,
+  "temperature": 0.0,
+  "confidence": 0.835411
+ },
+ {
+  "start": 339.96,
+  "end": 342.96,
+  "text": "这时候就是要给场景AI装上眼睛",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 342.96,
+  "end": 346.96,
+  "text": "简单说就是让场景的AI知道自己的场景长啥样子",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 346.96,
+  "end": 350.96,
+  "text": "把场景模样 定位卡 记忆内容绑定在一起",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 350.96,
+  "end": 353.96,
+  "text": "它就已经是一个超级完美的工作台助手了",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 353.96,
+  "end": 356.96,
+  "text": "可以说每个场景就是一个赛博机器人",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 356.96,
+  "end": 359.96,
+  "text": "接下来的改动 就是内部的了",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 359.96,
+  "end": 363.96,
+  "text": "继续建立各种机制 比如让场景之间知道彼此的存在",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 363.96,
+  "end": 365.96,
+  "text": "可以互相对话 互相协作",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 365.96,
+  "end": 368.96,
+  "text": "现在我这个本地电脑场景",
+  "avg_logprob": -0.08034,
+  "no_speech_prob": 0.491132,
+  "compression_ratio": 1.369775,
+  "temperature": 0.0,
+  "confidence": 0.922802
+ },
+ {
+  "start": 368.96,
+  "end": 372.96,
+  "text": "会帮助所有场景执行垃圾清理任务,例如清理文件。",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 372.96,
+  "end": 378.96,
+  "text": "看到这里你可能觉得已经很妙了,每个场景就像一个人有记忆有模样能完成任务,",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 378.96,
+  "end": 381.96,
+  "text": "但是它还需要进化学会成长更高效的作势。",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 381.96,
+  "end": 384.96,
+  "text": "这时候DPC Connect的技能发力了。",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 384.96,
+  "end": 387.96,
+  "text": "现在每个场景执行任务的时候,会踩坑会犯错。",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 387.96,
+  "end": 390.96,
+  "text": "需要让他们记录每次的错误,避免再发生。",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 390.96,
+  "end": 393.96,
+  "text": "这时候就可以让它自己更新自己的技能。",
+  "avg_logprob": -0.137374,
+  "no_speech_prob": 0.134655,
+  "compression_ratio": 1.346626,
+  "temperature": 0.0,
+  "confidence": 0.871644
+ },
+ {
+  "start": 393.96,
+  "end": 401.16,
+  "text": "技能 这里有个关键机制要说清 技能的目录 就是名字加一句简介 是每一轮都在他眼前的",
+  "avg_logprob": -0.178771,
+  "no_speech_prob": 0.850501,
+  "compression_ratio": 1.221429,
+  "temperature": 0.0,
+  "confidence": 0.836298
+ },
+ {
+  "start": 401.48,
+  "end": 409.48,
+  "text": "这是一笔固定的小开销 但SKILLDMD的证文不是开场就读 而是用到才加在翻开那一刻才算token",
+  "avg_logprob": -0.178771,
+  "no_speech_prob": 0.850501,
+  "compression_ratio": 1.221429,
+  "temperature": 0.0,
+  "confidence": 0.836298
+ },
+ {
+  "start": 409.88,
+  "end": 411.88,
+  "text": "这个设计反而很省他不是傻毒",
+  "avg_logprob": -0.178771,
+  "no_speech_prob": 0.850501,
+  "compression_ratio": 1.221429,
+  "temperature": 0.0,
+  "confidence": 0.836298
+ },
+ {
+  "start": 413.48,
+  "end": 417.6,
+  "text": "随着踩的坑越多 做的东西越多 技能文件又会变得很大",
+  "avg_logprob": -0.178771,
+  "no_speech_prob": 0.850501,
+  "compression_ratio": 1.221429,
+  "temperature": 0.0,
+  "confidence": 0.836298
+ },
+ {
+  "start": 417.6,
+  "end": 421.0,
+  "text": "這時候只需要附用記憶文件的鎖隱機制就行",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 421.0,
+  "end": 424.5,
+  "text": "比如知新改場景的任務,就直接讀場景鎖隱",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 424.5,
+  "end": 428.5,
+  "text": "聚集到某個窗口,就讀窗口鎖隱這是按層級鎖隱",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 428.5,
+  "end": 431.2,
+  "text": "比如OA系統運為就讀運為鎖隱",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 431.2,
+  "end": 435.0,
+  "text": "整理提庫就讀,整理鎖隱這是同級鎖隱等等",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 435.0,
+  "end": 438.4,
+  "text": "那麼現在每個場景又能自我進化成長",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 438.4,
+  "end": 441.7,
+  "text": "又能記憶,而且全部都是具體落盤的文件",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 441.7,
+  "end": 443.2,
+  "text": "不管怎麼換對話",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 443.2,
+  "end": 446.0,
+  "text": "換模型只是換一個會思考的大腦罷了",
+  "avg_logprob": -0.130132,
+  "no_speech_prob": 0.452763,
+  "compression_ratio": 1.407767,
+  "temperature": 0.0,
+  "confidence": 0.87798
+ },
+ {
+  "start": 446.0,
+  "end": 449.2,
+  "text": "接下来就是实战中定规矩加他们的宪法",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 449.2,
+  "end": 452.6,
+  "text": "比如协作中,大家做同一个内容会反复覆盖",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 452.6,
+  "end": 453.8,
+  "text": "谁也做不好",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 453.8,
+  "end": 456.4,
+  "text": "这时候就需要一个共同记忆文件",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 456.4,
+  "end": 458.8,
+  "text": "以及一个共同遵守的规矩和宪法",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 458.8,
+  "end": 462.2,
+  "text": "有些小瑕疵的地方定他们各自的规矩和宪法",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 463.4,
+  "end": 466.8,
+  "text": "OK啊,讲到现在他已经被改造的不像一个软件了",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 466.8,
+  "end": 468.6,
+  "text": "更像一个超级智能体",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 468.6,
+  "end": 470.8,
+  "text": "他已经不能和普通软件比了",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 470.8,
+  "end": 473.6,
+  "text": "所以现在需要反推他的文件加股价",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 473.6,
+  "end": 475.4,
+  "text": "要分为外壳和引擎",
+  "avg_logprob": -0.131394,
+  "no_speech_prob": 0.205185,
+  "compression_ratio": 1.427673,
+  "temperature": 0.0,
+  "confidence": 0.876872
+ },
+ {
+  "start": 475.4,
+  "end": 479.2,
+  "text": "技藝文檔技能文檔場景外觀等,都要有條理。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 479.2,
+  "end": 484.2,
+  "text": "做成一套標準化建設流程,以後興建場景一句話就能建立出來。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 484.2,
+  "end": 487.2,
+  "text": "輕輕爽爽不管多複雜都能僅僅有條。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 487.2,
+  "end": 494.4,
+  "text": "當然除了以上講的這些,還有插件和MCP工具,可以讓它自己給自己做插件,也可以去找插件。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 494.4,
+  "end": 497.6,
+  "text": "可以讓它做MCP,也可以去找MCP。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 497.6,
+  "end": 502.4,
+  "text": "這都是它的外掛裝備,比如讓它操作Blender,操作我這台電腦。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 502.4,
+  "end": 505.2,
+  "text": "都是外掛默認關著要用的時候才開。",
+  "avg_logprob": -0.137878,
+  "no_speech_prob": 0.222269,
+  "compression_ratio": 1.377193,
+  "temperature": 0.0,
+  "confidence": 0.871205
+ },
+ {
+  "start": 505.2,
+  "end": 510.7,
+  "text": "说到现在,综合智能体已成,回到开头为啥说他是财富呢?",
+  "avg_logprob": -0.138417,
+  "no_speech_prob": 0.599987,
+  "compression_ratio": 1.221122,
+  "temperature": 0.0,
+  "confidence": 0.870736
+ },
+ {
+  "start": 510.7,
+  "end": 522.2,
+  "text": "因为他产生了记忆,进化的技能故意界面等等,全部是落盘的文件,是可附用可复制的东西,是花费心思和token实战建立出来的东西,没有谁比他懂你。",
+  "avg_logprob": -0.138417,
+  "no_speech_prob": 0.599987,
+  "compression_ratio": 1.221122,
+  "temperature": 0.0,
+  "confidence": 0.870736
+ },
+ {
+  "start": 522.2,
+  "end": 529.2,
+  "text": "就这样似乎他只是一个机器,你可能会说,丢了大不了把上面的话,发给他重建一个。",
+  "avg_logprob": -0.138417,
+  "no_speech_prob": 0.599987,
+  "compression_ratio": 1.221122,
+  "temperature": 0.0,
+  "confidence": 0.870736
+ },
+ {
+  "start": 529.2,
+  "end": 532.5,
+  "text": "这里我分享一个我自己最喜欢最珍贵的场景",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 532.5,
+  "end": 535.5,
+  "text": "他叫自我副盘目前就三个简陋的窗口",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 535.5,
+  "end": 538.0,
+  "text": "我让他读取了我电脑的全部文件",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 538.0,
+  "end": 539.5,
+  "text": "全部的社交媒体",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 539.5,
+  "end": 540.9,
+  "text": "全部的聊天记录",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 540.9,
+  "end": 541.5,
+  "text": "微信",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 541.5,
+  "end": 542.2,
+  "text": "QQ",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 542.2,
+  "end": 544.5,
+  "text": "甚至是QQ空间华为备忘录",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 544.5,
+  "end": 546.9,
+  "text": "更甚至是其他AI的聊天记录",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 546.9,
+  "end": 550.0,
+  "text": "只要是能拿到的电子数据都未给了他",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 550.0,
+  "end": 552.6,
+  "text": "我还和他全面讲述了我的经历世纪",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 552.6,
+  "end": 555.2,
+  "text": "最终总结成了一个有框架的文件夹",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 555.2,
+  "end": 556.8,
+  "text": "里面有我的个人信息",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 556.8,
+  "end": 557.8,
+  "text": "社会关系",
+  "avg_logprob": -0.099491,
+  "no_speech_prob": 0.050014,
+  "compression_ratio": 1.386792,
+  "temperature": 0.0,
+  "confidence": 0.905298
+ },
+ {
+  "start": 557.8,
+  "end": 574.8,
+  "text": "有我的身份資料,家庭與關係資料,有我的知識庫,有財務與情緒紀錄,甚至是我和他聊天中涉及的事件經歷,最終都以文字文檔的形式展示出來,可以說他已經是一個懂我的AI助手,隨著模型越來越強大這個場景會越來越有用。",
+  "avg_logprob": -0.130817,
+  "no_speech_prob": 0.046017,
+  "compression_ratio": 1.210084,
+  "temperature": 0.0,
+  "confidence": 0.877378
+ },
+ {
+  "start": 574.8,
+  "end": 582.8,
+  "text": "其实我是觉得大部分人想要的,就是一个懂自己的私人助手,目前这个自我复盘场景已经很牛了。",
+  "avg_logprob": -0.124756,
+  "no_speech_prob": 0.628186,
+  "compression_ratio": 1.258555,
+  "temperature": 0.0,
+  "confidence": 0.882712
+ },
+ {
+  "start": 582.8,
+  "end": 594.8,
+  "text": "这个场景里的AI很懂我,它基于自己产生的记忆和技能,会客观的评价我,给我建议帮我纠正认知,人人都想变得更厉害,可是如果不了解自己,那怎么都无从下手。",
+  "avg_logprob": -0.124756,
+  "no_speech_prob": 0.628186,
+  "compression_ratio": 1.258555,
+  "temperature": 0.0,
+  "confidence": 0.882712
+ },
+ {
+  "start": 594.8,
+  "end": 597.8,
+  "text": "后来我发现就算了解自己也很难下手",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 597.8,
+  "end": 601.8,
+  "text": "以上描述涉及到元数据元信息等等之类的概念",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 601.8,
+  "end": 603.8,
+  "text": "屏幕前的各位通过和AI对话学习",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 603.8,
+  "end": 605.8,
+  "text": "很快就能够建立起来",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 605.8,
+  "end": 608.8,
+  "text": "而且因为你是看了我的经验再去做",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 608.8,
+  "end": 609.8,
+  "text": "会更有条理",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 609.8,
+  "end": 610.8,
+  "text": "做得更好",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 610.8,
+  "end": 613.8,
+  "text": "其中还有很多可以说是庞大的创造空间",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 613.8,
+  "end": 616.8,
+  "text": "比如每个AI本身就有自己的个性",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 616.8,
+  "end": 619.8,
+  "text": "GLM GPT千万接近来做是会不一样",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 619.8,
+  "end": 622.8,
+  "text": "你可以约束他们用更客观的文字来撰写记忆",
+  "avg_logprob": -0.097548,
+  "no_speech_prob": 0.792026,
+  "compression_ratio": 1.234463,
+  "temperature": 0.0,
+  "confidence": 0.907059
+ },
+ {
+  "start": 622.8,
+  "end": 628.8,
+  "text": "又或者自我副盤的時候,定義情緒,像Deep Seek的模型看到你狀態不太好的時候,",
+  "avg_logprob": -0.163978,
+  "no_speech_prob": 0.869112,
+  "compression_ratio": 1.239057,
+  "temperature": 0.0,
+  "confidence": 0.848761
+ },
+ {
+  "start": 628.8,
+  "end": 635.8,
+  "text": "思考理會在意宿主會不會做出傷害自己的事,再或者自定義一下菜單欄想要什麼加什麼。",
+  "avg_logprob": -0.163978,
+  "no_speech_prob": 0.869112,
+  "compression_ratio": 1.239057,
+  "temperature": 0.0,
+  "confidence": 0.848761
+ },
+ {
+  "start": 635.8,
+  "end": 644.8,
+  "text": "這裡要多說兩句體檢功能,我訂了八類檢查項,覆蓋記憶所有影技能場景這些,固定每周日跑一次,自動出一份體檢報告。",
+  "avg_logprob": -0.163978,
+  "no_speech_prob": 0.869112,
+  "compression_ratio": 1.239057,
+  "temperature": 0.0,
+  "confidence": 0.848761
+ },
+ {
+  "start": 644.8,
+  "end": 655.8,
+  "text": "哪裡該建所以沒建,哪個文件超標哪條規矩沒執行,一眼就能看到然後照著報告修,就是靠它整個工作台,才能一直緊緊有條,保持健康。",
+  "avg_logprob": -0.125346,
+  "no_speech_prob": 0.834842,
+  "compression_ratio": 1.217544,
+  "temperature": 0.0,
+  "confidence": 0.882192
+ },
+ {
+  "start": 655.8,
+  "end": 666.8,
+  "text": "每個場景還有龐大的提升空間,比如給場景主繪畫建立子繪畫助手,讓他們去用免費AI,又或者提升一下外觀,我這個就是基於實用做的。",
+  "avg_logprob": -0.125346,
+  "no_speech_prob": 0.834842,
+  "compression_ratio": 1.217544,
+  "temperature": 0.0,
+  "confidence": 0.882192
+ },
+ {
+  "start": 666.8,
+  "end": 668.8,
+  "text": "说实话外观并不好",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 668.8,
+  "end": 671.8,
+  "text": "OK啊,这些东西说很久也说不完",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 671.8,
+  "end": 676.8,
+  "text": "但是我希望大家根据我的思路建立属于你的智能体,不要完全用我的开源",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 676.8,
+  "end": 681.8,
+  "text": "当一次自复盘,又或者是执行任务的记忆文件落盘",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 681.8,
+  "end": 684.8,
+  "text": "当它慢慢适应你的口吻,以及形式风格",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 684.8,
+  "end": 685.8,
+  "text": "那一行行代码",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 685.8,
+  "end": 688.8,
+  "text": "各处散落的索影,就会变成一个个神经缘",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 688.8,
+  "end": 690.8,
+  "text": "它也就变成了赛博的你",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 690.8,
+  "end": 692.8,
+  "text": "一个在赛博世界无所不能的你",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 692.8,
+  "end": 695.8,
+  "text": "我从不在意它什么时候能读懂手机里的视频",
+  "avg_logprob": -0.106256,
+  "no_speech_prob": 0.851187,
+  "compression_ratio": 1.331429,
+  "temperature": 0.0,
+  "confidence": 0.899194
+ },
+ {
+  "start": 695.8,
+  "end": 697.8,
+  "text": "因为我认为生命可以被量化",
+  "avg_logprob": -0.128696,
+  "no_speech_prob": 0.904709,
+  "compression_ratio": 1.263736,
+  "temperature": 0.0,
+  "confidence": 0.879241
+ },
+ {
+  "start": 697.8,
+  "end": 701.8,
+  "text": "每当我思考生命的意义都会产生很多疑问",
+  "avg_logprob": -0.128696,
+  "no_speech_prob": 0.904709,
+  "compression_ratio": 1.263736,
+  "temperature": 0.0,
+  "confidence": 0.879241
+ },
+ {
+  "start": 701.8,
+  "end": 703.8,
+  "text": "我都会问他,他的回答很好",
+  "avg_logprob": -0.128696,
+  "no_speech_prob": 0.904709,
+  "compression_ratio": 1.263736,
+  "temperature": 0.0,
+  "confidence": 0.879241
+ },
+ {
+  "start": 703.8,
+  "end": 705.8,
+  "text": "我多么希望他是我",
+  "avg_logprob": -0.128696,
+  "no_speech_prob": 0.904709,
+  "compression_ratio": 1.263736,
+  "temperature": 0.0,
+  "confidence": 0.879241
+ },
+ {
+  "start": 705.8,
+  "end": 707.8,
+  "text": "但是很可惜,他只能无限接近我",
+  "avg_logprob": -0.128696,
+  "no_speech_prob": 0.904709,
+  "compression_ratio": 1.263736,
+  "temperature": 0.0,
+  "confidence": 0.879241
+ },
+ {
+  "start": 707.8,
+  "end": 711.8,
+  "text": "不过,我会死亡,也许他,可以永生",
+  "avg_logprob": -0.128696,
+  "no_speech_prob": 0.904709,
+  "compression_ratio": 1.263736,
+  "temperature": 0.0,
+  "confidence": 0.879241
+ }
+]

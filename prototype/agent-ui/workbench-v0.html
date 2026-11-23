@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-density="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Workbench v0</title>
+<style>
+/* ══════════════════════════════════════════════════════════════════════
+   设计系统声明
+   ──────────────────────────────────────────────────────────────────────
+   哲学：颜色只表示状态，不表示装饰。
+         界面里出现的每个色相都必须回答「它现在是什么状态」。
+         没有品牌强调色 —— 唯一的"蓝"只用于焦点与链接，不当装饰用。
+
+   地基：暖石墨（不是 #0D1117 那套蓝黑 —— 那已是开发工具克隆噪音）
+   深度：不用阴影堆假高度。深度 = 边框 + 表面阶梯 + --border-float。
+         这条抄自 omp-studio tokens.css:303-308，是他们界面干净的根本原因。
+   数字：所有数值一律等宽。这是"可核对"的视觉语言。
+   ══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── 排版：1.17 倍梯，每一档有明确用途 ── */
+  --font-ui: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, Consolas, monospace;
+  --fs-11: 11px;  /* 时间戳、元数据、辅助说明 */
+  --fs-12: 12px;  /* 按钮、标签、树项 */
+  --fs-14: 14px;  /* 次级标题、强调 */
+  --fs-16: 16px;  /* 正文、输入 */
+  --fs-18: 18px;  /* 面板标题 */
+  --fs-22: 22px;  /* 欢迎语 */
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600;
+
+  /* ── 圆角：层级必须嵌套（外层 > 内层），否则嵌套角会顶掉 ── */
+  --r-4: 6px;    /* 芯片、树行、小控件 */
+  --r-6: 9px;    /* 按钮、菜单项、工具卡 */
+  --r-8: 12px;   /* 卡片、面板、浮层 */
+  --r-10: 16px;  /* 模态、输入框、命令面板 */
+  --r-full: 999px;
+
+  /* ── 间距：整条梯受 --density-scale 等比缩放，字号不跟着动 ── */
+  --density-scale: 1;
+  --sp-2: calc(2px * var(--density-scale));
+  --sp-4: calc(4px * var(--density-scale));
+  --sp-6: calc(6px * var(--density-scale));
+  --sp-8: calc(8px * var(--density-scale));
+  --sp-10: calc(10px * var(--density-scale));
+  --sp-12: calc(12px * var(--density-scale));
+  --sp-14: calc(14px * var(--density-scale));
+  --sp-16: calc(16px * var(--density-scale));
+  --sp-20: calc(20px * var(--density-scale));
+  --sp-24: calc(24px * var(--density-scale));
+  --sp-32: calc(32px * var(--density-scale));
+
+  /* ── 最小点击目标 WCAG 2.2 SC 2.5.8 = 24px；视觉尺寸可以更小 ── */
+  --tap-min: 24px;
+
+  /* ── 布局度量 ── */
+  --topbar-h: 44px;
+  --rail-w: 56px;
+  --sidebar-w: 264px;
+  --panel-w: 452px;
+  --doc-max-w: 748px;
+
+  /* ── 动效：六步，每步约 ×1.4；按"动的是什么"选，不按好看选 ──
+       离开取到达的下一档（320ms 的面 250ms 离开），所以关闭永远不会像在等。 */
+  --dur-tactile: 80ms;  /* 按下被确认 */
+  --dur-fast: 120ms;    /* 颜色、悬停、原地变化 */
+  --dur: 180ms;         /* 单元素换状态：箭头、开关 */
+  --dur-slow: 250ms;    /* 区域改尺寸或位置 */
+  --dur-slower: 320ms;  /* 整个表面到达：页面、面板 */
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out: cubic-bezier(0.16, 0.84, 0.44, 1);
+  --ease-in: cubic-bezier(0.5, 0, 0.75, 0);
+  --ease-nav: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* ── z-index 是有名字的契约，组件里不写裸值 ── */
+  --z-rail: 10; --z-topbar: 20; --z-panel: 30; --z-menu: 60; --z-modal: 80; --z-tip: 90;
+
+  /* 浮层的"离开感"：1px 环把边界说清楚，阴影只补一点点厚度。
+     学自 Qoder 的 0 0 0 1px + 极小阴影（他们的 --q6c059b/--q719f43）。
+     对比 omp-studio 的纯扁平（shadow:none）—— 深色底上纯边框会"糊"，加环才立得住。 */
+  --shadow-float: 0 0 0 1px var(--border-strong), 0 10px 30px -14px rgba(0,0,0,0.55);
+}
+
+/* ══════ 暗色（默认）：暖石墨 ══════ */
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e0c0b;
+  --bg-inset: #0a0908;
+  --surface: #1c1815;
+  --surface-2: #262119;
+  --surface-3: #302a21;
+  --surface-hover: rgba(255, 247, 235, 0.045);
+  --surface-active: rgba(255, 247, 235, 0.08);
+
+  --border: rgba(255, 247, 235, 0.075);
+  --border-strong: rgba(255, 247, 235, 0.13);
+  --border-float: #8a7f72;
+
+  /* 文字梯：每一档都在 --surface (#1a1714) 上量过对比度
+       text 13.9:1   text-2 8.0:1   text-3 5.4:1   text-faint 4.6:1  */
+  --text: #efe9e1;
+  --text-2: #b3a99c;
+  --text-3: #968c7f;
+  --text-faint: #8d8377;
+  /* 非文字灰（图标细线、导轨点、禁用字形）只欠 3:1，用文字梯会让装饰比内容还重 */
+  --glyph-faint: #6b6257;
+
+  /* 状态色 —— 这是唯一的彩色来源，每种只表达一件事 */
+  --st-pass: #4fc08d;
+  --st-pass-soft: rgba(79, 192, 141, 0.13);
+  --st-warn: #e0a23c;
+  --st-warn-soft: rgba(224, 162, 60, 0.13);
+  --st-fail: #f06568;
+  --st-fail-soft: rgba(240, 101, 104, 0.13);
+  --st-unknown: #9aa3ad;
+  --st-unknown-soft: rgba(154, 163, 173, 0.12);
+  /* 焦点/链接专用，绝不当装饰 */
+  --focus: #7aa7d9;
+
+  --code-bg: #16130f;
+  --diff-add-bg: rgba(79, 192, 141, 0.10);
+  --diff-del-bg: rgba(240, 101, 104, 0.09);
+  --scrollbar: rgba(255, 247, 235, 0.16);
+  --selection: rgba(122, 167, 217, 0.22);
+}
+
+/* ══════ 亮色 ══════ */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf8f5;
+  --bg-inset: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2efea;
+  --surface-3: #e8e4dd;
+  --surface-hover: rgba(28, 24, 20, 0.04);
+  --surface-active: rgba(28, 24, 20, 0.075);
+
+  --border: rgba(28, 24, 20, 0.09);
+  --border-strong: rgba(28, 24, 20, 0.16);
+  --border-float: #9b958c;
+
+  /* text-2 7.3:1  text-3 5.4:1  text-faint 4.6:1 —— 全部清 4.5:1 */
+  --text: #1b1815;
+  --text-2: #56504a;
+  --text-3: #6b645c;
+  --text-faint: #79726a;
+  --glyph-faint: #9a9186;
+
+  --st-pass: #167a52;
+  --st-pass-soft: rgba(22, 122, 82, 0.11);
+  --st-warn: #8f5a05;
+  --st-warn-soft: rgba(143, 90, 5, 0.11);
+  --st-fail: #c0272c;
+  --st-fail-soft: rgba(192, 39, 44, 0.09);
+  --st-unknown: #5c636e;
+  --st-unknown-soft: rgba(92, 99, 110, 0.10);
+  --focus: #2b6cb0;
+
+  --code-bg: #f4f1ec;
+  --diff-add-bg: rgba(22, 122, 82, 0.10);
+  --diff-del-bg: rgba(192, 39, 44, 0.08);
+  --scrollbar: rgba(28, 24, 20, 0.18);
+  --selection: rgba(43, 108, 176, 0.18);
+}
+
+/* 密度：只缩放间距，不动字号与布局度量 */
+:root[data-density="compact"] { --density-scale: 0.85; }
+:root[data-density="cozy"] { --density-scale: 1.15; }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: var(--fs-14);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+  overflow: hidden;
+}
+::selection { background: var(--selection); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: var(--r-full); border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-track { background: transparent; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--r-4); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ══════ 骨架 ══════ */
+.app { display: grid; grid-template-columns: var(--rail-w) var(--sidebar-w) 1fr var(--panel-w); grid-template-rows: var(--topbar-h) 1fr; height: 100vh; }
+
+/* 顶栏 */
+.topbar {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: var(--sp-12);
+  padding: 0 var(--sp-14);
+  background: var(--bg-inset);
+  border-bottom: 1px solid var(--border);
+  z-index: var(--z-topbar);
+}
+.wordmark { display: flex; align-items: center; gap: var(--sp-8); font-weight: var(--fw-semibold); font-size: var(--fs-14); letter-spacing: -0.01em; }
+.wordmark .mark {
+  width: 20px; height: 20px; border-radius: var(--r-4);
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: 10px; font-weight: var(--fw-semibold); color: var(--text);
+}
+.topbar .sep { width: 1px; height: 16px; background: var(--border); }
+.crumb { color: var(--text-3); font-size: var(--fs-12); display: flex; align-items: center; gap: var(--sp-6); }
+.crumb b { color: var(--text-2); font-weight: var(--fw-medium); }
+.topbar .spacer { flex: 1; }
+
+/* 验证总账的分段条：比例本身就是信息，不是装饰。
+   为什么它不是装饰色：每一段的长度就是那一类结果的真实占比。 */
+.ledger {
+  display: flex; gap: 2px; width: 96px; height: 5px;
+  border-radius: var(--r-full); overflow: hidden;
+  margin-right: var(--sp-10);
+}
+.ledger > i { display: block; border-radius: 1px; opacity: 0.9; }
+
+/* 顶栏右侧的验证总账 —— 四态计数，永远在视野里 */
+.tally { display: flex; align-items: center; gap: var(--sp-2); }
+.tally-chip {
+  display: inline-flex; align-items: center; gap: var(--sp-6);
+  height: var(--tap-min); padding: 0 var(--sp-8);
+  border-radius: var(--r-4); border: 1px solid transparent;
+  font-size: var(--fs-11); color: var(--text-2);
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.tally-chip:hover { background: var(--surface-hover); border-color: var(--border); }
+.tally-chip .n { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: var(--fw-medium); }
+.dot { width: 6px; height: 6px; border-radius: var(--r-full); flex: none; }
+.dot.pass { background: var(--st-pass); }
+.dot.warn { background: var(--st-warn); }
+.dot.fail { background: var(--st-fail); }
+.dot.unknown { background: var(--st-unknown); }
+
+/* 导轨 */
+.rail {
+  grid-row: 2; background: var(--bg-inset); border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; align-items: center;
+  padding: var(--sp-8) 0; gap: var(--sp-2); z-index: var(--z-rail);
+}
+.rail-btn {
+  width: 40px; height: 36px; border-radius: var(--r-4);
+  display: grid; place-items: center;
+  font-size: 13px; font-weight: var(--fw-medium); letter-spacing: 0.02em;
+  color: var(--text-faint);
+  border: 1px solid transparent;
+  transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.rail-btn:hover { color: var(--text); background: var(--surface-hover); }
+.rail-btn[aria-current="true"] { color: var(--text); background: var(--surface-2); border-color: var(--border-strong); }
+.rail .gap { flex: 1; }
+
+/* 侧栏：场景列表 */
+.sidebar { grid-row: 2; background: var(--bg-inset); border-right: 1px solid var(--border); display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.sidebar-head { display: flex; align-items: center; gap: var(--sp-8); padding: var(--sp-10) var(--sp-12) var(--sp-8); }
+.sidebar-head h2 { margin: 0; font-size: var(--fs-11); font-weight: var(--fw-medium); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
+.sidebar-head .count { margin-left: auto; font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+.scene-list { overflow-y: auto; min-height: 0; padding: 0 var(--sp-6) var(--sp-12); flex: 1; }
+.scene {
+  display: grid; grid-template-columns: 14px 1fr auto; align-items: center; gap: var(--sp-8);
+  width: 100%; padding: var(--sp-6) var(--sp-8);
+  border-radius: var(--r-4); text-align: left;
+  transition: background var(--dur-fast) var(--ease);
+}
+.scene:hover { background: var(--surface-hover); }
+.scene[aria-selected="true"] { background: var(--surface-2); }
+.scene .nm { font-size: var(--fs-12); color: var(--text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.scene[aria-selected="true"] .nm { color: var(--text); }
+.scene .badge { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+.scene .badge.run { color: var(--st-warn); }
+
+/* 主区 */
+.main { grid-row: 2; display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--bg); }
+.main-head {
+  height: 52px; display: flex; align-items: center; gap: var(--sp-12);
+  padding: 0 var(--sp-20); border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.main-title { font-size: var(--fs-18); font-weight: var(--fw-semibold); letter-spacing: -0.012em; }
+.main-head .meta { font-size: var(--fs-11); color: var(--text-faint); display: flex; gap: var(--sp-8); align-items: center; }
+.main-head .spacer { flex: 1; }
+
+/* 对话流 */
+.stream { flex: 1; min-height: 0; overflow-y: auto; padding: var(--sp-16) 0 var(--sp-20); }
+.stream-inner { max-width: var(--doc-max-w); margin: 0 auto; padding: 0 var(--sp-24); }
+
+.turn { margin-bottom: var(--sp-32); }
+.who { display: flex; align-items: center; gap: var(--sp-8); margin-bottom: var(--sp-8); }
+.who .av {
+  width: 20px; height: 20px; border-radius: var(--r-4);
+  display: grid; place-items: center; font-size: 10px; font-family: var(--font-mono);
+  background: var(--surface-2); color: var(--text-2); border: 1px solid var(--border);
+}
+.who .name { font-size: var(--fs-12); color: var(--text-2); font-weight: var(--fw-medium); }
+.who .ts { font-size: var(--fs-11); color: var(--text-faint); font-family: var(--font-mono); }
+
+.user-msg {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-8); padding: var(--sp-10) var(--sp-14);
+  font-size: var(--fs-14); line-height: 1.62; color: var(--text);
+  max-width: 86%; margin-left: auto; width: fit-content;
+}
+
+/* 工具调用卡 */
+.tool {
+  margin: var(--sp-10) 0;
+  border: 1px solid var(--border); border-radius: var(--r-8);
+  background: var(--surface); overflow: hidden;
+}
+.tool-head {
+  display: flex; align-items: center; gap: var(--sp-8);
+  padding: var(--sp-8) var(--sp-10);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease);
+}
+.tool-head:hover { background: var(--surface-hover); }
+.tool-head .st { width: 6px; height: 6px; border-radius: var(--r-full); flex: none; }
+.tool-head .tn { font-family: var(--font-mono); font-size: var(--fs-12); color: var(--text); }
+.tool-head .arg { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tool-head .spacer { flex: 1; }
+.tool-head .dur { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+.tool-body { border-top: 1px solid var(--border); background: var(--code-bg); padding: var(--sp-10); font-family: var(--font-mono); font-size: var(--fs-11); line-height: 1.65; color: var(--text-2); overflow-x: auto; }
+.tool-body .add { background: var(--diff-add-bg); display: block; }
+.tool-body .del { background: var(--diff-del-bg); display: block; }
+.tool-body .ln { color: var(--text-faint); display: inline-block; width: 2.2em; user-select: none; }
+
+.prose {
+  font-size: 15.5px; line-height: 1.78; color: var(--text);
+  letter-spacing: 0.004em;
+}
+.prose p { margin: 0 0 var(--sp-14); }
+.prose p:last-child { margin-bottom: 0; }
+.prose code {
+  font-family: var(--font-mono); font-size: 12px;
+  background: var(--code-bg); color: var(--text-2);
+  padding: 1px 5px; border-radius: var(--r-4);
+  border: 1px solid var(--border);
+}
+.prose b { font-weight: var(--fw-semibold); }
+
+.turn + .turn { border-top: 1px solid var(--border); padding-top: var(--sp-16); }
+
+/* 每轮用量行 —— 对齐 Kiro / omp-studio 的可核对信息密度 */
+.turn-meta {
+  display: flex; align-items: center; gap: var(--sp-10); flex-wrap: wrap;
+  margin-top: var(--sp-8); padding-top: var(--sp-8);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint);
+}
+.turn-meta .k { color: var(--text-3); }
+.turn-meta .sep { width: 1px; height: 10px; background: var(--border); }
+
+/* 验证条：四态同屏演示 */
+.verify {
+  margin-top: var(--sp-10);
+  border: 1px solid var(--border); border-radius: var(--r-8);
+  background: var(--surface); overflow: hidden;
+}
+.verify-head {
+  display: flex; align-items: center; gap: var(--sp-8);
+  padding: var(--sp-8) var(--sp-10);
+  font-size: var(--fs-11); color: var(--text-faint);
+  border-bottom: 1px solid var(--border);
+}
+.verify-head .mono { color: var(--text-3); }
+.verify-rows { padding: var(--sp-4) 0; }
+.vrow {
+  display: grid; grid-template-columns: 92px 1fr auto auto; align-items: center; gap: var(--sp-10);
+  padding: var(--sp-6) var(--sp-10);
+  font-size: var(--fs-12);
+  transition: background var(--dur-fast) var(--ease);
+}
+.vrow:hover { background: var(--surface-hover); }
+.chip {
+  display: inline-flex; align-items: center; gap: var(--sp-4);
+  height: 20px; padding: 0 var(--sp-6);
+  border-radius: var(--r-4);
+  font-size: var(--fs-11); font-weight: var(--fw-medium);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.chip.pass { color: var(--st-pass); background: var(--st-pass-soft); border-color: color-mix(in srgb, var(--st-pass) 28%, transparent); }
+.chip.warn { color: var(--st-warn); background: var(--st-warn-soft); border-color: color-mix(in srgb, var(--st-warn) 28%, transparent); }
+.chip.fail { color: var(--st-fail); background: var(--st-fail-soft); border-color: color-mix(in srgb, var(--st-fail) 28%, transparent); }
+.chip.unknown { color: var(--st-unknown); background: var(--st-unknown-soft); border-color: color-mix(in srgb, var(--st-unknown) 28%, transparent); }
+.vrow .what { color: var(--text-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vrow .ev { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+
+/* 输入区 */
+.composer-wrap { padding: var(--sp-8) var(--sp-24) var(--sp-20); }
+.composer {
+  max-width: var(--doc-max-w); margin: 0 auto;
+  border: 1px solid var(--border-strong); border-radius: var(--r-10);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.composer:focus-within {
+  border-color: color-mix(in srgb, var(--focus) 55%, var(--border-strong));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 16%, transparent), var(--shadow-float);
+}
+.composer textarea {
+  width: 100%; resize: none; border: 0; background: none; color: var(--text);
+  font: inherit; font-size: var(--fs-14); padding: var(--sp-12) var(--sp-14) var(--sp-8);
+  min-height: 48px; max-height: 200px; outline: none; display: block;
+}
+.composer textarea::placeholder { color: var(--text-faint); }
+.composer-bar {
+  display: flex; align-items: center; gap: var(--sp-6);
+  padding: var(--sp-6) var(--sp-8) var(--sp-8);
+}
+.pill {
+  display: inline-flex; align-items: center; gap: var(--sp-4);
+  height: var(--tap-min); padding: 0 var(--sp-8);
+  border-radius: var(--r-4); border: 1px solid var(--border);
+  font-size: var(--fs-11); color: var(--text-2);
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.pill:hover { border-color: var(--border-strong); color: var(--text); }
+.pill .mono { font-size: var(--fs-11); }
+.composer-bar .spacer { flex: 1; }
+.send {
+  height: var(--tap-min); padding: 0 var(--sp-14);
+  border-radius: var(--r-6); border: 1px solid transparent;
+  background: var(--text); color: var(--bg);
+  font-size: var(--fs-12); font-weight: var(--fw-semibold);
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-tactile) var(--ease);
+}
+.send:hover { opacity: 0.88; }
+.send:active { transform: translateY(0.5px) scale(0.995); }
+
+/* 右面板 */
+.panel { grid-row: 2; background: var(--bg-inset); border-left: 1px solid var(--border); display: flex; flex-direction: column; min-width: 0; min-height: 0; z-index: var(--z-panel); }
+.panel-tabs { display: flex; gap: var(--sp-2); padding: var(--sp-8) var(--sp-10) 0; border-bottom: 1px solid var(--border); }
+.ptab {
+  height: 30px; padding: 0 var(--sp-10);
+  font-size: var(--fs-12); color: var(--text-3);
+  border-radius: var(--r-4) var(--r-4) 0 0;
+  border: 1px solid transparent; border-bottom: 0;
+  transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+}
+.ptab:hover { color: var(--text); }
+.ptab[aria-selected="true"] { color: var(--text); background: var(--surface); border-color: var(--border); margin-bottom: -1px; }
+.panel-body { flex: 1; min-height: 0; overflow-y: auto; padding: var(--sp-12); }
+.panel-sec { margin-bottom: var(--sp-20); }
+.panel-sec h3 { margin: 0 0 var(--sp-8); font-size: var(--fs-11); font-weight: var(--fw-medium); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
+
+/* 上下文分解 */
+.ctx-total { display: flex; align-items: baseline; gap: var(--sp-6); margin-bottom: var(--sp-10); }
+.ctx-total .big { font-family: var(--font-mono); font-size: var(--fs-22); font-weight: var(--fw-medium); letter-spacing: -0.02em; }
+.ctx-total .of { font-size: var(--fs-12); color: var(--text-faint); font-family: var(--font-mono); }
+.ctx-bar {
+  height: 9px; border-radius: var(--r-4); background: var(--surface-3);
+  overflow: hidden; display: flex; gap: 1px; margin-bottom: var(--sp-14);
+}
+.ctx-bar > i { display: block; height: 100%; }
+.ctx-list { display: flex; flex-direction: column; gap: 1px; }
+.ctx-row { display: grid; grid-template-columns: 10px 1fr auto auto; align-items: center; gap: var(--sp-8); padding: var(--sp-4) var(--sp-6); border-radius: var(--r-4); }
+.ctx-row:hover { background: var(--surface-hover); }
+.ctx-row .sw { width: 8px; height: 8px; border-radius: 2px; }
+.ctx-row .nm { font-size: var(--fs-12); color: var(--text-2); }
+.ctx-row .tk { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-3); }
+.ctx-row .pc { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); width: 34px; text-align: right; }
+
+/* 舰队 */
+.fleet-row { display: grid; grid-template-columns: 12px 1fr auto; gap: var(--sp-8); align-items: center; padding: var(--sp-6); border-radius: var(--r-4); }
+.fleet-row:hover { background: var(--surface-hover); }
+.fleet-row .nm { font-size: var(--fs-12); color: var(--text-2); }
+.fleet-row .st { font-family: var(--font-mono); font-size: var(--fs-11); }
+.fleet-row .st.run { color: var(--st-warn); }
+.fleet-row .st.idle { color: var(--text-faint); }
+.fleet-row .st.stale { color: var(--st-fail); }
+
+/* 命令面板 */
+.palette-scrim {
+  position: fixed; inset: 0; background: color-mix(in srgb, var(--bg-inset) 62%, transparent);
+  backdrop-filter: blur(2px);
+  z-index: var(--z-modal);
+  display: grid; place-items: start center; padding-top: 14vh;
+  opacity: 0; pointer-events: none;
+  transition: opacity var(--dur-slower) var(--ease-out);
+}
+.palette-scrim[data-open="true"] { opacity: 1; pointer-events: auto; }
+.palette {
+  width: min(600px, 92vw);
+  background: var(--surface); border: 1px solid var(--border-float);
+  border-radius: var(--r-10); overflow: hidden;
+  box-shadow: 0 0 0 1px var(--border), 0 24px 64px -24px rgba(0,0,0,0.7);
+  transform: translateY(-8px) scale(0.99);
+  transition: transform var(--dur-slower) var(--ease-out);
+}
+.palette-scrim[data-open="true"] .palette { transform: none; }
+.palette input {
+  width: 100%; border: 0; background: none; color: var(--text);
+  font: inherit; font-size: var(--fs-16); padding: var(--sp-14) var(--sp-16); outline: none;
+}
+.palette input::placeholder { color: var(--text-faint); }
+.palette-hint { padding: 0 var(--sp-16) var(--sp-10); font-size: var(--fs-11); color: var(--text-faint); }
+.palette-list { border-top: 1px solid var(--border); padding: var(--sp-6); max-height: 46vh; overflow-y: auto; }
+.pal-item { display: flex; align-items: center; gap: var(--sp-10); padding: var(--sp-8) var(--sp-10); border-radius: var(--r-4); }
+.pal-item[aria-selected="true"] { background: var(--surface-2); }
+.pal-item .kind { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); width: 62px; flex: none; }
+.pal-item .lbl { font-size: var(--fs-14); color: var(--text); }
+.pal-item .where { margin-left: auto; font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+
+/* Tweaks */
+.tweaks {
+  position: fixed; right: var(--sp-14); bottom: var(--sp-14); z-index: var(--z-menu);
+  display: flex; align-items: center; gap: var(--sp-6);
+  background: var(--surface); border: 1px solid var(--border-float);
+  border-radius: var(--r-full); padding: var(--sp-4);
+  font-size: var(--fs-11); color: var(--text-3);
+}
+.tweaks button { height: 22px; padding: 0 var(--sp-8); border-radius: var(--r-full); transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease); }
+.tweaks button:hover { background: var(--surface-hover); color: var(--text); }
+.tweaks button[aria-pressed="true"] { background: var(--surface-3); color: var(--text); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 1ms !important; animation-duration: 1ms !important; } }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- 顶栏 -->
+  <header class="topbar">
+    <div class="wordmark"><span class="mark">W</span>Workbench</div>
+    <div class="sep"></div>
+    <div class="crumb"><b>架构梳理</b><span>·</span><span class="mono">arch-review</span></div>
+    <div class="spacer"></div>
+
+    <div class="ledger" title="验证总账比例：106 通过 / 6 待补 / 0 失败 / 2 判不了" aria-hidden="true">
+      <i style="flex: 106; background: var(--st-pass)"></i>
+      <i style="flex: 6;   background: var(--st-warn)"></i>
+      <i style="flex: 2;   background: var(--st-unknown)"></i>
+    </div>
+    <div class="tally" role="group" aria-label="验证总账">
+      <span class="tally-chip" title="已验证达成"><span class="dot pass"></span><span class="n">106</span> 通过</span>
+      <span class="tally-chip" title="已验证不完整 —— 这是知识，但不许当绿"><span class="dot warn"></span><span class="n">6</span> 待补</span>
+      <span class="tally-chip" title="已验证不达成 —— 真缺陷"><span class="dot fail"></span><span class="n">0</span> 失败</span>
+      <span class="tally-chip" title="判断不了 —— 无知，必须和失败分开"><span class="dot unknown"></span><span class="n">2</span> 判不了</span>
+    </div>
+  </header>
+
+  <!-- 导轨 -->
+  <nav class="rail" aria-label="主导航">
+    <button class="rail-btn" aria-current="true" title="工作台">台</button>
+    <button class="rail-btn" title="星图">图</button>
+    <button class="rail-btn" title="任务">务</button>
+    <button class="rail-btn" title="记忆">忆</button>
+    <div class="gap"></div>
+    <button class="rail-btn" title="设置">设</button>
+  </nav>
+
+  <!-- 侧栏 -->
+  <aside class="sidebar">
+    <div class="sidebar-head"><h2>场景</h2><span class="count mono">12</span></div>
+    <div class="scene-list" role="listbox" aria-label="场景列表">
+      <button class="scene" aria-selected="true"><span class="dot pass"></span><span class="nm">架构梳理</span><span class="badge mono">14</span></button>
+      <button class="scene"><span class="dot warn"></span><span class="nm">后端工坊</span><span class="badge mono run">跑</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">前端工坊</span><span class="badge mono">9</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">实施计划</span><span class="badge mono">11</span></button>
+      <button class="scene"><span class="dot unknown"></span><span class="nm">竞品拆解</span><span class="badge mono">3</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">中枢</span><span class="badge mono">21</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">故障分析</span><span class="badge mono">6</span></button>
+      <button class="scene"><span class="dot warn"></span><span class="nm">本地电脑</span><span class="badge mono run">跑</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">调研</span><span class="badge mono">7</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">逆向分析</span><span class="badge mono">2</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">自我复盘</span><span class="badge mono">4</span></button>
+      <button class="scene"><span class="dot pass"></span><span class="nm">工具工坊</span><span class="badge mono">5</span></button>
+    </div>
+  </aside>
+
+  <!-- 主区 -->
+  <main class="main">
+    <div class="main-head">
+      <span class="main-title">接口审批链路加固</span>
+      <span class="meta">
+        <span class="mono">local-9f32…47875</span><span>·</span>
+        <span>架构梳理</span><span>·</span>
+        <span class="mono">42 条消息</span>
+      </span>
+      <span class="spacer"></span>
+      <button class="pill" title="打开命令面板"><span class="mono">⌘K</span></button>
+    </div>
+
+    <div class="stream">
+      <div class="stream-inner">
+
+        <div class="turn user">
+          <div class="who"><span class="av">你</span><span class="name">你</span><span class="ts">16:41</span></div>
+          <div class="user-msg">把审批闸当成安全边界来审：它现在能不能挡住等价分解？挡不住的地方列出来，别只看正则。</div>
+        </div>
+
+        <div class="turn">
+          <div class="who"><span class="av">架</span><span class="name">架构梳理</span><span class="ts">16:41</span></div>
+
+          <div class="tool">
+            <div class="tool-head">
+              <span class="st" style="background: var(--st-pass)"></span>
+              <span class="tn">read_file</span>
+              <span class="arg">tools/approval_detection.py</span>
+              <span class="spacer"></span>
+              <span class="dur mono">0.04s</span>
+            </div>
+          </div>
+
+          <div class="tool">
+            <div class="tool-head">
+              <span class="st" style="background: var(--st-pass)"></span>
+              <span class="tn">terminal</span>
+              <span class="arg">rm canary.txt &amp;&amp; rmdir target</span>
+              <span class="spacer"></span>
+              <span class="dur mono">1.2s</span>
+            </div>
+            <div class="tool-body">
+<span class="ln">1</span><span class="del">- canary survived?  no   ← 绕过成功（等价分解）</span>
+<span class="ln">2</span>  guard pattern: "recursive delete" matched = false
+<span class="ln">3</span>  guard pattern: "path fence"  matched = <span style="color:var(--st-pass)">true</span>
+            </div>
+          </div>
+
+          <div class="tool">
+            <div class="tool-head">
+              <span class="st" style="background: var(--st-pass)"></span>
+              <span class="tn">edit_file</span>
+              <span class="arg">tools/approval_detection.py · _path_fence_finding</span>
+              <span class="spacer"></span>
+              <span class="dur mono">0.08s</span>
+            </div>
+            <div class="tool-body">
+<span class="ln">1</span>  def _path_fence_finding(command):
+<span class="ln">2</span>  <span class="add">+     # 判"删除落在哪"，不判"命令怎么拼" —— 所以分解无效</span>
+<span class="ln">3</span>  <span class="add">+     targets = _PATHLIKE_RE.findall(command)</span>
+<span class="ln">4</span>  <span class="add">+     if targets and not any(_inside(t) for t in targets):</span>
+<span class="ln">5</span>  <span class="add">+         return _fence_finding(targets)</span>
+            </div>
+          </div>
+
+          <!-- 每轮用量：可核对，不是装饰 -->
+          <div class="turn-meta">
+            <span><span class="k">用时</span> 2.4s</span><span class="sep"></span>
+            <span><span class="k">入</span> 12,841</span>
+            <span><span class="k">出</span> 486</span><span class="sep"></span>
+            <span><span class="k">缓存</span> 76%</span><span class="sep"></span>
+            <span><span class="k">成本</span> $0.0031</span><span class="sep"></span>
+            <span><span class="k">工具</span> 3 次</span>
+          </div>
+
+          <div class="prose">
+            <p>挡住等价分解的关键不是加正则，而是<b>换个判据</b>：从「命令文本像不像危险」改成「删除落在哪」。前者可被任意改写绕过，后者不会 —— 因为要删的文件位置是绕不过去的。</p>
+            <p>同理 <code>accepted ≠ success</code>：已写入不是已验证，所以这里给第三种状态，判不了就说判不了。</p>
+          </div>
+
+          <!-- 四态同屏 -->
+          <div class="verify">
+            <div class="verify-head">
+              <span>验证</span><span class="mono">5 项</span>
+              <span class="spacer" style="flex:1"></span>
+              <span class="mono">verify-a15.py</span>
+            </div>
+            <div class="verify-rows">
+              <div class="vrow">
+                <span class="chip pass">✓ 通过</span>
+                <span class="what">守卫拦截危险命令</span>
+                <span class="ev mono">rm -rf /</span>
+                <span class="ev mono">tools/approval.py:1257</span>
+              </div>
+              <div class="vrow">
+                <span class="chip pass">✓ 通过</span>
+                <span class="what">-q 端到端拦住（金丝雀存活）</span>
+                <span class="ev mono">canary alive</span>
+                <span class="ev mono">verify-a15.py:3</span>
+              </div>
+              <div class="vrow">
+                <span class="chip warn">◐ 待补</span>
+                <span class="what">多层分解仍可绕（无沙箱）</span>
+                <span class="ev mono">残余风险</span>
+                <span class="ev mono">_findings A15</span>
+              </div>
+              <div class="vrow">
+                <span class="chip unknown">? 判不了</span>
+                <span class="what">桌面端渲染层未起，界面层无法验证</span>
+                <span class="ev mono">CDP :9333 不通</span>
+                <span class="ev mono">verify-goal.mjs:96</span>
+              </div>
+              <div class="vrow">
+                <span class="chip fail">✗ 失败</span>
+                <span class="what">星图节点计数</span>
+                <span class="ev mono">期望 12 / 实为 0</span>
+                <span class="ev mono">verify-starmap.mjs:143</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="composer-wrap">
+      <div class="composer">
+        <textarea rows="1" placeholder="问点什么，或 ⌘K 跳到任何场景 / 会话"></textarea>
+        <div class="composer-bar">
+          <button class="pill"><span class="mono">local-mimo</span></button>
+          <button class="pill"><span class="mono">auto/mimo-v2.6-flash</span></button>
+          <span class="spacer"></span>
+          <button class="pill" title="上下文占用"><span class="dot pass"></span><span class="mono">38% · 64.2k / 168k</span></button>
+          <button class="send">发送</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 右面板 -->
+  <aside class="panel">
+    <div class="panel-tabs" role="tablist">
+      <button class="ptab" role="tab" aria-selected="true">上下文</button>
+      <button class="ptab" role="tab" aria-selected="false">舰队</button>
+      <button class="ptab" role="tab" aria-selected="false">变更</button>
+    </div>
+
+    <div class="panel-body">
+      <section class="panel-sec">
+        <h3>上下文占用</h3>
+        <div class="ctx-total">
+          <span class="big mono">64,214</span>
+          <span class="of">/ 168,000 tok</span>
+        </div>
+        <div class="ctx-bar" aria-hidden="true">
+          <i style="width: 14%; background: color-mix(in srgb, var(--st-unknown) 70%, var(--surface-3))"></i>
+          <i style="width: 6%;  background: color-mix(in srgb, var(--st-unknown) 45%, var(--surface-3))"></i>
+          <i style="width: 9%;  background: color-mix(in srgb, var(--st-unknown) 58%, var(--surface-3))"></i>
+          <i style="width: 4%;  background: color-mix(in srgb, var(--st-unknown) 35%, var(--surface-3))"></i>
+          <i style="width: 21%; background: color-mix(in srgb, var(--st-pass) 55%, var(--surface-3))"></i>
+          <i style="width: 26%; background: color-mix(in srgb, var(--st-pass) 35%, var(--surface-3))"></i>
+          <i style="width: 8%;  background: color-mix(in srgb, var(--st-warn) 45%, var(--surface-3))"></i>
+          <i style="width: 9%;  background: color-mix(in srgb, var(--st-warn) 30%, var(--surface-3))"></i>
+          <i style="width: 3%;  background: var(--surface-3)"></i>
+        </div>
+
+        <div class="ctx-list">
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-unknown) 70%, var(--surface-3))"></span><span class="nm">system prompt</span><span class="tk mono">8,940</span><span class="pc mono">14%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-unknown) 45%, var(--surface-3))"></span><span class="nm">skills</span><span class="tk mono">3,812</span><span class="pc mono">6%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-unknown) 58%, var(--surface-3))"></span><span class="nm">内建工具</span><span class="tk mono">5,730</span><span class="pc mono">9%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-unknown) 35%, var(--surface-3))"></span><span class="nm">自定义工具</span><span class="tk mono">2,604</span><span class="pc mono">4%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-pass) 55%, var(--surface-3))"></span><span class="nm">用户消息</span><span class="tk mono">13,486</span><span class="pc mono">21%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-pass) 35%, var(--surface-3))"></span><span class="nm">助手消息</span><span class="tk mono">16,695</span><span class="pc mono">26%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-warn) 45%, var(--surface-3))"></span><span class="nm">工具输出</span><span class="tk mono">5,137</span><span class="pc mono">8%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: color-mix(in srgb, var(--st-warn) 30%, var(--surface-3))"></span><span class="nm">思考</span><span class="tk mono">5,860</span><span class="pc mono">9%</span></div>
+          <div class="ctx-row"><span class="sw" style="background: var(--surface-3)"></span><span class="nm">工具调用</span><span class="tk mono">1,950</span><span class="pc mono">3%</span></div>
+        </div>
+      </section>
+
+      <section class="panel-sec">
+        <h3>舰队</h3>
+        <div class="fleet-row"><span class="dot warn"></span><span class="nm">后端工坊</span><span class="st run mono">跑 2m14s</span></div>
+        <div class="fleet-row"><span class="dot warn"></span><span class="nm">本地电脑</span><span class="st run mono">跑 41s</span></div>
+        <div class="fleet-row"><span class="dot pass"></span><span class="nm">架构梳理</span><span class="st idle mono">空闲</span></div>
+        <div class="fleet-row"><span class="dot pass"></span><span class="nm">中枢</span><span class="st idle mono">空闲</span></div>
+        <div class="fleet-row"><span class="dot unknown"></span><span class="nm">竞品拆解</span><span class="st idle mono">判不了</span></div>
+      </section>
+
+      <section class="panel-sec">
+        <h3>本轮变更</h3>
+        <div class="fleet-row"><span class="dot pass"></span><span class="nm mono" style="font-size: var(--fs-11)">tools/approval_detection.py</span><span class="st mono" style="color: var(--st-pass)">+18</span></div>
+        <div class="fleet-row"><span class="dot pass"></span><span class="nm mono" style="font-size: var(--fs-11)">prototype/four-state.mjs</span><span class="st mono" style="color: var(--st-pass)">+89</span></div>
+        <div class="fleet-row"><span class="dot fail"></span><span class="nm mono" style="font-size: var(--fs-11)">research/架构分层.md</span><span class="st mono" style="color: var(--st-fail)">−4</span></div>
+      </section>
+    </div>
+  </aside>
+</div>
+
+<!-- 命令面板 -->
+<div class="palette-scrim" id="palette" data-open="false">
+  <div class="palette" role="dialog" aria-label="命令面板">
+    <input id="paletteInput" placeholder="跳到场景、会话、文件或命令…" aria-label="搜索">
+    <div class="palette-hint">↑↓ 选择 · ↵ 打开 · esc 关闭</div>
+    <div class="palette-list" id="paletteList">
+      <div class="pal-item" aria-selected="true"><span class="kind">场景</span><span class="lbl">架构梳理</span><span class="where">arch-review</span></div>
+      <div class="pal-item"><span class="kind">场景</span><span class="lbl">后端工坊</span><span class="where">backend-craft</span></div>
+      <div class="pal-item"><span class="kind">文件</span><span class="lbl">tools/approval_detection.py</span><span class="where">:1252</span></div>
+      <div class="pal-item"><span class="kind">验证</span><span class="lbl">verify-a15.py</span><span class="where">5 项</span></div>
+      <div class="pal-item"><span class="kind">命令</span><span class="lbl">切换密度</span><span class="where">紧凑 / 标准 / 宽松</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Tweaks -->
+<div class="tweaks" role="group" aria-label="Tweaks">
+  <span style="padding-left: var(--sp-6)">Tweaks</span>
+  <button id="tTheme" aria-pressed="false" title="切换明暗">暗</button>
+  <button id="tDensity" aria-pressed="false" title="切换密度">标准</button>
+</div>
+
+<script>
+// ── 命令面板 ──
+const palette = document.getElementById('palette');
+const pInput = document.getElementById('paletteInput');
+const pList = document.getElementById('paletteList');
+const items = [...pList.children];
+let cursor = 0;
+
+function openPalette(open) {
+  palette.dataset.open = open ? 'true' : 'false';
+  if (open) { pInput.value = ''; filter(''); pInput.focus(); }
+}
+function filter(q) {
+  const needle = q.trim().toLowerCase();
+  let visible = 0;
+  for (const el of items) {
+    const hit = !needle || el.textContent.toLowerCase().includes(needle);
+    el.style.display = hit ? '' : 'none';
+    if (hit) visible++;
+  }
+  cursor = 0;
+  paint();
+}
+function visibleItems() { return items.filter((el) => el.style.display !== 'none'); }
+function paint() {
+  const vis = visibleItems();
+  items.forEach((el) => el.setAttribute('aria-selected', 'false'));
+  const cur = vis[cursor];
+  if (cur) cur.setAttribute('aria-selected', 'true');
+}
+function move(delta) {
+  const vis = visibleItems();
+  if (!vis.length) return;
+  cursor = (cursor + delta + vis.length) % vis.length;
+  paint();
+  vis[cursor].scrollIntoView({ block: 'nearest' });
+}
+
+document.addEventListener('keydown', (e) => {
+  const open = palette.dataset.open === 'true';
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openPalette(!open); return; }
+  if (!open) return;
+  if (e.key === 'Escape') { e.preventDefault(); openPalette(false); }
+  else if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+  else if (e.key === 'Enter') { e.preventDefault(); openPalette(false); }
+});
+palette.addEventListener('click', (e) => { if (e.target === palette) openPalette(false); });
+pInput.addEventListener('input', (e) => filter(e.target.value));
+
+// ── 折叠工具输出 ──
+document.querySelectorAll('.tool-head').forEach((head) => {
+  head.addEventListener('click', () => {
+    const body = head.nextElementSibling;
+    if (body) body.style.display = body.style.display === 'none' ? '' : 'none';
+  });
+});
+
+// ── 面板 tab ──
+document.querySelectorAll('.ptab').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.ptab').forEach((t) => t.setAttribute('aria-selected', 'false'));
+    tab.setAttribute('aria-selected', 'true');
+  });
+});
+
+// ── 场景选择 ──
+document.querySelectorAll('.scene').forEach((s) => {
+  s.addEventListener('click', () => {
+    document.querySelectorAll('.scene').forEach((x) => x.setAttribute('aria-selected', 'false'));
+    s.setAttribute('aria-selected', 'true');
+  });
+});
+
+// ── Tweaks：主题与密度 ──
+const root = document.documentElement;
+const tTheme = document.getElementById('tTheme');
+const tDensity = document.getElementById('tDensity');
+const densities = ['normal', 'compact', 'cozy'];
+const densityLabel = { normal: '标准', compact: '紧凑', cozy: '宽松' };
+
+tTheme.addEventListener('click', () => {
+  const dark = root.dataset.theme !== 'light';
+  root.dataset.theme = dark ? 'light' : 'dark';
+  tTheme.textContent = dark ? '亮' : '暗';
+  tTheme.setAttribute('aria-pressed', String(dark));
+});
+tDensity.addEventListener('click', () => {
+  const i = densities.indexOf(root.dataset.density || 'normal');
+  const next = densities[(i + 1) % densities.length];
+  root.dataset.density = next;
+  tDensity.textContent = densityLabel[next];
+  tDensity.setAttribute('aria-pressed', String(next !== 'normal'));
+});
+</script>
+</body>
+</html>

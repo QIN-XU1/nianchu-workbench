@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-density="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workbench v1 — 可拖拽停靠工作台</title>
+<style>
+/* ══════════════════════════════════════════════════════════════════════
+   设计系统（沿用 v0，已验收 19 项）
+   哲学：颜色只表示状态，不表示装饰。
+   ══════════════════════════════════════════════════════════════════════ */
+:root {
+  --font-ui: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, Consolas, monospace;
+  --fs-11: 11px; --fs-12: 12px; --fs-14: 14px; --fs-16: 16px; --fs-18: 18px; --fs-22: 22px;
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600;
+
+  --r-4: 6px; --r-6: 9px; --r-8: 12px; --r-10: 16px; --r-full: 999px;
+
+  --density-scale: 1;
+  --sp-2: calc(2px * var(--density-scale));
+  --sp-4: calc(4px * var(--density-scale));
+  --sp-6: calc(6px * var(--density-scale));
+  --sp-8: calc(8px * var(--density-scale));
+  --sp-10: calc(10px * var(--density-scale));
+  --sp-12: calc(12px * var(--density-scale));
+  --sp-14: calc(14px * var(--density-scale));
+  --sp-16: calc(16px * var(--density-scale));
+  --sp-20: calc(20px * var(--density-scale));
+  --sp-24: calc(24px * var(--density-scale));
+  --sp-32: calc(32px * var(--density-scale));
+
+  --tap-min: 24px;
+  --topbar-h: 44px;
+  --rail-w: 52px;
+
+  --dur-tactile: 80ms; --dur-fast: 120ms; --dur: 180ms; --dur-slow: 250ms; --dur-slower: 320ms;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out: cubic-bezier(0.16, 0.84, 0.44, 1);
+  --ease-in: cubic-bezier(0.5, 0, 0.75, 0);
+  --ease-nav: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --z-rail: 10; --z-topbar: 20; --z-panel: 30; --z-menu: 60; --z-ghost: 70; --z-modal: 80; --z-tip: 90;
+
+  --shadow-float: 0 0 0 1px var(--border-strong), 0 10px 30px -14px rgba(0,0,0,0.55);
+}
+
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e0c0b; --bg-inset: #0a0908;
+  --surface: #1c1815; --surface-2: #262119; --surface-3: #302a21;
+  --surface-hover: rgba(255, 247, 235, 0.045);
+  --surface-active: rgba(255, 247, 235, 0.08);
+  --border: rgba(255, 247, 235, 0.075);
+  --border-strong: rgba(255, 247, 235, 0.13);
+  --border-float: #8a7f72;
+  --text: #efe9e1; --text-2: #b3a99c; --text-3: #968c7f; --text-faint: #8d8377;
+  --glyph-faint: #6b6257;
+  --st-pass: #4fc08d;  --st-pass-soft: rgba(79, 192, 141, 0.13);
+  --st-warn: #e0a23c;  --st-warn-soft: rgba(224, 162, 60, 0.13);
+  --st-fail: #f06568;  --st-fail-soft: rgba(240, 101, 104, 0.13);
+  --st-unknown: #9aa3ad; --st-unknown-soft: rgba(154, 163, 173, 0.12);
+  --focus: #7aa7d9;
+  --code-bg: #131009;
+  --diff-add-bg: rgba(79, 192, 141, 0.10);
+  --diff-del-bg: rgba(240, 101, 104, 0.09);
+  --scrollbar: rgba(255, 247, 235, 0.16);
+  --selection: rgba(122, 167, 217, 0.22);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #faf8f5; --bg-inset: #ffffff;
+  --surface: #ffffff; --surface-2: #f2efea; --surface-3: #e8e4dd;
+  --surface-hover: rgba(28, 24, 20, 0.04);
+  --surface-active: rgba(28, 24, 20, 0.075);
+  --border: rgba(28, 24, 20, 0.09);
+  --border-strong: rgba(28, 24, 20, 0.16);
+  --border-float: #9b958c;
+  --text: #1b1815; --text-2: #56504a; --text-3: #6b645c; --text-faint: #79726a;
+  --glyph-faint: #9a9186;
+  --st-pass: #167a52;  --st-pass-soft: rgba(22, 122, 82, 0.11);
+  --st-warn: #8f5a05;  --st-warn-soft: rgba(143, 90, 5, 0.11);
+  --st-fail: #c0272c;  --st-fail-soft: rgba(192, 39, 44, 0.09);
+  --st-unknown: #5c636e; --st-unknown-soft: rgba(92, 99, 110, 0.10);
+  --focus: #2b6cb0;
+  --code-bg: #f4f1ec;
+  --diff-add-bg: rgba(22, 122, 82, 0.10);
+  --diff-del-bg: rgba(192, 39, 44, 0.08);
+  --scrollbar: rgba(28, 24, 20, 0.18);
+  --selection: rgba(43, 108, 176, 0.18);
+}
+:root[data-density="compact"] { --density-scale: 0.85; }
+:root[data-density="cozy"] { --density-scale: 1.15; }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--font-ui); font-size: var(--fs-14); line-height: 1.5;
+  -webkit-font-smoothing: antialiased; text-wrap: pretty; overflow: hidden;
+}
+::selection { background: var(--selection); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: var(--r-full); border: 3px solid transparent; background-clip: content-box; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--r-4); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ══════ 骨架 ══════ */
+.app { display: flex; flex-direction: column; height: 100vh; }
+
+/* 顶栏 */
+.topbar {
+  height: var(--topbar-h); flex: none;
+  display: flex; align-items: center; gap: var(--sp-12);
+  padding: 0 var(--sp-14);
+  background: var(--bg-inset); border-bottom: 1px solid var(--border);
+  z-index: var(--z-topbar);
+}
+.wordmark { display: flex; align-items: center; gap: var(--sp-8); font-weight: var(--fw-semibold); font-size: var(--fs-14); letter-spacing: -0.01em; }
+.wordmark .mark {
+  width: 20px; height: 20px; border-radius: var(--r-4);
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: 10px; font-weight: var(--fw-semibold); color: var(--text);
+}
+.topbar .sep { width: 1px; height: 16px; background: var(--border); }
+.crumb { color: var(--text-3); font-size: var(--fs-12); display: flex; align-items: center; gap: var(--sp-6); }
+.crumb b { color: var(--text-2); font-weight: var(--fw-medium); }
+.topbar .spacer { flex: 1; }
+
+.ledger { display: flex; gap: 2px; width: 96px; height: 5px; border-radius: var(--r-full); overflow: hidden; margin-right: var(--sp-10); }
+.ledger > i { display: block; border-radius: 1px; opacity: 0.9; }
+
+.tally { display: flex; align-items: center; gap: var(--sp-2); }
+.tally-chip {
+  display: inline-flex; align-items: center; gap: var(--sp-6);
+  height: var(--tap-min); padding: 0 var(--sp-8);
+  border-radius: var(--r-4); border: 1px solid transparent;
+  font-size: var(--fs-11); color: var(--text-2);
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.tally-chip:hover { background: var(--surface-hover); border-color: var(--border); }
+.tally-chip .n { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: var(--fw-medium); }
+.dot { width: 6px; height: 6px; border-radius: var(--r-full); flex: none; }
+.dot.pass { background: var(--st-pass); }
+.dot.warn { background: var(--st-warn); }
+.dot.fail { background: var(--st-fail); }
+.dot.unknown { background: var(--st-unknown); }
+
+/* 主体：导轨 + 停靠区 */
+.body { flex: 1; min-height: 0; display: flex; }
+
+.rail {
+  width: var(--rail-w); flex: none;
+  background: var(--bg-inset); border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; align-items: center;
+  padding: var(--sp-8) 0; gap: var(--sp-2); z-index: var(--z-rail);
+}
+.rail-btn {
+  width: 38px; height: 36px; border-radius: var(--r-4);
+  display: grid; place-items: center;
+  font-size: 13px; font-weight: var(--fw-medium); letter-spacing: 0.02em;
+  color: var(--text-faint); border: 1px solid transparent;
+  transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.rail-btn:hover { color: var(--text); background: var(--surface-hover); }
+.rail-btn[aria-current="true"] { color: var(--text); background: var(--surface-2); border-color: var(--border-strong); }
+.rail .gap { flex: 1; }
+
+/* 停靠区：三栏，宽度由 layout.sizes 驱动 */
+.dock { flex: 1; min-width: 0; display: flex; background: var(--bg); }
+
+.region {
+  display: flex; flex-direction: column;
+  min-width: 96px; min-height: 0;
+  background: var(--bg-inset);
+  border-right: 1px solid var(--border);
+}
+.region:last-child { border-right: 0; }
+.region[data-empty="true"] { display: none; }
+.region[data-drop="true"] { background: color-mix(in srgb, var(--focus) 8%, var(--bg-inset)); }
+
+.splitter {
+  width: 5px; flex: none; cursor: col-resize;
+  background: transparent; position: relative;
+  transition: background var(--dur-fast) var(--ease);
+}
+.splitter::after {
+  content: ''; position: absolute; inset: 0 2px;
+  background: var(--border); border-radius: var(--r-full);
+  transition: background var(--dur-fast) var(--ease), inset var(--dur-fast) var(--ease);
+}
+.splitter:hover::after, .splitter[data-active="true"]::after {
+  background: var(--focus); inset: 0 1px;
+}
+
+/* 面板 */
+/* 面板高度由权重决定（flex:<w> 1 0px），所以同一栏里可以上下拖动改比例。
+   权重存进布局模型，不是内联样式 —— 否则渲染一次就丢了。 */
+.panel {
+  display: flex; flex-direction: column; min-height: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-inset);
+  overflow: hidden;
+}
+.panel:last-child { border-bottom: 0; }
+.panel[data-collapsed="true"] { flex: 0 0 auto !important; }
+.region[data-maximized="true"] .panel { border-bottom: 0; }
+
+.panel-head {
+  height: 32px; flex: none;
+  display: flex; align-items: center; gap: var(--sp-6);
+  padding: 0 var(--sp-6) 0 var(--sp-8);
+  cursor: grab; user-select: none;
+  transition: background var(--dur-fast) var(--ease);
+}
+.panel-head:hover { background: var(--surface-hover); }
+.panel-head:active { cursor: grabbing; }
+
+/* 抓握点：默认不显形，悬停才出现。它不是装饰，是在说"这里能拖" */
+.panel-head::before {
+  content: ""; width: 8px; height: 10px; flex: none; margin-right: 2px;
+  background-image: radial-gradient(circle, var(--glyph-faint) 1px, transparent 1px);
+  background-size: 4px 4px; border-radius: 2px;
+  opacity: 0; transition: opacity var(--dur-fast) var(--ease);
+}
+.panel-head:hover::before { opacity: 0.85; }
+
+/* 焦点态：面板里有任何可聚焦元素在用，标题就亮起来 —— 让人知道键盘在哪儿 */
+.panel:focus-within .ttl { color: var(--text); }
+.panel:focus-within { box-shadow: inset 2px 0 0 var(--focus); }
+
+/* 区域内纵向分隔条 */
+.split-h {
+  height: 5px; flex: none; cursor: row-resize; position: relative;
+}
+.split-h::after {
+  content: ''; position: absolute; inset: 2px 0;
+  background: transparent; transition: background var(--dur-fast) var(--ease);
+}
+.split-h:hover::after, .split-h[data-active="true"]::after { background: var(--focus); }
+.panel-head .ttl {
+  font-size: var(--fs-11); font-weight: var(--fw-medium);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.panel-head .badge {
+  font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint);
+}
+.panel-head .spacer { flex: 1; }
+.pbtn {
+  width: 20px; height: 20px; border-radius: var(--r-4);
+  display: grid; place-items: center;
+  color: var(--glyph-faint); font-size: 11px; line-height: 1;
+  opacity: 0; transition: opacity var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.panel-head:hover .pbtn, .pbtn:focus-visible { opacity: 1; }
+.pbtn:hover { background: var(--surface-2); color: var(--text); }
+.panel[data-collapsed="true"] .pbtn.chev { transform: rotate(-90deg); }
+.panel-body { flex: 1; min-height: 0; overflow-y: auto; }
+/* 会话面板例外：滚动在内层，body 只做纵向 flex —— 否则输入工具栏会被滚走 */
+.panel[data-id="chat"] .panel-body {
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.panel[data-collapsed="true"] .panel-body { display: none; }
+
+/* 拖拽幽灵 */
+.ghost {
+  position: fixed; z-index: var(--z-ghost); pointer-events: none;
+  background: var(--surface); border: 1px solid var(--border-float);
+  border-radius: var(--r-6); box-shadow: 0 16px 40px -16px rgba(0,0,0,0.7);
+  padding: var(--sp-6) var(--sp-10);
+  font-size: var(--fs-12); color: var(--text);
+  transform: translate(-50%, -50%) rotate(-0.6deg);
+  opacity: 0.96;
+}
+.drop-line {
+  position: fixed; z-index: var(--z-ghost); pointer-events: none;
+  background: var(--focus); border-radius: var(--r-full);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--focus) 25%, transparent);
+}
+
+/* ══════ 面板内容 ══════ */
+.pad { padding: var(--sp-10) var(--sp-10) var(--sp-14); }
+
+.scene-list { display: flex; flex-direction: column; gap: 1px; }
+.scene {
+  display: grid; grid-template-columns: 14px 1fr auto; align-items: center; gap: var(--sp-8);
+  width: 100%; padding: var(--sp-6) var(--sp-8); border-radius: var(--r-4); text-align: left;
+  transition: background var(--dur-fast) var(--ease);
+}
+.scene:hover { background: var(--surface-hover); }
+.scene[aria-selected="true"] { background: var(--surface-2); }
+.scene .nm { font-size: var(--fs-12); color: var(--text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.scene[aria-selected="true"] .nm { color: var(--text); }
+.scene .badge { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+.scene .badge.run { color: var(--st-warn); }
+
+.fleet-row { display: grid; grid-template-columns: 12px 1fr auto; gap: var(--sp-8); align-items: center; padding: var(--sp-6); border-radius: var(--r-4); }
+.fleet-row:hover { background: var(--surface-hover); }
+.fleet-row .nm { font-size: var(--fs-12); color: var(--text-2); }
+.fleet-row .st { font-family: var(--font-mono); font-size: var(--fs-11); }
+.fleet-row .st.run { color: var(--st-warn); }
+.fleet-row .st.idle { color: var(--text-faint); }
+
+/* 对话 */
+.chat-scroll { flex: 1; min-height: 0; overflow-y: auto; padding: var(--sp-14) 0 var(--sp-16); }
+.chat-inner { max-width: 720px; margin: 0 auto; padding: 0 var(--sp-16); }
+.turn { margin-bottom: var(--sp-20); }
+.turn + .turn { border-top: 1px solid var(--border); padding-top: var(--sp-14); }
+.who { display: flex; align-items: center; gap: var(--sp-8); margin-bottom: var(--sp-8); }
+.who .av {
+  width: 20px; height: 20px; border-radius: var(--r-4);
+  display: grid; place-items: center; font-size: 10px; font-family: var(--font-mono);
+  background: var(--surface-2); color: var(--text-2); border: 1px solid var(--border);
+}
+.who .name { font-size: var(--fs-12); color: var(--text-2); font-weight: var(--fw-medium); }
+.who .ts { font-size: var(--fs-11); color: var(--text-faint); font-family: var(--font-mono); }
+.turn.user .who { justify-content: flex-end; }
+
+.user-msg {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-8); padding: var(--sp-10) var(--sp-14);
+  font-size: var(--fs-14); line-height: 1.62; color: var(--text);
+  max-width: 86%; margin-left: auto; width: fit-content;
+}
+.prose { font-size: 15.5px; line-height: 1.78; color: var(--text); letter-spacing: 0.004em; }
+.prose p { margin: 0 0 var(--sp-14); }
+.prose p:last-child { margin-bottom: 0; }
+.prose code {
+  font-family: var(--font-mono); font-size: 12px;
+  background: var(--code-bg); color: var(--text-2);
+  padding: 1px 5px; border-radius: var(--r-4); border: 1px solid var(--border);
+}
+.prose b { font-weight: var(--fw-semibold); }
+
+.tool { margin: var(--sp-10) 0; border: 1px solid var(--border); border-radius: var(--r-8); background: var(--surface); overflow: hidden; }
+.tool-head { display: flex; align-items: center; gap: var(--sp-8); padding: var(--sp-8) var(--sp-10); cursor: pointer; transition: background var(--dur-fast) var(--ease); }
+.tool-head:hover { background: var(--surface-hover); }
+.tool-head .st { width: 6px; height: 6px; border-radius: var(--r-full); flex: none; }
+.tool-head .tn { font-family: var(--font-mono); font-size: var(--fs-12); color: var(--text); }
+.tool-head .arg { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tool-head .spacer { flex: 1; }
+.tool-head .dur { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+.tool-body { border-top: 1px solid var(--border); background: var(--code-bg); padding: var(--sp-10); font-family: var(--font-mono); font-size: var(--fs-11); line-height: 1.65; color: var(--text-2); overflow-x: auto; }
+.tool-body .add { background: var(--diff-add-bg); display: block; }
+.tool-body .del { background: var(--diff-del-bg); display: block; }
+.tool-body .ln { color: var(--text-faint); display: inline-block; width: 2.2em; user-select: none; }
+
+.turn-meta {
+  display: flex; align-items: center; gap: var(--sp-10); flex-wrap: wrap;
+  margin-top: var(--sp-8); padding-top: var(--sp-8);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint);
+}
+.turn-meta .k { color: var(--text-3); }
+.turn-meta .sep { width: 1px; height: 10px; background: var(--border); }
+
+/* 验证块 */
+.verify-rows { padding: var(--sp-4) 0; }
+/* 两行：第一行 状态 + 什么事，第二行 证据位置。
+   单行三列在 300px 宽的栏里会把"什么事"截成省略号 —— 那是信息损失，不是排版问题。 */
+.vrow {
+  display: grid; grid-template-columns: auto 1fr; align-items: baseline;
+  gap: 2px var(--sp-10);
+  padding: var(--sp-6) var(--sp-10); font-size: var(--fs-12);
+  transition: background var(--dur-fast) var(--ease);
+}
+.vrow .chip { grid-row: 1; grid-column: 1; }
+.vrow .what { grid-row: 1; grid-column: 2; white-space: normal; }
+.vrow .ev { grid-row: 2; grid-column: 2; }
+.vrow:hover { background: var(--surface-hover); }
+.chip {
+  display: inline-flex; align-items: center; gap: var(--sp-4);
+  height: 20px; padding: 0 var(--sp-6); border-radius: var(--r-4);
+  font-size: var(--fs-11); font-weight: var(--fw-medium);
+  border: 1px solid transparent; white-space: nowrap;
+}
+.chip.pass { color: var(--st-pass); background: var(--st-pass-soft); border-color: color-mix(in srgb, var(--st-pass) 28%, transparent); }
+.chip.warn { color: var(--st-warn); background: var(--st-warn-soft); border-color: color-mix(in srgb, var(--st-warn) 28%, transparent); }
+.chip.fail { color: var(--st-fail); background: var(--st-fail-soft); border-color: color-mix(in srgb, var(--st-fail) 28%, transparent); }
+.chip.unknown { color: var(--st-unknown); background: var(--st-unknown-soft); border-color: color-mix(in srgb, var(--st-unknown) 28%, transparent); }
+.vrow .what { color: var(--text-2); min-width: 0; line-height: 1.45; }
+.vrow .ev { font-family: var(--font-mono); font-size: 10px; color: var(--text-faint); line-height: 1.4; }
+
+/* 上下文 */
+.ctx-total { display: flex; align-items: baseline; gap: var(--sp-6); margin-bottom: var(--sp-10); }
+.ctx-total .big { font-family: var(--font-mono); font-size: var(--fs-22); font-weight: var(--fw-medium); letter-spacing: -0.02em; }
+.ctx-total .of { font-size: var(--fs-12); color: var(--text-faint); font-family: var(--font-mono); }
+.ctx-bar { height: 9px; border-radius: var(--r-4); background: var(--surface-3); overflow: hidden; display: flex; gap: 1px; margin-bottom: var(--sp-14); }
+.ctx-bar > i { display: block; height: 100%; }
+.ctx-list { display: flex; flex-direction: column; gap: 1px; }
+.ctx-row { display: grid; grid-template-columns: 10px 1fr auto auto; align-items: center; gap: var(--sp-8); padding: var(--sp-4) var(--sp-6); border-radius: var(--r-4); }
+.ctx-row:hover { background: var(--surface-hover); }
+.ctx-row .sw { width: 8px; height: 8px; border-radius: 2px; }
+.ctx-row .nm { font-size: var(--fs-12); color: var(--text-2); }
+.ctx-row .tk { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-3); }
+.ctx-row .pc { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); width: 34px; text-align: right; }
+
+.sec-h { margin: 0 0 var(--sp-8); font-size: var(--fs-11); font-weight: var(--fw-medium); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); }
+
+/* 面板底部信息条：当列表短于面板高度时，用一条信息把空白收住。
+   空白本身不是问题，"看起来像没加载完"才是。 */
+
+.sec-foot {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding: var(--sp-8) var(--sp-10);
+  font-family: var(--font-mono); font-size: var(--fs-11);
+  color: var(--text-faint);
+  display: flex; align-items: center; gap: var(--sp-6);
+  background: var(--bg-inset);
+  position: sticky; bottom: 0;
+}
+
+/* 输入区（在对话面板内） */
+.composer-wrap { flex: none; padding: var(--sp-8) var(--sp-16) var(--sp-14); }
+.composer {
+  max-width: 720px; margin: 0 auto;
+  border: 1px solid var(--border-strong); border-radius: var(--r-10);
+  background: var(--surface); box-shadow: var(--shadow-float);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.composer:focus-within {
+  border-color: color-mix(in srgb, var(--focus) 55%, var(--border-strong));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 16%, transparent), var(--shadow-float);
+}
+.composer textarea {
+  width: 100%; resize: none; border: 0; background: none; color: var(--text);
+  font: inherit; font-size: var(--fs-14); padding: var(--sp-12) var(--sp-14) var(--sp-8);
+  min-height: 44px; max-height: 180px; outline: none; display: block;
+}
+.composer textarea::placeholder { color: var(--text-faint); }
+.composer-bar { display: flex; align-items: center; gap: var(--sp-6); padding: var(--sp-6) var(--sp-8) var(--sp-8); }
+.pill {
+  display: inline-flex; align-items: center; gap: var(--sp-4);
+  height: var(--tap-min); padding: 0 var(--sp-8);
+  border-radius: var(--r-4); border: 1px solid var(--border);
+  font-size: var(--fs-11); color: var(--text-2);
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.pill:hover { border-color: var(--border-strong); color: var(--text); }
+.composer-bar .spacer { flex: 1; }
+.send {
+  height: var(--tap-min); padding: 0 var(--sp-14);
+  border-radius: var(--r-6); border: 1px solid transparent;
+  background: var(--text); color: var(--bg);
+  font-size: var(--fs-12); font-weight: var(--fw-semibold);
+  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-tactile) var(--ease);
+}
+.send:hover { opacity: 0.88; }
+.send:active { transform: translateY(0.5px) scale(0.995); }
+
+/* 命令面板 */
+.palette-scrim {
+  position: fixed; inset: 0; background: color-mix(in srgb, var(--bg-inset) 62%, transparent);
+  backdrop-filter: blur(2px); z-index: var(--z-modal);
+  display: grid; place-items: start center; padding-top: 14vh;
+  opacity: 0; pointer-events: none; transition: opacity var(--dur-slower) var(--ease-out);
+}
+.palette-scrim[data-open="true"] { opacity: 1; pointer-events: auto; }
+.palette {
+  width: min(600px, 92vw); background: var(--surface);
+  border: 1px solid var(--border-float); border-radius: var(--r-10); overflow: hidden;
+  box-shadow: 0 0 0 1px var(--border), 0 24px 64px -24px rgba(0,0,0,0.7);
+  transform: translateY(-8px) scale(0.99); transition: transform var(--dur-slower) var(--ease-out);
+}
+.palette-scrim[data-open="true"] .palette { transform: none; }
+.palette input {
+  width: 100%; border: 0; background: none; color: var(--text);
+  font: inherit; font-size: var(--fs-16); padding: var(--sp-14) var(--sp-16); outline: none;
+}
+.palette input::placeholder { color: var(--text-faint); }
+.palette-hint { padding: 0 var(--sp-16) var(--sp-10); font-size: var(--fs-11); color: var(--text-faint); }
+.palette-list { border-top: 1px solid var(--border); padding: var(--sp-6); max-height: 46vh; overflow-y: auto; }
+.pal-item { display: flex; align-items: center; gap: var(--sp-10); padding: var(--sp-8) var(--sp-10); border-radius: var(--r-4); }
+.pal-item[aria-selected="true"] { background: var(--surface-2); }
+.pal-item .kind { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); width: 62px; flex: none; }
+.pal-item .lbl { font-size: var(--fs-14); color: var(--text); }
+.pal-item .where { margin-left: auto; font-family: var(--font-mono); font-size: var(--fs-11); color: var(--text-faint); }
+
+.tweaks {
+  position: fixed; right: var(--sp-14); bottom: var(--sp-14); z-index: var(--z-menu);
+  display: flex; align-items: center; gap: var(--sp-6);
+  background: var(--surface); border: 1px solid var(--border-float);
+  border-radius: var(--r-full); padding: var(--sp-4);
+  font-size: var(--fs-11); color: var(--text-3);
+}
+.tweaks button { height: 22px; padding: 0 var(--sp-8); border-radius: var(--r-full); transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease); }
+.tweaks button:hover { background: var(--surface-hover); color: var(--text); }
+.tweaks button[aria-pressed="true"] { background: var(--surface-3); color: var(--text); }
+
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 1ms !important; animation-duration: 1ms !important; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="wordmark"><span class="mark">W</span>Workbench</div>
+    <div class="sep"></div>
+    <div class="crumb"><b>架构梳理</b><span>·</span><span class="mono">arch-review</span></div>
+    <div class="spacer"></div>
+    <div class="ledger" aria-hidden="true">
+      <i style="flex: 106; background: var(--st-pass)"></i>
+      <i style="flex: 6;   background: var(--st-warn)"></i>
+      <i style="flex: 2;   background: var(--st-unknown)"></i>
+    </div>
+    <div class="tally" role="group" aria-label="验证总账">
+      <span class="tally-chip"><span class="dot pass"></span><span class="n">106</span> 通过</span>
+      <span class="tally-chip"><span class="dot warn"></span><span class="n">6</span> 待补</span>
+      <span class="tally-chip"><span class="dot fail"></span><span class="n">0</span> 失败</span>
+      <span class="tally-chip"><span class="dot unknown"></span><span class="n">2</span> 判不了</span>
+    </div>
+  </header>
+
+  <div class="body">
+    <nav class="rail" aria-label="主导航">
+      <button class="rail-btn" aria-current="true" title="工作台">台</button>
+      <button class="rail-btn" title="星图">图</button>
+      <button class="rail-btn" title="任务">务</button>
+      <button class="rail-btn" title="记忆">忆</button>
+      <div class="gap"></div>
+      <button class="rail-btn" title="布局预设" id="railLayout">布</button>
+      <button class="rail-btn" title="设置">设</button>
+    </nav>
+    <div class="dock" id="dock"></div>
+  </div>
+</div>
+
+<div class="palette-scrim" id="palette" data-open="false">
+  <div class="palette" role="dialog" aria-label="命令面板">
+    <input id="paletteInput" placeholder="跳到面板、场景、文件或命令…" aria-label="搜索">
+    <div class="palette-hint">↑↓ 选择 · ↵ 打开 · esc 关闭</div>
+    <div class="palette-list" id="paletteList"></div>
+  </div>
+</div>
+
+<div class="tweaks" role="group" aria-label="Tweaks">
+  <span style="padding-left: var(--sp-6)">Tweaks</span>
+  <button id="tTheme" aria-pressed="false" title="切换明暗">暗</button>
+  <button id="tDensity" aria-pressed="false" title="切换密度">标准</button>
+  <button id="tReset" title="重置布局">重置布局</button>
+</div>
+
+<pre id="selftest" style="display:none"></pre>
+
+<script type="module">
+// ══════════════════════════════════════════════════════════════════════
+//  1. 面板定义
+//
+//  为什么要一个"定义表"而不是直接写 HTML：面板是可以被拖到任何区域的，
+//  所以面板属于哪一栏不能写死在 DOM 里。这里是**唯一的事实来源**。
+// ══════════════════════════════════════════════════════════════════════
+const PANELS = {
+  // badge 显示在标题右侧：计数属于面板头部，放到底部会跟下一块面板混淆
+  scenes:  { title: '场景',   icon: '场', region: 'left',   grow: true, badge: '12 · 2 跑' },
+  fleet:   { title: '舰队',   icon: '舰', region: 'left',   grow: false },
+  chat:    { title: '会话',   icon: '会', region: 'center', grow: true, closable: false },
+  changes: { title: '本轮变更', icon: '变', region: 'center', grow: false },
+  context: { title: '上下文', icon: '境', region: 'right',  grow: true, badge: '38%' },
+  verify:  { title: '验证',   icon: '验', region: 'right',  grow: true, badge: '5 项' },
+  // optional: 默认布局里没有它，但用户可以打开；反序列化时不该把它强行复活
+  files:   { title: '文件',   icon: '文', region: 'right',  grow: false, optional: true },
+};
+
+const REGIONS = ['left', 'center', 'right'];
+
+// 默认布局：模型就是数据，DOM 是它的投影
+const DEFAULT_LAYOUT = {
+  regions: {
+    left:   ['scenes', 'fleet'],
+    center: ['chat', 'changes'],
+    right:  ['context', 'verify'],
+  },
+  sizes: { left: 236, center: 1, right: 328 },   // center 用 flex:1
+  collapsed: {},
+  // 面板在所属栏里的高度权重；缺省时按 grow 取 3 或 1
+  weights: { chat: 3, scenes: 3, context: 1, verify: 1 },
+  maximized: null,   // 被最大化的面板 id，null = 正常三栏
+};
+
+// ══════════════════════════════════════════════════════════════════════
+//  2. 布局运算——纯函数，可以单独跑断言（这是本轮能被验收的关键）
+// ══════════════════════════════════════════════════════════════════════
+
+/** 深拷贝布局（避免调用方改到原对象） */
+function cloneLayout(l) {
+  return {
+    regions: { left: [...l.regions.left], center: [...l.regions.center], right: [...l.regions.right] },
+    sizes: { ...l.sizes },
+    collapsed: { ...l.collapsed },
+    weights: { ...l.weights },
+    maximized: l.maximized || null,
+  };
+}
+
+/** 把面板从原位置摘掉（不动 regions 结构，空数组由 render 处理） */
+function detach(layout, id) {
+  for (const r of REGIONS) {
+    const i = layout.regions[r].indexOf(id);
+    if (i >= 0) layout.regions[r].splice(i, 1);
+  }
+}
+
+/**
+ * 移动面板到目标区域的 index 位置。
+ * 返回新布局，不修改入参 —— 纯函数。
+ *
+ * 三条规则（都有断言覆盖）：
+ *   1. 先从原位置摘掉，再插入 —— 否则同区域内往后拖会差一位
+ *   2. index 越界时夹到合法范围，不抛错
+ *   3. 不允许把不可关闭的面板从最后一栏移走导致它消失（closable:false 的面板始终存在）
+ */
+function movePanel(layout, id, toRegion, toIndex) {
+  if (!PANELS[id]) throw new Error('未知面板: ' + id);
+  if (!REGIONS.includes(toRegion)) throw new Error('未知区域: ' + toRegion);
+  const next = cloneLayout(layout);
+  detach(next, id);
+  const arr = next.regions[toRegion];
+  const idx = Math.max(0, Math.min(Number.isFinite(toIndex) ? toIndex : arr.length, arr.length));
+  arr.splice(idx, 0, id);
+  return next;
+}
+
+/** 面板总数守恒检查（拖拽最怕丢面板或复制面板） */
+function panelCount(layout) {
+  return REGIONS.reduce((n, r) => n + layout.regions[r].length, 0);
+}
+function allPanelIds(layout) {
+  return REGIONS.flatMap((r) => layout.regions[r]);
+}
+
+/** 每个面板当前在哪一栏、第几位 */
+function locate(layout, id) {
+  for (const r of REGIONS) {
+    const i = layout.regions[r].indexOf(id);
+    if (i >= 0) return { region: r, index: i };
+  }
+  return null;
+}
+
+/**
+ * 最大化 / 还原。返回新布局，不修改入参。
+ */
+function toggleMax(layout, id) {
+  if (!PANELS[id] || !locate(layout, id)) return layout;
+  const next = cloneLayout(layout);
+  next.maximized = next.maximized === id ? null : id;
+  return next;
+}
+
+/**
+ * 打开 / 关闭一个面板。返回新布局。
+ * 三条规则：
+ *   1. closable:false 的面板关不掉（会话面板不在就没什么可看的）
+ *   2. 关掉正在最大化的面板时，同时清掉 maximized —— 否则界面会变成空的
+ *   3. 重新打开时回到它声明的 home 栏，而不是随便一栏
+ */
+function togglePanel(layout, id) {
+  const next = cloneLayout(layout);
+  const where = locate(next, id);
+  if (where) {
+    if (PANELS[id].closable === false) return next;
+    detach(next, id);
+    if (next.maximized === id) next.maximized = null;
+  } else {
+    return movePanel(next, id, PANELS[id].region, 999);
+  }
+  return next;
+}
+
+/** 序列化 / 反序列化（localStorage 持久化用） */
+function serialize(layout) {
+  return JSON.stringify({
+    regions: layout.regions,
+    sizes: layout.sizes,
+    collapsed: layout.collapsed,
+    weights: layout.weights,
+    maximized: layout.maximized,
+  });
+}
+
+/**
+ * 反序列化要做三件事，缺一条就会变成"打开就白屏"：
+ *   1. 丢掉已经不存在的面板 id
+ *   2. 补上还没出现过的面板（新增面板不会因为旧存档而消失）
+ *   3. 保证 closable:false 的面板确实在布局里
+ */
+function deserialize(raw) {
+  const l = cloneLayout(DEFAULT_LAYOUT);
+  if (!raw) return l;
+  let parsed;
+  try { parsed = JSON.parse(raw); } catch { return l; }
+  if (!parsed || typeof parsed !== 'object') return l;
+
+  const seen = new Set();
+  for (const r of REGIONS) {
+    const list = Array.isArray(parsed.regions?.[r]) ? parsed.regions[r] : [];
+    l.regions[r] = list.filter((id) => PANELS[id] && !seen.has(id) && seen.add(id));
+  }
+  // 补上消失的面板 —— 但 optional 面板不补。
+  // 这条是本轮自检抓出来的 bug：files 在定义表里却不在默认布局里，
+  // 不区分就会出现"存档读回来多一个面板"，且纯函数往返不再一致。
+  for (const id of Object.keys(PANELS)) {
+    if (seen.has(id) || PANELS[id].optional) continue;
+    const home = PANELS[id].region;
+    l.regions[home].push(id);
+    seen.add(id);
+  }
+  // sizes 只接受有限正数
+  for (const k of ['left', 'right', 'center']) {
+    const v = parsed.sizes?.[k];
+    if (typeof v === 'number' && Number.isFinite(v) && v > 0) l.sizes[k] = v;
+  }
+  if (parsed.collapsed && typeof parsed.collapsed === 'object') {
+    for (const [k, v] of Object.entries(parsed.collapsed)) if (PANELS[k]) l.collapsed[k] = !!v;
+  }
+  // 权重只接受有限正数；旧存档没有这一层时保留默认权重
+  if (parsed.weights && typeof parsed.weights === 'object') {
+    for (const [k, v] of Object.entries(parsed.weights)) {
+      if (PANELS[k] && typeof v === 'number' && Number.isFinite(v) && v > 0) l.weights[k] = v;
+    }
+  }
+  // 最大化只认当前布局里真实存在的面板，否则存档里留了个废 id 会导致整屏空白
+  if (typeof parsed.maximized === 'string' && PANELS[parsed.maximized] && locate(l, parsed.maximized)) {
+    l.maximized = parsed.maximized;
+  }
+  return l;
+}
+
+// ══════════════════════════════════════════════════════════════════════
+//  3. 内容渲染
+// ══════════════════════════════════════════════════════════════════════
+const SCENES = [
+  ['架构梳理', 'pass', '14', true], ['后端工坊', 'warn', '跑', false], ['前端工坊', 'pass', '9', false],
+  ['实施计划', 'pass', '11', false], ['竞品拆解', 'unknown', '3', false], ['中枢', 'pass', '21', false],
+  ['故障分析', 'pass', '6', false], ['本地电脑', 'warn', '跑', false], ['调研', 'pass', '7', false],
+  ['逆向分析', 'pass', '2', false], ['自我复盘', 'pass', '4', false], ['工具工坊', 'pass', '5', false],
+];
+const FLEET = [
+  ['后端工坊', 'warn', '跑 2m14s', 'run'], ['本地电脑', 'warn', '跑 41s', 'run'],
+  ['架构梳理', 'pass', '空闲', 'idle'], ['中枢', 'pass', '空闲', 'idle'],
+  ['竞品拆解', 'unknown', '判不了', 'idle'],
+];
+const CTX = [
+  ['system prompt', 8940, '14%', 'unknown', 70], ['skills', 3812, '6%', 'unknown', 45],
+  ['内建工具', 5730, '9%', 'unknown', 58], ['自定义工具', 2604, '4%', 'unknown', 35],
+  ['用户消息', 13486, '21%', 'pass', 55], ['助手消息', 16695, '26%', 'pass', 35],
+  ['工具输出', 5137, '8%', 'warn', 45], ['思考', 5860, '9%', 'warn', 30],
+  ['工具调用', 1950, '3%', null, 0],
+];
+const VERIFY_ROWS = [
+  ['pass', '通过', '守卫拦截危险命令', 'rm -rf /', 'tools/approval.py:1257'],
+  ['pass', '通过', '-q 端到端拦住（金丝雀存活）', 'canary alive', 'verify-a15.py:3'],
+  ['warn', '待补', '多层分解仍可绕（无沙箱）', '残余风险', '_findings A15'],
+  ['unknown', '判不了', '界面层未起，无法验证', 'CDP :9333 不通', 'verify-goal.mjs:96'],
+  ['fail', '失败', '星图节点计数', '期望 12 / 实为 0', 'verify-starmap.mjs:143'],
+];
+const CHANGES = [
+  ['pass', 'tools/approval_detection.py', '+18', 'pass'],
+  ['pass', 'prototype/four-state.mjs', '+89', 'pass'],
+  ['fail', 'research/架构分层.md', '−4', 'fail'],
+];
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const CONTENT = {
+  scenes: () => `<div class="pad"><div class="scene-list">${SCENES.map(([nm, st, badge, sel]) =>
+    `<button class="scene" aria-selected="${sel}"><span class="dot ${st}"></span><span class="nm">${esc(nm)}</span><span class="badge mono ${badge === '跑' ? 'run' : ''}">${badge}</span></button>`).join('')}</div></div>`,
+
+  fleet: () => `<div class="pad">${FLEET.map(([nm, st, txt, cls]) =>
+    `<div class="fleet-row"><span class="dot ${st}"></span><span class="nm">${esc(nm)}</span><span class="st ${cls} mono">${esc(txt)}</span></div>`).join('')}</div>`,
+
+  context: () => `<div class="pad">
+    <div class="ctx-total"><span class="big mono">64,214</span><span class="of">/ 168,000 tok</span></div>
+    <div class="ctx-bar" aria-hidden="true">${CTX.map(([, , , , st, op]) =>
+      `<i style="width:${op}%;background:${st ? `color-mix(in srgb, var(--st-${st}) ${st === 'pass' ? 45 : 40}%, var(--surface-3))` : 'var(--surface-3)'}"></i>`).join('')}</div>
+    <div class="ctx-list">${CTX.map(([nm, tk, pc, st, op]) =>
+      `<div class="ctx-row"><span class="sw" style="background:${st ? `color-mix(in srgb, var(--st-${st}) ${st === 'pass' ? 45 : 40}%, var(--surface-3))` : 'var(--surface-3)'}"></span><span class="nm">${esc(nm)}</span><span class="tk mono">${tk.toLocaleString()}</span><span class="pc mono">${pc}</span></div>`).join('')}</div>
+  </div>`,
+
+  verify: () => `<div class="verify-rows">${VERIFY_ROWS.map(([st, label, what, ev, where]) =>
+    `<div class="vrow" title="${esc(ev)} — ${esc(where)}"><span class="chip ${st}">${{ pass: '✓', warn: '◐', fail: '✗', unknown: '?' }[st]} ${label}</span><span class="what">${esc(what)} <span class="mono" style="color:var(--text-faint);font-size:10px">· ${esc(where)}</span></span></div>`).join('')}</div>`,
+
+  changes: () => `<div class="pad">${CHANGES.map(([, file, n, st]) =>
+    `<div class="fleet-row"><span class="dot ${st}"></span><span class="nm mono" style="font-size:var(--fs-11)">${esc(file)}</span><span class="st mono" style="color:var(--st-${st})">${n}</span></div>`).join('')}</div>`,
+
+  files: () => `<div class="pad"><div class="sec-h">未读取</div>
+    <div class="fleet-row"><span class="dot unknown"></span><span class="nm mono" style="font-size:var(--fs-11)">tools/approval_detection.py</span><span class="st mono">1257 行</span></div>
+    <div class="fleet-row"><span class="dot unknown"></span><span class="nm mono" style="font-size:var(--fs-11)">prototype/four-state.mjs</span><span class="st mono">89 行</span></div>
+    <div class="fleet-row"><span class="dot unknown"></span><span class="nm mono" style="font-size:var(--fs-11)">research/架构分层.md</span><span class="st mono">178 行</span></div>
+  </div>`,
+
+  chat: () => `
+    <div class="chat-scroll">
+      <div class="chat-inner">
+        <div class="turn user">
+          <div class="who"><span class="av">你</span><span class="name">你</span><span class="ts">16:41</span></div>
+          <div class="user-msg">把审批闸当成安全边界来审：它现在能不能挡住等价分解？挡不住的地方列出来，别只看正则。</div>
+        </div>
+        <div class="turn">
+          <div class="who"><span class="av">架</span><span class="name">架构梳理</span><span class="ts">16:41</span></div>
+          <div class="tool"><div class="tool-head"><span class="st" style="background:var(--st-pass)"></span><span class="tn">read_file</span><span class="arg">tools/approval_detection.py</span><span class="spacer"></span><span class="dur mono">0.04s</span></div></div>
+          <div class="tool">
+            <div class="tool-head"><span class="st" style="background:var(--st-pass)"></span><span class="tn">terminal</span><span class="arg">rm canary.txt &amp;&amp; rmdir target</span><span class="spacer"></span><span class="dur mono">1.2s</span></div>
+            <div class="tool-body"><span class="ln">1</span><span class="del">- canary survived?  no   ← 绕过成功（等价分解）</span><span class="ln">2</span>  guard pattern: "recursive delete" matched = false<span class="ln">3</span>  guard pattern: "path fence"  matched = <span style="color:var(--st-pass)">true</span></div>
+          </div>
+          <div class="tool">
+            <div class="tool-head"><span class="st" style="background:var(--st-pass)"></span><span class="tn">edit_file</span><span class="arg">tools/approval_detection.py · _path_fence_finding</span><span class="spacer"></span><span class="dur mono">0.08s</span></div>
+            <div class="tool-body"><span class="ln">1</span>  def _path_fence_finding(command):<span class="ln">2</span><span class="add">+     # 判"删除落在哪"，不判"命令怎么拼" —— 所以分解无效</span><span class="ln">3</span><span class="add">+     targets = _PATHLIKE_RE.findall(command)</span><span class="ln">4</span><span class="add">+     if targets and not any(_inside(t) for t in targets):</span><span class="ln">5</span><span class="add">+         return _fence_finding(targets)</span></div>
+          </div>
+          <div class="turn-meta">
+            <span><span class="k">用时</span> 2.4s</span><span class="sep"></span>
+            <span><span class="k">入</span> 12,841</span> <span><span class="k">出</span> 486</span><span class="sep"></span>
+            <span><span class="k">缓存</span> 76%</span><span class="sep"></span>
+            <span><span class="k">成本</span> $0.0031</span><span class="sep"></span>
+            <span><span class="k">工具</span> 3 次</span>
+          </div>
+          <div class="prose" style="margin-top:var(--sp-12)">
+            <p>挡住等价分解的关键不是加正则，而是<b>换个判据</b>：从「命令文本像不像危险」改成「删除落在哪」。前者可被任意改写绕过，后者不会 —— 因为要删的文件位置是绕不过去的。</p>
+            <p>同理 <code>accepted ≠ success</code>：已写入不是已验证，所以这里给第三种状态，判不了就说判不了。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="composer-wrap">
+      <div class="composer">
+        <textarea rows="1" placeholder="问点什么，或 ⌘K 跳到任何面板 / 场景"></textarea>
+        <div class="composer-bar">
+          <button class="pill"><span class="mono">local-mimo</span></button>
+          <button class="pill"><span class="mono">auto/mimo-v2.6-flash</span></button>
+          <span class="spacer"></span>
+          <button class="pill"><span class="dot pass"></span><span class="mono">38% · 64.2k / 168k</span></button>
+          <button class="send">发送</button>
+        </div>
+      </div>
+    </div>`,
+};
+
+// ══════════════════════════════════════════════════════════════════════
+//  4. 渲染：模型 → DOM
+// ══════════════════════════════════════════════════════════════════════
+let layout = deserialize(localStorage.getItem('workbench.layout'));
+
+const dock = document.getElementById('dock');
+
+/** 面板在栏里的高度权重；没设过就用 grow 推出来的默认值 */
+function weightOf(id) {
+  const w = layout.weights[id];
+  if (typeof w === 'number' && Number.isFinite(w) && w > 0) return w;
+  return PANELS[id].grow ? 3 : 1;
+}
+
+function panelHTML(id) {
+  const p = PANELS[id];
+  const collapsed = !!layout.collapsed[id];
+  // 只有 grow 面板吃掉剩余空间并按权重分配；其余按内容高度（flex:0 0 auto）。
+  // 给非 grow 面板也设权重会把它拉长成大片空白，实际观感更差。
+  const flexible = p.grow && !collapsed;
+  const style = collapsed
+    ? 'flex:0 0 auto'
+    : flexible ? `flex:${weightOf(id)} 1 0px` : 'flex:0 0 auto';
+  return `<section class="panel" data-id="${id}" data-collapsed="${collapsed}" style="${style}">
+    <div class="panel-head" data-drag="${id}" title="拖动换栏位 · 双击最大化">
+      <button class="pbtn chev" data-collapse="${id}" title="${collapsed ? '展开' : '折叠'}">▾</button>
+      <span class="ttl">${esc(p.title)}</span>
+      ${p.badge ? `<span class="badge mono">${esc(p.badge)}</span>` : ''}
+      <span class="spacer"></span>
+      <button class="pbtn" data-max="${id}" title="最大化（双击标题也行）">⤢</button>
+      ${p.closable === false ? '' : `<button class="pbtn" data-close="${id}" title="关闭">✕</button>`}
+    </div>
+    <div class="panel-body">${CONTENT[id] ? CONTENT[id]() : ''}</div>
+  </section>`;
+}
+
+function regionHTML(r) {
+  const ids = layout.regions[r];
+  const empty = ids.length === 0;
+  const size = layout.sizes[r];
+  const style = r === 'center' ? 'flex:1' : (empty ? '' : `flex:0 0 ${size}px`);
+  const inner = [];
+  ids.forEach((id, i) => {
+    inner.push(panelHTML(id));
+    const nextId = ids[i + 1];
+    // 只有相邻两个都是可伸缩面板时，拖动改比例才有意义
+    const bothFlex = nextId && PANELS[id].grow && PANELS[nextId].grow;
+    if (bothFlex && !layout.collapsed[id] && !layout.collapsed[nextId]) {
+      inner.push(`<div class="split-h" data-hsplit="${r}:${i}" title="拖动调高度"></div>`);
+    }
+  });
+  return `<div class="region" data-region="${r}" data-empty="${empty}" data-maximized="false" style="${style}">${inner.join('')}</div>`;
+}
+
+function captureRects() {
+  const m = new Map();
+  dock.querySelectorAll('.panel').forEach((el) => m.set(el.dataset.id, el.getBoundingClientRect()));
+  return m;
+}
+
+// FLIP：改完之后让面板"滑"到新位置，而不是瞬移。
+// 用 Web Animations API 只动 transform，不动布局属性，所以不会触发额外重排循环。
+function flipFrom(before) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  dock.querySelectorAll('.panel').forEach((el) => {
+    const b = before.get(el.dataset.id);
+    if (!b) return;
+    const a = el.getBoundingClientRect();
+    const dx = b.left - a.left, dy = b.top - a.top;
+    const sx = a.width ? b.width / a.width : 1;
+    const sy = a.height ? b.height / a.height : 1;
+    if (Math.abs(dx) < 1 && Math.abs(dy) < 1 && Math.abs(sx - 1) < 0.01 && Math.abs(sy - 1) < 0.01) return;
+    el.animate(
+      [
+        { transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`, transformOrigin: 'top left' },
+        { transform: 'none', transformOrigin: 'top left' },
+      ],
+      { duration: 240, easing: 'cubic-bezier(0.16, 0.84, 0.44, 1)' }
+    );
+  });
+}
+
+function persist() {
+  localStorage.setItem('workbench.layout', serialize(layout));
+}
+
+function render() {
+  const before = captureRects();
+  const maxId = layout.maximized && PANELS[layout.maximized] && locate(layout, layout.maximized)
+    ? layout.maximized : null;
+  if (maxId) {
+    dock.innerHTML = `<div class="region" data-region="${PANELS[maxId].region}" data-maximized="true" style="flex:1">${panelHTML(maxId)}</div>`;
+    layout.maximized = maxId;
+  } else {
+    layout.maximized = null;
+    const parts = [];
+    REGIONS.forEach((r, i) => {
+      parts.push(regionHTML(r));
+      if (i < REGIONS.length - 1) parts.push(`<div class="splitter" data-split="${i}"></div>`);
+    });
+    dock.innerHTML = parts.join('');
+  }
+  wirePanels();
+  persist();
+  flipFrom(before);
+}
+
+function wirePanels() {
+  dock.querySelectorAll('[data-collapse]').forEach((b) => {
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = b.dataset.collapse;
+      layout.collapsed[id] = !layout.collapsed[id];
+      render();
+    });
+  });
+  dock.querySelectorAll('[data-close]').forEach((b) => {
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = b.dataset.close;
+      detach(layout, id);
+      render();
+    });
+  });
+  dock.querySelectorAll('[data-drag]').forEach((h) => {
+    h.addEventListener('pointerdown', startDrag);
+  });
+  dock.querySelectorAll('.splitter').forEach((s) => {
+    s.addEventListener('pointerdown', startResize);
+  });
+  // 双击标题 = 最大化 / 还原
+  dock.querySelectorAll('.panel-head').forEach((h) => {
+    h.addEventListener('dblclick', (e) => {
+      if (e.target.closest('[data-collapse],[data-close],[data-max]')) return;
+      layout = toggleMax(layout, h.dataset.drag);
+      render();
+    });
+  });
+  // 区域内上下拖动改高度
+  dock.querySelectorAll('.split-h').forEach((s) => {
+    s.addEventListener('pointerdown', startResizeH);
+  });
+  // 最大化按钮
+  dock.querySelectorAll('[data-max]').forEach((b) => {
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      layout = toggleMax(layout, b.dataset.max);
+      render();
+    });
+  });
+  // 输入框随内容长高（上限 180px），别让长问题挤成两行
+  const ta = dock.querySelector('.composer textarea');
+  if (ta) {
+    const fit = () => { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 180) + 'px'; };
+    ta.addEventListener('input', fit);
+    fit();
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════════
+//  5. 拖拽：算目标栏位与插入位，改模型，重渲染
+//
+//  这里不搬 DOM —— DOM 是模型的投影。搬 DOM 的话"面板现在在哪"有两份真相，
+//  很快就对不上（这是 omp-studio 用 panel ID + state 而不是 DOM 搬家的原因）。
+// ══════════════════════════════════════════════════════════════════════
+let drag = null;
+
+function startDrag(e) {
+  if (e.button !== 0) return;
+  const id = e.currentTarget.dataset.drag;
+  // 点到折叠/关闭按钮时不启动拖拽
+  if (e.target.closest('[data-collapse],[data-close]')) return;
+  e.preventDefault();
+
+  const ghost = document.createElement('div');
+  ghost.className = 'ghost';
+  ghost.textContent = PANELS[id].title;
+  ghost.style.left = e.clientX + 'px';
+  ghost.style.top = e.clientY + 'px';
+  document.body.appendChild(ghost);
+
+  drag = { id, ghost, target: null };
+  document.addEventListener('pointermove', onDragMove);
+  document.addEventListener('pointerup', endDrag, { once: true });
+}
+
+function onDragMove(e) {
+  if (!drag) return;
+  drag.ghost.style.left = e.clientX + 'px';
+  drag.ghost.style.top = e.clientY + 'px';
+
+  const t = hitTest(e.clientX, e.clientY);
+  drag.target = t;
+  paintDrop(t);
+}
+
+/**
+ * 命中测试：返回 { region, index, y } 或 null
+ * 规则：先按 x 落在哪一栏；再在那一栏里按 y 决定插到第几个面板之前。
+ * 折叠的面板高度小，但仍占位（能被插到前后）。
+ */
+function hitTest(x, y) {
+  const regions = [...dock.querySelectorAll('.region')].filter((r) => r.dataset.empty !== 'true');
+  if (!regions.length) return null;
+  let hit = null;
+  for (const r of regions) {
+    const rect = r.getBoundingClientRect();
+    if (x >= rect.left && x <= rect.right) { hit = r; break; }
+  }
+  // x 落在缝隙里时，取最近的一栏
+  if (!hit) {
+    let best = Infinity;
+    for (const r of regions) {
+      const rect = r.getBoundingClientRect();
+      const d = x < rect.left ? rect.left - x : x - rect.right;
+      if (d < best) { best = d; hit = r; }
+    }
+  }
+  if (!hit) return null;
+
+  const region = hit.dataset.region;
+  const panels = [...hit.querySelectorAll('.panel')];
+  let index = panels.length;
+  let lineY = hit.getBoundingClientRect().bottom - 1;
+  for (let i = 0; i < panels.length; i++) {
+    const pr = panels[i].getBoundingClientRect();
+    if (y < pr.top + pr.height / 2) { index = i; lineY = pr.top; break; }
+    lineY = pr.bottom;
+  }
+  for (const p of panels) p.removeAttribute('data-drop-before');
+  if (panels[index]) panels[index].setAttribute('data-drop-before', 'true');
+  return { region, index, y: lineY, left: hit.getBoundingClientRect().left, width: hit.getBoundingClientRect().width };
+}
+
+let dropLine = null;
+function paintDrop(t) {
+  if (!dropLine) {
+    dropLine = document.createElement('div');
+    dropLine.className = 'drop-line';
+    document.body.appendChild(dropLine);
+  }
+  if (!t) { dropLine.style.display = 'none'; return; }
+  dropLine.style.display = 'block';
+  dropLine.style.left = t.left + 'px';
+  dropLine.style.width = t.width + 'px';
+  dropLine.style.top = (t.y - 1) + 'px';
+  dropLine.style.height = '2px';
+  dock.querySelectorAll('.region').forEach((r) => r.setAttribute('data-drop', String(r.dataset.region === t.region)));
+}
+
+function endDrag() {
+  document.removeEventListener('pointermove', onDragMove);
+  if (!drag) return;
+  const { id, ghost, target } = drag;
+  ghost.remove();
+  drag = null;
+  if (dropLine) dropLine.remove();
+  dropLine = null;
+  dock.querySelectorAll('.region').forEach((r) => r.setAttribute('data-drop', 'false'));
+  dock.querySelectorAll('[data-drop-before]').forEach((p) => p.removeAttribute('data-drop-before'));
+
+  if (!target) return;
+  // 同区域内往前插入时，摘掉自己会让 index 差一位 —— movePanel 里已经先摘后插，
+  // 所以这里的 index 要按"摘掉之后"的坐标系修正
+  let idx = target.index;
+  const from = locate(layout, id);
+  if (from && from.region === target.region && from.index < target.index) idx -= 1;
+  layout = movePanel(layout, id, target.region, idx);
+  render();
+}
+
+// ══════════════════════════════════════════════════════════════════════
+//  6. 分栏宽度拖拽
+// ══════════════════════════════════════════════════════════════════════
+let resize = null;
+function startResize(e) {
+  if (e.button !== 0) return;
+  e.preventDefault();
+  const i = Number(e.currentTarget.dataset.split);          // 分隔条 i 在区域 i 与 i+1 之间
+  const regionEls = [...dock.querySelectorAll('.region')];
+  const a = regionEls[i], b = regionEls[i + 1];
+  if (!a || !b || a.dataset.empty === 'true' || b.dataset.empty === 'true') return;
+  const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+  resize = { i, startX: e.clientX, a, b, wa: ra.width, wb: rb.width };
+  e.currentTarget.setAttribute('data-active', 'true');
+  document.addEventListener('pointermove', onResizeMove);
+  document.addEventListener('pointerup', endResize, { once: true });
+}
+
+function onResizeMove(e) {
+  if (!resize) return;
+  const dx = e.clientX - resize.startX;
+  const ra = resize.a.dataset.region, rb = resize.b.dataset.region;
+  let wa = resize.wa + dx, wb = resize.wb - dx;
+  if (wa < 140) { wa = 140; wb = resize.wa + resize.wb - 140; }
+  if (wb < 140) { wb = 140; wa = resize.wa + resize.wb - 140; }
+  // center 用 flex:1，改它没有意义 —— 只把像素值写给固定宽度的两侧
+  if (ra !== 'center') { resize.a.style.flex = `0 0 ${wa}px`; layout.sizes[ra] = Math.round(wa); }
+  if (rb !== 'center') { resize.b.style.flex = `0 0 ${wb}px`; layout.sizes[rb] = Math.round(wb); }
+}
+
+function endResize() {
+  document.removeEventListener('pointermove', onResizeMove);
+  resize = null;
+  dock.querySelectorAll('.splitter').forEach((s) => s.removeAttribute('data-active'));
+  localStorage.setItem('workbench.layout', serialize(layout));
+}
+
+// ══════════════════════════════════════════════════════════════════════
+//  6.5 区域内纵向拖拽：改的是权重，不是像素 —— 否则换栏位后比例就丢了
+// ══════════════════════════════════════════════════════════════════════
+let resizeH = null;
+
+function startResizeH(e) {
+  if (e.button !== 0) return;
+  e.preventDefault();
+  const [r, iStr] = e.currentTarget.dataset.hsplit.split(':');
+  const i = Number(iStr);
+  const ids = layout.regions[r];
+  const aId = ids[i], bId = ids[i + 1];
+  if (!aId || !bId) return;
+  const ea = dock.querySelector(`.panel[data-id="${aId}"]`);
+  const eb = dock.querySelector(`.panel[data-id="${bId}"]`);
+  if (!ea || !eb) return;
+  const ra = ea.getBoundingClientRect(), rb = eb.getBoundingClientRect();
+  resizeH = { ea, eb, aId, bId, startY: e.clientY, ha: ra.height, hb: rb.height };
+  e.currentTarget.setAttribute('data-active', 'true');
+  document.addEventListener('pointermove', onResizeHMove);
+  document.addEventListener('pointerup', endResizeH, { once: true });
+}
+
+function onResizeHMove(e) {
+  if (!resizeH) return;
+  const dy = e.clientY - resizeH.startY;
+  const total = resizeH.ha + resizeH.hb;
+  let ha = resizeH.ha + dy, hb = total - ha;
+  if (ha < 56) { ha = 56; hb = total - 56; }
+  if (hb < 56) { hb = 56; ha = total - 56; }
+  resizeH.ea.style.flex = `${ha} 1 0px`;
+  resizeH.eb.style.flex = `${hb} 1 0px`;
+}
+
+function endResizeH() {
+  document.removeEventListener('pointermove', onResizeHMove);
+  if (!resizeH) return;
+  const { ea, eb, aId, bId } = resizeH;
+  const ha = ea.getBoundingClientRect().height;
+  const hb = eb.getBoundingClientRect().height;
+  const total = ha + hb || 1;
+  const scale = weightOf(aId) + weightOf(bId);
+  layout.weights[aId] = Math.max(0.2, Math.round((ha / total) * scale * 100) / 100);
+  layout.weights[bId] = Math.max(0.2, Math.round((hb / total) * scale * 100) / 100);
+  resizeH = null;
+  dock.querySelectorAll('.split-h').forEach((s) => s.removeAttribute('data-active'));
+  persist();
+  render();
+}
+
+// ══════════════════════════════════════════════════════════════════════
+//  7. 命令面板（能开 / 能聚焦 / 能重置布局）
+// ══════════════════════════════════════════════════════════════════════
+const palette = document.getElementById('palette');
+const pInput = document.getElementById('paletteInput');
+const pList = document.getElementById('paletteList');
+
+let palCur = [];
+
+// 命令表按当前布局动态生成 —— 面板的开/关必须是一个真开关，
+// 否则关掉一个面板就再也找不回来了（v1 首版就是这个毛病）。
+function buildCommands() {
+  const cmds = [
+    { kind: '布局', label: '重置为默认布局', where: '三栏', run: () => { layout = cloneLayout(DEFAULT_LAYOUT); render(); } },
+    { kind: '布局', label: '只看会话（收起两侧）', where: '专注模式', run: () => {
+        layout = cloneLayout(DEFAULT_LAYOUT);
+        layout.regions.left = []; layout.regions.right = [];
+        render();
+      } },
+    { kind: '布局', label: '还原三栏（显示全部面板）', where: '全部打开', run: () => { layout = cloneLayout(DEFAULT_LAYOUT); render(); } },
+  ];
+  for (const id of Object.keys(PANELS)) {
+    const on = !!locate(layout, id);
+    cmds.push({
+      kind: '面板',
+      label: (on ? '关闭：' : '打开：') + PANELS[id].title,
+      where: on ? '已开' : '未开',
+      run: () => { layout = togglePanel(layout, id); render(); },
+    });
+  }
+  cmds.push({ kind: '面板', label: '焦点：上下文', where: '右栏', run: () => focusPanel('context') });
+  cmds.push({ kind: '面板', label: '焦点：验证', where: '右栏', run: () => focusPanel('verify') });
+  return cmds;
+}
+
+function focusPanel(id) {
+  const p = dock.querySelector(`.panel[data-id="${id}"]`);
+  if (!p) return;
+  layout.collapsed[id] = false;
+  render();
+  dock.querySelector(`.panel[data-id="${id}"]`)?.scrollIntoView({ block: 'nearest' });
+}
+
+function buildPalette(query = '') {
+  const q = query.trim().toLowerCase();
+  palCur = buildCommands();
+  const hits = palCur.filter((c) => !q || (c.label + c.kind + c.where).toLowerCase().includes(q));
+  pList.innerHTML = hits.map((c, i) =>
+    `<div class="pal-item" data-cmd="${palCur.indexOf(c)}" aria-selected="${i === 0}">
+      <span class="kind">${esc(c.kind)}</span><span class="lbl">${esc(c.label)}</span><span class="where">${esc(c.where)}</span>
+    </div>`).join('');
+  pList.querySelectorAll('.pal-item').forEach((el) => {
+    el.addEventListener('click', () => { runCmd(Number(el.dataset.cmd)); });
+  });
+  return hits;
+}
+
+function runCmd(i) {
+  const c = palCur[i];
+  if (!c) return;
+  openPalette(false);
+  c.run?.();
+}
+
+let palCursor = 0, palHits = [];
+function openPalette(open) {
+  palette.dataset.open = open ? 'true' : 'false';
+  if (open) { pInput.value = ''; palHits = buildPalette(''); palCursor = 0; pInput.focus(); }
+}
+
+document.addEventListener('keydown', (e) => {
+  const open = palette.dataset.open === 'true';
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openPalette(!open); return; }
+  if (!open) return;
+  const items = [...pList.querySelectorAll('.pal-item')];
+  if (e.key === 'Escape') { e.preventDefault(); openPalette(false); }
+  else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    if (!items.length) return;
+    palCursor = (palCursor + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+    items.forEach((el, i) => el.setAttribute('aria-selected', String(i === palCursor)));
+    items[palCursor].scrollIntoView({ block: 'nearest' });
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const el = items[palCursor];
+    if (el) runCmd(Number(el.dataset.cmd));
+  }
+});
+palette.addEventListener('click', (e) => { if (e.target === palette) openPalette(false); });
+pInput.addEventListener('input', (e) => { palHits = buildPalette(e.target.value); palCursor = 0; });
+
+document.getElementById('railLayout').addEventListener('click', () => openPalette(true));
+document.getElementById('tReset').addEventListener('click', () => { layout = cloneLayout(DEFAULT_LAYOUT); render(); });
+
+// ══════════════════════════════════════════════════════════════════════
+//  8. Tweaks
+// ══════════════════════════════════════════════════════════════════════
+const root = document.documentElement;
+const tTheme = document.getElementById('tTheme');
+const tDensity = document.getElementById('tDensity');
+const densities = ['normal', 'compact', 'cozy'];
+const densityLabel = { normal: '标准', compact: '紧凑', cozy: '宽松' };
+// 外观也要持久化 —— 每次打开都回到默认明暗和密度，用久了很烦
+function saveAppearance() {
+  localStorage.setItem('workbench.theme', root.dataset.theme || 'dark');
+  localStorage.setItem('workbench.density', root.dataset.density || 'normal');
+}
+
+function restoreAppearance() {
+  const theme = localStorage.getItem('workbench.theme');
+  const density = localStorage.getItem('workbench.density');
+  if (theme === 'light' || theme === 'dark') {
+    root.dataset.theme = theme;
+    tTheme.textContent = theme === 'light' ? '亮' : '暗';
+    tTheme.setAttribute('aria-pressed', String(theme === 'light'));
+  }
+  if (densities.includes(density)) {
+    root.dataset.density = density;
+    tDensity.textContent = densityLabel[density];
+    tDensity.setAttribute('aria-pressed', String(density !== 'normal'));
+  }
+}
+
+tTheme.addEventListener('click', () => {
+  const dark = root.dataset.theme !== 'light';
+  root.dataset.theme = dark ? 'light' : 'dark';
+  tTheme.textContent = dark ? '亮' : '暗';
+  tTheme.setAttribute('aria-pressed', String(dark));
+  saveAppearance();
+});
+tDensity.addEventListener('click', () => {
+  const i = densities.indexOf(root.dataset.density || 'normal');
+  const next = densities[(i + 1) % densities.length];
+  root.dataset.density = next;
+  tDensity.textContent = densityLabel[next];
+  tDensity.setAttribute('aria-pressed', String(next !== 'normal'));
+  saveAppearance();
+});
+
+// ══════════════════════════════════════════════════════════════════════
+//  9. 自检：布局运算的断言（?selftest=1 时把结果写进 #selftest）
+//
+//  为什么要有：拖拽如果只能靠手点，就没法证明它对。这里对纯函数跑断言，
+//  可以用无头浏览器一次性验完，不需要人当测试员。
+// ══════════════════════════════════════════════════════════════════════
+function selfTest() {
+  const results = [];
+  const t = (name, fn) => {
+    try { const v = fn(); results.push({ name, ok: v === true, detail: v === true ? '' : String(v) }); }
+    catch (e) { results.push({ name, ok: false, detail: '抛异常: ' + e.message }); }
+  };
+
+  const L0 = cloneLayout(DEFAULT_LAYOUT);
+
+  t('初始布局面板数守恒（6 个）', () => panelCount(L0) === 6);
+
+  t('跨栏移动：把 fleet 从 left 移到 right 末尾', () => {
+    const L = movePanel(L0, 'fleet', 'right', 99);
+    return locate(L, 'fleet').region === 'right'
+      && locate(L, 'fleet').index === L.regions.right.length - 1
+      && panelCount(L) === 6;
+  });
+
+  t('同栏内往后移：顺序正确且不丢面板', () => {
+    // left = [scenes, fleet] → 把 scenes 移到 index 1 → 期望 [fleet, scenes]
+    const L = movePanel(L0, 'scenes', 'left', 1);
+    return L.regions.left.join(',') === 'fleet,scenes' && panelCount(L) === 6;
+  });
+
+  t('同栏内往前移：顺序正确', () => {
+    const L1 = movePanel(L0, 'scenes', 'left', 1);       // [fleet, scenes]
+    const L2 = movePanel(L1, 'scenes', 'left', 0);       // [scenes, fleet]
+    return L2.regions.left.join(',') === 'scenes,fleet';
+  });
+
+  t('移动是纯函数：不修改入参', () => {
+    const before = serialize(L0);
+    movePanel(L0, 'context', 'center', 0);
+    return serialize(L0) === before;
+  });
+
+  t('index 越界被夹住，不抛错', () => {
+    const a = movePanel(L0, 'fleet', 'center', -5);
+    const b = movePanel(L0, 'fleet', 'center', 9999);
+    return locate(a, 'fleet').index === 0
+      && locate(b, 'fleet').index === b.regions.center.length - 1;
+  });
+
+  t('未知面板会抛错（不静默吞掉）', () => {
+    try { movePanel(L0, 'nope', 'left', 0); return false; } catch { return true; }
+  });
+
+  t('未知区域会抛错', () => {
+    try { movePanel(L0, 'fleet', 'top', 0); return false; } catch { return true; }
+  });
+
+  t('序列化 → 反序列化 往返一致', () => {
+    const L = movePanel(L0, 'verify', 'center', 0);
+    const back = deserialize(serialize(L));
+    return serialize(back) === serialize(L);
+  });
+
+  t('旧存档里的废面板会被丢掉，但不会丢新面板', () => {
+    const bad = JSON.stringify({
+      regions: { left: ['gone', 'scenes'], center: ['chat'], right: [] },
+      sizes: { left: 240 },
+      collapsed: { gone: true },
+    });
+    const L = deserialize(bad);
+    return !allPanelIds(L).includes('gone')
+      && panelCount(L) === 6
+      && L.regions.center.includes('chat');
+  });
+
+  t('坏存档不崩：非法 JSON 回落到默认布局', () => {
+    const L = deserialize('{这不是 JSON');
+    return panelCount(L) === 6 && L.regions.center.includes('chat');
+  });
+
+  t('展开/收起不影响布局结构', () => {
+    const L = cloneLayout(L0);
+    L.collapsed.chat = true;
+    const back = deserialize(serialize(L));
+    return back.collapsed.chat === true && back.regions.center.includes('chat');
+  });
+
+  t('每个面板在任何布局里都只出现一次（无复制）', () => {
+    let L = cloneLayout(L0);
+    for (const id of allPanelIds(L0)) L = movePanel(L, id, 'center', 0);
+    const ids = allPanelIds(L);
+    return ids.length === 6 && new Set(ids).size === 6;
+  });
+
+  t('optional 面板不会被存档自动复活', () => {
+    const L = deserialize(serialize(cloneLayout(DEFAULT_LAYOUT)));
+    return !allPanelIds(L).includes('files') && panelCount(L) === 6;
+  });
+
+  t('optional 面板可以被显式加入布局', () => {
+    const L = movePanel(cloneLayout(DEFAULT_LAYOUT), 'files', 'right', 99);
+    return allPanelIds(L).includes('files') && panelCount(L) === 7;
+  });
+
+  t('每个面板的权重都是有效正数或无设置', () => {
+    const L = cloneLayout(DEFAULT_LAYOUT);
+    return Object.keys(PANELS).every((id) => {
+      const w = L.weights[id];
+      return w === undefined || (typeof w === 'number' && Number.isFinite(w) && w > 0);
+    });
+  });
+
+  t('双击最大化：设置后再双击还原', () => {
+    const base = cloneLayout(DEFAULT_LAYOUT);
+    const on = toggleMax(base, 'chat');
+    const off = toggleMax(on, 'chat');
+    return on.maximized === 'chat' && off.maximized === null;
+  });
+
+  t('最大化是纯函数：不修改入参', () => {
+    const L = cloneLayout(DEFAULT_LAYOUT);
+    const snapshot = serialize(L);
+    toggleMax(L, 'chat');
+    return serialize(L) === snapshot;
+  });
+
+  t('closable:false 的面板关不掉（会话面板必须一直在）', () => {
+    const L = togglePanel(cloneLayout(DEFAULT_LAYOUT), 'chat');
+    return !!locate(L, 'chat') && panelCount(L) === 6;
+  });
+
+  t('打开 optional 面板会落到它声明的那一栏', () => {
+    const L = togglePanel(cloneLayout(DEFAULT_LAYOUT), 'files');
+    const w = locate(L, 'files');
+    return w && w.region === 'right' && panelCount(L) === 7;
+  });
+
+  t('关掉正在最大化的面板会同时清掉最大化（否则整屏空白）', () => {
+    let L = togglePanel(cloneLayout(DEFAULT_LAYOUT), 'files');
+    L = toggleMax(L, 'files');
+    L = togglePanel(L, 'files');
+    return L.maximized === null;
+  });
+
+  t('存档带权重与最大化，往返不丢', () => {
+    const L = cloneLayout(DEFAULT_LAYOUT);
+    L.weights.chat = 2.5;
+    const on = toggleMax(L, 'verify');
+    const back = deserialize(serialize(on));
+    return back.weights.chat === 2.5 && back.maximized === 'verify';
+  });
+
+  t('存档里指向不存在的最大化 id 会被丢掉', () => {
+    const raw = JSON.stringify({
+      regions: DEFAULT_LAYOUT.regions, sizes: DEFAULT_LAYOUT.sizes,
+      collapsed: {}, weights: {}, maximized: 'ghost',
+    });
+    const L = deserialize(raw);
+    return L.maximized === null;
+  });
+
+  t('关掉再打开同一个面板不会产生副本', () => {
+    let L = togglePanel(cloneLayout(DEFAULT_LAYOUT), 'verify');
+    L = togglePanel(L, 'verify');
+    return allPanelIds(L).filter((x) => x === 'verify').length === 1;
+  });
+
+  const bad = results.filter((r) => !r.ok);
+  const out = [
+    '  布局自检  ' + (results.length - bad.length) + '/' + results.length + ' 成立',
+    ...results.map((r) => '  ' + (r.ok ? '✓' : '✗') + ' ' + r.name + (r.detail ? '   ← ' + r.detail : '')),
+    '  结论: ' + (bad.length ? '✗ ' + bad.length + ' 项不成立' : '✓ 全部成立'),
+  ].join('\n');
+  return { text: out, ok: bad.length === 0, pass: results.length - bad.length, total: results.length };
+}
+
+// ── 启动 ──
+
+// Esc 还原最大化。这是"从全屏退出来"的唯一入口，必须有 ——
+// 否则用户双击进全屏后只能再双击同一块标题才出得来。
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && layout.maximized) {
+    e.preventDefault();
+    layout = toggleMax(layout, layout.maximized);
+    render();
+  }
+});
+
+restoreAppearance();
+render();
+
+const params = new URLSearchParams(location.search);
+if (params.get('selftest') === '1') {
+  const r = selfTest();
+  const el = document.getElementById('selftest');
+  el.textContent = 'SELFTEST_BEGIN\n' + r.text + '\nSELFTEST_END\nRESULT ' + (r.ok ? 'OK' : 'FAIL') + ' ' + r.pass + '/' + r.total;
+  el.style.display = 'block';
+  document.title = 'SELFTEST ' + (r.ok ? 'OK' : 'FAIL') + ' ' + r.pass + '/' + r.total;
+}
+window.__selfTest = selfTest;
+</script>
+</body>
+</html>

@@ -1,0 +1,2252 @@
+{
+  "version": 1,
+  "created_at": "2026-11-10T23:07:42",
+  "source": {
+    "transcript_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\transcript.json",
+    "frames_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\frames.json"
+  },
+  "duration": 379.6,
+  "range": {
+    "start": 0.0,
+    "end": 379.6
+  },
+  "window_seconds": 10.0,
+  "attention_gap_seconds": 5.0,
+  "relation_labels": [
+    "supports",
+    "complements",
+    "contradicts",
+    "unrelated",
+    "insufficient"
+  ],
+  "instructions": "Inspect the listed frames and transcript for each unit. Set assessment.relation, confidence (0..1), notes, and refine. Treat complementary audio/visual evidence as complements, not a conflict.",
+  "units": [
+    {
+      "id": "w0000",
+      "start": 0.0,
+      "end": 10.0,
+      "transcript": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。",
+      "segments": [
+        {
+          "start": 0.05,
+          "end": 24.45,
+          "text": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0000_t000000.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0000_t000000.0.jpg",
+          "t": 0.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0001_t000004.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0001_t000004.8.jpg",
+          "t": 4.767,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0002_t000009.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0002_t000009.5.jpg",
+          "t": 9.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0001",
+      "start": 10.0,
+      "end": 20.0,
+      "transcript": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。",
+      "segments": [
+        {
+          "start": 0.05,
+          "end": 24.45,
+          "text": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0002_t000009.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0002_t000009.5.jpg",
+          "t": 9.5,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0003_t000014.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0003_t000014.3.jpg",
+          "t": 14.267,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0004_t000019.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0004_t000019.0.jpg",
+          "t": 19.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0002",
+      "start": 20.0,
+      "end": 30.0,
+      "transcript": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。 有沒有一種方法,我想要啥就加啥需要啥功能,就上什麼功能? 面板想做成啥樣就做成啥樣按鈕想放哪就放哪。",
+      "segments": [
+        {
+          "start": 0.05,
+          "end": 24.45,
+          "text": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。"
+        },
+        {
+          "start": 24.45,
+          "end": 29.15,
+          "text": "有沒有一種方法,我想要啥就加啥需要啥功能,就上什麼功能?"
+        },
+        {
+          "start": 29.15,
+          "end": 32.95,
+          "text": "面板想做成啥樣就做成啥樣按鈕想放哪就放哪。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0004_t000019.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0004_t000019.0.jpg",
+          "t": 19.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0005_t000023.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0005_t000023.7.jpg",
+          "t": 23.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0006_t000028.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0006_t000028.5.jpg",
+          "t": 28.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0003",
+      "start": 30.0,
+      "end": 40.0,
+      "transcript": "面板想做成啥樣就做成啥樣按鈕想放哪就放哪。 這裡我準備了一個終極方案,把市面上能公開解鎖到的能幫助DSH改造的內容。 做成一個酷!",
+      "segments": [
+        {
+          "start": 29.15,
+          "end": 32.95,
+          "text": "面板想做成啥樣就做成啥樣按鈕想放哪就放哪。"
+        },
+        {
+          "start": 32.95,
+          "end": 38.95,
+          "text": "這裡我準備了一個終極方案,把市面上能公開解鎖到的能幫助DSH改造的內容。"
+        },
+        {
+          "start": 38.95,
+          "end": 40.45,
+          "text": "做成一個酷!"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0007_t000033.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0007_t000033.2.jpg",
+          "t": 33.233,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0008_t000038.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0008_t000038.0.jpg",
+          "t": 37.967,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.734,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0004",
+      "start": 40.0,
+      "end": 50.0,
+      "transcript": "做成一個酷! 它是零件酷的概念。 DSH需要啥直接讀酷按需刪選成品零件。 這個零件可以是插件工具機制。 然後讓DSH根據自己的情況,插零件或者照著零件自己造。",
+      "segments": [
+        {
+          "start": 38.95,
+          "end": 40.45,
+          "text": "做成一個酷!"
+        },
+        {
+          "start": 40.45,
+          "end": 42.15,
+          "text": "它是零件酷的概念。"
+        },
+        {
+          "start": 42.15,
+          "end": 45.65,
+          "text": "DSH需要啥直接讀酷按需刪選成品零件。"
+        },
+        {
+          "start": 45.65,
+          "end": 48.15,
+          "text": "這個零件可以是插件工具機制。"
+        },
+        {
+          "start": 48.15,
+          "end": 53.05,
+          "text": "然後讓DSH根據自己的情況,插零件或者照著零件自己造。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0009_t000042.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0009_t000042.7.jpg",
+          "t": 42.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0010_t000047.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0010_t000047.5.jpg",
+          "t": 47.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.734,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0005",
+      "start": 50.0,
+      "end": 60.0,
+      "transcript": "然後讓DSH根據自己的情況,插零件或者照著零件自己造。 只安装自己想要的部分,这个库本来是我自己用的本地库。 现在把它发布成了网页,主要是节省搜索成本。",
+      "segments": [
+        {
+          "start": 48.15,
+          "end": 53.05,
+          "text": "然後讓DSH根據自己的情況,插零件或者照著零件自己造。"
+        },
+        {
+          "start": 53.05,
+          "end": 57.45,
+          "text": "只安装自己想要的部分,这个库本来是我自己用的本地库。"
+        },
+        {
+          "start": 57.45,
+          "end": 61.45,
+          "text": "现在把它发布成了网页,主要是节省搜索成本。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0011_t000052.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0011_t000052.2.jpg",
+          "t": 52.2,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0012_t000057.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0012_t000057.5.jpg",
+          "t": 57.5,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 5.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0006",
+      "start": 60.0,
+      "end": 70.0,
+      "transcript": "现在把它发布成了网页,主要是节省搜索成本。 比如我现在想完善记忆机制,我让DSH直接独库筛选出所有和记忆相关的插件。 分析他们的逻辑,DSH会对照我的记忆框架识别哪些机制适合我,再把适合的部分拿来升级。",
+      "segments": [
+        {
+          "start": 57.45,
+          "end": 61.45,
+          "text": "现在把它发布成了网页,主要是节省搜索成本。"
+        },
+        {
+          "start": 61.45,
+          "end": 67.65,
+          "text": "比如我现在想完善记忆机制,我让DSH直接独库筛选出所有和记忆相关的插件。"
+        },
+        {
+          "start": 67.65,
+          "end": 75.15,
+          "text": "分析他们的逻辑,DSH会对照我的记忆框架识别哪些机制适合我,再把适合的部分拿来升级。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0013_t000061.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0013_t000061.7.jpg",
+          "t": 61.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0014_t000066.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0014_t000066.4.jpg",
+          "t": 66.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0007",
+      "start": 70.0,
+      "end": 80.0,
+      "transcript": "分析他们的逻辑,DSH会对照我的记忆框架识别哪些机制适合我,再把适合的部分拿来升级。 为什么不直接下个成品记忆插件? 因为我对记忆有要求,成品插件的机制是固定的。",
+      "segments": [
+        {
+          "start": 67.65,
+          "end": 75.15,
+          "text": "分析他们的逻辑,DSH会对照我的记忆框架识别哪些机制适合我,再把适合的部分拿来升级。"
+        },
+        {
+          "start": 75.15,
+          "end": 77.75,
+          "text": "为什么不直接下个成品记忆插件?"
+        },
+        {
+          "start": 77.75,
+          "end": 81.55,
+          "text": "因为我对记忆有要求,成品插件的机制是固定的。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0015_t000071.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0015_t000071.2.jpg",
+          "t": 71.2,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0016_t000075.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0016_t000075.9.jpg",
+          "t": 75.933,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0017_t000080.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0017_t000080.7.jpg",
+          "t": 80.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0008",
+      "start": 80.0,
+      "end": 90.0,
+      "transcript": "因为我对记忆有要求,成品插件的机制是固定的。 不符合我的要求,我的要求有四条。 第一 前量备分记忆,不能只存在绘画里,要有可恢复的备份。 第二 每个场景记忆独立不能篡位。",
+      "segments": [
+        {
+          "start": 77.75,
+          "end": 81.55,
+          "text": "因为我对记忆有要求,成品插件的机制是固定的。"
+        },
+        {
+          "start": 81.55,
+          "end": 84.55,
+          "text": "不符合我的要求,我的要求有四条。"
+        },
+        {
+          "start": 84.55,
+          "end": 89.25,
+          "text": "第一 前量备分记忆,不能只存在绘画里,要有可恢复的备份。"
+        },
+        {
+          "start": 89.25,
+          "end": 92.05,
+          "text": "第二 每个场景记忆独立不能篡位。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0017_t000080.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0017_t000080.7.jpg",
+          "t": 80.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0018_t000085.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0018_t000085.4.jpg",
+          "t": 85.433,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0019_t000090.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0019_t000090.2.jpg",
+          "t": 90.167,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.766,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0009",
+      "start": 90.0,
+      "end": 100.0,
+      "transcript": "第二 每个场景记忆独立不能篡位。 第三 要有共享记忆场景之间能协作。 第四 每种记忆要分层全局私有共享档案。 各规各的。 先说一个现实,AI软件没有完美的记忆。",
+      "segments": [
+        {
+          "start": 89.25,
+          "end": 92.05,
+          "text": "第二 每个场景记忆独立不能篡位。"
+        },
+        {
+          "start": 92.05,
+          "end": 94.95,
+          "text": "第三 要有共享记忆场景之间能协作。"
+        },
+        {
+          "start": 94.95,
+          "end": 98.35,
+          "text": "第四 每种记忆要分层全局私有共享档案。"
+        },
+        {
+          "start": 98.35,
+          "end": 99.65,
+          "text": "各规各的。"
+        },
+        {
+          "start": 99.65,
+          "end": 102.95,
+          "text": "先说一个现实,AI软件没有完美的记忆。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0019_t000090.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0019_t000090.2.jpg",
+          "t": 90.167,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0020_t000094.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0020_t000094.9.jpg",
+          "t": 94.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0021_t000099.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0021_t000099.7.jpg",
+          "t": 99.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0010",
+      "start": 100.0,
+      "end": 110.0,
+      "transcript": "先说一个现实,AI软件没有完美的记忆。 聊得越久模型越容易变笨,我的办法很直接。 该画绘画就画绘画用一次干净的开始,把模型的聪明镜拉回来。",
+      "segments": [
+        {
+          "start": 99.65,
+          "end": 102.95,
+          "text": "先说一个现实,AI软件没有完美的记忆。"
+        },
+        {
+          "start": 102.95,
+          "end": 106.55,
+          "text": "聊得越久模型越容易变笨,我的办法很直接。"
+        },
+        {
+          "start": 106.55,
+          "end": 111.25,
+          "text": "该画绘画就画绘画用一次干净的开始,把模型的聪明镜拉回来。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0021_t000099.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0021_t000099.7.jpg",
+          "t": 99.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0022_t000104.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0022_t000104.4.jpg",
+          "t": 104.4,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0023_t000109.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0023_t000109.2.jpg",
+          "t": 109.167,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0011",
+      "start": 110.0,
+      "end": 120.0,
+      "transcript": "该画绘画就画绘画用一次干净的开始,把模型的聪明镜拉回来。 我的记忆分四层,第一层是全局规则,第二层是每个场景自己的记忆文件。 第三层是共享看板,跨场景通知代办总所以,文档台战和体检结果都在那里。",
+      "segments": [
+        {
+          "start": 106.55,
+          "end": 111.25,
+          "text": "该画绘画就画绘画用一次干净的开始,把模型的聪明镜拉回来。"
+        },
+        {
+          "start": 111.25,
+          "end": 117.05,
+          "text": "我的记忆分四层,第一层是全局规则,第二层是每个场景自己的记忆文件。"
+        },
+        {
+          "start": 117.05,
+          "end": 123.05,
+          "text": "第三层是共享看板,跨场景通知代办总所以,文档台战和体检结果都在那里。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0023_t000109.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0023_t000109.2.jpg",
+          "t": 109.167,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0024_t000118.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0024_t000118.6.jpg",
+          "t": 118.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.633,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0012",
+      "start": 120.0,
+      "end": 130.0,
+      "transcript": "第三层是共享看板,跨场景通知代办总所以,文档台战和体检结果都在那里。 第四层是档案包括规档备份和绘画档案。 这套记忆不只计是实,还记偏好。 我分六类。第一类是交互偏好,比如叫我宿主不叫老板。",
+      "segments": [
+        {
+          "start": 117.05,
+          "end": 123.05,
+          "text": "第三层是共享看板,跨场景通知代办总所以,文档台战和体检结果都在那里。"
+        },
+        {
+          "start": 123.05,
+          "end": 126.25,
+          "text": "第四层是档案包括规档备份和绘画档案。"
+        },
+        {
+          "start": 126.25,
+          "end": 129.25,
+          "text": "这套记忆不只计是实,还记偏好。"
+        },
+        {
+          "start": 129.25,
+          "end": 134.05,
+          "text": "我分六类。第一类是交互偏好,比如叫我宿主不叫老板。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0025_t000123.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0025_t000123.4.jpg",
+          "t": 123.4,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0026_t000128.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0026_t000128.1.jpg",
+          "t": 128.133,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0013",
+      "start": 130.0,
+      "end": 140.0,
+      "transcript": "我分六类。第一类是交互偏好,比如叫我宿主不叫老板。 交互用中文路径单独标出来。 第二类是工具偏好,比如清理找电脑清理场景。",
+      "segments": [
+        {
+          "start": 129.25,
+          "end": 134.05,
+          "text": "我分六类。第一类是交互偏好,比如叫我宿主不叫老板。"
+        },
+        {
+          "start": 134.05,
+          "end": 136.45,
+          "text": "交互用中文路径单独标出来。"
+        },
+        {
+          "start": 136.45,
+          "end": 140.15,
+          "text": "第二类是工具偏好,比如清理找电脑清理场景。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0027_t000137.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0027_t000137.6.jpg",
+          "t": 137.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.633,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0014",
+      "start": 140.0,
+      "end": 150.0,
+      "transcript": "第二类是工具偏好,比如清理找电脑清理场景。 第三类是文件偏好,比如临时文件,核心资产文件。 第四类是协作偏好,比如场景助手,只能自己的主场景用。 第五类是安全偏好规则指认宿主不删别人的行,不碰启动器不自己重勤引擎。",
+      "segments": [
+        {
+          "start": 136.45,
+          "end": 140.15,
+          "text": "第二类是工具偏好,比如清理找电脑清理场景。"
+        },
+        {
+          "start": 140.15,
+          "end": 144.45,
+          "text": "第三类是文件偏好,比如临时文件,核心资产文件。"
+        },
+        {
+          "start": 144.45,
+          "end": 149.15,
+          "text": "第四类是协作偏好,比如场景助手,只能自己的主场景用。"
+        },
+        {
+          "start": 149.15,
+          "end": 154.95,
+          "text": "第五类是安全偏好规则指认宿主不删别人的行,不碰启动器不自己重勤引擎。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0028_t000142.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0028_t000142.4.jpg",
+          "t": 142.367,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0029_t000147.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0029_t000147.1.jpg",
+          "t": 147.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0015",
+      "start": 150.0,
+      "end": 160.0,
+      "transcript": "第五类是安全偏好规则指认宿主不删别人的行,不碰启动器不自己重勤引擎。 第六类是记忆偏好,直系实质工作,通知不进交阶段,决策与遇到的坑址追加。",
+      "segments": [
+        {
+          "start": 149.15,
+          "end": 154.95,
+          "text": "第五类是安全偏好规则指认宿主不删别人的行,不碰启动器不自己重勤引擎。"
+        },
+        {
+          "start": 154.95,
+          "end": 161.75,
+          "text": "第六类是记忆偏好,直系实质工作,通知不进交阶段,决策与遇到的坑址追加。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0030_t000151.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0030_t000151.9.jpg",
+          "t": 151.867,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0031_t000156.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0031_t000156.6.jpg",
+          "t": 156.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0016",
+      "start": 160.0,
+      "end": 170.0,
+      "transcript": "第六类是记忆偏好,直系实质工作,通知不进交阶段,决策与遇到的坑址追加。 所以我的真实做法是两条腿走路 换绘画宝聪明记忆宝监视 平时我会在上下文变众之前主动换绘画 不是等到引擎压不动了才换",
+      "segments": [
+        {
+          "start": 154.95,
+          "end": 161.75,
+          "text": "第六类是记忆偏好,直系实质工作,通知不进交阶段,决策与遇到的坑址追加。"
+        },
+        {
+          "start": 161.75,
+          "end": 164.31,
+          "text": "所以我的真实做法是两条腿走路"
+        },
+        {
+          "start": 164.31,
+          "end": 166.51,
+          "text": "换绘画宝聪明记忆宝监视"
+        },
+        {
+          "start": 166.51,
+          "end": 169.59,
+          "text": "平时我会在上下文变众之前主动换绘画"
+        },
+        {
+          "start": 169.59,
+          "end": 171.75,
+          "text": "不是等到引擎压不动了才换"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0032_t000161.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0032_t000161.3.jpg",
+          "t": 161.333,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0033_t000166.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0033_t000166.1.jpg",
+          "t": 166.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0017",
+      "start": 170.0,
+      "end": 180.0,
+      "transcript": "不是等到引擎压不动了才换 引擎的自动压缩是安全网不是我的主策略 常见的记忆方案其实就几种各有各的强项 也各有各的代价 Hermis的持久记忆和技能",
+      "segments": [
+        {
+          "start": 169.59,
+          "end": 171.75,
+          "text": "不是等到引擎压不动了才换"
+        },
+        {
+          "start": 171.75,
+          "end": 174.87,
+          "text": "引擎的自动压缩是安全网不是我的主策略"
+        },
+        {
+          "start": 174.87,
+          "end": 178.19,
+          "text": "常见的记忆方案其实就几种各有各的强项"
+        },
+        {
+          "start": 178.19,
+          "end": 179.71,
+          "text": "也各有各的代价"
+        },
+        {
+          "start": 179.71,
+          "end": 181.79,
+          "text": "Hermis的持久记忆和技能"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0034_t000175.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0034_t000175.6.jpg",
+          "t": 175.567,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0035_t000180.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0035_t000180.3.jpg",
+          "t": 180.333,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.567,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0018",
+      "start": 180.0,
+      "end": 190.0,
+      "transcript": "Hermis的持久记忆和技能 记忆走的是持久写入这条路 把核心设定天号技能写成文件 开场自动加载 好处是跨绘画不丢 核心就是技能能沉淀",
+      "segments": [
+        {
+          "start": 179.71,
+          "end": 181.79,
+          "text": "Hermis的持久记忆和技能"
+        },
+        {
+          "start": 181.79,
+          "end": 184.03,
+          "text": "记忆走的是持久写入这条路"
+        },
+        {
+          "start": 184.03,
+          "end": 186.59,
+          "text": "把核心设定天号技能写成文件"
+        },
+        {
+          "start": 186.59,
+          "end": 187.95,
+          "text": "开场自动加载"
+        },
+        {
+          "start": 187.95,
+          "end": 189.63,
+          "text": "好处是跨绘画不丢"
+        },
+        {
+          "start": 189.63,
+          "end": 191.35,
+          "text": "核心就是技能能沉淀"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0035_t000180.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0035_t000180.3.jpg",
+          "t": 180.333,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0036_t000185.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0036_t000185.1.jpg",
+          "t": 185.067,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0037_t000189.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0037_t000189.8.jpg",
+          "t": 189.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 4.734,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0019",
+      "start": 190.0,
+      "end": 200.0,
+      "transcript": "核心就是技能能沉淀 代價是容量受限制,壓縮會丟細節,心就衝突容易堆在一起。 RIG效量減索容量大,不占常駐上下文,但減索靠概率分不清時效。",
+      "segments": [
+        {
+          "start": 189.63,
+          "end": 191.35,
+          "text": "核心就是技能能沉淀"
+        },
+        {
+          "start": 191.35,
+          "end": 196.15,
+          "text": "代價是容量受限制,壓縮會丟細節,心就衝突容易堆在一起。"
+        },
+        {
+          "start": 196.15,
+          "end": 201.85,
+          "text": "RIG效量減索容量大,不占常駐上下文,但減索靠概率分不清時效。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0037_t000189.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0037_t000189.8.jpg",
+          "t": 189.8,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0038_t000194.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0038_t000194.6.jpg",
+          "t": 194.567,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0039_t000199.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0039_t000199.3.jpg",
+          "t": 199.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0020",
+      "start": 200.0,
+      "end": 210.0,
+      "transcript": "RIG效量減索容量大,不占常駐上下文,但減索靠概率分不清時效。 原生模型常用的滑動窗口,加自動摘要。 簡單實施連貫,但越聊越常反覆摘要會丟細節。 任務快照只能續跑同一個任務,不是通用長期記憶。",
+      "segments": [
+        {
+          "start": 196.15,
+          "end": 201.85,
+          "text": "RIG效量減索容量大,不占常駐上下文,但減索靠概率分不清時效。"
+        },
+        {
+          "start": 201.85,
+          "end": 205.05,
+          "text": "原生模型常用的滑動窗口,加自動摘要。"
+        },
+        {
+          "start": 205.05,
+          "end": 208.95,
+          "text": "簡單實施連貫,但越聊越常反覆摘要會丟細節。"
+        },
+        {
+          "start": 208.95,
+          "end": 212.85,
+          "text": "任務快照只能續跑同一個任務,不是通用長期記憶。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0039_t000199.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0039_t000199.3.jpg",
+          "t": 199.3,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0040_t000204.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0040_t000204.1.jpg",
+          "t": 204.067,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0041_t000208.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0041_t000208.8.jpg",
+          "t": 208.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0021",
+      "start": 210.0,
+      "end": 220.0,
+      "transcript": "任務快照只能續跑同一個任務,不是通用長期記憶。 騰訊開源的 Tencent DV Agent Memory,走的是分層,原始對話原子記憶任務歸難用戶畫像。 再加上下文卸載和任務畫布,優勢是長任務,省頭坑畫像更準結構可查,",
+      "segments": [
+        {
+          "start": 208.95,
+          "end": 212.85,
+          "text": "任務快照只能續跑同一個任務,不是通用長期記憶。"
+        },
+        {
+          "start": 212.85,
+          "end": 219.65,
+          "text": "騰訊開源的 Tencent DV Agent Memory,走的是分層,原始對話原子記憶任務歸難用戶畫像。"
+        },
+        {
+          "start": 219.65,
+          "end": 225.41,
+          "text": "再加上下文卸載和任務畫布,優勢是長任務,省頭坑畫像更準結構可查,"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0042_t000213.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0042_t000213.5.jpg",
+          "t": 213.533,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0043_t000218.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0043_t000218.3.jpg",
+          "t": 218.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0022",
+      "start": 220.0,
+      "end": 230.0,
+      "transcript": "再加上下文卸載和任務畫布,優勢是長任務,省頭坑畫像更準結構可查, 代價是它還是圍繞一個用戶一個agent的做記憶,不負責多個角色之間的隔離和交接。",
+      "segments": [
+        {
+          "start": 219.65,
+          "end": 225.41,
+          "text": "再加上下文卸載和任務畫布,優勢是長任務,省頭坑畫像更準結構可查,"
+        },
+        {
+          "start": 225.41,
+          "end": 231.37,
+          "text": "代價是它還是圍繞一個用戶一個agent的做記憶,不負責多個角色之間的隔離和交接。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0044_t000223.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0044_t000223.0.jpg",
+          "t": 223.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.967,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0023",
+      "start": 230.0,
+      "end": 240.0,
+      "transcript": "代價是它還是圍繞一個用戶一個agent的做記憶,不負責多個角色之間的隔離和交接。 我的DSH走的是另一條路,記憶按場景和主題拆成節點,可以打標籤記憶7標版本,按路由精準調取。 優勢是從根上避開一條繪畫堆所有東西。",
+      "segments": [
+        {
+          "start": 225.41,
+          "end": 231.37,
+          "text": "代價是它還是圍繞一個用戶一個agent的做記憶,不負責多個角色之間的隔離和交接。"
+        },
+        {
+          "start": 231.37,
+          "end": 239.77,
+          "text": "我的DSH走的是另一條路,記憶按場景和主題拆成節點,可以打標籤記憶7標版本,按路由精準調取。"
+        },
+        {
+          "start": 239.77,
+          "end": 243.17,
+          "text": "優勢是從根上避開一條繪畫堆所有東西。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0045_t000232.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0045_t000232.5.jpg",
+          "t": 232.533,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0046_t000237.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0046_t000237.3.jpg",
+          "t": 237.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.734,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0024",
+      "start": 240.0,
+      "end": 250.0,
+      "transcript": "優勢是從根上避開一條繪畫堆所有東西。 多角色隔離可控可選記本地,代價是依賴標籤和路由,維護成本高。 它不是完美方案,却是我目前找到的最适合我的长期管理的路线。",
+      "segments": [
+        {
+          "start": 239.77,
+          "end": 243.17,
+          "text": "優勢是從根上避開一條繪畫堆所有東西。"
+        },
+        {
+          "start": 243.17,
+          "end": 248.65,
+          "text": "多角色隔離可控可選記本地,代價是依賴標籤和路由,維護成本高。"
+        },
+        {
+          "start": 248.65,
+          "end": 253.65,
+          "text": "它不是完美方案,却是我目前找到的最适合我的长期管理的路线。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0047_t000242.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0047_t000242.0.jpg",
+          "t": 242.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0048_t000246.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0048_t000246.8.jpg",
+          "t": 246.767,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0025",
+      "start": 250.0,
+      "end": 260.0,
+      "transcript": "它不是完美方案,却是我目前找到的最适合我的长期管理的路线。 记忆能沉淀,能迁移,能审计,越用越好用,上限很高。 如果你要的是全自动,开箱及用,它不是合,如果你要的是几年后,还能查还能改的个人工作台。",
+      "segments": [
+        {
+          "start": 248.65,
+          "end": 253.65,
+          "text": "它不是完美方案,却是我目前找到的最适合我的长期管理的路线。"
+        },
+        {
+          "start": 253.65,
+          "end": 258.65,
+          "text": "记忆能沉淀,能迁移,能审计,越用越好用,上限很高。"
+        },
+        {
+          "start": 258.65,
+          "end": 266.15,
+          "text": "如果你要的是全自动,开箱及用,它不是合,如果你要的是几年后,还能查还能改的个人工作台。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0049_t000251.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0049_t000251.5.jpg",
+          "t": 251.5,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0050_t000256.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0050_t000256.2.jpg",
+          "t": 256.233,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0051_t000261.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0051_t000261.0.jpg",
+          "t": 261.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0026",
+      "start": 260.0,
+      "end": 270.0,
+      "transcript": "如果你要的是全自动,开箱及用,它不是合,如果你要的是几年后,还能查还能改的个人工作台。 这条路值得走,场景是节点当前交接式连线共享看板式总限,所以是地图。",
+      "segments": [
+        {
+          "start": 258.65,
+          "end": 266.15,
+          "text": "如果你要的是全自动,开箱及用,它不是合,如果你要的是几年后,还能查还能改的个人工作台。"
+        },
+        {
+          "start": 266.15,
+          "end": 272.65,
+          "text": "这条路值得走,场景是节点当前交接式连线共享看板式总限,所以是地图。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0051_t000261.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0051_t000261.0.jpg",
+          "t": 261.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0052_t000265.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0052_t000265.7.jpg",
+          "t": 265.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0053_t000270.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0053_t000270.5.jpg",
+          "t": 270.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0027",
+      "start": 270.0,
+      "end": 280.0,
+      "transcript": "这条路值得走,场景是节点当前交接式连线共享看板式总限,所以是地图。 记忆这块可能有点难理解 在比如启动动画插件 我对启动动画要求不高 但我希望它在设置里轻轻爽爽显示每一个",
+      "segments": [
+        {
+          "start": 266.15,
+          "end": 272.65,
+          "text": "这条路值得走,场景是节点当前交接式连线共享看板式总限,所以是地图。"
+        },
+        {
+          "start": 272.65,
+          "end": 274.95,
+          "text": "记忆这块可能有点难理解"
+        },
+        {
+          "start": 274.95,
+          "end": 276.75,
+          "text": "在比如启动动画插件"
+        },
+        {
+          "start": 276.75,
+          "end": 278.65,
+          "text": "我对启动动画要求不高"
+        },
+        {
+          "start": 278.65,
+          "end": 281.85,
+          "text": "但我希望它在设置里轻轻爽爽显示每一个"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0053_t000270.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0053_t000270.5.jpg",
+          "t": 270.467,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0054_t000272.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0054_t000272.3.jpg",
+          "t": 272.3,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0055_t000280.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0055_t000280.0.jpg",
+          "t": 279.967,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 7.667,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0028",
+      "start": 280.0,
+      "end": 290.0,
+      "transcript": "但我希望它在设置里轻轻爽爽显示每一个 而且这个设置界面要能预览 市面上的成品插件 我不需要 于是让DSH自己写了一个 以后拉取别人的启动动画插件",
+      "segments": [
+        {
+          "start": 278.65,
+          "end": 281.85,
+          "text": "但我希望它在设置里轻轻爽爽显示每一个"
+        },
+        {
+          "start": 281.85,
+          "end": 284.05,
+          "text": "而且这个设置界面要能预览"
+        },
+        {
+          "start": 284.05,
+          "end": 285.65,
+          "text": "市面上的成品插件"
+        },
+        {
+          "start": 285.65,
+          "end": 286.55,
+          "text": "我不需要"
+        },
+        {
+          "start": 286.55,
+          "end": 288.75,
+          "text": "于是让DSH自己写了一个"
+        },
+        {
+          "start": 288.75,
+          "end": 291.15,
+          "text": "以后拉取别人的启动动画插件"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0055_t000280.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0055_t000280.0.jpg",
+          "t": 279.967,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0056_t000284.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0056_t000284.7.jpg",
+          "t": 284.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0057_t000289.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0057_t000289.5.jpg",
+          "t": 289.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.767,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0029",
+      "start": 290.0,
+      "end": 300.0,
+      "transcript": "以后拉取别人的启动动画插件 我只需要拉动画本身 多一个画面选择就OK 想用哪个用哪个 皮肤也是一样 同例很多插件我不需要多个面板",
+      "segments": [
+        {
+          "start": 288.75,
+          "end": 291.15,
+          "text": "以后拉取别人的启动动画插件"
+        },
+        {
+          "start": 291.15,
+          "end": 292.95,
+          "text": "我只需要拉动画本身"
+        },
+        {
+          "start": 292.95,
+          "end": 294.85,
+          "text": "多一个画面选择就OK"
+        },
+        {
+          "start": 294.85,
+          "end": 296.35,
+          "text": "想用哪个用哪个"
+        },
+        {
+          "start": 296.35,
+          "end": 297.65,
+          "text": "皮肤也是一样"
+        },
+        {
+          "start": 297.65,
+          "end": 300.15,
+          "text": "同例很多插件我不需要多个面板"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0057_t000289.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0057_t000289.5.jpg",
+          "t": 289.467,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0058_t000296.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0058_t000296.2.jpg",
+          "t": 296.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0059_t000297.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0059_t000297.5.jpg",
+          "t": 297.534,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0060_t000299.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0060_t000299.0.jpg",
+          "t": 298.967,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0061_t000299.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0061_t000299.7.jpg",
+          "t": 299.734,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0062_t000300.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0062_t000300.6.jpg",
+          "t": 300.634,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 4,
+        "max_coverage_gap": 6.234,
+        "visual_cues": [
+          "画面"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0030",
+      "start": 300.0,
+      "end": 310.0,
+      "transcript": "同例很多插件我不需要多个面板 只想在不影响现有工作台的前提下多一个功能 可以是一个按钮,也可以是一个内在机制 这样安装同模块内容时才不会冲突 我个人觉得AI软件的终极模式",
+      "segments": [
+        {
+          "start": 297.65,
+          "end": 300.15,
+          "text": "同例很多插件我不需要多个面板"
+        },
+        {
+          "start": 300.15,
+          "end": 303.71,
+          "text": "只想在不影响现有工作台的前提下多一个功能"
+        },
+        {
+          "start": 303.71,
+          "end": 306.71,
+          "text": "可以是一个按钮,也可以是一个内在机制"
+        },
+        {
+          "start": 306.71,
+          "end": 309.71,
+          "text": "这样安装同模块内容时才不会冲突"
+        },
+        {
+          "start": 309.71,
+          "end": 312.27,
+          "text": "我个人觉得AI软件的终极模式"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0061_t000299.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0061_t000299.7.jpg",
+          "t": 299.734,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0062_t000300.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0062_t000300.6.jpg",
+          "t": 300.634,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0063_t000303.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0063_t000303.0.jpg",
+          "t": 303.0,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0064_t000304.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0064_t000304.5.jpg",
+          "t": 304.5,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0065_t000308.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0065_t000308.4.jpg",
+          "t": 308.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 4,
+        "max_coverage_gap": 3.933,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0031",
+      "start": 310.0,
+      "end": 320.0,
+      "transcript": "我个人觉得AI软件的终极模式 就是自定义自己的智能体方便自己的生活和工作 有人说你这就是Dalag玩具 国内生产力就Workbody 我只想说,Workbody就是个软件",
+      "segments": [
+        {
+          "start": 309.71,
+          "end": 312.27,
+          "text": "我个人觉得AI软件的终极模式"
+        },
+        {
+          "start": 312.27,
+          "end": 315.79,
+          "text": "就是自定义自己的智能体方便自己的生活和工作"
+        },
+        {
+          "start": 315.79,
+          "end": 317.95,
+          "text": "有人说你这就是Dalag玩具"
+        },
+        {
+          "start": 317.95,
+          "end": 319.71,
+          "text": "国内生产力就Workbody"
+        },
+        {
+          "start": 319.71,
+          "end": 322.39,
+          "text": "我只想说,Workbody就是个软件"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0066_t000311.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0066_t000311.9.jpg",
+          "t": 311.9,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0067_t000315.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0067_t000315.7.jpg",
+          "t": 315.734,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0068_t000317.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0068_t000317.9.jpg",
+          "t": 317.933,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 3.834,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0032",
+      "start": 320.0,
+      "end": 330.0,
+      "transcript": "我只想说,Workbody就是个软件 随时可以搓出来 它的壁垒就是腾讯的生态 随着模型越厉害 互联网大厂根本不存在软件技术壁垒",
+      "segments": [
+        {
+          "start": 319.71,
+          "end": 322.39,
+          "text": "我只想说,Workbody就是个软件"
+        },
+        {
+          "start": 322.39,
+          "end": 323.83,
+          "text": "随时可以搓出来"
+        },
+        {
+          "start": 323.83,
+          "end": 325.91,
+          "text": "它的壁垒就是腾讯的生态"
+        },
+        {
+          "start": 325.91,
+          "end": 327.43,
+          "text": "随着模型越厉害"
+        },
+        {
+          "start": 327.43,
+          "end": 330.31,
+          "text": "互联网大厂根本不存在软件技术壁垒"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0069_t000322.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0069_t000322.3.jpg",
+          "t": 322.3,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0070_t000327.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0070_t000327.4.jpg",
+          "t": 327.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 5.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0033",
+      "start": 330.0,
+      "end": 340.0,
+      "transcript": "互联网大厂根本不存在软件技术壁垒 当然我也用workbody之类的AI软件 因为它可以成为我DSH里面场景的助手 我让我的DSH用workbody给大家打招呼",
+      "segments": [
+        {
+          "start": 327.43,
+          "end": 330.31,
+          "text": "互联网大厂根本不存在软件技术壁垒"
+        },
+        {
+          "start": 330.31,
+          "end": 333.07,
+          "text": "当然我也用workbody之类的AI软件"
+        },
+        {
+          "start": 333.07,
+          "end": 336.27,
+          "text": "因为它可以成为我DSH里面场景的助手"
+        },
+        {
+          "start": 336.27,
+          "end": 348.48,
+          "text": "我让我的DSH用workbody给大家打招呼"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0071_t000336.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0071_t000336.9.jpg",
+          "t": 336.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0034",
+      "start": 340.0,
+      "end": 350.0,
+      "transcript": "我让我的DSH用workbody给大家打招呼 OK呀 我的DSH会用workbody这个生产工具",
+      "segments": [
+        {
+          "start": 336.27,
+          "end": 348.48,
+          "text": "我让我的DSH用workbody给大家打招呼"
+        },
+        {
+          "start": 348.48,
+          "end": 349.32,
+          "text": "OK呀"
+        },
+        {
+          "start": 349.32,
+          "end": 352.36,
+          "text": "我的DSH会用workbody这个生产工具"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0072_t000342.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0072_t000342.2.jpg",
+          "t": 342.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0073_t000346.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0073_t000346.4.jpg",
+          "t": 346.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.166,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0035",
+      "start": 350.0,
+      "end": 360.0,
+      "transcript": "我的DSH会用workbody这个生产工具 那它现在算生产力了吧 今天翻越评论区的时候 很多小伙伴用了我的仓库 还是没搭建好 仓库里已经把我出使工作台磨板的圆码放上去",
+      "segments": [
+        {
+          "start": 349.32,
+          "end": 352.36,
+          "text": "我的DSH会用workbody这个生产工具"
+        },
+        {
+          "start": 352.36,
+          "end": 354.6,
+          "text": "那它现在算生产力了吧"
+        },
+        {
+          "start": 354.6,
+          "end": 356.6,
+          "text": "今天翻越评论区的时候"
+        },
+        {
+          "start": 356.6,
+          "end": 358.6,
+          "text": "很多小伙伴用了我的仓库"
+        },
+        {
+          "start": 358.6,
+          "end": 359.88,
+          "text": "还是没搭建好"
+        },
+        {
+          "start": 359.88,
+          "end": 363.4,
+          "text": "仓库里已经把我出使工作台磨板的圆码放上去"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0074_t000354.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0074_t000354.6.jpg",
+          "t": 354.6,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0075_t000355.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0075_t000355.9.jpg",
+          "t": 355.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0076_t000359.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0076_t000359.9.jpg",
+          "t": 359.9,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 4.6,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0036",
+      "start": 360.0,
+      "end": 370.0,
+      "transcript": "仓库里已经把我出使工作台磨板的圆码放上去 有三个场景适合小白体验和进一步修改 其实不管什么工具只要能解放自己都是好工具",
+      "segments": [
+        {
+          "start": 359.88,
+          "end": 363.4,
+          "text": "仓库里已经把我出使工作台磨板的圆码放上去"
+        },
+        {
+          "start": 363.4,
+          "end": 366.54,
+          "text": "有三个场景适合小白体验和进一步修改"
+        },
+        {
+          "start": 366.54,
+          "end": 370.08,
+          "text": "其实不管什么工具只要能解放自己都是好工具"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0076_t000359.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0076_t000359.9.jpg",
+          "t": 359.9,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0077_t000365.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0077_t000365.4.jpg",
+          "t": 365.367,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0078_t000370.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0078_t000370.1.jpg",
+          "t": 370.133,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.367,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0037",
+      "start": 370.0,
+      "end": 379.6,
+      "transcript": "其实不管什么工具只要能解放自己都是好工具 本期就到这里 后面会更新一些更基础的内容 和刚接触DSH的小伙伴一起探索更多可能性 我是DSH最忠实的用户",
+      "segments": [
+        {
+          "start": 366.54,
+          "end": 370.08,
+          "text": "其实不管什么工具只要能解放自己都是好工具"
+        },
+        {
+          "start": 370.08,
+          "end": 371.5,
+          "text": "本期就到这里"
+        },
+        {
+          "start": 371.5,
+          "end": 373.88,
+          "text": "后面会更新一些更基础的内容"
+        },
+        {
+          "start": 373.88,
+          "end": 377.5,
+          "text": "和刚接触DSH的小伙伴一起探索更多可能性"
+        },
+        {
+          "start": 377.5,
+          "end": 379.5,
+          "text": "我是DSH最忠实的用户"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0078_t000370.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0078_t000370.1.jpg",
+          "t": 370.133,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0079_t000374.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1H1nU6bEJ5\\frames\\0079_t000374.9.jpg",
+          "t": 374.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.734,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,2329 @@
+{
+  "what": "宿主 API 覆盖清点（前端 invoke 名 × 我们是否实现）",
+  "at": "2026-11-17T10:40:36.545Z",
+  "how": "从 apps/vouch-web/src/web-ui/src 下所有 .ts/.tsx 里抽 .invoke('<name>')，去重后逐条判定",
+  "transport": {
+    "note": "浏览器环境走 WebSocket 宿主（adapters/index.ts:30-39），默认 ws://localhost:8080/ws",
+    "ourServerImplementsWebSocketHost": false,
+    "ourHttpEndpoints": [
+      "/api/plugin-run",
+      "/api/mcp",
+      "/api/scheduler/tick",
+      "/api/skills"
+    ]
+  },
+  "summary": {
+    "invokeNames": 277,
+    "implemented": 0,
+    "coverage": 0,
+    "scannedFiles": 2494
+  },
+  "byPrefix": {
+    "miniapp": 43,
+    "get": 31,
+    "set": 13,
+    "delete": 9,
+    "remote": 9,
+    "review": 8,
+    "save": 8,
+    "cancel": 7,
+    "speech": 7,
+    "terminal": 7,
+    "browser": 6,
+    "list": 6,
+    "clear": 5,
+    "create": 5,
+    "initialize": 5,
+    "ssh": 5,
+    "update": 5,
+    "check": 4,
+    "load": 4,
+    "search": 4,
+    "start": 4,
+    "account": 3,
+    "export": 3,
+    "install": 3,
+    "open": 3,
+    "reset": 3,
+    "reveal": 3,
+    "send": 3,
+    "submit": 3,
+    "cleanup": 2,
+    "frontend": 2,
+    "mark": 2,
+    "read": 2,
+    "report": 2,
+    "restart": 2,
+    "show": 2,
+    "stop": 2,
+    "test": 2,
+    "validate": 2,
+    "accept": 1,
+    "activate": 1,
+    "apply": 1,
+    "archive": 1,
+    "close": 1,
+    "cmd": 1,
+    "compress": 1,
+    "compute": 1,
+    "computer": 1,
+    "debug": 1,
+    "dispatch": 1,
+    "download": 1,
+    "execute": 1,
+    "fetch": 1,
+    "generate": 1,
+    "has": 1,
+    "hide": 1,
+    "html": 1,
+    "import": 1,
+    "logout": 1,
+    "minimize": 1,
+    "peer": 1,
+    "ping": 1,
+    "predownload": 1,
+    "quit": 1,
+    "record": 1,
+    "refresh": 1,
+    "reject": 1,
+    "reload": 1,
+    "remove": 1,
+    "rename": 1,
+    "reorder": 1,
+    "resize": 1,
+    "resolve": 1,
+    "rollback": 1,
+    "toggle": 1,
+    "workspace": 1,
+    "write": 1
+  },
+  "methods": [
+    {
+      "name": "accept_diff_block",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SnapshotAPI.ts:338"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "account_github_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AccountIdentityAPI.ts:51"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "account_github_start",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AccountIdentityAPI.ts:27"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "account_logout",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AccountIdentityAPI.ts:59"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "activate_session_goal",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AgentAPI.ts:904"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "apply_patch",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\DiffAPI.ts:52"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "archive_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:133"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "browser_webview_create",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\browser\\useEmbeddedBrowserWebview.ts:158"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "browser_webview_eval",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\browser\\useEmbeddedBrowserWebview.ts:111"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "browser_webview_navigate",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\browser\\useEmbeddedBrowserWebview.ts:119"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "browser_webview_reload",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\browser\\useEmbeddedBrowserWebview.ts:125"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "browser_webview_set_agent_target_state",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\browser\\useEmbeddedBrowserWebview.ts:145"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "browser_webview_set_bounds",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\browser\\useEmbeddedBrowserWebview.ts:129"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_acp_dialog_turn",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:458"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_app_update_download",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:139"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_insights_generation",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\insightsApi.ts:201"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_mcp_remote_oauth",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:484"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_search",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:520"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_subscription_login",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:592"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cancel_transfer",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:329"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "check_command_exists",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:241"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "check_commands_exist",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:250"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "check_for_updates",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:99"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "check_path_exists",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:207"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cleanup_empty_sessions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SnapshotAPI.ts:403"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "cleanup_invalid_workspaces",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:383"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "clear_context",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:67"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "clear_decision_model_credential",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:260"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "clear_mcp_remote_auth",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:458"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "clear_session_thread_goal",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AgentAPI.ts:946"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "clear_web_search_credential",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:232"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "close_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:280",
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:219"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "cmd",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\adapters\\websocket-adapter.ts:675"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "compress_context",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:45"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "compute_diff",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\DiffAPI.ts:41"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "computer_use_open_system_settings",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\settings\\pages\\tools\\DeviceControlSettingsPage.tsx:268",
+        "apps\\vouch-web\\src\\web-ui\\src\\flow_chat\\tool-cards\\ComputerUseToolCard.tsx:89"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "create_ai_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:470"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "create_assistant_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:251"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "create_directory",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:359"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "create_file",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:337"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "create_miniapp",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:350"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "debug_open_devtools",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\debug\\useDebugInspector.ts:73"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_agent_companion_pet_package",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\config\\services\\AgentCompanionPetService.ts:274"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_assistant_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:320"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_directory",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:370"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_file",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:348"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_mcp_server",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:463"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_miniapp",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:366"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_model_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:367"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:122"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "delete_subagent",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:412"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "dispatch_query",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\dispatch\\dispatchApi.ts:169",
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\dispatch\\dispatchApi.ts:181"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "download_update",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:121"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "execute_tool",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ToolAPI.ts:51"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "export_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:288"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "export_diagnostics_bundle",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:334"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "export_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:144"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "fetch_mcp_app_resource",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:427"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "frontend_update_candidate_failed",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\App.tsx:249"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "frontend_update_candidate_ready",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\App.tsx:218"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "generate_insights",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\insightsApi.ts:179"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_all_tools_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ToolAPI.ts:19"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_app_state",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:186"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_app_version",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:88"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_clipboard",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:218"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_clipboard_files",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1134"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_clipboard_image",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1147"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:121"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_context_stats",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:56"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_decision_model_credential_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:242"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_directory_children",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:427"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_file_watch_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1120"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_latest_insights",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\insightsApi.ts:185"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_mcp_prompt",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:327"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_mcp_server_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:368"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_mcp_servers",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:311"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_miniapp_draft_storage",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:578"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_miniapp_storage",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\miniapps\\hooks\\useMiniAppBridge.ts:223"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_miniapp_versions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:374"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_model_configs",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:345"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_model_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:394"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_pending_update",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:132"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_primary_assistant_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:261"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_runtime_capabilities",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:332"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_runtime_logging_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:324"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_session_thread_goal",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AgentAPI.ts:931"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_storage_stats",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:166"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_system_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:77"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_token_usage_statistics",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\tokenUsageStatisticsApi.ts:92"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_tool_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ToolAPI.ts:29"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_watched_paths",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1111"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "get_web_search_credential_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:206"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "has_insights_data",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\insightsApi.ts:195"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "hide_main_window_after_close_request",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\layout\\AppLayout.tsx:436"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "html_preview_release",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\htmlPreviewApi.ts:38"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "import_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:155"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "initialize_acp_clients",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:288"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "initialize_ai",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:438"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "initialize_mcp_servers",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:301"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "initialize_mcp_servers_non_destructive",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:306"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "initialize_tray_after_startup",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:367"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "install_acp_client_cli",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:373"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "install_pending_update",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:144"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "install_update",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:110"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "list_ai_models",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:314"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "list_mcp_prompts",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:323"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "list_mcp_resources",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:315"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "list_miniapps",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:330"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "list_sessions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:100"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "list_skill_market",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:612"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "load_acp_json_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:389"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "load_insights_report",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\insightsApi.ts:189"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "load_mcp_json_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:373"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "load_session_data",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:89"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "logout_subscription_account_instance",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:536"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "mark_openbitfun_control_surface_ready",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\global-search\\openBitFunControlBridge.ts:221"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "mark_openbitfun_control_surface_unready",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\global-search\\openBitFunControlBridge.ts:199"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_agent_cancel",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:773"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_agent_cancel_stale_runs",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:789"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_agent_ensure_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:728"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_agent_run",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:750"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_agent_turn_text",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:781"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_ai_cancel",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:707"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_ai_chat",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:689"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_ai_complete",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:667"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_ai_list_models",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:715"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_apply_draft",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:558"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_create_draft",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:492"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_decline_builtin_update",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:652"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_discard_draft",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:568"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_draft_host_call",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:620"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_draft_worker_call",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:604"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_draft_worker_stop",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:630"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_get_customization_metadata",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:640"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_get_draft",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:502"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_host_call",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:426"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_import_from_path",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:470"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_install_deps",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:452"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_capture_window",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:325"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_get_listing",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:211"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_import_package",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:333"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_inspect_package",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:317"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_install",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:301"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_installed_origins",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:285"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_installed_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:271"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_list_submissions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:251"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_set_favorite",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:241"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_set_rating",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:228"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_submit_installed",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:347"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_market_withdraw_submission",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppMarketAPI.ts:259"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_permission_diff_for_draft",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:543"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_recompile",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:460"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_render_slide_page",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:804"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_runtime_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:390"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_set_draft_permissions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:533"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_sync_draft_from_fs",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:517"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_sync_from_fs",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:480"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_worker_call",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:403"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_worker_list_running",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:444"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "miniapp_worker_stop",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:436"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "minimize_to_tray",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:348"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "open_html_file_in_browser",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:185"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "open_remote_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:229"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "open_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:212"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "peer_controller_set_active",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\peer-device\\peerDeviceSurfaceRuntime.ts:118"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "ping",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ApiClient.ts:260"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "predownload_acp_client_adapter",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:364"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "quit_app",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:339"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "read_file_content",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:472"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "read_mcp_resource",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:319"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "record_voice_exchange",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\flow_chat\\services\\controlConversation.ts:135"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "refresh_subscription_account_instance",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:532"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reject_diff_block",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SnapshotAPI.ts:349"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reload_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:314"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_close_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:355"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_create_dir",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:199"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_download_to_local_path",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:263"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_open_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:348"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_remove",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:210"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_remove_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:362"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_rename",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:221"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_upload_from_local_path",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:313"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remote_write_file",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:163"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "remove_recent_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:373"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "rename_file",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1064"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reorder_opened_workspaces",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:300"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "report_ide_control_result",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\shared\\services\\ide-control\\IdeControlEventBus.ts:112",
+        "apps\\vouch-web\\src\\web-ui\\src\\shared\\services\\ide-control\\PanelController.ts:205"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "report_openbitfun_control_result",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\global-search\\openBitFunControlBridge.ts:101",
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\creation\\creationBridge.ts:46"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "reset_agent_profile_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:404"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reset_assistant_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:330"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reset_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:277"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "resize_agent_companion_desktop_pet",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\components\\AgentCompanionDesktopPet\\AgentCompanionDesktopPet.tsx:216"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "resolve_browser_dropped_file_paths",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1159"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "restart_app",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:156"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "restart_mcp_server",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:363"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reveal_in_explorer",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:1092"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reveal_models_dev_cache_directory",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:381"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "reveal_session_storage_directory",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SessionAPI.ts:344"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_clear_auth_token",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:510"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_get_issue",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:413"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_get_pull_request_ci_log",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:477"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_get_pull_request_detail",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:368"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_get_pull_request_detail_page",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:456"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_get_pull_request_review_target",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:393"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_get_workspace_context",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:348"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "review_platform_update_auth_token",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ReviewPlatformAPI.ts:494"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "rollback_miniapp",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:382"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_acp_json_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:394"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_cloud_speech_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:195"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_decision_model_credential",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:250"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_mcp_json_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:383"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_merged_diff_content",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\DiffAPI.ts:63"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_model_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:356"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_session_data",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:78"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "save_web_search_credential",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:219"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "search_referenceable_sessions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SessionAPI.ts:387"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "search_session_content",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SessionAPI.ts:357"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "search_sessions",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ContextAPI.ts:111"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "search_skill_market",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:622"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "send_ai_message",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:427"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "send_mcp_app_message",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:443",
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:444"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "send_system_notification",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:290"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_acp_session_config_option",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:504"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_acp_session_model",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:498"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_active_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:290"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_agent_profile_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:396"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:183"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_file_drop_preview_target",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\files\\useWindowsFileDropPreview.ts:56",
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\files\\useWindowsFileDropPreview.ts:72"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "set_macos_edit_menu_mode",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:258"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_main_window_transient_geometry",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:379"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_miniapp_draft_storage",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:588"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_miniapp_storage",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\scenes\\miniapps\\hooks\\useMiniAppBridge.ts:231"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_primary_assistant_workspace",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:269"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_session_thread_goal_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AgentAPI.ts:972"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "set_tray_unread_count",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:356"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "show_in_folder",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:196"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "show_main_window",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\App.tsx:338",
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\App.tsx:803",
+        "apps\\vouch-web\\src\\web-ui\\src\\app\\components\\AgentCompanionDesktopPet\\AgentCompanionDesktopPet.tsx:709"
+      ],
+      "calledFrom": 6
+    },
+    {
+      "name": "speech_append_realtime_audio",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:195"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "speech_cancel_input_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:159"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "speech_cancel_realtime_response",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:227"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "speech_close_realtime_session",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:235"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "speech_commit_realtime_audio",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:203"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "speech_send_realtime_tool_result",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:211"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "speech_speak_realtime_text",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SpeechAPI.ts:219"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "ssh_delete_connection",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:76"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "ssh_disconnect",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:112"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "ssh_disconnect_all",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:119"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "ssh_save_connection",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:69"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "ssh_stop_port_forward",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\features\\ssh-remote\\sshApi.ts:387"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "start_acp_dialog_turn",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:454"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "start_mcp_remote_oauth",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:470"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "start_mcp_server",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:337"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "start_user_question_interaction",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ToolAPI.ts:68"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "stop_acp_client",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:382"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "stop_mcp_server",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:358"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "submit_acp_permission_response",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ACPClientAPI.ts:439"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "submit_mcp_interaction_response",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:450"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "submit_user_answers",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ToolAPI.ts:77"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_ack",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:465"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_close",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:390"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_resize",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:445"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_send_command",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:501"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_shutdown_all",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:406"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_signal",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:455"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "terminal_write",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\terminal\\services\\TerminalService.ts:435"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "test_ai_config_connection",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:416",
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:449"
+      ],
+      "calledFrom": 2
+    },
+    {
+      "name": "test_ai_connection",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AIApi.ts:405"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "toggle_main_window_fullscreen",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\SystemAPI.ts:396"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "update_app_status",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:197"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "update_mcp_remote_auth",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MCPAPI.ts:454"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "update_miniapp",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\MiniAppAPI.ts:358"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "update_session_thread_goal_objective",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\AgentAPI.ts:998"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "update_workspace_info",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\GlobalAPI.ts:310"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "validate_config",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ConfigAPI.ts:268"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "validate_tool_input",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\ToolAPI.ts:40"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "workspace_file_upload",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\files\\controllerFiles.ts:158"
+      ],
+      "calledFrom": 1
+    },
+    {
+      "name": "write_file_content",
+      "implemented": false,
+      "calledAt": [
+        "apps\\vouch-web\\src\\web-ui\\src\\infrastructure\\api\\service-api\\WorkspaceAPI.ts:311",
+        "apps\\vouch-web\\src\\web-ui\\src\\tools\\editor\\pdf-review\\PdfReviewSession.ts:156"
+      ],
+      "calledFrom": 2
+    }
+  ]
+}

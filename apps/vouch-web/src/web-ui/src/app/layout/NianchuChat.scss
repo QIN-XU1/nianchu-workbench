@@ -1,0 +1,1576 @@
+/* 念初 · 主 agent 对话面板（右侧停靠区）
+   ─────────────────────────────────────────────────────────────
+   设计要点（2026-11-18 用户指出「界面设计很丑，且不合理」后重做）：
+     · 去掉气泡外面那层「全宽灰块」——它看起来像引用框，不像对话
+     · 助手消息改为**无边框薄底 + 左侧细线**，贴近主流 agent 面板
+     · 用户消息右对齐、浅紫底，宽度自适应内容
+     · 头部只留身份 + 状态点，不再显示原始 sessionId
+     · 统一 12px 圆角 / 8px 间距，避免大小混杂
+   ───────────────────────────────────────────────────────────── */
+
+.ncc {
+  /* 视觉令牌：跟随应用主题（accent / 表面 / 文本），不再用面板自己的紫色 */
+  --ncc-accent: var(--openbitfun-color-accent-default, #101a27);
+  --ncc-accent-active: var(--openbitfun-color-accent-hover, #1c1c1f);
+  --ncc-surface: var(--openbitfun-color-surface-panel, #ffffff);
+  --ncc-text: var(--openbitfun-color-content-primary, rgba(0, 0, 0, 0.8));
+  --ncc-text-muted: var(--openbitfun-color-content-muted, #6a6a6a);
+  --ncc-border-subtle: var(--openbitfun-color-border-subtle, rgba(16, 26, 39, 0.08));
+  --ncc-border-base: var(--openbitfun-color-border-default, rgba(16, 26, 39, 0.15));
+  --ncc-element-soft: var(--openbitfun-color-action-secondary-background, #f3f3f5);
+  --ncc-element-base: var(--openbitfun-color-action-neutral-surface, rgba(0, 0, 0, 0.05));
+  --ncc-element-medium: var(--openbitfun-color-action-neutral-surface-hover, rgba(0, 0, 0, 0.08));
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  position: relative;
+}
+
+/* ── 主题皮肤（批次 Z.17）：data-ncc-theme 只覆盖本面板的 --ncc-* 令牌 ──
+   system = 沿用上面跟随应用的默认令牌；其余四套是面板级强制配色，
+   不污染应用其他区域（DOM 层父级主题不受影响）。 */
+.ncc[data-ncc-theme='light'] {
+  --ncc-accent: #101a27;
+  --ncc-accent-active: #1c1c1f;
+  --ncc-surface: #ffffff;
+  --ncc-text: rgba(0, 0, 0, 0.8);
+  --ncc-text-muted: #6a6a6a;
+  --ncc-border-subtle: rgba(16, 26, 39, 0.08);
+  --ncc-border-base: rgba(16, 26, 39, 0.15);
+  --ncc-element-soft: #f3f3f5;
+  --ncc-element-base: rgba(0, 0, 0, 0.05);
+  --ncc-element-medium: rgba(0, 0, 0, 0.08);
+}
+.ncc[data-ncc-theme='dark'] {
+  --ncc-accent: #e6e6e6;
+  --ncc-accent-active: #ffffff;
+  --ncc-surface: #1c1c1f;
+  --ncc-text: rgba(255, 255, 255, 0.85);
+  --ncc-text-muted: #9b9b9b;
+  --ncc-border-subtle: rgba(255, 255, 255, 0.08);
+  --ncc-border-base: rgba(255, 255, 255, 0.14);
+  --ncc-element-soft: #26262a;
+  --ncc-element-base: rgba(255, 255, 255, 0.06);
+  --ncc-element-medium: rgba(255, 255, 255, 0.1);
+}
+.ncc[data-ncc-theme='claude'] {
+  --ncc-accent: #d97757;
+  --ncc-accent-active: #c96a4e;
+  --ncc-surface: #faf9f5;
+  --ncc-text: #1f1e1d;
+  --ncc-text-muted: #6b6963;
+  --ncc-border-subtle: rgba(31, 30, 29, 0.1);
+  --ncc-border-base: rgba(31, 30, 29, 0.16);
+  --ncc-element-soft: #f0eee9;
+  --ncc-element-base: rgba(31, 30, 29, 0.05);
+  --ncc-element-medium: rgba(31, 30, 29, 0.09);
+}
+.ncc[data-ncc-theme='dsh'] {
+  --ncc-accent: #4d6bfe;
+  --ncc-accent-active: #3d5cf5;
+  --ncc-surface: #ffffff;
+  --ncc-text: #101a27;
+  --ncc-text-muted: #6a6a6a;
+  --ncc-border-subtle: rgba(16, 26, 39, 0.1);
+  --ncc-border-base: rgba(16, 26, 39, 0.16);
+  --ncc-element-soft: #f0f3ff;
+  --ncc-element-base: rgba(77, 107, 254, 0.06);
+  --ncc-element-medium: rgba(77, 107, 254, 0.1);
+}
+
+/* 主题选择弹层：复用完成提示弹层的位置与卡片样式 */
+.ncc__theme {
+  position: absolute;
+  top: 44px;
+  right: 10px;
+  z-index: 40;
+  width: 180px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--ncc-surface);
+  border: 1px solid var(--ncc-border-base);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ncc__theme-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ncc-text);
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+/* 档位组：radio 语义容器，行间距由组统一管（不是每条自己留边） */
+.ncc__theme-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ncc__theme-row:hover { background: var(--ncc-element-base); }
+.ncc__theme-row[aria-checked='true'] { background: var(--ncc-element-soft); }
+.ncc__theme-swatch {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1px solid var(--ncc-border-base);
+}
+.ncc__theme-swatch--system { background: linear-gradient(135deg, #ffffff 50%, #1c1c1f 50%); }
+.ncc__theme-swatch--light { background: #ffffff; }
+.ncc__theme-swatch--dark { background: #1c1c1f; }
+.ncc__theme-swatch--claude { background: #d97757; }
+.ncc__theme-swatch--dsh { background: #4d6bfe; }
+.ncc__theme-check {
+  margin-left: auto;
+  color: var(--ncc-accent);
+  font-weight: 600;
+}
+
+/* ── 头部 ── */
+.ncc__head {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--ncc-border-subtle);
+}
+.ncc__avatar {
+  width: 24px; height: 24px; border-radius: 8px;
+  display: grid; place-items: center;
+  background: var(--ncc-accent);
+  color: #fff;
+  font-size: var(--openbitfun-type-meta-font-size);
+  font-weight: var(--openbitfun-type-heading-panel-weight-font-weight);
+  flex: 0 0 auto;
+  box-shadow: none;
+}
+.ncc__name {
+  font-size: var(--openbitfun-type-label-lg-font-size);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  flex: 0 0 auto;
+  letter-spacing: var(--openbitfun-type-label-lg-letter-spacing);
+}
+/* 状态：一个小圆点 + 两个字，比一串 sessionId 有用 */
+
+.ncc__icon {
+  flex: 0 0 auto;
+  width: 26px; height: 26px; border-radius: 8px;
+  display: grid; place-items: center;
+  border: none; background: transparent;
+  color: var(--ncc-text-muted);
+  cursor: pointer;
+  font-size: var(--openbitfun-type-body-md-font-size);
+  font-family: inherit;
+  transition: background 120ms ease, color 120ms ease;
+}
+.ncc__icon:hover { background: var(--ncc-element-base); color: var(--ncc-text); }
+
+/* ── 消息区 ── */
+.ncc__body {
+  flex: 1 1 auto; min-height: 0; overflow: auto;
+  padding: 16px 14px 8px;
+  display: flex; flex-direction: column; gap: 14px;
+  scroll-behavior: smooth;
+}
+
+/* 回到最新（批次 Z.16）：悬浮在消息区右下角，不参与布局 */
+.ncc__jump {
+  position: absolute;
+  right: 18px;
+  bottom: 104px;
+  z-index: 7;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 50%;
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+.ncc__jump:hover {
+  background: var(--ncc-element-soft);
+}
+.ncc__boot, .ncc__typing {
+  font-size: var(--openbitfun-type-meta-font-size);
+  color: var(--ncc-text-muted);
+  padding: 2px 0;
+}
+
+.ncc__empty {
+  margin: auto 0;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  text-align: center; padding: 24px 12px;
+}
+.ncc__empty-title {
+  font-size: var(--openbitfun-type-label-lg-font-size);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  color: var(--ncc-text);
+}
+.ncc__empty-sub {
+  font-size: var(--openbitfun-type-meta-font-size);
+  color: var(--ncc-text-muted);
+  line-height: var(--openbitfun-type-body-sm-line-height);
+  max-width: 240px;
+}
+
+/* ── 单条消息 ── */
+.ncc-msg { display: flex; flex-direction: column; gap: 4px; }
+.ncc-msg[data-role='user'] { align-items: flex-end; }
+.ncc-msg[data-role='assistant'] { align-items: stretch; }
+.ncc-msg[data-role='system'] { align-items: stretch; }
+
+.ncc-msg__body {
+  font-size: var(--openbitfun-type-body-sm-font-size);
+  line-height: var(--openbitfun-type-body-md-line-height);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 用户：右对齐、浅紫气泡、宽度随内容（最多 88%） */
+.ncc-msg[data-role='user'] .ncc-msg__body {
+  max-width: 88%;
+  padding: 9px 12px;
+  border-radius: 14px 14px 4px 14px;
+  background: var(--ncc-element-soft);
+  color: var(--ncc-text);
+}
+
+/* 助手：不加气泡框，用左侧细线表示"这是它的输出" —— 主流 agent 面板的做法 */
+.ncc-msg[data-role='assistant'] .ncc-msg__body {
+  padding: 1px 0 1px 12px;
+  border-left: 2px solid var(--ncc-border-base);
+  border-radius: 0;
+  color: var(--ncc-text);
+}
+
+/* 系统错误：红底细边，不和正常回复混在一起 */
+.ncc-msg[data-role='system'] .ncc-msg__body {
+  padding: 8px 11px;
+  border-radius: 10px;
+  background: var(--openbitfun-color-status-danger-surface, #fef2f2);
+  border: 1px solid var(--openbitfun-color-status-danger-border, #fecaca);
+  color: var(--openbitfun-color-status-danger-content, #b42318);
+  font-size: var(--openbitfun-type-meta-font-size);
+}
+
+.ncc-msg__meta {
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+  padding: 0 2px;
+}
+.ncc-msg[data-role='assistant'] .ncc-msg__meta { padding-left: 14px; }
+
+.ncc__err {
+  font-size: var(--openbitfun-type-meta-font-size);
+  color: var(--openbitfun-color-status-danger-content, #b42318);
+  background: var(--openbitfun-color-status-danger-surface, #fef2f2);
+  border: 1px solid var(--openbitfun-color-status-danger-border, #fecaca);
+  border-radius: 10px;
+  padding: 8px 11px;
+  line-height: var(--openbitfun-type-body-sm-line-height);
+}
+
+/* ── 分类化错误卡：分类标题 + 下一步 + 可展开原文 ──
+   红/黄只用 status 令牌，且徽标自带符号与文字，不靠颜色单独承载语义。 */
+.ncc-err { display: flex; flex-direction: column; gap: 4px; }
+.ncc-err__head { display: flex; align-items: center; gap: 6px; }
+.ncc-err__badge {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  border-radius: 999px;
+  font-size: var(--openbitfun-type-micro-font-size);
+  border: 1px solid currentColor;
+  opacity: 0.9;
+}
+.ncc-err__title { font-weight: var(--openbitfun-type-label-lg-weight-font-weight); }
+.ncc-err__next { color: var(--openbitfun-color-content-secondary, #475467); }
+.ncc-err__detail { margin-top: 2px; }
+.ncc-err__detail summary { cursor: pointer; color: var(--openbitfun-color-content-tertiary, #667085); font-size: var(--openbitfun-type-micro-font-size); }
+.ncc-err__raw {
+  margin: 4px 0 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: var(--ncc-surface);
+  color: var(--openbitfun-color-content-secondary, #475467);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--openbitfun-type-micro-font-size);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 120px;
+  overflow: auto;
+}
+/* 代理/DNS 更像「配置问题」，用提示色而非纯红，避免和真正的失败混淆 */
+.ncc-err--proxy,
+.ncc-err--dns { color: var(--openbitfun-color-status-warning-content, #8a5300); background: var(--openbitfun-color-status-warning-surface, #fdf6e7); border-color: var(--openbitfun-color-status-warning-border, #f2d29a); }
+
+/* ── 输入区（照主流 agent：单容器内嵌发送键，无提示行）── */
+.ncc__spacer { flex: 1 1 auto; }
+
+.ncc__compose {
+  flex: 0 0 auto;
+  padding: 10px 14px 14px;
+  /* @ 建议弹层用 absolute 挂在这块上，向上弹出 */
+  position: relative;
+}
+
+.ncc__box {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px 8px 8px 12px;
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 16px;
+  background: var(--ncc-element-soft);
+  transition: border-color 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+.ncc__box:focus-within {
+  border-color: var(--ncc-accent);
+  background: var(--ncc-surface);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ncc-accent) 8%, transparent);
+}
+
+.ncc__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 22px;
+  max-height: 168px;
+  padding: 3px 0;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--openbitfun-type-body-sm-font-size);
+  line-height: var(--openbitfun-type-body-md-line-height);
+  color: inherit;
+  box-sizing: border-box;
+}
+.ncc__input::placeholder { color: var(--openbitfun-color-field-placeholder, rgba(0, 0, 0, 0.4)); }
+
+.ncc__send {
+  flex: 0 0 auto;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: var(--ncc-accent);
+  color: #fff;
+  cursor: pointer;
+  display: grid; place-items: center;
+  transition: background 120ms ease, opacity 120ms ease;
+}
+.ncc__send:hover:not(:disabled) { background: var(--ncc-accent-active); }
+.ncc__send:disabled {
+  background: var(--ncc-element-medium);
+  color: var(--openbitfun-color-content-disabled, rgba(0, 0, 0, 0.3));
+  cursor: default;
+}
+
+/* ── 工作方式切换（对话 / 协同）── */
+.ncc__seg {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 8px;
+  background: var(--ncc-element-base);
+  flex: 0 0 auto;
+}
+.ncc__segbtn {
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  padding: 3px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+.ncc__segbtn[data-active='1'] {
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  box-shadow: var(--openbitfun-shadow-xs, 0 1px 2px rgba(0, 0, 0, 0.08));
+}
+.ncc__segbtn:hover:not([data-active='1']) { color: var(--ncc-text); }
+
+/* 协同模式占满整块 */
+.ncc > .tm { flex: 1 1 auto; min-height: 0; }
+
+/* ── P0 输入增强（对标 Cursor / WorkBuddy）：空态起手胶囊 + @ / 补全浮层 ── */
+.ncc__empty .ncc__chips {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; padding: 0 6px;
+}
+.ncc__chip {
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--ncc-border-base);
+  background: var(--ncc-element-soft);
+  color: var(--ncc-text); font: inherit; font-size: var(--openbitfun-type-body-sm-font-size);
+  cursor: pointer; transition: background 120ms ease, border-color 120ms ease;
+}
+.ncc__chip:hover { background: var(--ncc-element-medium); border-color: var(--ncc-border-base); }
+
+.ncc__usage { font-size: 11px; color: var(--ncc-text-muted); text-align: right; padding: 6px 4px 0; }
+
+/* ── 记忆命中看板：默认收起的一行，点开列命中的 key + 预览 ── */
+.ncc-mem {
+  margin: 6px 4px 0;
+  border: 1px solid var(--ncc-border-subtle);
+  border-radius: 8px;
+  background: var(--ncc-element-base);
+  font-size: 11px;
+  color: var(--ncc-text-muted);
+}
+.ncc-mem__sum {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ncc-text);
+}
+.ncc-mem__sum::-webkit-details-marker { display: none; }
+.ncc-mem__hint { color: var(--ncc-text-muted); font-weight: normal; }
+.ncc-mem__list {
+  margin: 0;
+  padding: 2px 10px 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: 160px;
+  overflow: auto;
+}
+.ncc-mem__item { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
+.ncc-mem__key {
+  flex: 0 0 auto;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.ncc-mem__preview {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ncc-mem__more { margin: 0; padding: 0 10px 8px; color: var(--ncc-text-muted); }
+
+/* ── 运行状态条：状态 / 停止原因 / 耗时 / trace / 用量 ──
+   五个字段都来自后端判定层，前端只展示。用一行等宽数字 + 分隔点，
+   不做成大卡片：它是「随时可扫一眼」的元信息，不是主要内容。 */
+.ncc-run-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 10px;
+  padding: 6px 4px 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-run-status__item { white-space: nowrap; }
+.ncc-run-status__item--state { color: var(--ncc-text); }
+/* trace 可能很长：允许收缩省略，完整值放 title，不要让它把整行撑开 */
+.ncc-run-status__item--trace {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* ── 上下文用量网格（最近一轮真实装配的窗口占用）──
+   为什么是网格而不是进度条：20 格里能数出「还剩几格」，
+   细长条在窄面板里几乎看不出 10% 的差别。
+   颜色用三档（宽裕/偏紧/挤压），但**同时**给文案与 aria-label，
+   不让色觉差异成为唯一信息通道。 */
+.ncc__ctx {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  padding: 6px 4px 0;
+  font-size: 11px;
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ncc__ctx-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 6px);
+  grid-auto-rows: 6px;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+
+.ncc__ctx-cell {
+  border-radius: 1.5px;
+  /* 空格从**文本主色**派生透明度，而不是写死黑/白：
+     网格的意义是「数得清还剩几格」，8% 黑在 6px 方块上几乎看不见；
+     而写死黑色在暗色主题下又会消失。用 --ncc-text-muted 派生，
+     浅色下约 #ccc、暗色下约 #464a52，两套主题都数得清。 */
+  background: color-mix(in srgb, var(--ncc-text-muted) 34%, transparent);
+  transition: background-color 120ms ease;
+}
+
+.ncc__ctx-cell.is-on { background: var(--ncc-accent); }
+.ncc__ctx--warn .ncc__ctx-cell.is-on {
+  background: var(--openbitfun-color-status-warning-content, #8a5300);
+}
+.ncc__ctx--danger .ncc__ctx-cell.is-on {
+  background: var(--openbitfun-color-status-danger-content, #b42318);
+}
+
+.ncc__ctx-text { white-space: nowrap; }
+.ncc__ctx--warn .ncc__ctx-text { color: var(--openbitfun-color-status-warning-content, #8a5300); }
+.ncc__ctx--danger .ncc__ctx-text { color: var(--openbitfun-color-status-danger-content, #b42318); }
+
+.ncc__ctx-drop { font-weight: 600; }
+.ncc__sug {
+  position: absolute; left: 14px; right: 14px; bottom: calc(100% - 2px);
+  max-height: 340px; overflow-y: auto;
+  background: var(--ncc-surface); border: 1px solid var(--ncc-border-base); border-radius: 12px;
+  box-shadow: var(--openbitfun-shadow-menu, 0 8px 28px -8px rgba(0, 0, 0, 0.22)); padding: 6px; z-index: 20;
+}
+.ncc__sug-head { font-size: 11px; color: var(--ncc-text-muted); padding: 4px 8px 6px; }
+/* 分类头：粘在滚动区顶部，滚的时候知道自己在哪一组 */
+.ncc__sug-cat {
+  position: sticky; top: -6px; z-index: 1;
+  font-size: 11px; font-weight: 600; color: var(--ncc-text-muted);
+  padding: 8px 10px 4px; background: var(--ncc-surface);
+}
+.ncc__sug-item {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+  width: 100%; text-align: left;
+  padding: 7px 10px; border: none; background: transparent; border-radius: 8px;
+  font: inherit; font-size: var(--openbitfun-type-body-sm-font-size); color: var(--ncc-text); cursor: pointer;
+}
+.ncc__sug-name { font-family: var(--openbitfun-font-mono, ui-monospace, SFMono-Regular, Consolas, monospace); }
+.ncc__sug-desc {
+  font-size: 11px; color: var(--ncc-text-muted); line-height: 1.35;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+  max-width: 100%;
+}
+.ncc__sug-item[data-on='1'], .ncc__sug-item:hover { background: var(--ncc-element-soft); }
+.ncc__sug-hint {
+  font-size: 11px; color: var(--ncc-text-muted); padding: 6px 8px 2px;
+  border-top: 1px solid var(--ncc-border-subtle); margin-top: 4px;
+}
+
+/* ── 助手段 Markdown 渲染（对齐 Cursor/Claude）：块级正常排版，代码块有底色 ── */
+.ncc-msg__body--md { white-space: normal; }
+.ncc-msg__body--md :where(p) { margin: 0 0 8px; }
+.ncc-msg__body--md :where(p:last-child) { margin-bottom: 0; }
+.ncc-msg__body--md :where(ul, ol) { margin: 4px 0 8px; padding-left: 20px; }
+.ncc-msg__body--md :where(li) { margin: 2px 0; }
+.ncc-msg__body--md :where(code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em;
+  background: var(--ncc-element-base); padding: 1px 5px; border-radius: 5px;
+}
+.ncc-msg__body--md :where(pre) {
+  background: var(--ncc-element-soft); border: 1px solid var(--ncc-border-subtle); border-radius: 10px;
+  padding: 10px 12px; overflow-x: auto; margin: 6px 0 10px;
+}
+.ncc-msg__body--md :where(pre code) { background: transparent; padding: 0; }
+
+/* ── 消息级操作（复制 / 重新生成 / 编辑重发）──
+   常驻按钮会把对话挤得满是控件，主流 agent 都是悬停/聚焦才出现；
+   这里保留占位高度（只切 opacity），出现时不会把下面的消息顶动。 */
+.ncc-msg__actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 20px;
+  padding: 0 2px;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+.ncc-msg:hover .ncc-msg__actions,
+.ncc-msg:focus-within .ncc-msg__actions { opacity: 1; }
+.ncc-msg[data-role='user'] .ncc-msg__actions { justify-content: flex-end; }
+.ncc-msg[data-role='assistant'] .ncc-msg__actions { padding-left: 12px; }
+.ncc-msg__act {
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1;
+  color: var(--ncc-text-muted);
+  padding: 3px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+.ncc-msg__act:hover:not(:disabled) { background: var(--ncc-element-base); color: var(--ncc-text); }
+.ncc-msg__act:disabled { opacity: 0.45; cursor: default; }
+.ncc-msg__act[data-copied='1'] { color: var(--openbitfun-color-status-success-content, #15803d); }
+/* 触屏没有 hover：直接常显，别让功能藏起来 */
+@media (hover: none) {
+  .ncc-msg__actions { opacity: 1; }
+}
+
+/* ── 历史会话浮层（对标 Qoder / WorkBuddy 的会话列表）──
+   数据来自宿主 list_sessions / get_session；这里只负责呈现与切换。 */
+.ncc__history {
+  position: absolute;
+  top: 48px;
+  right: 10px;
+  width: 320px;
+  max-width: calc(100% - 20px);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  background: var(--ncc-surface);
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 12px;
+  box-shadow: var(--openbitfun-shadow-overlay, 0 18px 40px -16px rgba(0, 0, 0, 0.28));
+}
+.ncc__history-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 4px;
+  font-size: var(--openbitfun-type-meta-font-size);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  color: var(--ncc-text);
+}
+.ncc__history-count {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--ncc-element-base);
+  font-size: var(--openbitfun-type-micro-font-size);
+  font-weight: 400;
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc__history-close {
+  margin-left: auto;
+  padding: 2px 6px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ncc-text-muted);
+  font-size: var(--openbitfun-type-label-lg-font-size);
+  line-height: 1;
+  cursor: pointer;
+}
+.ncc__history-close:hover { background: var(--ncc-element-base); color: var(--ncc-text); }
+.ncc__history-search {
+  padding: 6px 9px;
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 8px;
+  background: var(--ncc-element-soft);
+  font: inherit;
+  font-size: var(--openbitfun-type-body-sm-font-size);
+  color: inherit;
+  outline: none;
+}
+.ncc__history-search:focus {
+  border-color: var(--ncc-accent);
+  background: var(--ncc-surface);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ncc-accent) 8%, transparent);
+}
+.ncc__history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.ncc__history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 9px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ncc__history-row { display: flex; align-items: center; gap: 2px; border-radius: 8px; }
+.ncc__history-row[data-current='1'] { background: var(--ncc-element-medium); }
+.ncc__history-row:hover { background: var(--ncc-element-soft); }
+.ncc__history-row .ncc__history-item { flex: 1 1 auto; min-width: 0; }
+.ncc__history-acts { display: none; gap: 2px; padding-right: 4px; flex: 0 0 auto; }
+.ncc__history-row:hover .ncc__history-acts,
+.ncc__history-row:focus-within .ncc__history-acts { display: flex; }
+.ncc__history-mini {
+  border: none; background: transparent; font: inherit;
+  font-size: var(--openbitfun-type-micro-font-size); line-height: 1;
+  color: var(--ncc-text-muted); padding: 3px 6px; border-radius: 6px; cursor: pointer;
+}
+.ncc__history-mini:hover { background: var(--ncc-element-medium); color: var(--ncc-text); }
+.ncc__history-mini--danger { color: var(--openbitfun-color-status-danger-content, #bd1b19); }
+.ncc__history-rename { display: flex; align-items: center; gap: 4px; padding: 4px; flex: 1 1 auto; min-width: 0; }
+.ncc__history-input {
+  flex: 1 1 auto; min-width: 0;
+  border: 1px solid var(--ncc-border-base); border-radius: 6px;
+  padding: 4px 6px;
+  font: inherit; font-size: var(--openbitfun-type-body-sm-font-size);
+  background: var(--ncc-surface); color: var(--ncc-text); outline: none;
+}
+.ncc__history-input:focus { border-color: var(--ncc-accent); }
+.ncc__history-name {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: var(--openbitfun-type-body-sm-font-size);
+  color: var(--ncc-text);
+}
+.ncc__history-meta {
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc__history-empty {
+  padding: 14px 8px;
+  text-align: center;
+  font-size: var(--openbitfun-type-meta-font-size);
+  color: var(--ncc-text-muted);
+}
+.ncc__history-hint {
+  padding: 6px 8px 2px;
+  text-align: center;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  border-top: 1px solid var(--ncc-border-subtle);
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 「加载更多」（批次 Z.22）：翻页按钮，不是装饰 */
+.ncc__history-more {
+  padding: 3px 10px;
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 999px;
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  font-size: var(--openbitfun-type-micro-font-size);
+  font-family: inherit;
+  cursor: pointer;
+}
+.ncc__history-more:hover { background: var(--ncc-element-base); }
+.ncc__history-more:focus-visible { outline: 2px solid var(--ncc-accent); outline-offset: 1px; }
+
+/* ── 停止生成 ──
+   busy 时发送键换成方形停止键；被停止的轮次用中性灰而不是错误红。 */
+.ncc__send--stop { background: var(--ncc-accent); }
+.ncc__send--stop:hover:not(:disabled) { background: #000; }
+.ncc-msg[data-role='system'] .ncc-msg__body[data-state='INTERRUPTED'] {
+  background: var(--ncc-element-soft);
+  border-color: var(--ncc-border-subtle);
+  color: var(--ncc-text-muted);
+}
+
+
+
+
+
+
+
+/* ── 工作方式切换（对话 / 动手）──
+   动手模式会让 agent 真读写文件、执行命令，所以必须显式可见、可切回。 */
+.ncc__modes {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  margin-bottom: 8px;
+  width: fit-content;
+  border-radius: 8px;
+  background: var(--ncc-element-base);
+}
+.ncc__mode {
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: var(--ncc-text-muted);
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+.ncc__mode[data-on='1'] {
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  box-shadow: var(--openbitfun-shadow-xs, 0 1px 2px rgba(0, 0, 0, 0.08));
+}
+.ncc__mode:hover:not([data-on='1']) { color: var(--ncc-text); }
+
+/* 「本模式可用工具」（批次 Z.28）：数字/名字来自宿主 list_modes。
+   只读一行，悬停看全（title 里逐行列出）；宽度不够就省略，不换行把按钮挤走。 */
+.ncc__mode-hint {
+  align-self: center;
+  margin-left: 2px;
+  padding: 0 8px 0 9px;
+  border-left: 1px solid var(--ncc-border-subtle);
+  color: var(--ncc-text-muted);
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  cursor: default;
+}
+
+/* ── 计划图层（agent 用 todo_write 提交的清单，对标 Qoder 计划面板）──
+   状态只有三种，用「符号 + 颜色 + 删除线」三重编码，
+   不只靠颜色区分（色弱也能看出「已完成」）。 */
+.ncc-plan {
+  margin-left: 12px;
+  margin-bottom: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--ncc-border-subtle);
+  border-radius: 10px;
+  background: var(--ncc-element-base);
+}
+.ncc-plan__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.ncc-plan__title {
+  font-size: var(--openbitfun-type-micro-font-size);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  color: var(--ncc-text);
+  letter-spacing: 0.02em;
+}
+.ncc-plan__count {
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-plan__bar {
+  flex: 1 1 auto;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--ncc-border-subtle);
+  overflow: hidden;
+}
+.ncc-plan__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--openbitfun-color-accent-default, #101a27);
+  transition: width 200ms ease;
+}
+.ncc-plan__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.ncc-plan__item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1.5;
+  color: var(--ncc-text-muted);
+}
+.ncc-plan__mark {
+  flex: 0 0 auto;
+  width: 11px;
+  text-align: center;
+  font-size: 10px;
+}
+.ncc-plan__item[data-status='completed'] .ncc-plan__mark {
+  color: var(--openbitfun-color-status-success-content, #12722a);
+}
+.ncc-plan__item[data-status='completed'] .ncc-plan__text {
+  text-decoration: line-through;
+  color: var(--openbitfun-color-content-disabled, rgba(0, 0, 0, 0.35));
+}
+.ncc-plan__item[data-status='in_progress'] {
+  color: var(--ncc-text);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+}
+.ncc-plan__item[data-status='in_progress'] .ncc-plan__mark {
+  color: var(--openbitfun-color-accent-default, #101a27);
+}
+.ncc-plan__text {
+  min-width: 0;
+  word-break: break-word;
+}
+
+/* ── 工具卡片（真实执行记录）── */
+.ncc-steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 22px;
+  margin-bottom: 2px;
+}
+
+/* 过程竖列：圆点之间连一条时间线（对标 process-column） */
+.ncc-steps::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--ncc-border-subtle);
+}
+
+.ncc-steps__head {
+  font-size: 11px;
+  color: var(--ncc-text-muted);
+  margin-bottom: 2px;
+}
+
+.ncc-step__idx {
+  flex: 0 0 auto;
+  min-width: 12px;
+  font-size: 10px;
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-step {
+  border: 1px solid var(--ncc-border-subtle);
+  border-radius: 8px;
+  background: var(--ncc-element-base);
+  overflow: hidden;
+}
+.ncc-step__sum {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  list-style: none;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-step__sum::-webkit-details-marker { display: none; }
+.ncc-step__dot {
+  width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto;
+  background: var(--openbitfun-color-status-success-content, #12722a);
+}
+.ncc-step[data-ok='0'] .ncc-step__dot { background: var(--openbitfun-color-status-danger-content, #bd1b19); }
+.ncc-step__tool {
+  color: var(--ncc-text);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+  /* 工具名不能被挤成竖排（「子代理」在窄卡片里曾一个一个字换行）*/
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.ncc-step__arg {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1 1 auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.ncc-step__ms { flex: 0 0 auto; }
+/* 命令风险徽标：三档同时改「文字色 + 背景 + 边框」，不靠颜色单独承载信息
+   （徽标文字本身带符号与「高/中/只读」，色觉差异不是唯一通道）。 */
+.ncc-step__risk {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.ncc-step__risk--high {
+  color: var(--openbitfun-color-status-danger-content, #bd1b19);
+  border-color: var(--openbitfun-color-status-danger-border, #f0b4b2);
+  background: var(--openbitfun-color-status-danger-surface, #fdeceb);
+}
+.ncc-step__risk--medium {
+  color: var(--openbitfun-color-status-warning-content, #8a5300);
+  border-color: var(--openbitfun-color-status-warning-border, #f2d29a);
+  background: var(--openbitfun-color-status-warning-surface, #fdf6e7);
+}
+.ncc-step__risk--low {
+  color: var(--ncc-text-muted);
+  border-color: var(--ncc-border-subtle);
+  background: transparent;
+}
+.ncc-step__out {
+  margin: 0;
+  padding: 8px 10px;
+  border-top: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-surface);
+  color: var(--ncc-text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1.5;
+  max-height: 220px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── 文件变更（动手模式产生的 diff，对标 Cursor/Qoder 的行内 diff）──
+   数据来自 run_task 的 changeSet（真实前后快照对比），不是渲染占位。 */
+.ncc-diff {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 12px;
+  margin-top: 6px;
+}
+.ncc-diff__head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-diff__plus { color: var(--openbitfun-color-code-change-added, #1aa73e); }
+.ncc-diff__minus { color: var(--openbitfun-color-code-change-removed, #ec221f); }
+.ncc-diff__file {
+  border: 1px solid var(--ncc-border-subtle);
+  border-radius: 8px;
+  background: var(--ncc-element-base);
+  overflow: hidden;
+}
+.ncc-diff__sum {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  cursor: pointer;
+  list-style: none;
+  font-size: var(--openbitfun-type-micro-font-size);
+}
+.ncc-diff__sum::-webkit-details-marker { display: none; }
+.ncc-diff__path {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--ncc-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.ncc-diff__stat {
+  flex: 0 0 auto;
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-diff__lines {
+  margin: 0;
+  padding: 6px 0;
+  border-top: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-surface);
+  max-height: 260px;
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1.55;
+}
+.ncc-diff__line {
+  padding: 0 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--ncc-text-muted);
+}
+.ncc-diff__line[data-type='add'] {
+  background: color-mix(in srgb, var(--openbitfun-color-code-change-added, #1aa73e) 12%, transparent);
+  color: var(--ncc-text);
+}
+.ncc-diff__line[data-type='del'] {
+  background: color-mix(in srgb, var(--openbitfun-color-code-change-removed, #ec221f) 12%, transparent);
+  color: var(--ncc-text);
+}
+.ncc-diff__undo {
+  margin-left: auto;
+  border: 1px solid var(--ncc-border-base);
+  background: transparent;
+  color: var(--ncc-text);
+  font: inherit;
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ncc-diff__undo:hover:not(:disabled) { background: var(--ncc-element-base); }
+.ncc-diff__undo:disabled { opacity: 0.45; cursor: default; }
+.ncc-diff__rolled {
+  margin-left: auto;
+  color: var(--openbitfun-color-status-success-content, #12722a);
+}
+
+
+/* ── 图片附件（粘贴 / 拖入 / 选择文件）── */
+.ncc__attach {
+  flex: 0 0 auto;
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border: none; border-radius: 8px;
+  background: transparent;
+  color: var(--ncc-text-muted);
+  cursor: pointer;
+}
+.ncc__attach:hover:not(:disabled) { background: var(--ncc-element-base); color: var(--ncc-text); }
+.ncc__attach:disabled { opacity: 0.4; cursor: default; }
+.ncc__thumbs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.ncc__thumb {
+  position: relative;
+  width: 56px; height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-element-soft);
+}
+.ncc__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ncc__thumb-x {
+  position: absolute; top: 2px; right: 2px;
+  width: 18px; height: 18px;
+  display: grid; place-items: center;
+  border: none; border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff; font-size: 12px; line-height: 1;
+  cursor: pointer;
+}
+
+/* ── 批次 W：`@` 引用的工作区文件（composer 内的芯片 + 消息气泡下的回执）── */
+.ncc__chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.ncc__chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  max-width: 240px;
+  padding: 3px 6px 3px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-element-soft);
+  color: var(--ncc-text-dim);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.ncc__chip svg { flex: none; opacity: 0.7; }
+.ncc__chip-name {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.ncc__chip-x {
+  flex: none;
+  width: 16px; height: 16px;
+  display: grid; place-items: center;
+  border: none; border-radius: 50%;
+  background: transparent; color: inherit;
+  font-size: 13px; line-height: 1;
+  cursor: pointer; opacity: 0.55;
+}
+.ncc__chip-x:hover { opacity: 1; background: var(--ncc-element-base); }
+.ncc-msg__files {
+  display: flex; flex-wrap: wrap; gap: 5px;
+  margin-top: 6px;
+  justify-content: flex-end;
+}
+.ncc-msg__file {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 1px 7px;
+  border-radius: 7px;
+  border: 1px dashed var(--ncc-border-subtle);
+  color: var(--ncc-text-dim);
+  font-size: 11px;
+}
+
+/* ── 回到最新（用户往上翻时出现，贴底时自动隐藏）── */
+.ncc__to-bottom {
+  position: absolute;
+  right: 18px;
+  bottom: 128px;
+  z-index: 12;
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 50%;
+  background: var(--ncc-surface);
+  color: var(--ncc-text);
+  box-shadow: var(--openbitfun-shadow-base, 0 4px 8px rgba(16, 26, 39, 0.07));
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+.ncc__to-bottom:hover { background: var(--ncc-element-soft); }
+
+/* ── 会话内搜索（Ctrl+F）：只定位与计数，不改写 Markdown DOM ── */
+.ncc__searchbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-surface);
+}
+
+/* 搜索命中片段列表（批次 Z.15） */
+.ncc__searchlist {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 2px;
+}
+
+.ncc__searchhit {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  width: 100%;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ncc-text);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ncc__searchhit:hover,
+.ncc__searchhit[aria-selected='true'] {
+  background: var(--ncc-element-soft);
+}
+
+.ncc__searchrole {
+  flex: 0 0 auto;
+  color: var(--ncc-text-muted);
+  font-size: 11px;
+}
+
+.ncc__searchtext {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ncc__searchtext mark {
+  padding: 0 1px;
+  border-radius: 2px;
+  background: var(--openbitfun-color-status-warning-surface, #fff3c4);
+  color: inherit;
+}
+
+.ncc__searchempty {
+  padding: 6px 8px;
+  font-size: 12px;
+  color: var(--ncc-text-muted);
+}
+.ncc__searchinput {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--ncc-border-base);
+  border-radius: 8px;
+  background: var(--ncc-element-soft);
+  color: var(--ncc-text);
+  font: inherit;
+  font-size: var(--openbitfun-type-body-sm-font-size);
+  outline: none;
+}
+.ncc__searchinput:focus { border-color: var(--ncc-accent); background: var(--ncc-surface); }
+.ncc__searchcount {
+  flex: 0 0 auto;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc__searchbtn {
+  flex: 0 0 auto;
+  width: 24px; height: 24px;
+  display: grid; place-items: center;
+  border: none; border-radius: 6px;
+  background: transparent;
+  color: var(--ncc-text-muted);
+  cursor: pointer;
+  font-size: var(--openbitfun-type-body-sm-font-size);
+  line-height: 1;
+}
+.ncc__searchbtn:hover:not(:disabled) { background: var(--ncc-element-base); color: var(--ncc-text); }
+.ncc__searchbtn:disabled { opacity: 0.35; cursor: default; }
+/* 命中消息：只加外环，不改内容排版 */
+.ncc-msg[data-hit='1'] {
+  outline: 2px solid color-mix(in srgb, var(--ncc-accent) 45%, transparent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* ── 子代理卡片下钻：显示子代理内部的工具调用清单（只有清单，不含输出）── */
+.ncc-sub {
+  padding: 8px 10px;
+  border-top: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ncc-sub__summary {
+  margin: 0;
+  color: var(--ncc-text);
+  font-size: var(--openbitfun-type-micro-font-size);
+  line-height: 1.6;
+}
+.ncc-sub__meta { color: var(--ncc-text-muted); font-size: var(--openbitfun-type-micro-font-size); }
+.ncc-sub__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ncc-sub__step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.ncc-sub__dot {
+  width: 5px; height: 5px; border-radius: 50%; flex: 0 0 auto;
+  background: var(--openbitfun-color-status-success-content, #12722a);
+}
+.ncc-sub__step[data-ok='0'] .ncc-sub__dot { background: var(--openbitfun-color-status-danger-content, #bd1b19); }
+.ncc-sub__tool { color: var(--ncc-text); }
+.ncc-sub__ms { margin-left: auto; }
+/* ── 底部元信息行：把上下文网格 / 记忆命中 / 运行状态 / 会话累计收进一行 ──
+   用户实测反馈：这四块各自 padding + 独立成行，在输入框下方堆成一坨。
+   统一成弹性行后默认只占 1–2 行；`.ncc-meta > *` 清掉各自的上下留白。 */
+.ncc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 12px;
+  padding: 2px 2px 0;
+}
+.ncc-meta > * { margin: 0; padding-top: 0; padding-bottom: 0; }
+.ncc-meta .ncc__ctx { justify-content: flex-start; padding: 0; }
+.ncc-meta .ncc-mem { margin: 0; border: 0; background: transparent; }
+.ncc-meta .ncc-mem__sum { padding: 0 2px; gap: 3px; }
+.ncc-meta .ncc-mem[open] { flex-basis: 100%; }
+.ncc-meta .ncc-mem[open] .ncc-mem__list { margin-top: 4px; }
+.ncc-meta .ncc-run-status { padding: 0; }
+.ncc-meta .ncc__usage { padding: 0; text-align: left; margin-left: auto; }
+.ncc-meta .ncc__typing { padding: 0; }
+/* 空闲时状态条只留「状态：空闲」——停止原因/耗时/用量/trace 在没有运行记录时全是「—」，
+   一排占位符纯属噪音（用户反馈「堆成一坨」）。元素仍留在 DOM（判据脚本照常能读到字样），
+   只是不显示；一旦真跑过一次（data-state 非 idle）就全部出现。 */
+.ncc-meta .ncc-run-status[data-state="idle"] .ncc-run-status__item:not(.ncc-run-status__item--state) {
+  display: none;
+}
+/* 提问跳转胶囊（turn-nav）：贴在对话右侧，半透明，悬停才明显，不挡正文 */
+.ncc { position: relative; }
+.ncc-turnnav {
+  position: absolute;
+  top: 84px;
+  right: 8px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 3px 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ncc-surface) 84%, transparent);
+  border: 1px solid var(--ncc-border-subtle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+.ncc-turnnav:hover, .ncc-turnnav:focus-within { opacity: 1; }
+.ncc-turnnav__btn {
+  width: 20px; height: 20px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 50%;
+  background: transparent;
+  color: var(--ncc-text-muted);
+  font-size: 12px; line-height: 1;
+  cursor: pointer;
+}
+.ncc-turnnav__btn:hover:not(:disabled) { background: var(--ncc-element-base); color: var(--ncc-text); }
+.ncc-turnnav__btn:disabled { opacity: 0.32; cursor: default; }
+.ncc-turnnav__count {
+  font-size: 10px;
+  color: var(--ncc-text-muted);
+  font-variant-numeric: tabular-nums;
+  padding: 0 1px;
+}
+/* ── 长回复折叠：默认限高 + 底部渐隐 + 「展开全文」── */
+.ncc-folded {
+  max-height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+.ncc-folded::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 72px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--ncc-surface));
+}
+.ncc-fold-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--ncc-border-subtle);
+  background: var(--ncc-element-base);
+  color: var(--ncc-text-muted);
+  font-size: var(--openbitfun-type-micro-font-size);
+  cursor: pointer;
+}
+.ncc-fold-btn:hover { color: var(--ncc-text); }
+/* 历史会话按「今天/昨天/更早」分组标题（date-groups） */
+.ncc__history-group-title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 4px 8px 2px;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--ncc-text-muted);
+  background: var(--ncc-surface);
+}
+
+/* 置顶区标题（批次 Z.23）：与「今天/昨天」这种时间分组区分开 */
+.ncc__history-group-title--pinned {
+  color: var(--ncc-accent);
+  font-weight: 600;
+}
+
+/* 置顶行：左侧一条强调色细线，扫一眼就知道这条被钉住了 */
+.ncc__history-row[data-pinned='1'] {
+  box-shadow: inset 2px 0 0 var(--ncc-accent);
+}
+/* 完成提示弹层（声音 / 桌面通知，study 自 Claude Code sound-cues） */
+.ncc__cues {
+  position: absolute;
+  top: 42px;
+  right: 10px;
+  z-index: 30;
+  width: 216px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--ncc-border);
+  background: var(--ncc-surface);
+  box-shadow: 0 10px 28px rgba(16, 21, 27, 0.16);
+  font-size: 12px;
+  color: var(--ncc-text);
+}
+
+.ncc__cues-title {
+  padding: 2px 8px 6px;
+  font-size: 11px;
+  color: var(--ncc-text-muted);
+}
+
+.ncc__cues-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ncc-text);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ncc__cues-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.ncc__cues-state {
+  color: var(--ncc-text-muted);
+}
+
+.ncc__cues-try {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px 8px;
+  border: 1px solid var(--ncc-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ncc-text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ncc__cues-try:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.ncc__cues-tip {
+  margin: 6px 0 0;
+  padding: 0 4px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ncc-text-muted);
+}
+/* 批次 Z.27：置顶项拖动排序 —— 抓手只在置顶行出现，普通行没有可拖的语义 */
+.ncc__history-grip {
+  flex: 0 0 auto;
+  width: 16px;
+  text-align: center;
+  color: var(--ncc-text-tertiary);
+  font-size: 11px;
+  letter-spacing: -2px;
+  cursor: grab;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+.ncc__history-row:hover .ncc__history-grip,
+.ncc__history-grip:focus-visible { opacity: 1; }
+.ncc__history-grip:active { cursor: grabbing; }
+.ncc__history-row[data-dragging='1'] { opacity: 0.55; }

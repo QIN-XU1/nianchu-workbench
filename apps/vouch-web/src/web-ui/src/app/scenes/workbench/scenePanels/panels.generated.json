@@ -1,0 +1,2075 @@
+{
+  "arch-review": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·架构梳理",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "backend-craft": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·后端工坊",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "build-plan": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·实施计划",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "competitor-analyze": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·竞品拆解",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "frontend-craft": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·前端工坊",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "hub": [
+    {
+      "id": "kpi",
+      "title": "全局指标",
+      "type": "dash",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 2,
+      "src": "research/改进台账.json",
+      "cards": [
+        {
+          "label": "台账条目",
+          "value": 191,
+          "hint": "全部"
+        },
+        {
+          "label": "真正结案",
+          "value": 11,
+          "hint": "排除被驳回",
+          "tone": "ok"
+        },
+        {
+          "label": "独立验证",
+          "value": 10,
+          "hint": "T1 要求 ≥3",
+          "tone": "ok"
+        },
+        {
+          "label": "被驳回",
+          "value": 54,
+          "hint": "独立方推翻",
+          "tone": "warn"
+        }
+      ]
+    },
+    {
+      "id": "trend",
+      "title": "台账增长",
+      "type": "chart",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 2,
+      "src": "改进台账.json · 最近 20 条样本量",
+      "series": [
+        3,
+        9,
+        4,
+        14,
+        25,
+        14,
+        3,
+        18,
+        5,
+        9,
+        9,
+        71,
+        32,
+        3,
+        6,
+        3,
+        13,
+        23,
+        20,
+        12
+      ],
+      "labels": [
+        "H-0172",
+        "H-0173",
+        "H-0174",
+        "H-0175",
+        "H-0176",
+        "H-0177",
+        "H-0178",
+        "H-0179",
+        "H-0180",
+        "H-0181",
+        "H-0182",
+        "H-0183",
+        "H-0184",
+        "H-0185",
+        "H-0186",
+        "H-0187",
+        "H-0188",
+        "H-0189",
+        "H-0190",
+        "H-0191"
+      ]
+    },
+    {
+      "id": "flow",
+      "title": "场景依赖",
+      "type": "flow",
+      "col": 1,
+      "row": 3,
+      "w": 2,
+      "h": 3,
+      "src": "neuron.json",
+      "nodes": [
+        {
+          "id": "arch-review",
+          "label": "架构梳理",
+          "x": 28,
+          "y": 30,
+          "tone": "neutral"
+        },
+        {
+          "id": "backend-craft",
+          "label": "后端工坊",
+          "x": 94,
+          "y": 30,
+          "tone": "neutral"
+        },
+        {
+          "id": "build-plan",
+          "label": "实施计划",
+          "x": 160,
+          "y": 30,
+          "tone": "neutral"
+        },
+        {
+          "id": "competitor-analyze",
+          "label": "竞品拆解",
+          "x": 226,
+          "y": 30,
+          "tone": "neutral"
+        },
+        {
+          "id": "frontend-craft",
+          "label": "前端工坊",
+          "x": 292,
+          "y": 30,
+          "tone": "neutral"
+        },
+        {
+          "id": "hub",
+          "label": "中枢",
+          "x": 28,
+          "y": 76,
+          "tone": "neutral"
+        },
+        {
+          "id": "incident-analysis",
+          "label": "故障分析",
+          "x": 94,
+          "y": 76,
+          "tone": "neutral"
+        },
+        {
+          "id": "pc-cleanup",
+          "label": "本地电脑",
+          "x": 160,
+          "y": 76,
+          "tone": "neutral"
+        },
+        {
+          "id": "research",
+          "label": "调研",
+          "x": 226,
+          "y": 76,
+          "tone": "neutral"
+        },
+        {
+          "id": "reverse-eng",
+          "label": "逆向分析",
+          "x": 292,
+          "y": 76,
+          "tone": "neutral"
+        },
+        {
+          "id": "self-review",
+          "label": "自我复盘",
+          "x": 28,
+          "y": 122,
+          "tone": "neutral"
+        },
+        {
+          "id": "tool-forge",
+          "label": "工具工坊",
+          "x": 94,
+          "y": 122,
+          "tone": "neutral"
+        }
+      ],
+      "edges": [
+        {
+          "from": "arch-review",
+          "to": "build-plan"
+        },
+        {
+          "from": "competitor-analyze",
+          "to": "arch-review"
+        },
+        {
+          "from": "reverse-eng",
+          "to": "arch-review"
+        },
+        {
+          "from": "research",
+          "to": "arch-review"
+        },
+        {
+          "from": "arch-review",
+          "to": "backend-craft"
+        },
+        {
+          "from": "reverse-eng",
+          "to": "backend-craft"
+        },
+        {
+          "from": "incident-analysis",
+          "to": "backend-craft"
+        },
+        {
+          "from": "build-plan",
+          "to": "backend-craft"
+        },
+        {
+          "from": "build-plan",
+          "to": "frontend-craft"
+        },
+        {
+          "from": "build-plan",
+          "to": "tool-forge"
+        },
+        {
+          "from": "reverse-eng",
+          "to": "build-plan"
+        },
+        {
+          "from": "research",
+          "to": "competitor-analyze"
+        },
+        {
+          "from": "arch-review",
+          "to": "frontend-craft"
+        },
+        {
+          "from": "reverse-eng",
+          "to": "frontend-craft"
+        },
+        {
+          "from": "research",
+          "to": "frontend-craft"
+        },
+        {
+          "from": "competitor-analyze",
+          "to": "hub"
+        },
+        {
+          "from": "reverse-eng",
+          "to": "hub"
+        },
+        {
+          "from": "arch-review",
+          "to": "hub"
+        },
+        {
+          "from": "build-plan",
+          "to": "hub"
+        },
+        {
+          "from": "incident-analysis",
+          "to": "build-plan"
+        },
+        {
+          "from": "incident-analysis",
+          "to": "hub"
+        },
+        {
+          "from": "hub",
+          "to": "incident-analysis"
+        },
+        {
+          "from": "pc-cleanup",
+          "to": "hub"
+        },
+        {
+          "from": "hub",
+          "to": "pc-cleanup"
+        },
+        {
+          "from": "build-plan",
+          "to": "pc-cleanup"
+        },
+        {
+          "from": "incident-analysis",
+          "to": "pc-cleanup"
+        },
+        {
+          "from": "research",
+          "to": "reverse-eng"
+        },
+        {
+          "from": "self-review",
+          "to": "hub"
+        },
+        {
+          "from": "self-review",
+          "to": "tool-forge"
+        },
+        {
+          "from": "incident-analysis",
+          "to": "tool-forge"
+        },
+        {
+          "from": "reverse-eng",
+          "to": "tool-forge"
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "title": "模块目录",
+      "type": "file",
+      "col": 3,
+      "row": 3,
+      "w": 1,
+      "h": 3,
+      "src": "tools/",
+      "rows": [
+        {
+          "name": "benchmark/",
+          "size": "24 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "collab/",
+          "size": "6 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "context/",
+          "size": "3 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "cost/",
+          "size": "8 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "dispatch/",
+          "size": "4 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "evolve/",
+          "size": "32 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "hostapi/",
+          "size": "2 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "ledger/",
+          "size": "3 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "mcp/",
+          "size": "4 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "memory/",
+          "size": "13 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "net/",
+          "size": "6 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "pc/",
+          "size": "1 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "plugin/",
+          "size": "9 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "portable/",
+          "size": "1 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "quality/",
+          "size": "7 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "refs/",
+          "size": "3 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "resilience/",
+          "size": "1 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "schedule/",
+          "size": "8 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "skills/",
+          "size": "5 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "state/",
+          "size": "1 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "ui/",
+          "size": "4 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "vision/",
+          "size": "1 文件",
+          "kind": "dir"
+        },
+        {
+          "name": "workbench/",
+          "size": "8 文件",
+          "kind": "dir"
+        }
+      ]
+    },
+    {
+      "id": "reqs",
+      "title": "跨场景请求",
+      "type": "requests",
+      "col": 1,
+      "row": 6,
+      "w": 2,
+      "h": 2,
+      "src": "evidence/collab/requests.jsonl",
+      "rows": [
+        {
+          "id": "REQ-mwlcoycv",
+          "at": "2026-11-17T23:55:54.223Z",
+          "from": "hub",
+          "to": "self-review",
+          "content": "复核 3 个未结案条目",
+          "delivered": "degraded",
+          "note": "已写入队列；承接方下次开工时读 evidence/collab/requests.jsonl 认领"
+        },
+        {
+          "id": "REQ-mwlcoyee",
+          "at": "2026-11-17T23:55:54.278Z",
+          "from": "hub",
+          "to": "tool-forge",
+          "content": "把验收器多跑两轮看一致性",
+          "delivered": "degraded",
+          "note": "已写入队列；承接方下次开工时读 evidence/collab/requests.jsonl 认领"
+        },
+        {
+          "id": "REQ-mwldp68j",
+          "at": "2026-11-18T00:24:04.051Z",
+          "from": "hub",
+          "to": "self-review",
+          "content": "复核 H-0187 的独立验证记录 / 那条 notes 自认不算独立但记了 closed / 本周内",
+          "delivered": "degraded",
+          "note": "已写入队列；承接方下次开工时读 evidence/collab/requests.jsonl 认领",
+          "parts": {
+            "want": "复核 H-0187 的独立验证记录",
+            "why": "那条 notes 自认不算独立但记了 closed",
+            "when": "本周内"
+          },
+          "line": null
+        },
+        {
+          "id": "REQ-mwldp69w",
+          "at": "2026-11-18T00:24:04.100Z",
+          "from": "hub",
+          "to": "research",
+          "content": "随便看看",
+          "delivered": "degraded",
+          "note": "已写入队列；承接方下次开工时读 evidence/collab/requests.jsonl 认领；⚠ 缺段：为什么、期望什么时候（照搬原文格式：要什么 / 为什么 / 期望什么时候）",
+          "parts": {
+            "want": "随便看看",
+            "why": "",
+            "when": ""
+          },
+          "line": null
+        }
+      ]
+    },
+    {
+      "id": "notices",
+      "title": "通知看板",
+      "type": "notices",
+      "col": 3,
+      "row": 6,
+      "w": 1,
+      "h": 2,
+      "src": "evidence/collab/notice-board.json（最新在最上）",
+      "rows": [
+        {
+          "id": "NTC-mwle7bq0",
+          "at": "2026-11-18T00:38:10.968Z",
+          "hash": "44bba408e27230e8",
+          "content": "回执闭环已落地：request.mjs 支持 --ack/--show/--receipts",
+          "affected": [
+            "hub"
+          ],
+          "delivered": "wake-requested-degraded",
+          "note": "已写看板 + 各场景信箱；请求了 --wake 但无已验证 RPC 转发器，实际未直达会话（如实降级）"
+        },
+        {
+          "id": "NTC-mwle6rm5",
+          "at": "2026-11-18T00:37:44.909Z",
+          "hash": "93ea1c85b547b3a2",
+          "content": "回执闭环已落地：request.mjs 支持 --ack/--show/--receipts，改协作前先查请求",
+          "affected": [
+            "hub",
+            "tool-forge"
+          ],
+          "delivered": "wake-requested-degraded",
+          "note": "已写看板 + 各场景信箱；请求了 --wake 但无已验证 RPC 转发器，实际未直达会话（如实降级）",
+          "_corrected": "原误标 woken，已按事实修正"
+        },
+        {
+          "id": "NTC-mwldpfbs",
+          "at": "2026-11-18T00:24:15.832Z",
+          "hash": "20b218860f6afc49",
+          "content": "面板族从 6 种扩到 10 种（file/chart/embed/flow/requests/pc-*），场景配置改为 tools/gen-scene-panels.py 生成 —— 你们改场景前先跑它",
+          "affected": [
+            "hub",
+            "frontend-craft",
+            "tool-forge"
+          ],
+          "delivered": "board-only",
+          "note": "已写看板 + 各场景信箱；**没有打扰它们的会话**（默认行为，照搬原文）"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·中枢",
+      "type": "harness",
+      "col": 1,
+      "row": 8,
+      "w": 2,
+      "h": 2
+    },
+    {
+      "id": "receipts",
+      "title": "回执",
+      "type": "receipts",
+      "col": 3,
+      "row": 8,
+      "w": 1,
+      "h": 2,
+      "src": "evidence/collab/receipts.jsonl",
+      "rows": [
+        {
+          "id": "RCP-mwle6fhi",
+          "reqId": "REQ-mwldp68j",
+          "at": "2026-11-18T00:37:29.190Z",
+          "from": "self-review",
+          "to": "hub",
+          "kind": "progress",
+          "note": "已核查 H-0187：notes 自认不算独立但记了 closed，属待复核状态"
+        },
+        {
+          "id": "RCP-mwle6rkq",
+          "reqId": "REQ-mwlcoyee",
+          "at": "2026-11-18T00:37:44.858Z",
+          "from": "tool-forge",
+          "to": "hub",
+          "kind": "decision",
+          "note": "已复跑 verify-goal 两轮结果一致（通过20/待补1/失败0/无法判断1），验收器未见抖动"
+        }
+      ]
+    }
+  ],
+  "incident-analysis": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·故障分析",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "pc-cleanup": [
+    {
+      "id": "drives",
+      "title": "磁盘分区",
+      "type": "pc-drives",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 2,
+      "src": "evidence/pc/scan.json · tools/pc/scan.mjs",
+      "drives": [
+        {
+          "root": "C:\\",
+          "totalGB": 215,
+          "usedGB": 113,
+          "freeGB": 102,
+          "ratio": 0.527,
+          "tone": "ok"
+        },
+        {
+          "root": "D:\\",
+          "totalGB": 788,
+          "usedGB": 561,
+          "freeGB": 226,
+          "ratio": 0.713,
+          "tone": "ok"
+        }
+      ]
+    },
+    {
+      "id": "toplarge",
+      "title": "磁盘大户排行",
+      "type": "pc-toplarge",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 2,
+      "src": "真实目录体积",
+      "rows": [
+        {
+          "path": ".git",
+          "mb": 590,
+          "files": 320
+        },
+        {
+          "path": "C:\\Users\\15282\\.dsh",
+          "mb": 351,
+          "files": 16329
+        },
+        {
+          "path": "research",
+          "mb": 279,
+          "files": 5373
+        },
+        {
+          "path": "apps",
+          "mb": 201,
+          "files": 13229
+        },
+        {
+          "path": "evidence",
+          "mb": 75,
+          "files": 10326
+        },
+        {
+          "path": "prototype",
+          "mb": 27,
+          "files": 363
+        },
+        {
+          "path": "tools",
+          "mb": 1,
+          "files": 164
+        }
+      ]
+    },
+    {
+      "id": "junk",
+      "title": "可清理体检",
+      "type": "pc-junk",
+      "col": 1,
+      "row": 3,
+      "w": 2,
+      "h": 2,
+      "src": "只报大小，不删",
+      "rows": [
+        {
+          "name": "web-ui node_modules",
+          "mb": 83,
+          "files": 7987,
+          "kind": "可再生（编译产物）",
+          "action": "建议：先看清单再决定（本工具不删）"
+        },
+        {
+          "name": "Vite 构建缓存",
+          "mb": 82,
+          "files": 7959,
+          "kind": "可再生（缓存）",
+          "action": "建议：先看清单再决定（本工具不删）"
+        }
+      ]
+    },
+    {
+      "id": "ledger",
+      "title": "清理台账",
+      "type": "pc-ledger",
+      "col": 3,
+      "row": 3,
+      "w": 1,
+      "h": 2,
+      "src": "evidence/cleanup/cleanup-log.jsonl",
+      "rows": []
+    },
+    {
+      "id": "ai",
+      "title": "AI·本地电脑",
+      "type": "harness",
+      "col": 1,
+      "row": 5,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "research": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·调研",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "reverse-eng": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·逆向分析",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "self-review": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·自我复盘",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "tool-forge": [
+    {
+      "id": "files",
+      "title": "相关文件",
+      "type": "file",
+      "col": 1,
+      "row": 1,
+      "w": 2,
+      "h": 3,
+      "src": "真实文件清单",
+      "rows": [
+        {
+          "name": "verify-agent-ui.mjs",
+          "size": "7.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-context.mjs",
+          "size": "19.7KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-cost.mjs",
+          "size": "14.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-decompose-lead.counterexamples.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-density.mjs",
+          "size": "16.3KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-evolve.mjs",
+          "size": "28.1KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-clone.mjs",
+          "size": "7.5KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-fork-full.mjs",
+          "size": "6.8KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.counterexamples.mjs",
+          "size": "2.6KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-freshness-discipline.mjs",
+          "size": "4.2KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.counterexamples.mjs",
+          "size": "3.4KB",
+          "kind": "file"
+        },
+        {
+          "name": "verify-matrix-binding.mjs",
+          "size": "4.6KB",
+          "kind": "file"
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "title": "相关改进",
+      "type": "list",
+      "col": 3,
+      "row": 1,
+      "w": 1,
+      "h": 3,
+      "src": "改进台账.json",
+      "items": [
+        {
+          "id": "H-0191",
+          "label": "上轮加了两处防护（进程闸、防重入），但**没写反例** ——",
+          "right": "partial"
+        },
+        {
+          "id": "H-0190",
+          "label": "处理上轮发现的不对齐：T2 要「**所有**验收器」的 fp",
+          "right": "partial"
+        },
+        {
+          "id": "H-0189",
+          "label": "按上轮计划把 T2 覆盖率从 55% 推到 100%。补了 ",
+          "right": "partial"
+        },
+        {
+          "id": "H-0188",
+          "label": "按上轮计划补 T2 覆盖率。加了 M20（verify-de",
+          "right": "partial"
+        },
+        {
+          "id": "H-0187",
+          "label": "注入残留**第七次**出现，而且这次规模大：12 个文件同时",
+          "right": "partial"
+        },
+        {
+          "id": "H-0186",
+          "label": "两个独立审计员都做了变异测试，分别发现「12 个变异体 3 ",
+          "right": "closed"
+        },
+        {
+          "id": "H-0185",
+          "label": "提交完 P0 修复后跑 verify-goal，**R9 从",
+          "right": "partial"
+        },
+        {
+          "id": "H-0184",
+          "label": "第二个独立子代理盲审 tools/memory/ 与 too",
+          "right": "closed"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI·工具工坊",
+      "type": "harness",
+      "col": 1,
+      "row": 4,
+      "w": 2,
+      "h": 2
+    }
+  ],
+  "benchmark": [
+    {
+      "id": "bench",
+      "title": "标杆 · 22 个参照项目",
+      "type": "benchmark",
+      "col": 1,
+      "row": 1,
+      "w": 4,
+      "h": 10,
+      "src": "tools/benchmark/survey.mjs + analysis.json"
+    }
+  ]
+}

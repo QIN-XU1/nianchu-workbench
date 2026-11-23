@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" data-openbitfun-design-system-root data-color-scheme="light" data-openbitfun-native-frame="client">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenBitFun · Home</title>
+<!--
+  ══════════════════════════════════════════════════════════════════════
+  BitFun（OpenBitFun）界面 · 全视图复刻
+  ──────────────────────────────────────────────────────────────────────
+  上游：github.com/GCWing/BitFun   v1.0.10
+  令牌：bitfun/tokens.css（由仓库源码 build.mjs 生成，543 个 --openbitfun-*）
+
+  这是「三个视图」的合并版：
+    Home        —— 照 openbitfun-desktop.png（机器人 + 5 格统计 + Agents/Devices）
+    Session     —— 照 openbitfun-desktop-session.png（标签栏 + 上下文栏 + SwarmWorker
+                   并行子代理 + 工具列表 + 底部 composer）
+    Task Board  —— 照 openbitfun-desktop-task-board.png（计划概览 + 定时任务 + 日历）
+
+  真数据：连 ws://127.0.0.1:47124/ws（agent/listSessions / agent/submitDialogTurn）
+  服务器不在线时如实显示「未连接」，不伪造回复。
+-->
+<link rel="stylesheet" href="bitfun/tokens.css">
+<style>
+/* ══ 基础 ══ */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; height: 100vh; width: 100vw;
+  background: var(--openbitfun-color-surface-canvas);
+  color: var(--openbitfun-color-content-primary);
+  font-family: "PingFang SC", -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: var(--openbitfun-type-label-md-font-size, 13px);
+  line-height: var(--openbitfun-type-meta-line-height, 1.5);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+#root {
+  height: 100vh; width: 100vw; overflow: hidden;
+  border-radius: 12px;
+  background: var(--openbitfun-color-surface-canvas);
+  display: flex; position: relative;
+}
+:root {
+  --ok: #1aa73e;
+  --warn: #e5a50a;
+  --danger: #d92d20;
+  --danger-bg: #fef3f2;
+  --avatar-green: #22c55e;
+  --muted-bg: #f2f3f5;
+}
+
+/* macOS 红绿灯 */
+.traffic { position: absolute; top: 14px; left: 16px; z-index: 10; display: flex; gap: 8px; }
+.traffic i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.traffic i:nth-child(1) { background: #ff5f57; }
+.traffic i:nth-child(2) { background: #febc2e; }
+.traffic i:nth-child(3) { background: #28c840; }
+
+/* ══ 侧栏 ══ */
+.nav {
+  width: 300px; flex: none; height: 100%;
+  background: var(--openbitfun-color-surface-panel);
+  display: flex; flex-direction: column;
+  padding-top: 44px;
+}
+.nav__search { padding: 0 var(--openbitfun-space-3) var(--openbitfun-space-2); }
+.search {
+  display: flex; align-items: center; gap: var(--openbitfun-space-2);
+  height: 32px; padding: 0 var(--openbitfun-space-2) 0 var(--openbitfun-space-3);
+  border-radius: var(--openbitfun-radius-base);
+  background: var(--openbitfun-color-surface-subtle);
+  color: var(--openbitfun-color-content-muted);
+  font-size: var(--openbitfun-type-label-sm-font-size, 12px);
+}
+.search input {
+  flex: 1; min-width: 0; border: 0; background: none; outline: none;
+  color: var(--openbitfun-color-content-primary); font: inherit;
+}
+.search kbd {
+  font-family: inherit; font-size: 11px; padding: 0 4px; border-radius: 4px;
+  background: var(--openbitfun-color-surface-subtle);
+  color: var(--openbitfun-color-content-muted);
+}
+.nav__items { padding: 0 var(--openbitfun-space-2); display: flex; flex-direction: column; gap: 2px; }
+.nav__item {
+  display: flex; align-items: center; gap: var(--openbitfun-space-2);
+  height: 34px; padding: 0 var(--openbitfun-space-2); width: 100%;
+  border: 0; background: none; cursor: pointer; text-align: left;
+  border-radius: var(--openbitfun-radius-base);
+  color: var(--openbitfun-color-content-secondary);
+  font-size: var(--openbitfun-type-label-md-font-size, 13px);
+  transition: background var(--openbitfun-motion-duration-fast) var(--openbitfun-motion-easing-standard);
+}
+.nav__item:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.05)); }
+.nav__item[aria-current="page"] {
+  background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.06));
+  color: var(--openbitfun-color-content-primary);
+  font-weight: var(--openbitfun-type-label-selected-font-weight, 600);
+}
+.nav__item .ico { display: grid; place-items: center; color: currentColor; }
+
+.nav__section {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--openbitfun-space-2); flex-shrink: 0;
+  height: 40px; padding: 0 var(--openbitfun-space-3);
+  margin-top: var(--openbitfun-space-3);
+}
+.nav__section-title {
+  font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--openbitfun-color-content-muted);
+  font-weight: var(--openbitfun-font-weight-medium, 500);
+}
+.nav__section-actions { display: flex; gap: 2px; }
+.iconbtn {
+  width: 24px; height: 24px; display: grid; place-items: center;
+  border: 0; background: none; cursor: pointer; border-radius: var(--openbitfun-radius-sm);
+  color: var(--openbitfun-color-content-muted);
+}
+.iconbtn:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.06)); color: var(--openbitfun-color-content-primary); }
+
+.nav__list { display: flex; flex-direction: column; gap: 2px; padding: 0 var(--openbitfun-space-2); overflow-y: auto; }
+.session {
+  display: flex; align-items: center; gap: var(--openbitfun-space-2);
+  height: 32px; padding: 0 var(--openbitfun-space-2); width: 100%;
+  border: 0; background: none; cursor: pointer; text-align: left;
+  border-radius: var(--openbitfun-radius-base);
+  color: var(--openbitfun-color-content-secondary);
+  font-size: var(--openbitfun-type-label-md-font-size, 13px);
+}
+.session:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.05)); }
+.session[aria-current="true"] { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.06)); color: var(--openbitfun-color-content-primary); font-weight: 600; }
+.session .av {
+  width: 20px; height: 20px; border-radius: 6px; flex: none;
+  display: grid; place-items: center;
+  background: var(--openbitfun-color-content-primary);
+  color: var(--openbitfun-color-content-inverse);
+}
+.session--child { padding-left: 34px; }
+
+.nav__foot {
+  margin-top: auto; flex: none;
+  display: flex; align-items: center; gap: var(--openbitfun-space-2);
+  height: 52px; padding: 0 var(--openbitfun-space-3);
+  color: var(--openbitfun-color-content-secondary);
+  font-size: var(--openbitfun-type-label-sm-font-size, 12px);
+}
+.nav__foot .spacer { flex: 1; }
+
+/* ══ 主区 ══ */
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; background: var(--openbitfun-color-surface-canvas); }
+
+/* 顶栏：Home 胶囊 / 标签栏 */
+.main__bar {
+  height: 52px; flex: none; display: flex; align-items: center; gap: var(--openbitfun-space-2);
+  padding: 0 var(--openbitfun-space-4);
+}
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 30px; padding: 0 var(--openbitfun-space-3);
+  border-radius: var(--openbitfun-radius-pill, 9999px);
+  background: var(--openbitfun-color-surface-subtle);
+  color: var(--openbitfun-color-content-primary);
+  font-size: var(--openbitfun-type-label-md-font-size, 13px);
+  font-weight: var(--openbitfun-type-label-selected-font-weight, 600);
+}
+.main__bar .spacer { flex: 1; }
+.tabbar { display: flex; align-items: center; gap: 2px; height: 100%; }
+.tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 100%; padding: 0 var(--openbitfun-space-3);
+  border: 0; background: none; cursor: pointer;
+  color: var(--openbitfun-color-content-muted);
+  font-size: var(--openbitfun-type-label-md-font-size, 13px);
+  border-bottom: 2px solid transparent;
+}
+.tab:hover { color: var(--openbitfun-color-content-secondary); }
+.tab[aria-selected="true"] {
+  color: var(--openbitfun-color-content-primary);
+  border-bottom-color: var(--openbitfun-color-content-primary);
+  font-weight: 600;
+}
+.tab .x { display: grid; place-items: center; opacity: .5; margin-left: 2px; }
+.tab:hover .x { opacity: 1; }
+
+/* 会话上下文栏 */
+.ctxbar {
+  height: 40px; flex: none; display: flex; align-items: center; gap: 10px;
+  padding: 0 var(--openbitfun-space-4);
+  border-bottom: 1px solid var(--openbitfun-color-border-default);
+  color: var(--openbitfun-color-content-secondary);
+  font-size: var(--openbitfun-type-label-sm-font-size, 12px);
+}
+.ctxbar .brand { color: var(--openbitfun-color-content-primary); font-weight: 600; }
+.ctxbar .sep { color: var(--openbitfun-color-content-muted); }
+.ctxbar .badge {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 8px;
+  border-radius: 6px; font-size: 11px; font-weight: 600;
+}
+.ctxbar .badge--danger { background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(217,45,32,.25); }
+.ctxbar .spacer { flex: 1; }
+
+.main__scroll { flex: 1; min-height: 0; overflow-y: auto; }
+.page { max-width: 880px; margin: 0 auto; padding: 24px 24px 80px; }
+
+/* ── Home ── */
+.hero { display: flex; flex-direction: column; align-items: center; padding: 24px 0 32px; }
+.mascot { position: relative; width: 132px; height: 128px; margin-bottom: 28px; }
+.mascot .antenna {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 18px; height: 18px; border-radius: 50%; background: #34d399;
+}
+.mascot .body {
+  position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+  width: 128px; height: 108px; border-radius: 30px;
+  background: #23262f; display: flex; align-items: center; justify-content: center; gap: 26px;
+}
+.mascot .body i { width: 14px; height: 22px; border-radius: 50%; background: #fff; display: block; }
+.hero h1 { margin: 0; font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; }
+
+.stats {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  border: 1px solid var(--openbitfun-color-border-default);
+  border-radius: var(--openbitfun-radius-lg);
+  background: var(--openbitfun-color-surface-raised);
+  margin-bottom: var(--openbitfun-space-5);
+  overflow: hidden;
+}
+.stat {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 16px 14px; text-align: left;
+}
+.stat + .stat { border-left: 1px solid var(--openbitfun-color-border-default); }
+.stat b { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.stat span { font-size: var(--openbitfun-type-meta-font-size, 11px); color: var(--openbitfun-color-content-muted); line-height: 1.3; }
+
+.sect { display: flex; align-items: center; gap: var(--openbitfun-space-2); margin: 0 0 10px; }
+.sect h2 { margin: 0; font-size: 14px; font-weight: 600; }
+.sect .spacer { flex: 1; }
+.linkish {
+  display: inline-flex; align-items: center; gap: 4px;
+  border: 0; background: none; cursor: pointer; padding: 0;
+  color: var(--openbitfun-color-content-secondary);
+  font-size: var(--openbitfun-type-label-sm-font-size, 12px);
+}
+.linkish:hover { color: var(--openbitfun-color-content-primary); }
+.divider-v { width: 1px; height: 12px; background: var(--openbitfun-color-border-default); }
+
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-lg); background: var(--openbitfun-color-surface-raised); margin-bottom: var(--openbitfun-space-5); }
+.duo > div { padding: 18px 20px; }
+.duo > div + div { border-left: 1px solid var(--openbitfun-color-border-default); }
+.duo h3 { margin: 0 0 10px; font-size: 12px; font-weight: 500; color: var(--openbitfun-color-content-muted); }
+.duo .num { font-size: 34px; line-height: 1; font-weight: 600; letter-spacing: -.02em; margin-bottom: 8px; }
+.duo p { margin: 0; font-size: var(--openbitfun-type-label-sm-font-size, 12px); color: var(--openbitfun-color-content-muted); }
+
+.device { display: flex; align-items: center; gap: var(--openbitfun-space-3); padding: 16px 18px; border: 1px solid var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-lg); background: var(--openbitfun-color-surface-raised); }
+.device .meta { display: flex; flex-direction: column; gap: 2px; }
+.device .meta b { font-size: 13px; font-weight: 600; }
+.device .meta span { font-size: var(--openbitfun-type-meta-font-size, 11px); color: var(--openbitfun-color-content-muted); }
+.signin { padding: 12px 4px 0; color: var(--openbitfun-color-content-muted); font-size: var(--openbitfun-type-label-sm-font-size, 12px); }
+
+.hello {
+  position: absolute; right: 20px; bottom: 18px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 34px; padding: 0 14px; border-radius: 9999px;
+  background: #23262f; color: #fff; font-size: 13px; font-weight: 600;
+}
+
+/* ── Session ── */
+.chat { display: flex; flex-direction: column; gap: var(--openbitfun-space-4); padding: 24px 0 0; }
+.msg { display: flex; flex-direction: column; gap: 8px; max-width: 100%; }
+.msg--user { align-items: flex-end; }
+.msg--user .bubble {
+  max-width: 70%; padding: 10px 14px; border-radius: 14px;
+  background: var(--openbitfun-color-surface-subtle);
+  color: var(--openbitfun-color-content-primary);
+  font-size: 13.5px; line-height: 1.5;
+}
+.msg--ai { align-items: flex-start; }
+.msg--ai .ai-head { display: flex; align-items: flex-start; gap: 10px; }
+.msg--ai .ai-avatar {
+  width: 24px; height: 24px; border-radius: 50%; flex: none;
+  display: grid; place-items: center;
+  background: var(--avatar-green); color: #fff; margin-top: 1px;
+}
+.msg--ai .ai-body { font-size: 13.5px; line-height: 1.6; color: var(--openbitfun-color-content-primary); }
+
+/* 折叠步骤组 */
+.stepgroup { margin-left: 34px; }
+.stepgroup__head {
+  display: flex; align-items: center; gap: 6px; width: 100%;
+  border: 0; background: none; cursor: pointer; padding: 4px 0;
+  color: var(--openbitfun-color-content-muted);
+  font-size: var(--openbitfun-type-label-sm-font-size, 12px);
+}
+.stepgroup__head:hover { color: var(--openbitfun-color-content-secondary); }
+.stepgroup__head .sp { flex: 1; }
+.stepgroup__body { margin-top: 6px; }
+
+/* SwarmWorker 卡 */
+.swarm {
+  border: 1px solid var(--openbitfun-color-border-default);
+  border-radius: var(--openbitfun-radius-md);
+  background: var(--openbitfun-color-surface-raised);
+  overflow: hidden;
+}
+.swarm__head { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--openbitfun-color-border-default); }
+.swarm__head b { font-size: 12px; font-weight: 600; }
+.swarm__head span { font-size: 11px; color: var(--openbitfun-color-content-muted); }
+.swarm__head .sp { flex: 1; }
+.swarm__row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
+.swarm__row + .swarm__row { border-top: 1px solid var(--openbitfun-color-border-default); }
+.swarm__row .av { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; flex: none; }
+.swarm__row .name { font-size: 12.5px; color: var(--openbitfun-color-content-primary); }
+.swarm__row .sp { flex: 1; }
+.swarm__row .status { font-size: 11px; color: var(--openbitfun-color-content-muted); }
+.swarm__row .status::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--ok); margin-right: 5px; vertical-align: 1px; }
+
+/* 工具调用列表 */
+.toolbar { display: flex; align-items: center; gap: 6px; padding: 0 0 8px; color: var(--openbitfun-color-content-muted); font-size: 11px; }
+.toolbar input { flex: 1; border: 0; background: var(--openbitfun-color-surface-subtle); border-radius: 6px; padding: 6px 8px; font: inherit; font-size: 11px; color: var(--openbitfun-color-content-secondary); outline: none; }
+.toolist { display: flex; flex-direction: column; }
+.toolrow {
+  display: flex; align-items: center; gap: 8px; padding: 7px 2px;
+  border-bottom: 1px solid var(--openbitfun-color-border-default);
+  font-size: 12px; color: var(--openbitfun-color-content-secondary);
+}
+.toolrow:last-of-type { border-bottom: 0; }
+.toolrow .cmd { color: var(--openbitfun-color-content-primary); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11.5px; }
+.toolrow .sp { flex: 1; }
+.showmore { margin-top: 8px; border: 0; background: none; cursor: pointer; color: var(--openbitfun-color-content-muted); font-size: 12px; padding: 4px 0; }
+.showmore:hover { color: var(--openbitfun-color-content-secondary); }
+
+/* composer */
+.composer { flex: none; padding: 8px 24px 18px; }
+.composer .surface {
+  max-width: 820px; margin: 0 auto;
+  border: 1px solid var(--openbitfun-color-border-default);
+  border-radius: var(--openbitfun-radius-lg);
+  background: var(--openbitfun-color-surface-raised);
+  padding: 10px 12px;
+}
+.composer .surface:focus-within { border-color: var(--openbitfun-color-border-strong); }
+.composer .inputrow { display: flex; align-items: center; gap: 8px; }
+.composer .plus { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--openbitfun-color-border-default); background: none; display: grid; place-items: center; cursor: pointer; color: var(--openbitfun-color-content-secondary); flex: none; }
+.composer textarea {
+  flex: 1; border: 0; background: none; outline: none; resize: none;
+  font: inherit; font-size: 13.5px; line-height: 1.5; color: var(--openbitfun-color-content-primary);
+  max-height: 120px; padding: 4px 0;
+}
+.composer textarea::placeholder { color: var(--openbitfun-color-content-muted); }
+.composer .model {
+  display: inline-flex; align-items: center; gap: 4px; flex: none;
+  border: 0; background: none; cursor: pointer; padding: 4px 6px; border-radius: 6px;
+  color: var(--openbitfun-color-content-secondary); font-size: 12px;
+}
+.composer .model:hover { background: var(--openbitfun-color-action-quiet-hover, rgba(0,0,0,.05)); }
+.composer .mic { width: 28px; height: 28px; border: 0; background: none; display: grid; place-items: center; cursor: pointer; color: var(--openbitfun-color-content-secondary); flex: none; }
+.composer .send {
+  width: 30px; height: 30px; border-radius: 50%; border: 0; flex: none;
+  display: grid; place-items: center; cursor: pointer;
+  background: #23262f; color: #fff;
+}
+.composer .send:disabled { opacity: .35; cursor: default; }
+
+/* ── Task Board ── */
+.board-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+.board-head h1 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -.01em; }
+.board-head p { margin: 4px 0 0; font-size: 12px; color: var(--openbitfun-color-content-muted); }
+.board-head .spacer { flex: 1; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 14px; border-radius: 9999px; border: 0; cursor: pointer;
+  background: #23262f; color: #fff; font-size: 12px; font-weight: 600;
+}
+.plan { margin-bottom: 22px; }
+.plan h2 { margin: 0 0 10px; font-size: 13px; font-weight: 600; }
+.plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.plan-card { border: 1px solid var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-md); background: var(--openbitfun-color-surface-raised); padding: 14px 16px; }
+.plan-card b { display: block; font-size: 20px; font-weight: 600; }
+.plan-card span { font-size: 11px; color: var(--openbitfun-color-content-muted); }
+.board-sect { margin-bottom: 22px; }
+.board-sect h2 { margin: 0 0 10px; font-size: 13px; font-weight: 600; }
+.empty { padding: 22px 16px; border: 1px dashed var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-md); color: var(--openbitfun-color-content-muted); font-size: 12px; text-align: center; }
+.cal { border: 1px solid var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-md); background: var(--openbitfun-color-surface-raised); padding: 12px; }
+.cal__head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.cal__head b { font-size: 13px; font-weight: 600; }
+.cal__head .sp { flex: 1; }
+.cal__head button { border: 1px solid var(--openbitfun-color-border-default); background: none; border-radius: 6px; padding: 3px 8px; font-size: 11px; cursor: pointer; color: var(--openbitfun-color-content-secondary); }
+.cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.cal__dow { text-align: center; font-size: 10px; color: var(--openbitfun-color-content-muted); padding: 3px 0 6px; }
+.cal__day { aspect-ratio: 1; display: grid; place-items: center; font-size: 11px; border-radius: 6px; color: var(--openbitfun-color-content-secondary); }
+.cal__day--muted { color: var(--openbitfun-color-content-muted); opacity: .45; }
+.cal__day--today { background: #23262f; color: #fff; font-weight: 600; }
+.devcard { display: flex; align-items: center; gap: 12px; margin-top: 22px; padding: 12px 14px; border: 1px solid var(--openbitfun-color-border-default); border-radius: var(--openbitfun-radius-md); background: var(--openbitfun-color-surface-raised); }
+.devcard .meta { display: flex; flex-direction: column; gap: 2px; }
+.devcard .meta b { font-size: 12px; font-weight: 600; }
+.devcard .meta span { font-size: 11px; color: var(--openbitfun-color-content-muted); }
+.devcard .tag { margin-left: auto; font-size: 10px; padding: 2px 7px; border-radius: 9999px; background: var(--openbitfun-color-surface-subtle); color: var(--openbitfun-color-content-muted); }
+
+/* 连接状态 */
+.conn { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--openbitfun-color-content-muted); }
+.conn::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--openbitfun-color-content-muted); }
+.conn[data-state="ok"]::before { background: var(--ok); }
+.conn[data-state="fail"]::before { background: var(--danger); }
+
+/* 暗色 */
+[data-color-scheme="dark"] .mascot .body { background: #2f2f33; }
+[data-color-scheme="dark"] .mascot .body i { background: #e8e8e8; }
+[data-color-scheme="dark"] .hello { background: #f2f2f2; color: #161616; }
+[data-color-scheme="dark"] .composer .send { background: #f2f2f2; color: #161616; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="traffic"><i></i><i></i><i></i></div>
+
+  <!-- ══ 侧栏 ══ -->
+  <aside class="nav">
+    <div class="nav__search">
+      <label class="search">
+        <span data-lucide="search" style="width:14px;height:14px"></span>
+        <input value="Search everything" readonly>
+        <kbd>⌘K</kbd>
+      </label>
+    </div>
+
+    <div class="nav__items">
+      <button class="nav__item" data-nav="home" aria-current="page">
+        <span class="ico" data-lucide="home" style="width:16px;height:16px"></span>Home
+      </button>
+      <button class="nav__item" data-nav="board">
+        <span class="ico" data-lucide="clock" style="width:16px;height:16px"></span>Task Board
+      </button>
+    </div>
+
+    <div class="nav__section">
+      <span class="nav__section-title">Sessions</span>
+      <span class="nav__section-actions">
+        <button class="iconbtn" title="List"><span data-lucide="list" style="width:15px;height:15px"></span></button>
+        <button class="iconbtn" title="Filter"><span data-lucide="sliders-horizontal" style="width:15px;height:15px"></span></button>
+        <button class="iconbtn" title="New folder"><span data-lucide="folder-plus" style="width:15px;height:15px"></span></button>
+      </span>
+    </div>
+
+    <div class="nav__list" id="sessionList">
+      <button class="session" data-session="fun">
+        <span class="av"><span data-lucide="bot" style="width:12px;height:12px"></span></span>Fun
+      </button>
+      <button class="session" data-session="openbitfun">
+        <span class="ico" data-lucide="folder" style="width:16px;height:16px;color:var(--openbitfun-color-content-muted)"></span>OpenBitFun
+      </button>
+      <button class="session session--child" data-session="new">New Session</button>
+    </div>
+
+    <div class="nav__foot">
+      <span data-lucide="laptop" style="width:16px;height:16px"></span>
+      <span>GCWingdeMacBook-Air</span>
+      <span class="spacer"></span>
+      <button class="iconbtn" title="Settings"><span data-lucide="settings" style="width:15px;height:15px"></span></button>
+    </div>
+  </aside>
+
+  <!-- ══ 主区 ══ -->
+  <main class="main">
+    <div class="main__bar" id="mainBar"></div>
+    <div class="ctxbar" id="ctxBar" hidden></div>
+    <div class="main__scroll" id="scroll"></div>
+    <div class="composer" id="composer" hidden>
+      <div class="surface">
+        <div class="inputrow">
+          <button class="plus" title="Attach"><span data-lucide="plus" style="width:15px;height:15px"></span></button>
+          <textarea id="input" rows="1" placeholder="How can I help you..."></textarea>
+          <button class="model" id="modelBtn">
+            <span data-lucide="sparkles" style="width:13px;height:13px"></span>
+            <span id="modelName">deepseek-flash</span>
+            <span data-lucide="chevron-down" style="width:12px;height:12px"></span>
+          </button>
+          <button class="mic" title="Voice"><span data-lucide="mic" style="width:16px;height:16px"></span></button>
+          <button class="send" id="sendBtn" disabled title="Send"><span data-lucide="arrow-up" style="width:16px;height:16px"></span></button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="vendor/lucide.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ── 状态 ── */
+  const state = {
+    view: 'home',                 // home | session | board
+    connected: false,
+    sessions: [],                 // 真会话（来自 WS）
+    currentSessionId: null,
+    messages: [],                 // {role:'user'|'ai'|'step', ...}
+    swarmOpen: true,
+    toolsOpen: true,
+    model: 'deepseek-flash',
+    busy: false,
+  };
+
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  /* ── 图标：校验 + 生成 ── */
+  function icons() {
+    const els = $$('[data-lucide]');
+    const uniq = els.map((e) => e.getAttribute('data-lucide')).filter((v, i, a) => a.indexOf(v) === i);
+    const have = (window.lucide && window.lucide.icons) ? Object.keys(window.lucide.icons) : [];
+    const pascal = (s) => s.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
+    const missing = uniq.filter((n) => have.length && have.indexOf(pascal(n)) === -1);
+    document.documentElement.setAttribute('data-lucide-missing', missing.join(',') || 'none');
+    document.documentElement.setAttribute('data-lucide-count', String(uniq.length));
+    if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+    document.documentElement.setAttribute('data-lucide-svg', String($$('svg.lucide').length));
+  }
+
+  /* ── WebSocket（真宿主） ── */
+  const WS = {
+    url: (location.protocol === 'https:' ? 'wss' : 'ws') + '://' + location.host + '/ws',
+    sock: null, seq: 0, pending: new Map(), retry: 0,
+  };
+  function wsConnect() {
+    try { WS.sock = new WebSocket(WS.url); } catch (e) { setConn('fail'); return; }
+    WS.sock.onopen = function () { WS.retry = 0; setConn('ok'); loadSessions(); };
+    WS.sock.onclose = function () {
+      setConn('fail');
+      if (WS.retry < 20) { WS.retry++; setTimeout(wsConnect, 2500); }
+    };
+    WS.sock.onerror = function () { setConn('fail'); };
+    WS.sock.onmessage = function (ev) {
+      let msg; try { msg = JSON.parse(ev.data); } catch (e) { return; }
+      if (msg.id && WS.pending.has(msg.id)) {
+        const p = WS.pending.get(msg.id); WS.pending.delete(msg.id);
+        if (msg.error) p.reject(new Error(msg.error.message || 'rpc error'));
+        else p.resolve(msg.result);
+        return;
+      }
+      if (msg.method === 'agent/frontendEvent') {
+        // 流式事件（当前宿主是请求/响应，保留通道）
+      }
+    };
+  }
+  function rpc(method, params) {
+    return new Promise(function (resolve, reject) {
+      if (!WS.sock || WS.sock.readyState !== 1) { reject(new Error('未连接')); return; }
+      const id = ++WS.seq;
+      WS.pending.set(id, { resolve: resolve, reject: reject });
+      try { WS.sock.send(JSON.stringify({ jsonrpc: '2.0', id: id, method: method, params: params || {} })); }
+      catch (e) { WS.pending.delete(id); reject(e); return; }
+      setTimeout(function () { if (WS.pending.has(id)) { WS.pending.delete(id); reject(new Error('timeout')); } }, 90000);
+    });
+  }
+  function setConn(s) {
+    state.connected = s === 'ok';
+    const el = $('#conn');
+    if (el) { el.setAttribute('data-state', s); el.textContent = s === 'ok' ? 'Connected · 47124' : 'Reconnecting…'; }
+    if (state.view === 'session') render();
+  }
+  function loadSessions() {
+    rpc('agent/listSessions').then(function (list) {
+      state.sessions = Array.isArray(list) ? list : (list && list.sessions) || [];
+      renderSessions();
+    }).catch(function () { /* 保留演示会话 */ });
+  }
+  function renderSessions() {
+    const wrap = $('#sessionList');
+    if (!wrap) return;
+    if (!state.sessions.length) return; // 保留下面的演示项
+    wrap.innerHTML = state.sessions.map(function (s) {
+      const name = s.sessionName || s.sessionId || 'Session';
+      return '<button class="session" data-session="' + esc(s.sessionId) + '">' +
+        '<span class="av"><span data-lucide="bot" style="width:12px;height:12px"></span></span>' + esc(name) + '</button>';
+    }).join('');
+    icons();
+  }
+
+  /* ── 视图切换 ── */
+  function showView(v) {
+    state.view = v;
+    $$('.nav__item').forEach(function (b) { b.removeAttribute('aria-current'); });
+    const nb = $('.nav__item[data-nav="' + v + '"]');
+    if (nb) nb.setAttribute('aria-current', 'page');
+    $('#composer').hidden = v !== 'session';
+    render();
+    icons();
+  }
+
+  /* ── 渲染 ── */
+  function render() {
+    renderBar();
+    renderCtx();
+    const sc = $('#scroll');
+    if (state.view === 'home') sc.innerHTML = homeHTML();
+    else if (state.view === 'session') sc.innerHTML = sessionHTML();
+    else sc.innerHTML = boardHTML();
+    $('.main__scroll').scrollTop = 999999;
+    icons();
+  }
+
+  function renderBar() {
+    const bar = $('#mainBar');
+    if (state.view === 'home') {
+      bar.innerHTML = '<span class="pill">Home</span><span class="spacer"></span>' +
+        '<button class="iconbtn" title="Toggle sidebar"><span data-lucide="panel-left" style="width:16px;height:16px"></span></button>';
+      return;
+    }
+    const tabs = state.view === 'board'
+      ? [['session', 'New Session'], ['home', 'Home'], ['board', 'Task Board']]
+      : [['session', 'New Session'], ['session-current', 'Distinctive Features']];
+    bar.innerHTML = '<span class="tabbar">' + tabs.map(function (t, i) {
+      const active = (state.view === 'board' && t[0] === 'board') || (state.view === 'session' && i === 1);
+      return '<button class="tab" data-tab="' + t[0] + '" aria-selected="' + (active ? 'true' : 'false') + '">' +
+        (active ? '<span data-lucide="message-square" style="width:13px;height:13px"></span>' : '') +
+        esc(t[1]) + '<span class="x" data-lucide="x" style="width:11px;height:11px"></span></button>';
+    }).join('') + '</span><span class="spacer"></span>' +
+      '<button class="iconbtn" title="Toggle sidebar"><span data-lucide="panel-left" style="width:16px;height:16px"></span></button>';
+  }
+
+  function renderCtx() {
+    const el = $('#ctxBar');
+    if (state.view !== 'session') { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML =
+      '<span class="brand">OpenBitFun</span>' +
+      '<span class="sep">·</span><span>gcwing/dev</span>' +
+      '<span class="sep">·</span><span>This computer</span>' +
+      '<span class="badge badge--danger">Full access</span>' +
+      '<span class="spacer"></span>' +
+      '<span class="conn" id="conn" data-state="' + (state.connected ? 'ok' : 'fail') + '">' + (state.connected ? 'Connected · 47124' : 'Reconnecting…') + '</span>' +
+      '<button class="iconbtn" id="refreshBtn" title="Refresh"><span data-lucide="refresh-cw" style="width:14px;height:14px"></span></button>';
+  }
+
+  function homeHTML() {
+    return '<div class="page">' +
+      '<div class="hero"><div class="mascot"><span class="antenna"></span><span class="body"><i></i><i></i></span></div>' +
+      '<h1>Hey, ideas are bubbling!</h1></div>' +
+      '<div class="stats">' +
+        stat('6.9M', 'Total tokens') + stat('4.7M', 'Peak daily tokens') +
+        stat('—', 'Longest task') + stat('2 days', 'Longest streak') + stat('1 days', 'Current streak') +
+      '</div>' +
+      '<div class="sect"><h2>Agents</h2><span class="spacer"></span>' +
+        '<button class="linkish"><span data-lucide="plus" style="width:13px;height:13px"></span>Create Agent</button>' +
+        '<span class="divider-v"></span>' +
+        '<button class="linkish"><span data-lucide="plus" style="width:13px;height:13px"></span>Create assistant</button>' +
+      '</div>' +
+      '<div class="duo">' +
+        '<div><h3>Agents</h3><div class="num">10</div><p>Built-in and custom Agents for your workflows.</p></div>' +
+        '<div><h3>Assistant</h3><div class="num">1</div><p>Long-term collaborators with their own memory.</p></div>' +
+      '</div>' +
+      '<div class="sect"><h2>Devices</h2><span class="spacer"></span>' +
+        '<button class="linkish"><span data-lucide="monitor-smartphone" style="width:13px;height:13px"></span>Manage devices</button></div>' +
+      '<div class="device"><span data-lucide="laptop" style="width:22px;height:22px;color:var(--openbitfun-color-content-secondary)"></span>' +
+        '<span class="meta"><b>GCWingdeMacBook-Air</b><span>GCWingdeMacBook-Air.local</span></span></div>' +
+      '<div class="signin">Sign in to connect more devices</div>' +
+      '<div class="hello"><span data-lucide="hand" style="width:13px;height:13px"></span>Hi</div>' +
+    '</div>';
+  }
+  function stat(v, label) { return '<div class="stat"><b>' + esc(v) + '</b><span>' + esc(label) + '</span></div>'; }
+
+  function sessionHTML() {
+    const steps = [
+      'cd /Users/gcwing/dev/OpenBitFun && ls -la',
+      'cd /Users/gcwing/dev/OpenBitFun && cat package.json',
+      'cd /Users/gcwing/dev/OpenBitFun && find src -maxdepth 2 -type d',
+      'cd /Users/gcwing/dev/OpenBitFun && grep -r "swarm" src --include=*.ts',
+      'cd /Users/gcwing/dev/OpenBitFun && cat src/features/swarm/index.ts',
+      'cd /Users/gcwing/dev/OpenBitFun && wc -l src/features/swarm/*.ts',
+    ];
+    return '<div class="page" style="padding-top:8px">' +
+      '<div class="chat">' +
+        '<div class="msg msg--user"><div class="bubble">Analyze and summarize distinctive features</div></div>' +
+        '<div class="msg msg--ai">' +
+          '<div class="ai-head"><span class="ai-avatar"><span data-lucide="sparkles" style="width:13px;height:13px"></span></span>' +
+          '<div class="ai-body">I\'ll start by inspecting the repository in depth. Let me explore the structure and key files.</div></div>' +
+        '</div>' +
+
+        /* 折叠组 1：SwarmWorker */
+        '<div class="stepgroup">' +
+          '<button class="stepgroup__head" data-toggle="swarm">' +
+            '<span data-lucide="' + (state.swarmOpen ? 'chevron-down' : 'chevron-right') + '" style="width:13px;height:13px"></span>' +
+            '6 exploration and execution steps<span class="sp"></span>' +
+            '<span data-lucide="copy" style="width:12px;height:12px"></span>' +
+          '</button>' +
+          (state.swarmOpen ? swarmHTML() : '') +
+        '</div>' +
+
+        /* 折叠组 2：工具列表 */
+        '<div class="stepgroup">' +
+          '<button class="stepgroup__head" data-toggle="tools">' +
+            '<span data-lucide="' + (state.toolsOpen ? 'chevron-down' : 'chevron-right') + '" style="width:13px;height:13px"></span>' +
+            '6 exploration and execution steps<span class="sp"></span>' +
+            '<span data-lucide="copy" style="width:12px;height:12px"></span>' +
+          '</button>' +
+          (state.toolsOpen ? toolsHTML(steps) : '') +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function swarmHTML() {
+    const workers = [
+      ['🥷', '#f5d90a', 'Noodle Ninja'],
+      ['🐼', '#ff5f57', 'Pogo Panda'],
+      ['🐧', '#3b82f6', 'Disco Penguin'],
+      ['☁️', '#eab308', 'Cloud Hopper'],
+      ['🐰', '#a855f7', 'Moon Bunny'],
+    ];
+    return '<div class="swarm">' +
+      '<div class="swarm__head"><b>SwarmWorker</b><span>Parallel execution by sub-agents</span><span class="sp"></span>' +
+        '<span data-lucide="copy" style="width:12px;height:12px"></span></div>' +
+      workers.map(function (w) {
+        return '<div class="swarm__row"><span class="av" style="background:' + w[1] + '22">' + w[0] + '</span>' +
+          '<span class="name">' + w[2] + '</span><span class="sp"></span><span class="status">Running</span></div>';
+      }).join('') +
+    '</div>';
+  }
+
+  function toolsHTML(steps) {
+    return '<div class="stepgroup__body">' +
+      '<div class="toolbar"><span data-lucide="search" style="width:12px;height:12px"></span>' +
+        '<input value="Run command" readonly>' +
+        '<span data-lucide="filter" style="width:12px;height:12px"></span></div>' +
+      '<div class="toolist">' +
+        steps.map(function (s) {
+          return '<div class="toolrow"><span>Run command:</span><span class="cmd">' + esc(s) + '</span><span class="sp"></span></div>';
+        }).join('') +
+      '</div>' +
+      '<button class="showmore">Show more</button>' +
+    '</div>';
+  }
+
+  function boardHTML() {
+    const now = new Date(2026, 9, 1); // 2026-10
+    const y = now.getFullYear(), m = now.getMonth();
+    const first = new Date(y, m, 1);
+    const startDow = first.getDay();
+    const days = new Date(y, m + 1, 0).getDate();
+    let cells = '';
+    const dows = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    dows.forEach(function (d) { cells += '<div class="cal__dow">' + d + '</div>'; });
+    for (let i = 0; i < startDow; i++) cells += '<div class="cal__day cal__day--muted"></div>';
+    for (let d = 1; d <= days; d++) {
+      cells += '<div class="cal__day' + (d === 16 ? ' cal__day--today' : '') + '">' + d + '</div>';
+    }
+    return '<div class="page">' +
+      '<div class="board-head"><div><h1>Task Board</h1><p>Plan, manage, and run your scheduled work</p></div>' +
+        '<span class="spacer"></span>' +
+        '<button class="btn-primary"><span data-lucide="plus" style="width:13px;height:13px"></span>New Todo</button></div>' +
+      '<div class="plan"><h2>Plan overview</h2><div class="plan-grid">' +
+        '<div class="plan-card"><b>0 <small style="font-size:11px;font-weight:400;color:var(--openbitfun-color-content-muted)">items</small></b><span>Scheduled tasks</span></div>' +
+        '<div class="plan-card"><b>0 <small style="font-size:11px;font-weight:400;color:var(--openbitfun-color-content-muted)">items</small></b><span>Due within 24 hours</span></div>' +
+      '</div></div>' +
+      '<div class="board-sect"><h2>Scheduled tasks (0)</h2><div class="empty">No scheduled tasks yet.</div></div>' +
+      '<div class="board-sect"><div class="cal"><div class="cal__head"><b>October 2026</b><span class="sp"></span><button>Today</button></div>' +
+        '<div class="cal__grid">' + cells + '</div></div></div>' +
+      '<div class="devcard"><span data-lucide="laptop" style="width:20px;height:20px;color:var(--openbitfun-color-content-secondary)"></span>' +
+        '<span class="meta"><b>GCWingdeMacBook-Air</b><span>Local device</span></span><span class="tag">Local</span></div>' +
+    '</div>';
+  }
+
+  /* ── 发送 ── */
+  function send() {
+    const ta = $('#input');
+    const text = (ta.value || '').trim();
+    if (!text || state.busy) return;
+    ta.value = ''; ta.style.height = 'auto';
+    $('#sendBtn').disabled = true;
+    state.busy = true;
+
+    // 本地先回显
+    state.messages.push({ role: 'user', content: text });
+    renderSessionMessages();
+
+    const doTurn = async function () {
+      if (!state.currentSessionId) {
+        try {
+          const s = await rpc('agent/createSession', { request: { sessionName: text.slice(0, 40) } });
+          state.currentSessionId = s && (s.sessionId || s.id) || 'local';
+        } catch (e) {
+          state.currentSessionId = 'local';
+        }
+      }
+      const r = await rpc('agent/submitDialogTurn', { request: { sessionId: state.currentSessionId, content: text, model: state.model } });
+      if (r && r.state === 'PASS') return r.content;
+      if (r && r.state === 'FAIL') throw new Error(r.reason || 'turn failed');
+      throw new Error(r && r.reason ? r.reason : '模型未返回内容');
+    };
+
+    doTurn().then(function (content) {
+      state.messages.push({ role: 'ai', content: String(content) });
+    }).catch(function (e) {
+      state.messages.push({ role: 'ai', content: '⚠ ' + (e && e.message ? e.message : '请求失败') + '（服务器未连接时不会伪造回复）' });
+    }).finally(function () {
+      state.busy = false;
+      renderSessionMessages();
+      const ta2 = $('#input'); if (ta2) ta2.focus();
+    });
+  }
+
+  function renderSessionMessages() {
+    const sc = $('#scroll');
+    if (state.view !== 'session') return;
+    // 只更新消息区，保留折叠组
+    let html = '<div class="page" style="padding-top:8px"><div class="chat">';
+    state.messages.forEach(function (m) {
+      if (m.role === 'user') html += '<div class="msg msg--user"><div class="bubble">' + esc(m.content) + '</div></div>';
+      else html += '<div class="msg msg--ai"><div class="ai-head"><span class="ai-avatar"><span data-lucide="sparkles" style="width:13px;height:13px"></span></span>' +
+        '<div class="ai-body">' + esc(m.content) + '</div></div></div>';
+    });
+    html += '</div></div>';
+    sc.innerHTML = html;
+    sc.scrollTop = sc.scrollHeight;
+    icons();
+  }
+
+  /* ── 事件 ── */
+  document.addEventListener('click', function (e) {
+    const nav = e.target.closest && e.target.closest('[data-nav]');
+    if (nav) { showView(nav.getAttribute('data-nav')); return; }
+    const tab = e.target.closest && e.target.closest('[data-tab]');
+    if (tab) {
+      const t = tab.getAttribute('data-tab');
+      showView(t === 'home' ? 'home' : t === 'board' ? 'board' : 'session');
+      return;
+    }
+    const sess = e.target.closest && e.target.closest('[data-session]');
+    if (sess) { showView('session'); return; }
+    const tog = e.target.closest && e.target.closest('[data-toggle]');
+    if (tog) {
+      const k = tog.getAttribute('data-toggle');
+      if (k === 'swarm') state.swarmOpen = !state.swarmOpen;
+      if (k === 'tools') state.toolsOpen = !state.toolsOpen;
+      render();
+      return;
+    }
+    if (e.target.closest && e.target.closest('#sendBtn')) { send(); return; }
+    if (e.target.closest && e.target.closest('#refreshBtn')) {
+      if (WS.sock && WS.sock.readyState === 1) { loadSessions(); } else { wsConnect(); }
+      return;
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target && e.target.id === 'input' && e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); send();
+    }
+  });
+  document.addEventListener('input', function (e) {
+    if (e.target && e.target.id === 'input') {
+      const ta = e.target;
+      ta.style.height = 'auto';
+      ta.style.height = Math.min(ta.scrollHeight, 120) + 'px';
+      $('#sendBtn').disabled = !ta.value.trim() || state.busy;
+    }
+  });
+
+  /* ── 启动 ── */
+  var qs = new URLSearchParams(location.search);
+  var initial = qs.get('view') || (location.hash || '').replace(/^#/, '');
+  showView(initial === 'session' || initial === 'board' ? initial : 'home');
+  wsConnect();
+
+  // 供验收脚本读取
+  window.__bitfun = { state: state, showView: showView };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2567 @@
+{
+  "version": 1,
+  "created_at": "2026-11-10T22:58:29",
+  "source": {
+    "transcript_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\transcript.json",
+    "frames_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\frames.json"
+  },
+  "duration": 390.251,
+  "range": {
+    "start": 0.0,
+    "end": 390.251
+  },
+  "window_seconds": 10.0,
+  "attention_gap_seconds": 5.0,
+  "relation_labels": [
+    "supports",
+    "complements",
+    "contradicts",
+    "unrelated",
+    "insufficient"
+  ],
+  "instructions": "Inspect the listed frames and transcript for each unit. Set assessment.relation, confidence (0..1), notes, and refine. Treat complementary audio/visual evidence as complements, not a conflict.",
+  "units": [
+    {
+      "id": "w0000",
+      "start": 0.0,
+      "end": 10.0,
+      "transcript": "就是很多人都不知道就是主播是怎么做记忆的对吧 然后很多人说自己搞了一个什么支持库啥的 然后就变得非常的这个繁重啊就觉得",
+      "segments": [
+        {
+          "start": 0.24,
+          "end": 4.34,
+          "text": "就是很多人都不知道就是主播是怎么做记忆的对吧"
+        },
+        {
+          "start": 4.6,
+          "end": 7.92,
+          "text": "然后很多人说自己搞了一个什么支持库啥的"
+        },
+        {
+          "start": 8.18,
+          "end": 10.98,
+          "text": "然后就变得非常的这个繁重啊就觉得"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0000_t000000.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0000_t000000.0.jpg",
+          "t": 0.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0001_t000004.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0001_t000004.9.jpg",
+          "t": 4.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0002_t000009.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0002_t000009.8.jpg",
+          "t": 9.767,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0001",
+      "start": 10.0,
+      "end": 20.0,
+      "transcript": "然后就变得非常的这个繁重啊就觉得 不是很好 然后主播的话现在就录一个屏幕给大家讲一下主播的记忆机制 其实我是不见知识库的因为在我眼里我是想做这个自我进化的一个完整的东西",
+      "segments": [
+        {
+          "start": 8.18,
+          "end": 10.98,
+          "text": "然后就变得非常的这个繁重啊就觉得"
+        },
+        {
+          "start": 11.24,
+          "end": 12.02,
+          "text": "不是很好"
+        },
+        {
+          "start": 13.04,
+          "end": 17.4,
+          "text": "然后主播的话现在就录一个屏幕给大家讲一下主播的记忆机制"
+        },
+        {
+          "start": 18.16,
+          "end": 23.02,
+          "text": "其实我是不见知识库的因为在我眼里我是想做这个自我进化的一个完整的东西"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0002_t000009.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0002_t000009.8.jpg",
+          "t": 9.767,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0003_t000014.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0003_t000014.7.jpg",
+          "t": 14.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0004_t000019.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0004_t000019.1.jpg",
+          "t": 19.1,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.667,
+        "visual_cues": [
+          "屏幕"
+        ],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0002",
+      "start": 20.0,
+      "end": 30.0,
+      "transcript": "其实我是不见知识库的因为在我眼里我是想做这个自我进化的一个完整的东西 就像个智能体样对我来讲知识库就是他查的字典 所以说的话主播的这个记忆链条是按场景分的 这里的话咱们还是拿了个源头来",
+      "segments": [
+        {
+          "start": 18.16,
+          "end": 23.02,
+          "text": "其实我是不见知识库的因为在我眼里我是想做这个自我进化的一个完整的东西"
+        },
+        {
+          "start": 23.28,
+          "end": 25.84,
+          "text": "就像个智能体样对我来讲知识库就是他查的字典"
+        },
+        {
+          "start": 26.6,
+          "end": 29.68,
+          "text": "所以说的话主播的这个记忆链条是按场景分的"
+        },
+        {
+          "start": 29.68,
+          "end": 32.52,
+          "text": "这里的话咱们还是拿了个源头来"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0004_t000019.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0004_t000019.1.jpg",
+          "t": 19.1,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0005_t000024.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0005_t000024.4.jpg",
+          "t": 24.4,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0006_t000029.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0006_t000029.3.jpg",
+          "t": 29.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0003",
+      "start": 30.0,
+      "end": 40.0,
+      "transcript": "这里的话咱们还是拿了个源头来 比如说咱们长进一长进一的话 它是有自己的私有记忆的 这个私有记忆是怎么来的呢 这个私有记忆是在通过这个绘画的吧",
+      "segments": [
+        {
+          "start": 29.68,
+          "end": 32.52,
+          "text": "这里的话咱们还是拿了个源头来"
+        },
+        {
+          "start": 33.52,
+          "end": 35.88,
+          "text": "比如说咱们长进一长进一的话"
+        },
+        {
+          "start": 35.88,
+          "end": 37.08,
+          "text": "它是有自己的私有记忆的"
+        },
+        {
+          "start": 37.08,
+          "end": 38.88,
+          "text": "这个私有记忆是怎么来的呢"
+        },
+        {
+          "start": 38.88,
+          "end": 41.48,
+          "text": "这个私有记忆是在通过这个绘画的吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0006_t000029.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0006_t000029.3.jpg",
+          "t": 29.3,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0007_t000034.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0007_t000034.2.jpg",
+          "t": 34.167,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0008_t000039.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0008_t000039.0.jpg",
+          "t": 39.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.866,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0004",
+      "start": 40.0,
+      "end": 50.0,
+      "transcript": "这个私有记忆是在通过这个绘画的吧 这个绘画其实就是这个集是推点模型 他在做项目的时候是提炼出来了 这个私有记忆其实不会有多少的 你比如他做这个项目 这个项目是做一个网页",
+      "segments": [
+        {
+          "start": 38.88,
+          "end": 41.48,
+          "text": "这个私有记忆是在通过这个绘画的吧"
+        },
+        {
+          "start": 41.48,
+          "end": 43.28,
+          "text": "这个绘画其实就是这个集是推点模型"
+        },
+        {
+          "start": 43.28,
+          "end": 45.68,
+          "text": "他在做项目的时候是提炼出来了"
+        },
+        {
+          "start": 45.68,
+          "end": 47.48,
+          "text": "这个私有记忆其实不会有多少的"
+        },
+        {
+          "start": 47.48,
+          "end": 48.58,
+          "text": "你比如他做这个项目"
+        },
+        {
+          "start": 48.58,
+          "end": 50.18,
+          "text": "这个项目是做一个网页"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0008_t000039.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0008_t000039.0.jpg",
+          "t": 39.033,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0009_t000043.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0009_t000043.9.jpg",
+          "t": 43.934,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0010_t000048.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0010_t000048.8.jpg",
+          "t": 48.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.866,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0005",
+      "start": 50.0,
+      "end": 60.0,
+      "transcript": "这个项目是做一个网页 这个网页最多也就是一个网址 对吧 然后修改哪些地方就是哪些地方 然后有什么文念夹什么样 他这个私有记忆纸包含他的职责 或者是再加一些额外的东西",
+      "segments": [
+        {
+          "start": 48.58,
+          "end": 50.18,
+          "text": "这个项目是做一个网页"
+        },
+        {
+          "start": 50.18,
+          "end": 52.68,
+          "text": "这个网页最多也就是一个网址"
+        },
+        {
+          "start": 52.68,
+          "end": 52.98,
+          "text": "对吧"
+        },
+        {
+          "start": 52.98,
+          "end": 54.68,
+          "text": "然后修改哪些地方就是哪些地方"
+        },
+        {
+          "start": 54.68,
+          "end": 56.48,
+          "text": "然后有什么文念夹什么样"
+        },
+        {
+          "start": 56.48,
+          "end": 58.88,
+          "text": "他这个私有记忆纸包含他的职责"
+        },
+        {
+          "start": 58.88,
+          "end": 60.58,
+          "text": "或者是再加一些额外的东西"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0011_t000053.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0011_t000053.7.jpg",
+          "t": 53.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0012_t000058.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0012_t000058.6.jpg",
+          "t": 58.566,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.899,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0006",
+      "start": 60.0,
+      "end": 70.0,
+      "transcript": "或者是再加一些额外的东西 你比如说 他要记住什么 你要发布一个网页对吧 比如在那个codefire 你要寄一个API可以让他能操作的吧 你比如说你要推那个github",
+      "segments": [
+        {
+          "start": 58.88,
+          "end": 60.58,
+          "text": "或者是再加一些额外的东西"
+        },
+        {
+          "start": 60.58,
+          "end": 61.68,
+          "text": "你比如说"
+        },
+        {
+          "start": 61.68,
+          "end": 62.98,
+          "text": "他要记住什么"
+        },
+        {
+          "start": 62.98,
+          "end": 64.68,
+          "text": "你要发布一个网页对吧"
+        },
+        {
+          "start": 64.68,
+          "end": 65.88,
+          "text": "比如在那个codefire"
+        },
+        {
+          "start": 65.88,
+          "end": 68.28,
+          "text": "你要寄一个API可以让他能操作的吧"
+        },
+        {
+          "start": 68.28,
+          "end": 70.08,
+          "text": "你比如说你要推那个github"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0013_t000063.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0013_t000063.4.jpg",
+          "t": 63.433,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0014_t000068.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0014_t000068.3.jpg",
+          "t": 68.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0007",
+      "start": 70.0,
+      "end": 80.0,
+      "transcript": "你比如说你要推那个github 他就只寄这些简单的就行 他其实没有多少记忆的 哪怕你加一个项目二是程序开发的 他也只要寄一些比较核心的东西 然后像大家可能会觉得 我做这个会做这个项目",
+      "segments": [
+        {
+          "start": 68.28,
+          "end": 70.08,
+          "text": "你比如说你要推那个github"
+        },
+        {
+          "start": 70.08,
+          "end": 71.68,
+          "text": "他就只寄这些简单的就行"
+        },
+        {
+          "start": 71.68,
+          "end": 73.38,
+          "text": "他其实没有多少记忆的"
+        },
+        {
+          "start": 73.38,
+          "end": 75.48,
+          "text": "哪怕你加一个项目二是程序开发的"
+        },
+        {
+          "start": 75.48,
+          "end": 77.88,
+          "text": "他也只要寄一些比较核心的东西"
+        },
+        {
+          "start": 77.88,
+          "end": 79.58,
+          "text": "然后像大家可能会觉得"
+        },
+        {
+          "start": 79.58,
+          "end": 80.98,
+          "text": "我做这个会做这个项目"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0015_t000073.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0015_t000073.2.jpg",
+          "t": 73.2,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0016_t000078.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0016_t000078.1.jpg",
+          "t": 78.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0008",
+      "start": 80.0,
+      "end": 90.0,
+      "transcript": "我做这个会做这个项目 他产生了项目信息 他就是他的记忆 但其实不是的 他做这个东西 他产生的项目信息 他是独立的 每个项目都有自己的项目信息 这其实我没有规律到他的记忆里",
+      "segments": [
+        {
+          "start": 79.58,
+          "end": 80.98,
+          "text": "我做这个会做这个项目"
+        },
+        {
+          "start": 80.98,
+          "end": 82.08,
+          "text": "他产生了项目信息"
+        },
+        {
+          "start": 82.08,
+          "end": 82.98,
+          "text": "他就是他的记忆"
+        },
+        {
+          "start": 82.98,
+          "end": 84.08,
+          "text": "但其实不是的"
+        },
+        {
+          "start": 84.08,
+          "end": 84.88,
+          "text": "他做这个东西"
+        },
+        {
+          "start": 84.88,
+          "end": 85.68,
+          "text": "他产生的项目信息"
+        },
+        {
+          "start": 85.68,
+          "end": 86.68,
+          "text": "他是独立的"
+        },
+        {
+          "start": 86.68,
+          "end": 87.98,
+          "text": "每个项目都有自己的项目信息"
+        },
+        {
+          "start": 87.98,
+          "end": 90.18,
+          "text": "这其实我没有规律到他的记忆里"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0017_t000082.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0017_t000082.9.jpg",
+          "t": 82.934,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0018_t000087.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0018_t000087.8.jpg",
+          "t": 87.834,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0009",
+      "start": 90.0,
+      "end": 100.0,
+      "transcript": "这其实我没有规律到他的记忆里 还有一些比如说已经救了的项目信息或者合并的 只要丢到原始层原始层就是指甲不减 就是后面如果说真的有什么东西重要的东西 没有体验的话 这个原始层还可以再体验",
+      "segments": [
+        {
+          "start": 87.98,
+          "end": 90.18,
+          "text": "这其实我没有规律到他的记忆里"
+        },
+        {
+          "start": 90.18,
+          "end": 93.38,
+          "text": "还有一些比如说已经救了的项目信息或者合并的"
+        },
+        {
+          "start": 93.38,
+          "end": 95.78,
+          "text": "只要丢到原始层原始层就是指甲不减"
+        },
+        {
+          "start": 95.78,
+          "end": 98.58,
+          "text": "就是后面如果说真的有什么东西重要的东西"
+        },
+        {
+          "start": 98.58,
+          "end": 99.28,
+          "text": "没有体验的话"
+        },
+        {
+          "start": 99.28,
+          "end": 101.18,
+          "text": "这个原始层还可以再体验"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0019_t000092.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0019_t000092.7.jpg",
+          "t": 92.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0020_t000097.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0020_t000097.6.jpg",
+          "t": 97.566,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.866,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0010",
+      "start": 100.0,
+      "end": 110.0,
+      "transcript": "这个原始层还可以再体验 其次就是主播这边 你比如像这个历史绘画 他也是丢到这个原始层的 然后场景一的话 这个一个私有记忆就是场景一的记忆情况的话",
+      "segments": [
+        {
+          "start": 99.28,
+          "end": 101.18,
+          "text": "这个原始层还可以再体验"
+        },
+        {
+          "start": 101.18,
+          "end": 102.68,
+          "text": "其次就是主播这边"
+        },
+        {
+          "start": 102.68,
+          "end": 103.88,
+          "text": "你比如像这个历史绘画"
+        },
+        {
+          "start": 103.88,
+          "end": 106.38,
+          "text": "他也是丢到这个原始层的"
+        },
+        {
+          "start": 106.38,
+          "end": 107.58,
+          "text": "然后场景一的话"
+        },
+        {
+          "start": 107.58,
+          "end": 110.88,
+          "text": "这个一个私有记忆就是场景一的记忆情况的话"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0021_t000102.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0021_t000102.5.jpg",
+          "t": 102.466,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0022_t000107.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0022_t000107.3.jpg",
+          "t": 107.333,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0011",
+      "start": 110.0,
+      "end": 120.0,
+      "transcript": "这个一个私有记忆就是场景一的记忆情况的话 就是他的私有记忆 以他这个项目信息 然后再看共享层共享层的话 其实就是一个共享技能跟这个自由技能其实是一样的 也算是一个知识库吧",
+      "segments": [
+        {
+          "start": 107.58,
+          "end": 110.88,
+          "text": "这个一个私有记忆就是场景一的记忆情况的话"
+        },
+        {
+          "start": 110.88,
+          "end": 111.88,
+          "text": "就是他的私有记忆"
+        },
+        {
+          "start": 111.88,
+          "end": 113.88,
+          "text": "以他这个项目信息"
+        },
+        {
+          "start": 113.88,
+          "end": 116.18,
+          "text": "然后再看共享层共享层的话"
+        },
+        {
+          "start": 116.18,
+          "end": 119.38,
+          "text": "其实就是一个共享技能跟这个自由技能其实是一样的"
+        },
+        {
+          "start": 119.38,
+          "end": 121.38,
+          "text": "也算是一个知识库吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0023_t000112.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0023_t000112.2.jpg",
+          "t": 112.2,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0024_t000117.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0024_t000117.1.jpg",
+          "t": 117.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0012",
+      "start": 120.0,
+      "end": 130.0,
+      "transcript": "也算是一个知识库吧 比如说场景一他发现了一个什么好东西 他可以共享到这个共享技能上 然后别人就可以和他一样 对吧别人看到这个共享技能 他就就会了 比如他操纵我可巴黎之类的",
+      "segments": [
+        {
+          "start": 119.38,
+          "end": 121.38,
+          "text": "也算是一个知识库吧"
+        },
+        {
+          "start": 121.38,
+          "end": 123.58,
+          "text": "比如说场景一他发现了一个什么好东西"
+        },
+        {
+          "start": 123.58,
+          "end": 125.38,
+          "text": "他可以共享到这个共享技能上"
+        },
+        {
+          "start": 125.38,
+          "end": 127.58,
+          "text": "然后别人就可以和他一样"
+        },
+        {
+          "start": 127.58,
+          "end": 128.88,
+          "text": "对吧别人看到这个共享技能"
+        },
+        {
+          "start": 128.88,
+          "end": 129.68,
+          "text": "他就就会了"
+        },
+        {
+          "start": 129.68,
+          "end": 131.38,
+          "text": "比如他操纵我可巴黎之类的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0025_t000122.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0025_t000122.0.jpg",
+          "t": 121.967,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0026_t000126.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0026_t000126.8.jpg",
+          "t": 126.834,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0013",
+      "start": 130.0,
+      "end": 140.0,
+      "transcript": "比如他操纵我可巴黎之类的 然后整个就是一个这样的 还有一个就是我个人的 个人的话就是我是这样分的 我这边再打开一个网页",
+      "segments": [
+        {
+          "start": 129.68,
+          "end": 131.38,
+          "text": "比如他操纵我可巴黎之类的"
+        },
+        {
+          "start": 132.18,
+          "end": 134.08,
+          "text": "然后整个就是一个这样的"
+        },
+        {
+          "start": 134.08,
+          "end": 135.48,
+          "text": "还有一个就是我个人的"
+        },
+        {
+          "start": 136.08,
+          "end": 138.08,
+          "text": "个人的话就是我是这样分的"
+        },
+        {
+          "start": 138.08,
+          "end": 139.48,
+          "text": "我这边再打开一个网页"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0027_t000131.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0027_t000131.7.jpg",
+          "t": 131.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0028_t000140.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0028_t000140.2.jpg",
+          "t": 140.234,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.267,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0014",
+      "start": 140.0,
+      "end": 150.0,
+      "transcript": "像我整理个人的知识库 我的知识库都是交给某一个场景的 比如说我的个人负盘和私人档案 我全部都是交给这一个场景去干的",
+      "segments": [
+        {
+          "start": 141.55,
+          "end": 143.65,
+          "text": "像我整理个人的知识库"
+        },
+        {
+          "start": 143.65,
+          "end": 145.85,
+          "text": "我的知识库都是交给某一个场景的"
+        },
+        {
+          "start": 145.85,
+          "end": 148.41,
+          "text": "比如说我的个人负盘和私人档案"
+        },
+        {
+          "start": 148.67,
+          "end": 151.47,
+          "text": "我全部都是交给这一个场景去干的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0028_t000140.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0028_t000140.2.jpg",
+          "t": 140.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0029_t000141.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0029_t000141.5.jpg",
+          "t": 141.467,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0030_t000149.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0030_t000149.0.jpg",
+          "t": 149.0,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0031_t000150.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0031_t000150.0.jpg",
+          "t": 150.034,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 7.533,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0015",
+      "start": 150.0,
+      "end": 160.0,
+      "transcript": "我全部都是交给这一个场景去干的 因为我不需要说很多很多的知识 比如说我要看什么 文章什么东西啊我只需要让他抓一些 关键东西对吧然后把原文比如说保存在哪个地方啊",
+      "segments": [
+        {
+          "start": 148.67,
+          "end": 151.47,
+          "text": "我全部都是交给这一个场景去干的"
+        },
+        {
+          "start": 151.73,
+          "end": 153.53,
+          "text": "因为我不需要说很多很多的知识"
+        },
+        {
+          "start": 153.79,
+          "end": 154.81,
+          "text": "比如说我要看什么"
+        },
+        {
+          "start": 155.07,
+          "end": 157.37,
+          "text": "文章什么东西啊我只需要让他抓一些"
+        },
+        {
+          "start": 157.63,
+          "end": 160.45,
+          "text": "关键东西对吧然后把原文比如说保存在哪个地方啊"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0030_t000149.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0030_t000149.0.jpg",
+          "t": 149.0,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0031_t000150.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0031_t000150.0.jpg",
+          "t": 150.034,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0032_t000151.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0032_t000151.2.jpg",
+          "t": 151.233,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0033_t000159.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0033_t000159.2.jpg",
+          "t": 159.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0034_t000161.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0034_t000161.0.jpg",
+          "t": 161.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 8.001,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0016",
+      "start": 160.0,
+      "end": 170.0,
+      "transcript": "关键东西对吧然后把原文比如说保存在哪个地方啊 或者是怎么样 就可以啊因为这是你自己看的一个东西啊 所以说就是平常你根本就不需要去 打理的你自己一个人的这个知识含量是有限的",
+      "segments": [
+        {
+          "start": 157.63,
+          "end": 160.45,
+          "text": "关键东西对吧然后把原文比如说保存在哪个地方啊"
+        },
+        {
+          "start": 160.71,
+          "end": 161.47,
+          "text": "或者是怎么样"
+        },
+        {
+          "start": 161.97,
+          "end": 164.29,
+          "text": "就可以啊因为这是你自己看的一个东西啊"
+        },
+        {
+          "start": 165.57,
+          "end": 168.13,
+          "text": "所以说就是平常你根本就不需要去"
+        },
+        {
+          "start": 168.89,
+          "end": 171.97,
+          "text": "打理的你自己一个人的这个知识含量是有限的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0033_t000159.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0033_t000159.2.jpg",
+          "t": 159.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0034_t000161.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0034_t000161.0.jpg",
+          "t": 161.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0035_t000162.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0035_t000162.1.jpg",
+          "t": 162.134,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0036_t000170.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0036_t000170.8.jpg",
+          "t": 170.766,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 7.866,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0017",
+      "start": 170.0,
+      "end": 180.0,
+      "transcript": "打理的你自己一个人的这个知识含量是有限的 每次提取的东西也是有限的 把这些我觉得能用的理解就行 其次还有一个算是这个记忆层的就是咱们这个软件的一个记忆",
+      "segments": [
+        {
+          "start": 168.89,
+          "end": 171.97,
+          "text": "打理的你自己一个人的这个知识含量是有限的"
+        },
+        {
+          "start": 171.97,
+          "end": 173.97,
+          "text": "每次提取的东西也是有限的"
+        },
+        {
+          "start": 173.97,
+          "end": 175.97,
+          "text": "把这些我觉得能用的理解就行"
+        },
+        {
+          "start": 175.97,
+          "end": 181.97,
+          "text": "其次还有一个算是这个记忆层的就是咱们这个软件的一个记忆"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0036_t000170.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0036_t000170.8.jpg",
+          "t": 170.766,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0037_t000175.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0037_t000175.6.jpg",
+          "t": 175.633,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0038_t000180.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0038_t000180.5.jpg",
+          "t": 180.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0018",
+      "start": 180.0,
+      "end": 190.0,
+      "transcript": "其次还有一个算是这个记忆层的就是咱们这个软件的一个记忆 软件的话我是把它做成了一个零件库 就是相当于是可以自己改装自己的这么一个本地检索的一个东西 它的话就是把网上几乎能搜索到的信息",
+      "segments": [
+        {
+          "start": 175.97,
+          "end": 181.97,
+          "text": "其次还有一个算是这个记忆层的就是咱们这个软件的一个记忆"
+        },
+        {
+          "start": 181.97,
+          "end": 184.97,
+          "text": "软件的话我是把它做成了一个零件库"
+        },
+        {
+          "start": 184.97,
+          "end": 188.97,
+          "text": "就是相当于是可以自己改装自己的这么一个本地检索的一个东西"
+        },
+        {
+          "start": 188.97,
+          "end": 191.97,
+          "text": "它的话就是把网上几乎能搜索到的信息"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0038_t000180.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0038_t000180.5.jpg",
+          "t": 180.5,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0039_t000185.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0039_t000185.4.jpg",
+          "t": 185.4,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0040_t000190.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0040_t000190.3.jpg",
+          "t": 190.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0019",
+      "start": 190.0,
+      "end": 200.0,
+      "transcript": "它的话就是把网上几乎能搜索到的信息 全部都保留在本地 然后避免再次浪费这个talk 如果说有哪一方面需要的升级 它就直接去读就可以了 然后像这个记忆机制的话就是这么一个情况",
+      "segments": [
+        {
+          "start": 188.97,
+          "end": 191.97,
+          "text": "它的话就是把网上几乎能搜索到的信息"
+        },
+        {
+          "start": 191.97,
+          "end": 192.97,
+          "text": "全部都保留在本地"
+        },
+        {
+          "start": 192.97,
+          "end": 195.97,
+          "text": "然后避免再次浪费这个talk"
+        },
+        {
+          "start": 195.97,
+          "end": 197.97,
+          "text": "如果说有哪一方面需要的升级"
+        },
+        {
+          "start": 197.97,
+          "end": 199.97,
+          "text": "它就直接去读就可以了"
+        },
+        {
+          "start": 199.97,
+          "end": 207.05,
+          "text": "然后像这个记忆机制的话就是这么一个情况"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0040_t000190.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0040_t000190.3.jpg",
+          "t": 190.267,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0041_t000195.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0041_t000195.1.jpg",
+          "t": 195.134,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0042_t000200.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0042_t000200.0.jpg",
+          "t": 200.034,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0020",
+      "start": 200.0,
+      "end": 210.0,
+      "transcript": "然后像这个记忆机制的话就是这么一个情况 从这个全图来看的话就比较简单啊",
+      "segments": [
+        {
+          "start": 199.97,
+          "end": 207.05,
+          "text": "然后像这个记忆机制的话就是这么一个情况"
+        },
+        {
+          "start": 207.05,
+          "end": 210.11,
+          "text": "从这个全图来看的话就比较简单啊"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0042_t000200.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0042_t000200.0.jpg",
+          "t": 200.034,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0043_t000204.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0043_t000204.4.jpg",
+          "t": 204.4,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0044_t000209.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0044_t000209.8.jpg",
+          "t": 209.766,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 5.366,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0021",
+      "start": 210.0,
+      "end": 220.0,
+      "transcript": "从这个全图来看的话就比较简单啊 主播是分为一个L5归党层 归党层的话他就是指定不改 什么没用的东西有用的东西或者说 产生的各种东西都往这边搬啊 这个东西就是指定不改",
+      "segments": [
+        {
+          "start": 207.05,
+          "end": 210.11,
+          "text": "从这个全图来看的话就比较简单啊"
+        },
+        {
+          "start": 210.11,
+          "end": 214.99,
+          "text": "主播是分为一个L5归党层 归党层的话他就是指定不改"
+        },
+        {
+          "start": 214.99,
+          "end": 217.29,
+          "text": "什么没用的东西有用的东西或者说"
+        },
+        {
+          "start": 217.29,
+          "end": 220.61,
+          "text": "产生的各种东西都往这边搬啊 这个东西就是指定不改"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0044_t000209.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0044_t000209.8.jpg",
+          "t": 209.766,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0045_t000214.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0045_t000214.7.jpg",
+          "t": 214.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0046_t000219.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0046_t000219.5.jpg",
+          "t": 219.533,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.866,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0022",
+      "start": 220.0,
+      "end": 230.0,
+      "transcript": "产生的各种东西都往这边搬啊 这个东西就是指定不改 如果有重复自断就可以自动合并啊 L4层是一个运行时 运行时的话其实它有一个审计的这么一个东西 它算是一个类似文档或者说一个任务",
+      "segments": [
+        {
+          "start": 217.29,
+          "end": 220.61,
+          "text": "产生的各种东西都往这边搬啊 这个东西就是指定不改"
+        },
+        {
+          "start": 220.61,
+          "end": 224.99,
+          "text": "如果有重复自断就可以自动合并啊"
+        },
+        {
+          "start": 224.99,
+          "end": 229.35,
+          "text": "L4层是一个运行时 运行时的话其实它有一个审计的这么一个东西"
+        },
+        {
+          "start": 229.35,
+          "end": 232.15,
+          "text": "它算是一个类似文档或者说一个任务"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0046_t000219.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0046_t000219.5.jpg",
+          "t": 219.533,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0047_t000224.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0047_t000224.4.jpg",
+          "t": 224.4,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0048_t000229.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0048_t000229.3.jpg",
+          "t": 229.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0023",
+      "start": 230.0,
+      "end": 240.0,
+      "transcript": "它算是一个类似文档或者说一个任务 其实也可以包含到记忆里面去 然后还有一个项目写回恋 比如说真实项目有自动规纳",
+      "segments": [
+        {
+          "start": 229.35,
+          "end": 232.15,
+          "text": "它算是一个类似文档或者说一个任务"
+        },
+        {
+          "start": 232.15,
+          "end": 233.69,
+          "text": "其实也可以包含到记忆里面去"
+        },
+        {
+          "start": 237.62,
+          "end": 241.46,
+          "text": "然后还有一个项目写回恋 比如说真实项目有自动规纳"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0048_t000229.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0048_t000229.3.jpg",
+          "t": 229.3,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0049_t000234.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0049_t000234.2.jpg",
+          "t": 234.167,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0050_t000239.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0050_t000239.0.jpg",
+          "t": 239.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.866,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0024",
+      "start": 240.0,
+      "end": 250.0,
+      "transcript": "然后还有一个项目写回恋 比如说真实项目有自动规纳 然后再到这个主人确认 这个主人下面是有个闸门的 就是必须得是他的项目 他才可以确认 然后后面就是项目记忆再加一个s0的指针",
+      "segments": [
+        {
+          "start": 237.62,
+          "end": 241.46,
+          "text": "然后还有一个项目写回恋 比如说真实项目有自动规纳"
+        },
+        {
+          "start": 241.72,
+          "end": 244.54,
+          "text": "然后再到这个主人确认 这个主人下面是有个闸门的"
+        },
+        {
+          "start": 245.04,
+          "end": 247.1,
+          "text": "就是必须得是他的项目 他才可以确认"
+        },
+        {
+          "start": 248.38,
+          "end": 250.94,
+          "text": "然后后面就是项目记忆再加一个s0的指针"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0050_t000239.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0050_t000239.0.jpg",
+          "t": 239.033,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0051_t000243.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0051_t000243.9.jpg",
+          "t": 243.933,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0052_t000248.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0052_t000248.8.jpg",
+          "t": 248.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0025",
+      "start": 250.0,
+      "end": 260.0,
+      "transcript": "然后后面就是项目记忆再加一个s0的指针 像主播的场景比较多 他每个场景都有自己的私有记忆 所以说 根本就不会存在说他记了很多东西 他要读很多东西 其实没有 比如说就像一个人一样",
+      "segments": [
+        {
+          "start": 248.38,
+          "end": 250.94,
+          "text": "然后后面就是项目记忆再加一个s0的指针"
+        },
+        {
+          "start": 252.22,
+          "end": 255.02,
+          "text": "像主播的场景比较多 他每个场景都有自己的私有记忆"
+        },
+        {
+          "start": 255.28,
+          "end": 255.54,
+          "text": "所以说"
+        },
+        {
+          "start": 256.06,
+          "end": 259.64,
+          "text": "根本就不会存在说他记了很多东西 他要读很多东西 其实没有"
+        },
+        {
+          "start": 259.9,
+          "end": 261.18,
+          "text": "比如说就像一个人一样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0053_t000253.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0053_t000253.7.jpg",
+          "t": 253.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0054_t000258.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0054_t000258.6.jpg",
+          "t": 258.567,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0026",
+      "start": 260.0,
+      "end": 270.0,
+      "transcript": "比如说就像一个人一样 你一个人的话 你去 在这个工作中对吧你的职责都是固定的 你需要记住什么你只需要记住早上起来吃饭什么时候去上班",
+      "segments": [
+        {
+          "start": 259.9,
+          "end": 261.18,
+          "text": "比如说就像一个人一样"
+        },
+        {
+          "start": 261.7,
+          "end": 263.48,
+          "text": "你一个人的话 你去"
+        },
+        {
+          "start": 263.48,
+          "end": 267.06,
+          "text": "在这个工作中对吧你的职责都是固定的"
+        },
+        {
+          "start": 267.32,
+          "end": 271.42,
+          "text": "你需要记住什么你只需要记住早上起来吃饭什么时候去上班"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0055_t000268.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0055_t000268.3.jpg",
+          "t": 268.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0027",
+      "start": 270.0,
+      "end": 280.0,
+      "transcript": "你需要记住什么你只需要记住早上起来吃饭什么时候去上班 什么时候做好自己的事情 对吧记住老板是谁该打招呼打招呼其实没有多少的 大家不信你可以拆解一下 对吧刚刚在这个录频可能讲的时候有一些",
+      "segments": [
+        {
+          "start": 267.32,
+          "end": 271.42,
+          "text": "你需要记住什么你只需要记住早上起来吃饭什么时候去上班"
+        },
+        {
+          "start": 271.68,
+          "end": 272.96,
+          "text": "什么时候做好自己的事情"
+        },
+        {
+          "start": 273.46,
+          "end": 276.28,
+          "text": "对吧记住老板是谁该打招呼打招呼其实没有多少的"
+        },
+        {
+          "start": 276.8,
+          "end": 278.32,
+          "text": "大家不信你可以拆解一下"
+        },
+        {
+          "start": 279.36,
+          "end": 282.16,
+          "text": "对吧刚刚在这个录频可能讲的时候有一些"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0056_t000273.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0056_t000273.2.jpg",
+          "t": 273.2,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0057_t000278.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0057_t000278.1.jpg",
+          "t": 278.066,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0058_t000278.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0058_t000278.7.jpg",
+          "t": 278.7,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 4.866,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0028",
+      "start": 280.0,
+      "end": 290.0,
+      "transcript": "对吧刚刚在这个录频可能讲的时候有一些 简单的混乱你就比如说我这一个场景他就像一个人一样 他运为我这个服务器运为这个网站他就只干这些事对吧他就相当于",
+      "segments": [
+        {
+          "start": 279.36,
+          "end": 282.16,
+          "text": "对吧刚刚在这个录频可能讲的时候有一些"
+        },
+        {
+          "start": 282.42,
+          "end": 285.24,
+          "text": "简单的混乱你就比如说我这一个场景他就像一个人一样"
+        },
+        {
+          "start": 285.76,
+          "end": 289.84,
+          "text": "他运为我这个服务器运为这个网站他就只干这些事对吧他就相当于"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0059_t000287.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0059_t000287.8.jpg",
+          "t": 287.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.833,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0029",
+      "start": 290.0,
+      "end": 300.0,
+      "transcript": "他不会有其他的记忆他只要记住他的职责要记一下这个 怎么连接服务器的这个服务器的这个IP地址什么这个密码什么好了 他这个服务器就这么对就这么多东西 然后他再记一下这个家长端是怎么推送发布的",
+      "segments": [
+        {
+          "start": 290.1,
+          "end": 293.44,
+          "text": "他不会有其他的记忆他只要记住他的职责要记一下这个"
+        },
+        {
+          "start": 293.48,
+          "end": 297.38,
+          "text": "怎么连接服务器的这个服务器的这个IP地址什么这个密码什么好了"
+        },
+        {
+          "start": 297.38,
+          "end": 299.18,
+          "text": "他这个服务器就这么对就这么多东西"
+        },
+        {
+          "start": 299.18,
+          "end": 302.38,
+          "text": "然后他再记一下这个家长端是怎么推送发布的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0060_t000292.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0060_t000292.7.jpg",
+          "t": 292.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0061_t000297.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0061_t000297.6.jpg",
+          "t": 297.567,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0062_t000300.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0062_t000300.6.jpg",
+          "t": 300.634,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0030",
+      "start": 300.0,
+      "end": 310.0,
+      "transcript": "然后他再记一下这个家长端是怎么推送发布的 记不记一下这个链条对吧 他再记一下别的端是怎么推送发布的 然后再记一下几个网址 就把这些核心的记了之后 他其实就没有啥了",
+      "segments": [
+        {
+          "start": 299.18,
+          "end": 302.38,
+          "text": "然后他再记一下这个家长端是怎么推送发布的"
+        },
+        {
+          "start": 302.38,
+          "end": 303.98,
+          "text": "记不记一下这个链条对吧"
+        },
+        {
+          "start": 303.98,
+          "end": 306.78,
+          "text": "他再记一下别的端是怎么推送发布的"
+        },
+        {
+          "start": 306.78,
+          "end": 308.68,
+          "text": "然后再记一下几个网址"
+        },
+        {
+          "start": 308.68,
+          "end": 309.88,
+          "text": "就把这些核心的记了之后"
+        },
+        {
+          "start": 309.88,
+          "end": 311.48,
+          "text": "他其实就没有啥了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0062_t000300.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0062_t000300.6.jpg",
+          "t": 300.634,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0063_t000307.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0063_t000307.3.jpg",
+          "t": 307.334,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 6.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0031",
+      "start": 310.0,
+      "end": 320.0,
+      "transcript": "他其实就没有啥了 这个剩下的文件都是缩影 他要改什么地方改成东西 就是地图和缩影啊 所以我建议大家不要像网上一样说",
+      "segments": [
+        {
+          "start": 309.88,
+          "end": 311.48,
+          "text": "他其实就没有啥了"
+        },
+        {
+          "start": 311.48,
+          "end": 313.18,
+          "text": "这个剩下的文件都是缩影"
+        },
+        {
+          "start": 313.18,
+          "end": 315.38,
+          "text": "他要改什么地方改成东西"
+        },
+        {
+          "start": 315.38,
+          "end": 319.72,
+          "text": "就是地图和缩影啊"
+        },
+        {
+          "start": 319.72,
+          "end": 323.12,
+          "text": "所以我建议大家不要像网上一样说"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0064_t000312.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0064_t000312.2.jpg",
+          "t": 312.233,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0065_t000317.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0065_t000317.1.jpg",
+          "t": 317.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0032",
+      "start": 320.0,
+      "end": 330.0,
+      "transcript": "所以我建议大家不要像网上一样说 我不太喜歡那個 那個第二大腦啊 我是覺得你一個人也好或者是對於他來好 或者對於某個場景你要把它分開來的",
+      "segments": [
+        {
+          "start": 319.72,
+          "end": 323.12,
+          "text": "所以我建议大家不要像网上一样说"
+        },
+        {
+          "start": 323.12,
+          "end": 324.66,
+          "text": "我不太喜歡那個"
+        },
+        {
+          "start": 325.42,
+          "end": 326.46,
+          "text": "那個第二大腦啊"
+        },
+        {
+          "start": 326.46,
+          "end": 329.26,
+          "text": "我是覺得你一個人也好或者是對於他來好"
+        },
+        {
+          "start": 329.26,
+          "end": 331.06,
+          "text": "或者對於某個場景你要把它分開來的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0066_t000322.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0066_t000322.0.jpg",
+          "t": 321.966,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0067_t000326.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0067_t000326.9.jpg",
+          "t": 326.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.901,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0033",
+      "start": 330.0,
+      "end": 340.0,
+      "transcript": "或者對於某個場景你要把它分開來的 就是你的記憶是你的記憶 我的記憶是我的記憶 你的需要這種翻了就像人用詞典一樣 他也需要翻一個東西",
+      "segments": [
+        {
+          "start": 329.26,
+          "end": 331.06,
+          "text": "或者對於某個場景你要把它分開來的"
+        },
+        {
+          "start": 331.56,
+          "end": 333.1,
+          "text": "就是你的記憶是你的記憶"
+        },
+        {
+          "start": 333.36,
+          "end": 334.38,
+          "text": "我的記憶是我的記憶"
+        },
+        {
+          "start": 334.9,
+          "end": 338.22,
+          "text": "你的需要這種翻了就像人用詞典一樣"
+        },
+        {
+          "start": 338.22,
+          "end": 339.76,
+          "text": "他也需要翻一個東西"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0068_t000331.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0068_t000331.7.jpg",
+          "t": 331.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0069_t000336.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0069_t000336.6.jpg",
+          "t": 336.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0034",
+      "start": 340.0,
+      "end": 350.0,
+      "transcript": "就像他的詞典一樣 就是把它好好的分層管理一下就是最好的 不要說把什麼東西都丟一塊 再建一個地圖 那其實就像是人是茶字典對吧",
+      "segments": [
+        {
+          "start": 340.02,
+          "end": 341.04,
+          "text": "就像他的詞典一樣"
+        },
+        {
+          "start": 341.54,
+          "end": 343.86,
+          "text": "就是把它好好的分層管理一下就是最好的"
+        },
+        {
+          "start": 344.36,
+          "end": 346.16,
+          "text": "不要說把什麼東西都丟一塊"
+        },
+        {
+          "start": 346.42,
+          "end": 347.18,
+          "text": "再建一個地圖"
+        },
+        {
+          "start": 348.2,
+          "end": 350.26,
+          "text": "那其實就像是人是茶字典對吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0070_t000341.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0070_t000341.5.jpg",
+          "t": 341.5,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0071_t000346.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0071_t000346.4.jpg",
+          "t": 346.367,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0035",
+      "start": 350.0,
+      "end": 360.0,
+      "transcript": "那其實就像是人是茶字典對吧 後面的話主播有可能會做一個這種百科全庫 但是也只是独立在这个智能体之外了 他就像一个他整体这么多场景加一块 他们就像一个人一样",
+      "segments": [
+        {
+          "start": 348.2,
+          "end": 350.26,
+          "text": "那其實就像是人是茶字典對吧"
+        },
+        {
+          "start": 350.26,
+          "end": 353.06,
+          "text": "後面的話主播有可能會做一個這種百科全庫"
+        },
+        {
+          "start": 353.12,
+          "end": 356.7,
+          "text": "但是也只是独立在这个智能体之外了"
+        },
+        {
+          "start": 356.96,
+          "end": 359.52,
+          "text": "他就像一个他整体这么多场景加一块"
+        },
+        {
+          "start": 359.78,
+          "end": 360.8,
+          "text": "他们就像一个人一样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0072_t000351.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0072_t000351.2.jpg",
+          "t": 351.233,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0073_t000356.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0073_t000356.1.jpg",
+          "t": 356.133,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0074_t000361.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0074_t000361.0.jpg",
+          "t": 361.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0036",
+      "start": 360.0,
+      "end": 370.0,
+      "transcript": "他们就像一个人一样 他不需要把这些知识库全部拆进他的记忆他只需要在他 想会的时候去找就行了对吧 主播的意见啊你就像一个人一样",
+      "segments": [
+        {
+          "start": 359.78,
+          "end": 360.8,
+          "text": "他们就像一个人一样"
+        },
+        {
+          "start": 361.06,
+          "end": 364.12,
+          "text": "他不需要把这些知识库全部拆进他的记忆他只需要在他"
+        },
+        {
+          "start": 364.38,
+          "end": 366.44,
+          "text": "想会的时候去找就行了对吧"
+        },
+        {
+          "start": 367.96,
+          "end": 370.26,
+          "text": "主播的意见啊你就像一个人一样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0074_t000361.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0074_t000361.0.jpg",
+          "t": 361.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0075_t000365.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0075_t000365.9.jpg",
+          "t": 365.867,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0076_t000370.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0076_t000370.8.jpg",
+          "t": 370.767,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0037",
+      "start": 370.0,
+      "end": 380.0,
+      "transcript": "主播的意见啊你就像一个人一样 其实没必要 就是有些东西你放进去对吧你只要不是什么做律师啊 或者说你要写这个招标文件基本上不会说有多少文件的 就算是你是一个做学术的",
+      "segments": [
+        {
+          "start": 367.96,
+          "end": 370.26,
+          "text": "主播的意见啊你就像一个人一样"
+        },
+        {
+          "start": 370.52,
+          "end": 371.04,
+          "text": "其实没必要"
+        },
+        {
+          "start": 371.3,
+          "end": 375.14,
+          "text": "就是有些东西你放进去对吧你只要不是什么做律师啊"
+        },
+        {
+          "start": 375.4,
+          "end": 378.72,
+          "text": "或者说你要写这个招标文件基本上不会说有多少文件的"
+        },
+        {
+          "start": 379.24,
+          "end": 381.28,
+          "text": "就算是你是一个做学术的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0076_t000370.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0076_t000370.8.jpg",
+          "t": 370.767,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0077_t000375.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0077_t000375.6.jpg",
+          "t": 375.634,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0078_t000380.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0078_t000380.5.jpg",
+          "t": 380.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.867,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0038",
+      "start": 380.0,
+      "end": 390.0,
+      "transcript": "就算是你是一个做学术的 你把那个pdf一提炼对吧其实也没有多少东西啊 整体就是这么一个情况",
+      "segments": [
+        {
+          "start": 379.24,
+          "end": 381.28,
+          "text": "就算是你是一个做学术的"
+        },
+        {
+          "start": 381.28,
+          "end": 384.86,
+          "text": "你把那个pdf一提炼对吧其实也没有多少东西啊"
+        },
+        {
+          "start": 386.81,
+          "end": 388.85,
+          "text": "整体就是这么一个情况"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0078_t000380.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0078_t000380.5.jpg",
+          "t": 380.5,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0079_t000385.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1qrxD6qEcY\\frames\\0079_t000385.4.jpg",
+          "t": 385.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 4.9,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0039",
+      "start": 390.0,
+      "end": 390.251,
+      "transcript": "",
+      "segments": [],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 0.251,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    }
+  ]
+}
