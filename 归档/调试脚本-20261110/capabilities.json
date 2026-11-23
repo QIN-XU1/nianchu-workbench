@@ -1,0 +1,621 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-06T10:24:29.220Z",
+  "bridge": {
+    "label": "桥（外包给免费网页 AI）",
+    "kind": "bridge",
+    "defaultOn": false,
+    "sites": {
+      "deepseek": {
+        "label": "DeepSeek 网页版",
+        "on": false,
+        "cost": "零 token（走浏览器）",
+        "latency": "约 5 秒/次"
+      }
+    },
+    "note": "一次问答、要一段文字；不适合批量或必须准时的任务",
+    "on": false
+  },
+  "mcp": {
+    "label": "MCP 工具",
+    "kind": "mcp",
+    "defaultOn": false,
+    "servers": {
+      "cua-driver": {
+        "label": "电脑操作（CUA）",
+        "on": false,
+        "cost": "约 26.8k token/轮"
+      },
+      "blender": {
+        "label": "Blender 操作",
+        "on": false,
+        "cost": "按需"
+      },
+      "filesystem": {
+        "label": "文件系统（本地只读）",
+        "on": false,
+        "cost": "约 3k token/轮",
+        "command": "node",
+        "dynamic": true
+      }
+    },
+    "note": "全开约 58k token/轮 —— 平时必须关着",
+    "on": false
+  },
+  "plugins": {
+    "label": "外挂插件",
+    "kind": "plugin",
+    "defaultOn": false,
+    "items": {},
+    "note": "按需启用，不用时关闭"
+  },
+  "audit": [
+    {
+      "at": "2026-11-06T10:24:38.486Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:24:38.668Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:24:38.754Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:24:38.795Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:25:04.935Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:25:10.680Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:25:31.206Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:25:31.848Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:31:46.547Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:31:46.634Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:31:46.821Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:37:43.885Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:37:43.960Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:37:44.127Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:05.422Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:05.501Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:05.675Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:14.597Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:14.675Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:14.858Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:55.677Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:55.753Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:39:55.932Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:42:35.983Z",
+      "by": "selftest",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": "test"
+    },
+    {
+      "at": "2026-11-06T10:42:35.988Z",
+      "by": "selftest",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": "restore"
+    },
+    {
+      "at": "2026-11-06T10:42:54.040Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:42:54.122Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:42:54.299Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:42:55.200Z",
+      "by": "selftest",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": "test"
+    },
+    {
+      "at": "2026-11-06T10:42:55.205Z",
+      "by": "selftest",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": "restore"
+    },
+    {
+      "at": "2026-11-06T10:46:03.250Z",
+      "by": "selftest",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": "test"
+    },
+    {
+      "at": "2026-11-06T10:46:23.419Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:46:23.889Z",
+      "by": "selftest",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": "test"
+    },
+    {
+      "at": "2026-11-06T10:46:49.167Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:47:20.150Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:47:20.231Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:47:20.405Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:47:31.096Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:47:31.175Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:47:31.362Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:48:11.610Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:48:11.696Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:48:11.886Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:48:12.978Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:48:13.060Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:48:13.245Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:49:40.507Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:49:40.587Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:49:40.764Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:50:39.400Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:50:39.482Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:50:39.666Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:51:54.252Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:51:54.336Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:51:54.511Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:55:25.308Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:55:25.456Z",
+      "by": "cli",
+      "target": "bridge.deepseek",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:55:40.391Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:55:40.470Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T10:55:40.645Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:00:32.011Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:00:32.089Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:00:32.270Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:05:15.985Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": true,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:05:16.115Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:05:16.116Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "restore"
+    },
+    {
+      "at": "2026-11-06T11:07:52.595Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:07:52.676Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:07:52.858Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:07:53.941Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": true,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:07:54.075Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:07:54.075Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "restore"
+    },
+    {
+      "at": "2026-11-06T11:09:38.101Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": true,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:09:38.235Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:09:38.236Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "restore"
+    },
+    {
+      "at": "2026-11-06T11:10:13.880Z",
+      "by": "cli",
+      "target": "mcp.cua-driver",
+      "on": true,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:10:13.962Z",
+      "by": "cli",
+      "target": "mcp",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:10:14.147Z",
+      "by": "cli",
+      "target": "bridge",
+      "on": false,
+      "reason": ""
+    },
+    {
+      "at": "2026-11-06T11:10:15.247Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": true,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:10:15.385Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "selftest"
+    },
+    {
+      "at": "2026-11-06T11:10:15.385Z",
+      "by": "user",
+      "target": "mcp.filesystem",
+      "on": false,
+      "reason": "restore"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "version": 7,
+  "record": {
+    "identity": {
+      "formatVersion": 4,
+      "createdAt": 1793942147901,
+      "cwd": "D:\\file\\AI Temp\\DeepSeek\\Agent自研",
+      "isSeeded": false,
+      "inheritedEventCount": 0
+    },
+    "rows": {
+      "turnBoundary": {
+        "ver": 2,
+        "seq": 17,
+        "val": {
+          "openTurnStartSeq": null,
+          "lastStepStartSeq": 6,
+          "lastStepBoundary": {
+            "kind": "end",
+            "seq": 16
+          },
+          "lastTurn": 1
+        }
+      },
+      "approvalState": {
+        "ver": 1,
+        "seq": 17,
+        "val": {
+          "policy": "ask",
+          "turnOpen": false
+        }
+      },
+      "tokenMeasurement": {
+        "ver": 2,
+        "seq": 17,
+        "val": {
+          "headerSeq": 11,
+          "stepStart": null,
+          "anchor": null,
+          "invalidSeq": null
+        }
+      },
+      "todos": {
+        "ver": 2,
+        "seq": 17,
+        "val": null
+      },
+      "userQuestions": {
+        "ver": 2,
+        "seq": 17,
+        "val": {
+          "inheritedEventCount": 0,
+          "timed": false,
+          "questions": {
+            "active": [],
+            "settled": []
+          }
+        }
+      },
+      "tokenUsage": {
+        "ver": 2,
+        "seq": 17,
+        "val": {
+          "totals": {
+            "uncachedInputTokens": 0,
+            "outputTokens": 0,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": 0
+          },
+          "last": {
+            "turn": 1,
+            "step": 1,
+            "buckets": {
+              "uncachedInputTokens": 0,
+              "outputTokens": 0,
+              "cacheReadTokens": 0,
+              "cacheWriteTokens": 0
+            }
+          }
+        }
+      },
+      "sandboxMode": {
+        "ver": 1,
+        "seq": 17,
+        "val": "workspace-write"
+      },
+      "contextPressure": {
+        "ver": 5,
+        "seq": 17,
+        "val": {
+          "surfaceTokens": 1151,
+          "contextWindow": 32768,
+          "pressureTokens": 0,
+          "sampledSurfaceTokens": 1151
+        }
+      },
+      "title": {
+        "ver": 1,
+        "seq": 17,
+        "val": "reply with exactly: PROBE-OK"
+      },
+      "llmRetry": {
+        "ver": 1,
+        "seq": 17,
+        "val": {}
+      },
+      "goal": {
+        "ver": 6,
+        "seq": 17,
+        "val": {
+          "current": null,
+          "seenGoalIds": [],
+          "failure": null
+        }
+      },
+      "plan": {
+        "ver": 4,
+        "seq": 17,
+        "val": {
+          "active": false,
+          "wanted": null,
+          "running": null,
+          "activeAtLastHeader": false,
+          "entered": false
+        }
+      },
+      "agentPreset": {
+        "ver": 1,
+        "seq": 17,
+        "val": null
+      },
+      "modelSelection": {
+        "ver": 3,
+        "seq": 17,
+        "val": {
+          "lastUsed": {
+            "provider": "mock",
+            "model": "mock-model"
+          },
+          "pending": null
+        }
+      },
+      "contextBreakdown": {
+        "ver": 6,
+        "seq": 17,
+        "val": {
+          "systems": [
+            {
+              "seq": 7,
+              "tokens": 639
+            }
+          ],
+          "surfaceTokens": 1151,
+          "breakdown": {
+            "systemTokens": 639,
+            "toolsTokens": 5004,
+            "messageTokens": 512
+          }
+        }
+      },
+      "titleInput": {
+        "ver": 3,
+        "seq": 17,
+        "val": {
+          "first": {
+            "seq": 8,
+            "text": "reply with exactly: PROBE-OK"
+          },
+          "count": 1,
+          "lastSeq": 8
+        }
+      },
+      "inbox": {
+        "ver": 1,
+        "seq": 17,
+        "val": {
+          "next-turn": [],
+          "next-step": []
+        }
+      },
+      "permissions": {
+        "ver": 2,
+        "seq": 17,
+        "val": {
+          "preset": "workspace-write",
+          "sandbox": "workspace-write",
+          "approval": "ask",
+          "seeded": false
+        }
+      },
+      "workingDirectory": {
+        "ver": 1,
+        "seq": 17,
+        "val": "D:\\file\\AI Temp\\DeepSeek\\Agent自研"
+      },
+      "subagentCatalog": {
+        "ver": 6,
+        "seq": 17,
+        "val": {
+          "inheritedEventCount": 0
+        }
+      },
+      "subagentTiming": {
+        "ver": 3,
+        "seq": 17,
+        "val": {
+          "descriptorSeen": false,
+          "settledMs": 0
+        }
+      },
+      "subagent": {
+        "ver": 2,
+        "seq": 17,
+        "val": {}
+      },
+      "subagentModelSelectionPolicy": {
+        "ver": 1,
+        "seq": 17,
+        "val": null
+      }
+    }
+  }
+}

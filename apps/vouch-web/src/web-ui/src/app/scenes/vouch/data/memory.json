@@ -1,0 +1,152 @@
+{
+  "what": "记忆治理状态（A7）",
+  "at": "2026-11-14T18:21:49.429Z",
+  "generator": "tools/memory/gen-ui-data.mjs",
+  "rule": "每条记忆必须有来源；同 key 更新不覆盖而是标 superseded；TTL 过期标 expired",
+  "states": {
+    "FRESH": "fresh",
+    "SUPERSEDED": "superseded",
+    "EXPIRED": "expired",
+    "CONFLICTED": "conflicted"
+  },
+  "totals": {
+    "total": 9,
+    "fresh": 6,
+    "expired": 2,
+    "superseded": 1,
+    "noSource": 0,
+    "unresolvedConflict": 0
+  },
+  "audit": {
+    "ok": true,
+    "issues": []
+  },
+  "entries": [
+    {
+      "id": "mem-c78cb446cf",
+      "key": "build.cmd",
+      "value": "vite build",
+      "source": "file:apps/agent-ui/package.json:8",
+      "state": "superseded",
+      "createdAt": "2026-11-14T18:21:10.498Z",
+      "lastSeen": "2026-11-14T18:21:10.544Z",
+      "touchCount": 2,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": "mem-ec9eb03b7f"
+    },
+    {
+      "id": "mem-ec9eb03b7f",
+      "key": "build.cmd",
+      "value": "vite build --minify",
+      "source": "file:package.json:9",
+      "state": "fresh",
+      "createdAt": "2026-11-14T18:21:10.587Z",
+      "lastSeen": "2026-11-14T18:21:10.587Z",
+      "touchCount": 1,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-8e68e70b1b",
+      "key": "temp.token",
+      "value": "abc123",
+      "source": "api:/token",
+      "state": "expired",
+      "createdAt": "2026-11-14T18:21:10.679Z",
+      "lastSeen": "2026-11-14T18:21:10.679Z",
+      "touchCount": 1,
+      "ttlSec": 1,
+      "expiresAt": "2026-11-14T18:21:11.679Z",
+      "msLeft": -37750,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-8b8e4ea657",
+      "key": "矩阵硬证据覆盖率",
+      "value": "85.5%",
+      "source": "file:prototype/hermes-agents/matrix-data.json",
+      "state": "fresh",
+      "createdAt": "2026-11-14T18:21:40.991Z",
+      "lastSeen": "2026-11-14T18:21:40.991Z",
+      "touchCount": 1,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-75223ac0b7",
+      "key": "验收器总数",
+      "value": "11 个",
+      "source": "file:prototype/agent-ui/*.mjs + prototype/hermes-agents/*.mjs",
+      "state": "fresh",
+      "createdAt": "2026-11-14T18:21:40.991Z",
+      "lastSeen": "2026-11-14T18:21:40.991Z",
+      "touchCount": 1,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-9e41c0115d",
+      "key": "调度器种子 job",
+      "value": "3 条（hourly/6h/daily）",
+      "source": "file:tools/schedule/seed.mjs",
+      "state": "fresh",
+      "createdAt": "2026-11-14T18:21:40.991Z",
+      "lastSeen": "2026-11-14T18:21:40.991Z",
+      "touchCount": 1,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-7fcd63da45",
+      "key": "MCP 客户端协议版本",
+      "value": "2024-11-05",
+      "source": "file:tools/mcp/client.mjs",
+      "state": "fresh",
+      "createdAt": "2026-11-14T18:21:40.991Z",
+      "lastSeen": "2026-11-14T18:21:40.991Z",
+      "touchCount": 1,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-2e2907f6a9",
+      "key": "联网默认后端",
+      "value": "Bing（DDG 本机不可达）",
+      "source": "file:tools/net/search.mjs",
+      "state": "fresh",
+      "createdAt": "2026-11-14T18:21:40.991Z",
+      "lastSeen": "2026-11-14T18:21:40.991Z",
+      "touchCount": 1,
+      "ttlSec": null,
+      "expiresAt": null,
+      "msLeft": null,
+      "supersededBy": null
+    },
+    {
+      "id": "mem-c74ffd922e",
+      "key": "临时探测缓存",
+      "value": "cache-v1",
+      "source": "file:api:/probe",
+      "state": "expired",
+      "createdAt": "2026-11-14T18:21:40.991Z",
+      "lastSeen": "2026-11-14T18:21:40.991Z",
+      "touchCount": 1,
+      "ttlSec": 1,
+      "expiresAt": "2026-11-14T18:21:41.991Z",
+      "msLeft": -7438,
+      "supersededBy": null
+    }
+  ]
+}

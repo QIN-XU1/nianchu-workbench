@@ -1,0 +1,173 @@
+{
+  "at": "2026-11-07T06:26:33.992Z",
+  "total": 11,
+  "ok": 11,
+  "unbound": 0,
+  "results": [
+    {
+      "id": "arch-review",
+      "name": "架构梳理",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "bilibili",
+      "name": "B站",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": true,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "build-plan",
+      "name": "实施计划",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "command",
+      "name": "命令",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": true,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "competitor-analyze",
+      "name": "竞品拆解",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "pc-cleanup",
+      "name": "本地电脑",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": true,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "pipeline",
+      "name": "管线",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "relationship",
+      "name": "关系军师",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "research",
+      "name": "调研",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "reverse-eng",
+      "name": "逆向分析",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": false,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    },
+    {
+      "id": "self-review",
+      "name": "自我复盘",
+      "parts": {
+        "json": true,
+        "sessionId": true,
+        "contextCard": true,
+        "identityIndex": true,
+        "skill": true,
+        "memory": true,
+        "contract": true
+      },
+      "ok": true,
+      "missing": []
+    }
+  ]
+}

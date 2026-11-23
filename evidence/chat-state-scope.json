@@ -1,0 +1,100 @@
+{
+  "at": "2026-11-22T18:13:49.993Z",
+  "app": "http://127.0.0.1:47124/",
+  "sessionA": "在工作目录创建 out.txt，内容写…",
+  "sessionB": "用不超过 100 字说明：进程退出码 0/1/2…",
+  "pass": 11,
+  "fail": 0,
+  "console": {
+    "scopeErrors": [],
+    "envErrors": [
+      "[WorkspaceManager] Failed to subscribe workspace catalog updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at Ye.ensureCatalogChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:47295)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:50232)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:41156 Object",
+      "[WorkspaceManager] Failed to subscribe workspace identity updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at Ye.ensureIdentityChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:44904)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:50196)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:41156 Object",
+      "[IdeControlEventBus] Failed to initialize TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-DaOWqvHX.js:1:2066) TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-DaOWqvHX.js:1:2066)",
+      "[DeferredStartupSystems] Deferred startup system failed {\"system\":\"ide_control\"}, TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-DaOWqvHX.js:1:2066) Object",
+      "[WorkspaceManager] Failed to subscribe workspace catalog updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at Ye.ensureCatalogChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:47295)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:50232)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:41156 Object",
+      "[WorkspaceManager] Failed to subscribe workspace identity updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at Ye.ensureIdentityChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:44904)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:50196)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-Byd7v1n1.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-DyvdE41q.js:9:41156 Object",
+      "[IdeControlEventBus] Failed to initialize TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-DaOWqvHX.js:1:2066) TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-DaOWqvHX.js:1:2066)",
+      "[DeferredStartupSystems] Deferred startup system failed {\"system\":\"ide_control\"}, TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DyvdE41q.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Cagvb6eG.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CKH4UvU-.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-DaOWqvHX.js:1:2066) Object"
+    ],
+    "otherErrors": []
+  },
+  "shots": {
+    "expanded": "evidence/screenshots/chat-scope-expanded.png",
+    "switched": "evidence/screenshots/chat-scope-switched.png"
+  },
+  "results": [
+    {
+      "name": "历史里至少有两个可切换的会话",
+      "ok": true,
+      "info": 8
+    },
+    {
+      "name": "★找到含长回复的会话 A（否则本用例不成立）",
+      "ok": true,
+      "info": "在工作目录创建 out.txt，内容写…"
+    },
+    {
+      "name": "会话 A 初始所有长回复都是折叠态",
+      "ok": true,
+      "info": {
+        "expanded": 0,
+        "foldTotal": 1
+      }
+    },
+    {
+      "name": "★点「展开全文」→ 该条变成展开态",
+      "ok": true,
+      "info": {
+        "expanded": 1,
+        "foldTotal": 1
+      }
+    },
+    {
+      "name": "找到另一个可切换会话 B",
+      "ok": true,
+      "info": "用不超过 100 字说明：进程退出码 0"
+    },
+    {
+      "name": "★切到会话 B → 没有任何一条是展开态（旧实现会串过来）",
+      "ok": true,
+      "info": {
+        "expanded": 0,
+        "foldTotal": 0
+      }
+    },
+    {
+      "name": "会话 B 的消息 id 与 A 不同域（h:<会话>:<下标>）",
+      "ok": true,
+      "info": [
+        "h:ags-03049653aff8423083f2:0",
+        "h:ags-03049653aff8423083f2:1"
+      ]
+    },
+    {
+      "name": "★切回会话 A → 之前展开的那条已回到折叠态（状态被清掉，不是碰巧）",
+      "ok": true,
+      "info": {
+        "expanded": 0,
+        "foldTotal": 1
+      }
+    },
+    {
+      "name": "★切会话后搜索框被清空（命中不会继续指着旧消息）",
+      "ok": true,
+      "info": {
+        "search": ""
+      }
+    },
+    {
+      "name": "切换序列没有相关异常",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "除「静态服务缺 Tauri IPC」环境噪声外没有其它异常",
+      "ok": true,
+      "info": []
+    }
+  ]
+}

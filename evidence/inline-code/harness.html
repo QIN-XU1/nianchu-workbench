@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>inline code — before / after</title>
+<link rel="stylesheet" href="./markdown.css">
+<style>
+  * { box-sizing: border-box; }
+
+  /* Only the tokens these samples actually resolve. Values copied from
+     apps/bitfun/src/tokens.css (light) and its dark block. */
+  .theme {
+    --openbitfun-radius-xs: 4px;
+    --openbitfun-border-width-default: 1px;
+    --openbitfun-space-1: 4px;
+    --openbitfun-type-flow-code-font-family: 'Cascadia Mono', Consolas, 'Courier New', monospace;
+    --openbitfun-type-flow-body-font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+    --openbitfun-type-flow-body-font-size: 15px;
+    --openbitfun-type-flow-body-font-weight: 400;
+    --openbitfun-type-flow-body-line-height: 1.68;
+    --openbitfun-color-surface-tertiary: #f7f7f7;
+    --openbitfun-color-action-quiet-hover: #f3f3f5;
+    --openbitfun-color-content-primary: rgba(0, 0, 0, 0.80);
+    --openbitfun-color-content-secondary: rgba(0, 0, 0, 0.60);
+    background: #ffffff;
+    color: var(--openbitfun-color-content-primary);
+    padding: 22px 26px 26px;
+  }
+
+  .theme--dark {
+    --openbitfun-color-surface-tertiary: #0e0e10;
+    --openbitfun-color-action-quiet-hover: rgba(255, 255, 255, 0.06);
+    --openbitfun-color-content-primary: #e8e8e8;
+    --openbitfun-color-content-secondary: #b0b0b0;
+    background: #0e0e10;
+  }
+
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+
+  h2 {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    opacity: .55;
+  }
+
+  .row { margin-top: 20px; }
+
+  .label {
+    margin: 0 0 8px;
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    opacity: .4;
+  }
+
+  /* The user message bubble: exactly the surface the chip has to survive. */
+  .bubble {
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--openbitfun-color-action-quiet-hover);
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  .plain {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  /* Reproduces the previous rule verbatim, to prove the contrast gap. */
+  .before .inline-code {
+    padding: 0 var(--openbitfun-space-1);
+    background: var(--openbitfun-color-surface-tertiary);
+    box-shadow: none;
+    border: 0;
+  }
+
+  .swatch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    vertical-align: -1px;
+    margin-right: 5px;
+    box-shadow: inset 0 0 0 1px rgba(128, 128, 128, .45);
+  }
+</style>
+</head>
+<body>
+
+  <section class="theme">
+    <h2>Light · 浅色</h2>
+
+    <div class="row before">
+      <p class="label">Before — <code class="inline-code">1.03:1</code> against the bubble</p>
+      <div class="bubble markdown-renderer">
+        运行 <code class="inline-code">pnpm run dev:web</code> 后刷新 <code class="inline-code">window.__DSH_BOOT__</code>，不要直接启动 <code class="inline-code">apps/web</code>。
+      </div>
+    </div>
+
+    <div class="row">
+      <p class="label">After — <code class="inline-code">1.27:1</code>, currentColor wash + inset hairline</p>
+      <div class="bubble markdown-renderer">
+        运行 <code class="inline-code">pnpm run dev:web</code> 后刷新 <code class="inline-code">window.__DSH_BOOT__</code>，不要直接启动 <code class="inline-code">apps/web</code>。
+      </div>
+      <div class="plain markdown-renderer">
+        普通正文里也成立：<code class="inline-code">--openbitfun-color-surface-tertiary</code> 是绝对色，不是相对色。
+      </div>
+      <div class="bubble markdown-renderer" style="max-width: 320px;">
+        长标识符换行时每片都是完整的胶囊：<code class="inline-code">flowChatViewportAnchor.ts</code> 与 <code class="inline-code">useFlowChatViewportAnchor.ts</code>。
+      </div>
+    </div>
+  </section>
+
+  <section class="theme theme--dark">
+    <h2>Dark · 深色</h2>
+
+    <div class="row before">
+      <p class="label">Before — <code class="inline-code">1.11:1</code>, and darker than its own bubble</p>
+      <div class="bubble markdown-renderer">
+        运行 <code class="inline-code">pnpm run dev:web</code> 后刷新 <code class="inline-code">window.__DSH_BOOT__</code>，不要直接启动 <code class="inline-code">apps/web</code>。
+      </div>
+    </div>
+
+    <div class="row">
+      <p class="label">After — <code class="inline-code">1.42:1</code>, same recipe, no per-theme token</p>
+      <div class="bubble markdown-renderer">
+        运行 <code class="inline-code">pnpm run dev:web</code> 后刷新 <code class="inline-code">window.__DSH_BOOT__</code>，不要直接启动 <code class="inline-code">apps/web</code>。
+      </div>
+      <div class="plain markdown-renderer">
+        普通正文里也成立：<code class="inline-code">--openbitfun-color-surface-tertiary</code> 是绝对色，不是相对色。
+      </div>
+      <div class="bubble markdown-renderer" style="max-width: 320px;">
+        长标识符换行时每片都是完整的胶囊：<code class="inline-code">flowChatViewportAnchor.ts</code> 与 <code class="inline-code">useFlowChatViewportAnchor.ts</code>。
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+{
+  "at": "2026-11-15T12:55:08.478Z",
+  "state": "PASS",
+  "nodes": [
+    {
+      "id": "arch-review",
+      "name": "架构梳理",
+      "upstream": [
+        "competitor-analyze",
+        "reverse-eng",
+        "research"
+      ],
+      "downstream": [
+        "build-plan",
+        "backend-craft",
+        "frontend-craft",
+        "hub"
+      ],
+      "deg": 7,
+      "isolated": false
+    },
+    {
+      "id": "backend-craft",
+      "name": "后端工坊",
+      "upstream": [
+        "arch-review",
+        "reverse-eng",
+        "incident-analysis",
+        "build-plan"
+      ],
+      "downstream": [],
+      "deg": 4,
+      "isolated": false
+    },
+    {
+      "id": "build-plan",
+      "name": "实施计划",
+      "upstream": [
+        "arch-review",
+        "reverse-eng",
+        "incident-analysis"
+      ],
+      "downstream": [
+        "backend-craft",
+        "frontend-craft",
+        "tool-forge",
+        "hub",
+        "pc-cleanup"
+      ],
+      "deg": 8,
+      "isolated": false
+    },
+    {
+      "id": "competitor-analyze",
+      "name": "竞品拆解",
+      "upstream": [
+        "research"
+      ],
+      "downstream": [
+        "arch-review",
+        "hub"
+      ],
+      "deg": 3,
+      "isolated": false
+    },
+    {
+      "id": "frontend-craft",
+      "name": "前端工坊",
+      "upstream": [
+        "build-plan",
+        "arch-review",
+        "reverse-eng",
+        "research"
+      ],
+      "downstream": [],
+      "deg": 4,
+      "isolated": false
+    },
+    {
+      "id": "hub",
+      "name": "中枢",
+      "upstream": [
+        "competitor-analyze",
+        "reverse-eng",
+        "arch-review",
+        "build-plan",
+        "incident-analysis",
+        "pc-cleanup",
+        "self-review"
+      ],
+      "downstream": [
+        "incident-analysis",
+        "pc-cleanup"
+      ],
+      "deg": 9,
+      "isolated": false
+    },
+    {
+      "id": "incident-analysis",
+      "name": "故障分析",
+      "upstream": [
+        "hub"
+      ],
+      "downstream": [
+        "backend-craft",
+        "build-plan",
+        "hub",
+        "pc-cleanup",
+        "tool-forge"
+      ],
+      "deg": 6,
+      "isolated": false
+    },
+    {
+      "id": "pc-cleanup",
+      "name": "本地电脑",
+      "upstream": [
+        "hub",
+        "build-plan",
+        "incident-analysis"
+      ],
+      "downstream": [
+        "hub"
+      ],
+      "deg": 4,
+      "isolated": false
+    },
+    {
+      "id": "research",
+      "name": "调研",
+      "upstream": [],
+      "downstream": [
+        "arch-review",
+        "competitor-analyze",
+        "frontend-craft",
+        "reverse-eng"
+      ],
+      "deg": 4,
+      "isolated": false
+    },
+    {
+      "id": "reverse-eng",
+      "name": "逆向分析",
+      "upstream": [
+        "research"
+      ],
+      "downstream": [
+        "arch-review",
+        "backend-craft",
+        "build-plan",
+        "frontend-craft",
+        "hub",
+        "tool-forge"
+      ],
+      "deg": 7,
+      "isolated": false
+    },
+    {
+      "id": "self-review",
+      "name": "自我复盘",
+      "upstream": [],
+      "downstream": [
+        "hub",
+        "tool-forge"
+      ],
+      "deg": 2,
+      "isolated": false
+    },
+    {
+      "id": "tool-forge",
+      "name": "工具工坊",
+      "upstream": [
+        "build-plan",
+        "self-review",
+        "incident-analysis",
+        "reverse-eng"
+      ],
+      "downstream": [],
+      "deg": 4,
+      "isolated": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "arch-review",
+      "to": "build-plan",
+      "how": "outputs.to"
+    },
+    {
+      "from": "competitor-analyze",
+      "to": "arch-review",
+      "how": "inputs.from"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "arch-review",
+      "how": "inputs.from"
+    },
+    {
+      "from": "research",
+      "to": "arch-review",
+      "how": "inputs.from"
+    },
+    {
+      "from": "arch-review",
+      "to": "backend-craft",
+      "how": "inputs.from"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "backend-craft",
+      "how": "inputs.from"
+    },
+    {
+      "from": "incident-analysis",
+      "to": "backend-craft",
+      "how": "inputs.from"
+    },
+    {
+      "from": "build-plan",
+      "to": "backend-craft",
+      "how": "outputs.to"
+    },
+    {
+      "from": "build-plan",
+      "to": "frontend-craft",
+      "how": "outputs.to"
+    },
+    {
+      "from": "build-plan",
+      "to": "tool-forge",
+      "how": "outputs.to"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "build-plan",
+      "how": "inputs.from"
+    },
+    {
+      "from": "research",
+      "to": "competitor-analyze",
+      "how": "inputs.from"
+    },
+    {
+      "from": "arch-review",
+      "to": "frontend-craft",
+      "how": "inputs.from"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "frontend-craft",
+      "how": "inputs.from"
+    },
+    {
+      "from": "research",
+      "to": "frontend-craft",
+      "how": "inputs.from"
+    },
+    {
+      "from": "competitor-analyze",
+      "to": "hub",
+      "how": "inputs.from"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "hub",
+      "how": "inputs.from"
+    },
+    {
+      "from": "arch-review",
+      "to": "hub",
+      "how": "inputs.from"
+    },
+    {
+      "from": "build-plan",
+      "to": "hub",
+      "how": "inputs.from"
+    },
+    {
+      "from": "incident-analysis",
+      "to": "build-plan",
+      "how": "outputs.to"
+    },
+    {
+      "from": "incident-analysis",
+      "to": "hub",
+      "how": "outputs.to"
+    },
+    {
+      "from": "hub",
+      "to": "incident-analysis",
+      "how": "inputs.from"
+    },
+    {
+      "from": "pc-cleanup",
+      "to": "hub",
+      "how": "outputs.to"
+    },
+    {
+      "from": "hub",
+      "to": "pc-cleanup",
+      "how": "inputs.from"
+    },
+    {
+      "from": "build-plan",
+      "to": "pc-cleanup",
+      "how": "inputs.from"
+    },
+    {
+      "from": "incident-analysis",
+      "to": "pc-cleanup",
+      "how": "inputs.from"
+    },
+    {
+      "from": "research",
+      "to": "reverse-eng",
+      "how": "outputs.to"
+    },
+    {
+      "from": "self-review",
+      "to": "hub",
+      "how": "outputs.to"
+    },
+    {
+      "from": "self-review",
+      "to": "tool-forge",
+      "how": "inputs.from"
+    },
+    {
+      "from": "incident-analysis",
+      "to": "tool-forge",
+      "how": "inputs.from"
+    },
+    {
+      "from": "reverse-eng",
+      "to": "tool-forge",
+      "how": "inputs.from"
+    }
+  ],
+  "stats": {
+    "scenes": 12,
+    "edges": 31,
+    "isolated": 0,
+    "maxDeg": 9
+  }
+}

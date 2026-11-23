@@ -1,0 +1,307 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   base.css —— 重置 + 排版基座
+
+   原则：
+     1. 不引入第三方 reset，只写必要的归零
+     2. 所有尺寸来自 tokens.css，不出现裸数值（发丝线 1px 除外）
+     3. 焦点可见性优先：:focus-visible 一定有环
+     4. 中文排版：行高按 tokens 给足，不用负字距
+     5. 默认禁止页面级文本选择（工具型应用），正文区按需开启
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══ 1. 归零 ═══ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow: hidden;          /* 窄窗口不允许出现页面级横向滚动 */
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-txt-1);
+  font-family: var(--font-ui);
+  font-size: var(--fs-12);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  overscroll-behavior: none;
+  user-select: none;
+  cursor: default;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* ═══ 2. 语义元素归零 ═══ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: var(--fw-bold);
+  color: var(--color-txt-1);
+  line-height: var(--lh-tight);
+  text-wrap: balance;
+}
+
+p, ul, ol, menu {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+li {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/* ═══ 3. 排版尺度（7 档，只允许这些） ═══ */
+
+.wb-fs-28 { font-size: var(--fs-28); line-height: var(--lh-28); }
+.wb-fs-22 { font-size: var(--fs-22); line-height: var(--lh-22); }
+.wb-fs-18 { font-size: var(--fs-18); line-height: var(--lh-18); }
+.wb-fs-15 { font-size: var(--fs-15); line-height: var(--lh-15); }
+.wb-fs-13 { font-size: var(--fs-13); line-height: var(--lh-13); }
+.wb-fs-12 { font-size: var(--fs-12); line-height: var(--lh-12); }
+.wb-fs-11 { font-size: var(--fs-11); line-height: var(--lh-11); }
+
+/* 字族 */
+.wb-mono { font-family: var(--font-mono); }
+.wb-ui   { font-family: var(--font-ui); }
+
+/* 字重 */
+.wb-medium { font-weight: var(--fw-medium); }
+.wb-bold   { font-weight: var(--fw-bold); }
+
+/* 文字色（正文只允许这 3 档 + 禁用） */
+.wb-t1 { color: var(--color-txt-1); }
+.wb-t2 { color: var(--color-txt-2); }
+.wb-t3 { color: var(--color-txt-3); }
+.wb-disabled { color: var(--color-txt-disabled); }
+
+/* 强调/状态文字色 */
+.wb-c-accent { color: var(--color-accent); }
+.wb-c-ok     { color: var(--color-ok); }
+.wb-c-warn   { color: var(--color-warn); }
+.wb-c-err    { color: var(--color-err); }
+
+/* 截断与换行 */
+.wb-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.wb-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.wb-nowrap { white-space: nowrap; }
+.wb-pre { white-space: pre; }
+.wb-pre-wrap { white-space: pre-wrap; word-break: break-word; }
+.wb-break { overflow-wrap: anywhere; word-break: break-word; }
+
+/* 大写小标签（终端风格 section 标题） */
+.wb-caps {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+  font-size: var(--fs-11);
+  line-height: var(--lh-11);
+  font-weight: var(--fw-medium);
+  color: var(--color-txt-3);
+}
+
+/* 等宽数字：表格/计时/用量不跳动 */
+.wb-tnum { font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
+
+/* ═══ 4. 链接 ═══ */
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--color-accent-hover); text-decoration: underline; }
+a:active { color: var(--color-accent-press); }
+
+/* ═══ 5. 焦点（全局统一） ═══ */
+
+:focus { outline: none; }
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-focus);
+  position: relative;
+  z-index: var(--z-sticky);
+}
+
+:focus:not(:focus-visible) { box-shadow: none; }
+
+/* ═══ 6. 滚动条（细、暗、悬停才亮） ═══ */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: var(--r-0); }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+::-webkit-scrollbar-corner { background: transparent; }
+
+/* ═══ 7. 可选择区域 ═══ */
+
+.wb-selectable,
+pre,
+code,
+input,
+textarea,
+[contenteditable="true"] {
+  user-select: text;
+  cursor: auto;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-txt-1);
+}
+
+/* ═══ 8. 布局工具（shell.js 直接用了 .grow / .truncate / .nowrap / .spacer） ═══ */
+
+.grow { flex: 1 1 auto; min-width: 0; min-height: 0; }
+.spacer { flex: 1 1 auto; min-width: 0; }
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.nowrap { white-space: nowrap; }
+
+/* 注意：.wb-row 是组件（列表行），定义在 components.css；这里不用它做通用工具 */
+.wb-hstack { display: flex; flex-direction: row; align-items: center; }
+.wb-vstack { display: flex; flex-direction: column; }
+.wb-between { justify-content: space-between; }
+.wb-center { align-items: center; justify-content: center; }
+.wb-grow { flex: 1 1 auto; min-width: 0; min-height: 0; }
+.wb-shrink-0 { flex-shrink: 0; }
+.wb-hide { display: none; }
+
+.wb-gap-1 { gap: var(--space-1); }
+.wb-gap-2 { gap: var(--space-2); }
+.wb-gap-3 { gap: var(--space-3); }
+.wb-gap-4 { gap: var(--space-4); }
+.wb-gap-5 { gap: var(--space-5); }
+
+.wb-pad-3 { padding: var(--space-3); }
+.wb-pad-4 { padding: var(--space-4); }
+.wb-pad-5 { padding: var(--space-5); }
+
+/* ═══ 9. 工具性状 ═══ */
+
+.wb-hr {
+  height: var(--hairline);
+  background: var(--color-line);
+  border: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.wb-vr {
+  width: var(--hairline);
+  align-self: stretch;
+  background: var(--color-line);
+  flex-shrink: 0;
+}
+
+.wb-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 一切可滚动正文容器统一 scroll behavior */
+.wb-scroller {
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wb-scroller { scroll-behavior: auto; }
+}
+
+/* 图标 */
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  stroke-linecap: square;
+}
+.wb-winbtn .icon { stroke: var(--color-txt-2); }
+
+/* ═══ 10. 打印 ═══ */
+
+@media print {
+  body { background: #fff; color: #000; }
+  .wb-titlebar, .wb-scenebar, .wb-footbar, .wb-side, .wb-split-handle { display: none !important; }
+}

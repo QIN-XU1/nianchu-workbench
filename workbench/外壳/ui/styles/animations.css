@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   animations.css —— 过渡与动效
+
+   纪律：
+     · 全部 ≤240ms（统一 ease-out：进入快、退出快）
+     · 只动 transform / opacity / background-color / border-color —— 不动 layout
+     · 不做装饰性循环动画（骨架屏与运行态脉冲除外，且都克制）
+     · prefers-reduced-motion 由 tokens.css 把 --dur-* 归零，这里再做一次兜底
+
+   原则：动效是「状态可读性的辅助」，不是观感来源。
+         能用背景明度差说清的事，不要用动画说。
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══ 1. KEYFRAMES ═══ */
+
+@keyframes wb-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes wb-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* 上移 4px：面板/卡片出现，位移克制 */
+@keyframes wb-rise-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wb-slide-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes wb-slide-out-right {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+
+/* 弹层：0.98 → 1 */
+@keyframes wb-pop-in {
+  from { opacity: 0; transform: scale(.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* 骨架屏扫描 */
+@keyframes wb-skeleton-sweep {
+  from { background-position: 100% 0; }
+  to   { background-position: -100% 0; }
+}
+
+/* 运行态脉冲（仅「进行中」，2 次即止） */
+@keyframes wb-pulse-ok {
+  0%   { box-shadow: 0 0 0 0 rgba(69, 192, 126, .36); }
+  70%  { box-shadow: 0 0 0 4px rgba(69, 192, 126, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(69, 192, 126, 0); }
+}
+
+/* 强调色脉冲（节点「亮起」——用户核心诉求的视觉落点） */
+@keyframes wb-pulse-accent {
+  0%   { box-shadow: 0 0 0 0 rgba(53, 190, 217, .45); }
+  70%  { box-shadow: 0 0 0 6px rgba(53, 190, 217, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(53, 190, 217, 0); }
+}
+
+/* 不定进度条 */
+@keyframes wb-bar-slide {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(300%); }
+}
+
+/* 终端光标闪烁 */
+@keyframes wb-caret-blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ═══ 2. 通用过渡类 ═══ */
+
+.wb-t-color {
+  transition:
+    background-color var(--dur-2) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out),
+    color var(--dur-2) var(--ease-out);
+}
+
+/* 进入 */
+.wb-anim-in          { animation: wb-fade-in var(--dur-3) var(--ease-out) both; }
+.wb-anim-rise        { animation: wb-rise-in var(--dur-4) var(--ease-out) both; }
+.wb-anim-pop         { animation: wb-pop-in var(--dur-3) var(--ease-out) both; }
+.wb-anim-slide-right { animation: wb-slide-in-right var(--dur-4) var(--ease-out) both; }
+
+/* 退出（JS 在 animationend 后移除节点） */
+.wb-anim-out              { animation: wb-fade-out var(--dur-2) var(--ease-in-out) both; }
+.wb-anim-slide-out-right  { animation: wb-slide-out-right var(--dur-3) var(--ease-in-out) both; }
+
+/* 依次出现（上限 6 项，超过同 delay） */
+.wb-anim-stagger > * {
+  animation: wb-rise-in var(--dur-3) var(--ease-out) both;
+}
+.wb-anim-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.wb-anim-stagger > *:nth-child(2) { animation-delay: 20ms; }
+.wb-anim-stagger > *:nth-child(3) { animation-delay: 40ms; }
+.wb-anim-stagger > *:nth-child(4) { animation-delay: 60ms; }
+.wb-anim-stagger > *:nth-child(5) { animation-delay: 80ms; }
+.wb-anim-stagger > *:nth-child(n+6) { animation-delay: 90ms; }
+
+/* 状态高亮一闪（派单后节点亮起） */
+.wb-anim-flash-accent { animation: wb-pulse-accent var(--dur-4) var(--ease-out) 2; }
+.wb-anim-pulse-ok     { animation: wb-pulse-ok 1400ms var(--ease-out) 2; }
+
+/* 折叠（用 transition 便于中断） */
+.wb-collapsible {
+  transition:
+    opacity var(--dur-3) var(--ease-out),
+    transform var(--dur-3) var(--ease-out),
+    visibility 0s linear var(--dur-3);
+}
+.wb-collapsible.is-collapsed {
+  opacity: 0;
+  transform: translateY(-2px);
+  visibility: hidden;
+}
+
+/* 拖拽分栏时不要过渡（否则手感发飘） */
+body.wb-resizing .wb-main,
+body.wb-resizing .wb-side,
+body.wb-resizing .wb-split-handle {
+  transition: none;
+}
+
+/* ═══ 3. 不定进度条 ═══ */
+
+.wb-bar--indeterminate .wb-bar-fill {
+  width: 33%;
+  animation: wb-bar-slide 1100ms var(--ease-in-out) infinite;
+  transition: none;
+}
+
+/* ═══ 4. 终端光标 ═══ */
+
+.wb-caret {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  vertical-align: -2px;
+  background: var(--color-accent);
+  animation: wb-caret-blink 1000ms steps(2, jump-none) infinite;
+}
+.wb-caret--solid { animation: none; }
+
+/* ═══ 5. 滚动触发淡入（可选，慎用） ═══ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .wb-reveal {
+    opacity: 0;
+    transform: translateY(4px);
+    transition:
+      opacity var(--dur-4) var(--ease-out),
+      transform var(--dur-4) var(--ease-out);
+  }
+  .wb-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═══ 6. 降级：全部停动 ═══ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+  .wb-skeleton,
+  .wb-bar--indeterminate .wb-bar-fill,
+  .wb-caret {
+    animation: none;
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "what": "念初运行时状态（自研采集，非 hermes insights）",
+  "rule": "四态：PASS 观测到 · WARN 观测到但需注意 · FAIL 观测到异常 · UNKNOWN 没观测到（不等于坏）",
+  "at": "2026-11-14T18:35:19.555Z",
+  "collector": "tools/state/collect.mjs",
+  "proc": {
+    "state": "PASS",
+    "source": "tasklist /FO CSV /NH",
+    "totalProcesses": 159,
+    "node": {
+      "count": 6,
+      "memMB": 430
+    },
+    "python": {
+      "count": 0,
+      "memMB": 0
+    },
+    "topMem": [
+      {
+        "name": "DeepSeek Harness.exe",
+        "memMB": 4603
+      },
+      {
+        "name": "DeepSeek Harness.exe",
+        "memMB": 1611
+      },
+      {
+        "name": "wallpaper64.exe",
+        "memMB": 353
+      }
+    ]
+  },
+  "ports": {
+    "state": "PASS",
+    "source": "TCP connect",
+    "ports": [
+      {
+        "port": 3425,
+        "what": "模型网关",
+        "open": true,
+        "state": "PASS",
+        "why": "在听"
+      },
+      {
+        "port": 9333,
+        "what": "CDP（桌面端调试）",
+        "open": false,
+        "state": "UNKNOWN",
+        "why": "没在听（不等于坏，可能没启动）"
+      },
+      {
+        "port": 48032,
+        "what": "我们的静态服务",
+        "open": false,
+        "state": "UNKNOWN",
+        "why": "没在听（不等于坏，可能没启动）"
+      }
+    ]
+  },
+  "gateway": {
+    "state": "PASS",
+    "source": "GET /v1/models",
+    "httpCode": 200,
+    "modelCount": 109,
+    "models": [
+      "auto/claude-fable-5-2",
+      "auto/claude-fable-5-1",
+      "auto/claude-opus-5-5",
+      "auto/claude-sonnet-5-5",
+      "auto/claude-haiku-5-5",
+      "auto/claude-fable-5",
+      "auto/claude-opus-5",
+      "auto/claude-sonnet-5"
+    ]
+  },
+  "repo": {
+    "state": "PASS",
+    "source": "git rev-parse / status / log",
+    "branch": "master",
+    "head": "55f2629d",
+    "dirtyFiles": 0,
+    "lastCommits": [
+      "55f2629d ﻿feat(自研): A5 上下文压缩，覆盖率 88.7% → 90.3%",
+      "33e17046 ﻿feat(自研): A15 审批闸换成工具级能力边界，覆盖率 87.1% → 88.7%",
+      "9cc1aee9 ﻿feat(自研): A7 记忆治理（溯源/冲突/TTL），覆盖率 85.5% → 87.1%"
+    ]
+  },
+  "suites": {
+    "state": "UNKNOWN",
+    "why": "--fast 模式跳过验收套件"
+  },
+  "resources": {
+    "state": "PASS",
+    "source": "node:os",
+    "cpuCores": 12,
+    "cpuModel": "13th Gen Intel(R) Core(TM) i5-13420H",
+    "load1": 0,
+    "totalMemGB": 15.7,
+    "freeMemGB": 3.7,
+    "uptimeHours": 8,
+    "node": "v24.18.0"
+  },
+  "summary": {
+    "proc": "PASS",
+    "gateway": "PASS",
+    "repo": "PASS",
+    "suites": "UNKNOWN",
+    "portsOpen": "1/3",
+    "suitesPass": 0,
+    "suitesTotal": 0
+  }
+}

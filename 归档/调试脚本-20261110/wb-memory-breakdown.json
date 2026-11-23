@@ -1,0 +1,150 @@
+{
+  "at": "2026-11-06T14:54:05.545Z",
+  "processes": [
+    {
+      "Id": 11052,
+      "WS_MB": 478,
+      "Priv_MB": 438,
+      "Threads": 34,
+      "Handles": 1702,
+      "Title": ""
+    },
+    {
+      "Id": 17452,
+      "WS_MB": 272,
+      "Priv_MB": 190,
+      "Threads": 21,
+      "Handles": 382,
+      "Title": ""
+    },
+    {
+      "Id": 14720,
+      "WS_MB": 244,
+      "Priv_MB": 183,
+      "Threads": 21,
+      "Handles": 374,
+      "Title": ""
+    },
+    {
+      "Id": 4684,
+      "WS_MB": 236,
+      "Priv_MB": 177,
+      "Threads": 22,
+      "Handles": 372,
+      "Title": ""
+    },
+    {
+      "Id": 16612,
+      "WS_MB": 198,
+      "Priv_MB": 143,
+      "Threads": 23,
+      "Handles": 484,
+      "Title": ""
+    },
+    {
+      "Id": 5468,
+      "WS_MB": 150,
+      "Priv_MB": 103,
+      "Threads": 51,
+      "Handles": 1700,
+      "Title": "MAIN"
+    },
+    {
+      "Id": 7984,
+      "WS_MB": 145,
+      "Priv_MB": 78,
+      "Threads": 20,
+      "Handles": 364,
+      "Title": ""
+    },
+    {
+      "Id": 13436,
+      "WS_MB": 125,
+      "Priv_MB": 48,
+      "Threads": 12,
+      "Handles": 535,
+      "Title": ""
+    },
+    {
+      "Id": 16760,
+      "WS_MB": 105,
+      "Priv_MB": 37,
+      "Threads": 20,
+      "Handles": 295,
+      "Title": ""
+    },
+    {
+      "Id": 14332,
+      "WS_MB": 101,
+      "Priv_MB": 30,
+      "Threads": 20,
+      "Handles": 291,
+      "Title": ""
+    },
+    {
+      "Id": 17580,
+      "WS_MB": 63,
+      "Priv_MB": 23,
+      "Threads": 19,
+      "Handles": 626,
+      "Title": ""
+    },
+    {
+      "Id": 2144,
+      "WS_MB": 56,
+      "Priv_MB": 10,
+      "Threads": 8,
+      "Handles": 259,
+      "Title": ""
+    },
+    {
+      "Id": 13668,
+      "WS_MB": 31,
+      "Priv_MB": 9,
+      "Threads": 6,
+      "Handles": 232,
+      "Title": ""
+    }
+  ],
+  "totalWorkingSetMB": 2204,
+  "totalPrivateMB": 1469,
+  "jsHeapSumMB": 153,
+  "unexplainedGapMB": 1316,
+  "targets": [
+    {
+      "type": "webview",
+      "title": "等待引擎…",
+      "url": "http://127.0.0.1:31238/chat"
+    },
+    {
+      "type": "webview",
+      "title": "Kimi AI 官网：K3.1 Pro 上线，编程与智能体任务全面升级",
+      "url": "https://www.kimi.com/"
+    },
+    {
+      "type": "webview",
+      "title": "智谱清言",
+      "url": "https://chatglm.cn/main/alltoolsdetail?lang=zh"
+    },
+    {
+      "type": "webview",
+      "title": "$!seotitle",
+      "url": "https://www.qianwen.com/"
+    },
+    {
+      "type": "webview",
+      "title": "豆包 - 字节跳动旗下 AI 智能助手",
+      "url": "https://www.doubao.com/chat/"
+    },
+    {
+      "type": "webview",
+      "title": "等待引擎…",
+      "url": "http://127.0.0.1:31238/chat"
+    },
+    {
+      "type": "page",
+      "title": "DSH 引擎 · DeepSeek 工作台",
+      "url": "file:///D:/file/AI%20Temp/DeepSeek/Agent%E8%87%AA%E7%A0%94/workbench/%E5%A4%96%E5%A3%B3/renderer/index.html"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "note": "待机主确认的规矩。AI 不能自己批准。",
+  "items": [
+    {
+      "id": "p1",
+      "text": "规矩 1：负载闸",
+      "why": "系统负载 > 90% → 不许派活；检查项：CPU / 内存 / 会话并发数",
+      "evidence": "硬规矩.mjs 文件头总览 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p3",
+      "text": "规矩 2：回执节流",
+      "why": "一次一条、不超过 200 字；检查项：回执条数、字数",
+      "evidence": "硬规矩.mjs 文件头总览 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p5",
+      "text": "规矩 3：余额急停",
+      "why": "见到余额/配额错误 → 立刻停手；检查项：错误信息关键词",
+      "evidence": "硬规矩.mjs 文件头总览 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p4",
+      "text": "0. 开场先认领身份",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p6",
+      "text": "1. 记忆在文件，不在会话",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p8",
+      "text": "2. 场景是地盘，不许越界",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p10",
+      "text": "3. 三条硬规矩",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p12",
+      "text": "4. 报错先查三件事",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p14",
+      "text": "5. 自证必须是真证",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p16",
+      "text": "6. 不要用 PowerShell 往返读写文本",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p18",
+      "text": "7. 改完跑机制体检",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    },
+    {
+      "id": "p20",
+      "text": "8. 架构七层",
+      "why": "(文档里没写理由)",
+      "evidence": "AGENTS.md 铁律 里在跑",
+      "at": "2026-11-12",
+      "state": "pending"
+    }
+  ]
+}

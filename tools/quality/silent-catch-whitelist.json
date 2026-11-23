@@ -1,0 +1,305 @@
+{
+  "note": "静默吞异常白名单（片段匹配）：{file, snippet, nth} 定位「同文件第 nth 个含该片段的空 catch」，插入/删除行不再漂移。每条须写明为什么吞掉可接受。",
+  "explained": [
+    {
+      "file": "tools/agent/changeset.mjs",
+      "snippet": "} catch { /* 目录不存在就算了 */ }",
+      "nth": 0,
+      "reason": "同上：单个删除失败不中断整批清理"
+    },
+    {
+      "file": "tools/agent/changeset.mjs",
+      "snippet": "} catch { /* 目录还没建，忽略 */ }",
+      "nth": 0,
+      "reason": "变更集清理/派生数据，失败不影响主流程结论"
+    },
+    {
+      "file": "tools/agent/changeset.mjs",
+      "snippet": "} catch { /* ignore */ }",
+      "nth": 1,
+      "reason": "删除旧变更集失败继续清理其它（尽力而为）"
+    },
+    {
+      "file": "tools/agent/changeset.mjs",
+      "snippet": "try { bytes += statSync(join(dir, f)).size; count++; } catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "遍历目录时单个文件 stat 失败跳过"
+    },
+    {
+      "file": "tools/agent/changeset.mjs",
+      "snippet": "try { mtime = statSync(p).mtimeMs; } catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "读文件 mtime 失败则按 0 处理（仅用于按年龄清理）"
+    },
+    {
+      "file": "tools/agent/loop.mjs",
+      "snippet": "} catch { /* 读不了就算了 */ }",
+      "nth": 0,
+      "reason": "统计目录大小时单个文件失败跳过（仅统计用）"
+    },
+    {
+      "file": "tools/agent/loop.mjs",
+      "snippet": "} catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "同上：计数失败跳过"
+    },
+    {
+      "file": "tools/agent/loop.mjs",
+      "snippet": "try { onPhase({ kind, turn, ...extra }); } catch { /* 上报失败不影响循环 */ }",
+      "nth": 0,
+      "reason": "onPhase 回调异常不影响循环本身"
+    },
+    {
+      "file": "tools/agent/models.mjs",
+      "snippet": "} catch { /* 解析失败就用默认，不崩 */ }",
+      "nth": 0,
+      "reason": "解析模型配置文件失败则用默认值（有默认兜底）"
+    },
+    {
+      "file": "tools/agent/runtime.mjs",
+      "snippet": "try { body = (await res.text()).slice(0, 240); } catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "读 body 失败按空处理（由后续校验兜底）"
+    },
+    {
+      "file": "tools/agent/runtime.mjs",
+      "snippet": "try { messages.push(JSON.parse(line)); } catch { /* skip bad line */ }",
+      "nth": 0,
+      "reason": "逐行解析会话日志时坏行跳过"
+    },
+    {
+      "file": "tools/agent/runtime.mjs",
+      "snippet": "try { writeFileSync(INDEX_FILE, JSON.stringify(payload, null, 2) + '\\n', 'utf8')",
+      "nth": 0,
+      "reason": "索引是派生数据（真源是 sessions/*.jsonl），写失败不影响正确性"
+    },
+    {
+      "file": "tools/agent/secretbox.mjs",
+      "snippet": "try { chmodSync(p, 0o600); } catch { /* Windows 上可能无效，如实接受 */ }",
+      "nth": 0,
+      "reason": "chmod 在 Windows 可能无效；外层 catch 会返回 null 让调用方感知"
+    },
+    {
+      "file": "tools/agent/session.mjs",
+      "snippet": "} catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "会话附属文件写入尽力而为"
+    },
+    {
+      "file": "tools/agent/team.mjs",
+      "snippet": "} catch { /* 落盘失败不影响返回，但下面会标出来 */ }",
+      "nth": 0,
+      "reason": "落盘失败不影响返回，但 tracePath 会变 null 显式标出"
+    },
+    {
+      "file": "tools/agent/toolkit-net.mjs",
+      "snippet": "} catch { /* 解析失败就退化为无快照 */ }",
+      "nth": 0,
+      "reason": "同上：realpath 失败跳过"
+    },
+    {
+      "file": "tools/agent/toolkit-net.mjs",
+      "snippet": "try { ctx.changeset.after(abs); } catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "路径比对时单项失败跳过"
+    },
+    {
+      "file": "tools/agent/toolkit-net.mjs",
+      "snippet": "try { ctx.changeset.before(abs); } catch { /* 快照失败不阻断应用 */ }",
+      "nth": 0,
+      "reason": "路径解析失败跳过该路径"
+    },
+    {
+      "file": "tools/agent/toolkit-net.mjs",
+      "snippet": "try { if (!statSync(abs).isFile()) return { ok: false, state: 'FAIL', error: '不是",
+      "nth": 0,
+      "reason": "删除不存在文件视为成功（幂等）"
+    },
+    {
+      "file": "tools/agent/toolkit.mjs",
+      "snippet": ".on('error', () => { try { child.kill('SIGKILL'); } catch { /* ignore */ } });",
+      "nth": 0,
+      "reason": "taskkill 失败退到 SIGKILL"
+    },
+    {
+      "file": "tools/agent/toolkit.mjs",
+      "snippet": "} catch { try { child.kill('SIGKILL'); } catch { /* ignore */ } }",
+      "nth": 0,
+      "reason": "SIGKILL 也失败则放弃（进程已尽）"
+    },
+    {
+      "file": "tools/agent/toolkit.mjs",
+      "snippet": "const csAfter = (abs) => { try { changeset?.after?.(abs); } catch { /* ignore */",
+      "nth": 0,
+      "reason": "同上（内联 catch）"
+    },
+    {
+      "file": "tools/agent/toolkit.mjs",
+      "snippet": "const csBefore = (abs) => { try { changeset?.before?.(abs); } catch { /* 记录失败不影响",
+      "nth": 0,
+      "reason": "变更集 before 记录失败不影响写入"
+    },
+    {
+      "file": "tools/agent/toolkit.mjs",
+      "snippet": "try { child.kill('SIGKILL'); } catch { /* ignore */ }",
+      "nth": 2,
+      "reason": "进程清理路径，失败不影响结果"
+    },
+    {
+      "file": "tools/agent/trace.mjs",
+      "snippet": "} catch { /* 落盘失败不影响运行，但结果里会标 persisted=false */ }",
+      "nth": 0,
+      "reason": "trace 写入失败不应让 agent 主流程失败（tracing 是旁路）"
+    },
+    {
+      "file": "tools/hostapi/git-methods.mjs",
+      "snippet": "} catch { /* 继续向上 */ }",
+      "nth": 0,
+      "reason": "向上查找 .git 时 stat 失败属正常（该层没有仓库），继续向上"
+    },
+    {
+      "file": "tools/hostapi/git-methods.mjs",
+      "snippet": "} catch { /* 无 */ }",
+      "nth": 0,
+      "reason": "读 HEAD 失败 → 返回空（调用方按非仓库处理）"
+    },
+    {
+      "file": "tools/hostapi/git-methods.mjs",
+      "snippet": "} catch { /* 无 packed-refs */ }",
+      "nth": 0,
+      "reason": "读 packed-refs 失败属正常（很多仓库没有该文件）"
+    },
+    {
+      "file": "tools/hostapi/git-methods.mjs",
+      "snippet": "try { out.set(name, fs.readFileSync(abs, 'utf8').trim()); } catch { /* 跳过 */ }",
+      "nth": 0,
+      "reason": "读单个 ref 文件失败跳过（可能刚被删除）"
+    },
+    {
+      "file": "tools/hostapi/methods-agent.mjs",
+      "snippet": "try { ctxNotify({ event: 'nianchu://agent-done', payload: { runId, state: result",
+      "nth": 0,
+      "reason": "完成通知推送失败不影响结果返回"
+    },
+    {
+      "file": "tools/hostapi/methods-agent.mjs",
+      "snippet": "try { ctxNotify({ event: 'nianchu://agent-phase', payload: { runId, ...p } }); }",
+      "nth": 0,
+      "reason": "界面通知推送失败不影响 agent 主流程（尽力而为）"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "} catch { /* 连接已断，忽略 */ }",
+      "nth": 0,
+      "reason": "写成功响应时连接已断（对端收不到）"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "} catch { /* 清理失败不影响本次结果 */ }",
+      "nth": 0,
+      "reason": "变更集自动清理失败不影响本次结果"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "} catch { /* ignore */ }",
+      "nth": 3,
+      "reason": "写错误响应时连接已断"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "if (f.opcode === 0x8) { try { socket.end(); } catch { /* ignore */ } return; }",
+      "nth": 0,
+      "reason": "关闭已断开的 socket，无可补救"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "try { const pr = maybeAutoPrune({ force: true }); if (pr.removed > 0) console.lo",
+      "nth": 0,
+      "reason": "启动时清理旧变更集失败不阻塞启动"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "try { socket.write(encodeFrame(JSON.stringify({ jsonrpc: '2.0', id, result })));",
+      "nth": 0,
+      "reason": "推送通知时连接已断"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "try { socket.write(encodeFrame(JSON.stringify(reply))); } catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "写回复时连接已断"
+    },
+    {
+      "file": "tools/hostapi/ws-host.mjs",
+      "snippet": "try { socket.write(pong); } catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "pong 写向已断连接，无可补救"
+    },
+    {
+      "file": "tools/schedule/scheduler.mjs",
+      "snippet": "try { child.kill('SIGKILL'); } catch { /* 忽略 */ }",
+      "nth": 0,
+      "reason": "taskkill 失败后退到 SIGKILL，都失败则放弃（进程已死）"
+    },
+    {
+      "file": "tools/skills/api-handler.mjs",
+      "snippet": "req.on('error', () => { try { res.writeHead(400); res.end('{\"ok\":false}'); } cat",
+      "nth": 0,
+      "reason": "请求流出错时尽力回 400，响应可能已无法送达"
+    },
+    {
+      "file": "tools/workbench/serve.mjs",
+      "snippet": "} catch { /* 目录不存在就是没有插件 */ }",
+      "nth": 0,
+      "reason": "插件目录不存在=没有插件，非错误"
+    },
+    {
+      "file": "tools/workbench/serve.mjs",
+      "snippet": "} catch { /* 清理失败不影响启动 */ }",
+      "nth": 0,
+      "reason": "启动清理失败不阻塞启动"
+    },
+    {
+      "file": "tools/workbench/serve.mjs",
+      "snippet": "try { entryMtime = (await stat(join(full, entry))).mtimeMs; } catch { /* ignore ",
+      "nth": 0,
+      "reason": "插件入口不存在则 mtime=0（仅用于排序）"
+    },
+    {
+      "file": "tools/workbench/_serve.mjs",
+      "snippet": "} catch { /* ignore */ }",
+      "nth": 0,
+      "reason": "kill 自起的 serve 子进程失败无可补救（进程可能已自行退出），吞掉不影响测试结果"
+    },
+    {
+      "file": "tools/agent/trace.mjs",
+      "snippet": "try { maybeAutoPruneTraces(); } catch { /* 清理失败不影响开 trace，下一次再试 */ }",
+      "nth": 0,
+      "reason": "trace 清理是旁路维护：失败不应阻塞开 trace，下一个节流窗口会再试"
+    },
+    {
+      "file": "tools/workbench/_cdp-dump.mjs",
+      "snippet": "try { ws?.close(); } catch { /* 忽略 */ }",
+      "nth": 0,
+      "reason": "清理阶段：WS 已断也要继续杀进程，不能在 finally 里抛新错掩盖原错"
+    },
+    {
+      "file": "tools/workbench/_cdp-dump.mjs",
+      "snippet": "} catch { /* 已经退出就忽略 */ }",
+      "nth": 0,
+      "reason": "Chrome 可能已自行退出（taskkill 报「找不到进程」），属预期状态"
+    },
+    {
+      "file": "tools/workbench/_cdp-dump.mjs",
+      "snippet": "} catch { /* 清不掉不影响结果 */ }",
+      "nth": 0,
+      "reason": "临时 profile 删不掉只会残留磁盘，不影响本次取样的正确性"
+    },
+    {
+      "file": "tools/workbench/_cdp-dump.mjs",
+      "snippet": "} catch { /* 还没起来 */ }",
+      "nth": 0,
+      "reason": "调试端口监听前 fetch 必然失败，是轮询等待的正常一环"
+    }
+  ]
+}

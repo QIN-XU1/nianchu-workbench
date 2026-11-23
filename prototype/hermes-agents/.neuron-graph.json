@@ -1,0 +1,422 @@
+{
+  "_at": "2026-11-15T12:54:15.527Z",
+  "_note": "真实神经元图：outputs.to ∪ inputs.from(反转)，两种写法归一化后去重",
+  "scenes": [
+    {
+      "id": "arch-review",
+      "name": "架构梳理"
+    },
+    {
+      "id": "backend-craft",
+      "name": "后端工坊"
+    },
+    {
+      "id": "build-plan",
+      "name": "实施计划"
+    },
+    {
+      "id": "competitor-analyze",
+      "name": "竞品拆解"
+    },
+    {
+      "id": "frontend-craft",
+      "name": "前端工坊"
+    },
+    {
+      "id": "hub",
+      "name": "中枢"
+    },
+    {
+      "id": "incident-analysis",
+      "name": "故障分析"
+    },
+    {
+      "id": "pc-cleanup",
+      "name": "本地电脑"
+    },
+    {
+      "id": "research",
+      "name": "调研"
+    },
+    {
+      "id": "reverse-eng",
+      "name": "逆向分析"
+    },
+    {
+      "id": "self-review",
+      "name": "自我复盘"
+    },
+    {
+      "id": "tool-forge",
+      "name": "工具工坊"
+    }
+  ],
+  "edges": [
+    {
+      "from": "arch-review",
+      "to": "backend-craft",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "architecture-plan"
+        }
+      ]
+    },
+    {
+      "from": "arch-review",
+      "to": "build-plan",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "architecture-plan"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "risk-list"
+        },
+        {
+          "how": "inputs.from",
+          "artifact": "architecture-plan"
+        },
+        {
+          "how": "inputs.from",
+          "artifact": "risk-list"
+        }
+      ]
+    },
+    {
+      "from": "arch-review",
+      "to": "frontend-craft",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "architecture-plan"
+        }
+      ]
+    },
+    {
+      "from": "arch-review",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "architecture-plan"
+        }
+      ]
+    },
+    {
+      "from": "build-plan",
+      "to": "backend-craft",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "backend-tasks"
+        }
+      ]
+    },
+    {
+      "from": "build-plan",
+      "to": "frontend-craft",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "frontend-tasks"
+        }
+      ]
+    },
+    {
+      "from": "build-plan",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "milestones"
+        }
+      ]
+    },
+    {
+      "from": "build-plan",
+      "to": "pc-cleanup",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "cleanup-request"
+        }
+      ]
+    },
+    {
+      "from": "build-plan",
+      "to": "tool-forge",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "tool-gaps"
+        }
+      ]
+    },
+    {
+      "from": "competitor-analyze",
+      "to": "arch-review",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "feature-matrix"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "feature-matrix"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "ux-patterns"
+        }
+      ]
+    },
+    {
+      "from": "competitor-analyze",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "feature-matrix"
+        }
+      ]
+    },
+    {
+      "from": "hub",
+      "to": "incident-analysis",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "diagnose-request"
+        }
+      ]
+    },
+    {
+      "from": "hub",
+      "to": "pc-cleanup",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "cleanup-request"
+        }
+      ]
+    },
+    {
+      "from": "incident-analysis",
+      "to": "backend-craft",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "incident-root-cause"
+        }
+      ]
+    },
+    {
+      "from": "incident-analysis",
+      "to": "build-plan",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "crash-report"
+        }
+      ]
+    },
+    {
+      "from": "incident-analysis",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "crash-report"
+        }
+      ]
+    },
+    {
+      "from": "incident-analysis",
+      "to": "pc-cleanup",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "cleanup-request"
+        }
+      ]
+    },
+    {
+      "from": "incident-analysis",
+      "to": "tool-forge",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "failure-signal"
+        }
+      ]
+    },
+    {
+      "from": "pc-cleanup",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "cleanup-ledger"
+        }
+      ]
+    },
+    {
+      "from": "research",
+      "to": "arch-review",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "reference-index"
+        },
+        {
+          "how": "inputs.from",
+          "artifact": "tech-candidates"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "tech-candidates"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "reference-index"
+        }
+      ]
+    },
+    {
+      "from": "research",
+      "to": "competitor-analyze",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "competitor-list"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "competitor-list"
+        }
+      ]
+    },
+    {
+      "from": "research",
+      "to": "frontend-craft",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "design-reference"
+        }
+      ]
+    },
+    {
+      "from": "research",
+      "to": "reverse-eng",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "tech-candidates"
+        },
+        {
+          "how": "inputs.from",
+          "artifact": "tech-candidates"
+        }
+      ]
+    },
+    {
+      "from": "reverse-eng",
+      "to": "arch-review",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "impl-details"
+        },
+        {
+          "how": "inputs.from",
+          "artifact": "reusable-patterns"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "impl-details"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "reusable-patterns"
+        }
+      ]
+    },
+    {
+      "from": "reverse-eng",
+      "to": "backend-craft",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "impl-details"
+        }
+      ]
+    },
+    {
+      "from": "reverse-eng",
+      "to": "build-plan",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "reusable-patterns"
+        },
+        {
+          "how": "outputs.to",
+          "artifact": "reusable-patterns"
+        }
+      ]
+    },
+    {
+      "from": "reverse-eng",
+      "to": "frontend-craft",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "impl-details"
+        }
+      ]
+    },
+    {
+      "from": "reverse-eng",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "impl-details"
+        }
+      ]
+    },
+    {
+      "from": "reverse-eng",
+      "to": "tool-forge",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "reusable-patterns"
+        }
+      ]
+    },
+    {
+      "from": "self-review",
+      "to": "hub",
+      "declared": [
+        {
+          "how": "outputs.to",
+          "artifact": "profile-insight"
+        }
+      ]
+    },
+    {
+      "from": "self-review",
+      "to": "tool-forge",
+      "declared": [
+        {
+          "how": "inputs.from",
+          "artifact": "gap-report"
+        }
+      ]
+    }
+  ]
+}

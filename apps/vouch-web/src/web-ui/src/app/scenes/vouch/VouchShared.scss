@@ -1,0 +1,306 @@
+/**
+ * VouchShared.scss —— 四个念初场景共用的版式与四态表达
+ *
+ * 纪律：
+ *   · 只用上游 design token，不写字面色值
+ *   · 颜色只表示状态（PASS/WARN/FAIL/UNKNOWN），不表示装饰
+ *   · 判不了用中性色，不用绿也不全用红
+ */
+
+/* ── 页面骨架 ── */
+.vouch-page,
+.vouch-verify {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: var(--openbitfun-color-surface-canvas);
+  color: var(--openbitfun-color-content-primary);
+}
+
+.vouch-page__head,
+.vouch-verify__head {
+  flex: 0 0 auto;
+  padding: var(--openbitfun-space-5) var(--openbitfun-space-6) var(--openbitfun-space-3);
+  border-bottom: 1px solid var(--openbitfun-color-border-subtle);
+}
+
+.vouch-page__title,
+.vouch-verify__title {
+  display: flex;
+  align-items: center;
+  gap: var(--openbitfun-space-2);
+
+  h1 {
+    margin: 0;
+    font-size: var(--openbitfun-type-heading-sm-font-size);
+    font-weight: var(--openbitfun-type-heading-section-font-weight);
+    line-height: var(--openbitfun-type-heading-sm-line-height);
+  }
+}
+
+.vouch-page__sub,
+.vouch-verify__sub {
+  margin: var(--openbitfun-space-1) 0 0;
+  font-size: var(--openbitfun-type-label-sm-font-size);
+  color: var(--openbitfun-color-content-muted);
+}
+
+.vouch-page__scroll,
+.vouch-verify__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: var(--openbitfun-space-5) var(--openbitfun-space-6) var(--openbitfun-space-8);
+}
+
+.vouch-page__section + .vouch-page__section,
+.vouch-verify__section + .vouch-verify__section {
+  margin-top: var(--openbitfun-space-6);
+}
+
+.vouch-page__h2,
+.vouch-verify__h2 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--openbitfun-space-3);
+  margin: 0 0 var(--openbitfun-space-3);
+  font-size: var(--openbitfun-type-label-md-font-size);
+  font-weight: var(--openbitfun-type-heading-section-font-weight);
+}
+
+.vouch-page__meta,
+.vouch-verify__meta {
+  font-size: var(--openbitfun-type-label-xs-font-size);
+  font-weight: var(--openbitfun-type-body-md-font-weight);
+  color: var(--openbitfun-color-content-muted);
+}
+
+/* ── 四态统计卡 ── */
+.vouch-stats,
+.vouch-verify__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--openbitfun-space-3);
+}
+
+.vouch-stat,
+.vouch-verify__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--openbitfun-space-3) var(--openbitfun-space-4);
+  border: 1px solid var(--openbitfun-color-border-subtle);
+  border-radius: var(--openbitfun-radius-lg);
+  background: var(--openbitfun-color-surface-panel);
+}
+
+.vouch-stat__n,
+.vouch-verify__stat-num {
+  font-size: var(--openbitfun-type-heading-page-font-size);
+  font-weight: var(--openbitfun-type-heading-page-font-weight);
+  line-height: var(--openbitfun-type-heading-page-line-height);
+  font-variant-numeric: tabular-nums;
+  color: var(--openbitfun-color-content-primary);
+}
+
+.vouch-stat__l,
+.vouch-verify__stat-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--openbitfun-type-label-xs-font-size);
+  color: var(--openbitfun-color-content-muted);
+}
+
+.vouch-stat[data-tone='pass'] .vouch-stat__n,
+.vouch-verify__stat[data-tone='pass'] .vouch-verify__stat-num { color: var(--openbitfun-color-status-success-emphasis); }
+
+.vouch-stat[data-tone='warn'] .vouch-stat__n,
+.vouch-verify__stat[data-tone='warn'] .vouch-verify__stat-num { color: var(--openbitfun-color-status-warning-emphasis); }
+
+.vouch-stat[data-tone='fail'] .vouch-stat__n,
+.vouch-verify__stat[data-tone='fail'] .vouch-verify__stat-num { color: var(--openbitfun-color-status-danger-emphasis); }
+
+.vouch-stat[data-tone='unknown'] .vouch-stat__n,
+.vouch-verify__stat[data-tone='unknown'] .vouch-verify__stat-num { color: var(--openbitfun-color-content-secondary); }
+
+/* ── 状态行（点色只表示四态）── */
+.vouch-rows {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--openbitfun-color-border-subtle);
+  border-radius: var(--openbitfun-radius-lg);
+  overflow: hidden;
+}
+
+.vouch-row {
+  display: grid;
+  grid-template-columns: 10px 88px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--openbitfun-space-2);
+  padding: 9px var(--openbitfun-space-3);
+  font-size: var(--openbitfun-type-label-sm-font-size);
+}
+
+.vouch-row + .vouch-row {
+  border-top: 1px solid var(--openbitfun-color-border-subtle);
+}
+
+.vouch-row__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.vouch-row[data-state='PASS'] .vouch-row__dot { background: var(--openbitfun-color-status-success-emphasis); }
+.vouch-row[data-state='WARN'] .vouch-row__dot { background: var(--openbitfun-color-status-warning-emphasis); }
+.vouch-row[data-state='FAIL'] .vouch-row__dot { background: var(--openbitfun-color-status-danger-emphasis); }
+.vouch-row[data-state='UNKNOWN'] .vouch-row__dot { background: var(--openbitfun-color-content-muted); }
+
+.vouch-row__name {
+  color: var(--openbitfun-color-content-secondary);
+}
+
+.vouch-row__val {
+  font-family: var(--openbitfun-type-code-md-font-family);
+  font-size: var(--openbitfun-type-code-meta-font-size);
+  color: var(--openbitfun-color-content-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vouch-row__tag {
+  font-family: var(--openbitfun-type-code-md-font-family);
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--openbitfun-color-content-muted);
+  white-space: nowrap;
+}
+
+/* ── 提示条 ── */
+.vouch-note {
+  margin: var(--openbitfun-space-3) 0 0;
+  padding: var(--openbitfun-space-3) var(--openbitfun-space-4);
+  border-radius: var(--openbitfun-radius-base);
+  background: var(--openbitfun-color-surface-sunken);
+  font-size: var(--openbitfun-type-label-xs-font-size);
+  line-height: var(--openbitfun-type-body-lg-line-height);
+  color: var(--openbitfun-color-content-muted);
+
+  strong {
+    color: var(--openbitfun-color-content-primary);
+  }
+}
+
+.vouch-note[data-tone='ok'] strong { color: var(--openbitfun-color-status-success-emphasis); }
+.vouch-note[data-tone='warn'] strong { color: var(--openbitfun-color-status-warning-emphasis); }
+.vouch-note[data-tone='fail'] strong { color: var(--openbitfun-color-status-danger-emphasis); }
+
+/* ── 列表（记忆 / 联网共用）── */
+.vouch-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vouch-list__item {
+  padding: var(--openbitfun-space-3) 0;
+  border-bottom: 1px solid var(--openbitfun-color-border-subtle);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.vouch-list__key {
+  font-family: var(--openbitfun-type-code-md-font-family);
+  font-size: var(--openbitfun-type-code-meta-font-size);
+  color: var(--openbitfun-color-content-muted);
+}
+
+.vouch-list__val {
+  font-size: var(--openbitfun-type-label-md-font-size);
+  font-weight: var(--openbitfun-type-label-lg-font-weight);
+  color: var(--openbitfun-color-content-primary);
+  word-break: break-word;
+}
+
+.vouch-list__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--openbitfun-space-3);
+  margin-top: 3px;
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--openbitfun-color-content-muted);
+}
+
+.vouch-list__src {
+  font-family: var(--openbitfun-type-code-meta-font-family);
+  font-size: var(--openbitfun-type-code-meta-font-size);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vouch-tag {
+  padding: 1px 6px;
+  border-radius: var(--openbitfun-radius-pill);
+  border: 1px solid currentColor;
+  font-family: var(--openbitfun-type-label-xs-font-family);
+  font-size: var(--openbitfun-type-label-xs-font-size);
+  font-weight: var(--openbitfun-type-label-xs-font-weight);
+  line-height: var(--openbitfun-type-label-xs-line-height);
+  letter-spacing: var(--openbitfun-type-label-xs-letter-spacing);
+  white-space: nowrap;
+}
+
+.vouch-tag[data-tone='pass'] { color: var(--openbitfun-color-status-success-emphasis); }
+.vouch-tag[data-tone='warn'] { color: var(--openbitfun-color-status-warning-emphasis); }
+.vouch-tag[data-tone='fail'] { color: var(--openbitfun-color-status-danger-emphasis); }
+.vouch-tag[data-tone='unknown'] { color: var(--openbitfun-color-content-muted); }
+
+/* ── 联网结果 ── */
+.vouch-hit__title {
+  display: block;
+  font-size: var(--openbitfun-type-label-md-font-size);
+  font-weight: var(--openbitfun-type-label-md-font-weight);
+  color: var(--openbitfun-color-content-link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.vouch-hit__host {
+  font-family: var(--openbitfun-type-code-meta-font-family);
+  font-size: var(--openbitfun-type-code-meta-font-size);
+  line-height: var(--openbitfun-type-code-meta-line-height);
+  color: var(--openbitfun-color-content-muted);
+  margin-top: 2px;
+}
+
+.vouch-hit__snippet {
+  margin: 5px 0 0;
+  font-size: var(--openbitfun-type-label-sm-font-size);
+  line-height: var(--openbitfun-type-label-sm-line-height);
+  color: var(--openbitfun-color-content-secondary);
+}
+
+.vouch-excerpt {
+  margin: 0;
+  padding: var(--openbitfun-space-3);
+  max-height: 300px;
+  overflow: auto;
+  font-family: var(--openbitfun-type-code-md-font-family);
+  font-size: var(--openbitfun-type-code-md-font-size);
+  line-height: var(--openbitfun-type-code-md-line-height);
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--openbitfun-color-surface-sunken);
+  border-radius: var(--openbitfun-radius-base);
+  color: var(--openbitfun-color-content-secondary);
+}

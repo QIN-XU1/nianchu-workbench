@@ -1,0 +1,109 @@
+{
+  "what": "T3 审计：五层四态贯通 + 不可判定场景",
+  "at": "2026-11-16T20:40:22.453Z",
+  "state": "PASS",
+  "layersOk": 5,
+  "totalLayers": 5,
+  "passedCases": 11,
+  "totalCases": 11,
+  "results": [
+    {
+      "layer": "L1 观测层",
+      "script": "tools/state/collect.mjs",
+      "cases": [
+        {
+          "name": "正常采集 → 有明确四态",
+          "ok": true,
+          "detail": "exit=0 state=WARN"
+        },
+        {
+          "name": "构造不可判定（网关指向不可达端口）→ 报 UNKNOWN",
+          "ok": true,
+          "detail": "UNKNOWN 出现 4 次 · exit=0"
+        }
+      ],
+      "ok": true,
+      "why": "正常态 WARN"
+    },
+    {
+      "layer": "L2 验证层",
+      "script": "25 个 verify-*.mjs",
+      "cases": [
+        {
+          "name": "代表 verify-cost 给出四态",
+          "ok": true,
+          "detail": "exit=0 state=PASS"
+        },
+        {
+          "name": "所有 verify-* 的退出码只在 {0,1,2,3}",
+          "ok": true,
+          "detail": "30 个脚本全部合规"
+        },
+        {
+          "name": "构造不可判定（删掉价格表）→ 输出 UNKNOWN",
+          "ok": true,
+          "detail": "exit=2 state=UNKNOWN"
+        }
+      ],
+      "ok": true,
+      "why": ""
+    },
+    {
+      "layer": "L3 记忆层",
+      "script": "tools/memory/store.mjs",
+      "cases": [
+        {
+          "name": "自检通过（含 TTL / supersede 反例）",
+          "ok": true,
+          "detail": "21/21"
+        },
+        {
+          "name": "查不存在的键 → 不返回假值",
+          "ok": true,
+          "detail": "exit=2 未声称找到"
+        }
+      ],
+      "ok": true,
+      "why": ""
+    },
+    {
+      "layer": "L4 改进层",
+      "script": "tools/evolve/evolve.mjs",
+      "cases": [
+        {
+          "name": "自检通过（含 C2/C4/C5 反例）",
+          "ok": true,
+          "detail": "27/27"
+        },
+        {
+          "name": "构造样本不足（3<8）→ C2 不下判定（不变成 closed）",
+          "ok": true,
+          "detail": "exit=0 · C2=有 · 最终状态=unknown 已按 C2 处理"
+        }
+      ],
+      "ok": true,
+      "why": ""
+    },
+    {
+      "layer": "L5 证明层",
+      "script": "prototype/hermes-agents/verify-goal.mjs",
+      "cases": [
+        {
+          "name": "正常跑 → 有明确四态",
+          "ok": true,
+          "detail": "✅ R10"
+        },
+        {
+          "name": "构造不可判定（删价格表）→ 必须恰好是 UNKNOWN",
+          "ok": true,
+          "detail": "❔ R10 · exit=2"
+        }
+      ],
+      "ok": true,
+      "why": ""
+    }
+  ],
+  "exportedAt": "2026-11-16T20:40:35.331Z",
+  "source": "evidence/evolve/four-state-layers.json",
+  "exportedBy": "tools/evolve/export-four-state.mjs"
+}

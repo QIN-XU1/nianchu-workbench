@@ -1,0 +1,113 @@
+// 复刻 `@openbitfun/ui` SegmentedControl 的 bar 外观。面板需要给每个选项挂
+// `data-openbitfun-component` / `data-openbitfun-part` 这套外观契约，而
+// `SegmentedControlOption` 不转发属性，所以这里用同一组 token 手写分段控件；
+// 改样式时请与
+// `design-system/packages/ui/src/components/SegmentedControl/SegmentedControl.module.css`
+// 的 `[data-variant="bar"]` 保持一致。
+.theme-pref-panel {
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--openbitfun-space-2);
+    min-width: 0;
+  }
+
+  &__group {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--openbitfun-control-segmented-control-gap);
+    padding: var(--openbitfun-control-segmented-control-padding);
+    border: 0;
+    border-radius: var(--openbitfun-control-segmented-control-radius);
+    background: var(--openbitfun-color-action-neutral-surface-hover);
+    box-sizing: border-box;
+  }
+
+  &__segment {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--openbitfun-control-segmented-control-segment-gap);
+    block-size: var(--openbitfun-control-segmented-control-segment-height);
+    min-inline-size: 0;
+    margin: 0;
+    padding-block: 0;
+    padding-inline: var(--openbitfun-control-segmented-control-segment-padding-inline);
+    border: 0;
+    border-radius: var(--openbitfun-control-segmented-control-segment-radius);
+    color: var(--openbitfun-color-action-neutral-content);
+    background: transparent;
+    box-sizing: border-box;
+    font-family: var(--openbitfun-type-label-md-font-family);
+    font-size: var(--openbitfun-type-label-md-font-size);
+    font-weight: var(--openbitfun-type-label-md-font-weight);
+    line-height: var(--openbitfun-type-label-md-line-height);
+    letter-spacing: var(--openbitfun-type-label-md-letter-spacing);
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      background-color var(--openbitfun-motion-duration-fast) var(--openbitfun-motion-easing-standard),
+      color var(--openbitfun-motion-duration-fast) var(--openbitfun-motion-easing-standard);
+
+    &:is([aria-checked="true"]) {
+      color: var(--openbitfun-color-content-primary);
+      background: var(--openbitfun-color-surface-raised);
+      font-weight: var(--openbitfun-type-label-selected-font-weight);
+    }
+
+    &:hover:not(:disabled):not([aria-checked="true"]) {
+      background: var(--openbitfun-color-action-neutral-surface-hover);
+    }
+
+    &:active:not(:disabled):not([aria-checked="true"]) {
+      background: var(--openbitfun-color-action-neutral-surface-pressed);
+    }
+
+    &:focus-visible {
+      outline: var(--openbitfun-focus-width) solid var(--openbitfun-color-focus-ring);
+      outline-offset: var(--openbitfun-focus-offset);
+    }
+
+    &:disabled {
+      color: var(--openbitfun-color-action-neutral-content-disabled);
+      cursor: not-allowed;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    inline-size: var(--openbitfun-control-segmented-control-icon-size);
+    block-size: var(--openbitfun-control-segmented-control-icon-size);
+    color: currentColor;
+
+    & > :where(svg, img) {
+      display: block;
+      inline-size: 100%;
+      block-size: 100%;
+    }
+  }
+
+  &__label {
+    min-inline-size: 0;
+    line-height: var(--openbitfun-type-body-sm-line-height);
+    overflow: hidden;
+  }
+
+  // 不是装饰：`system` 模式下分段本身说不清当前是哪套配色，这里是唯一报出口。
+  &__resolved {
+    color: var(--openbitfun-color-content-secondary);
+    font-size: var(--openbitfun-type-support-font-size);
+    font-weight: var(--openbitfun-type-support-font-weight);
+    line-height: var(--openbitfun-type-field-helper-line-height);
+    letter-spacing: var(--openbitfun-type-support-letter-spacing);
+    overflow-wrap: break-word;
+  }
+}

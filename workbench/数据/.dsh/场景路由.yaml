@@ -1,0 +1,193 @@
+# 场景路由表 —— 「这活归谁」的唯一判据
+#
+# ══════════════════════════════════════════════════════════════
+#  为什么要有这个文件
+# ══════════════════════════════════════════════════════════════
+#
+#  依据 方案/121 调研（Magentic-One / Anthropic / MAST 三处独立证据）：
+#
+#  1. 归属判断不能靠 LLM 自由发挥。
+#     Anthropic 对 routing 的限定是「classification can be handled accurately」
+#     —— 这是**测出来的**，不是天赋。
+#
+#  2. `does_not`（不碰什么）这份信息要三处复用，否则会漂移：
+#     ① 路由排除项 —— 命中就排除这个场景
+#     ② 工单边界段 —— 派单时告诉它「别碰这些」
+#     ③ 验收拒绝条件 —— 产物越界就 reject
+#
+#  3. 名册细节不进注入。
+#     Claude Code 实测约束：subagent 描述总和超 15,000 token 会在启动时告警。
+#     所以注入里只放「何时派给它」一行，细节查这个文件。
+#
+# ══════════════════════════════════════════════════════════════
+#  字段说明
+# ══════════════════════════════════════════════════════════════
+#
+#  id            场景 id（对应 外壳/scenarios/<id>.json）
+#  name          场景中文名
+#  dispatch_when 什么时候派给它（一句话，写「要产出什么」而不是「它是什么」）
+#  does_not      绝对不碰的（路由排除 + 工单边界 + 验收拒绝，三处复用）
+#  deliverable   产物是什么（决定验收看什么）
+#  verify_hint   验收要点（帮中枢填 verify 字段）
+#  evidence_type 证据类型（文件路径 / 日志行号 / 结果数字）
+#  inputs        需要什么输入（判断依赖关系用）
+#  outputs_to    产出应该流向谁（判断串行/并行用）
+#
+# ══════════════════════════════════════════════════════════════
+
+- id: research
+  name: 调研
+  dispatch_when: 要上网找资料、找参考实现、找同类项目，产出竞品清单或资料索引
+  does_not:
+    - 拆竞品的功能矩阵（那是竞品拆解的活）
+    - 出架构方案（那是架构梳理的活）
+    - 写代码
+  deliverable: 资料来源清单 + 关键摘录 + 索引
+  verify_hint: 每个来源有 URL 或文件路径；摘录能支撑结论
+  evidence_type: 文件路径 + URL
+  inputs: []
+  outputs_to: [competitor-analyze, arch-review]
+
+- id: competitor-analyze
+  name: 竞品拆解
+  dispatch_when: 要拆某个竞品的功能矩阵、交互结构、能力边界
+  does_not:
+    - 搜集资料（那是调研的活）
+    - 出架构方案（那是架构梳理的活）
+    - 写代码
+  deliverable: 功能矩阵 + 能力对比表
+  verify_hint: 矩阵每格有依据；能看出差异点
+  evidence_type: 文件路径
+  inputs: [research]
+  outputs_to: [arch-review]
+
+- id: reverse-eng
+  name: 逆向分析
+  dispatch_when: 要拆解某个成熟作品的目录结构、关键模块、数据流
+  does_not:
+    - 出架构方案（结论给架构梳理）
+    - 直接改代码
+    - 做产品决策
+  deliverable: 目录结构图 + 模块职责 + 数据流说明
+  verify_hint: 结论能指到具体文件/模块；数据流是完整的
+  evidence_type: 文件路径
+  inputs: []
+  outputs_to: [arch-review, build-plan]
+
+- id: arch-review
+  name: 架构梳理
+  dispatch_when: 要汇总结论、出架构方案、定分层、列风险清单
+  does_not:
+    - 搜集资料（那是调研的活）
+    - 拆竞品功能（那是竞品拆解的活）
+    - 写代码（那是开发的活）
+    - 定实施排期（那是实施计划的活）
+    - 修改其他场景的记忆
+  deliverable: 架构方案 + 分层设计 + 风险清单
+  verify_hint: 每层有职责定义；风险有应对措施
+  evidence_type: 文件路径
+  inputs: [competitor-analyze, reverse-eng, research]
+  outputs_to: [build-plan]
+
+- id: build-plan
+  name: 实施计划
+  dispatch_when: 架构方案已定，要拆阶段、里程碑、验收标准
+  does_not:
+    - 重新设计架构（那是架构梳理的活）
+    - 写具体实现代码
+    - 做技术选型的最终决策
+  deliverable: 阶段划分 + 里程碑 + 每阶段验收标准
+  verify_hint: 每个阶段有可验收的产出；总工期可估算
+  evidence_type: 文件路径
+  inputs: [arch-review]
+  outputs_to: []
+
+- id: incident-analysis
+  name: 故障分析
+  dispatch_when: 有崩溃日志/报错栈/异常现象需要归因
+  does_not:
+    - 改代码、写修复补丁
+    - 性能调优
+    - 清理磁盘
+  deliverable: 归因结论 + 证据链（日志行号）+ 修复建议（不落代码）
+  verify_hint: 每条归因能指到具体日志行；建议不包含代码 diff
+  evidence_type: 文件路径 + 日志行号
+  inputs: []
+  outputs_to: [build-plan]
+
+- id: pc-cleanup
+  name: 本地电脑
+  dispatch_when: 要清磁盘、查容量、找大文件、处理本机杂事
+  does_not:
+    - 分析崩溃日志（那是故障分析的活）
+    - 动任何项目源码
+    - 删除未经确认的文件
+  deliverable: 清理清单 + 已清理项台账 + 释放空间数字
+  verify_hint: 有清理前后的容量对比；每项有确认记录
+  evidence_type: 结果数字 + 台账路径
+  inputs: []
+  outputs_to: []
+
+- id: self-review
+  name: 自我复盘
+  dispatch_when: 要读历史数据、形成对人的判断、归档个人资料
+  does_not:
+    - 改项目代码
+    - 做业务决策
+    - 审查他人的技术产物（那是架构梳理/故障分析的活）
+  deliverable: 复盘结论 + 档案归档记录
+  verify_hint: 结论有数据支撑；归档项可检索
+  evidence_type: 文件路径
+  inputs: []
+  outputs_to: []
+- id: hub
+  name: 中枢
+  dispatch_when: 用户直接提需求、要判断归属、要汇总多场景结果、要跟踪派单进度
+  does_not:
+    - 产出任何专业内容（不写码、不写文档、不做架构判断）
+    - 读源码/日志超过 3 分钟（那是场景的活）
+    - 代替场景写它自己的记忆
+  deliverable: 判断结论 + 派单 + 汇总报告
+  verify_hint: 结论≤3句且能对应到具体场景产物；派单有四件套
+  evidence_type: 场景产物路径
+  inputs: []
+  outputs_to: []
+
+- id: backend-craft
+  name: 后端工坊
+  dispatch_when: 要判断后端实现对不对、查性能问题、定接口契约、出后端改法
+  does_not:
+    - 改界面样式（那是前端工坊的活）
+    - 定整体架构（那是架构梳理的活）
+    - 事后归因日志（那是故障分析的活）
+  deliverable: 后端改法单 + 接口契约 + 性能证据
+  verify_hint: 每处改动写明「什么条件下会坏」；性能声称必须带改前改后数字
+  evidence_type: 文件路径 + 压测数字
+  inputs: [build-plan]
+  outputs_to: [build-plan]
+
+- id: frontend-craft
+  name: 前端工坊
+  dispatch_when: 要判断界面对不对、出界面改法、定可判定验收标准、验证改完真的好了
+  does_not:
+    - 改后端接口（那是后端工坊的活）
+    - 定整体架构（那是架构梳理的活）
+    - 拆竞品功能（那是竞品拆解的活）
+  deliverable: 前端改法单 + 界面设计规范
+  verify_hint: 每条问题带可测值（对比度/px/ms）；验收必须带改前改后截图
+  evidence_type: 文件路径 + 截图
+  inputs: [build-plan]
+  outputs_to: [build-plan]
+
+- id: tool-forge
+  name: 工具工坊
+  dispatch_when: 要造新工具、判断缺口是真的、注册进体检、淘汰失效工具、记账
+  does_not:
+    - 凭「感觉应该有」就造（必须有缺口证据）
+    - 造完不注册进体检（那样它是孤儿）
+    - 造完不写 selftest（那样它坏了没人知道）
+  deliverable: 新工具 .mjs（含 selftest + 反例）+ 注册进机制体检 + 账本记录
+  verify_hint: 自测必须含「必须失败」的反例；注册必须用只读参数不是只跑 --selftest
+  evidence_type: 文件路径 + 自测输出
+  inputs: [build-plan]
+  outputs_to: [build-plan]

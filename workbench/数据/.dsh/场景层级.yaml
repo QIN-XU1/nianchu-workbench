@@ -1,0 +1,60 @@
+# 场景层级 —— 主场景 / 子场景
+#
+# 设计依据（视频 BV19KW464Eov）：
+#   「你会发现可能就只需要一个主场景，这个主场景专门负责服务器；
+#    还有子场景，子场景的话就是负责这些服务器里面具体业务。」
+#
+# 字段：
+#   parent  上级场景 id（root 为空）
+#   role    root / main / sub
+#   scope   这个场景管什么（一句话）
+
+scene:
+  backend-craft:
+    parent: ""
+    role: root
+    scope: "后端工坊：后端正确性与性能的唯一对口人。判断实现对不对（什么条件下会坏）、出改法单、定接口契约、给性能证据。"
+  frontend-craft:
+    parent: ""
+    role: root
+    scope: "前端工坊：界面质量的唯一对口人。把「不好看」翻译成可判定判据（对比度/间距/字号），出改法单，给改前改后截图验收。"
+  tool-forge:
+    parent: ""
+    role: root
+    scope: "工具工坊：工具层的自我进化载体。从缺口反推需要什么工具，写出来、自测、注册进体检、淘汰失效的、记账。"
+  arch-review:
+    parent: ""
+    role: root
+    scope: "架构梳理：三路输入（竞品/逆向/资料）在这里汇总结论，产出架构方案与风险清单。"
+  build-plan:
+    parent: ""
+    role: root
+    scope: "实施计划：把架构方案拆成阶段、里程碑、验收标准。"
+  competitor-analyze:
+    parent: ""
+    role: root
+    scope: "竞品拆解：左边看竞品，右边 AI 拆功能矩阵。产出发给「架构梳理」。"
+  hub:
+    parent: ""
+    role: root
+    scope: "中枢（Hub）：超级智能体的唯一交互入口。你在这里交办需求，AI 自主判断需要哪些场景、调度它们、汇总结果。左侧 3D "
+  incident-analysis:
+    parent: ""
+    role: root
+    scope: "故障分析：读 crash-log.jsonl，分类统计、找共同模式、归因、提修复建议。边界：只分析不改代码（改代码归开发"
+  pc-cleanup:
+    parent: ""
+    role: root
+    scope: "本地电脑：分区容量 + 磁盘大户排行 + 可清理体检 + 清理台账 + AI 助手（电脑清理 + 本机杂事）"
+  research:
+    parent: ""
+    role: root
+    scope: "调研：左边搜网页，右边 AI 帮你收拢成竞品清单/资料索引。产出会自动发给「竞品拆解」与「架构梳理」。"
+  reverse-eng:
+    parent: ""
+    role: root
+    scope: "逆向分析：拆解成熟作品的目录结构、关键模块、数据流。产出发给「架构梳理」与「实施计划」。"
+  self-review:
+    parent: ""
+    role: root
+    scope: "自我复盘：右上角浏览 <工作台>\自我复盘 的文件树；左上角大窗口**不管单击、双击还是怎么点，都只在这里预览**（md"

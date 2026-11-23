@@ -1,0 +1,366 @@
+ount+=1:this.handleScopes.set(r.store,{
+scope:r.scope,count:1}
+)}
+const n={
+name:r.name,component:t,scope:r.scope,...r.children===void 0?{
+}
+:{
+children:r.children}
+,...r.store===void 0?{
+}
+:{
+store:r.store}
+,...r.inject===void 0?{
+}
+:{
+inject:r.inject}
+,...r.locale===void 0?{
+}
+:{
+locale:r.locale}
+,...r.slots===void 0?{
+}
+:{
+slots:r.slots}
+,...r.registrant===void 0?{
+}
+:{
+registrant:r.registrant}
+}
+;
+i.definition=n,this.markFactoryDirty(i);
+const s=[];
+for(const[l,u]of Object.entries(r.children??{
+}
+)){
+const f=this.record(l);
+f.spec=u,f.declaredBy=`factory "${
+r.name}
+"${
+r.registrant?` (${
+r.registrant}
+)`:""}
+`,f.parent=`factory:${
+r.name}
+`,f.declarationEpoch+=1,s.push([l,f])}
+for(const[l,u]of s)this.markDirty(l,u);
+for(const[,l]of s)this.notifyDeclaration(l);
+return()=>{
+if(i.definition===n){
+if(i.definition=void 0,this.markFactoryDirty(i),n.store!==void 0&&typeof n.store!="function"){
+const l=this.handleScopes.get(n.store);
+l!==void 0&&--l.count===0&&this.handleScopes.delete(n.store)}
+this.releaseChildren(n.children)}
+}
+}
+);
+factory(e){
+return this.factories.get(e)?.definition}
+factoryVersion(e){
+return this.factories.get(e)?.version??0}
+subscribeFactory(e,t){
+const r=this.factoryRecord(e);
+return r.listeners.add(t),()=>{
+r.listeners.delete(t)}
+}
+isFactoryLive(e){
+return this.factories.get(e.name)?.definition===e}
+register(e,t){
+const r=this.records.get(e.name);
+if(!r?.spec)throw new Error(`slot "${
+e.name}
+" is not declared (a parent entry's children table must declare it)`);
+const i=r.spec,n=e.priority??0,s=f=>`at priority ${
+n}
+${
+f.registrant!==void 0?` (registered by ${
+f.registrant}
+)`:""}
+ — register at a different priority to shadow it (lowest renders)`;
+switch(i.kind){
+case"single":{
+const f=r.entries.find(h=>(h.options.priority??0)===n);
+if(f)throw new Error(`single slot "${
+e.name}
+" already has a registration ${
+s(f)}
+`);
+break}
+case"keyed":{
+if(e.key===void 0)throw new Error(`keyed slot "${
+e.name}
+" requires options.key`);
+const f=r.entries.find(h=>h.options.key===e.key&&(h.options.priority??0)===n);
+if(f)throw new Error(`keyed slot "${
+e.name}
+" already has an entry for key "${
+e.key}
+" ${
+s(f)}
+`);
+break}
+case"list":{
+if(e.id===void 0)throw new Error(`list slot "${
+e.name}
+" requires options.id`);
+const f=r.entries.find(h=>h.options.id===e.id&&(h.options.priority??0)===n);
+if(f)throw new Error(`list slot "${
+e.name}
+" already has an entry with id "${
+e.id}
+" ${
+s(f)}
+`);
+break}
+case"chain":if(e.select===void 0)throw new Error(`chain slot "${
+e.name}
+" requires options.select`);
+break}
+if(e.children)for(const f of Object.keys(e.children)){
+const h=this.records.get(f);
+if(h?.spec)throw new Error(`slot "${
+f}
+" is already declared (by ${
+h.declaredBy??"an unknown entry"}
+)`)}
+if(e.store!==void 0&&typeof e.store!="function"){
+const f=this.handleScopes.get(e.store);
+if(f&&f.scope!==i.scope)throw new Error(`store handle mounted under "${
+e.name}
+" (scope "${
+i.scope}
+") is already mounted under scope "${
+f.scope}
+" — one handle, one scope`);
+f?f.count+=1:this.handleScopes.set(e.store,{
+scope:i.scope,count:1}
+)}
+const l={
+component:t,options:{
+...e.key!==void 0?{
+key:e.key}
+:{
+}
+,...e.id!==void 0?{
+id:e.id}
+:{
+}
+,...e.order!==void 0?{
+order:e.order}
+:{
+}
+,...e.label!==void 0?{
+label:e.label}
+:{
+}
+,...e.priority!==void 0?{
+priority:e.priority}
+:{
+}
+}
+,...e.select!==void 0?{
+select:e.select}
+:{
+}
+,...e.inject!==void 0?{
+inject:e.inject}
+:{
+}
+,...e.children!==void 0?{
+children:e.children}
+:{
+}
+,...e.store!==void 0?{
+store:e.store}
+:{
+}
+,...e.locale!==void 0?{
+locale:e.locale}
+:{
+}
+,...e.registrant!==void 0?{
+registrant:e.registrant}
+:{
+}
+}
+,u=[...r.entries,l];
+if(u.sort(i.kind==="list"?(f,h)=>(f.options.priority??0)-(h.options.priority??0)||(f.options.order??0)-(h.options.order??0):(f,h)=>(f.options.priority??0)-(h.options.priority??0)),r.entries=u,this.markDirty(e.name,r),e.children){
+const f=[];
+for(const[h,g]of Object.entries(e.children)){
+const y=this.record(h);
+y.spec=g,y.declaredBy=`an entry in "${
+e.name}
+"${
+e.registrant?` (${
+e.registrant}
+)`:""}
+`,y.parent=e.name,y.declarationEpoch+=1,f.push([h,y])}
+for(const[h,g]of f)this.markDirty(h,g);
+for(const[,h]of f)this.notifyDeclaration(h)}
+return()=>{
+r.entries.includes(l)&&(r.entries=r.entries.filter(f=>f!==l),this.markDirty(e.name,r),this.releaseEntry(l))}
+}
+isLive(e){
+for(const t of this.records.values())if(t.entries.includes(e))return!0;
+return!1}
+entries(e){
+return this.records.get(e)?.entries??b1}
+entriesOfSlot(e){
+const t=this.records.get(e);
+if(!t?.spec)return b1;
+const r=t.spec.kind;
+if(r==="chain")return t.entries;
+const i=[],n=new Set;
+for(const s of t.entries){
+if(this.abdicated.has(s))continue;
+const l=r==="keyed"?s.options.key:r==="list"?s.options.id:void 0;
+n.has(l)||(n.add(l),i.push(s))}
+return i}
+spec(e){
+return this.records.get(e)?.spec}
+specDynamic(e){
+return this.records.get(e)?.spec}
+snapshot(e){
+const t=(s,l)=>{
+const u=this.records.get(s);
+if(u?.spec===void 0||l.has(s))return;
+const f=new Set(l);
+f.add(s);
+const h=new Set(this.entriesOfSlot(s)),g=[...this.records.entries()].filter(([,y])=>y.spec!==void 0&&y.parent===s).flatMap(([y])=>{
+const _=t(y,f);
+return _===void 0?[]:[_]}
+);
+return{
+type:"slot",name:s,kind:u.spec.kind,scope:u.spec.scope,...u.declaredBy===void 0?{
+}
+:{
+declaredBy:u.declaredBy}
+,occupants:u.entries.map(y=>({
+...y.registrant===void 0?{
+}
+:{
+registrant:y.registrant}
+,...y.options.key===void 0?{
+}
+:{
+key:y.options.key}
+,...y.options.id===void 0?{
+}
+:{
+id:y.options.id}
+,...y.options.order===void 0?{
+}
+:{
+order:y.options.order}
+,priority:y.options.priority??0,active:h.has(y)}
+)),children:g}
+}
+,r=s=>{
+const l=this.factories.get(s)?.definition;
+if(l===void 0)return;
+const u=`factory:${
+s}
+`,f=[...this.records.entries()].filter(([,h])=>h.spec!==void 0&&h.parent===u).flatMap(([h])=>{
+const g=t(h,new Set([u]));
+return g===void 0?[]:[g]}
+);
+return{
+type:"factory",name:s,scope:l.scope,...l.registrant===void 0?{
+}
+:{
+registrant:l.registrant}
+,children:f}
+}
+;
+if(e!==void 0){
+const s=e.startsWith("factory:")?r(e.slice(8)):t(e,new Set);
+return s===void 0?[]:[s]}
+const i=[...this.records.entries()].filter(([,s])=>s.spec!==void 0&&s.parent===void 0).flatMap(([s])=>{
+const l=t(s,new Set);
+return l===void 0?[]:[l]}
+),n=[...this.factories.keys()].flatMap(s=>{
+const l=r(s);
+return l===void 0?[]:[l]}
+);
+return[...i,...n]}
+declarationEpoch(e){
+return this.records.get(e)?.declarationEpoch??0}
+subscribe(e,t){
+const r=this.record(e);
+return r.listeners.add(t),()=>{
+r.listeners.delete(t)}
+}
+subscribeDeclaration(e,t){
+const r=this.record(e);
+return r.declarationListeners.add(t),()=>{
+r.declarationListeners.delete(t)}
+}
+getVersion(e){
+return this.records.get(e)?.version??0}
+onMutate(e){
+return this.mutateListeners.add(e),()=>{
+this.mutateListeners.delete(e)}
+}
+reportEntryError(e,t,r,i){
+if(i.abdicate){
+if(this.abdicated.has(t))return;
+this.abdicated.add(t);
+const n=this.records.get(e);
+n!==void 0&&this.markDirty(e,n)}
+for(const n of[...this.entryErrorListeners])n(e,t,r,{
+abdicated:i.abdicate}
+)}
+reportFactoryError(e,t,r){
+for(const i of[...this.entryErrorListeners])i(`factory:${
+e}
+`,t,r,{
+abdicated:!1}
+)}
+onEntryError(e){
+return this.entryErrorListeners.add(e),()=>{
+this.entryErrorListeners.delete(e)}
+}
+releaseEntry(e){
+if(e.store!==void 0&&typeof e.store!="function"){
+const t=this.handleScopes.get(e.store);
+t&&--t.count===0&&this.handleScopes.delete(e.store)}
+this.releaseChildren(e.children)}
+releaseChildren(e){
+if(e!==void 0)for(const t of Object.keys(e)){
+const r=this.records.get(t);
+if(!r)continue;
+const i=r.entries;
+r.spec=void 0,r.declaredBy=void 0,r.parent=void 0,r.declarationEpoch+=1,r.entries=b1,this.markDirty(t,r),this.notifyDeclaration(r);
+for(const n of i)this.releaseEntry(n)}
+}
+record(e){
+let t=this.records.get(e);
+return t||(t={
+spec:void 0,declaredBy:void 0,parent:void 0,declarationEpoch:0,entries:b1,version:0,listeners:new Set,declarationListeners:new Set}
+,this.records.set(e,t)),t}
+factoryRecord(e){
+let t=this.factories.get(e);
+return t===void 0&&(t={
+definition:void 0,version:0,listeners:new Set}
+,this.factories.set(e,t)),t}
+markFactoryDirty(e){
+e.version+=1,queueMicrotask(()=>{
+for(const t of[...e.listeners])t()}
+)}
+markDirty(e,t){
+t.version+=1;
+for(const r of[...this.mutateListeners])r(e);
+this.dirty.add(t),this.flushScheduled||(this.flushScheduled=!0,queueMicrotask(()=>{
+this.flush()}
+))}
+notifyDeclaration(e){
+for(const t of[...e.declarationListeners])t()}
+flush(){
+this.flushScheduled=!1;
+const e=[...this.dirty];
+this.dirty.clear();
+for(const t of e)for(const r of[...t.listeners])r()}
+}
+;
+const MI=Object.freeze(Object.defineProperty({
+__proto__:null,S

@@ -1,0 +1,120 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   compat.css —— 命名桥接层（临时，用于统一两套令牌命名）
+   ══════════════════════════════════════════════════════════════════════════
+
+   背景：
+     重构过程中同时出现了两套 CSS 变量命名：
+       A) tokens.css（teammate 写）：--color-* / --fs-N / --space-N / --r-N
+       B) layout/components（lead 写）：--s0/--s1 / --t1 / --a1 / --sp1
+
+   决策：以 A 为唯一真源（语义清晰、有 154 个变量），
+        本文件把 B 的短名全部 alias 到 A，避免改动任何已写好的 CSS。
+
+   本文件必须**在 tokens.css 之后、其余 CSS 之前**加载。
+   迁移完成后可删除。
+   ══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ═══ 表面层级 ═══ */
+  --s0: var(--color-void);
+  --s1: var(--color-base);
+  --s2: var(--color-panel);
+  --s3: var(--color-raised);
+  --s4: var(--color-hover);
+  --s5: var(--color-active);
+
+  /* ═══ 文字 ═══ */
+  --t1: var(--color-txt-1);
+  --t2: var(--color-txt-2);
+  --t3: var(--color-txt-3);
+  --t4: var(--color-txt-disabled);
+
+  /* ═══ 强调 ═══ */
+  --a1: var(--color-accent);
+  --a2: var(--color-accent-hover);
+  --a3: var(--color-accent-press);
+  --aBg: var(--color-accent-soft);
+  --aBorder: var(--color-accent-line);
+
+  /* ═══ 语义 ═══ */
+  --ok: var(--color-ok);
+  --okBg: var(--color-ok-soft);
+  --warn: var(--color-warn);
+  --warnBg: var(--color-warn-soft);
+  --err: var(--color-err);
+  --errBg: var(--color-err-soft);
+  --info: var(--color-txt-2);
+  --infoBg: var(--color-raised);
+
+  /* ═══ 描边 ═══ */
+  --line: var(--color-line);
+  --lineStr: var(--color-line-strong);
+
+  /* ═══ 间距（tokens.css 已有 --sp1..6，此处仅确保存在）═══ */
+  --sp1: 4px;
+  --sp2: 8px;
+  --sp3: 12px;
+  --sp4: 16px;
+  --sp5: 24px;
+  --sp6: 32px;
+
+  /* ═══ 圆角 ═══ */
+  --r0: var(--r-0);
+  --r1: var(--r-1);
+  --r2: var(--r-2);
+  --rFull: 999px;
+
+  /* ═══ 字号 ═══ */
+  --fs1: var(--fs-11);
+  --fs2: var(--fs-12);
+  --fs3: var(--fs-13);
+  --fs4: var(--fs-15);
+  --fs5: var(--fs-18);
+  --fs6: var(--fs-22);
+  --fs7: var(--fs-28);
+
+  /* ═══ 行高（tokens.css 有 --lh-11/12/13 等精确值）═══ */
+  --lh1: var(--lh-tight);
+  --lh2: var(--lh-normal);
+  --lh3: 1.7;
+
+  /* ═══ 字重 ═══ */
+  --fw1: var(--fw-regular);
+  --fw2: var(--fw-medium);
+  --fw3: var(--fw-bold);
+
+  /* ═══ 字体 ═══ */
+  --fontUi: var(--font-ui);
+  --fontMono: var(--font-mono);
+
+  /* ═══ 阴影 ═══ */
+  --sh0: none;
+  --sh1: var(--shadow-1);
+  --sh2: var(--shadow-2);
+  --sh3: var(--shadow-3);
+  --sh4: var(--shadow-4);
+  --sh5: var(--shadow-5);
+
+  /* ═══ 动效 ═══ */
+  --dur1: var(--dur-1);
+  --dur2: var(--dur-2);
+  --dur3: var(--dur-3);
+  --ease: var(--ease-in-out);
+  --easeOut: var(--ease-out);
+
+  /* ═══ 布局尺寸 ═══ */
+  --hTitle: var(--h-title);
+  --hScene: var(--h-scene);
+  --hPanelHead: var(--h-panel-head);
+  --wAgent: 300px;
+  --wHandle: var(--w-handle);
+
+  /* ═══ 层级 ═══ */
+  --zBase: var(--z-base);
+  --zPanel: var(--z-panel);
+  --zFloat: var(--z-float);
+  --zOverlay: var(--z-overlay);
+  --zToast: var(--z-toast);
+  --zModal: var(--z-modal);
+  --zDrag: 1200;
+}

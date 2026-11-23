@@ -1,0 +1,73 @@
+{
+  "_note": "派单台账",
+  "dispatches": [
+    {
+      "id": "d-20261109-001",
+      "type": "dispatch",
+      "from": "hub",
+      "to": "arch-review",
+      "subject": "七层架构现状评估",
+      "phenomenon": "项目已建七层结构和七套机制，但缺一份基于实测的架构现状评估",
+      "howto": "照 AGENTS.md 第4节的口径：只看能跑的证明，不看文档声称",
+      "verify": "产物 workbench/产物/架构评估.md 存在，且含七层逐层判定与风险清单",
+      "createdAt": "2026-11-09T11:07:30.740Z",
+      "state": "closed",
+      "deadlineHours": 24,
+      "ackedAt": "2026-11-09T11:07:39.641Z",
+      "receipt": "产物已生成：workbench/产物/架构评估.md（3169 字节，99 行）。含七层逐层判定表、3 条关键结论、4 项风险清单、3 条给中枢的建议。实测口径：机制体检 6/7 通过（唯一失败是越界哨兵报告 AGENTS.md 被改，正确行为）。",
+      "deliveredAt": "2026-11-09T11:07:39.582Z",
+      "closedAt": "2026-11-09T11:07:39.693Z"
+    },
+    {
+      "id": "d-20261109-002",
+      "type": "dispatch",
+      "from": "hub",
+      "to": "incident-analysis",
+      "subject": "分析 96 条崩溃日志",
+      "phenomenon": "crash-log.jsonl 有 96 条崩溃记录，从未被分析过，不知道是什么原因导致的",
+      "howto": "照 skills/incident-analysis/SKILL.md 的四步流程：分类统计 → 找模式 → 归因 → 提建议",
+      "verify": "产物 workbench/产物/崩溃分析报告.md 存在，且含分类表、模式分析、建议清单、数据缺口",
+      "createdAt": "2026-11-09T11:20:54.248Z",
+      "state": "closed",
+      "deadlineHours": 24,
+      "ackedAt": "2026-11-09T11:21:04.532Z",
+      "receipt": "产物已生成：workbench/产物/崩溃分析报告.md。真实分析了 96 条日志（0 条解析失败），发现 4 个模式：①崩溃数 3 天降 92.5%（但不完整）②18 条 EPIPE 有明确根因 ③child-process-gone 中 68% 是正常现象 ④崩溃成簇。提出 5 条建议、列出 6 个数据缺口。关键教训：我在初版技能里假设'40条全在/chat'被真实数据推翻。",
+      "deliveredAt": "2026-11-09T11:21:04.471Z",
+      "closedAt": "2026-11-09T11:21:04.589Z"
+    },
+    {
+      "id": "d-20261109-003",
+      "type": "dispatch",
+      "from": "hub",
+      "to": "build-plan",
+      "subject": "修复 EPIPE 崩溃（18 条）",
+      "phenomenon": "崩溃日志里 18 条 uncaughtException 全是 EPIPE broken pipe，占 18.8%，且会连续发生（16 次相邻同类）",
+      "howto": "照 产物的崩溃分析报告 建议1：搜索所有 webContents.send，加 isDestroyed() 判断。已知 main.js:5183 缺保护",
+      "verify": "所有 webContents.send 都有 isDestroyed 检查；跑机制体检不引入新问题",
+      "createdAt": "2026-11-09T11:40:51.832Z",
+      "state": "closed",
+      "deadlineHours": 24,
+      "ackedAt": "2026-11-09T11:42:38.259Z",
+      "receipt": "修复了两处：① main.js:5190 的 webai:task 发送前加 isDestroyed() 双重判断（target 和 webContents）—— 这是 EPIPE 的根因；② main.js:321 加 EPIPE 专门兜底：识别 EPIPE/ECONNRESET 类错误后不中断进程、不弹窗、只记 warn，其他异常仍走 reportFatal。两处均通过 node --check。验证方法：观察 crash-log.jsonl 里 EPIPE 是否还有新增。",
+      "deliveredAt": "2026-11-09T11:42:38.196Z",
+      "closedAt": "2026-11-09T11:42:38.316Z"
+    },
+    {
+      "id": "d-20261109-004",
+      "type": "dispatch",
+      "from": "hub",
+      "to": "incident-analysis",
+      "subject": "深挖 GPU 崩溃（9 条）",
+      "phenomenon": "崩溃报告显示 9 条 GPU 进程崩溃，可能导致白屏/花屏，但不知道为什么触发",
+      "howto": "照 skills/incident-analysis/SKILL.md：先看时间分布，再看是否与 render-crash 有时序关系，最后归因",
+      "verify": "在崩溃报告追加一节 GPU 专项分析，含时间分布、时序关系、归因置信度",
+      "createdAt": "2026-11-09T11:47:23.154Z",
+      "state": "closed",
+      "deadlineHours": 24,
+      "ackedAt": "2026-11-09T11:48:27.856Z",
+      "receipt": "在崩溃分析报告追加第八节 GPU 专项分析。关键发现：①条数修正 9→10（聚合与逐条对不上）②GPU 崩溃与渲染崩溃基本无关联（10 条只有 1 条 60s 内跟 render-crash）③发现 0x80000003 断点异常 1 条 ④原推测'GPU导致渲染异常'被数据否定 ⑤修正建议：GPU 崩溃降级为低优先级，先确认是否真的影响用户。诚实声明：无法确认实际影响（缺用户反馈数据）。",
+      "deliveredAt": "2026-11-09T11:48:27.793Z",
+      "closedAt": "2026-11-09T11:48:27.922Z"
+    }
+  ]
+}

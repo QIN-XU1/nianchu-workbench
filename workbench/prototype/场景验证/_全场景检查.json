@@ -1,0 +1,277 @@
+[
+  {
+    "id": "hub",
+    "name": "中枢",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "记忆神经元",
+        "sub": "拖拽旋转 · 滚轮缩放 · 点击节点看详情 · 场景亮起=正在调度",
+        "bodyLen": 58,
+        "bodyHead": "其他 1 工程 7 工具 1 整理 更新 ⟳ 拖动旋转 · 拖节点移动 · 滚轮缩放 · 单击详情 · 双击进入场景"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "arch-review",
+    "name": "架构梳理",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "管线位置",
+        "sub": "我在等谁 / 我收到了谁",
+        "bodyLen": 112,
+        "bodyHead": "管线位置 造一个软件 5 节点 / 8 条依赖 上游 3 调研 可执行 竞品拆解 已完成 逆向分析 阻塞 ▶▶ 当前 架构梳理 阻塞 还缺 3 份输入 ▶ 下游 1 实施计划 阻塞 点上游/下游节点，"
+      },
+      {
+        "num": "02",
+        "title": "架构文档",
+        "sub": "沉淀下来的方案",
+        "bodyLen": 86,
+        "bodyHead": "架构文档 D:/file/AI Temp/DeepSeek/Agent自研/workbench/数据/.dsh/场景记忆/架构梳理/文档 ⟳ 架构决策记录.md 772 B"
+      },
+      {
+        "num": "03",
+        "title": "参考网页",
+        "sub": "查规范/查方案",
+        "bodyLen": 4,
+        "bodyHead": "参考网页"
+      },
+      {
+        "num": "04",
+        "title": "AI·架构梳理",
+        "sub": "汇总裁判",
+        "bodyLen": 13,
+        "bodyHead": "AI·架构梳理 已连接 ⟳"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "build-plan",
+    "name": "实施计划",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "管线位置",
+        "sub": "上游给齐了没",
+        "bodyLen": 88,
+        "bodyHead": "管线位置 造一个软件 5 节点 / 8 条依赖 上游 1 架构梳理 阻塞 ▶ 当前 实施计划 阻塞 还缺 2 份输入 ▶ （无下游） 点上游/下游节点，看它和当前场景之间传什么"
+      },
+      {
+        "num": "02",
+        "title": "计划文档",
+        "sub": "里程碑与验收",
+        "bodyLen": 85,
+        "bodyHead": "计划文档 D:/file/AI Temp/DeepSeek/Agent自研/workbench/数据/.dsh/场景记忆/实施计划/文档 ⟳ 里程碑清单.md 765 B"
+      },
+      {
+        "num": "03",
+        "title": "库",
+        "sub": "",
+        "bodyLen": 51,
+        "bodyHead": "库 1 项（0 目录 / 1 文件） ⟳ 名称 大小 修改 里程碑清单.md 765 B 38 分钟前"
+      },
+      {
+        "num": "04",
+        "title": "AI·实施计划",
+        "sub": "拆阶段/定验收",
+        "bodyLen": 15,
+        "bodyHead": "AI·实施计划 等待引擎… ⟳"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "competitor-analyze",
+    "name": "竞品拆解",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "管线位置",
+        "sub": "我收到了什么 / 我要产出什么",
+        "bodyLen": 91,
+        "bodyHead": "管线位置 造一个软件 5 节点 / 8 条依赖 上游 1 调研 可执行 ▶ 当前 竞品拆解 已完成 输入已齐 ▶ 下游 1 架构梳理 阻塞 点上游/下游节点，看它和当前场景之间传什么"
+      },
+      {
+        "num": "02",
+        "title": "AI·竞品拆解",
+        "sub": "拆功能矩阵 / 交互模式",
+        "bodyLen": 15,
+        "bodyHead": "AI·竞品拆解 等待引擎… ⟳"
+      },
+      {
+        "num": "03",
+        "title": "竞品网页",
+        "sub": "打开竞品看它的功能与交互",
+        "bodyLen": 4,
+        "bodyHead": "竞品网页"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "incident-analysis",
+    "name": "故障分析",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "崩溃分析报告",
+        "sub": "workbench/产物/崩溃分析报告.md",
+        "bodyLen": 86,
+        "bodyHead": "崩溃分析报告 D:/file/AI Temp/DeepSeek/Agent自研/workbench/数据/.dsh/场景记忆/故障分析/文档 ⟳ 故障分析.md 346 B"
+      },
+      {
+        "num": "02",
+        "title": "AI·故障分析",
+        "sub": "只分析不改代码",
+        "bodyLen": 15,
+        "bodyHead": "AI·故障分析 等待引擎… ⟳"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "pc-cleanup",
+    "name": "本地电脑",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "磁盘分区（C 系统 · D 软件 · E 文件 · F 游戏）",
+        "sub": "",
+        "bodyLen": 165,
+        "bodyHead": "磁盘分区（C 系统 · D 软件 · E 文件 · F 游戏） 2 个分区 · 合计 933.66 GB，已用 575.90 GB ⟳ 重新扫描 C: 48.0% 已用 95.92 GB 可用 104"
+      },
+      {
+        "num": "02",
+        "title": "磁盘大户排行",
+        "sub": "",
+        "bodyLen": 79,
+        "bodyHead": "磁盘大户排行 扫描中… ⟳ 重新扫描 正在扫描 C 盘（最多 15 秒）… 跳过 Windows / Program Files / node_modules"
+      },
+      {
+        "num": "03",
+        "title": "可清理体检",
+        "sub": "",
+        "bodyLen": 287,
+        "bodyHead": "可清理体检 3 类 · 共 40.9 MB / 186 项（只读，不删） ⟳ 重新扫描 用户临时文件（%TEMP%，7 天前） 23.4 MB 39 项 · C:\\Users\\15282\\AppDat"
+      },
+      {
+        "num": "04",
+        "title": "清理台账",
+        "sub": "",
+        "bodyLen": 49,
+        "bodyHead": "清理台账 0 条记录 ⟳ 重新扫描 ▦ 暂无清理记录 台账文件：(不存在) 以后每次清理会记在这里"
+      },
+      {
+        "num": "05",
+        "title": "AI·本地电脑",
+        "sub": "",
+        "bodyLen": 15,
+        "bodyHead": "AI·本地电脑 等待引擎… ⟳"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "research",
+    "name": "调研",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "网页",
+        "sub": "搜竞品 / 查资料 / 看文档（可切换地址）",
+        "bodyLen": 2,
+        "bodyHead": "网页"
+      },
+      {
+        "num": "02",
+        "title": "AI·调研",
+        "sub": "把搜到的汇成结构化产物",
+        "bodyLen": 13,
+        "bodyHead": "AI·调研 等待引擎… ⟳"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "reverse-eng",
+    "name": "逆向分析",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "管线位置",
+        "sub": "我收到了什么 / 我要产出什么",
+        "bodyLen": 94,
+        "bodyHead": "管线位置 造一个软件 5 节点 / 8 条依赖 上游 1 调研 可执行 ▶ 当前 逆向分析 阻塞 还缺 1 份输入 ▶ 下游 1 架构梳理 阻塞 点上游/下游节点，看它和当前场景之间传什么"
+      },
+      {
+        "num": "02",
+        "title": "源码预览",
+        "sub": "看拆解出来的文件",
+        "bodyLen": 84,
+        "bodyHead": "源码预览 D:/file/AI Temp/DeepSeek/Agent自研/workbench/数据/.dsh/场景记忆/逆向分析/文档 ⟳ 拆解笔记.md 760 B"
+      },
+      {
+        "num": "03",
+        "title": "库",
+        "sub": "",
+        "bodyLen": 50,
+        "bodyHead": "库 1 项（0 目录 / 1 文件） ⟳ 名称 大小 修改 拆解笔记.md 760 B 39 分钟前"
+      },
+      {
+        "num": "04",
+        "title": "AI·逆向分析",
+        "sub": "拆实现细节 / 找可复用模式",
+        "bodyLen": 15,
+        "bodyHead": "AI·逆向分析 等待引擎… ⟳"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "id": "self-review",
+    "name": "自我复盘",
+    "ok": true,
+    "panels": [
+      {
+        "num": "01",
+        "title": "预览",
+        "sub": "点右上的文件就在此预览（Word / Excel / PPT / PDF 都能内嵌看；要改才用这排的 🖥 打开系统程序）",
+        "bodyLen": 82,
+        "bodyHead": "预览 D:/file/AI Temp/DeepSeek/Agent自研/workbench/数据/.dsh/场景记忆/自我复盘/文档 ⟳ 复盘记录.md 346 B"
+      },
+      {
+        "num": "02",
+        "title": "库",
+        "sub": "",
+        "bodyLen": 49,
+        "bodyHead": "库 1 项（0 目录 / 1 文件） ⟳ 名称 大小 修改 复盘记录.md 346 B 3 分钟前"
+      },
+      {
+        "num": "03",
+        "title": "AI·DeepSeek 网页版",
+        "sub": "chat.deepseek.com · 内置网页",
+        "bodyLen": 15,
+        "bodyHead": "AI·DeepSeek 网页版"
+      },
+      {
+        "num": "04",
+        "title": "AI·自我复盘",
+        "sub": "",
+        "bodyLen": 15,
+        "bodyHead": "AI·自我复盘 等待引擎… ⟳"
+      }
+    ],
+    "errors": []
+  }
+]

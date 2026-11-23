@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-11-17T22:57:58",
+  "rows": [
+    {
+      "sceneId": "arch-review",
+      "panelId": "arch-review-ai",
+      "panelTitle": "AI·架构梳理",
+      "sessionTitle": "架构梳理",
+      "sessionId": null,
+      "contextCard": "scenes/arch-review-context.md",
+      "skill": "—",
+      "deg": 7
+    },
+    {
+      "sceneId": "backend-craft",
+      "panelId": "backend-craft-ai",
+      "panelTitle": "AI·后端工坊",
+      "sessionTitle": "后端工坊",
+      "sessionId": null,
+      "contextCard": "scenes/backend-craft-context.md",
+      "skill": "—",
+      "deg": 4
+    },
+    {
+      "sceneId": "build-plan",
+      "panelId": "build-plan-ai",
+      "panelTitle": "AI·实施计划",
+      "sessionTitle": "实施计划",
+      "sessionId": null,
+      "contextCard": "scenes/build-plan-context.md",
+      "skill": "—",
+      "deg": 8
+    },
+    {
+      "sceneId": "competitor-analyze",
+      "panelId": "competitor-analyze-ai",
+      "panelTitle": "AI·竞品拆解",
+      "sessionTitle": "竞品拆解",
+      "sessionId": null,
+      "contextCard": "scenes/competitor-analyze-context.md",
+      "skill": "—",
+      "deg": 3
+    },
+    {
+      "sceneId": "frontend-craft",
+      "panelId": "frontend-craft-ai",
+      "panelTitle": "AI·前端工坊",
+      "sessionTitle": "前端工坊",
+      "sessionId": null,
+      "contextCard": "scenes/frontend-craft-context.md",
+      "skill": "—",
+      "deg": 4
+    },
+    {
+      "sceneId": "hub",
+      "panelId": "hub-ai",
+      "panelTitle": "AI·中枢",
+      "sessionTitle": "中枢",
+      "sessionId": null,
+      "contextCard": "scenes/hub-context.md",
+      "skill": "—",
+      "deg": 9
+    },
+    {
+      "sceneId": "incident-analysis",
+      "panelId": "incident-analysis-ai",
+      "panelTitle": "AI·故障分析",
+      "sessionTitle": "故障分析",
+      "sessionId": null,
+      "contextCard": "scenes/incident-analysis-context.md",
+      "skill": "—",
+      "deg": 6
+    },
+    {
+      "sceneId": "pc-cleanup",
+      "panelId": "pc-cleanup-ai",
+      "panelTitle": "AI·本地电脑",
+      "sessionTitle": "本地电脑",
+      "sessionId": null,
+      "contextCard": "scenes/pc-cleanup-context.md",
+      "skill": "—",
+      "deg": 4
+    },
+    {
+      "sceneId": "research",
+      "panelId": "research-ai",
+      "panelTitle": "AI·调研",
+      "sessionTitle": "调研",
+      "sessionId": null,
+      "contextCard": "scenes/research-context.md",
+      "skill": "—",
+      "deg": 4
+    },
+    {
+      "sceneId": "reverse-eng",
+      "panelId": "reverse-eng-ai",
+      "panelTitle": "AI·逆向分析",
+      "sessionTitle": "逆向分析",
+      "sessionId": null,
+      "contextCard": "scenes/reverse-eng-context.md",
+      "skill": "—",
+      "deg": 7
+    },
+    {
+      "sceneId": "self-review",
+      "panelId": "self-review-ai",
+      "panelTitle": "AI·自我复盘",
+      "sessionTitle": "自我复盘",
+      "sessionId": null,
+      "contextCard": "scenes/self-review-context.md",
+      "skill": "—",
+      "deg": 2
+    },
+    {
+      "sceneId": "tool-forge",
+      "panelId": "tool-forge-ai",
+      "panelTitle": "AI·工具工坊",
+      "sessionTitle": "工具工坊",
+      "sessionId": null,
+      "contextCard": "scenes/tool-forge-context.md",
+      "skill": "—",
+      "deg": 4
+    }
+  ]
+}

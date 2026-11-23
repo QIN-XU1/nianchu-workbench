@@ -1,0 +1,182 @@
+{
+  "what": "故障目录 —— 每个验收器对应的「它必须抓到的已知故障」",
+  "why": "要度量「验收器发现真问题的能力」，必须先有标准答案。每条故障都是确定性的、可逆的、有意义的。",
+  "rule": [
+    "每条故障必须可安全注入且必定可恢复（revert 用 try/finally）",
+    "每条故障必须确定性（同样注入 → 同样结果）",
+    "每条故障必须是有意义的问题（不是人为构造的无意义错误）",
+    "期望结果只能是 exit != 0（验收器必须红）",
+    "若验收器因结构性原因永久 exit != 0，必须用 expectOutput 指定「必须出现的证据串」——",
+    "否则「抓到」是假的（它本来就在报错）。这一条是 2026-11-15 首轮度量发现的：",
+    "F04 的 typography:audit 因为缺 Rust 侧 owner 文件永久 exit 1，导致「抓到」不成立。"
+  ],
+  "faults": [
+    {
+      "id": "F01-size-guard",
+      "target": "tools/quality/size-guard.mjs",
+      "expected": "exit != 0",
+      "name": "文件超 32KB 体量红线",
+      "inject": {
+        "kind": "createFile",
+        "path": "prototype/agent-ui/_fault_big.mjs",
+        "content": "// 故障注入：故意超红线\nconst x = 1;\n",
+        "repeat": 3200
+      }
+    },
+    {
+      "id": "F02-coverage-gap",
+      "target": "tools/benchmark/audit-coverage.mjs",
+      "expected": "exit != 0",
+      "name": "拆解项目的某个维度被清空",
+      "inject": {
+        "kind": "editJson",
+        "path": "apps/vouch-web/src/web-ui/src/app/scenes/benchmark/data/analysis.json",
+        "mutate": "emptyFirstArrayField:strengths"
+      }
+    },
+    {
+      "id": "F03-matrix-fake-green",
+      "target": "prototype/hermes-agents/audit-matrix-honesty.mjs",
+      "expected": "exit != 0",
+      "name": "矩阵里把参照系统的能力当成我们的",
+      "inject": {
+        "kind": "editJson",
+        "path": "prototype/hermes-agents/matrix-data.json",
+        "mutate": "setFirstUsEvidenceToBorrowed"
+      }
+    },
+    {
+      "id": "F04-raw-typography",
+      "target": "apps/vouch-web/scripts/audit-typography-tokens.mjs",
+      "cwd": "apps/vouch-web",
+      "expected": "exit != 0 + 输出含 raw-css-typography",
+      "expectOutput": "raw-css-typography",
+      "name": "SCSS 里写裸 font-size（不走 token）",
+      "note": "该验收器因缺 Rust 侧 owner 文件（missing-typography-owner）永久 exit 1，所以不能只看退出码 —— 必须看输出里有没有出现这次注入的具体违规类型。",
+      "inject": {
+        "kind": "appendLine",
+        "path": "apps/vouch-web/src/web-ui/src/app/scenes/vouch/VouchShared.scss",
+        "line": "\n.vouch-fault-probe { font-size: 13px; }\n"
+      }
+    },
+    {
+      "id": "F05-retired-identity",
+      "target": "apps/vouch-web/scripts/product-identity-audit.mjs",
+      "cwd": "apps/vouch-web",
+      "expected": "exit != 0 + 输出含 retired-product-name",
+      "expectOutput": "retired-product-name",
+      "name": "源文件里出现退役产品名",
+      "inject": {
+        "kind": "appendLine",
+        "path": "apps/vouch-web/src/web-ui/src/app/scenes/vouch/VouchShared.scss",
+        "line": "\n/* fault-probe: bitfun */\n"
+      }
+    },
+    {
+      "id": "F06-syntax-corruption",
+      "target": "prototype/agent-ui/verify-syntax-guard.mjs",
+      "expected": "exit != 0 + 输出含 损坏词:",
+      "expectOutput": "损坏词:",
+      "name": "脚本被 t→o 替换损坏（import→imporo）",
+      "note": "两处修正：(1) 首轮注入的是 const REPO → const REP0 —— 那是**合法 JS**（只是变量名），守卫正确地不报，是故障定义错了；(2) expectOutput 从「损坏词」收紧为「损坏词:」—— 因为 PASS 文本里含「无损坏词」，宽松匹配会造成基线假阳性（实测）。",
+      "inject": {
+        "kind": "replaceInFile",
+        "path": "tools/benchmark/survey.mjs",
+        "find": "import ",
+        "replace": "imporo "
+      }
+    },
+    {
+      "id": "F07-dirty-git",
+      "target": "prototype/hermes-agents/verify-goal.mjs --only R8",
+      "expected": "exit != 0",
+      "dependsOnCleanGit": true,
+      "name": "有未提交改动（R8 应当红）",
+      "note": "两处修正：(1) 注入文件从 _fault_dirty.tmp 改为 .md —— 实测 .gitignore:93 有 *.tmp，注入文件被忽略、git 仍干净、R8 不红（假漏报）；(2) 加 dependsOnCleanGit —— 这条用语的**基线**要求工作树干净，改代码过程中跑度量时 F07 的基线必然 exit 1，那是「验证环境不在」而非验收器误报，按四态纪律判 UNKNOWN。",
+      "inject": {
+        "kind": "createFile",
+        "path": "prototype/agent-ui/_fault_dirty_probe.md",
+        "content": "故障注入：制造未提交改动\n"
+      }
+    },
+    {
+      "id": "F08-matrix-dim-count",
+      "target": "prototype/hermes-agents/verify-goal.mjs --only R2",
+      "expected": "exit != 0",
+      "name": "矩阵维度数不足 30",
+      "inject": {
+        "kind": "editJson",
+        "path": "prototype/hermes-agents/matrix-data.json",
+        "mutate": "dropDimensions"
+      }
+    },
+
+    {
+      "id": "F09-calc-raw-typography",
+      "target": "apps/vouch-web/scripts/audit-typography-tokens.mjs",
+      "cwd": "apps/vouch-web",
+      "expected": "exit != 0 + 输出含 raw-css-typography",
+      "expectOutput": "raw-css-typography",
+      "difficulty": "hard",
+      "name": "【难】用 calc() 包住裸字号，绕过直接字面量匹配",
+      "why": "第一轮的 F04 是直接写 font-size: 13px，最容易被正则抓。这条把裸值藏进 calc()，考验审计是不是只做字面量匹配。",
+      "inject": {
+        "kind": "appendLine",
+        "path": "apps/vouch-web/src/web-ui/src/app/scenes/vouch/VouchShared.scss",
+        "line": "\n.vouch-fault-calc { font-size: calc(13px + 0px); line-height: calc(1.5 * 1); }\n"
+      }
+    },
+    {
+      "id": "F10-empty-evidence",
+      "target": "prototype/hermes-agents/audit-matrix-honesty.mjs",
+      "expected": "exit != 0",
+      "difficulty": "hard",
+      "name": "【难】矩阵某维证据被清空但状态仍是「有」",
+      "why": "第一轮的 F03 是把证据换成「hermes 能做」（有内容但主语错）。这条是**证据整条清空**，考验审计是否检查「证据非空」而不只是「主语对」。",
+      "inject": {
+        "kind": "editJson",
+        "path": "prototype/hermes-agents/matrix-data.json",
+        "mutate": "emptyFirstUsEvidence"
+      }
+    },
+    {
+      "id": "F11-size-boundary",
+      "target": "tools/quality/size-guard.mjs",
+      "expected": "exit != 0",
+      "difficulty": "hard",
+      "name": "【难】文件只超红线 1 字节（32769B）而不是远超",
+      "why": "第一轮的 F01 造了 147KB（远超，最容易抓）。这条是**边界**：只超 1 字节。停掉它过一次 32768 字节 —— 实测 size-guard 判据是 `kb > 32`，恰好 32KB 不算超（黄线），**那是正确的**，是我的故障不公平。改成 32769 才是真违规。",
+      "inject": {
+        "kind": "createExactSizeFile",
+        "path": "prototype/agent-ui/_fault_boundary.mjs",
+        "bytes": 32769
+      }
+    },
+    {
+      "id": "F12-project-removed",
+      "target": "tools/benchmark/audit-coverage.mjs",
+      "expected": "exit != 0",
+      "difficulty": "hard",
+      "name": "【难】拆解数据里整个项目被删掉（不是某维度变空）",
+      "why": "第一轮的 F02 是清空某项目的 strengths（项目还在，只是有缺口）。这条是**项目整个消失** —— 考验审计能不能发现「少了一个项目」而不只是「某个项目有缺口」。",
+      "inject": {
+        "kind": "editJson",
+        "path": "apps/vouch-web/src/web-ui/src/app/scenes/benchmark/data/analysis.json",
+        "mutate": "dropOneProject"
+      }
+    },
+    {
+      "id": "F13-duplicate-dim-id",
+      "target": "prototype/hermes-agents/verify-goal.mjs --only R2",
+      "expected": "exit != 0",
+      "difficulty": "hard",
+      "name": "【难】矩阵维度数够（31）但有重复 id",
+      "why": "考验 R2 是不是只数个数。维度总数不变、但有一条是重复的 ⇒ 实际独立维度少了。只数数的话会漏。",
+      "inject": {
+        "kind": "editJson",
+        "path": "prototype/hermes-agents/matrix-data.json",
+        "mutate": "duplicateOneDim"
+      }
+    }
+  ]
+}

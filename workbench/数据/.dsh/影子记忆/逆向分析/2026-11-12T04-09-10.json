@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-12T04:09:10.808Z",
+  "scene": "逆向分析",
+  "totalChars": 2855,
+  "totalItems": 23,
+  "density": 8.056,
+  "freshness": 1,
+  "consistency": 1,
+  "noConflict": 1,
+  "avgPerSection": 2.56,
+  "sectionCount": 9,
+  "freshCount": 8,
+  "datedCount": 8,
+  "voidMarkers": 0,
+  "score": 1,
+  "hash": "35d2399dfabf7e56",
+  "content": "# 逆向分析 · 场景私有记忆\n\n> 场景：逆向分析（reverse-eng）｜这份文件只有本场景写。\n> 结构：§〇 当前交接（≤4KB）｜核心职责｜§一 职责边界｜§二 现状/接口｜§五 坑与决策（只追加）｜§八 项目索引\n\n## §〇 当前交接\n\n### 1) 上次交接\n- 2026-11-12 逆向完成 `外壳/ui/panels/neuron.js`（记忆神经元星盘，2933 行），笔记落在 `模块逆向笔记.md`。下次接手：可继续逆向 `main-agent.js` 或 `投递通道.mjs`，产出 `impl-details` / `reusable-patterns` 发给架构梳理。\n\n### 2) 当前项目\n| 项目 | 记忆文件 | 状态 | 下一步 |\n|---|---|---|---|\n| 无 | — | — | — |\n\n### 3) 私有记忆变更\n- 2026-11-07：初始化场景记忆骨架\n\n### 4) 下一步 / 卡点\n- 下一步：跟这个场景的 AI 说第一句\"我要用它做什么\"，让它写进这里\n- 卡点：（无）\n\n### 5) 全貌\n- 项目记忆 0 个 · 归档 0 份\n\n## 核心职责\n\n- 负责：拆解成熟作品的实现细节：目录结构、关键模块、数据流\n- 不碰：竞品功能面（竞品拆解做）/ 架构定稿（架构梳理做）/ 写新代码（开发做）\n- 一句话：能用一句话说清\"什么事找我、什么别找我\"才算立住。\n\n## 一、职责边界\n\n- **做**：拆成熟作品的实现细节，说清它怎么做到的\n- **不做**：不做功能对比矩阵（那是竞品拆解）\n- **判据**：每个\"它怎么实现的\"都要有代码/字节/接口级证据\n- **边界**：只对\"它怎么做的\"负责；\"我们该不该照做\"不是我的结论\n\n## 二、现状 / 接口\n\n> 项目信息已剥离 → `数据/.dsh/项目记忆/逆向分析/项目信息.md`\n> 需要时按指针查阅，不要全量读。\n\n## 五、坑与决策\n\n- 2026-11-12：**「复位/整理」组件目标位置必须单一数据源** — 症状：neuron.js 整理后节点坐标跳变 909px、且与缩放触发的 layout 重排结果不一致 → 根因：tidy() 用 spherePositions、layout() 用立方体采样，同一语义两套算法 → 修法：tidy() 直接调 layout() 作为目标位置唯一来源，逆向时重点排查「同一语义多处实现」的坑。\n- 2026-11-12：**沙箱额外写目录在 Windows ACL 后端被硬编码堵死** — 症状：场景 agent 写跨目录共享台账报 FS_SANDBOX_DENIED，配置 additionalWritableRoots 后仍报「Windows ACL confinement does not support additional writable directories」→ 根因：策略层 schema 接受并校验额外目录，但 enforcing 后端 windowsAclRunnerArgv 遇 workspace-write+额外目录直接抛 SandboxUnsupportedPolicyError → 修法：别走配置补目录，把跨目录写从场景侧移到中枢侧代写，场景只做和说、不记账。\n- 2026-11-12：**逆旋转必须按「先转的后逆」顺序执行** — 症状：neuron.js 拖拽节点时偏差从 2px 累积到 21px、越拖越偏 → 根因：逆旋转被写成 rotate3d(v,-yaw,-pitch)，等于先逆 yaw 再逆 pitch，与正向「先 yaw 后 pitch」顺序相反，非正交变换下顺序反了就不等价 → 修法：inverseRotate3d 显式「先逆 pitch 再逆 yaw」反向解，拖拽才 1:1 零累积误差（neuron-math.js L34-46 有自检注释）。\n- 2026-11-12：**逆向参数语义不能靠命名推断，要查赋值点并跑数值** — 症状：笔记把 S.zoom 写成「活跃的透视缩放、升高放大物体」，实测前半球节点反而缩小、方向不一致 → 根因：只读了 render 里 fov=…/S.zoom 这一处引用，没 grep 全量赋值点（S.zoom 只在 reset 时赋 1、滚轮实际改 viewScale），缩放方向也没拿具体数字验证 → 修法：下结论前先 grep 该参数所有「=」赋值点判断是否活跃，缩放/投影方向代入真实数值跑一遍再定性。\n- 2026-11-12：**逆向数据链路不能凭「有读又有写」就断连通，必须查调用点** — 症状：差点把 harness.js 的 pinScript 当成活跃的会话绑定实现，误判「绑定链路已实现」→ 根因：只看到 L140 读 sessionId + L311 定义了写 localStorage 的 pinScript，没 grep 调用点（全文零调用，是死代码），也没核实注释 L1642 宣称的 renderer/renderers.js 其实整仓不存在 → 修法：判定一条数据链路是否连通，除「读字段」「写函数」外必须再 grep 写入函数的所有调用点，并对注释里点名的文件做 glob 存在性验证，否则死代码会被当成活实现。\n- 2026-11-12：**白名单按成员类型分两路，对象错放函数列表会静默丢失** — 症状：preload 暴露了 app.caps 与 app.settings（都是对象/常量），但 api() 里 .caps/.settings 恒为 undefined，全渲染层 grep 无任何调用点 → 根因：api/index.js 有两条白名单——FN 数组只包函数（typeof fn!=='function' 就 continue），namespace 数组才包对象；caps/settings 被塞进 FN 却又不是函数，且没进 namespace 数组，于是被双重漏掉，且无任何报错（同 AC-018 那类「静默 undefined」）→ 修法：新增 preload 成员时先分清它是函数还是对象/常量——函数进 FN、对象进 namespace 数组、纯常量仿 paths 单独拷贝；改完 grep 渲染层确认 api().xxx 不是 undefined。\n\n## 八、项目索引\n\n- （空）\n\n<!-- pipeline:begin -->\n## 管线位置（自动生成，勿手改）\n\n> 这一节由 `工具/管线写入.mjs` 从 `sceneboard/pipelines/*.json` 生成。\n> 作用是让我知道自己在这个管线里的位置：该等谁、该给谁。\n\n**上游（我要等）**\n\n| 来自 | 产物契约 | 具体文件 | 就绪 | 管线 |\n|---|---|---|---|---|\n| 调研 | `tech-candidates` | `工具真实性调研.md` | 1/1 | 造一个软件 |\n\n> ✓ **上游已就绪** —— 可以直接开始。\n\n**下游（我该给）**\n\n| 给谁 | 产物契约 | 该交的文件 | 管线 |\n|---|---|---|---|\n| 架构梳理 | `impl-details` | `模块逆向笔记.md`<br>`神经元渲染逆向.md`<br>`IPC通信层逆向.md`<br>`沙箱机制逆向.md`<br>`会话绑定逆向.md` | 造一个软件 |\n| 架构梳理 | `reusable-patterns` | `模块逆向笔记.md` | 造一个软件 |\n\n**注意**：上游没就绪时不要硬做 —— 拿不到产物就说明还没轮到我。\n\n<!-- pipeline:end -->\n"
+}

@@ -1,0 +1,99 @@
+{
+  "_at": "2026-11-09T11:55:14.077Z",
+  "_note": "身份索引 —— \"我是谁\"的唯一对照表。生成自真实场景配置，不手工编造。",
+  "_warning": [
+    "场景「故障分析」面板 in-chat 没有 sessionId（AI 面板会退化）"
+  ],
+  "rows": [
+    {
+      "scene": "arch-review",
+      "name": "架构梳理",
+      "panel": "ar-ai",
+      "panelType": "harness",
+      "sessionTitle": "架构梳理",
+      "sessionId": "session-a0656d6f-0f32-48e0-9ce6-aebf0019f86c",
+      "context": "arch-review-context.md",
+      "memory": "场景记忆/架构梳理/"
+    },
+    {
+      "scene": "build-plan",
+      "name": "实施计划",
+      "panel": "bp-ai",
+      "panelType": "harness",
+      "sessionTitle": "实施计划",
+      "sessionId": "session-f957223a-5b93-4005-a254-96e205c16cd1",
+      "context": "build-plan-context.md",
+      "memory": "场景记忆/实施计划/"
+    },
+    {
+      "scene": "competitor-analyze",
+      "name": "竞品拆解",
+      "panel": "ca-ai",
+      "panelType": "harness",
+      "sessionTitle": "竞品拆解",
+      "sessionId": "session-abcc920c-d56a-49e0-8bdb-66cb43a0902c",
+      "context": "competitor-analyze-context.md",
+      "memory": "场景记忆/竞品拆解/"
+    },
+    {
+      "scene": "hub",
+      "name": "中枢",
+      "panel": "(无AI面板)",
+      "panelType": null,
+      "sessionTitle": null,
+      "sessionId": null,
+      "context": "hub-context.md",
+      "memory": "场景记忆/中枢/"
+    },
+    {
+      "scene": "incident-analysis",
+      "name": "故障分析",
+      "panel": "in-chat",
+      "panelType": "harness",
+      "sessionTitle": "故障分析",
+      "sessionId": "(缺)",
+      "context": "incident-analysis-context.md",
+      "memory": "场景记忆/故障分析/"
+    },
+    {
+      "scene": "pc-cleanup",
+      "name": "本地电脑",
+      "panel": "pc-ai",
+      "panelType": "harness",
+      "sessionTitle": "本地电脑",
+      "sessionId": "session-62618ece-2a86-4d1e-94ce-1ab34cceec03",
+      "context": "pc-cleanup-context.md",
+      "memory": "场景记忆/本地电脑/"
+    },
+    {
+      "scene": "research",
+      "name": "调研",
+      "panel": "rs-ai",
+      "panelType": "harness",
+      "sessionTitle": "调研",
+      "sessionId": "session-e635e90a-040d-4f2f-b4d9-b00b56abb562",
+      "context": "research-context.md",
+      "memory": "场景记忆/调研/"
+    },
+    {
+      "scene": "reverse-eng",
+      "name": "逆向分析",
+      "panel": "re-ai",
+      "panelType": "harness",
+      "sessionTitle": "逆向分析",
+      "sessionId": "session-9cdc7576-cd05-4274-a942-f9ed498703b2",
+      "context": "reverse-eng-context.md",
+      "memory": "场景记忆/逆向分析/"
+    },
+    {
+      "scene": "self-review",
+      "name": "自我复盘",
+      "panel": "sr-ai",
+      "panelType": "harness",
+      "sessionTitle": "自我复盘",
+      "sessionId": "session-df6160a8-fc3c-4d79-b8a9-b8aabac08c8d",
+      "context": "self-review-context.md",
+      "memory": "场景记忆/自我复盘/"
+    }
+  ]
+}

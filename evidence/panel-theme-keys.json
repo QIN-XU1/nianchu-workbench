@@ -1,0 +1,111 @@
+{
+  "at": "2026-11-22T16:51:14.696Z",
+  "app": "http://127.0.0.1:47124/",
+  "pass": 12,
+  "fail": 0,
+  "console": {
+    "themeErrors": [],
+    "envErrors": [
+      "[WorkspaceManager] Failed to subscribe workspace catalog updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at Ye.ensureCatalogChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:47295)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:50232)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-B957cfAx.js:9:41156 Object",
+      "[WorkspaceManager] Failed to subscribe workspace identity updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at Ye.ensureIdentityChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:44904)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:50196)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-B957cfAx.js:9:41156 Object",
+      "[IdeControlEventBus] Failed to initialize TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D-rUzPUP.js:1:2066) TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D-rUzPUP.js:1:2066)",
+      "[DeferredStartupSystems] Deferred startup system failed {\"system\":\"ide_control\"}, TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D-rUzPUP.js:1:2066) Object",
+      "[WorkspaceManager] Failed to subscribe workspace catalog updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at Ye.ensureCatalogChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:47295)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:50232)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-B957cfAx.js:9:41156 Object",
+      "[WorkspaceManager] Failed to subscribe workspace identity updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at Ye.ensureIdentityChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:44904)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:50196)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DBpE407x.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-B957cfAx.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-B957cfAx.js:9:41156 Object",
+      "[IdeControlEventBus] Failed to initialize TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D-rUzPUP.js:1:2066) TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D-rUzPUP.js:1:2066)",
+      "[DeferredStartupSystems] Deferred startup system failed {\"system\":\"ide_control\"}, TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-B957cfAx.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-BcHjhXL-.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CMP72zmc.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D-rUzPUP.js:1:2066) Object"
+    ],
+    "otherErrors": []
+  },
+  "shots": {
+    "open": "evidence/screenshots/panel-keys-open.png",
+    "beforeEsc": "evidence/screenshots/panel-keys-before-esc.png"
+  },
+  "results": [
+    {
+      "name": "★打开弹层后焦点自动落在当前档（不用先 Tab 一轮）",
+      "ok": true,
+      "info": {
+        "focus": "system",
+        "checked": [
+          "system"
+        ]
+      }
+    },
+    {
+      "name": "弹层里有 radiogroup 语义",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "★↓ 换到下一档（light）且焦点跟着走",
+      "ok": true,
+      "info": {
+        "theme": "light",
+        "focus": "light"
+      }
+    },
+    {
+      "name": "★↑ 回到上一档（system）且焦点跟着走",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "★End 跳到最后一项（dsh）",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "★末项再按 ↓ 回绕到第一项（system）",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "★Esc 关闭弹层",
+      "ok": true,
+      "info": null
+    },
+    {
+      "name": "★Esc 后焦点回到触发按钮（不是掉到 body）",
+      "ok": true,
+      "info": {
+        "label": "面板主题",
+        "testid": "ncc-theme-toggle"
+      }
+    },
+    {
+      "name": "★点弹层外面（真鼠标）→ 收起",
+      "ok": true,
+      "info": {
+        "click": {
+          "x": 1241,
+          "y": 835
+        },
+        "popup": {
+          "x": 1410,
+          "y": 55,
+          "w": 177,
+          "h": 242
+        }
+      }
+    },
+    {
+      "name": "★完成提示弹层 Esc 关闭并把焦点还给铃铛按钮",
+      "ok": true,
+      "info": {
+        "open": false,
+        "focusTestId": "ncc-cues-toggle"
+      }
+    },
+    {
+      "name": "键盘序列没有面板主题相关异常",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "除「静态服务缺 Tauri IPC」环境噪声外没有其它异常",
+      "ok": true,
+      "info": []
+    }
+  ]
+}

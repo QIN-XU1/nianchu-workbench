@@ -1,0 +1,221 @@
+{
+  "at": "2026-11-15T23:11:59",
+  "repos": {
+    "openclaw": {
+      "slug": "openclaw/openclaw",
+      "ok": true,
+      "total": 81,
+      "dist": {
+        "polish": {
+          "n": 30,
+          "pct": 37
+        },
+        "robustness": {
+          "n": 15,
+          "pct": 19
+        },
+        "structure": {
+          "n": 15,
+          "pct": 19
+        },
+        "featureish": {
+          "n": 16,
+          "pct": 20
+        },
+        "other": {
+          "n": 5,
+          "pct": 6
+        }
+      },
+      "conc": {
+        "total": 81,
+        "scopeKinds": 28,
+        "topScope": "ui",
+        "topPct": 37,
+        "noScope": 6,
+        "entropy": 0.73
+      },
+      "at": "2026-11-15T15:11:46.316Z"
+    },
+    "weknora": {
+      "slug": "Tencent/WeKnora",
+      "ok": true,
+      "total": 85,
+      "dist": {
+        "polish": {
+          "n": 7,
+          "pct": 8
+        },
+        "robustness": {
+          "n": 6,
+          "pct": 7
+        },
+        "structure": {
+          "n": 5,
+          "pct": 6
+        },
+        "featureish": {
+          "n": 37,
+          "pct": 44
+        },
+        "other": {
+          "n": 30,
+          "pct": 35
+        }
+      },
+      "conc": {
+        "total": 85,
+        "scopeKinds": 36,
+        "topScope": "docreader",
+        "topPct": 13,
+        "noScope": 1,
+        "entropy": 0.89
+      },
+      "at": "2026-11-15T15:11:49.142Z"
+    },
+    "omp": {
+      "slug": "the-snowpear/omp-studio",
+      "ok": true,
+      "total": 35,
+      "dist": {
+        "polish": {
+          "n": 11,
+          "pct": 31
+        },
+        "robustness": {
+          "n": 3,
+          "pct": 9
+        },
+        "structure": {
+          "n": 6,
+          "pct": 17
+        },
+        "featureish": {
+          "n": 9,
+          "pct": 26
+        },
+        "other": {
+          "n": 6,
+          "pct": 17
+        }
+      },
+      "conc": {
+        "total": 35,
+        "scopeKinds": 12,
+        "topScope": "renderer",
+        "topPct": 26,
+        "noScope": 6,
+        "entropy": 0.8
+      },
+      "at": "2026-11-15T15:11:52.372Z"
+    },
+    "ecc": {
+      "slug": "affaan-m/ECC",
+      "ok": true,
+      "total": 32,
+      "dist": {
+        "polish": {
+          "n": 1,
+          "pct": 3
+        },
+        "robustness": {
+          "n": 3,
+          "pct": 9
+        },
+        "structure": {
+          "n": 19,
+          "pct": 59
+        },
+        "featureish": {
+          "n": 9,
+          "pct": 28
+        },
+        "other": {
+          "n": 0,
+          "pct": 0
+        }
+      },
+      "conc": {
+        "total": 32,
+        "scopeKinds": 7,
+        "topScope": "hooks",
+        "topPct": 25,
+        "noScope": 10,
+        "entropy": 0.73
+      },
+      "at": "2026-11-15T15:11:54.513Z"
+    },
+    "orca": {
+      "slug": "stablyai/orca",
+      "ok": true,
+      "total": 43,
+      "dist": {
+        "polish": {
+          "n": 3,
+          "pct": 7
+        },
+        "robustness": {
+          "n": 4,
+          "pct": 9
+        },
+        "structure": {
+          "n": 4,
+          "pct": 9
+        },
+        "featureish": {
+          "n": 15,
+          "pct": 35
+        },
+        "other": {
+          "n": 17,
+          "pct": 40
+        }
+      },
+      "conc": {
+        "total": 43,
+        "scopeKinds": 26,
+        "topScope": "native-chat",
+        "topPct": 19,
+        "noScope": 0,
+        "entropy": 0.92
+      },
+      "at": "2026-11-15T15:11:57.057Z"
+    },
+    "craft": {
+      "slug": "storytold/craft-anything",
+      "ok": true,
+      "total": 1,
+      "dist": {
+        "polish": {
+          "n": 0,
+          "pct": 0
+        },
+        "robustness": {
+          "n": 0,
+          "pct": 0
+        },
+        "structure": {
+          "n": 0,
+          "pct": 0
+        },
+        "featureish": {
+          "n": 0,
+          "pct": 0
+        },
+        "other": {
+          "n": 1,
+          "pct": 100
+        }
+      },
+      "conc": {
+        "total": 1,
+        "scopeKinds": 0,
+        "topScope": "(none)",
+        "topPct": 0,
+        "noScope": 1,
+        "entropy": 0
+      },
+      "at": "2026-11-15T15:11:58.999Z"
+    }
+  }
+}

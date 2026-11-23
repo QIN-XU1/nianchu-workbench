@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-11-10T23:21:35",
+  "input": "https://www.bilibili.com/video/BV19KW464Eov",
+  "source_kind": "url",
+  "title": "deepseekharness：怎么用管理业务真实场景？",
+  "duration": 1474.188,
+  "window": {
+    "start": null,
+    "end": null
+  },
+  "video_path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\deepseekharness：怎么用管理业务真实场景？.mp4",
+  "audio_path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\deepseekharness：怎么用管理业务真实场景？.mp4",
+  "timeline": {
+    "origin": 0.0,
+    "video_start": 0.0,
+    "audio_start": 0.0
+  },
+  "transcript": {
+    "source": "faster-whisper",
+    "model": "small",
+    "language": "zh",
+    "device": "cpu",
+    "compute_type": "int8",
+    "segments": 622,
+    "window": {
+      "start": null,
+      "end": null
+    },
+    "timeline": {
+      "unit": "seconds",
+      "origin": "source",
+      "offset": 0.0,
+      "source_offset": 0.0,
+      "media_seek_start": null,
+      "media_seek_end": null
+    },
+    "audio": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\audio.wav",
+    "files": {
+      "srt": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\transcript.srt",
+      "txt": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\transcript.txt",
+      "json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\transcript.json"
+    }
+  },
+  "frames": {
+    "count": 100,
+    "base_count": 100,
+    "dir": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\frames",
+    "json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\frames\\frames.json",
+    "passes": [
+      {
+        "pass_id": "base",
+        "count": 100,
+        "window": {
+          "start": 0.0,
+          "end": 1474.188
+        },
+        "mode": "auto"
+      }
+    ]
+  },
+  "review": {
+    "status": "pending_assessment",
+    "json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV19KW464Eov\\review.json",
+    "units": 148
+  },
+  "params": {
+    "engine": "faster-whisper",
+    "model": "small",
+    "language": "zh",
+    "width": 512,
+    "mode": "auto",
+    "budget": null,
+    "max_frames": null,
+    "fps": null,
+    "no_frames": false,
+    "no_transcribe": false,
+    "force_whisper": false,
+    "step_timeout": 7200,
+    "refine_plan": null,
+    "refine_pass_id": null,
+    "max_extra_frames": 60,
+    "no_review": false
+  }
+}

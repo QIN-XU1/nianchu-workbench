@@ -1,0 +1,152 @@
+# 公开模板 patch：只挂「启动动画」
+- insert:
+    - id: boot-anim-host
+      name: dsh-plugin-boot-anim
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: pursueray
+    model: deepseek-v4-pro
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      # ══════════════════════════════════════════════════════════════
+      #  本地免费模型网关（2026-11-12 新增）
+      # ══════════════════════════════════════════════════════════════
+      #
+      #  为什么加：
+      #    pursueray（下面那个）余额一断就 402，整个工作台的 AI 全停摆。
+      #    实测卡了 10 多轮：场景跑不了、回执验不了、端到端通不过。
+      #
+      #  这是什么：
+      #    本机 127.0.0.1:3425 上跑的一个 OpenAI 兼容网关，
+      #    背后聚合了 35 个模型，多数免费（pricing 全是 0）。
+      #
+      #  验证过：
+      #    POST /v1/chat/completions  model=raccoon/sn-deepseek-v4-1-flash
+      #    → 200，回复「收到」，usage prompt 12 / completion 4
+      # ══════════════════════════════════════════════════════════════
+      magpie-local:
+        apiKeyEnv: MAGPIE_API_KEY
+        displayName: 本地网关·免费
+        api: openai-completions
+        baseURL: http://127.0.0.1:3425/v1
+        models:
+          # ⚠ maxTokens 必须 ≤ 模型真实上限，否则网关报
+          #    "max_tokens is too large: 384000. This model supports at most 128000"
+          #    （实测：/v1/models 里写 max_output_tokens=384000，
+          #      但真实调用上限是 128000 ——— 以调用报错为准）
+          #
+          # ⚠ 2026-11-12：这 6 个是按「实测真能用」筛过的
+          #    原来列的 raccoon/sn-deepseek-v4-1-flash 会 429，已从默认移除
+          #    主力：sensenova DeepSeek，104 万上下文，极便宜
+          - id: sensenova-token-plan/deepseek-flash
+            name: DeepSeek Flash（1M 上下文）
+            contextWindow: 1048576
+            maxTokens: 128000
+          # 免费备选（429 时可切）
+          - id: opencode-zen-free/mimo-v2.6-flash-free
+            name: MiMo V2.6 Flash（免费·200K）
+            contextWindow: 200000
+            maxTokens: 32000
+          - id: opencode-zen-free/nemotron-3.5-lightning-free
+            name: Nemotron 3.5 Lightning（免费·262K）
+            contextWindow: 262144
+            maxTokens: 32768
+          - id: atomcode/qwen3.8-27b
+            name: Qwen 3.8 27B（262K）
+            contextWindow: 262144
+            maxTokens: 32768
+          - id: atomcode/glm5.3-flash
+            name: GLM 5.3 Flash（512K）
+            contextWindow: 512000
+            maxTokens: 32768
+          - id: github-copilot/gpt-5.4-nano
+            name: GPT-5.4 Nano
+            contextWindow: 128000
+            maxTokens: 32768
+          # 实测会 429 的，留着但不作默认
+          - id: raccoon/sn-deepseek-v4-1-flash
+            name: DeepSeek V4.1 Flash（1M，可能 429）
+            contextWindow: 1000000
+            maxTokens: 128000
+        defaultContextWindow: 128000
+        defaultMaxTokens: 8192
+        transport: sse
+      # ══════════════════════════════════════════════════════════════
+      #  PursuerRay（原配置，保留作备选）
+      #    余额不足时会把 402 冒到 turn/end，现在默认不用它。
+      #    需要时改 agent-default-model 的 provider 即可。
+      # ══════════════════════════════════════════════════════════════
+      pursueray:
+        apiKeyEnv: PURSUERAY_API_KEY
+        displayName: PursuerRay
+        api: openai-completions
+        baseURL: https://api.pursueray.cn/v1
+        models:
+          - id: deepseek-v4-pro
+            name: DeepSeek V4 Pro
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: deepseek-v4-flash
+            name: DeepSeek V4 Flash
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: deepseek-flash
+            name: DeepSeek Flash
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: grok-4.7
+            name: Grok 4.7
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: kimi-k3.1-pro
+            name: Kimi K3.1 Pro
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: qwen3.8-max
+            name: Qwen 3.8 Max
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: glm-5.3
+            name: GLM 5.3
+            contextWindow: 128000
+            maxTokens: 8192
+          - id: gpt-6-astra-1022
+            name: GPT-6 Astra
+            contextWindow: 128000
+            maxTokens: 8192
+        defaultContextWindow: 128000
+        defaultMaxTokens: 8192
+        transport: sse
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-09-28.1
+
+# ══════════════════════════════════════════════════════════════════════
+#  ⚠ 2026-11-11 尝试过的方案：additionalWritableRoots（已回滚）
+#
+#  问题：场景 agent 被沙箱限制在自己的记忆目录内，但派单台账是跨场景
+#        共享的，写不进去 → EPERM → agent 请求升级 → 没人批准 → 卡死。
+#
+#  尝试：用 sandbox-policy 的 additionalWritableRoots 加共享目录。
+#
+#  实测结果（失败）：
+#    场景 agent 一跑命令就报：
+#      Error: Windows ACL confinement does not support additional
+#             writable directories; remove the extra grants or use a
+#             supported host
+#
+#  结论：**Windows ACL 沙箱后端明确不支持额外可写目录**，这条路被引擎堵死。
+#
+#  换方案：不让场景 agent 直接写台账，改由「中枢侧的工具」代写。
+#  场景 agent 只需要把结果回复在会话里，中枢用 投递通道 等待并读取，
+#  然后由中枢（不受场景沙箱限制）去更新台账。
+#
+#  也就是说：**把跨目录的写操作从场景侧移到中枢侧**，
+#  场景 agent 只负责「做和说」，不负责「记账」。
+#
+#  配置已回滚，此文件恢复原状。
+# ══════════════════════════════════════════════════════════════════════

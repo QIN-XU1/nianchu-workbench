@@ -1,0 +1,250 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   tokens.css —— 设计令牌（唯一色彩与尺度真源）
+
+   设计方向：Terminal-native · 信息密度优先 · 层次靠背景明度差
+   目标：一个工具，不是营销页。默认暗色。
+
+   纪律（由 prototype/check-contrast.mjs 实测强制）：
+     · 字号 7 档：11 / 12 / 13 / 15 / 18 / 22 / 28
+     · 圆角 3 档：0 / 4 / 10
+     · 阴影 5 级：1..5
+     · 层次 = 背景 7 级明度（void → sunken → base → panel → raised → hover → active）
+     · 描边只做 1px 发丝线，且只在必须界定可点击区时出现
+     · 正文 ≥4.5:1，大字 ≥3:1（WCAG 2.1 AA）
+
+   命名空间：
+     令牌 --color-*  / --fs-* / --space-* / --r-* / --shadow-* / --dur-*
+     类名 .wb-*（与 ui/core、ui/layout、ui/panels 的约定一致）
+
+   兼容垫片：ui/layout/shell.js 的内联样式引用了 --sp1，故本文件尾部提供
+   --sp1..--sp6 别名（映射到 --space-*，不产生第二套数值）。
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ═══ 表面（7 级明度差 = 全部层次来源） ═══ */
+  --color-void:    #07090A;  /* 最底：窗口/画布外围 */
+  --color-sunken:  #0A0C0E;  /* 凹陷：终端、输入框、代码块 */
+  --color-base:    #0D0F12;  /* 页面主底 */
+  --color-panel:   #121518;  /* 面板底 */
+  --color-raised:  #181C20;  /* 抬起：面板头、卡片 */
+  --color-hover:   #1F2429;  /* 悬停 */
+  --color-active:  #262C33;  /* 按下 / 选中 */
+
+  /* ═══ 发丝线（装饰级：面板分隔、行分隔。WCAG 1.4.11 豁免，不做 ≥3:1） ═══ */
+  --color-line:        #22272D;
+  --color-line-strong: #333A42;  /* 次级分隔：面板悬停、卡片边 */
+
+  /* 交互边界（WCAG 1.4.11 要求 ≥3:1）——只用于「必须被识别为控件」的边界：
+     输入框 / 下拉 / 复选框 / 开关 / 分栏手柄。实测对 7 级表面最低 3.10:1 */
+  --color-control-line: #6D7784;
+
+  /* ═══ 文字（3 档正文可用 + 1 档禁用） ═══
+     实测最低值（对 7 级表面取最差）：t1 13.30 / t2 6.76 / t3 4.59 */
+  --color-txt-1:        #E9EDF2;
+  --color-txt-2:        #A2ABBA;
+  --color-txt-3:        #8A94A3;
+  --color-txt-disabled: #59616E;   /* 禁用态：WCAG 豁免，仅限不可交互文本 */
+  --color-txt-inverse:  #0B0E11;
+
+  /* ═══ 强调（唯一强调色：青） ═══ */
+  --color-accent:       #35BED9;
+  --color-accent-hover: #55CCE2;
+  --color-accent-press: #22A9C3;
+  --color-accent-ink:   #04161B;
+  --color-accent-soft:  #0E2F38;
+  --color-accent-line:  #1E5A69;
+
+  /* ═══ 状态 ═══ */
+  --color-ok:        #45C07E;
+  --color-ok-soft:   #12301F;
+  --color-ok-ink:    #04150C;
+  --color-warn:      #E0A63C;
+  --color-warn-soft: #33280F;
+  --color-warn-ink:  #1A1203;
+  --color-err:       #F0736F;
+  --color-err-soft:  #351A1A;
+  --color-err-ink:   #220B0A;
+
+  /* ═══ 字体 ═══ */
+  --font-mono: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", Consolas,
+               "Microsoft YaHei UI", "PingFang SC", monospace;
+  --font-ui:   "Microsoft YaHei UI", "PingFang SC", "Segoe UI", system-ui, sans-serif;
+
+  /* ═══ 字号 7 档 ═══ */
+  --fs-11: 11px;  --lh-11: 15px;
+  --fs-12: 12px;  --lh-12: 17px;
+  --fs-13: 13px;  --lh-13: 19px;
+  --fs-15: 15px;  --lh-15: 22px;
+  --fs-18: 18px;  --lh-18: 24px;
+  --fs-22: 22px;  --lh-22: 28px;
+  --fs-28: 28px;  --lh-28: 34px;
+
+  /* 行高基线：1.35（密集）/ 1.5（常规）——用两个比例而非三档绝对值 */
+  --lh-tight: 1.35;
+  --lh-normal: 1.5;
+
+  --ls-tight: -0.008em;   /* 中文不用负字距，仅用于英文/数字 */
+  --ls-caps:  0.06em;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+
+  /* ═══ 间距（4 基；最小 2px，密度优先） ═══ */
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 6px;
+  --space-4: 8px;
+  --space-5: 12px;
+  --space-6: 16px;
+  --space-7: 24px;
+  --space-8: 32px;
+
+  /* ═══ 圆角 3 档 ═══ */
+  --r-0: 0;
+  --r-1: 4px;
+  --r-2: 10px;
+
+  /* ═══ 阴影 5 级（只用于浮层；面板层次一律用明度） ═══ */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .35);
+  --shadow-2: 0 2px 8px rgba(0, 0, 0, .40);
+  --shadow-3: 0 8px 24px rgba(0, 0, 0, .48);
+  --shadow-4: 0 14px 40px rgba(0, 0, 0, .54);
+  --shadow-5: 0 24px 72px rgba(0, 0, 0, .62);
+
+  /* 焦点环：双层 ring，不用 outline */
+  --ring-focus: 0 0 0 1px var(--color-accent), 0 0 0 3px rgba(53, 190, 217, .20);
+
+  /* ═══ 动效（全部 <240ms） ═══ */
+  --dur-1: 90ms;
+  --dur-2: 140ms;
+  --dur-3: 200ms;
+  --dur-4: 240ms;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+
+  /* ═══ 骨架尺寸（与 ui/layout/*.js 对齐） ═══ */
+  --h-title: 40px;          /* .wb-titlebar */
+  --h-scene: 34px;          /* .wb-scenebar */
+  --h-foot: 24px;           /* .wb-footbar */
+  --h-panel-head: 28px;     /* .wb-panel-head */
+  --w-side-min: 240px;
+  --w-side-max: 620px;
+  --w-handle: 5px;          /* .wb-split-handle */
+  --h-row: 26px;
+  --h-row-sm: 22px;
+  --h-control: 26px;
+  --h-control-sm: 22px;
+  --h-control-lg: 30px;
+  --hairline: 1px;
+  --bar-2: 2px;
+  --icon-size: 14px;
+
+  /* ═══ 层级 ═══ */
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-panel: 10;
+  --z-float: 100;
+  --z-overlay: 500;
+  --z-toast: 900;
+  --z-modal: 1000;
+
+  /* ═══ 滚动条 ═══ */
+  --scrollbar-size: 8px;
+  --scrollbar-thumb: #2A3037;
+  --scrollbar-thumb-hover: #3A424B;
+  --scrollbar-track: transparent;
+
+  color-scheme: dark;
+
+  /* ═══ 兼容垫片：ui/layout/shell.js 内联引用 --sp1 ═══ */
+  --sp1: var(--space-2);
+  --sp2: var(--space-4);
+  --sp3: var(--space-5);
+  --sp4: var(--space-6);
+  --sp5: var(--space-7);
+  --sp6: var(--space-8);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   亮色主题：只覆盖色彩与阴影，尺度全部复用
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root[data-theme="light"],
+[data-theme="light"] {
+  --color-void:    #E4E8ED;
+  --color-sunken:  #EAEEF2;
+  --color-base:    #F4F6F8;
+  --color-panel:   #FFFFFF;
+  --color-raised:  #FFFFFF;
+  --color-hover:   #EDF1F5;
+  --color-active:  #E3E9EF;
+
+  --color-line:        #DCE2E8;
+  --color-line-strong: #C2CAD3;
+  --color-control-line: #6E7885;
+
+  /* 实测最低值（对 7 级表面取最差）：t1 14.89 / t2 6.32 / t3 4.96 */
+  --color-txt-1:        #14181E;
+  --color-txt-2:        #47505C;
+  --color-txt-3:        #596370;
+  --color-txt-disabled: #8B95A3;
+  --color-txt-inverse:  #FFFFFF;
+
+  --color-accent:       #0B6E84;
+  --color-accent-hover: #0A5C6F;
+  --color-accent-press: #084C5C;
+  --color-accent-ink:   #FFFFFF;
+  --color-accent-soft:  #E3F2F6;
+  --color-accent-line:  #9CC7D2;
+
+  --color-ok:        #17663C;
+  --color-ok-soft:   #E4F3EA;
+  --color-ok-ink:    #FFFFFF;
+  --color-warn:      #7A4F00;
+  --color-warn-soft: #FBF0D9;
+  --color-warn-ink:  #FFFFFF;
+  --color-err:       #A3282E;
+  --color-err-soft:  #FBE7E7;
+  --color-err-ink:   #FFFFFF;
+
+  --shadow-1: 0 1px 2px rgba(20, 24, 30, .10);
+  --shadow-2: 0 2px 8px rgba(20, 24, 30, .12);
+  --shadow-3: 0 8px 24px rgba(20, 24, 30, .14);
+  --shadow-4: 0 14px 40px rgba(20, 24, 30, .16);
+  --shadow-5: 0 24px 72px rgba(20, 24, 30, .18);
+
+  --ring-focus: 0 0 0 1px var(--color-accent), 0 0 0 3px rgba(11, 110, 132, .18);
+
+  --scrollbar-thumb: #C2CAD3;
+  --scrollbar-thumb-hover: #A6B0BA;
+
+  color-scheme: light;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   无障碍降级
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-txt-3: #A3ADBC;
+    --color-line: #3A424B;
+    --color-line-strong: #4A535D;
+  }
+  :root[data-theme="light"],
+  [data-theme="light"] {
+    --color-txt-3: #44505C;
+    --color-line: #B4BDC7;
+    --color-line-strong: #939DA8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 0ms;
+    --dur-2: 0ms;
+    --dur-3: 0ms;
+    --dur-4: 0ms;
+  }
+}

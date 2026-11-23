@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<title>骨架 · 真实响应式</title>
+<link rel="stylesheet" href="./styles/tokens.css" />
+<link rel="stylesheet" href="./styles/base.css" />
+<link rel="stylesheet" href="./styles/layout.css" />
+<link rel="stylesheet" href="./styles/components.css" />
+<link rel="stylesheet" href="./styles/animations.css" />
+</head>
+<body>
+
+<!-- 真实 shell 结构（与 ui/layout/shell.js 生成的一致），用于在任意视口宽度下验证响应式 -->
+<div class="wb-app">
+  <div class="wb-titlebar">
+    <div class="wb-brand"><span class="wb-brand-dot"></span><span>DSH 工作台</span></div>
+    <div class="wb-statuses">
+      <span class="wb-status" data-state="ok"><span class="wb-status-dot"></span>3080</span>
+      <span class="wb-status" data-state="warn"><span class="wb-status-dot"></span>812MB</span>
+    </div>
+    <div class="wb-titlebar-spacer"></div>
+    <div class="wb-winbtns">
+      <button class="wb-winbtn" data-act="min" title="最小化"><svg class="icon" viewBox="0 0 16 16"><path d="M4 8h12"/></svg></button>
+      <button class="wb-winbtn" data-act="max" title="最大化"><svg class="icon" viewBox="0 0 16 16"><path d="M3 3h10v10H3z"/></svg></button>
+      <button class="wb-winbtn" data-act="close" title="关闭"><svg class="icon" viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+    </div>
+  </div>
+
+  <div class="wb-scenebar">
+    <button class="wb-scenetab" data-active="1" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>架构梳理</span></button>
+    <button class="wb-scenetab" data-active="0" data-busy="1"><span class="wb-scenetab-icon">◉</span><span>自我复盘</span></button>
+    <button class="wb-scenetab" data-active="0" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>B 站运营</span></button>
+    <button class="wb-scenetab" data-active="0" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>关系军师</span></button>
+    <button class="wb-scenetab" data-active="0" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>调研</span></button>
+    <div class="wb-scenebar-spacer"></div>
+  </div>
+
+  <div class="wb-body">
+    <div class="wb-split">
+      <div class="wb-main">
+        <div class="wb-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <div class="wb-panel">
+            <div class="wb-panel-head">
+              <span class="wb-panel-title">订单台账</span>
+              <span class="wb-panel-head-meta"><span class="wb-badge wb-badge--ok">PASS</span></span>
+            </div>
+            <div class="wb-panel-body">
+              <table class="wb-table">
+                <thead><tr><th style="width:70px">id</th><th class="col-num" style="width:64px">amount</th><th>status</th></tr></thead>
+                <tbody>
+                  <tr><td>O-1</td><td class="col-num">120</td><td><span class="wb-badge wb-badge--ok">paid</span></td></tr>
+                  <tr><td>O-2</td><td class="col-num">80</td><td><span class="wb-badge wb-badge--ok">paid</span></td></tr>
+                  <tr><td>O-3</td><td class="col-num">200</td><td><span class="wb-badge wb-badge--warn">pending</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="wb-panel">
+            <div class="wb-panel-head">
+              <span class="wb-panel-title">发货记录</span>
+              <span class="wb-panel-head-meta">3 条</span>
+            </div>
+            <div class="wb-panel-body">
+              <ul class="wb-list">
+                <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--ok"></span><span class="wb-row-main"><span class="wb-row-title">S-1 → O-1</span></span><span class="wb-row-meta">120</span></div></li>
+                <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--ok"></span><span class="wb-row-main"><span class="wb-row-title">S-2 → O-2</span></span><span class="wb-row-meta">80</span></div></li>
+                <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--ok"></span><span class="wb-row-main"><span class="wb-row-title">S-3 → O-3</span></span><span class="wb-row-meta">200</span></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wb-split-handle" role="separator" aria-orientation="vertical" tabindex="0" title="拖拽调整宽度 · 双击复位"></div>
+
+      <div class="wb-side">
+        <div class="wb-side-stack">
+          <div class="wb-side-pane">
+            <div class="wb-panel-head">
+              <span class="wb-panel-title"><span class="wb-avatar">A</span>主 Agent</span>
+              <span class="wb-panel-head-meta">在线</span>
+            </div>
+            <div class="wb-side-pane-body" style="padding:var(--space-2)">
+              <div class="wb-notice wb-notice--accent">已连接 11/11 场景 · 等待派单</div>
+            </div>
+            <div class="wb-side-pane-foot">
+              <button class="wb-btn wb-btn--primary wb-btn--sm wb-btn--block">＋ 新会话</button>
+            </div>
+          </div>
+          <div class="wb-side-pane">
+            <div class="wb-panel-head">
+              <span class="wb-panel-title">子 Agent</span>
+              <span class="wb-panel-head-meta">11</span>
+            </div>
+            <div class="wb-side-pane-body">
+              <ul class="wb-list">
+                <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--ok"></span><span class="wb-row-main"><span class="wb-row-title">架构梳理</span></span><span class="wb-row-meta">ready</span></div></li>
+                <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--accent"></span><span class="wb-row-main"><span class="wb-row-title">自我复盘</span></span><span class="wb-row-meta">busy</span></div></li>
+                <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--idle"></span><span class="wb-row-main"><span class="wb-row-title">调研</span></span><span class="wb-row-meta">idle</span></div></li>
+              </ul>
+            </div>
+          </div>
+          <div class="wb-side-pane">
+            <div class="wb-panel-head"><span class="wb-panel-title">任务派发</span></div>
+            <div class="wb-side-pane-body" style="padding:var(--space-2);display:flex;flex-direction:column;gap:var(--space-2)">
+              <select class="wb-select">
+                <option>架构梳理</option>
+                <option>自我复盘</option>
+              </select>
+              <textarea class="wb-textarea" rows="2" placeholder="要做什么…"></textarea>
+            </div>
+            <div class="wb-side-pane-foot">
+              <button class="wb-btn wb-btn--primary wb-btn--sm wb-btn--block">派发</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wb-footbar">
+    <div class="grow truncate" id="foot-left">scene: 架构梳理 · panel: 2 · DSH 3080</div>
+    <div class="spacer"></div>
+    <div class="nowrap" id="foot-right">RAM 812MB · CPU 4%</div>
+  </div>
+</div>
+
+<script type="module">
+  // 主题跟随 URL（预览页 iframe 会传入 ?theme=light|dark）
+  const th = new URLSearchParams(location.search).get('theme');
+  if (th === 'light' || th === 'dark') document.documentElement.dataset.theme = th;
+
+  // 只给本页做宽度提示：把视口宽度写进底栏，便于肉眼核对断点是否生效
+  const el = document.getElementById('foot-right');
+  function paint() {
+    const drawer = document.querySelector('.wb-side');
+    const open = drawer && drawer.classList.contains('is-open');
+    el.textContent = 'vw ' + window.innerWidth + 'px' + (open ? ' · 抽屉开' : '') + ' · RAM 812MB';
+  }
+  paint();
+  window.addEventListener('resize', paint);
+
+  // 支持 ?drawer=1 打开抽屉（窄窗口 <900 时右栏为抽屉形态）
+  const params = new URLSearchParams(location.search);
+  if (params.get('drawer') === '1') {
+    document.querySelector('.wb-side')?.classList.add('is-open');
+    paint();
+  }
+
+  // 抽屉开关（仅在抽屉形态下可见，由 CSS 决定）
+  document.querySelectorAll('.wb-winbtn').forEach((b) => {
+    b.addEventListener('click', () => {
+      if (b.dataset.act !== 'max') return;
+      const drawer = document.querySelector('.wb-side');
+      if (!drawer) return;
+      drawer.classList.toggle('is-open');
+      paint();
+    });
+  });
+</script>
+</body>
+</html>

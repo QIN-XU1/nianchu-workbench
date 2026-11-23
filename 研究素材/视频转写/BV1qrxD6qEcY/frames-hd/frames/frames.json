@@ -1,0 +1,227 @@
+[
+  {
+    "file": "0000_t000200.0.jpg",
+    "t": 200.0,
+    "source": "targeted",
+    "requested_t": 200.0,
+    "actual_t": 200.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0001_t000202.0.jpg",
+    "t": 202.0,
+    "source": "targeted",
+    "requested_t": 202.0,
+    "actual_t": 202.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0002_t000204.0.jpg",
+    "t": 204.0,
+    "source": "targeted",
+    "requested_t": 204.0,
+    "actual_t": 204.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0003_t000206.0.jpg",
+    "t": 206.0,
+    "source": "targeted",
+    "requested_t": 206.0,
+    "actual_t": 206.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0004_t000208.0.jpg",
+    "t": 208.0,
+    "source": "targeted",
+    "requested_t": 208.0,
+    "actual_t": 208.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0005_t000210.0.jpg",
+    "t": 210.0,
+    "source": "targeted",
+    "requested_t": 210.0,
+    "actual_t": 210.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0006_t000212.0.jpg",
+    "t": 212.0,
+    "source": "targeted",
+    "requested_t": 212.0,
+    "actual_t": 212.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0007_t000214.0.jpg",
+    "t": 214.0,
+    "source": "targeted",
+    "requested_t": 214.0,
+    "actual_t": 214.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0008_t000216.0.jpg",
+    "t": 216.0,
+    "source": "targeted",
+    "requested_t": 216.0,
+    "actual_t": 216.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0009_t000218.0.jpg",
+    "t": 218.0,
+    "source": "targeted",
+    "requested_t": 218.0,
+    "actual_t": 218.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0010_t000220.0.jpg",
+    "t": 220.0,
+    "source": "targeted",
+    "requested_t": 220.0,
+    "actual_t": 220.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0011_t000222.0.jpg",
+    "t": 222.0,
+    "source": "targeted",
+    "requested_t": 222.0,
+    "actual_t": 222.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0012_t000224.0.jpg",
+    "t": 224.0,
+    "source": "targeted",
+    "requested_t": 224.0,
+    "actual_t": 224.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0013_t000226.0.jpg",
+    "t": 226.0,
+    "source": "targeted",
+    "requested_t": 226.0,
+    "actual_t": 226.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0014_t000228.0.jpg",
+    "t": 228.0,
+    "source": "targeted",
+    "requested_t": 228.0,
+    "actual_t": 228.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0015_t000230.0.jpg",
+    "t": 230.0,
+    "source": "targeted",
+    "requested_t": 230.0,
+    "actual_t": 230.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0016_t000232.0.jpg",
+    "t": 232.0,
+    "source": "targeted",
+    "requested_t": 232.0,
+    "actual_t": 232.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0017_t000234.0.jpg",
+    "t": 234.0,
+    "source": "targeted",
+    "requested_t": 234.0,
+    "actual_t": 234.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0018_t000236.0.jpg",
+    "t": 236.0,
+    "source": "targeted",
+    "requested_t": 236.0,
+    "actual_t": 236.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0019_t000238.0.jpg",
+    "t": 238.0,
+    "source": "targeted",
+    "requested_t": 238.0,
+    "actual_t": 238.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0020_t000240.0.jpg",
+    "t": 240.0,
+    "source": "targeted",
+    "requested_t": 240.0,
+    "actual_t": 240.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0021_t000242.0.jpg",
+    "t": 242.0,
+    "source": "targeted",
+    "requested_t": 242.0,
+    "actual_t": 242.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0022_t000244.0.jpg",
+    "t": 244.0,
+    "source": "targeted",
+    "requested_t": 244.0,
+    "actual_t": 244.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0023_t000246.0.jpg",
+    "t": 246.0,
+    "source": "targeted",
+    "requested_t": 246.0,
+    "actual_t": 246.0,
+    "pass_id": "targeted",
+    "width": 1400
+  },
+  {
+    "file": "0024_t000248.0.jpg",
+    "t": 248.0,
+    "source": "targeted",
+    "requested_t": 248.0,
+    "actual_t": 248.0,
+    "pass_id": "targeted",
+    "width": 1400
+  }
+]

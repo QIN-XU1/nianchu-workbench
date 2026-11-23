@@ -1,0 +1,166 @@
+﻿/* ─────────────────────────────────────────────────────────────
+   首页 —— 神经记忆元 · 跨层拓扑
+   左：分层拓扑图（5 层，语义连线）  右：主 agent（常驻固定，可输入）
+   ───────────────────────────────────────────────────────────── */
+
+.nhn {
+  --nhn-bg: var(--openbitfun-color-surface-scene, #f7f8fa);
+  --nhn-surface: var(--openbitfun-color-surface-panel, #ffffff);
+  --nhn-line: var(--openbitfun-color-border-subtle, rgba(0, 0, 0, 0.09));
+  --nhn-line-soft: var(--openbitfun-color-border-subtle, rgba(0, 0, 0, 0.05));
+  --nhn-fg: var(--openbitfun-color-content-primary, #1d2129);
+  --nhn-fg-2: var(--openbitfun-color-content-secondary, rgba(29, 33, 41, 0.72));
+  --nhn-fg-3: var(--openbitfun-color-content-muted, rgba(29, 33, 41, 0.52));
+  --nhn-fg-4: var(--openbitfun-color-content-disabled, rgba(29, 33, 41, 0.36));
+  --nhn-primary: var(--openbitfun-color-accent-default, #945eff);
+  --nhn-primary-weak: color-mix(in srgb, var(--openbitfun-color-accent-default, #945eff) 8%, transparent);
+  --nhn-primary-line: color-mix(in srgb, var(--openbitfun-color-accent-default, #945eff) 26%, transparent);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: var(--nhn-bg);
+  color: var(--nhn-fg);
+  overflow: hidden;
+}
+
+/* 【2026-11-18】主 agent 已改为全局右侧停靠（FloatingMiniChat），
+   本页只剩画布，所以是单列。
+   【2026-11-21 用户要求】原来**无论停靠开没开都固定留 400px**，收回主 agent 后右侧就空一大片。
+   现在：默认不留位；只有主 agent 面板真的展开（.openbitfun-fmc--open）时才留出停靠宽度。 */
+.nhn__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-right: 0;
+  transition: padding-right 0.2s ease;
+  box-sizing: border-box;
+}
+/* 让出停靠宽度这件事统一由 WorkspaceBody.scss 的 .openbitfun-workspace-body__scene-surface 处理，
+   这里不再单独加，避免与全局规则叠加成双倍。 */
+
+/* ── 左：拓扑画布 ── */
+.nhn__canvas {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  background: var(--nhn-bg);
+}
+
+.nhn__bar {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--nhn-line-soft);
+  background: var(--nhn-surface);
+}
+.nhn__bar-title {
+  font-size: var(--openbitfun-type-heading-sm-font-size);
+  font-weight: var(--openbitfun-type-label-lg-weight-font-weight);
+}
+.nhn__bar-meta {
+  font-size: var(--openbitfun-type-label-xs-font-size);
+  color: var(--nhn-fg-4);
+  font-variant-numeric: tabular-nums;
+}
+.nhn__bar-state {
+  margin-left: auto;
+  font-size: var(--openbitfun-type-micro-font-size);
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--openbitfun-color-status-success-surface, rgba(29, 140, 120, 0.12));
+  color: var(--openbitfun-color-status-success-content, rgb(21, 110, 95));
+  font-variant-numeric: tabular-nums;
+}
+.nhn__bar-state[data-state='WARN'] { background: var(--openbitfun-color-status-warning-surface, rgba(202, 138, 4, 0.14)); color: var(--openbitfun-color-status-warning-content, rgb(160, 108, 4)); }
+.nhn__bar-state[data-state='UNKNOWN'] { background: var(--openbitfun-color-surface-subtle, rgba(29, 33, 41, 0.08)); color: var(--nhn-fg-3); }
+
+/* 图例：层 + 连线语义 */
+.nhn__legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px;
+  border-bottom: 1px solid var(--nhn-line-soft);
+  background: var(--nhn-surface);
+  font-size: var(--openbitfun-type-micro-font-size);
+  color: var(--nhn-fg-4);
+}
+.nhn__legend-item { display: inline-flex; align-items: center; gap: 4px; }
+.nhn__legend-item i { width: 8px; height: 8px; border-radius: 3px; background: var(--nhn-fg-4); }
+.nhn__legend-item[data-tone='constitution'] i { background: rgba(200, 60, 60, 0.8); }
+.nhn__legend-item[data-tone='shared'] i { background: rgba(202, 138, 4, 0.8); }
+.nhn__legend-item[data-tone='scene'] i { background: var(--nhn-primary); }
+.nhn__legend-item[data-tone='runtime'] i { background: rgba(59, 110, 202, 0.8); }
+.nhn__legend-item[data-tone='archive'] i { background: rgba(29, 33, 41, 0.3); }
+.nhn__legend-sep { width: 1px; height: 12px; background: var(--nhn-line); }
+.nhn__legend-how { display: inline-flex; align-items: center; gap: 4px; }
+.nhn__legend-how b { width: 14px; height: 2px; border-radius: 1px; display: inline-block; }
+
+.nhn__flow { position: relative; min-height: 0; overflow: hidden; }
+
+.nhn__foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 16px;
+  border-top: 1px solid var(--nhn-line-soft);
+  background: var(--nhn-surface);
+  font-size: var(--openbitfun-type-meta-font-size);
+  color: var(--nhn-fg-4);
+}
+.nhn__foot-sel { margin-left: auto; color: var(--nhn-fg-3); }
+
+/* ══════════════════════════════════════════════════════════════
+   画布容器 —— 节点/连线由 AntV G6 画在 canvas 上，这里只管容器。
+   （2026-11-18 用户要求换 G6：自绘 HTML 节点丑且有 bug）
+   ══════════════════════════════════════════════════════════════ */
+.nhn__flow {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--nhn-surface);
+}
+.nhn__flow canvas { display: block; }
+.nhn__err {
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(200, 60, 60, 0.08);
+  border: 1px solid rgba(200, 60, 60, 0.28);
+  color: #a33;
+  font-size: var(--openbitfun-type-meta-font-size);
+}
+
+/* 图例 */
+.nhn__legend-item[data-tone='L0'] i { background: #e0716f; }
+.nhn__legend-how b { width: 14px; height: 2px; border-radius: 1px; display: inline-block; }
+
+/* 底栏 */
+.nhn__foot-hint {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nhn__chip {
+  flex: 0 0 auto;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--nhn-line);
+  background: var(--nhn-surface);
+  color: var(--nhn-fg-3);
+  font: inherit;
+  font-size: var(--openbitfun-type-micro-font-size);
+  cursor: pointer;
+}
+.nhn__chip:hover { border-color: var(--nhn-primary-line); color: var(--nhn-primary); }
+
+

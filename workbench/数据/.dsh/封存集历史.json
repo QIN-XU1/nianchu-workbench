@@ -1,0 +1,220 @@
+{
+  "runs": [
+    {
+      "at": "2026-11-11T16:16:17.189Z",
+      "mode": "memory",
+      "score": 100,
+      "passed": 36,
+      "questions": 36,
+      "perScene": [
+        {
+          "scene": "架构梳理",
+          "passed": 8,
+          "total": 8
+        },
+        {
+          "scene": "实施计划",
+          "passed": 5,
+          "total": 5
+        },
+        {
+          "scene": "竞品拆解",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "故障分析",
+          "passed": 2,
+          "total": 2
+        },
+        {
+          "scene": "本地电脑",
+          "passed": 3,
+          "total": 3
+        },
+        {
+          "scene": "调研",
+          "passed": 3,
+          "total": 3
+        },
+        {
+          "scene": "逆向分析",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "自我复盘",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "中枢",
+          "passed": 3,
+          "total": 3
+        }
+      ]
+    },
+    {
+      "at": "2026-11-11T16:16:34.304Z",
+      "mode": "memory",
+      "score": 100,
+      "passed": 36,
+      "questions": 36,
+      "perScene": [
+        {
+          "scene": "架构梳理",
+          "passed": 8,
+          "total": 8
+        },
+        {
+          "scene": "实施计划",
+          "passed": 5,
+          "total": 5
+        },
+        {
+          "scene": "竞品拆解",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "故障分析",
+          "passed": 2,
+          "total": 2
+        },
+        {
+          "scene": "本地电脑",
+          "passed": 3,
+          "total": 3
+        },
+        {
+          "scene": "调研",
+          "passed": 3,
+          "total": 3
+        },
+        {
+          "scene": "逆向分析",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "自我复盘",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "中枢",
+          "passed": 3,
+          "total": 3
+        }
+      ]
+    },
+    {
+      "at": "2026-11-11T16:30:22.842Z",
+      "mode": "memory",
+      "score": 100,
+      "passed": 40,
+      "questions": 40,
+      "perScene": [
+        {
+          "scene": "架构梳理",
+          "passed": 8,
+          "total": 8
+        },
+        {
+          "scene": "实施计划",
+          "passed": 5,
+          "total": 5
+        },
+        {
+          "scene": "竞品拆解",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "故障分析",
+          "passed": 3,
+          "total": 3
+        },
+        {
+          "scene": "本地电脑",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "调研",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "逆向分析",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "自我复盘",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "scene": "中枢",
+          "passed": 4,
+          "total": 4
+        }
+      ]
+    },
+    {
+      "at": "2026-11-11T17:24:35.824Z",
+      "mode": "memory",
+      "score": 100,
+      "passed": 68,
+      "questions": 68,
+      "perScene": [
+        {
+          "scene": "架构梳理",
+          "passed": 12,
+          "total": 12
+        },
+        {
+          "scene": "实施计划",
+          "passed": 8,
+          "total": 8
+        },
+        {
+          "scene": "竞品拆解",
+          "passed": 7,
+          "total": 7
+        },
+        {
+          "scene": "故障分析",
+          "passed": 6,
+          "total": 6
+        },
+        {
+          "scene": "本地电脑",
+          "passed": 7,
+          "total": 7
+        },
+        {
+          "scene": "调研",
+          "passed": 7,
+          "total": 7
+        },
+        {
+          "scene": "逆向分析",
+          "passed": 7,
+          "total": 7
+        },
+        {
+          "scene": "自我复盘",
+          "passed": 7,
+          "total": 7
+        },
+        {
+          "scene": "中枢",
+          "passed": 7,
+          "total": 7
+        }
+      ]
+    }
+  ]
+}

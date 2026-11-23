@@ -1,0 +1,203 @@
+{
+  "generatedAt": "2026-11-17T22:57:58",
+  "source": "照搬 luanyujia-workbench 05-协作与规矩/三-跨场景协作.md §一 的五列",
+  "columns": [
+    "场景",
+    "会话名",
+    "一句话职能",
+    "它拥有的地盘",
+    "它不该碰的",
+    "记忆写回点"
+  ],
+  "scenes": [
+    {
+      "sceneId": "arch-review",
+      "name": "架构梳理",
+      "panels": [
+        "arch-review-ai"
+      ],
+      "duty": "承接 3 个上游、向 4 个下游交付",
+      "owns": [
+        "research/架构分层.md"
+      ],
+      "avoid": [
+        "不只改文档不改实现"
+      ],
+      "writeback": "research/架构分层.md"
+    },
+    {
+      "sceneId": "backend-craft",
+      "name": "后端工坊",
+      "panels": [
+        "backend-craft-ai"
+      ],
+      "duty": "承接 4 个上游、向 0 个下游交付",
+      "owns": [
+        "tools/"
+      ],
+      "avoid": [
+        "不改前端样式"
+      ],
+      "writeback": "evidence/"
+    },
+    {
+      "sceneId": "build-plan",
+      "name": "实施计划",
+      "panels": [
+        "build-plan-ai"
+      ],
+      "duty": "承接 3 个上游、向 5 个下游交付",
+      "owns": [
+        "research/"
+      ],
+      "avoid": [
+        "不写空计划"
+      ],
+      "writeback": "research/"
+    },
+    {
+      "sceneId": "competitor-analyze",
+      "name": "竞品拆解",
+      "panels": [
+        "competitor-analyze-ai"
+      ],
+      "duty": "承接 1 个上游、向 2 个下游交付",
+      "owns": [
+        "research/competitors/",
+        "tools/benchmark/"
+      ],
+      "avoid": [
+        "不编造对手数据"
+      ],
+      "writeback": "evidence/benchmark/"
+    },
+    {
+      "sceneId": "frontend-craft",
+      "name": "前端工坊",
+      "panels": [
+        "frontend-craft-ai"
+      ],
+      "duty": "承接 4 个上游、向 0 个下游交付",
+      "owns": [
+        "apps/vouch-web/src/web-ui/"
+      ],
+      "avoid": [
+        "不改工具链"
+      ],
+      "writeback": "evidence/ui/"
+    },
+    {
+      "sceneId": "hub",
+      "name": "中枢",
+      "panels": [
+        "hub-ai"
+      ],
+      "duty": "承接 7 个上游、向 2 个下游交付",
+      "owns": [
+        "research/改进台账.json",
+        "evidence/evolve/"
+      ],
+      "avoid": [
+        "不改验收器判据"
+      ],
+      "writeback": "research/改进台账.json"
+    },
+    {
+      "sceneId": "incident-analysis",
+      "name": "故障分析",
+      "panels": [
+        "incident-analysis-ai"
+      ],
+      "duty": "承接 1 个上游、向 5 个下游交付",
+      "owns": [
+        "evidence/quality/"
+      ],
+      "avoid": [
+        "不只报现象不查根因"
+      ],
+      "writeback": "evidence/quality/"
+    },
+    {
+      "sceneId": "pc-cleanup",
+      "name": "本地电脑",
+      "panels": [
+        "pc-cleanup-ai"
+      ],
+      "duty": "承接 3 个上游、向 1 个下游交付",
+      "owns": [
+        "evidence/cleanup/"
+      ],
+      "avoid": [
+        "不删不可再生数据",
+        "不替别人删东西"
+      ],
+      "writeback": "evidence/cleanup/cleanup-log.json"
+    },
+    {
+      "sceneId": "research",
+      "name": "调研",
+      "panels": [
+        "research-ai"
+      ],
+      "duty": "承接 0 个上游、向 4 个下游交付",
+      "owns": [
+        "research/",
+        "evidence/"
+      ],
+      "avoid": [
+        "不把推测当事实"
+      ],
+      "writeback": "research/"
+    },
+    {
+      "sceneId": "reverse-eng",
+      "name": "逆向分析",
+      "panels": [
+        "reverse-eng-ai"
+      ],
+      "duty": "承接 1 个上游、向 6 个下游交付",
+      "owns": [
+        "research/逆向分析/"
+      ],
+      "avoid": [
+        "不抄没看懂的东西"
+      ],
+      "writeback": "research/逆向分析/"
+    },
+    {
+      "sceneId": "self-review",
+      "name": "自我复盘",
+      "panels": [
+        "self-review-ai"
+      ],
+      "duty": "承接 0 个上游、向 2 个下游交付",
+      "owns": [
+        "research/改进台账.json"
+      ],
+      "avoid": [
+        "不替实现方改代码"
+      ],
+      "writeback": "research/改进台账.json"
+    },
+    {
+      "sceneId": "tool-forge",
+      "name": "工具工坊",
+      "panels": [
+        "tool-forge-ai"
+      ],
+      "duty": "承接 4 个上游、向 0 个下游交付",
+      "owns": [
+        "tools/quality/",
+        "tools/schedule/"
+      ],
+      "avoid": [
+        "不做越界拦截"
+      ],
+      "writeback": "evidence/quality/"
+    }
+  ],
+  "rule": {
+    "mechanical": "地盘表的场景数必须 == 身份索引的场景数，缺谁/多谁点名（照搬原文第 ⑧ 项抓手）",
+    "request": "要别的场景办事 → node tools/collab/request.mjs \"<要办什么>\" --from <你> --to <它>；自己不许动手"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "at": "2026-11-16T23:52:58.934Z",
+    "count": 5,
+    "verdicts": {
+      "PASS": 2,
+      "WARN": 1,
+      "FAIL": 1,
+      "UNKNOWN": 1
+    },
+    "notes": [
+      "verify-goal: 非零退出(1)，但 stdout 完整并已解析",
+      "dispatch: 数据在 localStorage，导出阶段不可读（界面侧直接读）"
+    ]
+  },
+  "artifacts": [
+    {
+      "id": "four-state",
+      "kind": "state",
+      "title": "四态贯通",
+      "verdict": "PASS",
+      "at": "2026-11-16T20:40:22.453Z",
+      "source": "evidence/evolve/four-state-layers.json",
+      "summary": "观测→验证→记忆→改进→证明 五层，UNKNOWN 不并入通过",
+      "metrics": [
+        {
+          "label": "层",
+          "value": "5/5"
+        },
+        {
+          "label": "案例",
+          "value": "11/11"
+        }
+      ]
+    },
+    {
+      "id": "matrix",
+      "kind": "matrix",
+      "title": "31 维矩阵",
+      "verdict": "WARN",
+      "at": "2026-11-16T22:32:05.499Z",
+      "source": "evidence/evolve/matrix-confidence.json",
+      "summary": "双方证据同类才可比；其余如实标注不可比",
+      "metrics": [
+        {
+          "label": "可比",
+          "value": "27/31（87%）"
+        },
+        {
+          "label": "证据异类",
+          "value": "3"
+        },
+        {
+          "label": "仅我方",
+          "value": "3"
+        },
+        {
+          "label": "都不可核验",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "id": "ledger",
+      "kind": "ledger",
+      "title": "改进台账",
+      "verdict": "PASS",
+      "at": "2026-11-15T03:29:31.584Z",
+      "source": "research/改进台账.json",
+      "summary": "T1 要求 ≥10 轮已结案 + 每轮有基线/前后度量/样本量",
+      "metrics": [
+        {
+          "label": "条目",
+          "value": "142"
+        },
+        {
+          "label": "closed",
+          "value": "27"
+        },
+        {
+          "label": "partial",
+          "value": "53"
+        },
+        {
+          "label": "refuted",
+          "value": "27"
+        },
+        {
+          "label": "unknown",
+          "value": "35"
+        }
+      ]
+    },
+    {
+      "id": "verify-goal",
+      "kind": "verify",
+      "title": "目标验收 verify-goal",
+      "verdict": "FAIL",
+      "at": "2026-11-16T23:52:58.934Z",
+      "source": "prototype/hermes-agents/verify-goal.mjs",
+      "summary": "硬要求逐条验收；「判不了」永远单列，不并入通过",
+      "metrics": [
+        {
+          "label": "通过",
+          "value": "19"
+        },
+        {
+          "label": "待补",
+          "value": "0"
+        },
+        {
+          "label": "失败",
+          "value": "2"
+        },
+        {
+          "label": "判不了",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "id": "dispatch",
+      "kind": "dispatch",
+      "title": "派单与回执",
+      "verdict": "UNKNOWN",
+      "at": null,
+      "source": "localStorage（任务分派账本）",
+      "summary": "账本在浏览器本地，导出时读不到 —— 界面上会实时读",
+      "metrics": []
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-20T07:15:27.135Z",
+  "entries": [
+    {
+      "name": "adr",
+      "description": "写架构决策记录（ADR）：把当时的背景与约束、候选选项与各自代价、最终决定与理由、以及接受了什么后果一起记下来，使一年后的人能看懂取舍并在什么条件下该重新考虑。当用户要「记录这个技术决定」「为啥选 X 不选 Y」「以后别再翻这个案」时使用。",
+      "category": "写作",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9237
+    },
+    {
+      "name": "api-contract",
+      "description": "核对接口契约：列出入参/出参/错误的完整契约，找全所有调用点逐个核对，判定改动是否 breaking，并给出可执行的迁移清单。当用户要「对一下接口」「这个改动会不会 breaking」「改签名安不安全」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9572
+    },
+    {
+      "name": "changelog",
+      "description": "维护变更日志：从提交/台账收集范围内改动，按「新增/修复/变更/移除/安全」五类归档，每条写对使用者的影响并可追溯到具体提交或台账 id，不兼容变更单独显著标注。当用户要「写更新日志」「整理这次改了什么」时使用。",
+      "category": "写作",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8685
+    },
+    {
+      "name": "ci-pipeline",
+      "description": "搭或改 CI 流水线：分阶段（装依赖→构建→测试→门禁）、每阶段失败即停、钉版本与缓存键、失败可定位可复现。当用户要「配 CI」「流水线挂了」「CI 老是假绿」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9638
+    },
+    {
+      "name": "code-review",
+      "description": "对一段改动做代码审查：先定清 diff 范围，再按五层（范围/正确性/删除与副作用/契约/可测性）逐层查，每层都要给出至少一个反例尝试，最后给四态结论。当用户要「审一下这段代码」「review 这个 PR」「看看这次改动有没有问题」时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8048
+    },
+    {
+      "name": "cross-repo-refactor",
+      "description": "跨仓库/跨模块重构：先建可验证的不变量，再分批迁移调用点，每批可回滚可测，最后清理旧路径。当用户要「把 X 从 A 挪到 B」「统一两个模块的接口」「大范围改名」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 4952
+    },
+    {
+      "name": "data-migration",
+      "description": "安全地做数据迁移：先备份并验证备份可用，再用与真实执行同一段代码做 dry-run，然后小批试跑、全量执行、计数校验，最后保留可执行的回滚脚本。当用户要「迁移数据」「改数据结构」「批量订正字段」时使用。",
+      "category": "数据",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 10471
+    },
+    {
+      "name": "data-reconcile",
+      "description": "两份数据记录集合与金额是否一致。当用户要检查或修复与「数据核对」相关的一致性时使用。",
+      "category": "数据",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 555
+    },
+    {
+      "name": "debug-repro",
+      "description": "把一个 bug 先复现、再最小化、再二分定位，最后给出可复算的根因与验证。当用户说「这个 bug 修一下」「复现不了」「偶发」「改完好像好了」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8633
+    },
+    {
+      "name": "dep-upgrade",
+      "description": "升级依赖：先读 changelog 找出 breaking change 并列出受影响调用点，再按 patch/minor/major 分阶段升级，每阶段跑验证并单独提交以便回滚，最后确认没有隐形行为变化。当用户要「升级依赖」「这个包有漏洞要升」「版本太旧了」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9657
+    },
+    {
+      "name": "design-review",
+      "description": "审查一个设计方案：先核对目标是不是真问题，再要求列出取舍与代价，然后压测失败模式与更简单解法，最后给出可被反驳的结论与反例。当用户要「看看这个设计」「方案评审」「这个思路行不行」时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9510
+    },
+    {
+      "name": "doc-consistency",
+      "description": "术语是否出现、有无未登记缩写。当用户要检查或修复与「文档一致性」相关的一致性时使用。",
+      "category": "数据",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 567
+    },
+    {
+      "name": "doc-write",
+      "description": "撰写或修订说明文档：固定结构（是什么/怎么用/注意什么）、每个命令真跑过并贴真实输出、数字与路径经仓库校验、中文标点与代码块标注规范。当用户要「写个说明」「更新 README」「补文档」时使用。",
+      "category": "写作",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8980
+    },
+    {
+      "name": "docs-index",
+      "description": "README 索引必须覆盖全部文档，且不得重复。当用户要检查或修复与「文档索引」相关的一致性时使用。",
+      "category": "写作",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 573
+    },
+    {
+      "name": "evidence-audit",
+      "description": "审计「改进台账/对比矩阵」里的证据是否真能复算到对方源码，而不是我们自己的分析文档。区分 REAL（指向对手仓库真实文件）/ OWN（只指向我方文档）/ NONE，用同一把尺子量我方「有」的断言，并核对口径（有+部分 vs REAL 家数）不能混用。当用户要核查证据可信度、或怀疑「领先」是自说自话时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9391
+    },
+    {
+      "name": "inventory-ledger",
+      "description": "每种物料的账面量与仓库记录一致，且物料号在物料主数据里。当用户要检查或修复与「库存台账」相关的一致性时使用。",
+      "category": "数据",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 606
+    },
+    {
+      "name": "multi-host-project",
+      "description": "把技能池从单一 canonical 源（prototype/scenes/*/SKILL.md）投影到多个宿主原生格式（Claude/Codex/Cursor/Gemini/OpenCode），验证「同一套内容投影多宿主」真的成立（B3 维度）。当用户要「让别的工具也能用我们的技能」「跨工具导出」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8795
+    },
+    {
+      "name": "perf-profile",
+      "description": "定位性能问题：先建立可复算的基线（不猜），再用 profiler 找热点，判断是算法级还是常数级，然后一次只改一处并重测，最后给出同环境同输入的对比数字。当用户说「太慢了」「优化一下」「内存涨了」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 10122
+    },
+    {
+      "name": "project-verdict",
+      "description": "把 31 维 × 22 家的对比数据收敛成「念初对每个参照项目是否实质超越」的逐项目结项判定。四档（实质超越/基本超越/不及/可比不足）写死在代码里，只统计证据可复算（REAL）的维度。当用户问「现在能进入下一个项目了吗」「到底超过谁了」时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8928
+    },
+    {
+      "name": "readme-bootstrap",
+      "description": "为一个项目从零写 README：一句话说清是什么、30 秒能跑起来的最小命令（真跑过）、目录地图、当前状态与已知缺口、文档索引。当用户要「写个 README」「项目没说明」「新人不知道怎么跑」时使用。",
+      "category": "写作",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8373
+    },
+    {
+      "name": "refactor-plan",
+      "description": "给一段要重构的代码出分期计划：先立可测的不变量，再拆成每步只做一类改动的序列，每步都能独立验证与回滚，最后清理旧路径。当用户说「重构一下」「这块太乱了」「想换实现但不敢动」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 9394
+    },
+    {
+      "name": "release-gate",
+      "description": "提交/交付前的四态门禁检查（残留、体量、文档、矩阵绑定、诚实、目标）。当用户要「提交前检查」「跑一遍门禁」或准备收尾时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 3387
+    },
+    {
+      "name": "release-notes",
+      "description": "写面向用户的发版说明：把改动翻译成用户能感知的影响，亮点区只放最值得说的 1~3 件，不兼容变更给出迁移动作，已知问题诚实列出。当用户要「写发版说明」「给用户说这次更新」时使用。",
+      "category": "写作",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8926
+    },
+    {
+      "name": "release-pipeline",
+      "description": "端到端发布流水线：从改动完成到交付可回滚的版本，串起门禁、版本号、构建、产物校验、回滚预案与发布后验证。当用户要「发版」「出一版」「准备发布」「这个改动怎么上线」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 5541
+    },
+    {
+      "name": "schema-design",
+      "description": "设计数据结构/表：先列实体与关系，再定字段类型与约束（含空值语义与唯一性），然后按查询反推索引，最后给出可回滚的迁移方案与单一权威源判定。当用户要「设计表结构」「这个数据怎么存」「要不要拆表」时使用。",
+      "category": "数据",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 10385
+    },
+    {
+      "name": "security-review",
+      "description": "审查代码里的安全风险：注入（命令/SQL/模板）、凭证泄露（日志/argv/异常）、路径穿越、越权访问。每条风险必须给出「触发输入 → 后果」的具体例子；无风险也要说明查了哪几类、为什么安全。只做审查与提示，不做越界拦截（本产品形态决定）。当用户要「看下有没有安全问题」时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 11561
+    },
+    {
+      "name": "self-review",
+      "description": "自己的档案必须有索引；索引不得指向不存在的档案；档案名不得重复。当用户要检查或修复与「自我复盘」相关的一致性时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 621
+    },
+    {
+      "name": "support-assign",
+      "description": "每单有 owner、owner 在值班表、无重复单。当用户要检查或修复与「客服分派」相关的一致性时使用。",
+      "category": "数据",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 555
+    },
+    {
+      "name": "test-writing",
+      "description": "为一个功能或 bug 写测试：先写会失败的用例（红）确认真的测到目标，再改实现变绿，最后验证「改坏实现后它必须红」。当用户要「补测试」「写个用例」「加回归」「覆盖率不够」时使用。",
+      "category": "工程",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 8203
+    },
+    {
+      "name": "threat-model",
+      "description": "给一个功能做威胁建模：列资产、枚举入口、标出信任边界、逐个入口推演滥用路径，每条给出「触发方式 → 后果」的具体例子。只做分析提示，不做越界拦截（本产品形态决定）。当用户要「这个功能有什么风险」「威胁建模」时使用。",
+      "category": "审查",
+      "version": "1.0.0",
+      "origin": "builtin",
+      "tags": [],
+      "bodyBytes": 10401
+    }
+  ]
+}

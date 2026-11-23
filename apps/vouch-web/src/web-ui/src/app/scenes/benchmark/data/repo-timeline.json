@@ -1,0 +1,186 @@
+{
+  "at": "2026-11-15T14:04:34.971Z",
+  "repos": [
+    {
+      "id": "luanyujia",
+      "slug": "mashanglinyu/luanyujia-workbench",
+      "label": "乱语家 workbench",
+      "state": "PASS",
+      "why": "73 条提交 · 跨度 35 天 · 覆盖 3 个月 · 最新 2026-11-04",
+      "summary": {
+        "count": 73,
+        "first": "2026-09-30T06:49:28Z",
+        "last": "2026-11-04T07:37:20Z",
+        "spanDays": 35,
+        "byKind": {
+          "other": 41,
+          "docs": 32
+        },
+        "byMonth": {
+          "2026-11": 22,
+          "2026-10": 50,
+          "2026-09": 1
+        },
+        "months": [
+          "2026-09",
+          "2026-10",
+          "2026-11"
+        ]
+      }
+    },
+    {
+      "id": "openclaw",
+      "slug": "openclaw/openclaw",
+      "label": "openclaw",
+      "state": "PASS",
+      "why": "100 条提交 · 跨度 0 天 · 覆盖 1 个月 · 最新 2026-11-15",
+      "summary": {
+        "count": 100,
+        "first": "2026-11-15T06:31:13Z",
+        "last": "2026-11-15T13:54:45Z",
+        "spanDays": 0,
+        "byKind": {
+          "fix": 81,
+          "refactor": 10,
+          "chore": 5,
+          "test": 2,
+          "other": 2
+        },
+        "byMonth": {
+          "2026-11": 100
+        },
+        "months": [
+          "2026-11"
+        ]
+      }
+    },
+    {
+      "id": "orca",
+      "slug": "stablyai/orca",
+      "label": "orca",
+      "state": "UNKNOWN",
+      "why": "GitHub API 0（仓库不存在/无权限/网络失败）"
+    },
+    {
+      "id": "ecc",
+      "slug": "affaan-m/ECC",
+      "label": "ECC",
+      "state": "PASS",
+      "why": "100 条提交 · 跨度 8 天 · 覆盖 2 个月 · 最新 2026-11-06",
+      "summary": {
+        "count": 100,
+        "first": "2026-10-29T18:23:27Z",
+        "last": "2026-11-06T21:21:50Z",
+        "spanDays": 8,
+        "byKind": {
+          "fix": 33,
+          "chore": 5,
+          "other": 44,
+          "docs": 8,
+          "test": 7,
+          "feat": 3
+        },
+        "byMonth": {
+          "2026-11": 2,
+          "2026-10": 98
+        },
+        "months": [
+          "2026-10",
+          "2026-11"
+        ]
+      }
+    },
+    {
+      "id": "weknora",
+      "slug": "Tencent/WeKnora",
+      "label": "WeKnora",
+      "state": "PASS",
+      "why": "100 条提交 · 跨度 7 天 · 覆盖 1 个月 · 最新 2026-11-09",
+      "summary": {
+        "count": 100,
+        "first": "2026-11-02T06:51:46Z",
+        "last": "2026-11-09T15:19:49Z",
+        "spanDays": 7,
+        "byKind": {
+          "fix": 85,
+          "docs": 3,
+          "feat": 11,
+          "refactor": 1
+        },
+        "byMonth": {
+          "2026-11": 100
+        },
+        "months": [
+          "2026-11"
+        ]
+      }
+    },
+    {
+      "id": "craft",
+      "slug": "storytold/craft-anything",
+      "label": "craft-anything",
+      "state": "PASS",
+      "why": "100 条提交 · 跨度 3 天 · 覆盖 1 个月 · 最新 2026-11-15",
+      "summary": {
+        "count": 100,
+        "first": "2026-11-12T05:08:33Z",
+        "last": "2026-11-15T12:04:31Z",
+        "spanDays": 3,
+        "byKind": {
+          "feat": 7,
+          "other": 71,
+          "docs": 2,
+          "test": 12,
+          "fix": 4,
+          "chore": 3,
+          "refactor": 1
+        },
+        "byMonth": {
+          "2026-11": 100
+        },
+        "months": [
+          "2026-11"
+        ]
+      }
+    },
+    {
+      "id": "omp",
+      "slug": "the-snowpear/omp-studio",
+      "label": "omp-studio",
+      "state": "PASS",
+      "why": "100 条提交 · 跨度 15 天 · 覆盖 2 个月 · 最新 2026-11-14",
+      "summary": {
+        "count": 100,
+        "first": "2026-10-30T10:19:14Z",
+        "last": "2026-11-14T07:24:36Z",
+        "spanDays": 15,
+        "byKind": {
+          "docs": 14,
+          "fix": 35,
+          "chore": 6,
+          "other": 9,
+          "refactor": 19,
+          "test": 8,
+          "feat": 9
+        },
+        "byMonth": {
+          "2026-11": 98,
+          "2026-10": 2
+        },
+        "months": [
+          "2026-10",
+          "2026-11"
+        ]
+      }
+    }
+  ],
+  "untrackable": [
+    "ChatGPT / Codex",
+    "Claude Code",
+    "Cursor",
+    "Trae",
+    "WorkBuddy",
+    "CodeBuddy",
+    "Qoder"
+  ]
+}

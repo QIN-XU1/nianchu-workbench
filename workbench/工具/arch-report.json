@@ -1,0 +1,219 @@
+{
+  "at": "2026-11-07T06:26:33.936Z",
+  "layers": [
+    {
+      "id": "L0",
+      "name": "平台层",
+      "ok": true,
+      "results": [
+        {
+          "name": "引擎数据目录",
+          "ok": true,
+          "detail": "workbench\\引擎数据\\.dsh",
+          "required": true
+        },
+        {
+          "name": "sessions 目录",
+          "ok": true,
+          "detail": "",
+          "required": true
+        },
+        {
+          "name": "场景记忆目录",
+          "ok": true,
+          "detail": "",
+          "required": true
+        },
+        {
+          "name": "skills 目录",
+          "ok": true,
+          "detail": "",
+          "required": true
+        },
+        {
+          "name": "AGENTS.md 注入层",
+          "ok": true,
+          "detail": "1.67 KB / 2 KB",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "L1",
+      "name": "执行层",
+      "ok": true,
+      "results": [
+        {
+          "name": "工具目录",
+          "ok": true,
+          "detail": "16 个 .mjs",
+          "required": true
+        },
+        {
+          "name": "工具注册表",
+          "ok": true,
+          "detail": "已生成",
+          "required": true
+        },
+        {
+          "name": "外壳脚本",
+          "ok": true,
+          "detail": "8 个脚本",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "场景层",
+      "ok": true,
+      "results": [
+        {
+          "name": "场景定义",
+          "ok": true,
+          "detail": "11 个场景",
+          "required": true
+        },
+        {
+          "name": "定位卡",
+          "ok": true,
+          "detail": "11/11",
+          "required": true
+        },
+        {
+          "name": "身份索引",
+          "ok": true,
+          "detail": "11/11 登记",
+          "required": true
+        },
+        {
+          "name": "场景契约",
+          "ok": true,
+          "detail": "11/11",
+          "required": true
+        },
+        {
+          "name": "AI 面板会话绑定",
+          "ok": true,
+          "detail": "0 个未绑",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "记忆层",
+      "ok": true,
+      "results": [
+        {
+          "name": "注入层体量",
+          "ok": true,
+          "detail": "1.67 KB",
+          "required": true
+        },
+        {
+          "name": "私有记忆完整性",
+          "ok": true,
+          "detail": "11/11",
+          "required": true
+        },
+        {
+          "name": "记忆体量红线",
+          "ok": true,
+          "detail": "0 个超 25KB",
+          "required": true
+        },
+        {
+          "name": "共享层四块板",
+          "ok": true,
+          "detail": "4/4",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "协作层",
+      "ok": true,
+      "results": [
+        {
+          "name": "通知看板可写",
+          "ok": true,
+          "detail": "存在",
+          "required": true
+        },
+        {
+          "name": "待办板可写",
+          "ok": true,
+          "detail": "存在",
+          "required": true
+        },
+        {
+          "name": "协作工具",
+          "ok": true,
+          "detail": "collab.mjs",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "管线层",
+      "ok": true,
+      "results": [
+        {
+          "name": "场景契约覆盖",
+          "ok": true,
+          "detail": "11/11",
+          "required": true
+        },
+        {
+          "name": "管线定义",
+          "ok": true,
+          "detail": "2 条管线",
+          "required": true
+        },
+        {
+          "name": "产物索引",
+          "ok": true,
+          "detail": "2 个产物",
+          "required": true
+        },
+        {
+          "name": "事件流",
+          "ok": true,
+          "detail": "5 条事件",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "L6",
+      "name": "验证层",
+      "ok": true,
+      "results": [
+        {
+          "name": "验证探针",
+          "ok": true,
+          "detail": "134 个探针",
+          "required": true
+        },
+        {
+          "name": "场景验证器",
+          "ok": true,
+          "detail": "存在",
+          "required": true
+        },
+        {
+          "name": "架构自检自身",
+          "ok": true,
+          "detail": "arch.mjs（本脚本）",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "total": 27,
+  "passed": 27,
+  "score": "27/27"
+}

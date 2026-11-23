@@ -1,0 +1,197 @@
+{
+  "what": "功能对照实验（P1/P2/P6/P8 行为契约）",
+  "at": "2026-11-21T11:15:54.239Z",
+  "state": "PASS",
+  "summary": {
+    "total": 27,
+    "pass": 27,
+    "fail": 0,
+    "byProbe": {
+      "P1": {
+        "pass": 7,
+        "fail": 0,
+        "total": 7
+      },
+      "P2": {
+        "pass": 8,
+        "fail": 0,
+        "total": 8
+      },
+      "P6": {
+        "pass": 6,
+        "fail": 0,
+        "total": 6
+      },
+      "P8": {
+        "pass": 6,
+        "fail": 0,
+        "total": 6
+      }
+    }
+  },
+  "caveat": "只证明我方满足明确行为契约（含反例）；不证明对手更强/更弱，强度需对对手可执行实测。",
+  "results": [
+    {
+      "probe": "P1",
+      "name": "单价表解析：priced=2 / unpriced=2",
+      "ok": true,
+      "detail": "{\"priced\":2,\"unpriced\":2}"
+    },
+    {
+      "probe": "P1",
+      "name": "单条金额精确可复算（到 1e-12）",
+      "ok": true,
+      "detail": "usd=0.011475 expect=0.011475"
+    },
+    {
+      "probe": "P1",
+      "name": "★反例：声明价格但读不懂 → 记无价(null)，绝不记 0",
+      "ok": true,
+      "detail": "null"
+    },
+    {
+      "probe": "P1",
+      "name": "★反例：无价条目 → costOf 返回 null（不是 0）",
+      "ok": true,
+      "detail": "null"
+    },
+    {
+      "probe": "P1",
+      "name": "★反例：usd=NaN 的条目被拒（不许伪造金额）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P1",
+      "name": "台账汇总：无价条目不混进总额",
+      "ok": true,
+      "detail": "{\"entries\":2,\"priced\":1,\"unpriced\":1,\"totalUsd\":0.011475}"
+    },
+    {
+      "probe": "P1",
+      "name": "重算一致（同输入 → 同金额）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P2",
+      "name": "无 TTL → fresh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P2",
+      "name": "expiresAt 已过 → expired",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P2",
+      "name": "expiresAt 未到 → fresh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P2",
+      "name": "★优先级：已被推翻 + 已过期 → 仍报 superseded（推翻更强）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P2",
+      "name": "ttlRemainingSec 计算精确",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P2",
+      "name": "gc 只删「既过期又被推翻」，仅过期/仅推翻都保留历史",
+      "ok": true,
+      "detail": "[{\"id\":\"x\",\"key\":\"k-x\",\"why\":\"既过期又被推翻\"}]"
+    },
+    {
+      "probe": "P2",
+      "name": "★反例：大面积过期不许静默 PASS（≥50% 判 WARN）",
+      "ok": true,
+      "detail": "WARN"
+    },
+    {
+      "probe": "P2",
+      "name": "★反例：存在未解决冲突 → FAIL（不许自动选边）",
+      "ok": true,
+      "detail": "FAIL"
+    },
+    {
+      "probe": "P6",
+      "name": "同 key 冲突 → ambiguous=true（不藏冲突）",
+      "ok": true,
+      "detail": "{\"live\":0,\"conf\":2}"
+    },
+    {
+      "probe": "P6",
+      "name": "★反例：不写理由的 resolve 被拒",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P6",
+      "name": "显式 resolve：被弃条目 superseded + supersededBy 指向选中项",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P6",
+      "name": "旧值仍可查（superseded 条目没被删除）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P6",
+      "name": "★反例：不能选一条已过期的条目（会让冲突被静默抹平）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P6",
+      "name": "回滚：当前值 superseded、目标值 fresh、全程留痕",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P8",
+      "name": "追加 3 条 → 链校验通过，count/tail 锚点正确",
+      "ok": true,
+      "detail": "{\"ok\":true,\"count\":3}"
+    },
+    {
+      "probe": "P8",
+      "name": "★反例：无值不许造（value=undefined 记 null 并标 why）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P8",
+      "name": "★反例：改写嵌套字段 tokens.input → 链校验 FAIL",
+      "ok": true,
+      "detail": "{\"ok\":false,\"brokenAt\":0,\"why\":\"第 0 条的 hash 不匹配（内容被改写，含嵌套字段）\",\"count\":3}"
+    },
+    {
+      "probe": "P8",
+      "name": "★反例：尾部截断（pop 未同步 count）→ 检出条数不符",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P8",
+      "name": "★反例：文件损坏 → 标记 corrupt 且链校验 FAIL（不冒充空台账）",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "probe": "P8",
+      "name": "★反例：历史被改后再 append → 拒绝追加",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

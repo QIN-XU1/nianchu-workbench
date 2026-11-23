@@ -1,0 +1,84 @@
+{
+  "what": "联网能力实测结果（A3）",
+  "at": "2026-11-14T18:15:54.965Z",
+  "generator": "tools/net/gen-ui-data.mjs",
+  "rule": "界面显示的是真实发生过的搜索与抓取；UNKNOWN 表示本机连不上，不等于目标不存在",
+  "search": {
+    "state": "PASS",
+    "query": "DeepSeek Harness 插件",
+    "endpoint": "https://www.bing.com/search",
+    "why": "解析出 5 条结果",
+    "results": [
+      {
+        "url": "https://blog.csdn.net/2301_81024796/article/details/163823565",
+        "title": "DeepSeek Harness 插件 推荐：装好之后，这 9 个 插件 值得一试",
+        "snippet": "2026年8月21日 · 本文系统介绍 DeepSeek Harness 插件生态的核心价值与安装方式，并重点推荐9个高人气、高实用性的开源插 …",
+        "host": "blog.csdn.net"
+      },
+      {
+        "url": "https://deepseek-harness-plugin.com/zh-CN/",
+        "title": "DeepSeek Harness 插件 目录 — DSH 插件 库",
+        "snippet": "18 小时之前 · DS Bot 是一个基于 DeepSeek Harness（简称 dsh）的开源项目，提供独立桌面应用和 dsh 插件两种形态。 它将 dsh …",
+        "host": "deepseek-harness-plugin.com"
+      },
+      {
+        "url": "https://zhuanlan.zhihu.com/p/2083196153529684153",
+        "title": "DeepSeek Harness 插件 推荐：2026 年最值得先装的 10 个 ...",
+        "snippet": "2026年9月15日 · 本文基于官方文档、社区精选列表与头部插件仓库的公开信息，按插件市场、界面与桌面、记忆、用量、安全、网页 …",
+        "host": "zhuanlan.zhihu.com"
+      },
+      {
+        "url": "https://blog.csdn.net/qq_36729037/article/details/164060778",
+        "title": "DeepSeek Harness 插件 别乱装！15款精选实测推荐 + 安装 ...",
+        "snippet": "2026年8月25日 · 本文从1700+ DeepSeek Harness（DSH）社区插件中实测筛选出15款高实用性插件，按界面体验、多模态能力、智 …",
+        "host": "blog.csdn.net"
+      },
+      {
+        "url": "https://github.com/dshplugin/dsh-plugin-hub",
+        "title": "GitHub - dshplugin/dsh-plugin-hub: DSH Plugin 插件市场 - DeepSeek Harness ...",
+        "snippet": "2026年8月20日 · DSH Plugin 插件市场收录 4,597 个 DeepSeek Harness Plugin（DSH）插件，全部已人工精选验证，每日更新，免 …",
+        "host": "github.com"
+      }
+    ]
+  },
+  "fetch": {
+    "state": "PASS",
+    "url": "https://www.deepseek.com/harness/",
+    "why": "提取正文 3909 字",
+    "title": "DeepSeek Harness｜共探智能上限",
+    "chars": 3909,
+    "excerpt": "DeepSeek Harness｜共探智能上限 中文 EN \n\n下载桌面端 macOS（Apple 芯片） Windows（64 位） \n\nGitHub 开发者文档 社区插件 Cordis 论文 中文 EN \n\n预览版 DeepSeek Harness \n现在，开箱即用\n\n无论处理日常工作、编写代码，还是构建自己的 Harness，都可以从这里开始。\nDeepSeek Harness 面向全球开放测试并同步开源，以可自由组合的插件，拓展 Agent 能力。\n\n下载桌面端 \n\n新会话 \n插件 \n自动化任务 \n工作区 \n\n默认工作区 \n认识 DeepSeek Harness \n生成 Q3 数据汇总 PPT \n准备明天评审会的议题清单 \n给销售报表补上同比/环比列 \n\n数据分析项目 \nDSH 插件开发 \n\nDeepSeek \n\n认识 DeepSeek Harness \n可以介绍一下自己吗？\n已思考 \n我是 DeepSeek Harness，DeepSeek 开源的 harness 架构，基于 Cordis 的「一切皆插件」架构构建。我既可以是桌面应用，也可以通过代码启动为网页。\n我可以帮你：\n辅助日常工作 —— 整理资料、分析表格、撰写文档、制作汇报。 日常工作 —— 整理资料、分析表格、制作汇报。 \n写代码、改仓库 —— 理解项目、修复问题、开发功能、运行测试。 编写代码 —— 修复问题、开发功能、运行测试。 \n查资料、核对信息 —— 搜索资料、交叉查证，给出有来源的结论。 资料查证 —— 搜索资料、核对信息、标注来源。 \n处理耗时任务 —— 运行脚本、批量处理文件，后台执行、随时"
+  },
+  "backends": [
+    {
+      "name": "DuckDuckGo HTML",
+      "url": "https://html.duckduckgo.com/html/?q=test",
+      "state": "UNKNOWN",
+      "note": "连不上（Command failed: curl -sL -o - --max-time） · 不可达时自动回退"
+    },
+    {
+      "name": "Bing",
+      "url": "https://www.bing.com/search?q=test",
+      "state": "PASS",
+      "note": "http 200 / 100KB · 默认后端（实测可达）"
+    },
+    {
+      "name": "GitHub API",
+      "url": "https://api.github.com/search/repositories?q=test&per_page=1",
+      "state": "PASS",
+      "note": "http 200 / 6KB · JSON API，代码仓库检索"
+    },
+    {
+      "name": "npm registry",
+      "url": "https://registry.npmmirror.com/-/v1/search?text=test&size=1",
+      "state": "PASS",
+      "note": "http 200 / 1KB · JSON API，包检索"
+    },
+    {
+      "name": "searx.be",
+      "url": "https://searx.be/search?q=test&format=json",
+      "state": "UNKNOWN",
+      "note": "连不上（Command failed: curl -sL -o - --max-time） · 社区实例，可达性不稳定"
+    }
+  ]
+}

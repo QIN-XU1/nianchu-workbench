@@ -1,0 +1,344 @@
+# ══════════════════════════════════════════════════════════════
+#  .gitignore
+#
+#  原则：只跟踪「人写的、值得追溯的」，不跟踪「可再生的、外部拷贝的」。
+#  判据：删掉它，能不能在 5 分钟内从源头恢复？
+#        能 → 不进 git
+#        不能 → 必须进 git（这些是核心资产）
+#
+#  实测：全量 1.7GB → 目标 < 5MB
+# ══════════════════════════════════════════════════════════════
+
+# ═══════ 一、依赖与构建产物（可重建）═══════
+node_modules/
+**/node_modules/
+.pnpm-store/
+workbench/外壳/dist/
+workbench/外壳/out/
+workbench/外壳/release/
+workbench/外壳/_asar/
+*.exe
+*.asar
+*.mp4
+
+# ═══════ 二、会话库与缓存（含隐私 + 巨大）═══════
+# 实测：仅 .dsh-tui/sessions 就 100+ MB
+workbench/引擎数据/.dsh-tui/
+workbench/引擎数据/.dsh/缓存/
+workbench/引擎数据/.dsh/sessions/
+workbench/引擎数据/.dsh/profiles/
+workbench/引擎数据/.dsh/MCP/
+workbench/引擎数据/.dsh/logs/
+workbench/引擎数据/.dsh/plugins/
+workbench/引擎数据/.dsh/plan/
+workbench/引擎数据/工具/
+workbench/引擎数据/apps/
+workbench/引擎数据/packages/
+
+# ⚠ 2026-11-12 加：**真正在用的**运行时会话库
+#
+#   上面那一串只排除了 引擎数据/ 下的（那是引擎源码副本，不是运行时数据）。
+#   而工作台实际用的 HARNESS_DIR 是 workbench/数据/，
+#   它的 .dsh/sessions/ 和 .dsh/storages/ 从来没被排除过。
+#
+#   实测后果：47 个运行时会话文件被 git 跟踪，
+#   清理会话时会显示成「47 个文件删除」，被 提交前体检 拦下。
+#   而这些是可再生的运行时数据，根本不该进版本控制。
+#
+#   判据（本文件开头写的）：删掉它能不能 5 分钟内从源头恢复？
+#     · sessions/  —— 能（新会话 5 秒建好）
+#     · storages/  —— 能（引擎重新生成）
+#     → 都不该进 git
+#
+#   ⚠ 但 **不能** 排除 数据/.dsh/场景记忆/（那是核心资产！）
+workbench/数据/.dsh/sessions/
+workbench/数据/.dsh/storages/
+workbench/数据/.dsh-temp/
+# ⚠ 2026-11-13 加：破坏性验证的临时场景目录（_zz_brk_<用例>_<pid>）
+#
+#   实测：破坏性验证跑「技能可见性体检」时会把场景目录临时改名成
+#         _zz_brk_验证闸_10664 这种形式，跑完按理该恢复。
+#   但进程被中断（或被 timeout 杀掉）时恢复不跑 → 目录留在原地变成污染源。
+#
+#   已踩过：一个 03:53 的残留一直留到下午，里面 24 个文件，
+#   其中 2 个身份卡是旧版本 —— 谁看见都会以为是当前状态。
+workbench/数据/.dsh/_zz_brk_*/
+workbench/数据/.dsh/缓存/
+workbench/外壳/data/electron-profile/
+workbench/外壳/data/crash-log.jsonl
+workbench/外壳/data/engine-boot-fail.json
+
+# ═══════ 三、研究素材（外部拷贝，可重新获取）═══════
+research/raw/
+research/repos/
+research/star-render/
+research/design-refs/
+research/search2/
+research/workspace-design/
+research/**/*.zip
+research/**/*.html
+research/**/*.css
+research/**/*.js
+research/**/*.json
+# 【例外】改进台账是核心审计留痕，必须进 git —— 否则 attest/record 写的东西不持久化
+!research/改进台账.json
+# 【例外】对标档案的「可复算证据」：这些 JSON 是中文 UI 文案抽取结果，
+#   档案里每个分数都引用它们。解包产物（research/*-renderer/）会被清掉，
+#   但证据必须跟着档案走，否则「可复算」只剩一句口号。
+#   体积合计 ~1.2MB（cbcn 279K / cherry 804K / wb 35K）。
+!research/frontend-benchmark/evidence/*.json
+
+# ═══════ 三·五、对标包体解包产物（可再生的巨型第三方拷贝）═══════
+#   判据（同文件开头）：删掉能不能 5 分钟内从源头恢复？
+#     能 —— 本机 app.asar 都在，重跑 `research/frontend-benchmark/tools/`
+#          里的脚本即可（WorkBuddy 9s / Cherry 9s / Qoder 数十秒）。
+#   实测体积：qoder-renderer + wb-renderer(687MB) + cherry-renderer(≈1GB)
+#   → 绝不进 git；但仍留在盘上供本机检索。
+research/qoder-renderer/
+research/wb-renderer/
+research/cherry-renderer/
+
+# ═══════ 四、截图与二进制产物 ═══════
+prototype/screens/
+verification/**/*.png
+verification/**/*.jpg
+verification/**/*.html
+verification/**/*.yml
+
+# ═══════ 五、临时与系统 ═══════
+_临时/
+*.tmp
+*.log
+*.log.*
+*-tmp
+.kun-tmp
+.~*
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ═══════ 六、密钥 / 隐私（绝不提交）═══════
+.env
+.env.*
+*.key
+*.pem
+token*.txt
+secret*.txt
+
+# ══════════════════════════════════════════════════════════════
+#  以下必须保留 —— 这些是「删了就没了」的核心资产
+# ══════════════════════════════════════════════════════════════
+!workbench/引擎数据/.dsh/场景记忆/**
+!workbench/引擎数据/.dsh/AGENTS.md
+!workbench/引擎数据/.dsh/skills/**
+!workbench/外壳/scenarios/**
+!workbench/sceneboard/**
+!workbench/工具/**
+!workbench/技能/**
+!workbench/外壳/ui/**
+!workbench/外壳/main.js
+!workbench/外壳/preload.js
+!workbench/外壳/tui-bridge.cjs
+!workbench/外壳/scenarios/**
+!challenges/**
+!方案/**
+!plugins/**
+
+# 提交信息临时文件
+_commit_msg.txt
+
+# 提交信息临时文件
+_msg.txt
+_commit_msg.txt
+
+# 备份（本地快照，不进 git）
+workbench/备份/
+
+# CI 日志
+workbench/外壳/data/ci-log.txt
+
+# 回滚快照（体积大，本地保留即可）
+workbench/数据/.dsh/回滚快照/
+
+# 参考项目（外部仓库，体积大，本地保留）
+参考项目/
+
+# DSH 沙箱专用临时目录（低完整性标签，本机生成）
+workbench/数据/.dsh-temp/
+
+
+# 破坏性验证的跑前快照（运行产物，不入版本控制）
+workbench/数据/.dsh/破坏性验证快照/
+
+# ══════════════════════════════════════════════════════════════════════
+#  打包产物（2026-11-13 加）
+# ══════════════════════════════════════════════════════════════════════
+#  electron-builder 的输出目录。实测：
+#    dist/   347 MB
+#    dist2/  466 MB
+#  这些是**可再生产物**（有源码 + 一条 build 命令就能重建），
+#  不该进版本控制 —— 会让仓库涨 800 MB 且每次构建都产生巨大 diff。
+#
+#  打包方法见 workbench/外壳/electron-builder.config.js
+dist/
+dist2/
+workbench/外壳/build/*.blockmap
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  环境依赖与第三方源码（2026-11-14 加）
+# ══════════════════════════════════════════════════════════════════════
+#  hermes 完整源码（MIT）作为设计参考，243 MB / 25514 文件
+#  不纳入版本控制：它是上游代码，需要时重新下载即可
+hermes/
+node26/
+pnpm12/
+npm-cache/
+npm-cache2/
+pnpm-store/
+pnpm-home/
+corepack/
+pydeps/
+tmp/
+electron44.zip
+pnpm-exe.tgz
+pnpm12.tgz
+*.zip
+
+#  prototype 下的临时脚本与截图
+prototype/*.mjs
+prototype/*.ps1
+prototype/shots/
+prototype/hermes/
+prototype/tmp-main.js
+
+
+dist3/
+
+
+# 界面调研：原始 HTML 可重抓，不进仓（截图进仓作为证据）
+research/ui-survey/raw/
+
+# A15 审批验证的临时金丝雀目录（每次测试重建，不进仓）
+.tmp-a15/
+a15-*
+
+# 界面验证的临时截图（每次验收重写，像素不确定）
+#
+#   为什么不能直接写进 research/screenshots/：星图是 canvas 动画，两次截图像素
+#   不同（实测 186822 → 187296 字节），于是**每跑一次验收就把仓库搞脏**，
+#   R8 的「未提交 0 项」永远是红的 —— 不是产品问题，是取证方式的问题。
+#
+#   这条正好是 .gitignore 开头判据的应用：星图一条命令能重生成 → 不进 git。
+#   要给仓里留证据时用 verify-starmap.mjs --save 显式写进 research/screenshots/。
+research/ui-survey/scratch/
+
+node_modules/
+apps/agent-ui/node_modules/
+apps/agent-ui/dist/
+*.tsbuildinfo
+
+# OpenBitFun fork：依赖与构建产物不入库
+apps/bitfun-web/node_modules/
+apps/bitfun-web/dist/
+apps/bitfun-web/src/web-ui/dist/
+apps/bitfun-web/**/node_modules/
+apps/bitfun-web/design-system/packages/*/dist/
+# 从 asar 解出的 dsh 源码（可随时用 tools/net/extract-dsh-src.mjs 重建）
+evidence/dsh-src/
+# 验收运行产物：每次跑都会带新时间戳，不入库（否则 git 永远「有未提交」）
+#   R8 的判据是「改动进 git」，不该被这些产物污染
+evidence/density.json
+evidence/size-guard.json
+
+# 运行时状态产物：每次采集都带新时间戳，不入库（否则 R8 永远「有未提交」）
+evidence/runtime-state.json
+apps/agent-ui/src/data/runtime-state.json
+
+# 调度器 job 存储：每次运行都变，不入库（job 定义在 README 与 seed 脚本里）
+evidence/schedule/jobs.json
+
+# 真 MCP server 的依赖（95 包，npm i 即可重建）
+evidence/mcp-realserver/node_modules/
+
+# 单次搜索的临时结果（net.json 入库，因为它是界面数据源）
+evidence/net/search.json
+
+# 记忆存储：每次 put 都变，不入库（memory.json 入库，它是界面数据源）
+evidence/memory/store.json
+
+# L4 自我改进闭环的运行产物：每次度量都带新时间戳与新的 recall 值，不入库
+#   （同样会污染 R8 —— 实测：度量跑完 tree 就脏，F07 用例失去区分力）
+# 但审计报告（.md）不可再生，必须入库 —— 否则「引用一份不存在的证据」就是假绿
+evidence/evolve/*
+!evidence/evolve/*.md
+
+# C6 成本台账与价格快照：每次同步/记账都变，不入库（机制在代码里）
+evidence/cost/
+
+# 出厂交付物（大 zip，不入库）
+出厂/
+
+# 插件探针每次激活都会重写产物（机制在代码里，产物不入库）
+evidence/plugin-probe/
+
+# 可移植清单每次导出都会重写（机制在代码里）
+evidence/portable/
+
+# 运行时产物：每次连 WS 宿主都会重写，不该污染工作树
+# （静态清点 evidence/host-api/inventory.json 仍然跟踪）
+evidence/host-api/runtime-demand.json
+
+# 调度器运行时状态：常驻 daemon 每个 tick 都会重写（runs/lastRunMinute/guard），
+# 属于运行时产物而非源码；进 git 会让工作树一直脏，导致 R8/R9 误红。
+evidence/schedule/jobs.json
+
+# ── 审计/调试临时目录（2026-11-18 加）──────────────────────────
+# 起因：独立审计员在 _audit_tmp/ 下写临时脚本，我的 git add -A 把它们一并提交了。
+# 这已经是「临时文件被误提交」的第五次（前四次是 imporo / fault-probe 残留）。
+# 原则：一次性脚本一律放这些目录，且这些目录永不入库。
+_audit_tmp/
+_debug_tmp/
+*.tmp.mjs
+
+# 多宿主投影生成产物（由 tools/portable/project.mjs 重新生成）
+.nianchu-hosts/
+
+# ── 根目录一次性探针 / 本地 scratch（2026-11-22 加）────────────
+# 起因：做「主题模式」时在仓库根逐个写 CDP 探针（probe-theme-nav1..8 这类），
+# 一次改一个猜测就新建一个文件，前后 120 多个，全落在根目录。
+# 它们的**结论**已经进了 evidence/theme-mode.json 与改进台账，
+# 文件本身是一次性的（跑一次就过期），留着只会让 git status 永远一片红。
+# 原则同 _audit_tmp/：一次性脚本放目录里，且目录永不入库。
+# ⚠ 全部用 `/` 开头锚到仓库根 —— 否则 `scan-*.mjs` 会把 tools/quality/ 下的
+#   正式扫描器一起吞掉（实测：7 个 scan-* 脚本、20 张 shot-*.png 被误伤）。
+/temp/
+/.tmp-shots/
+/.tmp-audit-check.mjs
+/.tmp-serve-static.cjs
+/probe-*.mjs
+/probe-*.cjs
+/probe-*.png
+/probe[0-9]*.mjs
+/probe[0-9]*.cjs
+/shot-*.png
+/scan-*.mjs
+/diag-*.mjs
+
+# 宿主运行时产物：探针写进去的测试配置与用量账本，每次跑都变
+/.host-config.json
+/.host-usage.json
+
+# ── 开源发布额外排除（2026-11-23）───────────────────────────────
+# 第三方视频音频（版权归属原作者，不入开源仓库；转写文本保留）
+研究素材/视频转写/**/audio.wav
+研究素材/视频转写/**/*.mp4
+# 运行时凭据 / 会话数据（绝不外发）
+**/.credentials.yaml
+**/*.credentials.*
+**/.env
+local-*
+.host-config.json
+.host-usage.json

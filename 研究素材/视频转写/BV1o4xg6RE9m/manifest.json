@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-11-11T00:25:01",
+  "input": "https://www.bilibili.com/video/BV1o4xg6RE9m",
+  "source_kind": "url",
+  "title": "DSH:即将变成神经中枢控制电脑！",
+  "duration": 2621.1,
+  "window": {
+    "start": null,
+    "end": null
+  },
+  "video_path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\DSH：即将变成神经中枢控制电脑！.mp4",
+  "audio_path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\DSH：即将变成神经中枢控制电脑！.mp4",
+  "timeline": {
+    "origin": 0.0,
+    "video_start": 0.0,
+    "audio_start": 0.0
+  },
+  "transcript": {
+    "source": "faster-whisper",
+    "model": "small",
+    "language": "zh",
+    "device": "cpu",
+    "compute_type": "int8",
+    "segments": 1152,
+    "window": {
+      "start": null,
+      "end": null
+    },
+    "timeline": {
+      "unit": "seconds",
+      "origin": "source",
+      "offset": 0.0,
+      "source_offset": 0.0,
+      "media_seek_start": null,
+      "media_seek_end": null
+    },
+    "audio": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\audio.wav",
+    "files": {
+      "srt": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\transcript.srt",
+      "txt": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\transcript.txt",
+      "json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\transcript.json"
+    }
+  },
+  "frames": {
+    "count": 100,
+    "base_count": 100,
+    "dir": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\frames",
+    "json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\frames\\frames.json",
+    "passes": [
+      {
+        "pass_id": "base",
+        "count": 100,
+        "window": {
+          "start": 0.0,
+          "end": 2621.1
+        },
+        "mode": "auto"
+      }
+    ]
+  },
+  "review": {
+    "status": "pending_assessment",
+    "json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1o4xg6RE9m\\review.json",
+    "units": 263
+  },
+  "params": {
+    "engine": "faster-whisper",
+    "model": "small",
+    "language": "zh",
+    "width": 512,
+    "mode": "auto",
+    "budget": null,
+    "max_frames": null,
+    "fps": null,
+    "no_frames": false,
+    "no_transcribe": false,
+    "force_whisper": false,
+    "step_timeout": 7200,
+    "refine_plan": null,
+    "refine_pass_id": null,
+    "max_extra_frames": 60,
+    "no_review": false
+  }
+}

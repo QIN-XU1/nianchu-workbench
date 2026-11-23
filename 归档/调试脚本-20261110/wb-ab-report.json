@@ -1,0 +1,203 @@
+{
+  "at": "2026-11-06T14:58:48.389Z",
+  "baseline": {
+    "ProcessCount": 13,
+    "TotalWS_MB": 2235,
+    "TotalPriv_MB": 1498
+  },
+  "after": {
+    "ProcessCount": 13,
+    "TotalWS_MB": 2194,
+    "TotalPriv_MB": 1446
+  },
+  "processDetail": {
+    "before": [
+      {
+        "Id": 11052,
+        "WS_MB": 477,
+        "Priv_MB": 438,
+        "Threads": 34,
+        "HasWindow": false
+      },
+      {
+        "Id": 4684,
+        "WS_MB": 250,
+        "Priv_MB": 191,
+        "Threads": 22,
+        "HasWindow": false
+      },
+      {
+        "Id": 17452,
+        "WS_MB": 273,
+        "Priv_MB": 190,
+        "Threads": 21,
+        "HasWindow": false
+      },
+      {
+        "Id": 14720,
+        "WS_MB": 247,
+        "Priv_MB": 186,
+        "Threads": 21,
+        "HasWindow": false
+      },
+      {
+        "Id": 16612,
+        "WS_MB": 198,
+        "Priv_MB": 142,
+        "Threads": 23,
+        "HasWindow": false
+      },
+      {
+        "Id": 5468,
+        "WS_MB": 150,
+        "Priv_MB": 103,
+        "Threads": 50,
+        "HasWindow": true
+      },
+      {
+        "Id": 7984,
+        "WS_MB": 147,
+        "Priv_MB": 79,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 13436,
+        "WS_MB": 125,
+        "Priv_MB": 48,
+        "Threads": 12,
+        "HasWindow": false
+      },
+      {
+        "Id": 16760,
+        "WS_MB": 109,
+        "Priv_MB": 39,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 14332,
+        "WS_MB": 102,
+        "Priv_MB": 30,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 17580,
+        "WS_MB": 63,
+        "Priv_MB": 23,
+        "Threads": 19,
+        "HasWindow": false
+      },
+      {
+        "Id": 2144,
+        "WS_MB": 56,
+        "Priv_MB": 10,
+        "Threads": 8,
+        "HasWindow": false
+      },
+      {
+        "Id": 13668,
+        "WS_MB": 31,
+        "Priv_MB": 9,
+        "Threads": 6,
+        "HasWindow": false
+      }
+    ],
+    "after": [
+      {
+        "Id": 11052,
+        "WS_MB": 435,
+        "Priv_MB": 389,
+        "Threads": 30,
+        "HasWindow": false
+      },
+      {
+        "Id": 4684,
+        "WS_MB": 251,
+        "Priv_MB": 192,
+        "Threads": 21,
+        "HasWindow": false
+      },
+      {
+        "Id": 17452,
+        "WS_MB": 271,
+        "Priv_MB": 188,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 14720,
+        "WS_MB": 248,
+        "Priv_MB": 187,
+        "Threads": 21,
+        "HasWindow": false
+      },
+      {
+        "Id": 16612,
+        "WS_MB": 200,
+        "Priv_MB": 143,
+        "Threads": 23,
+        "HasWindow": false
+      },
+      {
+        "Id": 5468,
+        "WS_MB": 149,
+        "Priv_MB": 102,
+        "Threads": 51,
+        "HasWindow": true
+      },
+      {
+        "Id": 7984,
+        "WS_MB": 145,
+        "Priv_MB": 78,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 13436,
+        "WS_MB": 125,
+        "Priv_MB": 48,
+        "Threads": 12,
+        "HasWindow": false
+      },
+      {
+        "Id": 16760,
+        "WS_MB": 109,
+        "Priv_MB": 39,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 14332,
+        "WS_MB": 102,
+        "Priv_MB": 30,
+        "Threads": 20,
+        "HasWindow": false
+      },
+      {
+        "Id": 17580,
+        "WS_MB": 63,
+        "Priv_MB": 23,
+        "Threads": 19,
+        "HasWindow": false
+      },
+      {
+        "Id": 2144,
+        "WS_MB": 56,
+        "Priv_MB": 10,
+        "Threads": 8,
+        "HasWindow": false
+      },
+      {
+        "Id": 13668,
+        "WS_MB": 31,
+        "Priv_MB": 9,
+        "Threads": 6,
+        "HasWindow": false
+      }
+    ]
+  },
+  "deltaWS": 41,
+  "deltaPriv": 52
+}

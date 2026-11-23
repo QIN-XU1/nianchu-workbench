@@ -1,0 +1,96 @@
+{
+  "at": "2026-11-22T17:45:08.364Z",
+  "app": "http://127.0.0.1:47124/",
+  "total": 6,
+  "offsets": [
+    16,
+    4759,
+    4960,
+    5139,
+    5296,
+    5840
+  ],
+  "pass": 11,
+  "fail": 0,
+  "console": {
+    "navErrors": [],
+    "envErrors": [
+      "[WorkspaceManager] Failed to subscribe workspace catalog updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:7403)\n    at Ye.ensureCatalogChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DDVb6C0Q.js:2:47295)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DDVb6C0Q.js:2:50232)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DDVb6C0Q.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-DJQW3jSy.js:9:41156 Object",
+      "[WorkspaceManager] Failed to subscribe workspace identity updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:7403)\n    at Ye.ensureIdentityChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DDVb6C0Q.js:2:44904)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DDVb6C0Q.js:2:50196)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-DDVb6C0Q.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-DJQW3jSy.js:9:41156 Object",
+      "[IdeControlEventBus] Failed to initialize TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-DLT9nuIv.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-DLT9nuIv.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D_BrBlXH.js:1:2066) TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-DLT9nuIv.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-DLT9nuIv.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D_BrBlXH.js:1:2066)",
+      "[DeferredStartupSystems] Deferred startup system failed {\"system\":\"ide_control\"}, TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-DJQW3jSy.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-DLT9nuIv.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-DLT9nuIv.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-DKCmNHlM.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-D_BrBlXH.js:1:2066) Object",
+      "[WorkspaceManager] Failed to subscribe workspace catalog updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:7403)\n    at Ye.ensureCatalogChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-C7nWx1W3.js:2:47295)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-C7nWx1W3.js:2:50232)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-C7nWx1W3.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:9:41156 Object",
+      "[WorkspaceManager] Failed to subscribe workspace identity updates TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:7403)\n    at Ye.ensureIdentityChangeListener (http://127.0.0.1:47124/assets/ReviewPlatformAPI-C7nWx1W3.js:2:44904)\n    at Ye.runInitialization (http://127.0.0.1:47124/assets/ReviewPlatformAPI-C7nWx1W3.js:2:50196)\n    at Ye.initialize (http://127.0.0.1:47124/assets/ReviewPlatformAPI-C7nWx1W3.js:2:49885)\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:297:58049\n    at http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:297:58821\n    at tc (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:9:24477)\n    at ca (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:9:42924)\n    at http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:9:41156 Object",
+      "[IdeControlEventBus] Failed to initialize TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Bxs3ZBJp.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Bxs3ZBJp.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-CP0SlTBy.js:1:2066) TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Bxs3ZBJp.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Bxs3ZBJp.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-CP0SlTBy.js:1:2066)",
+      "[DeferredStartupSystems] Deferred startup system failed {\"system\":\"ide_control\"}, TypeError: Cannot read properties of undefined (reading 'transformCallback')\n    at Wm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:4396)\n    at qm (http://127.0.0.1:47124/assets/index-BXmPZ9gj.js:1202:7403)\n    at i.initialize (http://127.0.0.1:47124/assets/index-Bxs3ZBJp.js:1:916)\n    at I (http://127.0.0.1:47124/assets/index-Bxs3ZBJp.js:1:2030)\n    at al (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:1950)\n    at async d (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:2984)\n    at async e.schedule.idle [as task] (http://127.0.0.1:47124/assets/MainApplicationRoot-CbkkT4X2.js:295:3124)\n    at async T.run (http://127.0.0.1:47124/assets/backgroundTaskScheduler-CP0SlTBy.js:1:2066) Object"
+    ],
+    "otherErrors": []
+  },
+  "shots": {
+    "top": "evidence/screenshots/turn-nav-top.png",
+    "jump": "evidence/screenshots/turn-nav-jump.png"
+  },
+  "results": [
+    {
+      "name": "★提问跳转胶囊出现（至少 2 条提问才有意义）",
+      "ok": true,
+      "info": {
+        "total": 6,
+        "offsets": 6
+      }
+    },
+    {
+      "name": "★滚到第 1 条提问上方 → 计数显示 1 / 6",
+      "ok": true,
+      "info": "1/6"
+    },
+    {
+      "name": "★滚到第 4 条提问上方 → 计数显示 4 / 6",
+      "ok": true,
+      "info": "4/6"
+    },
+    {
+      "name": "★滚到第 6 条提问上方 → 计数显示 6 / 6",
+      "ok": true,
+      "info": "6/6"
+    },
+    {
+      "name": "★滚到顶 → 1 / 6",
+      "ok": true,
+      "info": "1/6"
+    },
+    {
+      "name": "★滚到底 → 6 / 6",
+      "ok": true,
+      "info": "6/6"
+    },
+    {
+      "name": "★点 ↓ → 计数 +1",
+      "ok": true,
+      "info": {
+        "after": "2/6",
+        "settled": "2/6"
+      }
+    },
+    {
+      "name": "★平滑滚动 900ms 后计数不漂（抑制窗口生效）",
+      "ok": true,
+      "info": "2/6"
+    },
+    {
+      "name": "★点 ↑ → 计数回到 1（按当前位置算，不是从末尾倒推）",
+      "ok": true,
+      "info": "1/6"
+    },
+    {
+      "name": "提问跳转序列没有相关异常",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "除「静态服务缺 Tauri IPC」环境噪声外没有其它异常",
+      "ok": true,
+      "info": []
+    }
+  ]
+}

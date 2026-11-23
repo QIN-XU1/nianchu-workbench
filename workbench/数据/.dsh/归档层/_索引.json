@@ -1,0 +1,125 @@
+{
+  "items": [
+    {
+      "id": "project-2026-11-10T22-24-16-11d4d426",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.012Z",
+      "bytes": 650,
+      "sha256": "11d4d42604de49987551ff80d74f079d526345ff219ef9e34ba0e311e9919b38",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/中枢/项目信息.md",
+      "scene": "中枢",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-11d4d426.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-d25874df",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.107Z",
+      "bytes": 781,
+      "sha256": "d25874dfa15becf8714ae302539e25b4795bc94b4ebdd98691975937f034c390",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/实施计划/项目信息.md",
+      "scene": "实施计划",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-d25874df.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-e50c12d1",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.185Z",
+      "bytes": 565,
+      "sha256": "e50c12d154b08f2e28e6e8f8f794fa8e5aaa6ba62ec8e7b5b8521def374e25dd",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/故障分析/项目信息.md",
+      "scene": "故障分析",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-e50c12d1.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-add341ed",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.230Z",
+      "bytes": 860,
+      "sha256": "add341eddcfc6ac27913b86c5ea47e88d4ba3eee4f67b4e8367535de3c1d074a",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/本地电脑/项目信息.md",
+      "scene": "本地电脑",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-add341ed.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-885e7e5b",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.274Z",
+      "bytes": 873,
+      "sha256": "885e7e5bb1738742c1ac9091d9865a3d9ee9e25b5a9047d1a26ef1d9709933fb",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/架构梳理/项目信息.md",
+      "scene": "架构梳理",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-885e7e5b.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-6354ee83",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.320Z",
+      "bytes": 765,
+      "sha256": "6354ee831d8cd0d65b3bcf2dcee40b975849a43d49d0de674462ac4fdf377e05",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/竞品拆解/项目信息.md",
+      "scene": "竞品拆解",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-6354ee83.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-f4142ecb",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.371Z",
+      "bytes": 617,
+      "sha256": "f4142ecb968abd47a62d5bfadec83c4b3d0a8d21a6e14b14c31eb27b854d20a7",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/自我复盘/项目信息.md",
+      "scene": "自我复盘",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-f4142ecb.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-a0bbd61c",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.414Z",
+      "bytes": 797,
+      "sha256": "a0bbd61cb1c83485d798c4ed7196a0f8ae5389845f3dd7d364f4761f65508503",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/调研/项目信息.md",
+      "scene": "调研",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-a0bbd61c.md"
+    },
+    {
+      "id": "project-2026-11-10T22-24-16-1d47f6b5",
+      "type": "project",
+      "typeName": "项目信息",
+      "at": "2026-11-10T22:24:16.461Z",
+      "bytes": 808,
+      "sha256": "1d47f6b5c8006225f73440fe5aa7034c74102c6d38fef6570c2ecff78dc99044",
+      "sourcePath": "workbench/数据/.dsh/项目记忆/逆向分析/项目信息.md",
+      "scene": "逆向分析",
+      "reason": "从场景记忆剥离的项目信息（2026-11-11 记忆精简）",
+      "file": "数据/.dsh/归档层/project/2026-11/project-2026-11-10T22-24-16-1d47f6b5.md"
+    },
+    {
+      "id": "board-2026-11-10T22-26-36-4b0f2149",
+      "type": "board",
+      "typeName": "看板",
+      "at": "2026-11-10T22:26:36.046Z",
+      "bytes": 174,
+      "sha256": "4b0f2149daa317c0e3ef5f7fc2280ea3d8aa643abce598b9abfa3a676b22d953",
+      "sourcePath": null,
+      "scene": "竞品拆解",
+      "reason": "看板项划掉（通知）",
+      "file": "数据/.dsh/归档层/board/2026-11/board-2026-11-10T22-26-36-4b0f2149.md"
+    }
+  ],
+  "version": 1
+}

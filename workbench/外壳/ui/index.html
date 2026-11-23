@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' http://127.0.0.1:* ws://127.0.0.1:*;" />
+  <title>DSH 工作台</title>
+
+  <!-- ═══ 设计令牌（真源）═══ -->
+  <link rel="stylesheet" href="./styles/tokens.css" />
+
+  <!-- 国色体系（五正色+间色，对比度已实测 49/49 达标） -->
+  <link rel="stylesheet" href="./styles/guoxue-tokens.css" />
+  <!-- ═══ 命名桥（把短名 alias 到 tokens）═══ -->
+  <link rel="stylesheet" href="./styles/compat.css" />
+  <!-- ═══ 基座 ═══ -->
+  <link rel="stylesheet" href="./styles/base.css" />
+  <!-- ═══ 布局 ═══ -->
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <!-- ═══ 组件 ═══ -->
+  <link rel="stylesheet" href="./styles/components.css" />
+  <!-- ═══ 动效 ═══ -->
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <!-- ═══ 补充层（若有）═══ -->
+  <link rel="stylesheet" href="./styles/extra.css" />
+
+  <!-- 整体界面精修（最后加载，覆盖前面所有样式） -->
+  <link rel="stylesheet" href="./styles/refined.css" />
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ★ 照抄 Hermes Agent 的设计体系（2026-11-13 加）
+
+       用户要求：「看看 ChatGPT，Claude Code，Cursor，Hermes Agent 这些
+       桌面端顶尖 agent 软件的设计，我希望我们就算超不过，至少先持平，
+       另外不要一味自己摸索，像 Hermes Agent 这类开源的优秀 agent
+       直接照抄就行了」
+
+       来源：NousResearch/hermes-agent · apps/desktop/src/styles.css（MIT）
+       位置：**必须放在所有色板之后**，因为要覆盖前三套
+             （tokens.css / guoxue-tokens.css / refined.css 各写了
+               一套互相矛盾的色值，实测 panel/base 对比度只有 1.05:1）
+
+       它定义的是同名变量（--color-panel / --color-base / --color-txt-1 ...），
+       所以后面所有组件样式不用改，自动跟着变。
+       ═══════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="./styles/tokens-hermes.css" />
+
+  <!-- ═══ xterm（终端）═══ -->
+  <link rel="stylesheet" href="../node_modules/xterm/css/xterm.css" />
+
+  <style>
+    /* 启动期：在 JS 加载前避免白闪 */
+    html, body { background: #0A0C0E; }
+    #app { height: 100vh; }
+    #boot-splash {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 12px; background: #0A0C0E;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; color: #A2ABBA;
+      z-index: 9999; transition: opacity .18s ease;
+    }
+    #boot-splash .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #4A7FD4; box-shadow: 0 0 12px #4A7FD4;
+      animation: bootPulse 1.2s ease infinite;
+    }
+    @keyframes bootPulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    #boot-splash .err { color: #D05A4A; max-width: 70vw; text-align: center; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="boot-splash">
+    <div class="dot"></div>
+    <div id="boot-msg">正在启动工作台…</div>
+  </div>
+
+  <script type="module" src="./index.js"></script>
+
+  <script>
+    // 启动失败兜底：5 秒还没就绪就把错误显示出来，不要留白屏
+    setTimeout(function () {
+      var splash = document.getElementById('boot-splash');
+      if (!splash) return;
+      if (window.__WB && window.__WB.state && window.__WB.state.get('boot.phase') === 'ready') {
+        splash.style.opacity = '0';
+        setTimeout(function () { splash.remove(); }, 200);
+        return;
+      }
+      var msg = document.getElementById('boot-msg');
+      if (msg) {
+        msg.className = 'err';
+        msg.textContent = '启动超时。请检查控制台错误，或设置 DSH_FRONTEND=v1 回退旧界面。';
+      }
+    }, 5000);
+
+    // 模块加载失败也要显示（捕获 error 事件）
+    window.addEventListener('error', function (e) {
+      var msg = document.getElementById('boot-msg');
+      if (msg && !window.__WB) {
+        msg.className = 'err';
+        msg.textContent = '模块加载失败: ' + (e.message || '未知');
+      }
+    });
+    window.addEventListener('unhandledrejection', function (e) {
+      var msg = document.getElementById('boot-msg');
+      if (msg && !window.__WB) {
+        msg.className = 'err';
+        msg.textContent = '启动异常: ' + ((e.reason && e.reason.message) || String(e.reason));
+      }
+    });
+
+    // boot 成功后淡出 splash
+    var t = setInterval(function () {
+      if (window.__WB) {
+        clearInterval(t);
+        var splash = document.getElementById('boot-splash');
+        if (splash) {
+          splash.style.opacity = '0';
+          setTimeout(function () { splash.remove(); }, 200);
+        }
+      }
+    }, 120);
+  </script>
+</body>
+</html>

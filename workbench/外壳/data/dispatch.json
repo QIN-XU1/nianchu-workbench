@@ -1,0 +1,109 @@
+{
+  "runs": [
+    {
+      "id": "demo-run",
+      "objective": "把主控台做成：主 agent 给各场景分配任务，多 AI 各专攻一摊、持续变强",
+      "createdAt": "2026-11-16T09:51:31.449905+00:00",
+      "status": "active"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "demo-t1",
+      "runId": "demo-run",
+      "title": "竞品拆解：orca 编排模型",
+      "spec": "读 D:/refs/orca 的 orchestration.md",
+      "deps": [],
+      "scene": "competitor-analyze",
+      "state": "done",
+      "createdAt": "2026-11-16T09:51:31.449905+00:00",
+      "updatedAt": "2026-11-16T09:51:31.449905+00:00"
+    },
+    {
+      "id": "demo-t2",
+      "runId": "demo-run",
+      "title": "架构设计：主控台布局",
+      "spec": "左神经元 + 右分派看板",
+      "deps": [
+        "demo-t1"
+      ],
+      "scene": "arch-review",
+      "state": "running",
+      "createdAt": "2026-11-16T09:51:31.449905+00:00",
+      "updatedAt": "2026-11-16T09:51:31.449905+00:00"
+    },
+    {
+      "id": "demo-t3",
+      "runId": "demo-run",
+      "title": "前端实现：分派面板",
+      "spec": "dispatch-board.js",
+      "deps": [
+        "demo-t2"
+      ],
+      "scene": "frontend-craft",
+      "state": "pending",
+      "createdAt": "2026-11-16T09:51:31.449905+00:00",
+      "updatedAt": "2026-11-16T09:51:31.449905+00:00"
+    },
+    {
+      "id": "demo-t4",
+      "runId": "demo-run",
+      "title": "后端实现：分派引擎",
+      "spec": "tools/dispatch/dispatch.mjs",
+      "deps": [
+        "demo-t2"
+      ],
+      "scene": "backend-craft",
+      "state": "ready",
+      "createdAt": "2026-11-16T09:51:31.449905+00:00",
+      "updatedAt": "2026-11-16T09:51:31.449905+00:00"
+    },
+    {
+      "id": "demo-t5",
+      "runId": "demo-run",
+      "title": "自我复盘：这套分工有效吗",
+      "spec": "看四态与回执",
+      "deps": [
+        "demo-t3",
+        "demo-t4"
+      ],
+      "scene": "self-review",
+      "state": "pending",
+      "createdAt": "2026-11-16T09:51:31.449905+00:00",
+      "updatedAt": "2026-11-16T09:51:31.449905+00:00"
+    }
+  ],
+  "dispatches": [
+    {
+      "id": "demo-d1",
+      "taskId": "demo-t1",
+      "scene": "competitor-analyze",
+      "agent": "AI-调研",
+      "state": "done",
+      "startedAt": "2026-11-16T09:51:31.449905+00:00",
+      "endedAt": "2026-11-16T09:51:31.449905+00:00",
+      "result": "产出 orca 编排模型对照表"
+    },
+    {
+      "id": "demo-d2",
+      "taskId": "demo-t2",
+      "scene": "arch-review",
+      "agent": "AI-架构",
+      "state": "running",
+      "startedAt": "2026-11-16T09:51:31.449905+00:00",
+      "endedAt": null,
+      "result": null
+    }
+  ],
+  "inbox": [
+    {
+      "id": "demo-m1",
+      "kind": "worker_done",
+      "dispatchId": "demo-d1",
+      "taskId": "demo-t1",
+      "body": "竞品拆解完成：orca 用 Run/Task/Dispatch/Inbox 四件套",
+      "at": "2026-11-16T09:51:31.449905+00:00",
+      "read": false
+    }
+  ]
+}

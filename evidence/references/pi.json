@@ -1,0 +1,104 @@
+{
+  "id": "pi",
+  "name": "pi",
+  "url": "https://github.com/earendil-works/pi",
+  "target": "D:\\refs\\pi.git",
+  "at": "2026-11-19T01:56:13.143Z",
+  "materialize": {
+    "materialized": false,
+    "error": "fatal: Unable to create 'D:/refs/pi.git/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+  },
+  "note": "克隆目录只有 .git 元数据、工作区为空（materialize={\"materialized\":false,\"error\":\"fatal: Unable to create 'D:/refs/pi.git/.git/index.lock': File exists.\\n\\nAnother git process seems to be running in this repository, or the lock file may be stale\\n\"}），改用本地解压目录；用的是本地解压目录（非 git），拿不到 HEAD —— 结论只能算快照，不能复算到提交",
+  "fallbackDir": "D:\\refs\\pi-main",
+  "dir": "D:\\refs\\pi-main",
+  "git": {
+    "isGit": false
+  },
+  "measure": {
+    "files": 4538,
+    "mb": 49.6,
+    "topExt": [
+      {
+        "ext": ".ts",
+        "files": 3399,
+        "kb": 27735
+      },
+      {
+        "ext": ".json",
+        "files": 386,
+        "kb": 1518
+      },
+      {
+        "ext": ".md",
+        "files": 296,
+        "kb": 7919
+      },
+      {
+        "ext": ".tsx",
+        "files": 125,
+        "kb": 938
+      },
+      {
+        "ext": ".mjs",
+        "files": 66,
+        "kb": 392
+      },
+      {
+        "ext": ".html",
+        "files": 36,
+        "kb": 3042
+      },
+      {
+        "ext": "(none)",
+        "files": 28,
+        "kb": 17
+      },
+      {
+        "ext": ".css",
+        "files": 27,
+        "kb": 185
+      },
+      {
+        "ext": ".swift",
+        "files": 22,
+        "kb": 116
+      },
+      {
+        "ext": ".png",
+        "files": 20,
+        "kb": 3176
+      },
+      {
+        "ext": ".yml",
+        "files": 19,
+        "kb": 111
+      },
+      {
+        "ext": ".rs",
+        "files": 17,
+        "kb": 203
+      }
+    ],
+    "largestFile": {
+      "path": "pi-main/packages/coding-agent/test/fixtures/before-compaction.jsonl",
+      "kb": 2315
+    }
+  },
+  "structure": {
+    "monorepo": [],
+    "plugin": [],
+    "agentLoop": [],
+    "subagent": [],
+    "memory": [],
+    "mcp": [],
+    "skills": [],
+    "telemetry": [],
+    "guard": [],
+    "ui": [],
+    "docs": [],
+    "tests": [],
+    "ci": []
+  },
+  "state": "WARN",
+  "reason": "目录存在但不是 git 仓库：可拆解，但拿不到 HEAD，结论不可复算到具体提交"
+}

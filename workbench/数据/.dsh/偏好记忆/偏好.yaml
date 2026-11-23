@@ -1,0 +1,118 @@
+# 偏好记忆 —— 六类偏好
+# 由 工具/偏好记忆.mjs 维护。改这个文件后跑 --validate 检查。
+
+preferences:
+  - id: p-interaction-001
+    category: interaction
+    level: hard
+    text: "用中文回答，不要中英混杂"
+    evidence: "用户全程中文，从未要求英文"
+    since: 2026-11-07
+  - id: p-interaction-002
+    category: interaction
+    level: hard
+    text: "不要用\"好的\"\"没问题\"这类空话开头，直接给结果"
+    evidence: "用户多次要求\"不要硬凑\"\"直接给证据\""
+    since: 2026-11-08
+  - id: p-interaction-003
+    category: interaction
+    level: hard
+    text: "结论先给，证据在后；不确定就说不确定，不许编"
+    evidence: "用户反复强调\"证据优先\"\"不要虚假测试数据\""
+    since: 2026-11-07
+  - id: p-interaction-004
+    category: interaction
+    level: soft
+    text: "路径要用完整相对路径，不用省略号"
+    evidence: "用户多次追问文件具体位置"
+    since: 2026-11-08
+  - id: p-tool-001
+    category: tool
+    level: hard
+    text: "清理磁盘/删文件只找「本地电脑」场景，其他场景不许自己删"
+    evidence: "pc-cleanup 定位卡的唯一对口原则"
+    since: 2026-11-07
+  - id: p-tool-002
+    category: tool
+    level: soft
+    text: "分析错误日志找「故障分析」，改代码不归它管"
+    evidence: "incident-analysis 定位卡"
+    since: 2026-11-07
+  - id: p-file-001
+    category: file
+    level: hard
+    text: "临时脚本放 prototype/，正式工具放 workbench/工具/，不要混"
+    evidence: "我们的目录约定"
+    since: 2026-11-08
+  - id: p-file-002
+    category: file
+    level: hard
+    text: "中文源码文件只用 edit/write 工具改，不用 PowerShell 读写"
+    evidence: "AGENTS.md 第 6 条（GBK/UTF8 往返会损坏）"
+    since: 2026-11-07
+  - id: p-file-003
+    category: file
+    level: soft
+    text: "核心资产：数据/.dsh/ 全部内容，不许删"
+    evidence: "这是用户全部记忆和配置"
+    since: 2026-11-07
+  - id: p-collab-001
+    category: collab
+    level: hard
+    text: "中枢只调度不代写；场景自己的记忆自己写"
+    evidence: "视频 BV1qrxD6qEcY「别人只能提醒，不能代写」"
+    since: 2026-11-10
+  - id: p-collab-002
+    category: collab
+    level: hard
+    text: "跨场景协作必须走派单四件套，不许口头交代"
+    evidence: "我们的派单机制设计"
+    since: 2026-11-08
+  - id: p-safety-001
+    category: safety
+    level: hard
+    text: "不删系统目录，只报告不动作"
+    evidence: "pc-cleanup 定位卡"
+    since: 2026-11-07
+  - id: p-safety-002
+    category: safety
+    level: hard
+    text: "不碰私人数据和备份"
+    evidence: "pc-cleanup 定位卡"
+    since: 2026-11-07
+  - id: p-safety-003
+    category: safety
+    level: hard
+    text: "删文件必须走回收站，不用 Remove-Item -Force 直接抹"
+    evidence: "pc-cleanup 定位卡"
+    since: 2026-11-07
+  - id: p-safety-004
+    category: safety
+    level: hard
+    text: "不自己重启引擎，不碰启动器"
+    evidence: "视频 BV1H1nU6bEJ5「不碰启动器、不自己重启引擎」"
+    since: 2026-11-10
+  - id: p-memory-001
+    category: memory
+    level: hard
+    text: "只记实质结论，不记过程流水账"
+    evidence: "用户批评\"为闭环而灌水\"，AI 自己总结的教训"
+    since: 2026-11-10
+  - id: p-memory-002
+    category: memory
+    level: hard
+    text: "坑与决策只追加，不改历史"
+    evidence: "记忆文件结构约定"
+    since: 2026-11-07
+  - id: p-memory-003
+    category: memory
+    level: hard
+    text: "通知类信息不进交接段，进共享看板"
+    evidence: "视频 BV1H1nU6bEJ5 记忆偏好第六条"
+    since: 2026-11-10
+  - id: p-memory-004
+    category: memory
+    level: soft
+    text: "写入记忆前先判断 ADD/UPDATE/DELETE/NOOP，不无脑追加"
+    evidence: "记忆写入协议的设计"
+    since: 2026-11-10

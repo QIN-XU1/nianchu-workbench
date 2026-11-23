@@ -1,0 +1,136 @@
+{
+  "at": "2026-11-06T15:04:29.906Z",
+  "t0": {
+    "total": 1492,
+    "gpu": 1,
+    "gpuMB": 396,
+    "render": 11,
+    "renderMB": 1001
+  },
+  "final": {
+    "total": 1502,
+    "gpu": 1,
+    "gpuMB": 420,
+    "render": 11,
+    "renderMB": 987
+  },
+  "processes": [
+    {
+      "id": 11904,
+      "privMB": 420,
+      "wsMB": 459,
+      "threads": 36,
+      "cpuSec": 69.7,
+      "hasWindow": false,
+      "startTicks": 639296029066328800
+    },
+    {
+      "id": 15552,
+      "privMB": 234,
+      "wsMB": 318,
+      "threads": 22,
+      "cpuSec": 3.7,
+      "hasWindow": false,
+      "startTicks": 639296029076058900
+    },
+    {
+      "id": 3368,
+      "privMB": 193,
+      "wsMB": 295,
+      "threads": 20,
+      "cpuSec": 3.1,
+      "hasWindow": false,
+      "startTicks": 639296029090042000
+    },
+    {
+      "id": 7296,
+      "privMB": 186,
+      "wsMB": 271,
+      "threads": 22,
+      "cpuSec": 2.7,
+      "hasWindow": false,
+      "startTicks": 639296029084929200
+    },
+    {
+      "id": 13084,
+      "privMB": 145,
+      "wsMB": 230,
+      "threads": 23,
+      "cpuSec": 2.9,
+      "hasWindow": false,
+      "startTicks": 639296029097113300
+    },
+    {
+      "id": 10172,
+      "privMB": 95,
+      "wsMB": 134,
+      "threads": 52,
+      "cpuSec": 4,
+      "hasWindow": true,
+      "startTicks": 639296029065143600
+    },
+    {
+      "id": 12616,
+      "privMB": 76,
+      "wsMB": 140,
+      "threads": 20,
+      "cpuSec": 31.5,
+      "hasWindow": false,
+      "startTicks": 639296029066691500
+    },
+    {
+      "id": 3924,
+      "privMB": 48,
+      "wsMB": 134,
+      "threads": 12,
+      "cpuSec": 0.3,
+      "hasWindow": false,
+      "startTicks": 639296029100705500
+    },
+    {
+      "id": 16976,
+      "privMB": 33,
+      "wsMB": 126,
+      "threads": 20,
+      "cpuSec": 0.2,
+      "hasWindow": false,
+      "startTicks": 639296029154100400
+    },
+    {
+      "id": 15316,
+      "privMB": 29,
+      "wsMB": 90,
+      "threads": 20,
+      "cpuSec": 0.2,
+      "hasWindow": false,
+      "startTicks": 639296029068960100
+    },
+    {
+      "id": 13616,
+      "privMB": 24,
+      "wsMB": 62,
+      "threads": 19,
+      "cpuSec": 2,
+      "hasWindow": false,
+      "startTicks": 639296029066365200
+    },
+    {
+      "id": 17240,
+      "privMB": 10,
+      "wsMB": 96,
+      "threads": 8,
+      "cpuSec": 0.1,
+      "hasWindow": false,
+      "startTicks": 639296029100705500
+    },
+    {
+      "id": 17444,
+      "privMB": 9,
+      "wsMB": 31,
+      "threads": 7,
+      "cpuSec": 0,
+      "hasWindow": false,
+      "startTicks": 639296029065915400
+    }
+  ]
+}

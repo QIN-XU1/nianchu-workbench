@@ -1,0 +1,230 @@
+{
+  "_note": "管线产物契约：把管线里的抽象 artifact 名映射到场景实际产出的文件名。\n\n为什么需要它：\n  pipeline 的 edges 里写的是抽象契约名（competitor-list / feature-matrix），\n  而场景实际产出的是具体文件名（项目功能矩阵.md / 机制体系索引.md）。\n  两者之间没有映射 → 下游不知道该找哪个文件 → 管线变成纸面约定。\n\n实测（2026-11-12）：修复前 9 条边里「下游真的引用了上游产出」的 = 0 条。\n\n维护：新增/改名场景产出文件时，必须同步更新这里的 files 数组。\n校验：node 工具/管线产物体检.mjs\n\n2026-11-12 补齐 5 个缺失 artifact：milestones / ux-patterns / crash-report / cleanup-ledger / profile-insight。这 5 个在场景契约 outputs 里有定义，但产物契约表缺失，导致中枢派单时无法生成量化 verify。",
+  "artifacts": {
+    "competitor-list": {
+      "scene": "research",
+      "sceneCn": "调研",
+      "files": [
+        "机制体系索引.md"
+      ],
+      "candidates": [
+        "工具真实性调研.md",
+        "数据目录调研.md",
+        "文档代码一致度.md",
+        "文档价值盘点.md",
+        "文档修复验证.md",
+        "机制体系索引.md"
+      ],
+      "why": "调研出的「资料索引」就是竞品清单的原料；目前最接近的产出是机制体系索引"
+    },
+    "tech-candidates": {
+      "scene": "research",
+      "sceneCn": "调研",
+      "files": [
+        "工具真实性调研.md"
+      ],
+      "candidates": [
+        "工具真实性调研.md",
+        "数据目录调研.md",
+        "文档代码一致度.md",
+        "文档价值盘点.md",
+        "文档修复验证.md",
+        "机制体系索引.md"
+      ],
+      "why": "技术候选 = 调研里筛出的可用工具/方案"
+    },
+    "reference-index": {
+      "scene": "research",
+      "sceneCn": "调研",
+      "files": [
+        "机制体系索引.md",
+        "文档价值盘点.md"
+      ],
+      "candidates": [
+        "工具真实性调研.md",
+        "数据目录调研.md",
+        "文档代码一致度.md",
+        "文档价值盘点.md",
+        "文档修复验证.md",
+        "机制体系索引.md"
+      ],
+      "why": "资料索引 = 带来源的文档/机制索引"
+    },
+    "feature-matrix": {
+      "scene": "competitor-analyze",
+      "sceneCn": "竞品拆解",
+      "files": [
+        "项目功能矩阵.md"
+      ],
+      "candidates": [
+        "交互模式分析.md",
+        "功能缺口修复验证.md",
+        "功能缺口分析.md",
+        "场景协作机制分析.md",
+        "定位对比分析.md",
+        "项目功能矩阵.md"
+      ],
+      "why": "功能矩阵 = 项目功能矩阵.md（14 行，每行指到具体文件）"
+    },
+    "impl-details": {
+      "scene": "reverse-eng",
+      "sceneCn": "逆向分析",
+      "files": [
+        "模块逆向笔记.md",
+        "神经元渲染逆向.md",
+        "IPC通信层逆向.md",
+        "沙箱机制逆向.md",
+        "会话绑定逆向.md"
+      ],
+      "candidates": [
+        "IPC通信层逆向.md",
+        "会话绑定逆向.md",
+        "模块逆向笔记.md",
+        "沙箱机制逆向.md",
+        "神经元渲染逆向.md",
+        "逆向结论验证.md"
+      ],
+      "why": "实现细节 = 各个模块的逆向笔记"
+    },
+    "reusable-patterns": {
+      "scene": "reverse-eng",
+      "sceneCn": "逆向分析",
+      "files": [
+        "模块逆向笔记.md"
+      ],
+      "candidates": [
+        "IPC通信层逆向.md",
+        "会话绑定逆向.md",
+        "模块逆向笔记.md",
+        "沙箱机制逆向.md",
+        "神经元渲染逆向.md",
+        "逆向结论验证.md"
+      ],
+      "why": "可复用模式写在模块逆向笔记的「可复用的设计模式」章节"
+    },
+    "architecture-plan": {
+      "scene": "arch-review",
+      "sceneCn": "架构梳理",
+      "files": [
+        "架构决策.md",
+        "当前架构评估.md",
+        "七层架构评估.md",
+        "数据流评估.md",
+        "验证体系评估.md"
+      ],
+      "candidates": [
+        "七层架构评估.md",
+        "当前架构评估.md",
+        "数据流评估.md",
+        "架构决策.md",
+        "架构决策复盘.md",
+        "验证体系评估.md"
+      ],
+      "why": "架构方案 = 架构决策 + 各项评估"
+    },
+    "risk-list": {
+      "scene": "arch-review",
+      "sceneCn": "架构梳理",
+      "files": [
+        "验证体系评估.md",
+        "数据流评估.md"
+      ],
+      "candidates": [
+        "七层架构评估.md",
+        "当前架构评估.md",
+        "数据流评估.md",
+        "架构决策.md",
+        "架构决策复盘.md",
+        "验证体系评估.md"
+      ],
+      "why": "风险清单写在评估报告的「薄弱点」章节"
+    },
+    "milestones": {
+      "scene": "build-plan",
+      "sceneCn": "实施计划",
+      "files": [
+        "里程碑计划.md",
+        "一周收敛清单.md"
+      ],
+      "why": "里程碑 = 里程碑计划.md（分阶段目标）+ 一周收敛清单.md（近期要收的）",
+      "addedAt": "2026-11-12",
+      "addedReason": "场景契约 outputs 里有、产物契约表缺失（2026-11-12 补齐）"
+    },
+    "ux-patterns": {
+      "scene": "competitor-analyze",
+      "sceneCn": "竞品拆解",
+      "files": [
+        "交互模式分析.md"
+      ],
+      "why": "交互模式 = 交互模式分析.md",
+      "addedAt": "2026-11-12",
+      "addedReason": "场景契约 outputs 里有、产物契约表缺失（2026-11-12 补齐）"
+    },
+    "crash-report": {
+      "scene": "incident-analysis",
+      "sceneCn": "故障分析",
+      "files": [
+        "事故共同模式.md",
+        "静默失败谱系.md"
+      ],
+      "why": "崩溃分析报告 = 事故共同模式（同类事故的共性根因）+ 静默失败谱系（不报错的失败模式）",
+      "addedAt": "2026-11-12",
+      "addedReason": "场景契约 outputs 里有、产物契约表缺失；按实际产出文件映射（2026-11-12）"
+    },
+    "cleanup-ledger": {
+      "scene": "pc-cleanup",
+      "sceneCn": "本地电脑",
+      "files": [
+        "可清理清单.md",
+        "磁盘占用盘点.md"
+      ],
+      "why": "清理台账 = 可清理清单（能删什么）+ 磁盘占用盘点（占在哪）",
+      "addedAt": "2026-11-12",
+      "addedReason": "场景契约 outputs 里有、产物契约表缺失；按实际产出文件映射（2026-11-12）"
+    },
+    "profile-insight": {
+      "scene": "self-review",
+      "sceneCn": "自我复盘",
+      "files": [
+        "自我成长复盘.md",
+        "成长结论检验.md"
+      ],
+      "why": "画像洞察 = 自我成长复盘（看到什么模式）+ 成长结论检验（这些结论站得住吗）",
+      "addedAt": "2026-11-12",
+      "addedReason": "场景契约 outputs 里有、产物契约表缺失；按实际产出文件映射（2026-11-12）"
+    },
+    "backend-tasks": {
+      "scene": "build-plan",
+      "sceneCn": "实施计划",
+      "files": [
+        "后端任务单.md"
+      ],
+      "candidates": [
+        "后端任务单.md"
+      ],
+      "why": "实施计划拆给后端工坊的可派单任务（接口/表结构/性能项）"
+    },
+    "frontend-tasks": {
+      "scene": "build-plan",
+      "sceneCn": "实施计划",
+      "files": [
+        "前端任务单.md"
+      ],
+      "candidates": [
+        "前端任务单.md"
+      ],
+      "why": "实施计划拆给前端工坊的可派单任务（页面/组件/交互）"
+    },
+    "tool-gaps": {
+      "scene": "build-plan",
+      "sceneCn": "实施计划",
+      "files": [
+        "工具缺口单.md"
+      ],
+      "candidates": [
+        "工具缺口单.md"
+      ],
+      "why": "实施阶段暴露的工具缺口，交给工具工坊造"
+    }
+  }
+}

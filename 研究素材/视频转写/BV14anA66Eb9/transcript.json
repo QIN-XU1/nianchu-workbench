@@ -1,0 +1,392 @@
+[
+ {
+  "start": 0.24,
+  "end": 3.54,
+  "text": "DSH吞噬進化,我們是沒有極限的。",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 3.54,
+  "end": 8.54,
+  "text": "上一期視頻收穫了不少熱度,B戰評論區直接被AI魚佔領了。",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 8.54,
+  "end": 12.24,
+  "text": "有小夥伴說,我把DSH挫成了一個Hermis,",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 12.24,
+  "end": 16.04,
+  "text": "也有人說這些能力本來就是成熟智能體該有的水平,",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 16.04,
+  "end": 19.54,
+  "text": "大廠的產品更穩定,自己折騰到底有什麼意義。",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 19.54,
+  "end": 22.54,
+  "text": "這一期視頻繼續分享我的繁爵改造法,",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 22.54,
+  "end": 27.84,
+  "text": "把別的成熟AI軟件扒一遍,它怎麼做記憶,怎麼管上下文怎麼協作,",
+  "avg_logprob": -0.176816,
+  "no_speech_prob": 0.320418,
+  "compression_ratio": 1.234783,
+  "temperature": 0.0,
+  "confidence": 0.837934
+ },
+ {
+  "start": 27.84,
+  "end": 38.14,
+  "text": "这些底层逻辑我逐个摸清再吸收进我的DSH,我让DSH操控Workbody反过来问他自己,你的架构是怎么设计的,底层有哪些能力?",
+  "avg_logprob": -0.1262,
+  "no_speech_prob": 0.070275,
+  "compression_ratio": 1.229651,
+  "temperature": 0.0,
+  "confidence": 0.881438
+ },
+ {
+  "start": 38.14,
+  "end": 43.14,
+  "text": "从他的回答里整理出一份权量报告,再挑出能为我所用的部分。",
+  "avg_logprob": -0.1262,
+  "no_speech_prob": 0.070275,
+  "compression_ratio": 1.229651,
+  "temperature": 0.0,
+  "confidence": 0.881438
+ },
+ {
+  "start": 43.14,
+  "end": 49.24,
+  "text": "我审核通过它,就完成一次自我升级,这些成熟的AI产品本来就有更完善的功能。",
+  "avg_logprob": -0.1262,
+  "no_speech_prob": 0.070275,
+  "compression_ratio": 1.229651,
+  "temperature": 0.0,
+  "confidence": 0.881438
+ },
+ {
+  "start": 49.24,
+  "end": 54.24,
+  "text": "毕竟是面向大众打磨出来的成品,对我来说就是最好的借鉴对象。",
+  "avg_logprob": -0.1262,
+  "no_speech_prob": 0.070275,
+  "compression_ratio": 1.229651,
+  "temperature": 0.0,
+  "confidence": 0.881438
+ },
+ {
+  "start": 54.24,
+  "end": 84.24,
+  "text": "Hermis这个软件之前看介绍,就觉得确实不错,那就解析她把她的优点吸收过来升级我的DSH,这种拿来主意有两种用法,既可以抛弃AI成品软件,从底层自我进化,也可以拆解其他软件从功能上做改进,比如PS国外有个开发者,一个人做了个网页版的PhotoPEA,几乎能替代PS,我用不上那么多功能,那就做一个讲话版借进我的DSH里,处理图片反而更顺手,网上的成品插件也是一样,",
+  "avg_logprob": -0.133823,
+  "no_speech_prob": 0.131762,
+  "compression_ratio": 1.271003,
+  "temperature": 0.0,
+  "confidence": 0.874745
+ },
+ {
+  "start": 84.24,
+  "end": 88.24,
+  "text": "你可能只需要其中一小部分功能,同样可以拿来改造。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 88.24,
+  "end": 91.24,
+  "text": "但有一点,改造的内容必须亲自过目。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 91.24,
+  "end": 95.24,
+  "text": "对它有个基础判断,不然到最后只会越改越乱。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 95.24,
+  "end": 97.24,
+  "text": "一切都要围绕自己的需求来。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 97.24,
+  "end": 100.24,
+  "text": "没改完一次,跑一套体检入口全查一遍。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 100.24,
+  "end": 102.24,
+  "text": "改坏了它自己会抱错。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 102.24,
+  "end": 106.24,
+  "text": "改造的前提是,你能验证它没坏,不然越改越乱。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 106.24,
+  "end": 107.24,
+  "text": "这句就成真了。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 107.24,
+  "end": 110.24,
+  "text": "必愿软件的圆码不能直接搬。那是精全。",
+  "avg_logprob": -0.115528,
+  "no_speech_prob": 0.861773,
+  "compression_ratio": 1.373041,
+  "temperature": 0.0,
+  "confidence": 0.890896
+ },
+ {
+  "start": 110.24,
+  "end": 114.24,
+  "text": "但做出適合自己的功能,是真的能方便自己。",
+  "avg_logprob": -0.120142,
+  "no_speech_prob": 0.861856,
+  "compression_ratio": 1.295455,
+  "temperature": 0.0,
+  "confidence": 0.886794
+ },
+ {
+  "start": 114.24,
+  "end": 120.24,
+  "text": "AI時代我很感謝那些曾經敲帶馬的前輩,讓我也有機會親手定義自己的工具。",
+  "avg_logprob": -0.120142,
+  "no_speech_prob": 0.861856,
+  "compression_ratio": 1.295455,
+  "temperature": 0.0,
+  "confidence": 0.886794
+ },
+ {
+  "start": 120.24,
+  "end": 126.24,
+  "text": "現在我對我的DSH評價很高,對於我自己來說它比市面上任何一個工具都好用。",
+  "avg_logprob": -0.120142,
+  "no_speech_prob": 0.861856,
+  "compression_ratio": 1.295455,
+  "temperature": 0.0,
+  "confidence": 0.886794
+ },
+ {
+  "start": 126.24,
+  "end": 132.24,
+  "text": "我還會和它一起成長,視頻結尾先回答那位說,DSH像Hermis的小夥伴。",
+  "avg_logprob": -0.120142,
+  "no_speech_prob": 0.861856,
+  "compression_ratio": 1.295455,
+  "temperature": 0.0,
+  "confidence": 0.886794
+ },
+ {
+  "start": 132.24,
+  "end": 139.24,
+  "text": "確實像,但Hermis不能保證自己的底層邏輯永遠是最好的,未來也許還會出現更強的Dermis。",
+  "avg_logprob": -0.120142,
+  "no_speech_prob": 0.861856,
+  "compression_ratio": 1.295455,
+  "temperature": 0.0,
+  "confidence": 0.886794
+ },
+ {
+  "start": 139.24,
+  "end": 142.24,
+  "text": "而我的DSH隨時可以進化成那個Dermis",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 142.24,
+  "end": 144.24,
+  "text": "然後回答關於穩定性的疑問",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 144.24,
+  "end": 147.24,
+  "text": "今天的AI模型如果做不出一個穩定的功能",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 147.24,
+  "end": 149.24,
+  "text": "那八成不是AI本身的問題",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 149.24,
+  "end": 151.24,
+  "text": "至於是不是大廠",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 151.24,
+  "end": 152.24,
+  "text": "那就更沒關係了",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 152.24,
+  "end": 154.24,
+  "text": "就像寶可夢和訓練家",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 154.24,
+  "end": 156.24,
+  "text": "沒有不夠強大的寶可夢",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 156.24,
+  "end": 158.24,
+  "text": "只有沒有羈絆的訓練家",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 158.24,
+  "end": 161.24,
+  "text": "最後我希望DSH變得越來越好用",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 161.24,
+  "end": 163.24,
+  "text": "也希望DPCK的模型越來越強",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 163.24,
+  "end": 165.24,
+  "text": "我是DSH最忠實的用戶",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ },
+ {
+  "start": 165.24,
+  "end": 168.24,
+  "text": "一起加入光榮的進化吧",
+  "avg_logprob": -0.09276,
+  "no_speech_prob": 0.797215,
+  "compression_ratio": 1.328125,
+  "temperature": 0.0,
+  "confidence": 0.911412
+ }
+]

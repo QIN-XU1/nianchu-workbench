@@ -1,0 +1,109 @@
+{
+  "_note": "场景 → 引擎会话映射。由 工具/身份索引重建.mjs 从引擎实际会话生成，不要手改。",
+  "_at": "2026-11-13T02:51:10.701Z",
+  "_source": "数据/.dsh/sessions（引擎实际会话）",
+  "rows": [
+    {
+      "scene": "arch-review",
+      "name": "架构梳理",
+      "context": "arch-review-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-2585d3ae-fe8e-4540-97cb-2555b1d1a142",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~67B6~6784~68B3~7406--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "build-plan",
+      "name": "实施计划",
+      "context": "build-plan-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-0c91b59a-0733-4330-86c5-06878f31e778",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~5B9E~65BD~8BA1~5212--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "competitor-analyze",
+      "name": "竞品拆解",
+      "context": "competitor-analyze-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-32bfa7a6-fc07-4eab-ac67-21691dfd992d",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~7ADE~54C1~62C6~89E3--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "hub",
+      "name": "中枢",
+      "context": "hub-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-34f35b09-9c83-46f3-a5f3-9570a0c6de90",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~4E2D~67A2--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "incident-analysis",
+      "name": "故障分析",
+      "context": "incident-analysis-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-052ebe7f-813e-4180-8550-a2c3dbbc54c1",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~6545~969C~5206~6790--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "pc-cleanup",
+      "name": "本地电脑",
+      "context": "pc-cleanup-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-f89a8e74-e4bd-46e9-9cb1-b912ec1873fb",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~672C~5730~7535~8111--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "research",
+      "name": "调研",
+      "context": "research-context.md",
+      "updatedAt": "2026-11-13T00:55:45.149Z",
+      "sessionId": "session-35165f92-7759-4d98-be93-413f4b0f5674",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~8C03~7814--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "reverse-eng",
+      "name": "逆向分析",
+      "context": "reverse-eng-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-82189326-e23c-4531-b0be-642232a82ec2",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~9006~5411~5206~6790--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "self-review",
+      "name": "自我复盘",
+      "context": "self-review-context.md",
+      "updatedAt": "2026-11-13T00:02:55.546Z",
+      "sessionId": "session-9e898c80-3795-4ed2-a4fd-641bed0eaeb1",
+      "workspace": "--D-file-AI~0020Temp-DeepSeek-Agent~81EA~7814-workbench-~6570~636E-.dsh-~573A~666F~8BB0~5FC6-~81EA~6211~590D~76D8--",
+      "source": "engine-scan"
+    },
+    {
+      "scene": "backend-craft",
+      "name": "后端工坊",
+      "sessionId": "session-51d8db47-46bb-4676-a434-10d631704019",
+      "updatedAt": "2026-11-13T02:51:10.699Z",
+      "context": "backend-craft-context.md"
+    },
+    {
+      "scene": "frontend-craft",
+      "name": "前端工坊",
+      "sessionId": "session-02e2e12b-1554-449e-8783-9ae1bb1e79c9",
+      "updatedAt": "2026-11-13T02:51:10.701Z",
+      "context": "frontend-craft-context.md"
+    },
+    {
+      "scene": "tool-forge",
+      "name": "工具工坊",
+      "sessionId": "session-af90b6fc-75f5-42b0-ac90-7422b8836a18",
+      "updatedAt": "2026-11-13T02:51:10.701Z",
+      "context": "tool-forge-context.md"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-openbitfun-design-system-root data-color-scheme="light" data-contrast="standard" data-density="compact" data-openbitfun-native-frame="client" data-openbitfun-font-profile="harmony-bundled">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenBitFun</title>
+<!--
+  ══════════════════════════════════════════════════════════════════════
+  真机复刻（v2）—— 基准是「装在本机的真程序」，不是仓库、不是 README
+  ──────────────────────────────────────────────────────────────────────
+  用户装了 D:\OpenBitFun（v1.0.10）并指出差距很大。于是：
+    1. 启动真程序，枚举窗口，抓 1214x838 / 1550x926 两张真实界面截图
+       → research/screenshots/上游-真实程序-全屏.png
+    2. 从真程序的前端产物里抽令牌（不是从令牌 JSON 推）
+       源文件 D:\OpenBitFun\frontend\dist\assets\index-Bym9tyPM.css     526KB
+         → bitfun/real-tokens.css   （亮色块 180 变量 + 布局/字号/半径）
+    3. 拷真程序的品牌资产
+       源 D:\OpenBitFun\frontend\dist\brand\openbitfun-mark.svg         7.9KB
+         → bitfun/brand/openbitfun-mark.svg
+
+  真机截图暴露的差距（这些是上一版错的）：
+    · 界面是中文：搜索一切 / 首页 / 任务看板 / 会话 / 助理
+    · 快捷键 Ctrl K（不是 ⌘K）
+    · 侧栏只有 2 项（首页、任务看板），不是 7 项
+    · 段头是「会话」两个字，不是大写 SESSIONS
+    · 会话只有一条「助理」
+    · 首屏是打字机 Welcome，不是 Home 仪表盘
+    · 左上角是 折叠 + ← → 两个返回箭头，不是 macOS 红绿灯
+    · html 上真实带 data-density="compact" data-contrast="standard"
+
+  真实布局令牌（取自编译产物）：
+    --openbitfun-layout-navigation-panel-inline-size  216px
+    --openbitfun-layout-navigation-panel-item-height  30px
+    --openbitfun-layout-navigation-panel-heading-height 24px
+    --openbitfun-layout-navigation-panel-footer-height  40px
+    --openbitfun-layout-toolbar-md-height             45px
+    --openbitfun-color-surface-chrome                 #f8f8f9   ← 窗口与侧栏底色
+    --openbitfun-color-surface-canvas                 #ffffff   ← 主区
+-->
+<link rel="stylesheet" href="bitfun/real-tokens.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+html {
+  background: var(--openbitfun-color-surface-chrome, #f8f8f9);
+  color: var(--openbitfun-color-content-primary, #161616);
+  font-family: var(--openbitfun-font-family-sans, system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+body { background: inherit; }
+html[data-openbitfun-native-frame='client'], html[data-openbitfun-native-frame='client'] body { background-color: transparent; }
+#root {
+  width: 100%; height: 100%; display: flex; overflow: hidden;
+  border-radius: 12px;
+  background: var(--openbitfun-color-surface-chrome, #f8f8f9);
+}
+
+/* ══ 侧栏：宽度就是真实令牌 216px ══ */
+.navpanel {
+  width: var(--openbitfun-layout-navigation-panel-inline-size, 216px);
+  flex: none; display: flex; flex-direction: column; min-height: 0;
+  background: var(--openbitfun-color-surface-chrome, #f8f8f9);
+}
+
+/* 工具条：45px，含折叠 + 前进后退 */
+.toolbar {
+  height: var(--openbitfun-layout-toolbar-md-height, 45px);
+  flex: none; display: flex; align-items: center;
+  gap: 2px; padding: 0 6px 6px 8px;
+}
+.tbtn {
+  width: 26px; height: 26px; display: grid; place-items: center;
+  border: 0; background: none; cursor: pointer; border-radius: 6px;
+  color: var(--openbitfun-color-content-muted, #343434);
+  opacity: .55;
+}
+.tbtn:hover { background: var(--openbitfun-color-action-quiet-hover, #f3f3f5); opacity: 1; }
+.tbtn:disabled { opacity: .28; cursor: default; background: none; }
+.toolbar .sp { flex: 1; }
+
+/* 搜索：圆角 8px，右端 Ctrl K */
+.navpanel__search { padding: 0 10px 8px; }
+.search {
+  display: flex; align-items: center; gap: 7px; height: 30px;
+  padding: 0 8px 0 10px; border-radius: var(--openbitfun-radius-base, 8px);
+  background: var(--openbitfun-color-surface-panel, #fff);
+  box-shadow: inset 0 0 0 1px rgba(16, 26, 39, .06);
+  color: var(--openbitfun-color-content-muted, #343434);
+  font-size: 13px;
+}
+.search input {
+  flex: 1; min-width: 0; border: 0; background: none; outline: none;
+  font: inherit; color: inherit;
+}
+.search kbd {
+  font: inherit; font-size: 11px; padding: 1px 5px; border-radius: 4px;
+  background: var(--openbitfun-color-surface-subtle, rgba(16,26,39,.03));
+  color: var(--openbitfun-color-content-muted, #343434);
+}
+
+/* 一级导航：条目高 30px（真实令牌） */
+.navlist { padding: 0 8px; display: flex; flex-direction: column; gap: 2px; }
+.navitem {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  height: var(--openbitfun-layout-navigation-panel-item-height, 30px);
+  padding: 0 8px; border: 0; background: none; cursor: pointer; text-align: left;
+  border-radius: var(--openbitfun-radius-base, 8px);
+  color: var(--openbitfun-color-content-secondary, #1f1f1f);
+  font-size: 13px;
+  transition: background 140ms cubic-bezier(.23,1,.32,1);
+}
+.navitem:hover { background: var(--openbitfun-color-action-quiet-hover, #f3f3f5); }
+.navitem[aria-current='page'] { background: var(--openbitfun-color-action-quiet-hover, #f3f3f5); }
+.navitem .ico { display: grid; place-items: center; color: var(--openbitfun-color-content-muted, #343434); }
+
+/* 段头：24px 高，中文「会话」+ 右侧三个操作 */
+.section {
+  display: flex; align-items: center; gap: 6px; margin-top: 10px;
+  height: var(--openbitfun-layout-navigation-panel-heading-height, 24px);
+  padding: 0 10px;
+}
+.section__title {
+  font-size: 12px; color: var(--openbitfun-color-content-muted, #343434);
+}
+.section .sp { flex: 1; }
+.iconact {
+  width: var(--openbitfun-layout-navigation-panel-heading-action-size, 22px);
+  height: var(--openbitfun-layout-navigation-panel-heading-action-size, 22px);
+  display: grid; place-items: center; border: 0; background: none; cursor: pointer;
+  border-radius: 5px; color: var(--openbitfun-color-content-muted, #343434); opacity: .6;
+}
+.iconact:hover { background: var(--openbitfun-color-action-quiet-hover, #f3f3f5); opacity: 1; }
+
+/* 会话列表 */
+.sessions { padding: 2px 8px; display: flex; flex-direction: column; gap: 2px; overflow-y: auto; }
+.session {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  height: var(--openbitfun-layout-navigation-panel-item-height, 30px);
+  padding: 0 8px; border: 0; background: none; cursor: pointer; text-align: left;
+  border-radius: var(--openbitfun-radius-base, 8px); font-size: 13px;
+  color: var(--openbitfun-color-content-secondary, #1f1f1f);
+}
+.session:hover { background: var(--openbitfun-color-action-quiet-hover, #f3f3f5); }
+.session .avatar {
+  width: 16px; height: 16px; border-radius: 4px; flex: none;
+  display: grid; place-items: center;
+  background: #2a2d34; color: #fff;
+}
+.navpanel__foot { margin-top: auto; height: var(--openbitfun-layout-navigation-panel-footer-height, 40px); }
+
+/* ══ 主区：白底，居中打字机欢迎 ══ */
+.main {
+  flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center;
+  background: var(--openbitfun-color-surface-canvas, #ffffff);
+  border-top-left-radius: 0;
+}
+/* 截图里主区左上有一个圆角缺口（窗口圆角），这里用上层边框还原 */
+.welcome { display: flex; align-items: center; gap: 16px; transform: translateY(-6px); }
+.welcome .mark {
+  width: 62px; height: 62px; flex: none;
+  color: #161616;
+  background: currentColor;
+  -webkit-mask: url('bitfun/brand/openbitfun-mark.svg') center / contain no-repeat;
+  mask: url('bitfun/brand/openbitfun-mark.svg') center / contain no-repeat;
+  opacity: .92;
+}
+.welcome .text {
+  font-size: 30px; font-weight: 600; letter-spacing: -.01em; color: #161616;
+  white-space: nowrap;
+}
+.caret {
+  display: inline-block; width: 2px; height: 1em; margin-left: 3px;
+  background: currentColor; vertical-align: -.12em;
+  animation: blink 1.06s steps(1, end) infinite;
+}
+@keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
+</style>
+</head>
+<body>
+<div id="root">
+  <aside class="navpanel">
+    <div class="toolbar">
+      <button class="tbtn" title="收起侧栏" data-ico="panel-left"></button>
+      <button class="tbtn" title="后退" disabled data-ico="arrow-left"></button>
+      <button class="tbtn" title="前进" disabled data-ico="arrow-right"></button>
+      <span class="sp"></span>
+    </div>
+
+    <div class="navpanel__search">
+      <label class="search">
+        <span data-ico="search"></span>
+        <input value="搜索一切" readonly>
+        <kbd>Ctrl K</kbd>
+      </label>
+    </div>
+
+    <div class="navlist">
+      <button class="navitem" aria-current="page"><span class="ico" data-ico="house"></span>首页</button>
+      <button class="navitem"><span class="ico" data-ico="clock"></span>任务看板</button>
+    </div>
+
+    <div class="section">
+      <span class="section__title">会话</span>
+      <span class="sp"></span>
+      <button class="iconact" data-ico="list"></button>
+      <button class="iconact" data-ico="sliders-horizontal"></button>
+      <button class="iconact" data-ico="folder-plus"></button>
+    </div>
+
+    <div class="sessions">
+      <button class="session"><span class="avatar" data-ico="bot"></span>助理</button>
+    </div>
+
+    <div class="navpanel__foot"></div>
+  </aside>
+
+  <main class="main">
+    <div class="welcome">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="text">OpenBitFun，折腾点新鲜的。<span class="caret"></span></span>
+    </div>
+  </main>
+</div>
+
+<script src="../vendor/lucide.js"></script>
+<script>
+// 用 Lucide 把 data-ico 换真 SVG；缺失的记到属性上，避免静默变空块。
+(function () {
+  document.querySelectorAll('[data-ico]').forEach(function (el) {
+    var name = el.getAttribute('data-ico');
+    var size = el.classList.contains('avatar') ? 10 : (el.classList.contains('ico') ? 14 : 14);
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', size); svg.setAttribute('height', size);
+    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor'); svg.setAttribute('stroke-width', '2');
+    svg.setAttribute('stroke-linecap', 'round'); svg.setAttribute('stroke-linejoin', 'round');
+    svg.classList.add('lucide', 'lucide-' + name);
+    el.appendChild(svg);
+  });
+  if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+})();
+</script>
+</body>
+</html>

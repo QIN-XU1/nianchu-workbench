@@ -1,0 +1,352 @@
+[
+ {
+  "start": 0.05,
+  "end": 2.85,
+  "text": "那么既然各家AI网页版都是免费的",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 2.85,
+  "end": 4.75,
+  "text": "那就可以利用节省Token",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 4.75,
+  "end": 8.55,
+  "text": "我把DeepSick,豆包,千吻,质譜,Timmie",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 8.55,
+  "end": 10.85,
+  "text": "全部内置到了我的DSH里",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 10.85,
+  "end": 12.45,
+  "text": "然后建立了一个桥",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 12.45,
+  "end": 16.25,
+  "text": "写了个技能让DSH随时可以命令以及拿到结果",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 16.25,
+  "end": 18.85,
+  "text": "根据他们各自擅长的东西分配任务",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 18.85,
+  "end": 20.05,
+  "text": "实测下来",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 20.05,
+  "end": 23.25,
+  "text": "DeepSick,豆包,千吻,质譜最好用",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 23.25,
+  "end": 26.85,
+  "text": "像混源之类的其他的网页版免费AI我也试过",
+  "avg_logprob": -0.194121,
+  "no_speech_prob": 0.170639,
+  "compression_ratio": 1.256667,
+  "temperature": 0.0,
+  "confidence": 0.823559
+ },
+ {
+  "start": 26.85,
+  "end": 30.35,
+  "text": "但是回复速度各方面确实比不上一线的这些。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 30.35,
+  "end": 34.15,
+  "text": "这样花钱的智能体只负责发指令,拼接结果就行。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 34.15,
+  "end": 36.65,
+  "text": "对于一些碎片画的任务非常好用。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 36.65,
+  "end": 39.65,
+  "text": "一些轮次很多的绘画会越来越好token。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 39.65,
+  "end": 42.35,
+  "text": "新的一轮聊天会读旧的轮次的内容。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 42.35,
+  "end": 45.35,
+  "text": "轮次越多,新的一轮消耗的token越多。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 45.35,
+  "end": 48.15,
+  "text": "所以要把记忆内容放在一个单独的文件。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 48.15,
+  "end": 50.35,
+  "text": "轮次多了就建立新绘画显接。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 50.35,
+  "end": 52.95,
+  "text": "我这里是用技能显接画绘画脚本。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 52.95,
+  "end": 56.45,
+  "text": "告诉他画绘画,他就会建一条名字一模一样的。",
+  "avg_logprob": -0.117402,
+  "no_speech_prob": 0.14782,
+  "compression_ratio": 1.404372,
+  "temperature": 0.0,
+  "confidence": 0.889228
+ },
+ {
+  "start": 56.45,
+  "end": 59.45,
+  "text": "然后更新记忆文件,写交接文档。",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 59.45,
+  "end": 62.45,
+  "text": "新绘画紧接着继续工作。",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 62.45,
+  "end": 64.45,
+  "text": "历史绘画会自动归档。",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 64.45,
+  "end": 66.45,
+  "text": "还有一个省token的方法,",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 66.45,
+  "end": 69.45,
+  "text": "就是把技能、插件、MCP都列出来、",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 69.45,
+  "end": 73.45,
+  "text": "树里清晰,把技能对应到各自场景或者绘画。",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 73.45,
+  "end": 75.45,
+  "text": "不然有些每次开场就读,",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 75.45,
+  "end": 77.45,
+  "text": "还有个大头就是MCP工具,",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 77.45,
+  "end": 80.45,
+  "text": "如果默认使用,就会每轮都消耗固定的token。",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 80.45,
+  "end": 84.45,
+  "text": "比如你的DSH下载了通过MCP操作电脑的驱动,",
+  "avg_logprob": -0.118718,
+  "no_speech_prob": 0.071144,
+  "compression_ratio": 1.251515,
+  "temperature": 0.0,
+  "confidence": 0.888058
+ },
+ {
+  "start": 84.45,
+  "end": 92.45,
+  "text": "默认打开每轮都会消耗两万多token,可以做一个开关,不用的时候关闭,另外全自动工作流也有了好方法。",
+  "avg_logprob": -0.118159,
+  "no_speech_prob": 0.897506,
+  "compression_ratio": 1.305949,
+  "temperature": 0.0,
+  "confidence": 0.888555
+ },
+ {
+  "start": 92.45,
+  "end": 99.45,
+  "text": "通过节点连线告诉AI用什么工具,什么方式实现什么。我在DSH里内置了一个画布,AI可以读取。",
+  "avg_logprob": -0.118159,
+  "no_speech_prob": 0.897506,
+  "compression_ratio": 1.305949,
+  "temperature": 0.0,
+  "confidence": 0.888555
+ },
+ {
+  "start": 99.45,
+  "end": 106.45,
+  "text": "这个方法参考了康泛EOI工作流,只是作为用户不需要看工具,只需要看状态和结果。",
+  "avg_logprob": -0.118159,
+  "no_speech_prob": 0.897506,
+  "compression_ratio": 1.305949,
+  "temperature": 0.0,
+  "confidence": 0.888555
+ },
+ {
+  "start": 106.45,
+  "end": 113.45,
+  "text": "目前还在改进,因为AI会一直变强,所以重要的是方法和流程,不是让AI学会啥。",
+  "avg_logprob": -0.118159,
+  "no_speech_prob": 0.897506,
+  "compression_ratio": 1.305949,
+  "temperature": 0.0,
+  "confidence": 0.888555
+ },
+ {
+  "start": 113.45,
+  "end": 119.45,
+  "text": "OK啊,以後還會更新更多經驗,我將成為DSH最忠誠的用戶。",
+  "avg_logprob": -0.264808,
+  "no_speech_prob": 0.762754,
+  "compression_ratio": 0.869048,
+  "temperature": 0.0,
+  "confidence": 0.767353
+ }
+]

@@ -1,0 +1,216 @@
+{
+  "_comment": "突变规格：每条把被测核心函数改成永远失效，要求该文件的 --selftest 变红。变不红 = 至少有一条断言不承重（或断言全是恒真）。2026-11-16 立，起因：H-0081 证明『加断言能刷高条数却不加检出能力』，标签匹配抓不到，只有突变能证。",
+  "_format": {
+    "file": "相对路径",
+    "name": "这条突变叫什么",
+    "find": "要替换的原文本（必须唯一出现）",
+    "replace": "替换成的文本（必须含 [fault] 标记）",
+    "note": "这条突变模拟什么失效"
+  },
+  "specs": [
+    {
+      "file": "tools/benchmark/evidence-grade.mjs",
+      "name": "gradeEvidence 永远返回 prose",
+      "find": "export function gradeEvidence(ev, existsFn) {",
+      "note": "证据分级完全失效：什么都认不出",
+      "variants": [
+        {
+          "replace": "export function gradeEvidence(ev, existsFn) {\n  return { kind: 'prose', detail: '[fault] always prose' };",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function gradeEvidence(ev, existsFn) {\n  return null; // [fault]",
+          "note": "返回 null（连对象都没有）"
+        }
+      ]
+    },
+    {
+      "file": "tools/benchmark/scope-map.mjs",
+      "name": "checkScopes 永远 0 命中",
+      "find": "export function checkScopes(scopes, dirs) {",
+      "note": "scope 命中率永远为 0",
+      "variants": [
+        {
+          "replace": "export function checkScopes(scopes, dirs) {\n  return { matched: [], unmatched: scopes, rate: 0 }; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function checkScopes(scopes, dirs) {\n  return null; // [fault]",
+          "note": "返回 null"
+        }
+      ]
+    },
+    {
+      "file": "tools/resilience/backoff.mjs",
+      "name": "computeBackoff 永远返回 0",
+      "find": "export function computeBackoff(policy, attempt, rnd = Math.random) {",
+      "note": "退避计算完全失效",
+      "variants": [
+        {
+          "replace": "export function computeBackoff(policy, attempt, rnd = Math.random) {\n  return 0; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function computeBackoff(policy, attempt, rnd = Math.random) {\n  return NaN; // [fault]",
+          "note": "返回 NaN（数字类型但无效）"
+        }
+      ]
+    },
+    {
+      "file": "tools/memory/freshness.mjs",
+      "name": "staleEntries 永远返回空",
+      "find": "export function staleEntries(db, { now = new Date(), staleDays = 30 } = {}) {",
+      "note": "永远说没有陈旧记忆",
+      "variants": [
+        {
+          "replace": "export function staleEntries(db, { now = new Date(), staleDays = 30 } = {}) {\n  return { total: 0, items: [] }; // [fault]",
+          "note": "返回空集合/零值（原形态）"
+        },
+        {
+          "replace": "export function staleEntries(db, { now = new Date(), staleDays = 30 } = {}) {\n  return {}; // [fault]",
+          "note": "返回 {}（容器本身缺失）—— 验证方指出这种形态会让 .length/.map 直接崩"
+        }
+      ]
+    },
+    {
+      "file": "tools/benchmark/audit-coverage.mjs",
+      "name": "reconcile 永远返回空",
+      "find": "export function reconcile(expected, projectIds, analysisIds) {",
+      "note": "对账永远说没问题",
+      "variants": [
+        {
+          "replace": "export function reconcile(expected, projectIds, analysisIds) {\n  return []; // [fault]",
+          "note": "返回空集合/零值（原形态）"
+        },
+        {
+          "replace": "export function reconcile(expected, projectIds, analysisIds) {\n  return null; // [fault]",
+          "note": "返回 null（比空数组更极端）"
+        }
+      ]
+    },
+    {
+      "file": "tools/ui/build-neuron.mjs",
+      "name": "buildGraph 永远返回空图",
+      "find": "export function buildGraph(scenes, contracts) {",
+      "note": "场景图永远为空",
+      "variants": [
+        {
+          "replace": "export function buildGraph(scenes, contracts) {\n  return { nodes: [], edges: [] }; // [fault]",
+          "note": "返回空集合/零值（原形态）"
+        },
+        {
+          "replace": "export function buildGraph(scenes, contracts) {\n  return {}; // [fault]",
+          "note": "返回 {}（容器本身缺失）"
+        }
+      ]
+    },
+    {
+      "file": "prototype/hermes-agents/audit-matrix-honesty.mjs",
+      "name": "auditDims 永远不报违规",
+      "find": "export function auditDims(dims, existsFn = exists) {",
+      "note": "假绿审计永远说没问题 —— 最危险的一种失效",
+      "variants": [
+        {
+          "replace": "export function auditDims(dims, existsFn = exists) {\n  return { violations: [], borrowAcks: [], checked: 0 }; // [fault]",
+          "note": "返回空集合/零值（原形态）"
+        },
+        {
+          "replace": "export function auditDims(dims, existsFn = exists) {\n  return {}; // [fault]",
+          "note": "返回 {}"
+        }
+      ]
+    },
+    {
+      "file": "tools/benchmark/commit-readability.mjs",
+      "name": "readability 永远返回全 0",
+      "find": "export function readability(messages) {",
+      "note": "可读性度量完全失效",
+      "variants": [
+        {
+          "replace": "export function readability(messages) {\n  return { total: 0, ccRate: 0, fixCount: 0, scopeRate: 0, avgLen: 0 }; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function readability(messages) {\n  return {}; // [fault]",
+          "note": "返回 {}（字段全缺）"
+        }
+      ]
+    },
+    {
+      "file": "tools/memory/query.mjs",
+      "name": "relevance 永远返回 0",
+      "find": "export function relevance(key, value, needle, matchKeyOnly = false) {",
+      "note": "相关性打分完全失效：什么都搜不到",
+      "variants": [
+        {
+          "replace": "export function relevance(key, value, needle, matchKeyOnly = false) {\n  return 0; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function relevance(key, value, needle, matchKeyOnly = false) {\n  return -1; // [fault]",
+          "note": "返回负数（不是 0 但同样无效）"
+        }
+      ]
+    },
+    {
+      "file": "tools/memory/bulk.mjs",
+      "name": "bulk 永远返回成功但零写入",
+      "find": "export function bulk(db, records, { now = new Date(), by = 'bulk' } = {}) {",
+      "note": "批量导入静默丢弃全部记录",
+      "variants": [
+        {
+          "replace": "export function bulk(db, records, { now = new Date(), by = 'bulk' } = {}) {\n  return { ok: true, added: 0 }; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function bulk(db, records, { now = new Date(), by = 'bulk' } = {}) {\n  return {}; // [fault]",
+          "note": "返回 {}（连 ok 字段都没有）"
+        }
+      ]
+    },
+    {
+      "file": "tools/benchmark/absence-check.mjs",
+      "name": "checkCapability 永远判 PRESENT",
+      "find": "export function checkCapability(cap, existsFn = fs.existsSync) {",
+      "note": "能力检查永远说『有』—— 最典型的假绿",
+      "variants": [
+        {
+          "replace": "export function checkCapability(cap, existsFn = fs.existsSync) {\n  return { state: 'PRESENT', hits: [] }; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function checkCapability(cap, existsFn = fs.existsSync) {\n  return {}; // [fault]",
+          "note": "返回 {}"
+        }
+      ]
+    },
+    {
+      "file": "tools/context/compress.mjs",
+      "name": "estimateTokens 永远返回 0",
+      "find": "export function estimateTokens(text) {",
+      "note": "token 估算失效：压缩率永远是 0",
+      "variants": [
+        {
+          "replace": "export function estimateTokens(text) {\n  return 0; // [fault]",
+          "note": "返回零值/空集合（原形态）"
+        },
+        {
+          "replace": "export function estimateTokens(text) {\n  return NaN; // [fault]",
+          "note": "返回 NaN"
+        }
+      ]
+    }
+  ],
+  "_withdrawn": [
+    {
+      "name": "loadDb 永远返回空库",
+      "file": "tools/memory/conflict-diff.mjs",
+      "why": "selfTest() 不调用 loadDb —— L146 的 loadDb() 在 --selftest 分支之外。改坏它自检当然不红，这不是断言不承重，是规格选错目标。**真发现：selfTest 覆盖不到主入口。**"
+    },
+    {
+      "name": "sync 永远返回空快照",
+      "file": "tools/cost/meter.mjs",
+      "why": "selfTest() 不调用 sync —— 它测 loadPrices / report，L438 的 sync() 在 CLI 主路径。同上。"
+    }
+  ]
+}

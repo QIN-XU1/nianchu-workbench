@@ -1,0 +1,263 @@
+{
+  "at": "2026-11-19T13:53:20.536Z",
+  "limits": {
+    "mustSplitBytes": 12288,
+    "suggestSplitBytes": 6144,
+    "hardPerKB": 6
+  },
+  "skills": [
+    {
+      "name": "adr",
+      "category": "写作",
+      "kb": 0.58,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "api-contract",
+      "category": "工程",
+      "kb": 0.75,
+      "hard": 1,
+      "hardPerKB": 1.33,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "changelog",
+      "category": "写作",
+      "kb": 0.58,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "ci-pipeline",
+      "category": "工程",
+      "kb": 0.65,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "code-review",
+      "category": "审查",
+      "kb": 0.91,
+      "hard": 2,
+      "hardPerKB": 2.2,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "data-migration",
+      "category": "数据",
+      "kb": 0.69,
+      "hard": 1,
+      "hardPerKB": 1.45,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "data-reconcile",
+      "category": "数据",
+      "kb": 0.36,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "debug-repro",
+      "category": "工程",
+      "kb": 0.7,
+      "hard": 1,
+      "hardPerKB": 1.44,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "dep-upgrade",
+      "category": "工程",
+      "kb": 0.58,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "design-review",
+      "category": "审查",
+      "kb": 0.72,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "doc-consistency",
+      "category": "数据",
+      "kb": 0.37,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "doc-write",
+      "category": "写作",
+      "kb": 0.72,
+      "hard": 1,
+      "hardPerKB": 1.39,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "docs-index",
+      "category": "写作",
+      "kb": 0.37,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "evidence-audit",
+      "category": "审查",
+      "kb": 1.17,
+      "hard": 1,
+      "hardPerKB": 0.85,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "inventory-ledger",
+      "category": "数据",
+      "kb": 0.37,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "multi-host-project",
+      "category": "工程",
+      "kb": 0.96,
+      "hard": 1,
+      "hardPerKB": 1.04,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "perf-profile",
+      "category": "工程",
+      "kb": 0.64,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "project-verdict",
+      "category": "审查",
+      "kb": 0.93,
+      "hard": 1,
+      "hardPerKB": 1.08,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "readme-bootstrap",
+      "category": "写作",
+      "kb": 0.6,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "refactor-plan",
+      "category": "工程",
+      "kb": 0.7,
+      "hard": 1,
+      "hardPerKB": 1.44,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "release-gate",
+      "category": "审查",
+      "kb": 1.59,
+      "hard": 3,
+      "hardPerKB": 1.89,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "release-notes",
+      "category": "写作",
+      "kb": 0.59,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "schema-design",
+      "category": "数据",
+      "kb": 0.66,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "security-review",
+      "category": "审查",
+      "kb": 0.76,
+      "hard": 1,
+      "hardPerKB": 1.31,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "self-review",
+      "category": "审查",
+      "kb": 0.38,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "support-assign",
+      "category": "数据",
+      "kb": 0.35,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "test-writing",
+      "category": "工程",
+      "kb": 0.6,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    },
+    {
+      "name": "threat-model",
+      "category": "审查",
+      "kb": 0.73,
+      "hard": 0,
+      "hardPerKB": 0,
+      "codeBlocks": 0,
+      "flags": []
+    }
+  ],
+  "duplicateLines": []
+}
