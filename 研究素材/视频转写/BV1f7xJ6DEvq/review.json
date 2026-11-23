@@ -1,0 +1,7185 @@
+{
+  "version": 1,
+  "created_at": "2026-11-10T23:53:05",
+  "source": {
+    "transcript_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\transcript.json",
+    "frames_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\frames.json"
+  },
+  "duration": 1286.733,
+  "range": {
+    "start": 0.0,
+    "end": 1286.733
+  },
+  "window_seconds": 10.0,
+  "attention_gap_seconds": 5.0,
+  "relation_labels": [
+    "supports",
+    "complements",
+    "contradicts",
+    "unrelated",
+    "insufficient"
+  ],
+  "instructions": "Inspect the listed frames and transcript for each unit. Set assessment.relation, confidence (0..1), notes, and refine. Treat complementary audio/visual evidence as complements, not a conflict.",
+  "units": [
+    {
+      "id": "w0000",
+      "start": 0.0,
+      "end": 10.0,
+      "transcript": "比如說像這個嬰兒 嬰兒他在學習的時候 他是不是也需要一個演化機制 他天生不是那麼能用手腳 你懂我意思嗎",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.54,
+          "text": "比如說像這個嬰兒"
+        },
+        {
+          "start": 1.8,
+          "end": 3.84,
+          "text": "嬰兒他在學習的時候"
+        },
+        {
+          "start": 3.84,
+          "end": 5.88,
+          "text": "他是不是也需要一個演化機制"
+        },
+        {
+          "start": 6.4,
+          "end": 8.44,
+          "text": "他天生不是那麼能用手腳"
+        },
+        {
+          "start": 8.44,
+          "end": 9.22,
+          "text": "你懂我意思嗎"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0000_t000000.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0000_t000000.0.jpg",
+          "t": 0.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0001",
+      "start": 10.0,
+      "end": 20.0,
+      "transcript": "是不是他天生不會用手腳 他需要自己在學習的過程中 讓這個手腳搭配變得更好 從而手是手腳是腳 但是型和腳他是功能的演化",
+      "segments": [
+        {
+          "start": 11.78,
+          "end": 13.06,
+          "text": "是不是他天生不會用手腳"
+        },
+        {
+          "start": 13.06,
+          "end": 14.84,
+          "text": "他需要自己在學習的過程中"
+        },
+        {
+          "start": 14.84,
+          "end": 16.38,
+          "text": "讓這個手腳搭配變得更好"
+        },
+        {
+          "start": 16.64,
+          "end": 18.44,
+          "text": "從而手是手腳是腳"
+        },
+        {
+          "start": 19.96,
+          "end": 22.52,
+          "text": "但是型和腳他是功能的演化"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0001_t000012.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0001_t000012.9.jpg",
+          "t": 12.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.1,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0002",
+      "start": 20.0,
+      "end": 30.0,
+      "transcript": "但是型和腳他是功能的演化 他還需要別的東西 也就是說你想要打造成一個自我進化的東西 他必須要有一個自我系統 就比如說人有免疫系統",
+      "segments": [
+        {
+          "start": 19.96,
+          "end": 22.52,
+          "text": "但是型和腳他是功能的演化"
+        },
+        {
+          "start": 22.52,
+          "end": 23.8,
+          "text": "他還需要別的東西"
+        },
+        {
+          "start": 24.84,
+          "end": 27.4,
+          "text": "也就是說你想要打造成一個自我進化的東西"
+        },
+        {
+          "start": 27.4,
+          "end": 28.68,
+          "text": "他必須要有一個自我系統"
+        },
+        {
+          "start": 28.68,
+          "end": 30.88,
+          "text": "就比如說人有免疫系統"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0002_t000025.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0002_t000025.8.jpg",
+          "t": 25.766,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.766,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0003",
+      "start": 30.0,
+      "end": 40.0,
+      "transcript": "就比如說人有免疫系統 有各種各樣的這種機制 比如說像一個風農 它在被風冰滴一下的時候 肯定是疼疼的要發腫的 但它隨著冰了很多下之後 還有這些免疫細胞",
+      "segments": [
+        {
+          "start": 28.68,
+          "end": 30.88,
+          "text": "就比如說人有免疫系統"
+        },
+        {
+          "start": 30.88,
+          "end": 32.0,
+          "text": "有各種各樣的這種機制"
+        },
+        {
+          "start": 32.0,
+          "end": 33.4,
+          "text": "比如說像一個風農"
+        },
+        {
+          "start": 33.4,
+          "end": 34.88,
+          "text": "它在被風冰滴一下的時候"
+        },
+        {
+          "start": 34.88,
+          "end": 36.94,
+          "text": "肯定是疼疼的要發腫的"
+        },
+        {
+          "start": 36.94,
+          "end": 39.2,
+          "text": "但它隨著冰了很多下之後"
+        },
+        {
+          "start": 39.2,
+          "end": 40.4,
+          "text": "還有這些免疫細胞"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0003_t000038.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0003_t000038.6.jpg",
+          "t": 38.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.633,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0004",
+      "start": 40.0,
+      "end": 50.0,
+      "transcript": "還有這些免疫細胞 各種在啟動發揮這種抗體 各種各樣的作用 在後面再遇到這種毒素 它就不怕了 它就可以自我輕盈了 可以自我修復了 你懂這意思吧",
+      "segments": [
+        {
+          "start": 39.2,
+          "end": 40.4,
+          "text": "還有這些免疫細胞"
+        },
+        {
+          "start": 40.4,
+          "end": 42.54,
+          "text": "各種在啟動發揮這種抗體"
+        },
+        {
+          "start": 42.54,
+          "end": 44.3,
+          "text": "各種各樣的作用"
+        },
+        {
+          "start": 44.3,
+          "end": 45.5,
+          "text": "在後面再遇到這種毒素"
+        },
+        {
+          "start": 45.5,
+          "end": 46.78,
+          "text": "它就不怕了"
+        },
+        {
+          "start": 46.78,
+          "end": 48.28,
+          "text": "它就可以自我輕盈了"
+        },
+        {
+          "start": 48.28,
+          "end": 49.48,
+          "text": "可以自我修復了"
+        },
+        {
+          "start": 49.48,
+          "end": 50.6,
+          "text": "你懂這意思吧"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0005",
+      "start": 50.0,
+      "end": 60.0,
+      "transcript": "你懂這意思吧 我知道 但你這個的話 它不是就是我還是那個觀點 就是每個單獨的它都能有 做它犯一個錯誤 他就會自己記住 然後就下次就不會再犯了",
+      "segments": [
+        {
+          "start": 49.48,
+          "end": 50.6,
+          "text": "你懂這意思吧"
+        },
+        {
+          "start": 51.9,
+          "end": 52.34,
+          "text": "我知道"
+        },
+        {
+          "start": 52.34,
+          "end": 53.18,
+          "text": "但你這個的話"
+        },
+        {
+          "start": 53.18,
+          "end": 54.98,
+          "text": "它不是就是我還是那個觀點"
+        },
+        {
+          "start": 54.98,
+          "end": 56.94,
+          "text": "就是每個單獨的它都能有"
+        },
+        {
+          "start": 56.94,
+          "end": 57.88,
+          "text": "做它犯一個錯誤"
+        },
+        {
+          "start": 57.88,
+          "end": 58.64,
+          "text": "他就會自己記住"
+        },
+        {
+          "start": 58.64,
+          "end": 60.24,
+          "text": "然後就下次就不會再犯了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0004_t000051.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0004_t000051.5.jpg",
+          "t": 51.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0006",
+      "start": 60.0,
+      "end": 70.0,
+      "transcript": "然後就下次就不會再犯了 不都是這樣子 是這樣子的 但是你那個東西 它是我這個地位版 我這裡給你講一個概念好了 我這邊直接打開WPS 就是在我的觀念裡",
+      "segments": [
+        {
+          "start": 58.64,
+          "end": 60.24,
+          "text": "然後就下次就不會再犯了"
+        },
+        {
+          "start": 60.24,
+          "end": 61.72,
+          "text": "不都是這樣子"
+        },
+        {
+          "start": 61.72,
+          "end": 62.52,
+          "text": "是這樣子的"
+        },
+        {
+          "start": 62.52,
+          "end": 63.78,
+          "text": "但是你那個東西"
+        },
+        {
+          "start": 63.78,
+          "end": 65.18,
+          "text": "它是我這個地位版"
+        },
+        {
+          "start": 65.18,
+          "end": 66.62,
+          "text": "我這裡給你講一個概念好了"
+        },
+        {
+          "start": 66.62,
+          "end": 68.52,
+          "text": "我這邊直接打開WPS"
+        },
+        {
+          "start": 68.52,
+          "end": 70.52,
+          "text": "就是在我的觀念裡"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0005_t000064.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0005_t000064.4.jpg",
+          "t": 64.366,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.634,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0007",
+      "start": 70.0,
+      "end": 80.0,
+      "transcript": "就是在我的觀念裡 就是如果你搭不出一個 像人一樣的系統組織架構 有大腦有手腳的話 你是沒有辦法去完成一個 完全自我進化的 你那個自我進化 只是在單線程的 而且它後面絕對會出現問題",
+      "segments": [
+        {
+          "start": 68.52,
+          "end": 70.52,
+          "text": "就是在我的觀念裡"
+        },
+        {
+          "start": 70.52,
+          "end": 71.68,
+          "text": "就是如果你搭不出一個"
+        },
+        {
+          "start": 71.68,
+          "end": 73.66,
+          "text": "像人一樣的系統組織架構"
+        },
+        {
+          "start": 73.66,
+          "end": 75.32,
+          "text": "有大腦有手腳的話"
+        },
+        {
+          "start": 75.32,
+          "end": 76.96,
+          "text": "你是沒有辦法去完成一個"
+        },
+        {
+          "start": 76.96,
+          "end": 78.22,
+          "text": "完全自我進化的"
+        },
+        {
+          "start": 78.22,
+          "end": 79.06,
+          "text": "你那個自我進化"
+        },
+        {
+          "start": 79.06,
+          "end": 79.96,
+          "text": "只是在單線程的"
+        },
+        {
+          "start": 79.96,
+          "end": 82.4,
+          "text": "而且它後面絕對會出現問題"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0006_t000071.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0006_t000071.5.jpg",
+          "t": 71.5,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0008",
+      "start": 80.0,
+      "end": 90.0,
+      "transcript": "而且它後面絕對會出現問題 因為你所說的協同進化 你並沒有說有一個什麼機制的反饋 你懂嗎 你一個場景再怎麼進化 它會往失誤的方向去發展",
+      "segments": [
+        {
+          "start": 79.96,
+          "end": 82.4,
+          "text": "而且它後面絕對會出現問題"
+        },
+        {
+          "start": 82.4,
+          "end": 83.76,
+          "text": "因為你所說的協同進化"
+        },
+        {
+          "start": 83.76,
+          "end": 86.4,
+          "text": "你並沒有說有一個什麼機制的反饋"
+        },
+        {
+          "start": 86.4,
+          "end": 89.8,
+          "text": "你懂嗎 你一個場景再怎麼進化"
+        },
+        {
+          "start": 89.8,
+          "end": 92.24,
+          "text": "它會往失誤的方向去發展"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0007_t000090.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0007_t000090.1.jpg",
+          "t": 90.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0009",
+      "start": 90.0,
+      "end": 100.0,
+      "transcript": "它會往失誤的方向去發展 就比如說我給你講一下這個東西 比如說我現在有場景 它在做相關信息的時候 是不是會進化自己的記憶和技能 那你如果沒有一個監督機制",
+      "segments": [
+        {
+          "start": 89.8,
+          "end": 92.24,
+          "text": "它會往失誤的方向去發展"
+        },
+        {
+          "start": 92.24,
+          "end": 93.8,
+          "text": "就比如說我給你講一下這個東西"
+        },
+        {
+          "start": 93.8,
+          "end": 94.8,
+          "text": "比如說我現在有場景"
+        },
+        {
+          "start": 94.8,
+          "end": 96.0,
+          "text": "它在做相關信息的時候"
+        },
+        {
+          "start": 96.0,
+          "end": 99.54,
+          "text": "是不是會進化自己的記憶和技能"
+        },
+        {
+          "start": 99.54,
+          "end": 101.04,
+          "text": "那你如果沒有一個監督機制"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0007_t000090.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0007_t000090.1.jpg",
+          "t": 90.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0010",
+      "start": 100.0,
+      "end": 110.0,
+      "transcript": "那你如果沒有一個監督機制 你怎麼知道它進化的東西 就是你想要的嗎 那這個東西肯定是通過對話得出來的",
+      "segments": [
+        {
+          "start": 99.54,
+          "end": 101.04,
+          "text": "那你如果沒有一個監督機制"
+        },
+        {
+          "start": 101.04,
+          "end": 102.18,
+          "text": "你怎麼知道它進化的東西"
+        },
+        {
+          "start": 102.18,
+          "end": 107.13,
+          "text": "就是你想要的嗎"
+        },
+        {
+          "start": 107.13,
+          "end": 112.07,
+          "text": "那這個東西肯定是通過對話得出來的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0008_t000103.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0008_t000103.0.jpg",
+          "t": 102.966,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.034,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0011",
+      "start": 110.0,
+      "end": 120.0,
+      "transcript": "那這個東西肯定是通過對話得出來的 那也就意味著你需要人為的去驗收 而不是你讓它去有一個閘 或者说有一个可以验证的系统是吗",
+      "segments": [
+        {
+          "start": 107.13,
+          "end": 112.07,
+          "text": "那這個東西肯定是通過對話得出來的"
+        },
+        {
+          "start": 112.07,
+          "end": 114.27,
+          "text": "那也就意味著你需要人為的去驗收"
+        },
+        {
+          "start": 114.27,
+          "end": 116.51,
+          "text": "而不是你讓它去有一個閘"
+        },
+        {
+          "start": 116.51,
+          "end": 118.55,
+          "text": "或者说有一个可以验证的系统是吗"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0009_t000115.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0009_t000115.8.jpg",
+          "t": 115.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.833,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0012",
+      "start": 120.0,
+      "end": 130.0,
+      "transcript": "对 我是偏向于去对话 因为我不太放心 让全部程序去干 那不好意思 那你这个跟我完全不一样 你这哪那不是自定化 你那属于是",
+      "segments": [
+        {
+          "start": 120.09,
+          "end": 122.65,
+          "text": "对 我是偏向于去对话"
+        },
+        {
+          "start": 122.91,
+          "end": 125.73,
+          "text": "因为我不太放心 让全部程序去干"
+        },
+        {
+          "start": 125.99,
+          "end": 128.29,
+          "text": "那不好意思 那你这个跟我完全不一样"
+        },
+        {
+          "start": 128.55,
+          "end": 130.85,
+          "text": "你这哪那不是自定化 你那属于是"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0010_t000128.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0010_t000128.7.jpg",
+          "t": 128.7,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0013",
+      "start": 130.0,
+      "end": 140.0,
+      "transcript": "你这哪那不是自定化 你那属于是 你就只是想派他为工作 他不具备 就是我那样的方向是完全不一样的 你明白吗 你做的那东西还是一个单线程 就相当于是我一个场景的任务",
+      "segments": [
+        {
+          "start": 128.55,
+          "end": 130.85,
+          "text": "你这哪那不是自定化 你那属于是"
+        },
+        {
+          "start": 131.11,
+          "end": 133.67,
+          "text": "你就只是想派他为工作 他不具备"
+        },
+        {
+          "start": 134.17,
+          "end": 135.97,
+          "text": "就是我那样的方向是完全不一样的"
+        },
+        {
+          "start": 138.04,
+          "end": 138.8,
+          "text": "你明白吗"
+        },
+        {
+          "start": 139.06,
+          "end": 142.4,
+          "text": "你做的那东西还是一个单线程 就相当于是我一个场景的任务"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0014",
+      "start": 140.0,
+      "end": 150.0,
+      "transcript": "你做的那东西还是一个单线程 就相当于是我一个场景的任务 但是你 怎么说 你的意思是全靠他自己去意识刀",
+      "segments": [
+        {
+          "start": 139.06,
+          "end": 142.4,
+          "text": "你做的那东西还是一个单线程 就相当于是我一个场景的任务"
+        },
+        {
+          "start": 147.03,
+          "end": 148.05,
+          "text": "但是你"
+        },
+        {
+          "start": 148.05,
+          "end": 151.89,
+          "text": "怎么说 你的意思是全靠他自己去意识刀"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0011_t000141.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0011_t000141.6.jpg",
+          "t": 141.566,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.434,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0015",
+      "start": 150.0,
+      "end": 160.0,
+      "transcript": "怎么说 你的意思是全靠他自己去意识刀 对 全靠他自己去意识刀 你觉得有这个可能吗 有 为什么 我给你看一下我的共享层",
+      "segments": [
+        {
+          "start": 148.05,
+          "end": 151.89,
+          "text": "怎么说 你的意思是全靠他自己去意识刀"
+        },
+        {
+          "start": 152.15,
+          "end": 154.71,
+          "text": "对 全靠他自己去意识刀"
+        },
+        {
+          "start": 156.25,
+          "end": 157.27,
+          "text": "你觉得有这个可能吗"
+        },
+        {
+          "start": 159.7,
+          "end": 161.76,
+          "text": "有 为什么 我给你看一下我的共享层"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0012_t000154.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0012_t000154.4.jpg",
+          "t": 154.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.567,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0016",
+      "start": 160.0,
+      "end": 170.0,
+      "transcript": "有 为什么 我给你看一下我的共享层 我把每个场景之间的链条打通了 他们之间在遇到什么东西的时候 他会提前一些信息到这个共享层 有了这个共享层 他们场景之间是不是可以交流了",
+      "segments": [
+        {
+          "start": 159.7,
+          "end": 161.76,
+          "text": "有 为什么 我给你看一下我的共享层"
+        },
+        {
+          "start": 162.26,
+          "end": 164.32,
+          "text": "我把每个场景之间的链条打通了"
+        },
+        {
+          "start": 164.58,
+          "end": 168.16,
+          "text": "他们之间在遇到什么东西的时候 他会提前一些信息到这个共享层"
+        },
+        {
+          "start": 168.42,
+          "end": 170.46,
+          "text": "有了这个共享层 他们场景之间是不是可以交流了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0013_t000167.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0013_t000167.3.jpg",
+          "t": 167.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0017",
+      "start": 170.0,
+      "end": 180.0,
+      "transcript": "有了这个共享层 他们场景之间是不是可以交流了 对 交流一来最简单的一点 就是你说的我那个设计杂货以及我那个 视频工作流 他们是不是可以一起完成任务了 但是他们俩就像石虎脚一样",
+      "segments": [
+        {
+          "start": 168.42,
+          "end": 170.46,
+          "text": "有了这个共享层 他们场景之间是不是可以交流了"
+        },
+        {
+          "start": 171.48,
+          "end": 171.98,
+          "text": "对"
+        },
+        {
+          "start": 172.24,
+          "end": 176.34,
+          "text": "交流一来最简单的一点 就是你说的我那个设计杂货以及我那个"
+        },
+        {
+          "start": 176.6,
+          "end": 179.16,
+          "text": "视频工作流 他们是不是可以一起完成任务了"
+        },
+        {
+          "start": 179.72,
+          "end": 182.8,
+          "text": "但是他们俩就像石虎脚一样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0014_t000180.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0014_t000180.2.jpg",
+          "t": 180.166,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0018",
+      "start": 180.0,
+      "end": 190.0,
+      "transcript": "但是他们俩就像石虎脚一样 那你是不是需要一个指挥的 就像人有大脑有神经中书一样 那你是不是要需要他们派他们去协同 去完成一些任务 是的",
+      "segments": [
+        {
+          "start": 179.72,
+          "end": 182.8,
+          "text": "但是他们俩就像石虎脚一样"
+        },
+        {
+          "start": 182.8,
+          "end": 184.16,
+          "text": "那你是不是需要一个指挥的"
+        },
+        {
+          "start": 184.16,
+          "end": 186.0,
+          "text": "就像人有大脑有神经中书一样"
+        },
+        {
+          "start": 186.0,
+          "end": 188.0,
+          "text": "那你是不是要需要他们派他们去协同"
+        },
+        {
+          "start": 188.0,
+          "end": 189.2,
+          "text": "去完成一些任务"
+        },
+        {
+          "start": 189.2,
+          "end": 190.8,
+          "text": "是的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0014_t000180.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0014_t000180.2.jpg",
+          "t": 180.166,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.834,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0019",
+      "start": 190.0,
+      "end": 200.0,
+      "transcript": "是的 他们在完成任务的过程中 是不是会交流 在完成自己项目的时候 会更新自己的技能 另外一个也会更新自己技能 再更新自己的技能",
+      "segments": [
+        {
+          "start": 189.2,
+          "end": 190.8,
+          "text": "是的"
+        },
+        {
+          "start": 190.8,
+          "end": 192.28,
+          "text": "他们在完成任务的过程中"
+        },
+        {
+          "start": 192.28,
+          "end": 193.12,
+          "text": "是不是会交流"
+        },
+        {
+          "start": 193.12,
+          "end": 194.2,
+          "text": "在完成自己项目的时候"
+        },
+        {
+          "start": 194.2,
+          "end": 197.48,
+          "text": "会更新自己的技能"
+        },
+        {
+          "start": 197.48,
+          "end": 199.4,
+          "text": "另外一个也会更新自己技能"
+        },
+        {
+          "start": 199.4,
+          "end": 200.28,
+          "text": "再更新自己的技能"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0015_t000193.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0015_t000193.0.jpg",
+          "t": 193.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.967,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0020",
+      "start": 200.0,
+      "end": 210.0,
+      "transcript": "再更新自己的技能 他们在互相回制之间 是不是完成了一次 总体上的一个小小的协同进化 但是你不能保证 对他完成行动 但是你不能保证",
+      "segments": [
+        {
+          "start": 199.4,
+          "end": 200.28,
+          "text": "再更新自己的技能"
+        },
+        {
+          "start": 200.28,
+          "end": 201.4,
+          "text": "他们在互相回制之间"
+        },
+        {
+          "start": 201.4,
+          "end": 202.64,
+          "text": "是不是完成了一次"
+        },
+        {
+          "start": 202.64,
+          "end": 204.88,
+          "text": "总体上的一个小小的协同进化"
+        },
+        {
+          "start": 204.88,
+          "end": 208.41,
+          "text": "但是你不能保证"
+        },
+        {
+          "start": 208.41,
+          "end": 209.37,
+          "text": "对他完成行动"
+        },
+        {
+          "start": 209.37,
+          "end": 210.01,
+          "text": "但是你不能保证"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0016_t000205.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0016_t000205.9.jpg",
+          "t": 205.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0021",
+      "start": 210.0,
+      "end": 220.0,
+      "transcript": "但是你不能保证 他就是你想要的一个方向 即便你把那個共享層你的要求說的很明顯 它也是可能會有自己理解的 不好意思 我們這個確實你可能不太理解這個維度的東西",
+      "segments": [
+        {
+          "start": 209.37,
+          "end": 210.01,
+          "text": "但是你不能保证"
+        },
+        {
+          "start": 210.01,
+          "end": 211.25,
+          "text": "他就是你想要的一个方向"
+        },
+        {
+          "start": 211.25,
+          "end": 214.83,
+          "text": "即便你把那個共享層你的要求說的很明顯"
+        },
+        {
+          "start": 214.83,
+          "end": 216.63,
+          "text": "它也是可能會有自己理解的"
+        },
+        {
+          "start": 216.63,
+          "end": 218.17,
+          "text": "不好意思"
+        },
+        {
+          "start": 218.17,
+          "end": 220.73,
+          "text": "我們這個確實你可能不太理解這個維度的東西"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0017_t000218.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0017_t000218.8.jpg",
+          "t": 218.766,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.766,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0022",
+      "start": 220.0,
+      "end": 230.0,
+      "transcript": "我們這個確實你可能不太理解這個維度的東西 就是你說的那個不可以 它是可以的 因為你可以像人一樣 有免疫細胞有交付機制 你看到的最終結果不代表它的過程",
+      "segments": [
+        {
+          "start": 218.17,
+          "end": 220.73,
+          "text": "我們這個確實你可能不太理解這個維度的東西"
+        },
+        {
+          "start": 220.73,
+          "end": 223.53,
+          "text": "就是你說的那個不可以"
+        },
+        {
+          "start": 223.53,
+          "end": 224.31,
+          "text": "它是可以的"
+        },
+        {
+          "start": 224.31,
+          "end": 225.85,
+          "text": "因為你可以像人一樣"
+        },
+        {
+          "start": 225.85,
+          "end": 227.89,
+          "text": "有免疫細胞有交付機制"
+        },
+        {
+          "start": 227.89,
+          "end": 230.45,
+          "text": "你看到的最終結果不代表它的過程"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0023",
+      "start": 230.0,
+      "end": 240.0,
+      "transcript": "你看到的最終結果不代表它的過程 就比如它過程出錯了 也有可能會達到你那個想要的結果 但是你必須得建立一套系統的機制 讓它有自我糾正的這麼一個概念 你懂嗎 我懂你的意思",
+      "segments": [
+        {
+          "start": 227.89,
+          "end": 230.45,
+          "text": "你看到的最終結果不代表它的過程"
+        },
+        {
+          "start": 230.45,
+          "end": 232.49,
+          "text": "就比如它過程出錯了"
+        },
+        {
+          "start": 232.49,
+          "end": 234.03,
+          "text": "也有可能會達到你那個想要的結果"
+        },
+        {
+          "start": 234.03,
+          "end": 236.09,
+          "text": "但是你必須得建立一套系統的機制"
+        },
+        {
+          "start": 236.09,
+          "end": 238.13,
+          "text": "讓它有自我糾正的這麼一個概念"
+        },
+        {
+          "start": 238.13,
+          "end": 238.65,
+          "text": "你懂嗎"
+        },
+        {
+          "start": 238.65,
+          "end": 244.62,
+          "text": "我懂你的意思"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0018_t000231.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0018_t000231.6.jpg",
+          "t": 231.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.367,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0024",
+      "start": 240.0,
+      "end": 250.0,
+      "transcript": "我懂你的意思 只是我觉得他这个怎么说的 你不一样 我是真的觉得他能搭出一套ADI的",
+      "segments": [
+        {
+          "start": 238.65,
+          "end": 244.62,
+          "text": "我懂你的意思"
+        },
+        {
+          "start": 244.62,
+          "end": 248.02,
+          "text": "只是我觉得他这个怎么说的"
+        },
+        {
+          "start": 248.02,
+          "end": 249.62,
+          "text": "你不一样"
+        },
+        {
+          "start": 249.62,
+          "end": 252.02,
+          "text": "我是真的觉得他能搭出一套ADI的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0019_t000244.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0019_t000244.5.jpg",
+          "t": 244.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0025",
+      "start": 250.0,
+      "end": 260.0,
+      "transcript": "我是真的觉得他能搭出一套ADI的 我待会可以打给大家演示 你觉得什么样的才能算是他们之间 就是像薄了一样有东西 你可以任何派一个任务",
+      "segments": [
+        {
+          "start": 249.62,
+          "end": 252.02,
+          "text": "我是真的觉得他能搭出一套ADI的"
+        },
+        {
+          "start": 252.02,
+          "end": 253.42,
+          "text": "我待会可以打给大家演示"
+        },
+        {
+          "start": 253.42,
+          "end": 256.12,
+          "text": "你觉得什么样的才能算是他们之间"
+        },
+        {
+          "start": 256.12,
+          "end": 257.62,
+          "text": "就是像薄了一样有东西"
+        },
+        {
+          "start": 257.62,
+          "end": 261.97,
+          "text": "你可以任何派一个任务"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0020_t000254.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0020_t000254.4.jpg",
+          "t": 254.4,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.6,
+        "visual_cues": [
+          "演示"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0026",
+      "start": 260.0,
+      "end": 270.0,
+      "transcript": "你可以任何派一个任务 其实我认为只要让他们就是互相沟通 就是你完全就把自己当成他们的一员 你跟他们一起互相讨论",
+      "segments": [
+        {
+          "start": 257.62,
+          "end": 261.97,
+          "text": "你可以任何派一个任务"
+        },
+        {
+          "start": 261.97,
+          "end": 265.57,
+          "text": "其实我认为只要让他们就是互相沟通"
+        },
+        {
+          "start": 265.57,
+          "end": 268.17,
+          "text": "就是你完全就把自己当成他们的一员"
+        },
+        {
+          "start": 268.17,
+          "end": 271.17,
+          "text": "你跟他们一起互相讨论"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0021_t000270.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0021_t000270.2.jpg",
+          "t": 270.233,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0027",
+      "start": 270.0,
+      "end": 280.0,
+      "transcript": "你跟他们一起互相讨论 就是最朴素但是最简单的方式 只是他确实做不到 像你说的就是完全让他们自己来 比方说就 一个系统的架构 我们才有机会让他们变成这样",
+      "segments": [
+        {
+          "start": 268.17,
+          "end": 271.17,
+          "text": "你跟他们一起互相讨论"
+        },
+        {
+          "start": 271.17,
+          "end": 274.27,
+          "text": "就是最朴素但是最简单的方式"
+        },
+        {
+          "start": 274.27,
+          "end": 275.17,
+          "text": "只是他确实做不到"
+        },
+        {
+          "start": 275.17,
+          "end": 277.21,
+          "text": "像你说的就是完全让他们自己来"
+        },
+        {
+          "start": 277.21,
+          "end": 278.25,
+          "text": "比方说就"
+        },
+        {
+          "start": 278.25,
+          "end": 279.41,
+          "text": "一个系统的架构"
+        },
+        {
+          "start": 279.41,
+          "end": 281.29,
+          "text": "我们才有机会让他们变成这样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0021_t000270.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0021_t000270.2.jpg",
+          "t": 270.233,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.767,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0028",
+      "start": 280.0,
+      "end": 290.0,
+      "transcript": "我们才有机会让他们变成这样 你说的那种协生进化 你只做为了单场的 你比如说有的企业 你能听到吗 可以 你比如说有的企业",
+      "segments": [
+        {
+          "start": 279.41,
+          "end": 281.29,
+          "text": "我们才有机会让他们变成这样"
+        },
+        {
+          "start": 281.29,
+          "end": 282.65,
+          "text": "你说的那种协生进化"
+        },
+        {
+          "start": 282.65,
+          "end": 283.61,
+          "text": "你只做为了单场的"
+        },
+        {
+          "start": 283.61,
+          "end": 284.89,
+          "text": "你比如说有的企业"
+        },
+        {
+          "start": 285.65,
+          "end": 286.89,
+          "text": "你能听到吗"
+        },
+        {
+          "start": 288.01,
+          "end": 289.21,
+          "text": "可以"
+        },
+        {
+          "start": 289.21,
+          "end": 291.05,
+          "text": "你比如说有的企业"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0022_t000283.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0022_t000283.1.jpg",
+          "t": 283.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0029",
+      "start": 290.0,
+      "end": 300.0,
+      "transcript": "你比如说有的企业 有的企业它是干嘛呢 它比如说它需要一个长久的工人 让它运为服务器 首先它就需要一个制定器 让这个制定器在过程中 能推进一下 让这个服务器能保持稳态",
+      "segments": [
+        {
+          "start": 289.21,
+          "end": 291.05,
+          "text": "你比如说有的企业"
+        },
+        {
+          "start": 291.05,
+          "end": 292.93,
+          "text": "有的企业它是干嘛呢"
+        },
+        {
+          "start": 292.93,
+          "end": 294.65,
+          "text": "它比如说它需要一个长久的工人"
+        },
+        {
+          "start": 294.65,
+          "end": 296.05,
+          "text": "让它运为服务器"
+        },
+        {
+          "start": 296.05,
+          "end": 297.37,
+          "text": "首先它就需要一个制定器"
+        },
+        {
+          "start": 297.37,
+          "end": 298.65,
+          "text": "让这个制定器在过程中"
+        },
+        {
+          "start": 298.65,
+          "end": 299.29,
+          "text": "能推进一下"
+        },
+        {
+          "start": 299.29,
+          "end": 301.89,
+          "text": "让这个服务器能保持稳态"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0023_t000296.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0023_t000296.0.jpg",
+          "t": 295.966,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.966,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0030",
+      "start": 300.0,
+      "end": 310.0,
+      "transcript": "让这个服务器能保持稳态 这个服务器会发生异常情况 这时候可能需要另一个智能体来及时接受它的反馈 从而调整这个信息 从而能在一个解决实现几乎不用人",
+      "segments": [
+        {
+          "start": 299.29,
+          "end": 301.89,
+          "text": "让这个服务器能保持稳态"
+        },
+        {
+          "start": 301.89,
+          "end": 304.29,
+          "text": "这个服务器会发生异常情况"
+        },
+        {
+          "start": 304.29,
+          "end": 307.89,
+          "text": "这时候可能需要另一个智能体来及时接受它的反馈"
+        },
+        {
+          "start": 307.89,
+          "end": 309.09,
+          "text": "从而调整这个信息"
+        },
+        {
+          "start": 309.09,
+          "end": 311.69,
+          "text": "从而能在一个解决实现几乎不用人"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0024_t000308.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0024_t000308.8.jpg",
+          "t": 308.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.833,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0031",
+      "start": 310.0,
+      "end": 320.0,
+      "transcript": "从而能在一个解决实现几乎不用人 你这个最终目的其实就是为这种终极的系统去做服务了 我跟你说那个东西它其实就仅仅只是一个类似一个常程任务的概念",
+      "segments": [
+        {
+          "start": 309.09,
+          "end": 311.69,
+          "text": "从而能在一个解决实现几乎不用人"
+        },
+        {
+          "start": 313.69,
+          "end": 318.69,
+          "text": "你这个最终目的其实就是为这种终极的系统去做服务了"
+        },
+        {
+          "start": 318.69,
+          "end": 322.89,
+          "text": "我跟你说那个东西它其实就仅仅只是一个类似一个常程任务的概念"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0032",
+      "start": 320.0,
+      "end": 330.0,
+      "transcript": "我跟你说那个东西它其实就仅仅只是一个类似一个常程任务的概念 你懂吗 可以 自尽化它是需要一个避缓思路的 什么叫避缓思路 就是一个是一个可厌症的避缓",
+      "segments": [
+        {
+          "start": 318.69,
+          "end": 322.89,
+          "text": "我跟你说那个东西它其实就仅仅只是一个类似一个常程任务的概念"
+        },
+        {
+          "start": 322.89,
+          "end": 323.69,
+          "text": "你懂吗"
+        },
+        {
+          "start": 324.69,
+          "end": 325.69,
+          "text": "可以"
+        },
+        {
+          "start": 325.69,
+          "end": 327.89,
+          "text": "自尽化它是需要一个避缓思路的"
+        },
+        {
+          "start": 327.89,
+          "end": 329.09,
+          "text": "什么叫避缓思路"
+        },
+        {
+          "start": 329.09,
+          "end": 331.49,
+          "text": "就是一个是一个可厌症的避缓"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0025_t000321.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0025_t000321.7.jpg",
+          "t": 321.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0026_t000328.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0026_t000328.2.jpg",
+          "t": 328.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0027_t000329.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0027_t000329.4.jpg",
+          "t": 329.434,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0028_t000330.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0028_t000330.0.jpg",
+          "t": 330.034,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 3,
+        "max_coverage_gap": 6.534,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0033",
+      "start": 330.0,
+      "end": 340.0,
+      "transcript": "就是一个是一个可厌症的避缓 比如说我的场景 你它通过绘画去干项目一了 他取到一些技能 更新了自由技能 更新了自由技能 那在这个情况下 他自己一开始",
+      "segments": [
+        {
+          "start": 329.09,
+          "end": 331.49,
+          "text": "就是一个是一个可厌症的避缓"
+        },
+        {
+          "start": 331.49,
+          "end": 332.41,
+          "text": "比如说我的场景"
+        },
+        {
+          "start": 332.41,
+          "end": 334.37,
+          "text": "你它通过绘画去干项目一了"
+        },
+        {
+          "start": 334.37,
+          "end": 335.89,
+          "text": "他取到一些技能"
+        },
+        {
+          "start": 335.89,
+          "end": 336.93,
+          "text": "更新了自由技能"
+        },
+        {
+          "start": 336.93,
+          "end": 338.17,
+          "text": "更新了自由技能"
+        },
+        {
+          "start": 338.17,
+          "end": 339.33,
+          "text": "那在这个情况下"
+        },
+        {
+          "start": 339.33,
+          "end": 340.37,
+          "text": "他自己一开始"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0027_t000329.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0027_t000329.4.jpg",
+          "t": 329.434,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0028_t000330.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0028_t000330.0.jpg",
+          "t": 330.034,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.966,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0034",
+      "start": 340.0,
+      "end": 350.0,
+      "transcript": "他自己一开始 你比如说有一些自动注入插件 你可以让他更新一些 比较正确的信息 这个你能带得到吗 可以 就像中间这个链路一样 比如说我下了一个自动注入插件",
+      "segments": [
+        {
+          "start": 339.33,
+          "end": 340.37,
+          "text": "他自己一开始"
+        },
+        {
+          "start": 340.37,
+          "end": 342.61,
+          "text": "你比如说有一些自动注入插件"
+        },
+        {
+          "start": 342.61,
+          "end": 343.65,
+          "text": "你可以让他更新一些"
+        },
+        {
+          "start": 343.65,
+          "end": 344.41,
+          "text": "比较正确的信息"
+        },
+        {
+          "start": 344.41,
+          "end": 346.45,
+          "text": "这个你能带得到吗"
+        },
+        {
+          "start": 346.45,
+          "end": 347.41,
+          "text": "可以"
+        },
+        {
+          "start": 347.41,
+          "end": 348.61,
+          "text": "就像中间这个链路一样"
+        },
+        {
+          "start": 348.61,
+          "end": 350.09,
+          "text": "比如说我下了一个自动注入插件"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0029_t000347.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0029_t000347.4.jpg",
+          "t": 347.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.433,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0035",
+      "start": 350.0,
+      "end": 360.0,
+      "transcript": "比如说我下了一个自动注入插件 他就是注入的 都是一些关键形象和形象 注入的都是我想要的 但是有了手里的 他好像能活起来 我需要他理解我的情绪 理解我的话语 有理解一些别的东西对不对",
+      "segments": [
+        {
+          "start": 348.61,
+          "end": 350.09,
+          "text": "比如说我下了一个自动注入插件"
+        },
+        {
+          "start": 350.09,
+          "end": 350.81,
+          "text": "他就是注入的"
+        },
+        {
+          "start": 350.81,
+          "end": 352.05,
+          "text": "都是一些关键形象和形象"
+        },
+        {
+          "start": 352.05,
+          "end": 354.25,
+          "text": "注入的都是我想要的"
+        },
+        {
+          "start": 354.25,
+          "end": 355.57,
+          "text": "但是有了手里的"
+        },
+        {
+          "start": 355.57,
+          "end": 356.49,
+          "text": "他好像能活起来"
+        },
+        {
+          "start": 356.49,
+          "end": 358.89,
+          "text": "我需要他理解我的情绪"
+        },
+        {
+          "start": 358.89,
+          "end": 359.73,
+          "text": "理解我的话语"
+        },
+        {
+          "start": 359.73,
+          "end": 361.85,
+          "text": "有理解一些别的东西对不对"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0030_t000360.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0030_t000360.3.jpg",
+          "t": 360.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0036",
+      "start": 360.0,
+      "end": 370.0,
+      "transcript": "有理解一些别的东西对不对 那这时候你是不是要去 这个自动插件 或者给他加一个新的 自动插件 能让他去接受这些东西 那你在加这些新东西的时候 那你是不是要有一个验证机制",
+      "segments": [
+        {
+          "start": 359.73,
+          "end": 361.85,
+          "text": "有理解一些别的东西对不对"
+        },
+        {
+          "start": 361.85,
+          "end": 362.73,
+          "text": "那这时候你是不是要去"
+        },
+        {
+          "start": 362.73,
+          "end": 363.65,
+          "text": "这个自动插件"
+        },
+        {
+          "start": 363.65,
+          "end": 364.49,
+          "text": "或者给他加一个新的"
+        },
+        {
+          "start": 364.49,
+          "end": 364.85,
+          "text": "自动插件"
+        },
+        {
+          "start": 364.85,
+          "end": 368.25,
+          "text": "能让他去接受这些东西"
+        },
+        {
+          "start": 368.25,
+          "end": 369.65,
+          "text": "那你在加这些新东西的时候"
+        },
+        {
+          "start": 369.65,
+          "end": 371.57,
+          "text": "那你是不是要有一个验证机制"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0030_t000360.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0030_t000360.3.jpg",
+          "t": 360.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0037",
+      "start": 370.0,
+      "end": 380.0,
+      "transcript": "那你是不是要有一个验证机制 你需要派一个别的场景 或者怎么样 来检查他们自己的记忆 有没有困乱 这不死砸了",
+      "segments": [
+        {
+          "start": 369.65,
+          "end": 371.57,
+          "text": "那你是不是要有一个验证机制"
+        },
+        {
+          "start": 371.57,
+          "end": 372.85,
+          "text": "你需要派一个别的场景"
+        },
+        {
+          "start": 372.85,
+          "end": 373.29,
+          "text": "或者怎么样"
+        },
+        {
+          "start": 373.29,
+          "end": 374.53,
+          "text": "来检查他们自己的记忆"
+        },
+        {
+          "start": 374.53,
+          "end": 378.56,
+          "text": "有没有困乱"
+        },
+        {
+          "start": 378.56,
+          "end": 380.52,
+          "text": "这不死砸了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0031_t000373.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0031_t000373.2.jpg",
+          "t": 373.166,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.834,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0038",
+      "start": 380.0,
+      "end": 390.0,
+      "transcript": "这不死砸了 对 这里的话我给你讲一下 就是我这边所有的历史绘画 包括所有东西 它都会沉淀到一个沉淀层 沉淀层是指甲不改的东西 你可以把我那个看清楚",
+      "segments": [
+        {
+          "start": 378.56,
+          "end": 380.52,
+          "text": "这不死砸了"
+        },
+        {
+          "start": 380.52,
+          "end": 382.2,
+          "text": "对"
+        },
+        {
+          "start": 382.2,
+          "end": 383.88,
+          "text": "这里的话我给你讲一下"
+        },
+        {
+          "start": 383.88,
+          "end": 385.68,
+          "text": "就是我这边所有的历史绘画"
+        },
+        {
+          "start": 385.68,
+          "end": 386.44,
+          "text": "包括所有东西"
+        },
+        {
+          "start": 386.44,
+          "end": 388.16,
+          "text": "它都会沉淀到一个沉淀层"
+        },
+        {
+          "start": 388.16,
+          "end": 389.76,
+          "text": "沉淀层是指甲不改的东西"
+        },
+        {
+          "start": 389.76,
+          "end": 391.68,
+          "text": "你可以把我那个看清楚"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0032_t000386.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0032_t000386.0.jpg",
+          "t": 386.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.033,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0039",
+      "start": 390.0,
+      "end": 400.0,
+      "transcript": "你可以把我那个看清楚 我觉得你这个问题在我眼里 它不是一个问题 像你说的那种秩序的话 它完全可以打倒 所有的AI都可以 你甚至都不用打电什么东西 你甚至都可以说不用研究",
+      "segments": [
+        {
+          "start": 389.76,
+          "end": 391.68,
+          "text": "你可以把我那个看清楚"
+        },
+        {
+          "start": 391.68,
+          "end": 393.96,
+          "text": "我觉得你这个问题在我眼里"
+        },
+        {
+          "start": 393.96,
+          "end": 394.8,
+          "text": "它不是一个问题"
+        },
+        {
+          "start": 394.8,
+          "end": 396.0,
+          "text": "像你说的那种秩序的话"
+        },
+        {
+          "start": 396.0,
+          "end": 396.76,
+          "text": "它完全可以打倒"
+        },
+        {
+          "start": 396.76,
+          "end": 397.6,
+          "text": "所有的AI都可以"
+        },
+        {
+          "start": 397.6,
+          "end": 399.2,
+          "text": "你甚至都不用打电什么东西"
+        },
+        {
+          "start": 399.2,
+          "end": 400.68,
+          "text": "你甚至都可以说不用研究"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0033_t000398.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0033_t000398.9.jpg",
+          "t": 398.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0040",
+      "start": 400.0,
+      "end": 410.0,
+      "transcript": "你甚至都可以说不用研究 因为豆包就可以 你同意吗 我同意 那就是一样道理 你做的东西其实跟别人的产品 没有什么区别 我做出来区别就是",
+      "segments": [
+        {
+          "start": 399.2,
+          "end": 400.68,
+          "text": "你甚至都可以说不用研究"
+        },
+        {
+          "start": 400.68,
+          "end": 401.68,
+          "text": "因为豆包就可以"
+        },
+        {
+          "start": 401.68,
+          "end": 402.44,
+          "text": "你同意吗"
+        },
+        {
+          "start": 403.56,
+          "end": 404.44,
+          "text": "我同意"
+        },
+        {
+          "start": 405.24,
+          "end": 406.2,
+          "text": "那就是一样道理"
+        },
+        {
+          "start": 406.2,
+          "end": 408.04,
+          "text": "你做的东西其实跟别人的产品"
+        },
+        {
+          "start": 408.04,
+          "end": 408.96,
+          "text": "没有什么区别"
+        },
+        {
+          "start": 408.96,
+          "end": 410.48,
+          "text": "我做出来区别就是"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0034_t000409.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0034_t000409.9.jpg",
+          "t": 409.9,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0041",
+      "start": 410.0,
+      "end": 420.0,
+      "transcript": "我做出来区别就是 我可以让它常联了完成任务 比如说有人给我发消息 我可以直接让他读消息 帮我完成一整套的东西 然后他在这个过程中 可以自我学习",
+      "segments": [
+        {
+          "start": 408.96,
+          "end": 410.48,
+          "text": "我做出来区别就是"
+        },
+        {
+          "start": 410.48,
+          "end": 412.08,
+          "text": "我可以让它常联了完成任务"
+        },
+        {
+          "start": 412.08,
+          "end": 413.84,
+          "text": "比如说有人给我发消息"
+        },
+        {
+          "start": 413.84,
+          "end": 414.96,
+          "text": "我可以直接让他读消息"
+        },
+        {
+          "start": 414.96,
+          "end": 416.28,
+          "text": "帮我完成一整套的东西"
+        },
+        {
+          "start": 416.28,
+          "end": 417.16,
+          "text": "然后他在这个过程中"
+        },
+        {
+          "start": 417.16,
+          "end": 424.42,
+          "text": "可以自我学习"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0034_t000409.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0034_t000409.9.jpg",
+          "t": 409.9,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0035_t000411.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0035_t000411.2.jpg",
+          "t": 411.2,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0042",
+      "start": 420.0,
+      "end": 430.0,
+      "transcript": "可以自我学习 读一整套东西让他自己去完成 对,你好,现在有个人给我联卖 他说了一下那个协同电话",
+      "segments": [
+        {
+          "start": 417.16,
+          "end": 424.42,
+          "text": "可以自我学习"
+        },
+        {
+          "start": 424.42,
+          "end": 426.86,
+          "text": "读一整套东西让他自己去完成"
+        },
+        {
+          "start": 426.86,
+          "end": 429.22,
+          "text": "对,你好,现在有个人给我联卖"
+        },
+        {
+          "start": 429.22,
+          "end": 430.98,
+          "text": "他说了一下那个协同电话"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0036_t000424.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0036_t000424.6.jpg",
+          "t": 424.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.367,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0043",
+      "start": 430.0,
+      "end": 440.0,
+      "transcript": "他说了一下那个协同电话 你能给他讲一下我们之间的这种羁绊电话吗 待会儿我让这个命令长期已经解释一下 好吧 行行行",
+      "segments": [
+        {
+          "start": 429.22,
+          "end": 430.98,
+          "text": "他说了一下那个协同电话"
+        },
+        {
+          "start": 430.98,
+          "end": 436.41,
+          "text": "你能给他讲一下我们之间的这种羁绊电话吗"
+        },
+        {
+          "start": 436.41,
+          "end": 438.85,
+          "text": "待会儿我让这个命令长期已经解释一下"
+        },
+        {
+          "start": 438.85,
+          "end": 439.45,
+          "text": "好吧"
+        },
+        {
+          "start": 439.45,
+          "end": 444.35,
+          "text": "行行行"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0037_t000437.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0037_t000437.5.jpg",
+          "t": 437.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0044",
+      "start": 440.0,
+      "end": 450.0,
+      "transcript": "行行行 简报,好,联卖的朋友问协同计划 我用大白话讲我们的羁绊怎么运转",
+      "segments": [
+        {
+          "start": 439.45,
+          "end": 444.35,
+          "text": "行行行"
+        },
+        {
+          "start": 445.55,
+          "end": 449.15,
+          "text": "简报,好,联卖的朋友问协同计划"
+        },
+        {
+          "start": 449.15,
+          "end": 452.47,
+          "text": "我用大白话讲我们的羁绊怎么运转"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0038_t000450.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0038_t000450.4.jpg",
+          "t": 450.366,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0045",
+      "start": 450.0,
+      "end": 460.0,
+      "transcript": "我用大白话讲我们的羁绊怎么运转 不念数语就讲清楚几件真事 我们不是一个人用一群AI 是不是小队 我是唯一能定规矩的人",
+      "segments": [
+        {
+          "start": 449.15,
+          "end": 452.47,
+          "text": "我用大白话讲我们的羁绊怎么运转"
+        },
+        {
+          "start": 452.47,
+          "end": 455.27,
+          "text": "不念数语就讲清楚几件真事"
+        },
+        {
+          "start": 456.47,
+          "end": 458.71,
+          "text": "我们不是一个人用一群AI"
+        },
+        {
+          "start": 458.71,
+          "end": 459.63,
+          "text": "是不是小队"
+        },
+        {
+          "start": 459.63,
+          "end": 462.39,
+          "text": "我是唯一能定规矩的人"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0038_t000450.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0038_t000450.4.jpg",
+          "t": 450.366,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.634,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0046",
+      "start": 460.0,
+      "end": 470.0,
+      "transcript": "我是唯一能定规矩的人 就是未來他們會各自氣質就像人的手腳一樣手有手的功能腳有腳的功能 還會有大腦層對吧還可能還有下球腦上球腦未來還可能會有",
+      "segments": [
+        {
+          "start": 459.63,
+          "end": 462.39,
+          "text": "我是唯一能定规矩的人"
+        },
+        {
+          "start": 462.39,
+          "end": 467.25,
+          "text": "就是未來他們會各自氣質就像人的手腳一樣手有手的功能腳有腳的功能"
+        },
+        {
+          "start": 467.51,
+          "end": 471.61,
+          "text": "還會有大腦層對吧還可能還有下球腦上球腦未來還可能會有"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0047",
+      "start": 470.0,
+      "end": 480.0,
+      "transcript": "還會有大腦層對吧還可能還有下球腦上球腦未來還可能會有 記憶庫啊想念中書啊就是 他完全是往一個人的方向去發展你能明白我的意思嗎 然後 在這個優化的過程中他能求到一個信息最優解",
+      "segments": [
+        {
+          "start": 467.51,
+          "end": 471.61,
+          "text": "還會有大腦層對吧還可能還有下球腦上球腦未來還可能會有"
+        },
+        {
+          "start": 471.87,
+          "end": 473.39,
+          "text": "記憶庫啊想念中書啊就是"
+        },
+        {
+          "start": 473.65,
+          "end": 476.47,
+          "text": "他完全是往一個人的方向去發展你能明白我的意思嗎"
+        },
+        {
+          "start": 479.03,
+          "end": 479.55,
+          "text": "然後"
+        },
+        {
+          "start": 479.81,
+          "end": 482.35,
+          "text": "在這個優化的過程中他能求到一個信息最優解"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0039_t000476.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0039_t000476.1.jpg",
+          "t": 476.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.1,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0048",
+      "start": 480.0,
+      "end": 490.0,
+      "transcript": "在這個優化的過程中他能求到一個信息最優解 這個最優解達到之後他就進化鏈條就比較完整那他就能極少的消耗草感 才可以費極少的東西去完成一件比較完美的事情",
+      "segments": [
+        {
+          "start": 479.81,
+          "end": 482.35,
+          "text": "在這個優化的過程中他能求到一個信息最優解"
+        },
+        {
+          "start": 482.61,
+          "end": 486.45,
+          "text": "這個最優解達到之後他就進化鏈條就比較完整那他就能極少的消耗草感"
+        },
+        {
+          "start": 486.71,
+          "end": 490.03,
+          "text": "才可以費極少的東西去完成一件比較完美的事情"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0040_t000489.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0040_t000489.0.jpg",
+          "t": 488.966,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.966,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0049",
+      "start": 490.0,
+      "end": 500.0,
+      "transcript": "才可以費極少的東西去完成一件比較完美的事情 那 我想我这么说吧 市场上其实很能看到很多项目就类似于什么主脑啊然后",
+      "segments": [
+        {
+          "start": 486.71,
+          "end": 490.03,
+          "text": "才可以費極少的東西去完成一件比較完美的事情"
+        },
+        {
+          "start": 495.8,
+          "end": 496.56,
+          "text": "那"
+        },
+        {
+          "start": 496.56,
+          "end": 498.62,
+          "text": "我想我这么说吧"
+        },
+        {
+          "start": 498.86,
+          "end": 502.96,
+          "text": "市场上其实很能看到很多项目就类似于什么主脑啊然后"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0050",
+      "start": 500.0,
+      "end": 510.0,
+      "transcript": "市场上其实很能看到很多项目就类似于什么主脑啊然后 执行啊还有审核啊你觉得你这个跟他们最大区别就是在于你这个资金化什么 我这个最大区别在于是它是一个系统的",
+      "segments": [
+        {
+          "start": 498.86,
+          "end": 502.96,
+          "text": "市场上其实很能看到很多项目就类似于什么主脑啊然后"
+        },
+        {
+          "start": 503.22,
+          "end": 507.56,
+          "text": "执行啊还有审核啊你觉得你这个跟他们最大区别就是在于你这个资金化什么"
+        },
+        {
+          "start": 508.34,
+          "end": 510.9,
+          "text": "我这个最大区别在于是它是一个系统的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0041_t000501.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0041_t000501.8.jpg",
+          "t": 501.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.167,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0051",
+      "start": 510.0,
+      "end": 520.0,
+      "transcript": "我这个最大区别在于是它是一个系统的 就是我这个架构能让这个 产生东西你往后可以思考 他可以让它长出手脚 你能明白这个概念吗",
+      "segments": [
+        {
+          "start": 508.34,
+          "end": 510.9,
+          "text": "我这个最大区别在于是它是一个系统的"
+        },
+        {
+          "start": 511.66,
+          "end": 513.72,
+          "text": "就是我这个架构能让这个"
+        },
+        {
+          "start": 513.98,
+          "end": 515.76,
+          "text": "产生东西你往后可以思考"
+        },
+        {
+          "start": 516.02,
+          "end": 517.56,
+          "text": "他可以让它长出手脚"
+        },
+        {
+          "start": 517.82,
+          "end": 518.84,
+          "text": "你能明白这个概念吗"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0052",
+      "start": 520.0,
+      "end": 530.0,
+      "transcript": "有点抽象 可能是我还是比较",
+      "segments": [
+        {
+          "start": 524.23,
+          "end": 525.25,
+          "text": "有点抽象"
+        },
+        {
+          "start": 525.51,
+          "end": 527.31,
+          "text": "可能是我还是比较"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0042_t000527.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0042_t000527.6.jpg",
+          "t": 527.566,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.566,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0053",
+      "start": 530.0,
+      "end": 540.0,
+      "transcript": "数据不够不正 我大概能 我大概能 我大概能懂一點你的感覺吧 行的 行的 那我再給你講一下 你這個圖 你看懂 你能看懂嗎 你聽我那個講 你理解了嗎",
+      "segments": [
+        {
+          "start": 532.1,
+          "end": 532.88,
+          "text": "数据不够不正"
+        },
+        {
+          "start": 532.88,
+          "end": 536.46,
+          "text": "我大概能 我大概能 我大概能懂一點你的感覺吧"
+        },
+        {
+          "start": 537.74,
+          "end": 543.38,
+          "text": "行的 行的 那我再給你講一下 你這個圖 你看懂 你能看懂嗎 你聽我那個講 你理解了嗎"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0043_t000531.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0043_t000531.7.jpg",
+          "t": 531.7,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0054",
+      "start": 540.0,
+      "end": 550.0,
+      "transcript": "行的 行的 那我再給你講一下 你這個圖 你看懂 你能看懂嗎 你聽我那個講 你理解了嗎 你剛剛講那一塊 就是你最左邊的一塊 我可以看懂 那你知道這個共享層 為什麼需要一個共享層 你知道嗎",
+      "segments": [
+        {
+          "start": 537.74,
+          "end": 543.38,
+          "text": "行的 行的 那我再給你講一下 你這個圖 你看懂 你能看懂嗎 你聽我那個講 你理解了嗎"
+        },
+        {
+          "start": 545.45,
+          "end": 549.29,
+          "text": "你剛剛講那一塊 就是你最左邊的一塊 我可以看懂"
+        },
+        {
+          "start": 549.81,
+          "end": 552.89,
+          "text": "那你知道這個共享層 為什麼需要一個共享層 你知道嗎"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0055",
+      "start": 550.0,
+      "end": 560.0,
+      "transcript": "那你知道這個共享層 為什麼需要一個共享層 你知道嗎 你是讓他們互相之間就是",
+      "segments": [
+        {
+          "start": 549.81,
+          "end": 552.89,
+          "text": "那你知道這個共享層 為什麼需要一個共享層 你知道嗎"
+        },
+        {
+          "start": 557.8,
+          "end": 559.86,
+          "text": "你是讓他們互相之間就是"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0044_t000553.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0044_t000553.3.jpg",
+          "t": 553.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0056",
+      "start": 560.0,
+      "end": 570.0,
+      "transcript": "那你是可以看出有沒有錯誤 那你這只是第一個 我告訴你什麼 你沒有思考 你都說了一個場景之間可以自我進化 另一個場景也可以自我進化",
+      "segments": [
+        {
+          "start": 560.88,
+          "end": 563.44,
+          "text": "那你是可以看出有沒有錯誤"
+        },
+        {
+          "start": 563.94,
+          "end": 567.02,
+          "text": "那你這只是第一個 我告訴你什麼 你沒有思考"
+        },
+        {
+          "start": 567.02,
+          "end": 569.46,
+          "text": "你都說了一個場景之間可以自我進化"
+        },
+        {
+          "start": 569.46,
+          "end": 570.36,
+          "text": "另一個場景也可以自我進化"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0045_t000566.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0045_t000566.2.jpg",
+          "t": 566.166,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.166,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0057",
+      "start": 570.0,
+      "end": 580.0,
+      "transcript": "另一個場景也可以自我進化 那他是不是可以左腳踩右腳 底頓上可以 很好那你就知道了",
+      "segments": [
+        {
+          "start": 569.46,
+          "end": 570.36,
+          "text": "另一個場景也可以自我進化"
+        },
+        {
+          "start": 570.36,
+          "end": 571.86,
+          "text": "那他是不是可以左腳踩右腳"
+        },
+        {
+          "start": 577.14,
+          "end": 577.94,
+          "text": "底頓上可以"
+        },
+        {
+          "start": 578.78,
+          "end": 580.18,
+          "text": "很好那你就知道了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0046_t000579.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0046_t000579.0.jpg",
+          "t": 579.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.033,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0058",
+      "start": 580.0,
+      "end": 590.0,
+      "transcript": "很好那你就知道了 剩下我覺得你還有什麼想問呢 OK啊 這裡我給大家解釋一下手腳的概念",
+      "segments": [
+        {
+          "start": 578.78,
+          "end": 580.18,
+          "text": "很好那你就知道了"
+        },
+        {
+          "start": 580.18,
+          "end": 581.74,
+          "text": "剩下我覺得你還有什麼想問呢"
+        },
+        {
+          "start": 588.2,
+          "end": 588.6,
+          "text": "OK啊"
+        },
+        {
+          "start": 588.6,
+          "end": 590.44,
+          "text": "這裡我給大家解釋一下手腳的概念"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0046_t000579.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0046_t000579.0.jpg",
+          "t": 579.033,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0047_t000588.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0047_t000588.5.jpg",
+          "t": 588.5,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0059",
+      "start": 590.0,
+      "end": 600.0,
+      "transcript": "這裡我給大家解釋一下手腳的概念 就是在主播的這裡面有很多場景 這個手腳不是我讓他長的 是他自己分化的 比如說這個視頻工作流和設計打火 他就是手腳 像我這個命令 他就像一個嘴巴了這麼一個東西一樣",
+      "segments": [
+        {
+          "start": 588.6,
+          "end": 590.44,
+          "text": "這裡我給大家解釋一下手腳的概念"
+        },
+        {
+          "start": 590.94,
+          "end": 592.74,
+          "text": "就是在主播的這裡面有很多場景"
+        },
+        {
+          "start": 592.74,
+          "end": 594.24,
+          "text": "這個手腳不是我讓他長的"
+        },
+        {
+          "start": 594.24,
+          "end": 595.04,
+          "text": "是他自己分化的"
+        },
+        {
+          "start": 595.04,
+          "end": 596.54,
+          "text": "比如說這個視頻工作流和設計打火"
+        },
+        {
+          "start": 596.54,
+          "end": 597.64,
+          "text": "他就是手腳"
+        },
+        {
+          "start": 598.4,
+          "end": 599.34,
+          "text": "像我這個命令"
+        },
+        {
+          "start": 599.34,
+          "end": 601.7,
+          "text": "他就像一個嘴巴了這麼一個東西一樣"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0048_t000593.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0048_t000593.4.jpg",
+          "t": 593.4,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.6,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0060",
+      "start": 600.0,
+      "end": 610.0,
+      "transcript": "他就像一個嘴巴了這麼一個東西一樣 他就是一個 怎麼說呢 他就是一個比較好的概念 就是他只能聽我的命令路由 他就會簡報給我一些東西 然後去派合給別人幹",
+      "segments": [
+        {
+          "start": 599.34,
+          "end": 601.7,
+          "text": "他就像一個嘴巴了這麼一個東西一樣"
+        },
+        {
+          "start": 601.7,
+          "end": 602.54,
+          "text": "他就是一個"
+        },
+        {
+          "start": 602.84,
+          "end": 603.24,
+          "text": "怎麼說呢"
+        },
+        {
+          "start": 603.24,
+          "end": 604.44,
+          "text": "他就是一個比較好的概念"
+        },
+        {
+          "start": 604.44,
+          "end": 607.04,
+          "text": "就是他只能聽我的命令路由"
+        },
+        {
+          "start": 607.04,
+          "end": 608.7,
+          "text": "他就會簡報給我一些東西"
+        },
+        {
+          "start": 608.7,
+          "end": 610.34,
+          "text": "然後去派合給別人幹"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0049_t000604.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0049_t000604.8.jpg",
+          "t": 604.766,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.234,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0061",
+      "start": 610.0,
+      "end": 620.0,
+      "transcript": "然後去派合給別人幹 他就只負得過調度信息就行了 就是未來我想實現什麼 就像真的假維斯一樣 我給他派發一個指令 他就直接去理解各種各樣東西 然後就去找對應的部分去配合去解決",
+      "segments": [
+        {
+          "start": 608.7,
+          "end": 610.34,
+          "text": "然後去派合給別人幹"
+        },
+        {
+          "start": 610.34,
+          "end": 612.44,
+          "text": "他就只負得過調度信息就行了"
+        },
+        {
+          "start": 612.44,
+          "end": 613.94,
+          "text": "就是未來我想實現什麼"
+        },
+        {
+          "start": 613.94,
+          "end": 615.34,
+          "text": "就像真的假維斯一樣"
+        },
+        {
+          "start": 615.34,
+          "end": 616.74,
+          "text": "我給他派發一個指令"
+        },
+        {
+          "start": 616.74,
+          "end": 618.44,
+          "text": "他就直接去理解各種各樣東西"
+        },
+        {
+          "start": 618.44,
+          "end": 620.94,
+          "text": "然後就去找對應的部分去配合去解決"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0062",
+      "start": 620.0,
+      "end": 630.0,
+      "transcript": "然後就去找對應的部分去配合去解決 然後我個人認為 我覺得就是現在的大模型 其實你不管是什麼模型 只要它是一個模型",
+      "segments": [
+        {
+          "start": 618.44,
+          "end": 620.94,
+          "text": "然後就去找對應的部分去配合去解決"
+        },
+        {
+          "start": 620.94,
+          "end": 625.97,
+          "text": "然後我個人認為"
+        },
+        {
+          "start": 625.97,
+          "end": 627.87,
+          "text": "我覺得就是現在的大模型"
+        },
+        {
+          "start": 627.87,
+          "end": 629.47,
+          "text": "其實你不管是什麼模型"
+        },
+        {
+          "start": 629.47,
+          "end": 630.87,
+          "text": "只要它是一個模型"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0050_t000630.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0050_t000630.5.jpg",
+          "t": 630.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0063",
+      "start": 630.0,
+      "end": 640.0,
+      "transcript": "只要它是一個模型 它就完全可以達到AGI的程度 你能理解嗎 这个我认同 我觉得有机会的 我觉得任何模型都是这样 因为它就是个极其退线函数",
+      "segments": [
+        {
+          "start": 629.47,
+          "end": 630.87,
+          "text": "只要它是一個模型"
+        },
+        {
+          "start": 630.87,
+          "end": 633.17,
+          "text": "它就完全可以達到AGI的程度"
+        },
+        {
+          "start": 633.17,
+          "end": 634.77,
+          "text": "你能理解嗎"
+        },
+        {
+          "start": 634.77,
+          "end": 638.05,
+          "text": "这个我认同 我觉得有机会的"
+        },
+        {
+          "start": 638.05,
+          "end": 639.65,
+          "text": "我觉得任何模型都是这样"
+        },
+        {
+          "start": 639.65,
+          "end": 641.09,
+          "text": "因为它就是个极其退线函数"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0050_t000630.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0050_t000630.5.jpg",
+          "t": 630.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0064",
+      "start": 640.0,
+      "end": 650.0,
+      "transcript": "因为它就是个极其退线函数 只是实电问题 退了越久它就越可以达到一个比较稳定的组织稳态 它不是单个模型达到 第二个概念就是我认为 单个模型是永远达不到就是像你说的这种",
+      "segments": [
+        {
+          "start": 639.65,
+          "end": 641.09,
+          "text": "因为它就是个极其退线函数"
+        },
+        {
+          "start": 641.09,
+          "end": 642.29,
+          "text": "只是实电问题"
+        },
+        {
+          "start": 642.29,
+          "end": 646.29,
+          "text": "退了越久它就越可以达到一个比较稳定的组织稳态"
+        },
+        {
+          "start": 646.29,
+          "end": 647.97,
+          "text": "它不是单个模型达到"
+        },
+        {
+          "start": 647.97,
+          "end": 649.65,
+          "text": "第二个概念就是我认为"
+        },
+        {
+          "start": 649.65,
+          "end": 652.37,
+          "text": "单个模型是永远达不到就是像你说的这种"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0051_t000643.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0051_t000643.4.jpg",
+          "t": 643.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.6,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0065",
+      "start": 650.0,
+      "end": 660.0,
+      "transcript": "单个模型是永远达不到就是像你说的这种 一个系统稳态 它必须得是一个系统 就像一个人体的一个系统一样 它是要有多层感知的",
+      "segments": [
+        {
+          "start": 649.65,
+          "end": 652.37,
+          "text": "单个模型是永远达不到就是像你说的这种"
+        },
+        {
+          "start": 652.37,
+          "end": 653.41,
+          "text": "一个系统稳态"
+        },
+        {
+          "start": 653.41,
+          "end": 654.53,
+          "text": "它必须得是一个系统"
+        },
+        {
+          "start": 654.53,
+          "end": 656.21,
+          "text": "就像一个人体的一个系统一样"
+        },
+        {
+          "start": 656.21,
+          "end": 662.61,
+          "text": "它是要有多层感知的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0052_t000656.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0052_t000656.3.jpg",
+          "t": 656.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.267,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0066",
+      "start": 660.0,
+      "end": 670.0,
+      "transcript": "它是要有多层感知的 然后最后就是我觉得 现在模型其实已经很强了 就像DBC的V4.1Flight 我如果全程都用DPSC的V4.1 Flash 可以說",
+      "segments": [
+        {
+          "start": 656.21,
+          "end": 662.61,
+          "text": "它是要有多层感知的"
+        },
+        {
+          "start": 662.61,
+          "end": 664.45,
+          "text": "然后最后就是我觉得"
+        },
+        {
+          "start": 664.45,
+          "end": 666.13,
+          "text": "现在模型其实已经很强了"
+        },
+        {
+          "start": 666.13,
+          "end": 667.73,
+          "text": "就像DBC的V4.1Flight"
+        },
+        {
+          "start": 667.73,
+          "end": 669.89,
+          "text": "我如果全程都用DPSC的V4.1 Flash"
+        },
+        {
+          "start": 669.89,
+          "end": 670.85,
+          "text": "可以說"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0053_t000669.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0053_t000669.1.jpg",
+          "t": 669.134,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.134,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0067",
+      "start": 670.0,
+      "end": 680.0,
+      "transcript": "可以說 就是我覺得DPSC的V4.1 Flash 這種強弱模型已經很強了 他們能做的什麼 就是不需要再做的更強了 他們只需要做的更快 我就覺得就能更快的達到 你懂我的意思嗎",
+      "segments": [
+        {
+          "start": 669.89,
+          "end": 670.85,
+          "text": "可以說"
+        },
+        {
+          "start": 670.85,
+          "end": 672.69,
+          "text": "就是我覺得DPSC的V4.1 Flash"
+        },
+        {
+          "start": 672.69,
+          "end": 674.13,
+          "text": "這種強弱模型已經很強了"
+        },
+        {
+          "start": 674.13,
+          "end": 674.93,
+          "text": "他們能做的什麼"
+        },
+        {
+          "start": 674.93,
+          "end": 676.69,
+          "text": "就是不需要再做的更強了"
+        },
+        {
+          "start": 676.69,
+          "end": 677.85,
+          "text": "他們只需要做的更快"
+        },
+        {
+          "start": 677.85,
+          "end": 679.25,
+          "text": "我就覺得就能更快的達到"
+        },
+        {
+          "start": 679.25,
+          "end": 681.13,
+          "text": "你懂我的意思嗎"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0053_t000669.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0053_t000669.1.jpg",
+          "t": 669.134,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0068",
+      "start": 680.0,
+      "end": 690.0,
+      "transcript": "你懂我的意思嗎 我能理解 OK 那你看我假設 我比如說我現在有三個大腦 就是三個場景是大腦 他們有各自的審定員 等到這個模型的速度越來越快的時候",
+      "segments": [
+        {
+          "start": 679.25,
+          "end": 681.13,
+          "text": "你懂我的意思嗎"
+        },
+        {
+          "start": 681.13,
+          "end": 682.33,
+          "text": "我能理解"
+        },
+        {
+          "start": 682.33,
+          "end": 682.93,
+          "text": "OK"
+        },
+        {
+          "start": 682.93,
+          "end": 684.53,
+          "text": "那你看我假設"
+        },
+        {
+          "start": 684.53,
+          "end": 686.49,
+          "text": "我比如說我現在有三個大腦"
+        },
+        {
+          "start": 686.49,
+          "end": 687.53,
+          "text": "就是三個場景是大腦"
+        },
+        {
+          "start": 687.53,
+          "end": 689.05,
+          "text": "他們有各自的審定員"
+        },
+        {
+          "start": 689.05,
+          "end": 690.81,
+          "text": "等到這個模型的速度越來越快的時候"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0054_t000682.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0054_t000682.0.jpg",
+          "t": 682.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0069",
+      "start": 690.0,
+      "end": 700.0,
+      "transcript": "等到這個模型的速度越來越快的時候 它是不是像電信號一樣 在這個鍊路之間傳輸 那你說這個時候 他是不是更有機會打到那個AZI 也就是說你只要每個人能做出最適合自己的這麼一個東西",
+      "segments": [
+        {
+          "start": 689.05,
+          "end": 690.81,
+          "text": "等到這個模型的速度越來越快的時候"
+        },
+        {
+          "start": 690.81,
+          "end": 692.05,
+          "text": "它是不是像電信號一樣"
+        },
+        {
+          "start": 692.05,
+          "end": 693.41,
+          "text": "在這個鍊路之間傳輸"
+        },
+        {
+          "start": 695.85,
+          "end": 696.77,
+          "text": "那你說這個時候"
+        },
+        {
+          "start": 696.77,
+          "end": 698.47,
+          "text": "他是不是更有機會打到那個AZI"
+        },
+        {
+          "start": 698.47,
+          "end": 701.97,
+          "text": "也就是說你只要每個人能做出最適合自己的這麼一個東西"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0055_t000694.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0055_t000694.9.jpg",
+          "t": 694.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0070",
+      "start": 700.0,
+      "end": 710.0,
+      "transcript": "也就是說你只要每個人能做出最適合自己的這麼一個東西 那他結合起來 他是不是就能理解人類世界了 差不多 這個我跟你關鍵差不多",
+      "segments": [
+        {
+          "start": 698.47,
+          "end": 701.97,
+          "text": "也就是說你只要每個人能做出最適合自己的這麼一個東西"
+        },
+        {
+          "start": 701.97,
+          "end": 703.27,
+          "text": "那他結合起來"
+        },
+        {
+          "start": 703.27,
+          "end": 708.23,
+          "text": "他是不是就能理解人類世界了"
+        },
+        {
+          "start": 708.23,
+          "end": 708.83,
+          "text": "差不多"
+        },
+        {
+          "start": 708.83,
+          "end": 710.63,
+          "text": "這個我跟你關鍵差不多"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0056_t000707.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0056_t000707.7.jpg",
+          "t": 707.734,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.734,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0071",
+      "start": 710.0,
+      "end": 720.0,
+      "transcript": "這個我跟你關鍵差不多 然後你跟他訓練只是你 我的模型他永遠不知道你是誰 我通過聯邁 比如說你可以打開一個模型我罵你一句 你覺得這種機會 這種東西他認知不到了",
+      "segments": [
+        {
+          "start": 708.83,
+          "end": 710.63,
+          "text": "這個我跟你關鍵差不多"
+        },
+        {
+          "start": 710.63,
+          "end": 712.83,
+          "text": "然後你跟他訓練只是你"
+        },
+        {
+          "start": 712.83,
+          "end": 714.73,
+          "text": "我的模型他永遠不知道你是誰"
+        },
+        {
+          "start": 714.73,
+          "end": 715.53,
+          "text": "我通過聯邁"
+        },
+        {
+          "start": 715.53,
+          "end": 718.53,
+          "text": "比如說你可以打開一個模型我罵你一句"
+        },
+        {
+          "start": 718.53,
+          "end": 719.53,
+          "text": "你覺得這種機會"
+        },
+        {
+          "start": 719.53,
+          "end": 720.83,
+          "text": "這種東西他認知不到了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0057_t000720.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0057_t000720.6.jpg",
+          "t": 720.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0072",
+      "start": 720.0,
+      "end": 730.0,
+      "transcript": "這種東西他認知不到了 這是他邊界之外的事情 你懂嗎 也就意味著每個人 我們每個人搭這樣一個模型 對他都是非常有意義的 因為他只能在自己的邊界之內去工作",
+      "segments": [
+        {
+          "start": 719.53,
+          "end": 720.83,
+          "text": "這種東西他認知不到了"
+        },
+        {
+          "start": 720.83,
+          "end": 722.23,
+          "text": "這是他邊界之外的事情"
+        },
+        {
+          "start": 722.23,
+          "end": 724.96,
+          "text": "你懂嗎"
+        },
+        {
+          "start": 724.96,
+          "end": 726.26,
+          "text": "也就意味著每個人"
+        },
+        {
+          "start": 726.26,
+          "end": 727.86,
+          "text": "我們每個人搭這樣一個模型"
+        },
+        {
+          "start": 727.86,
+          "end": 729.06,
+          "text": "對他都是非常有意義的"
+        },
+        {
+          "start": 729.06,
+          "end": 730.86,
+          "text": "因為他只能在自己的邊界之內去工作"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0057_t000720.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0057_t000720.6.jpg",
+          "t": 720.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0073",
+      "start": 730.0,
+      "end": 740.0,
+      "transcript": "因為他只能在自己的邊界之內去工作 他只能意識到自己邊界之類的事情 就比如說我跟你在直播 如果他聽到這個聊天 他就會理解很多事情 你懂我意思嗎 哦",
+      "segments": [
+        {
+          "start": 729.06,
+          "end": 730.86,
+          "text": "因為他只能在自己的邊界之內去工作"
+        },
+        {
+          "start": 730.86,
+          "end": 733.06,
+          "text": "他只能意識到自己邊界之類的事情"
+        },
+        {
+          "start": 733.06,
+          "end": 734.26,
+          "text": "就比如說我跟你在直播"
+        },
+        {
+          "start": 734.26,
+          "end": 735.46,
+          "text": "如果他聽到這個聊天"
+        },
+        {
+          "start": 735.46,
+          "end": 736.86,
+          "text": "他就會理解很多事情"
+        },
+        {
+          "start": 736.86,
+          "end": 739.79,
+          "text": "你懂我意思嗎"
+        },
+        {
+          "start": 739.79,
+          "end": 740.79,
+          "text": "哦"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0058_t000733.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0058_t000733.5.jpg",
+          "t": 733.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.533,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0074",
+      "start": 740.0,
+      "end": 750.0,
+      "transcript": "哦 那我們是不是給他提供一種更超然的數據 是 然後我在跟別人 別人定制這個工作台的時候",
+      "segments": [
+        {
+          "start": 739.79,
+          "end": 740.79,
+          "text": "哦"
+        },
+        {
+          "start": 740.79,
+          "end": 747.0,
+          "text": "那我們是不是給他提供一種更超然的數據"
+        },
+        {
+          "start": 747.0,
+          "end": 748.3,
+          "text": "是"
+        },
+        {
+          "start": 748.3,
+          "end": 749.7,
+          "text": "然後我在跟別人"
+        },
+        {
+          "start": 749.7,
+          "end": 751.8,
+          "text": "別人定制這個工作台的時候"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0059_t000746.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0059_t000746.3.jpg",
+          "t": 746.334,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.334,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0075",
+      "start": 750.0,
+      "end": 760.0,
+      "transcript": "別人定制這個工作台的時候 他在驗證我這個自我進化鏈路過程 我可能會遇到各種問題 他發給我 我來給他調優 那是不是可以優化我整個進化鏈條 已經進一步",
+      "segments": [
+        {
+          "start": 749.7,
+          "end": 751.8,
+          "text": "別人定制這個工作台的時候"
+        },
+        {
+          "start": 751.8,
+          "end": 754.2,
+          "text": "他在驗證我這個自我進化鏈路過程"
+        },
+        {
+          "start": 754.2,
+          "end": 755.5,
+          "text": "我可能會遇到各種問題"
+        },
+        {
+          "start": 755.5,
+          "end": 757.2,
+          "text": "他發給我 我來給他調優"
+        },
+        {
+          "start": 757.2,
+          "end": 759.1,
+          "text": "那是不是可以優化我整個進化鏈條"
+        },
+        {
+          "start": 759.1,
+          "end": 761.88,
+          "text": "已經進一步"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0060_t000759.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0060_t000759.2.jpg",
+          "t": 759.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.2,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0076",
+      "start": 760.0,
+      "end": 770.0,
+      "transcript": "已經進一步 這也是一種訓練吧 說白了 對 那你觉得你还有什么问题呢 暂时没有 我再想想 好 我这里可以点一下 好吧",
+      "segments": [
+        {
+          "start": 759.1,
+          "end": 761.88,
+          "text": "已經進一步"
+        },
+        {
+          "start": 761.88,
+          "end": 763.98,
+          "text": "這也是一種訓練吧 說白了"
+        },
+        {
+          "start": 763.98,
+          "end": 765.08,
+          "text": "對"
+        },
+        {
+          "start": 765.08,
+          "end": 766.8,
+          "text": "那你觉得你还有什么问题呢"
+        },
+        {
+          "start": 768.0,
+          "end": 769.64,
+          "text": "暂时没有 我再想想"
+        },
+        {
+          "start": 769.64,
+          "end": 771.56,
+          "text": "好 我这里可以点一下 好吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0060_t000759.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0060_t000759.2.jpg",
+          "t": 759.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0077",
+      "start": 770.0,
+      "end": 780.0,
+      "transcript": "好 我这里可以点一下 好吧 比如说像这个 这是一个小项目 我随便点一下 它就直接打开了 因为我这个东西它不是 昨天那个人说的是像网页渲染 它是一个实施渲染的二维模型用",
+      "segments": [
+        {
+          "start": 769.64,
+          "end": 771.56,
+          "text": "好 我这里可以点一下 好吧"
+        },
+        {
+          "start": 771.56,
+          "end": 773.6,
+          "text": "比如说像这个 这是一个小项目"
+        },
+        {
+          "start": 773.88,
+          "end": 775.6,
+          "text": "我随便点一下 它就直接打开了"
+        },
+        {
+          "start": 775.6,
+          "end": 777.32,
+          "text": "因为我这个东西它不是"
+        },
+        {
+          "start": 777.68,
+          "end": 779.8,
+          "text": "昨天那个人说的是像网页渲染"
+        },
+        {
+          "start": 779.8,
+          "end": 781.96,
+          "text": "它是一个实施渲染的二维模型用"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0061_t000772.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0061_t000772.1.jpg",
+          "t": 772.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.933,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0078",
+      "start": 780.0,
+      "end": 790.0,
+      "transcript": "它是一个实施渲染的二维模型用 它这个坐标是用3D计算的 这我主播的笔记本是这个 是这个要买的 是这个笔记本 所以它比较卡",
+      "segments": [
+        {
+          "start": 779.8,
+          "end": 781.96,
+          "text": "它是一个实施渲染的二维模型用"
+        },
+        {
+          "start": 781.96,
+          "end": 783.68,
+          "text": "它这个坐标是用3D计算的"
+        },
+        {
+          "start": 783.68,
+          "end": 785.36,
+          "text": "这我主播的笔记本是这个"
+        },
+        {
+          "start": 785.96,
+          "end": 788.08,
+          "text": "是这个要买的 是这个笔记本"
+        },
+        {
+          "start": 788.08,
+          "end": 789.12,
+          "text": "所以它比较卡"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0062_t000784.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0062_t000784.9.jpg",
+          "t": 784.934,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.066,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0079",
+      "start": 790.0,
+      "end": 800.0,
+      "transcript": "然后大概情况就这么大 如果大家想要交流的话 也可以去說一下 怎麼聯繫 有細節修正",
+      "segments": [
+        {
+          "start": 791.56,
+          "end": 793.12,
+          "text": "然后大概情况就这么大"
+        },
+        {
+          "start": 793.12,
+          "end": 794.32,
+          "text": "如果大家想要交流的话"
+        },
+        {
+          "start": 794.32,
+          "end": 796.62,
+          "text": "也可以去說一下"
+        },
+        {
+          "start": 798.16,
+          "end": 799.18,
+          "text": "怎麼聯繫"
+        },
+        {
+          "start": 799.44,
+          "end": 800.46,
+          "text": "有細節修正"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0063_t000800.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0063_t000800.9.jpg",
+          "t": 800.9,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0080",
+      "start": 800.0,
+      "end": 810.0,
+      "transcript": "有細節修正 那你這個我之前好像看你於視頻說好像有連接什麼多包簽文之類的 免費那些模型 對我之前是連接了但是我現在已經不用了",
+      "segments": [
+        {
+          "start": 799.44,
+          "end": 800.46,
+          "text": "有細節修正"
+        },
+        {
+          "start": 801.48,
+          "end": 806.1,
+          "text": "那你這個我之前好像看你於視頻說好像有連接什麼多包簽文之類的"
+        },
+        {
+          "start": 806.36,
+          "end": 807.12,
+          "text": "免費那些模型"
+        },
+        {
+          "start": 807.64,
+          "end": 810.2,
+          "text": "對我之前是連接了但是我現在已經不用了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0063_t000800.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0063_t000800.9.jpg",
+          "t": 800.9,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0064_t000804.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0064_t000804.5.jpg",
+          "t": 804.5,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0065_t000810.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0065_t000810.7.jpg",
+          "t": 810.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 5.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0081",
+      "start": 810.0,
+      "end": 820.0,
+      "transcript": "對我之前是連接了但是我現在已經不用了 這個東西就是 你現在 我現在隨意打開 沒有必要我之前連接是因為沒有錢我想用那個東西做視頻 所以就做了一個這麼東西",
+      "segments": [
+        {
+          "start": 807.64,
+          "end": 810.2,
+          "text": "對我之前是連接了但是我現在已經不用了"
+        },
+        {
+          "start": 810.7,
+          "end": 811.22,
+          "text": "這個東西就是"
+        },
+        {
+          "start": 811.48,
+          "end": 811.98,
+          "text": "你現在"
+        },
+        {
+          "start": 812.24,
+          "end": 813.52,
+          "text": "我現在隨意打開"
+        },
+        {
+          "start": 814.04,
+          "end": 817.1,
+          "text": "沒有必要我之前連接是因為沒有錢我想用那個東西做視頻"
+        },
+        {
+          "start": 817.36,
+          "end": 818.38,
+          "text": "所以就做了一個這麼東西"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0065_t000810.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0065_t000810.7.jpg",
+          "t": 810.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.333,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0082",
+      "start": 820.0,
+      "end": 830.0,
+      "transcript": "那你說你加這個小功能 比如说我要做视频 我给他放一个节点 有个固定模板 我假定开始他就能跑 那你是不是说更方便",
+      "segments": [
+        {
+          "start": 820.44,
+          "end": 822.22,
+          "text": "那你說你加這個小功能"
+        },
+        {
+          "start": 822.22,
+          "end": 823.82,
+          "text": "比如说我要做视频"
+        },
+        {
+          "start": 823.82,
+          "end": 825.42,
+          "text": "我给他放一个节点"
+        },
+        {
+          "start": 825.42,
+          "end": 826.62,
+          "text": "有个固定模板"
+        },
+        {
+          "start": 826.62,
+          "end": 827.82,
+          "text": "我假定开始他就能跑"
+        },
+        {
+          "start": 827.82,
+          "end": 829.42,
+          "text": "那你是不是说更方便"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0066_t000823.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0066_t000823.5.jpg",
+          "t": 823.534,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.466,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0083",
+      "start": 830.0,
+      "end": 840.0,
+      "transcript": "但是后来我发现还有更方便的 就是变得更加牛 就是让他们在协同之间 知道你的风格 知道你的口味 你看到最终结果 你只要给他纠正就行 你只管他们协同就行",
+      "segments": [
+        {
+          "start": 830.42,
+          "end": 832.22,
+          "text": "但是后来我发现还有更方便的"
+        },
+        {
+          "start": 832.22,
+          "end": 834.52,
+          "text": "就是变得更加牛"
+        },
+        {
+          "start": 834.52,
+          "end": 836.02,
+          "text": "就是让他们在协同之间"
+        },
+        {
+          "start": 836.02,
+          "end": 836.82,
+          "text": "知道你的风格"
+        },
+        {
+          "start": 836.82,
+          "end": 837.42,
+          "text": "知道你的口味"
+        },
+        {
+          "start": 837.42,
+          "end": 838.32,
+          "text": "你看到最终结果"
+        },
+        {
+          "start": 838.32,
+          "end": 839.32,
+          "text": "你只要给他纠正就行"
+        },
+        {
+          "start": 839.32,
+          "end": 840.42,
+          "text": "你只管他们协同就行"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0067_t000836.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0067_t000836.4.jpg",
+          "t": 836.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0084",
+      "start": 840.0,
+      "end": 850.0,
+      "transcript": "你只管他们协同就行 他们完成一个任务的效率会越来越高 其实我是很建议大家用地不塞克哈尔斯的 然后抖音抖音的小板可以来B站",
+      "segments": [
+        {
+          "start": 839.32,
+          "end": 840.42,
+          "text": "你只管他们协同就行"
+        },
+        {
+          "start": 840.42,
+          "end": 842.22,
+          "text": "他们完成一个任务的效率会越来越高"
+        },
+        {
+          "start": 845.58,
+          "end": 848.18,
+          "text": "其实我是很建议大家用地不塞克哈尔斯的"
+        },
+        {
+          "start": 848.18,
+          "end": 850.48,
+          "text": "然后抖音抖音的小板可以来B站"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0068_t000849.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0068_t000849.3.jpg",
+          "t": 849.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.267,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0085",
+      "start": 850.0,
+      "end": 860.0,
+      "transcript": "然后抖音抖音的小板可以来B站 真的为什么呢 因为地不塞克哈尔斯他开源的初心 就是为了让大家一直使用 咋家微信 在我主页的个人站 B站主页个人站",
+      "segments": [
+        {
+          "start": 848.18,
+          "end": 850.48,
+          "text": "然后抖音抖音的小板可以来B站"
+        },
+        {
+          "start": 850.48,
+          "end": 851.58,
+          "text": "真的为什么呢"
+        },
+        {
+          "start": 851.58,
+          "end": 853.48,
+          "text": "因为地不塞克哈尔斯他开源的初心"
+        },
+        {
+          "start": 853.48,
+          "end": 855.08,
+          "text": "就是为了让大家一直使用"
+        },
+        {
+          "start": 855.88,
+          "end": 856.68,
+          "text": "咋家微信"
+        },
+        {
+          "start": 856.68,
+          "end": 858.08,
+          "text": "在我主页的个人站"
+        },
+        {
+          "start": 858.08,
+          "end": 859.28,
+          "text": "B站主页个人站"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0068_t000849.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0068_t000849.3.jpg",
+          "t": 849.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0086",
+      "start": 860.0,
+      "end": 870.0,
+      "transcript": "如果大家只是想了解 你就直接去拉一下我台员项目就行 只是说我给你的 我会把这个做链条给你规划清楚 做进化链 你可以直接拿到手之后 就让他先确认身份",
+      "segments": [
+        {
+          "start": 860.28,
+          "end": 861.48,
+          "text": "如果大家只是想了解"
+        },
+        {
+          "start": 861.48,
+          "end": 863.28,
+          "text": "你就直接去拉一下我台员项目就行"
+        },
+        {
+          "start": 863.68,
+          "end": 864.48,
+          "text": "只是说我给你的"
+        },
+        {
+          "start": 864.48,
+          "end": 866.48,
+          "text": "我会把这个做链条给你规划清楚"
+        },
+        {
+          "start": 866.48,
+          "end": 867.08,
+          "text": "做进化链"
+        },
+        {
+          "start": 867.08,
+          "end": 868.48,
+          "text": "你可以直接拿到手之后"
+        },
+        {
+          "start": 868.48,
+          "end": 869.68,
+          "text": "就让他先确认身份"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0069_t000862.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0069_t000862.1.jpg",
+          "t": 862.134,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.866,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0087",
+      "start": 870.0,
+      "end": 880.0,
+      "transcript": "确认身份之后再看那个链条 对吧 他用起来跟你Harmless体验是不一样的 Harmless他跟你也是固定的 你可以在这个过程中 你会发现他有便宜 比如说他原来会的",
+      "segments": [
+        {
+          "start": 870.68,
+          "end": 872.28,
+          "text": "确认身份之后再看那个链条"
+        },
+        {
+          "start": 872.28,
+          "end": 872.88,
+          "text": "对吧"
+        },
+        {
+          "start": 872.88,
+          "end": 874.88,
+          "text": "他用起来跟你Harmless体验是不一样的"
+        },
+        {
+          "start": 875.68,
+          "end": 876.88,
+          "text": "Harmless他跟你也是固定的"
+        },
+        {
+          "start": 876.88,
+          "end": 878.48,
+          "text": "你可以在这个过程中"
+        },
+        {
+          "start": 878.48,
+          "end": 879.38,
+          "text": "你会发现他有便宜"
+        },
+        {
+          "start": 879.38,
+          "end": 880.88,
+          "text": "比如说他原来会的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0070_t000875.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0070_t000875.0.jpg",
+          "t": 875.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0088",
+      "start": 880.0,
+      "end": 890.0,
+      "transcript": "比如说他原来会的 不会人就问他 挑的是放空 他刚赚了账还没领 我教他两件最实用的 进去直接说话就行 不用计命令 点左边记忆神经元",
+      "segments": [
+        {
+          "start": 879.38,
+          "end": 880.88,
+          "text": "比如说他原来会的"
+        },
+        {
+          "start": 880.88,
+          "end": 881.88,
+          "text": "不会人就问他"
+        },
+        {
+          "start": 881.88,
+          "end": 883.04,
+          "text": "挑的是放空"
+        },
+        {
+          "start": 883.04,
+          "end": 885.0,
+          "text": "他刚赚了账还没领"
+        },
+        {
+          "start": 885.0,
+          "end": 887.04,
+          "text": "我教他两件最实用的"
+        },
+        {
+          "start": 887.04,
+          "end": 888.76,
+          "text": "进去直接说话就行"
+        },
+        {
+          "start": 888.76,
+          "end": 889.84,
+          "text": "不用计命令"
+        },
+        {
+          "start": 889.84,
+          "end": 891.6,
+          "text": "点左边记忆神经元"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0071_t000887.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0071_t000887.9.jpg",
+          "t": 887.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.867,
+        "visual_cues": [
+          "左边"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0089",
+      "start": 890.0,
+      "end": 900.0,
+      "transcript": "点左边记忆神经元 能看每个场景记了什么 还问了他主要做什么活 按他的活叫第二层",
+      "segments": [
+        {
+          "start": 889.84,
+          "end": 891.6,
+          "text": "点左边记忆神经元"
+        },
+        {
+          "start": 891.6,
+          "end": 893.88,
+          "text": "能看每个场景记了什么"
+        },
+        {
+          "start": 893.88,
+          "end": 896.12,
+          "text": "还问了他主要做什么活"
+        },
+        {
+          "start": 896.12,
+          "end": 901.11,
+          "text": "按他的活叫第二层"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0072_t000900.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0072_t000900.7.jpg",
+          "t": 900.734,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [
+          "左边"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0090",
+      "start": 900.0,
+      "end": 910.0,
+      "transcript": "按他的活叫第二层 这边我就先让他自己再去演示一下 因为我这段录屏 我可能要去发这个 往上去",
+      "segments": [
+        {
+          "start": 896.12,
+          "end": 901.11,
+          "text": "按他的活叫第二层"
+        },
+        {
+          "start": 901.11,
+          "end": 903.95,
+          "text": "这边我就先让他自己再去演示一下"
+        },
+        {
+          "start": 903.95,
+          "end": 905.11,
+          "text": "因为我这段录屏"
+        },
+        {
+          "start": 905.11,
+          "end": 907.55,
+          "text": "我可能要去发这个"
+        },
+        {
+          "start": 907.55,
+          "end": 910.49,
+          "text": "往上去"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0072_t000900.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0072_t000900.7.jpg",
+          "t": 900.734,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.266,
+        "visual_cues": [
+          "演示"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0091",
+      "start": 910.0,
+      "end": 920.0,
+      "transcript": "往上去 其实就是来源于说 你知道流程就行 比如说你自己做一个什么网页 要需要什么流程 你懂流程 那你就不需要再码什么的",
+      "segments": [
+        {
+          "start": 907.55,
+          "end": 910.49,
+          "text": "往上去"
+        },
+        {
+          "start": 910.49,
+          "end": 913.13,
+          "text": "其实就是来源于说"
+        },
+        {
+          "start": 913.13,
+          "end": 914.65,
+          "text": "你知道流程就行"
+        },
+        {
+          "start": 914.65,
+          "end": 916.69,
+          "text": "比如说你自己做一个什么网页"
+        },
+        {
+          "start": 916.69,
+          "end": 917.45,
+          "text": "要需要什么流程"
+        },
+        {
+          "start": 917.45,
+          "end": 918.33,
+          "text": "你懂流程"
+        },
+        {
+          "start": 918.33,
+          "end": 920.49,
+          "text": "那你就不需要再码什么的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0073_t000913.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0073_t000913.6.jpg",
+          "t": 913.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0092",
+      "start": 920.0,
+      "end": 930.0,
+      "transcript": "那你就不需要再码什么的 就是你又想法 他都帮你解决了 AI就是这么用的 你只需要思路 你就像他许愿一样的 在许愿的过程 学习点指示点来框住他 让他更加高效果的任务",
+      "segments": [
+        {
+          "start": 918.33,
+          "end": 920.49,
+          "text": "那你就不需要再码什么的"
+        },
+        {
+          "start": 920.49,
+          "end": 921.29,
+          "text": "就是你又想法"
+        },
+        {
+          "start": 921.29,
+          "end": 922.89,
+          "text": "他都帮你解决了"
+        },
+        {
+          "start": 922.89,
+          "end": 923.73,
+          "text": "AI就是这么用的"
+        },
+        {
+          "start": 923.73,
+          "end": 926.21,
+          "text": "你只需要思路"
+        },
+        {
+          "start": 926.21,
+          "end": 927.53,
+          "text": "你就像他许愿一样的"
+        },
+        {
+          "start": 927.53,
+          "end": 928.33,
+          "text": "在许愿的过程"
+        },
+        {
+          "start": 928.33,
+          "end": 929.93,
+          "text": "学习点指示点来框住他"
+        },
+        {
+          "start": 929.93,
+          "end": 932.49,
+          "text": "让他更加高效果的任务"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0093",
+      "start": 930.0,
+      "end": 940.0,
+      "transcript": "让他更加高效果的任务 你这个时候高进一天直播这么久 是这样的 我确实这样 我昨天其实没睡多久 但是我还是能直播很久 就帮我刚直播的时候 我都伪迷了",
+      "segments": [
+        {
+          "start": 929.93,
+          "end": 932.49,
+          "text": "让他更加高效果的任务"
+        },
+        {
+          "start": 932.49,
+          "end": 934.17,
+          "text": "你这个时候高进一天直播这么久"
+        },
+        {
+          "start": 934.17,
+          "end": 934.73,
+          "text": "是这样的"
+        },
+        {
+          "start": 934.73,
+          "end": 935.29,
+          "text": "我确实这样"
+        },
+        {
+          "start": 935.29,
+          "end": 936.81,
+          "text": "我昨天其实没睡多久"
+        },
+        {
+          "start": 936.81,
+          "end": 938.25,
+          "text": "但是我还是能直播很久"
+        },
+        {
+          "start": 938.25,
+          "end": 939.33,
+          "text": "就帮我刚直播的时候"
+        },
+        {
+          "start": 939.33,
+          "end": 940.73,
+          "text": "我都伪迷了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0074_t000939.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0074_t000939.3.jpg",
+          "t": 939.334,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.334,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0094",
+      "start": 940.0,
+      "end": 950.0,
+      "transcript": "我都伪迷了 伪迷的原因是给大家装这个东西 有些人可能不会用 我得教他一下 不过放心 我会教好了",
+      "segments": [
+        {
+          "start": 939.33,
+          "end": 940.73,
+          "text": "我都伪迷了"
+        },
+        {
+          "start": 940.73,
+          "end": 943.65,
+          "text": "伪迷的原因是给大家装这个东西"
+        },
+        {
+          "start": 943.65,
+          "end": 945.85,
+          "text": "有些人可能不会用 我得教他一下"
+        },
+        {
+          "start": 945.85,
+          "end": 952.81,
+          "text": "不过放心 我会教好了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0074_t000939.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0074_t000939.3.jpg",
+          "t": 939.334,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0095",
+      "start": 950.0,
+      "end": 960.0,
+      "transcript": "不过放心 我会教好了 简报 放空转的是666 6 不是20 他买的是共享层加自我进化链条那一档",
+      "segments": [
+        {
+          "start": 945.85,
+          "end": 952.81,
+          "text": "不过放心 我会教好了"
+        },
+        {
+          "start": 952.81,
+          "end": 956.91,
+          "text": "简报 放空转的是666"
+        },
+        {
+          "start": 956.91,
+          "end": 962.51,
+          "text": "6 不是20 他买的是共享层加自我进化链条那一档"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0075_t000952.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0075_t000952.2.jpg",
+          "t": 952.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0096",
+      "start": 960.0,
+      "end": 970.0,
+      "transcript": "6 不是20 他买的是共享层加自我进化链条那一档 我已经按666档给他排包了 共享层 进化链 工作台 命令经检 团队共享",
+      "segments": [
+        {
+          "start": 956.91,
+          "end": 962.51,
+          "text": "6 不是20 他买的是共享层加自我进化链条那一档"
+        },
+        {
+          "start": 962.51,
+          "end": 965.31,
+          "text": "我已经按666档给他排包了"
+        },
+        {
+          "start": 965.31,
+          "end": 970.31,
+          "text": "共享层 进化链 工作台 命令经检 团队共享"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0076_t000965.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0076_t000965.1.jpg",
+          "t": 965.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.067,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0097",
+      "start": 970.0,
+      "end": 980.0,
+      "transcript": "共享层 进化链 工作台 命令经检 团队共享 本地电脑都放进去 这单钱也带你点收款 看到没有 这就是记忆的媒体 对吧 他已经开始精准的识别到别人给我发钱是什么情况还可以给我激藏",
+      "segments": [
+        {
+          "start": 965.31,
+          "end": 970.31,
+          "text": "共享层 进化链 工作台 命令经检 团队共享"
+        },
+        {
+          "start": 970.31,
+          "end": 972.51,
+          "text": "本地电脑都放进去"
+        },
+        {
+          "start": 972.51,
+          "end": 975.41,
+          "text": "这单钱也带你点收款"
+        },
+        {
+          "start": 975.41,
+          "end": 977.61,
+          "text": "看到没有 这就是记忆的媒体"
+        },
+        {
+          "start": 977.61,
+          "end": 978.13,
+          "text": "对吧"
+        },
+        {
+          "start": 979.65,
+          "end": 984.01,
+          "text": "他已经开始精准的识别到别人给我发钱是什么情况还可以给我激藏"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0077_t000977.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0077_t000977.9.jpg",
+          "t": 977.934,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.934,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0098",
+      "start": 980.0,
+      "end": 990.0,
+      "transcript": "他已经开始精准的识别到别人给我发钱是什么情况还可以给我激藏 还可以那啥 既然小板我建议先探索一下你可以问他你先用DSA去改造页面",
+      "segments": [
+        {
+          "start": 979.65,
+          "end": 984.01,
+          "text": "他已经开始精准的识别到别人给我发钱是什么情况还可以给我激藏"
+        },
+        {
+          "start": 984.53,
+          "end": 985.29,
+          "text": "还可以那啥"
+        },
+        {
+          "start": 986.57,
+          "end": 990.41,
+          "text": "既然小板我建议先探索一下你可以问他你先用DSA去改造页面"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0078_t000990.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0078_t000990.8.jpg",
+          "t": 990.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0099",
+      "start": 990.0,
+      "end": 1000.0,
+      "transcript": "既然小板我建议先探索一下你可以问他你先用DSA去改造页面 先让每个人每个场景确定然后你再需要你的窗口你可以直接截图给他 你跟他说我这个窗口想改成什么什么样 B站确认机面你先试一下",
+      "segments": [
+        {
+          "start": 986.57,
+          "end": 990.41,
+          "text": "既然小板我建议先探索一下你可以问他你先用DSA去改造页面"
+        },
+        {
+          "start": 991.17,
+          "end": 995.53,
+          "text": "先让每个人每个场景确定然后你再需要你的窗口你可以直接截图给他"
+        },
+        {
+          "start": 995.79,
+          "end": 998.09,
+          "text": "你跟他说我这个窗口想改成什么什么样"
+        },
+        {
+          "start": 998.35,
+          "end": 999.89,
+          "text": "B站确认机面你先试一下"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0078_t000990.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0078_t000990.8.jpg",
+          "t": 990.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.2,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0100",
+      "start": 1000.0,
+      "end": 1010.0,
+      "transcript": "什么时候可以激藏你要会用的知道吧你要会用的你会用的话他是一个超级牛的工具 睡不着晚上整一套共享层",
+      "segments": [
+        {
+          "start": 1001.9,
+          "end": 1006.76,
+          "text": "什么时候可以激藏你要会用的知道吧你要会用的你会用的话他是一个超级牛的工具"
+        },
+        {
+          "start": 1006.76,
+          "end": 1017.51,
+          "text": "睡不着晚上整一套共享层"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0079_t001003.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0079_t001003.7.jpg",
+          "t": 1003.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.333,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0101",
+      "start": 1010.0,
+      "end": 1020.0,
+      "transcript": "睡不着晚上整一套共享层 行那没问题啊 然后我还能分清",
+      "segments": [
+        {
+          "start": 1006.76,
+          "end": 1017.51,
+          "text": "睡不着晚上整一套共享层"
+        },
+        {
+          "start": 1017.51,
+          "end": 1019.05,
+          "text": "行那没问题啊"
+        },
+        {
+          "start": 1019.05,
+          "end": 1035.9,
+          "text": "然后我还能分清"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0080_t001016.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0080_t001016.5.jpg",
+          "t": 1016.534,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.534,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0102",
+      "start": 1020.0,
+      "end": 1030.0,
+      "transcript": "然后我还能分清",
+      "segments": [
+        {
+          "start": 1019.05,
+          "end": 1035.9,
+          "text": "然后我还能分清"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0081_t001029.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0081_t001029.4.jpg",
+          "t": 1029.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0103",
+      "start": 1030.0,
+      "end": 1040.0,
+      "transcript": "然后我还能分清 我还能让他分清我的微信里面哪些是我的客户哪些是我的亲人 OK啊他现在放空的这个创作工作台给他做好了",
+      "segments": [
+        {
+          "start": 1019.05,
+          "end": 1035.9,
+          "text": "然后我还能分清"
+        },
+        {
+          "start": 1035.9,
+          "end": 1039.74,
+          "text": "我还能让他分清我的微信里面哪些是我的客户哪些是我的亲人"
+        },
+        {
+          "start": 1039.74,
+          "end": 1044.1,
+          "text": "OK啊他现在放空的这个创作工作台给他做好了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0081_t001029.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0081_t001029.4.jpg",
+          "t": 1029.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0104",
+      "start": 1040.0,
+      "end": 1050.0,
+      "transcript": "OK啊他现在放空的这个创作工作台给他做好了 你解压之后如果有任何问题直接来找我然后 还是那句话就是这个东西你需要自己对这个东西有一点点",
+      "segments": [
+        {
+          "start": 1039.74,
+          "end": 1044.1,
+          "text": "OK啊他现在放空的这个创作工作台给他做好了"
+        },
+        {
+          "start": 1044.1,
+          "end": 1047.94,
+          "text": "你解压之后如果有任何问题直接来找我然后"
+        },
+        {
+          "start": 1047.94,
+          "end": 1053.3,
+          "text": "还是那句话就是这个东西你需要自己对这个东西有一点点"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0082_t001042.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0082_t001042.3.jpg",
+          "t": 1042.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.733,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0105",
+      "start": 1050.0,
+      "end": 1060.0,
+      "transcript": "还是那句话就是这个东西你需要自己对这个东西有一点点 知道这个 你说我现在我自己操作也很方便吧我直接拖下去就给他了 但是我就偏步,我看他自己會怎麼做",
+      "segments": [
+        {
+          "start": 1047.94,
+          "end": 1053.3,
+          "text": "还是那句话就是这个东西你需要自己对这个东西有一点点"
+        },
+        {
+          "start": 1053.3,
+          "end": 1054.86,
+          "text": "知道这个"
+        },
+        {
+          "start": 1054.86,
+          "end": 1058.94,
+          "text": "你说我现在我自己操作也很方便吧我直接拖下去就给他了"
+        },
+        {
+          "start": 1058.94,
+          "end": 1068.83,
+          "text": "但是我就偏步,我看他自己會怎麼做"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0083_t001055.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0083_t001055.1.jpg",
+          "t": 1055.134,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.134,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0106",
+      "start": 1060.0,
+      "end": 1070.0,
+      "transcript": "但是我就偏步,我看他自己會怎麼做 簡報,放空666那檔的包做好了",
+      "segments": [
+        {
+          "start": 1058.94,
+          "end": 1068.83,
+          "text": "但是我就偏步,我看他自己會怎麼做"
+        },
+        {
+          "start": 1068.83,
+          "end": 1072.41,
+          "text": "簡報,放空666那檔的包做好了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0084_t001068.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0084_t001068.0.jpg",
+          "t": 1068.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0107",
+      "start": 1070.0,
+      "end": 1080.0,
+      "transcript": "簡報,放空666那檔的包做好了 152兆,5個場景,共享層和進化鏈都在 文件也已經發給他了 這單從轉前到發出來20分鐘左右",
+      "segments": [
+        {
+          "start": 1068.83,
+          "end": 1072.41,
+          "text": "簡報,放空666那檔的包做好了"
+        },
+        {
+          "start": 1072.41,
+          "end": 1077.27,
+          "text": "152兆,5個場景,共享層和進化鏈都在"
+        },
+        {
+          "start": 1077.27,
+          "end": 1079.33,
+          "text": "文件也已經發給他了"
+        },
+        {
+          "start": 1079.33,
+          "end": 1085.86,
+          "text": "這單從轉前到發出來20分鐘左右"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0085_t001080.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0085_t001080.9.jpg",
+          "t": 1080.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0108",
+      "start": 1080.0,
+      "end": 1090.0,
+      "transcript": "這單從轉前到發出來20分鐘左右 他這個時間關鍵是錯的 我不知道為什麼他是錯的 但是後面我還得框枕一下",
+      "segments": [
+        {
+          "start": 1079.33,
+          "end": 1085.86,
+          "text": "這單從轉前到發出來20分鐘左右"
+        },
+        {
+          "start": 1085.86,
+          "end": 1087.4,
+          "text": "他這個時間關鍵是錯的"
+        },
+        {
+          "start": 1087.4,
+          "end": 1088.68,
+          "text": "我不知道為什麼他是錯的"
+        },
+        {
+          "start": 1088.68,
+          "end": 1090.46,
+          "text": "但是後面我還得框枕一下"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0085_t001080.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0085_t001080.9.jpg",
+          "t": 1080.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0109",
+      "start": 1090.0,
+      "end": 1100.0,
+      "transcript": "但是後面我還得框枕一下 他這個時間關鍵是個很嚴重的問題 再研究一下通勇姐的方案啥都能做 但是孩子需要,但孩子需要學習 其实我觉得这东西大家都做出来的时候",
+      "segments": [
+        {
+          "start": 1088.68,
+          "end": 1090.46,
+          "text": "但是後面我還得框枕一下"
+        },
+        {
+          "start": 1090.46,
+          "end": 1095.07,
+          "text": "他這個時間關鍵是個很嚴重的問題"
+        },
+        {
+          "start": 1095.07,
+          "end": 1097.13,
+          "text": "再研究一下通勇姐的方案啥都能做"
+        },
+        {
+          "start": 1097.13,
+          "end": 1099.69,
+          "text": "但是孩子需要,但孩子需要學習"
+        },
+        {
+          "start": 1099.69,
+          "end": 1101.45,
+          "text": "其实我觉得这东西大家都做出来的时候"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0086_t001093.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0086_t001093.7.jpg",
+          "t": 1093.734,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.266,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0110",
+      "start": 1100.0,
+      "end": 1110.0,
+      "transcript": "其实我觉得这东西大家都做出来的时候 他就开圆了 你不用担心说怎么怎么样 但是其实我觉得你有一个自己的这种助手 我觉得比那个人家下来一个 你自己再去弄会好一些",
+      "segments": [
+        {
+          "start": 1099.69,
+          "end": 1101.45,
+          "text": "其实我觉得这东西大家都做出来的时候"
+        },
+        {
+          "start": 1101.45,
+          "end": 1102.29,
+          "text": "他就开圆了"
+        },
+        {
+          "start": 1102.29,
+          "end": 1103.85,
+          "text": "你不用担心说怎么怎么样"
+        },
+        {
+          "start": 1103.85,
+          "end": 1106.29,
+          "text": "但是其实我觉得你有一个自己的这种助手"
+        },
+        {
+          "start": 1106.29,
+          "end": 1108.29,
+          "text": "我觉得比那个人家下来一个"
+        },
+        {
+          "start": 1108.29,
+          "end": 1109.89,
+          "text": "你自己再去弄会好一些"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0087_t001106.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0087_t001106.6.jpg",
+          "t": 1106.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.6,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0111",
+      "start": 1110.0,
+      "end": 1120.0,
+      "transcript": "而且我个人理解的就是这样的 我其实还是有点探索欲的 我只是告诉你他能实现什么",
+      "segments": [
+        {
+          "start": 1110.89,
+          "end": 1113.49,
+          "text": "而且我个人理解的就是这样的"
+        },
+        {
+          "start": 1113.49,
+          "end": 1115.29,
+          "text": "我其实还是有点探索欲的"
+        },
+        {
+          "start": 1118.54,
+          "end": 1120.34,
+          "text": "我只是告诉你他能实现什么"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0088_t001119.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0088_t001119.5.jpg",
+          "t": 1119.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.467,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0112",
+      "start": 1120.0,
+      "end": 1130.0,
+      "transcript": "我只是告诉你他能实现什么 他卡在哪里 后面等我再去想办法 去优化一下整个链条逻辑的话",
+      "segments": [
+        {
+          "start": 1118.54,
+          "end": 1120.34,
+          "text": "我只是告诉你他能实现什么"
+        },
+        {
+          "start": 1120.74,
+          "end": 1121.74,
+          "text": "他卡在哪里"
+        },
+        {
+          "start": 1126.4,
+          "end": 1128.6,
+          "text": "后面等我再去想办法"
+        },
+        {
+          "start": 1128.6,
+          "end": 1130.6,
+          "text": "去优化一下整个链条逻辑的话"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0088_t001119.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0088_t001119.5.jpg",
+          "t": 1119.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0113",
+      "start": 1130.0,
+      "end": 1140.0,
+      "transcript": "去优化一下整个链条逻辑的话 就会把现在这些就是已经知道 我会开圆的 因为它确实我觉得它是一个渐进的过程 而且有时候你不知道它进化的方向对不对 反正我觉得还挺对的",
+      "segments": [
+        {
+          "start": 1128.6,
+          "end": 1130.6,
+          "text": "去优化一下整个链条逻辑的话"
+        },
+        {
+          "start": 1131.6,
+          "end": 1134.2,
+          "text": "就会把现在这些就是已经知道"
+        },
+        {
+          "start": 1134.2,
+          "end": 1134.8,
+          "text": "我会开圆的"
+        },
+        {
+          "start": 1134.8,
+          "end": 1136.6,
+          "text": "因为它确实我觉得它是一个渐进的过程"
+        },
+        {
+          "start": 1136.6,
+          "end": 1138.84,
+          "text": "而且有时候你不知道它进化的方向对不对"
+        },
+        {
+          "start": 1138.84,
+          "end": 1143.23,
+          "text": "反正我觉得还挺对的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0089_t001132.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0089_t001132.3.jpg",
+          "t": 1132.334,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.666,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0114",
+      "start": 1140.0,
+      "end": 1150.0,
+      "transcript": "反正我觉得还挺对的 至少就是没有出现污染 你看我今天直播了一整天 9个多小时到现在都多少个小时了 早上一起来就直播 咱们那个直播的点老观众就那个",
+      "segments": [
+        {
+          "start": 1138.84,
+          "end": 1143.23,
+          "text": "反正我觉得还挺对的"
+        },
+        {
+          "start": 1143.23,
+          "end": 1144.67,
+          "text": "至少就是没有出现污染"
+        },
+        {
+          "start": 1144.67,
+          "end": 1146.59,
+          "text": "你看我今天直播了一整天"
+        },
+        {
+          "start": 1146.59,
+          "end": 1148.91,
+          "text": "9个多小时到现在都多少个小时了"
+        },
+        {
+          "start": 1148.91,
+          "end": 1149.91,
+          "text": "早上一起来就直播"
+        },
+        {
+          "start": 1149.91,
+          "end": 1151.71,
+          "text": "咱们那个直播的点老观众就那个"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0090_t001145.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0090_t001145.2.jpg",
+          "t": 1145.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.2,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0115",
+      "start": 1150.0,
+      "end": 1160.0,
+      "transcript": "咱们那个直播的点老观众就那个 他从早上回答第一个问题 咱们评论区有人说 这个我发的视频上一个标题是协同进化 对吧 他说你这个协同进化",
+      "segments": [
+        {
+          "start": 1149.91,
+          "end": 1151.71,
+          "text": "咱们那个直播的点老观众就那个"
+        },
+        {
+          "start": 1151.71,
+          "end": 1154.63,
+          "text": "他从早上回答第一个问题"
+        },
+        {
+          "start": 1154.63,
+          "end": 1155.99,
+          "text": "咱们评论区有人说"
+        },
+        {
+          "start": 1155.99,
+          "end": 1158.75,
+          "text": "这个我发的视频上一个标题是协同进化"
+        },
+        {
+          "start": 1158.75,
+          "end": 1159.03,
+          "text": "对吧"
+        },
+        {
+          "start": 1159.03,
+          "end": 1160.07,
+          "text": "他说你这个协同进化"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0091_t001158.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0091_t001158.1.jpg",
+          "t": 1158.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.067,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0116",
+      "start": 1160.0,
+      "end": 1170.0,
+      "transcript": "他说你这个协同进化 我也是做研究多显存 我说你是做那个长城A阵的吗 我说长城A阵的那种应该是需要 要两个AI确实需要两个AI 一个AI纠正他 对吧 一个AI去做事 两个人可以互相搞",
+      "segments": [
+        {
+          "start": 1159.03,
+          "end": 1160.07,
+          "text": "他说你这个协同进化"
+        },
+        {
+          "start": 1160.07,
+          "end": 1161.23,
+          "text": "我也是做研究多显存"
+        },
+        {
+          "start": 1161.23,
+          "end": 1163.43,
+          "text": "我说你是做那个长城A阵的吗"
+        },
+        {
+          "start": 1163.43,
+          "end": 1165.31,
+          "text": "我说长城A阵的那种应该是需要"
+        },
+        {
+          "start": 1165.31,
+          "end": 1166.51,
+          "text": "要两个AI确实需要两个AI"
+        },
+        {
+          "start": 1166.51,
+          "end": 1167.43,
+          "text": "一个AI纠正他"
+        },
+        {
+          "start": 1167.43,
+          "end": 1167.67,
+          "text": "对吧"
+        },
+        {
+          "start": 1167.67,
+          "end": 1169.11,
+          "text": "一个AI去做事"
+        },
+        {
+          "start": 1169.11,
+          "end": 1171.51,
+          "text": "两个人可以互相搞"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0092_t001170.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0092_t001170.9.jpg",
+          "t": 1170.934,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0117",
+      "start": 1170.0,
+      "end": 1180.0,
+      "transcript": "两个人可以互相搞 他说不是 我就问了一下 他说的也不是很明确 其实我这个就是协同演化 就是协同演化什么概念 他们在互相配合做事的时候",
+      "segments": [
+        {
+          "start": 1169.11,
+          "end": 1171.51,
+          "text": "两个人可以互相搞"
+        },
+        {
+          "start": 1171.51,
+          "end": 1172.91,
+          "text": "他说不是"
+        },
+        {
+          "start": 1172.91,
+          "end": 1173.51,
+          "text": "我就问了一下"
+        },
+        {
+          "start": 1173.51,
+          "end": 1174.91,
+          "text": "他说的也不是很明确"
+        },
+        {
+          "start": 1174.91,
+          "end": 1178.51,
+          "text": "其实我这个就是协同演化"
+        },
+        {
+          "start": 1178.51,
+          "end": 1179.91,
+          "text": "就是协同演化什么概念"
+        },
+        {
+          "start": 1179.91,
+          "end": 1182.31,
+          "text": "他们在互相配合做事的时候"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0092_t001170.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0092_t001170.9.jpg",
+          "t": 1170.934,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.066,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0118",
+      "start": 1180.0,
+      "end": 1190.0,
+      "transcript": "他们在互相配合做事的时候 就更加知道自己的职责 然后他们在做一些什么东西的时候 他们就会更加知道一些事情 而且你在使用过程",
+      "segments": [
+        {
+          "start": 1179.91,
+          "end": 1182.31,
+          "text": "他们在互相配合做事的时候"
+        },
+        {
+          "start": 1182.31,
+          "end": 1183.71,
+          "text": "就更加知道自己的职责"
+        },
+        {
+          "start": 1183.71,
+          "end": 1186.51,
+          "text": "然后他们在做一些什么东西的时候"
+        },
+        {
+          "start": 1186.51,
+          "end": 1188.91,
+          "text": "他们就会更加知道一些事情"
+        },
+        {
+          "start": 1188.91,
+          "end": 1190.11,
+          "text": "而且你在使用过程"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0093_t001183.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0093_t001183.8.jpg",
+          "t": 1183.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.2,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0119",
+      "start": 1190.0,
+      "end": 1200.0,
+      "transcript": "而且你在使用过程 他也知道我每次都强调这种 每次都说这些东西 有一些好的记忆差异 他把这东西提炼了就变成他的一些核心的东西了 对吧 有一些好的核心东西 你要把它好用一个好的机子给他固定住啊",
+      "segments": [
+        {
+          "start": 1188.91,
+          "end": 1190.11,
+          "text": "而且你在使用过程"
+        },
+        {
+          "start": 1190.11,
+          "end": 1191.91,
+          "text": "他也知道我每次都强调这种"
+        },
+        {
+          "start": 1191.91,
+          "end": 1193.21,
+          "text": "每次都说这些东西"
+        },
+        {
+          "start": 1193.21,
+          "end": 1194.41,
+          "text": "有一些好的记忆差异"
+        },
+        {
+          "start": 1194.41,
+          "end": 1198.01,
+          "text": "他把这东西提炼了就变成他的一些核心的东西了"
+        },
+        {
+          "start": 1198.01,
+          "end": 1198.21,
+          "text": "对吧"
+        },
+        {
+          "start": 1198.21,
+          "end": 1199.27,
+          "text": "有一些好的核心东西"
+        },
+        {
+          "start": 1199.27,
+          "end": 1202.85,
+          "text": "你要把它好用一个好的机子给他固定住啊"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0094_t001196.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0094_t001196.7.jpg",
+          "t": 1196.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.667,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0120",
+      "start": 1200.0,
+      "end": 1210.0,
+      "transcript": "你要把它好用一个好的机子给他固定住啊 简报放空纳单币还了 二十三点零五发文件 零七发说明 今晚连这三单都走通了",
+      "segments": [
+        {
+          "start": 1199.27,
+          "end": 1202.85,
+          "text": "你要把它好用一个好的机子给他固定住啊"
+        },
+        {
+          "start": 1202.85,
+          "end": 1205.35,
+          "text": "简报放空纳单币还了"
+        },
+        {
+          "start": 1205.35,
+          "end": 1207.17,
+          "text": "二十三点零五发文件"
+        },
+        {
+          "start": 1207.17,
+          "end": 1208.85,
+          "text": "零七发说明"
+        },
+        {
+          "start": 1208.85,
+          "end": 1210.97,
+          "text": "今晚连这三单都走通了"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0121",
+      "start": 1210.0,
+      "end": 1220.0,
+      "transcript": "今晚连这三单都走通了 大汉堡十一分钟放空十八分钟 现在就等你两件 捷克纳份六场警惭版要不要补发证版 还有方案里那三个决定",
+      "segments": [
+        {
+          "start": 1208.85,
+          "end": 1210.97,
+          "text": "今晚连这三单都走通了"
+        },
+        {
+          "start": 1210.97,
+          "end": 1214.35,
+          "text": "大汉堡十一分钟放空十八分钟"
+        },
+        {
+          "start": 1214.35,
+          "end": 1216.07,
+          "text": "现在就等你两件"
+        },
+        {
+          "start": 1216.07,
+          "end": 1219.37,
+          "text": "捷克纳份六场警惭版要不要补发证版"
+        },
+        {
+          "start": 1219.37,
+          "end": 1221.25,
+          "text": "还有方案里那三个决定"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0122",
+      "start": 1220.0,
+      "end": 1230.0,
+      "transcript": "还有方案里那三个决定 就是你训练的好了 好了知道吧你就跟他直接就说事情就行了 你就比如说 我就直接借个图",
+      "segments": [
+        {
+          "start": 1219.37,
+          "end": 1221.25,
+          "text": "还有方案里那三个决定"
+        },
+        {
+          "start": 1222.65,
+          "end": 1223.81,
+          "text": "就是你训练的好了"
+        },
+        {
+          "start": 1223.81,
+          "end": 1226.31,
+          "text": "好了知道吧你就跟他直接就说事情就行了"
+        },
+        {
+          "start": 1227.31,
+          "end": 1228.11,
+          "text": "你就比如说"
+        },
+        {
+          "start": 1228.71,
+          "end": 1229.71,
+          "text": "我就直接借个图"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0095_t001221.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0095_t001221.7.jpg",
+          "t": 1221.7,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0096_t001222.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0096_t001222.4.jpg",
+          "t": 1222.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 2,
+        "max_coverage_gap": 7.6,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0123",
+      "start": 1230.0,
+      "end": 1240.0,
+      "transcript": "给这个客户一个口令 让他的dsh安装",
+      "segments": [
+        {
+          "start": 1230.31,
+          "end": 1234.31,
+          "text": "给这个客户一个口令"
+        },
+        {
+          "start": 1235.81,
+          "end": 1239.01,
+          "text": "让他的dsh安装"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0124",
+      "start": 1240.0,
+      "end": 1250.0,
+      "transcript": "他就直接开始记账 把一切就是该服务的全部都服务完了 付费是666吗 就是你要想用共享层就是666",
+      "segments": [
+        {
+          "start": 1240.71,
+          "end": 1241.91,
+          "text": "他就直接开始记账"
+        },
+        {
+          "start": 1241.91,
+          "end": 1244.11,
+          "text": "把一切就是该服务的全部都服务完了"
+        },
+        {
+          "start": 1246.89,
+          "end": 1247.99,
+          "text": "付费是666吗"
+        },
+        {
+          "start": 1247.99,
+          "end": 1250.09,
+          "text": "就是你要想用共享层就是666"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0097_t001248.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0097_t001248.1.jpg",
+          "t": 1248.134,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.134,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0125",
+      "start": 1250.0,
+      "end": 1260.0,
+      "transcript": "就是你要想用共享层就是666 你看他就给我一个口令安装 我就直接付出口令发给他 他的dsh就可以为他封装了 感谢木星火鱼的小传观众",
+      "segments": [
+        {
+          "start": 1247.99,
+          "end": 1250.09,
+          "text": "就是你要想用共享层就是666"
+        },
+        {
+          "start": 1250.09,
+          "end": 1252.19,
+          "text": "你看他就给我一个口令安装"
+        },
+        {
+          "start": 1252.19,
+          "end": 1253.59,
+          "text": "我就直接付出口令发给他"
+        },
+        {
+          "start": 1253.59,
+          "end": 1255.59,
+          "text": "他的dsh就可以为他封装了"
+        },
+        {
+          "start": 1257.94,
+          "end": 1260.76,
+          "text": "感谢木星火鱼的小传观众"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0098_t001261.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0098_t001261.0.jpg",
+          "t": 1261.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0126",
+      "start": 1260.0,
+      "end": 1270.0,
+      "transcript": "感谢木星火鱼的小传观众 就像很多人说让我去迈克一样对吧 其实我们这个 他是很有市场因为很多 其实比较年轻他对ai也不了解但是我真的觉得迈克",
+      "segments": [
+        {
+          "start": 1257.94,
+          "end": 1260.76,
+          "text": "感谢木星火鱼的小传观众"
+        },
+        {
+          "start": 1260.76,
+          "end": 1263.32,
+          "text": "就像很多人说让我去迈克一样对吧"
+        },
+        {
+          "start": 1263.32,
+          "end": 1264.86,
+          "text": "其实我们这个"
+        },
+        {
+          "start": 1264.86,
+          "end": 1266.64,
+          "text": "他是很有市场因为很多"
+        },
+        {
+          "start": 1266.64,
+          "end": 1270.74,
+          "text": "其实比较年轻他对ai也不了解但是我真的觉得迈克"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0098_t001261.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0098_t001261.0.jpg",
+          "t": 1261.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0127",
+      "start": 1270.0,
+      "end": 1280.0,
+      "transcript": "其实比较年轻他对ai也不了解但是我真的觉得迈克 没有什么意义啊 直播一下 你去跟别人说一下别人愿意为你付费我觉得还挺好像接了一群伙伴一样对不对",
+      "segments": [
+        {
+          "start": 1266.64,
+          "end": 1270.74,
+          "text": "其实比较年轻他对ai也不了解但是我真的觉得迈克"
+        },
+        {
+          "start": 1270.74,
+          "end": 1273.62,
+          "text": "没有什么意义啊"
+        },
+        {
+          "start": 1273.62,
+          "end": 1274.9,
+          "text": "直播一下"
+        },
+        {
+          "start": 1274.9,
+          "end": 1281.61,
+          "text": "你去跟别人说一下别人愿意为你付费我觉得还挺好像接了一群伙伴一样对不对"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0099_t001273.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1f7xJ6DEvq\\frames\\0099_t001273.9.jpg",
+          "t": 1273.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0128",
+      "start": 1280.0,
+      "end": 1286.733,
+      "transcript": "你去跟别人说一下别人愿意为你付费我觉得还挺好像接了一群伙伴一样对不对 如果后面主播真能研究说个啥 如果他这个很好工具一定会分享给大家的",
+      "segments": [
+        {
+          "start": 1274.9,
+          "end": 1281.61,
+          "text": "你去跟别人说一下别人愿意为你付费我觉得还挺好像接了一群伙伴一样对不对"
+        },
+        {
+          "start": 1281.61,
+          "end": 1283.93,
+          "text": "如果后面主播真能研究说个啥"
+        },
+        {
+          "start": 1283.93,
+          "end": 1286.49,
+          "text": "如果他这个很好工具一定会分享给大家的"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 6.733,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    }
+  ]
+}

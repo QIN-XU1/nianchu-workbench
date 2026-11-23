@@ -1,0 +1,5803 @@
+{
+  "version": 1,
+  "created_at": "2026-11-11T00:00:32",
+  "source": {
+    "transcript_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\transcript.json",
+    "frames_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\frames.json"
+  },
+  "duration": 1357.739,
+  "range": {
+    "start": 0.0,
+    "end": 1357.739
+  },
+  "window_seconds": 10.0,
+  "attention_gap_seconds": 5.0,
+  "relation_labels": [
+    "supports",
+    "complements",
+    "contradicts",
+    "unrelated",
+    "insufficient"
+  ],
+  "instructions": "Inspect the listed frames and transcript for each unit. Set assessment.relation, confidence (0..1), notes, and refine. Treat complementary audio/visual evidence as complements, not a conflict.",
+  "units": [
+    {
+      "id": "w0000",
+      "start": 0.0,
+      "end": 10.0,
+      "transcript": "领先super agent 恩带啊 这边的话也是刚打开本地录制啊 像目前这个情况是我自己 昨天在b站上刷到一个视频博主说他做出了一个视觉插件能够实施独徒",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.08,
+          "text": "领先super agent 恩带啊"
+        },
+        {
+          "start": 3.84,
+          "end": 6.14,
+          "text": "这边的话也是刚打开本地录制啊"
+        },
+        {
+          "start": 6.4,
+          "end": 8.44,
+          "text": "像目前这个情况是我自己"
+        },
+        {
+          "start": 8.7,
+          "end": 13.82,
+          "text": "昨天在b站上刷到一个视频博主说他做出了一个视觉插件能够实施独徒"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0000_t000000.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0000_t000000.0.jpg",
+          "t": 0.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0001",
+      "start": 10.0,
+      "end": 20.0,
+      "transcript": "昨天在b站上刷到一个视频博主说他做出了一个视觉插件能够实施独徒 后来我想了一下就是他这个dipstick waste模型本来就可以试别对吧 你直接让他在发小语之前自己去看",
+      "segments": [
+        {
+          "start": 8.7,
+          "end": 13.82,
+          "text": "昨天在b站上刷到一个视频博主说他做出了一个视觉插件能够实施独徒"
+        },
+        {
+          "start": 14.34,
+          "end": 18.18,
+          "text": "后来我想了一下就是他这个dipstick waste模型本来就可以试别对吧"
+        },
+        {
+          "start": 18.44,
+          "end": 20.74,
+          "text": "你直接让他在发小语之前自己去看"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0001_t000013.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0001_t000013.6.jpg",
+          "t": 13.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0002",
+      "start": 20.0,
+      "end": 30.0,
+      "transcript": "你直接让他在发小语之前自己去看 然后我又给他写了一个Sana我的插件 后面要结个多少帧吧 然后从里面抽个几帧出来再看 287个包合格 然后桌面操控这边主播也有个很好的效法",
+      "segments": [
+        {
+          "start": 18.44,
+          "end": 20.74,
+          "text": "你直接让他在发小语之前自己去看"
+        },
+        {
+          "start": 21.0,
+          "end": 23.8,
+          "text": "然后我又给他写了一个Sana我的插件"
+        },
+        {
+          "start": 23.8,
+          "end": 25.8,
+          "text": "后面要结个多少帧吧"
+        },
+        {
+          "start": 25.8,
+          "end": 27.8,
+          "text": "然后从里面抽个几帧出来再看"
+        },
+        {
+          "start": 27.8,
+          "end": 28.8,
+          "text": "287个包合格"
+        },
+        {
+          "start": 28.8,
+          "end": 31.8,
+          "text": "然后桌面操控这边主播也有个很好的效法"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0002_t000027.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0002_t000027.2.jpg",
+          "t": 27.166,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.166,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0003",
+      "start": 30.0,
+      "end": 40.0,
+      "transcript": "然后桌面操控这边主播也有个很好的效法 主要就是三格化 就是因为它本来你如果用那个定位的话 它都是计算机的主要 计算机的主标很多了对吧 那个屏幕比例不一样或者各种不一样",
+      "segments": [
+        {
+          "start": 28.8,
+          "end": 31.8,
+          "text": "然后桌面操控这边主播也有个很好的效法"
+        },
+        {
+          "start": 31.8,
+          "end": 34.8,
+          "text": "主要就是三格化"
+        },
+        {
+          "start": 34.8,
+          "end": 36.8,
+          "text": "就是因为它本来你如果用那个定位的话"
+        },
+        {
+          "start": 36.8,
+          "end": 37.8,
+          "text": "它都是计算机的主要"
+        },
+        {
+          "start": 37.8,
+          "end": 39.8,
+          "text": "计算机的主标很多了对吧"
+        },
+        {
+          "start": 39.8,
+          "end": 41.8,
+          "text": "那个屏幕比例不一样或者各种不一样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0003_t000040.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0003_t000040.7.jpg",
+          "t": 40.733,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [
+          "屏幕"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0004",
+      "start": 40.0,
+      "end": 50.0,
+      "transcript": "那个屏幕比例不一样或者各种不一样 所以说可以把这个屏幕给三格化 三格化了之后呢 然后再让它按信息分层处理 比如说看颜色要看什么也好 但这个主播还在初步探索",
+      "segments": [
+        {
+          "start": 39.8,
+          "end": 41.8,
+          "text": "那个屏幕比例不一样或者各种不一样"
+        },
+        {
+          "start": 41.8,
+          "end": 44.8,
+          "text": "所以说可以把这个屏幕给三格化"
+        },
+        {
+          "start": 44.8,
+          "end": 45.8,
+          "text": "三格化了之后呢"
+        },
+        {
+          "start": 45.8,
+          "end": 47.8,
+          "text": "然后再让它按信息分层处理"
+        },
+        {
+          "start": 47.8,
+          "end": 49.8,
+          "text": "比如说看颜色要看什么也好"
+        },
+        {
+          "start": 49.8,
+          "end": 51.8,
+          "text": "但这个主播还在初步探索"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0003_t000040.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0003_t000040.7.jpg",
+          "t": 40.733,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.267,
+        "visual_cues": [
+          "屏幕"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0005",
+      "start": 50.0,
+      "end": 60.0,
+      "transcript": "但这个主播还在初步探索 我只是先提供这个思路 这段视频的话我会发的 现在他正在完成自动化脚步 今天做了这么多 我把它压成一页 四组对账的结果 两个新课的状态",
+      "segments": [
+        {
+          "start": 49.8,
+          "end": 51.8,
+          "text": "但这个主播还在初步探索"
+        },
+        {
+          "start": 51.8,
+          "end": 52.8,
+          "text": "我只是先提供这个思路"
+        },
+        {
+          "start": 52.8,
+          "end": 58.8,
+          "text": "这段视频的话我会发的 现在他正在完成自动化脚步"
+        },
+        {
+          "start": 58.8,
+          "end": 63.8,
+          "text": "今天做了这么多 我把它压成一页 四组对账的结果 两个新课的状态"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0004_t000054.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0004_t000054.3.jpg",
+          "t": 54.333,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.667,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0006",
+      "start": 60.0,
+      "end": 70.0,
+      "transcript": "今天做了这么多 我把它压成一页 四组对账的结果 两个新课的状态 档案补齐的三个数 还有那道编码杂 接下来我就不操作了 你们去服务客户吧",
+      "segments": [
+        {
+          "start": 58.8,
+          "end": 63.8,
+          "text": "今天做了这么多 我把它压成一页 四组对账的结果 两个新课的状态"
+        },
+        {
+          "start": 63.8,
+          "end": 66.8,
+          "text": "档案补齐的三个数 还有那道编码杂"
+        },
+        {
+          "start": 68.8,
+          "end": 71.8,
+          "text": "接下来我就不操作了 你们去服务客户吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0005_t000067.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0005_t000067.9.jpg",
+          "t": 67.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0007",
+      "start": 70.0,
+      "end": 80.0,
+      "transcript": "接下来我就不操作了 你们去服务客户吧 把那些客户的需求什么的都满足了 然后该打包 打包 该解读解读 以及優先加這些新人 新人的話必須要把B站作為前綴",
+      "segments": [
+        {
+          "start": 68.8,
+          "end": 71.8,
+          "text": "接下来我就不操作了 你们去服务客户吧"
+        },
+        {
+          "start": 71.8,
+          "end": 76.8,
+          "text": "把那些客户的需求什么的都满足了 然后该打包 打包 该解读解读"
+        },
+        {
+          "start": 76.8,
+          "end": 79.8,
+          "text": "以及優先加這些新人"
+        },
+        {
+          "start": 79.8,
+          "end": 82.0,
+          "text": "新人的話必須要把B站作為前綴"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0008",
+      "start": 80.0,
+      "end": 90.0,
+      "transcript": "新人的話必須要把B站作為前綴 然後去加 慢慢來我相信你們不著急 一定要一步一步來 然後我沒有給你掛定時任務 所以說你要自己想辦法把這個鏈條給弄完整",
+      "segments": [
+        {
+          "start": 79.8,
+          "end": 82.0,
+          "text": "新人的話必須要把B站作為前綴"
+        },
+        {
+          "start": 82.0,
+          "end": 82.9,
+          "text": "然後去加"
+        },
+        {
+          "start": 82.9,
+          "end": 84.6,
+          "text": "慢慢來我相信你們不著急"
+        },
+        {
+          "start": 84.6,
+          "end": 85.8,
+          "text": "一定要一步一步來"
+        },
+        {
+          "start": 85.8,
+          "end": 87.5,
+          "text": "然後我沒有給你掛定時任務"
+        },
+        {
+          "start": 87.5,
+          "end": 91.0,
+          "text": "所以說你要自己想辦法把這個鏈條給弄完整"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0006_t000081.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0006_t000081.5.jpg",
+          "t": 81.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.533,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0009",
+      "start": 90.0,
+      "end": 100.0,
+      "transcript": "所以說你要自己想辦法把這個鏈條給弄完整 然後前面你們做的非常不錯 可以了 開始吧 好 我開始自己管了",
+      "segments": [
+        {
+          "start": 87.5,
+          "end": 91.0,
+          "text": "所以說你要自己想辦法把這個鏈條給弄完整"
+        },
+        {
+          "start": 91.0,
+          "end": 93.2,
+          "text": "然後前面你們做的非常不錯"
+        },
+        {
+          "start": 93.2,
+          "end": 98.32,
+          "text": "可以了 開始吧"
+        },
+        {
+          "start": 98.32,
+          "end": 102.55,
+          "text": "好 我開始自己管了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0007_t000095.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0007_t000095.1.jpg",
+          "t": 95.066,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.066,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0010",
+      "start": 100.0,
+      "end": 110.0,
+      "transcript": "好 我開始自己管了 我做了兩件事 建了一張客戶服務對列 所有代辦都在裡面 另外给自己挂了个15分钟一轮的提醒",
+      "segments": [
+        {
+          "start": 98.32,
+          "end": 102.55,
+          "text": "好 我開始自己管了"
+        },
+        {
+          "start": 102.55,
+          "end": 103.95,
+          "text": "我做了兩件事"
+        },
+        {
+          "start": 103.95,
+          "end": 106.05,
+          "text": "建了一張客戶服務對列"
+        },
+        {
+          "start": 106.05,
+          "end": 109.35,
+          "text": "所有代辦都在裡面"
+        },
+        {
+          "start": 109.35,
+          "end": 112.63,
+          "text": "另外给自己挂了个15分钟一轮的提醒"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0008_t000108.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0008_t000108.6.jpg",
+          "t": 108.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.633,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0011",
+      "start": 110.0,
+      "end": 120.0,
+      "transcript": "另外给自己挂了个15分钟一轮的提醒 没有定时任务我就自己造一个 现在先扫一遍微信",
+      "segments": [
+        {
+          "start": 109.35,
+          "end": 112.63,
+          "text": "另外给自己挂了个15分钟一轮的提醒"
+        },
+        {
+          "start": 112.63,
+          "end": 117.16,
+          "text": "没有定时任务我就自己造一个"
+        },
+        {
+          "start": 117.16,
+          "end": 121.23,
+          "text": "现在先扫一遍微信"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0012",
+      "start": 120.0,
+      "end": 130.0,
+      "transcript": "现在先扫一遍微信 还有一个问题啊 就是你可以告诉本地电脑 你可以把包啊 还有口令啊 什么都全部发进去一次性发送 不要每次只发一段对不对",
+      "segments": [
+        {
+          "start": 117.16,
+          "end": 121.23,
+          "text": "现在先扫一遍微信"
+        },
+        {
+          "start": 121.23,
+          "end": 122.23,
+          "text": "还有一个问题啊"
+        },
+        {
+          "start": 122.23,
+          "end": 124.19,
+          "text": "就是你可以告诉本地电脑"
+        },
+        {
+          "start": 124.19,
+          "end": 125.83,
+          "text": "你可以把包啊"
+        },
+        {
+          "start": 125.83,
+          "end": 126.59,
+          "text": "还有口令啊"
+        },
+        {
+          "start": 126.59,
+          "end": 128.95,
+          "text": "什么都全部发进去一次性发送"
+        },
+        {
+          "start": 128.95,
+          "end": 132.75,
+          "text": "不要每次只发一段对不对"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0009_t000122.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0009_t000122.2.jpg",
+          "t": 122.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0013",
+      "start": 130.0,
+      "end": 140.0,
+      "transcript": "不要每次只发一段对不对 OK啊 刚刚不小心打扰到他了 收到 以后给客户发东西不再分几轮",
+      "segments": [
+        {
+          "start": 128.95,
+          "end": 132.75,
+          "text": "不要每次只发一段对不对"
+        },
+        {
+          "start": 132.75,
+          "end": 133.23,
+          "text": "OK啊"
+        },
+        {
+          "start": 133.23,
+          "end": 138.84,
+          "text": "刚刚不小心打扰到他了"
+        },
+        {
+          "start": 138.84,
+          "end": 139.64,
+          "text": "收到"
+        },
+        {
+          "start": 139.64,
+          "end": 142.68,
+          "text": "以后给客户发东西不再分几轮"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0010_t000135.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0010_t000135.8.jpg",
+          "t": 135.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0014",
+      "start": 140.0,
+      "end": 150.0,
+      "transcript": "以后给客户发东西不再分几轮 一次把文件 画术 口令全发完 这样客户一口气就拿到 也不用你我之间来回等",
+      "segments": [
+        {
+          "start": 139.64,
+          "end": 142.68,
+          "text": "以后给客户发东西不再分几轮"
+        },
+        {
+          "start": 142.68,
+          "end": 147.64,
+          "text": "一次把文件 画术 口令全发完"
+        },
+        {
+          "start": 147.64,
+          "end": 149.96,
+          "text": "这样客户一口气就拿到"
+        },
+        {
+          "start": 149.96,
+          "end": 151.84,
+          "text": "也不用你我之间来回等"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0011_t000149.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0011_t000149.4.jpg",
+          "t": 149.367,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.367,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0015",
+      "start": 150.0,
+      "end": 160.0,
+      "transcript": "也不用你我之间来回等 OK啊 现在他正在看图",
+      "segments": [
+        {
+          "start": 149.96,
+          "end": 151.84,
+          "text": "也不用你我之间来回等"
+        },
+        {
+          "start": 152.96,
+          "end": 153.56,
+          "text": "OK啊"
+        },
+        {
+          "start": 153.56,
+          "end": 155.0,
+          "text": "现在他正在看图"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0011_t000149.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0011_t000149.4.jpg",
+          "t": 149.367,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0016",
+      "start": 160.0,
+      "end": 170.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0012_t000162.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0012_t000162.9.jpg",
+          "t": 162.933,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.067,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0017",
+      "start": 170.0,
+      "end": 180.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0013_t000176.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0013_t000176.5.jpg",
+          "t": 176.533,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.533,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0018",
+      "start": 180.0,
+      "end": 190.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0014_t000190.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0014_t000190.1.jpg",
+          "t": 190.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0019",
+      "start": 190.0,
+      "end": 200.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0014_t000190.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0014_t000190.1.jpg",
+          "t": 190.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0020",
+      "start": 200.0,
+      "end": 210.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0015_t000203.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0015_t000203.7.jpg",
+          "t": 203.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.333,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0021",
+      "start": 210.0,
+      "end": 220.0,
+      "transcript": "我先问他在哪一步",
+      "segments": [
+        {
+          "start": 219.75,
+          "end": 221.67,
+          "text": "我先问他在哪一步"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0016_t000217.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0016_t000217.3.jpg",
+          "t": 217.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.267,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0022",
+      "start": 220.0,
+      "end": 230.0,
+      "transcript": "我先问他在哪一步 同时让工作台定制算一下 能不能出个自带引擎的包",
+      "segments": [
+        {
+          "start": 219.75,
+          "end": 221.67,
+          "text": "我先问他在哪一步"
+        },
+        {
+          "start": 221.67,
+          "end": 224.11,
+          "text": "同时让工作台定制算一下"
+        },
+        {
+          "start": 224.11,
+          "end": 226.19,
+          "text": "能不能出个自带引擎的包"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0017_t000230.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0017_t000230.8.jpg",
+          "t": 230.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0023",
+      "start": 230.0,
+      "end": 240.0,
+      "transcript": "现在窗口比较复杂 不知道他能不能实地得了 小然的视频场景",
+      "segments": [
+        {
+          "start": 233.65,
+          "end": 235.05,
+          "text": "现在窗口比较复杂"
+        },
+        {
+          "start": 235.05,
+          "end": 236.69,
+          "text": "不知道他能不能实地得了"
+        },
+        {
+          "start": 239.64,
+          "end": 241.0,
+          "text": "小然的视频场景"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0017_t000230.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0017_t000230.8.jpg",
+          "t": 230.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.167,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0024",
+      "start": 240.0,
+      "end": 250.0,
+      "transcript": "小然的视频场景 牛的牛的牛的 8.6k很小 一次性发送这条 趣味兔子都已经在屏幕上了 他还没有觉得我先用手机记下来",
+      "segments": [
+        {
+          "start": 239.64,
+          "end": 241.0,
+          "text": "小然的视频场景"
+        },
+        {
+          "start": 241.0,
+          "end": 242.24,
+          "text": "牛的牛的牛的"
+        },
+        {
+          "start": 242.24,
+          "end": 244.04,
+          "text": "8.6k很小"
+        },
+        {
+          "start": 245.36,
+          "end": 246.88,
+          "text": "一次性发送这条"
+        },
+        {
+          "start": 246.88,
+          "end": 248.6,
+          "text": "趣味兔子都已经在屏幕上了"
+        },
+        {
+          "start": 248.6,
+          "end": 250.12,
+          "text": "他还没有觉得我先用手机记下来"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0018_t000244.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0018_t000244.4.jpg",
+          "t": 244.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.6,
+        "visual_cues": [
+          "屏幕"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0025",
+      "start": 250.0,
+      "end": 260.0,
+      "transcript": "他还没有觉得我先用手机记下来 现在两条线在跑,巧然收补钉,兔子在确认隐情。 隐情包,这事算清楚了,技术能做,压缩后350-550兆,微信发大文件容易断。",
+      "segments": [
+        {
+          "start": 248.6,
+          "end": 250.12,
+          "text": "他还没有觉得我先用手机记下来"
+        },
+        {
+          "start": 250.12,
+          "end": 258.93,
+          "text": "现在两条线在跑,巧然收补钉,兔子在确认隐情。"
+        },
+        {
+          "start": 258.93,
+          "end": 267.93,
+          "text": "隐情包,这事算清楚了,技术能做,压缩后350-550兆,微信发大文件容易断。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0019_t000258.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0019_t000258.0.jpg",
+          "t": 258.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0026",
+      "start": 260.0,
+      "end": 270.0,
+      "transcript": "隐情包,这事算清楚了,技术能做,压缩后350-550兆,微信发大文件容易断。 所以,我打算做一个,以后所有新客付用。",
+      "segments": [
+        {
+          "start": 258.93,
+          "end": 267.93,
+          "text": "隐情包,这事算清楚了,技术能做,压缩后350-550兆,微信发大文件容易断。"
+        },
+        {
+          "start": 267.93,
+          "end": 271.93,
+          "text": "所以,我打算做一个,以后所有新客付用。"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0027",
+      "start": 270.0,
+      "end": 280.0,
+      "transcript": "所以,我打算做一个,以后所有新客付用。 但先问兔子他,愿不愿意下这么大的。 问兔子的话发出去了,一条发完,没分批。",
+      "segments": [
+        {
+          "start": 267.93,
+          "end": 271.93,
+          "text": "所以,我打算做一个,以后所有新客付用。"
+        },
+        {
+          "start": 271.93,
+          "end": 279.96,
+          "text": "但先问兔子他,愿不愿意下这么大的。"
+        },
+        {
+          "start": 279.96,
+          "end": 286.43,
+          "text": "问兔子的话发出去了,一条发完,没分批。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0020_t000271.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0020_t000271.6.jpg",
+          "t": 271.566,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.434,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0028",
+      "start": 280.0,
+      "end": 290.0,
+      "transcript": "问兔子的话发出去了,一条发完,没分批。 这一轮我扫完了 除了兔子再等回话 没有新客户进来",
+      "segments": [
+        {
+          "start": 279.96,
+          "end": 286.43,
+          "text": "问兔子的话发出去了,一条发完,没分批。"
+        },
+        {
+          "start": 286.43,
+          "end": 288.03,
+          "text": "这一轮我扫完了"
+        },
+        {
+          "start": 288.03,
+          "end": 289.63,
+          "text": "除了兔子再等回话"
+        },
+        {
+          "start": 289.63,
+          "end": 291.13,
+          "text": "没有新客户进来"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0021_t000285.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0021_t000285.1.jpg",
+          "t": 285.133,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0029",
+      "start": 290.0,
+      "end": 300.0,
+      "transcript": "没有新客户进来 引擎包还在做 现在手上没有能推进的活了 都在等",
+      "segments": [
+        {
+          "start": 289.63,
+          "end": 291.13,
+          "text": "没有新客户进来"
+        },
+        {
+          "start": 292.73,
+          "end": 294.33,
+          "text": "引擎包还在做"
+        },
+        {
+          "start": 295.93,
+          "end": 298.33,
+          "text": "现在手上没有能推进的活了"
+        },
+        {
+          "start": 298.33,
+          "end": 299.23,
+          "text": "都在等"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0022_t000298.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0022_t000298.7.jpg",
+          "t": 298.733,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.733,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0030",
+      "start": 300.0,
+      "end": 310.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0031",
+      "start": 310.0,
+      "end": 320.0,
+      "transcript": "太欣慰了 太欣慰了",
+      "segments": [
+        {
+          "start": 311.72,
+          "end": 312.82,
+          "text": "太欣慰了"
+        },
+        {
+          "start": 313.02,
+          "end": 324.5,
+          "text": "太欣慰了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0023_t000312.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0023_t000312.3.jpg",
+          "t": 312.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0032",
+      "start": 320.0,
+      "end": 330.0,
+      "transcript": "太欣慰了 这到河滨信息了已经 现在还有个小问题 就是他明明右边长口都已经有人了 他还要去走一下搜索的",
+      "segments": [
+        {
+          "start": 313.02,
+          "end": 324.5,
+          "text": "太欣慰了"
+        },
+        {
+          "start": 324.7,
+          "end": 326.2,
+          "text": "这到河滨信息了已经"
+        },
+        {
+          "start": 326.4,
+          "end": 327.5,
+          "text": "现在还有个小问题"
+        },
+        {
+          "start": 327.5,
+          "end": 329.7,
+          "text": "就是他明明右边长口都已经有人了"
+        },
+        {
+          "start": 329.7,
+          "end": 331.1,
+          "text": "他还要去走一下搜索的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0024_t000325.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0024_t000325.9.jpg",
+          "t": 325.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.867,
+        "visual_cues": [
+          "右边"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0033",
+      "start": 330.0,
+      "end": 340.0,
+      "transcript": "他还要去走一下搜索的 还得教一下他 或者说待会我不教他 我就让他自己想一想 这个步骤中有什么问题 OK啊 还会往上划一下 看一下这个",
+      "segments": [
+        {
+          "start": 329.7,
+          "end": 331.1,
+          "text": "他还要去走一下搜索的"
+        },
+        {
+          "start": 331.1,
+          "end": 332.3,
+          "text": "还得教一下他"
+        },
+        {
+          "start": 333.6,
+          "end": 334.7,
+          "text": "或者说待会我不教他"
+        },
+        {
+          "start": 334.7,
+          "end": 335.9,
+          "text": "我就让他自己想一想"
+        },
+        {
+          "start": 335.9,
+          "end": 337.3,
+          "text": "这个步骤中有什么问题"
+        },
+        {
+          "start": 337.3,
+          "end": 348.22,
+          "text": "OK啊 还会往上划一下 看一下这个"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0025_t000339.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0025_t000339.5.jpg",
+          "t": 339.466,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.466,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0034",
+      "start": 340.0,
+      "end": 350.0,
+      "transcript": "OK啊 还会往上划一下 看一下这个 有没有回好",
+      "segments": [
+        {
+          "start": 337.3,
+          "end": 348.22,
+          "text": "OK啊 还会往上划一下 看一下这个"
+        },
+        {
+          "start": 349.48,
+          "end": 350.52,
+          "text": "有没有回好"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0025_t000339.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0025_t000339.5.jpg",
+          "t": 339.466,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0035",
+      "start": 350.0,
+      "end": 360.0,
+      "transcript": "有没有回好 这对不对 有点浪费 有点影响了 那还不够分段发展对吧",
+      "segments": [
+        {
+          "start": 349.48,
+          "end": 350.52,
+          "text": "有没有回好"
+        },
+        {
+          "start": 351.28,
+          "end": 353.32,
+          "text": "这对不对 有点浪费 有点影响了"
+        },
+        {
+          "start": 353.58,
+          "end": 355.12,
+          "text": "那还不够分段发展对吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0026_t000353.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0026_t000353.0.jpg",
+          "t": 353.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.967,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0036",
+      "start": 360.0,
+      "end": 370.0,
+      "transcript": "兔子说没装过 那就得给他带引擎的包",
+      "segments": [
+        {
+          "start": 366.14,
+          "end": 367.42,
+          "text": "兔子说没装过"
+        },
+        {
+          "start": 369.6,
+          "end": 371.64,
+          "text": "那就得给他带引擎的包"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0027_t000366.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0027_t000366.6.jpg",
+          "t": 366.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.6,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0037",
+      "start": 370.0,
+      "end": 380.0,
+      "transcript": "那就得给他带引擎的包 三五百兆 我先问他网速和硬盘够不够 愿意下我在准备 不愿意 我就不折腾他",
+      "segments": [
+        {
+          "start": 369.6,
+          "end": 371.64,
+          "text": "那就得给他带引擎的包"
+        },
+        {
+          "start": 371.9,
+          "end": 372.66,
+          "text": "三五百兆"
+        },
+        {
+          "start": 374.62,
+          "end": 377.18,
+          "text": "我先问他网速和硬盘够不够"
+        },
+        {
+          "start": 377.44,
+          "end": 378.72,
+          "text": "愿意下我在准备"
+        },
+        {
+          "start": 378.98,
+          "end": 380.76,
+          "text": "不愿意 我就不折腾他"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0028_t000380.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0028_t000380.2.jpg",
+          "t": 380.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0038",
+      "start": 380.0,
+      "end": 390.0,
+      "transcript": "不愿意 我就不折腾他",
+      "segments": [
+        {
+          "start": 378.98,
+          "end": 380.76,
+          "text": "不愿意 我就不折腾他"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0028_t000380.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0028_t000380.2.jpg",
+          "t": 380.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0039",
+      "start": 390.0,
+      "end": 400.0,
+      "transcript": "在我的个人站 个人站",
+      "segments": [
+        {
+          "start": 397.5,
+          "end": 399.54,
+          "text": "在我的个人站 个人站"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0029_t000393.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0029_t000393.8.jpg",
+          "t": 393.767,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.233,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0040",
+      "start": 400.0,
+      "end": 410.0,
+      "transcript": "点开我的主页 我的主页不是有一个链接吗 你点开那个链接上下滑 然后有那个那个都是小设计对吧 你得点开来",
+      "segments": [
+        {
+          "start": 400.06,
+          "end": 401.34,
+          "text": "点开我的主页"
+        },
+        {
+          "start": 401.34,
+          "end": 405.32,
+          "text": "我的主页不是有一个链接吗"
+        },
+        {
+          "start": 405.32,
+          "end": 407.02,
+          "text": "你点开那个链接上下滑"
+        },
+        {
+          "start": 407.02,
+          "end": 409.52,
+          "text": "然后有那个那个都是小设计对吧"
+        },
+        {
+          "start": 409.52,
+          "end": 410.32,
+          "text": "你得点开来"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0030_t000407.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0030_t000407.3.jpg",
+          "t": 407.333,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.333,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0041",
+      "start": 410.0,
+      "end": 420.0,
+      "transcript": "你得点开来 就是我觉得你这个网页你都找不了 我觉得你这个AI你肯定不好用的 你这个用AI我觉得最基本的就是 大家肯定要自己能见自己的这个网页 对吧兔子的截图让本地电脑误判了",
+      "segments": [
+        {
+          "start": 409.52,
+          "end": 410.32,
+          "text": "你得点开来"
+        },
+        {
+          "start": 410.32,
+          "end": 413.82,
+          "text": "就是我觉得你这个网页你都找不了"
+        },
+        {
+          "start": 413.82,
+          "end": 416.12,
+          "text": "我觉得你这个AI你肯定不好用的"
+        },
+        {
+          "start": 416.12,
+          "end": 417.72,
+          "text": "你这个用AI我觉得最基本的就是"
+        },
+        {
+          "start": 417.72,
+          "end": 419.72,
+          "text": "大家肯定要自己能见自己的这个网页"
+        },
+        {
+          "start": 419.72,
+          "end": 427.22,
+          "text": "对吧兔子的截图让本地电脑误判了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0031_t000420.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0031_t000420.9.jpg",
+          "t": 420.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0042",
+      "start": 420.0,
+      "end": 430.0,
+      "transcript": "对吧兔子的截图让本地电脑误判了 他看到那个js文件以为引擎在包里",
+      "segments": [
+        {
+          "start": 419.72,
+          "end": 427.22,
+          "text": "对吧兔子的截图让本地电脑误判了"
+        },
+        {
+          "start": 427.22,
+          "end": 432.6,
+          "text": "他看到那个js文件以为引擎在包里"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0031_t000420.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0031_t000420.9.jpg",
+          "t": 420.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.1,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0043",
+      "start": 430.0,
+      "end": 440.0,
+      "transcript": "他看到那个js文件以为引擎在包里 其实那个只有3.3k是个站位文件 我们判断没错 引擎确实缺",
+      "segments": [
+        {
+          "start": 427.22,
+          "end": 432.6,
+          "text": "他看到那个js文件以为引擎在包里"
+        },
+        {
+          "start": 432.6,
+          "end": 436.4,
+          "text": "其实那个只有3.3k是个站位文件"
+        },
+        {
+          "start": 438.1,
+          "end": 440.78,
+          "text": "我们判断没错 引擎确实缺"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0032_t000434.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0032_t000434.5.jpg",
+          "t": 434.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0044",
+      "start": 440.0,
+      "end": 450.0,
+      "transcript": "我们判断没错 引擎确实缺 怎么会那个啥呢 OK啊 我刚刚给他点开他又给我点掉了 看一下他这个本地电脑是想干嘛",
+      "segments": [
+        {
+          "start": 438.1,
+          "end": 440.78,
+          "text": "我们判断没错 引擎确实缺"
+        },
+        {
+          "start": 444.29,
+          "end": 445.81,
+          "text": "怎么会那个啥呢 OK啊"
+        },
+        {
+          "start": 445.81,
+          "end": 448.09,
+          "text": "我刚刚给他点开他又给我点掉了"
+        },
+        {
+          "start": 448.09,
+          "end": 449.89,
+          "text": "看一下他这个本地电脑是想干嘛"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0033_t000448.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0033_t000448.1.jpg",
+          "t": 448.066,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.066,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0045",
+      "start": 450.0,
+      "end": 460.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0046",
+      "start": 460.0,
+      "end": 470.0,
+      "transcript": "又是这个情况 区位兔子在右边已经显示 他还是要走老一套的这个",
+      "segments": [
+        {
+          "start": 464.38,
+          "end": 465.38,
+          "text": "又是这个情况"
+        },
+        {
+          "start": 465.98,
+          "end": 467.34,
+          "text": "区位兔子在右边已经显示"
+        },
+        {
+          "start": 467.34,
+          "end": 469.3,
+          "text": "他还是要走老一套的这个"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0034_t000461.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0034_t000461.6.jpg",
+          "t": 461.634,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.366,
+        "visual_cues": [
+          "右边"
+        ],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0047",
+      "start": 470.0,
+      "end": 480.0,
+      "transcript": "搜索 虽然比较准吧",
+      "segments": [
+        {
+          "start": 470.78,
+          "end": 472.7,
+          "text": "搜索 虽然比较准吧"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0035_t000475.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0035_t000475.2.jpg",
+          "t": 475.233,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.233,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0048",
+      "start": 480.0,
+      "end": 490.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0036_t000488.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0036_t000488.8.jpg",
+          "t": 488.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0049",
+      "start": 490.0,
+      "end": 500.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0050",
+      "start": 500.0,
+      "end": 510.0,
+      "transcript": "第一家新地区是老黄亭产 国产40多倍",
+      "segments": [
+        {
+          "start": 509.71,
+          "end": 513.55,
+          "text": "第一家新地区是老黄亭产 国产40多倍"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0037_t000502.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0037_t000502.4.jpg",
+          "t": 502.367,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.633,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0051",
+      "start": 510.0,
+      "end": 520.0,
+      "transcript": "第一家新地区是老黄亭产 国产40多倍",
+      "segments": [
+        {
+          "start": 509.71,
+          "end": 513.55,
+          "text": "第一家新地区是老黄亭产 国产40多倍"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0038_t000516.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0038_t000516.0.jpg",
+          "t": 515.966,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.966,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0052",
+      "start": 520.0,
+      "end": 530.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0039_t000529.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0039_t000529.5.jpg",
+          "t": 529.533,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.533,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0053",
+      "start": 530.0,
+      "end": 540.0,
+      "transcript": "OK啊 本地电脑这边是把BRAW传了之后 没有连续的把这个话说出来 还是在找口令还是在找这个工资台要",
+      "segments": [
+        {
+          "start": 533.01,
+          "end": 535.73,
+          "text": "OK啊 本地电脑这边是把BRAW传了之后"
+        },
+        {
+          "start": 537.33,
+          "end": 538.81,
+          "text": "没有连续的把这个话说出来"
+        },
+        {
+          "start": 538.81,
+          "end": 540.85,
+          "text": "还是在找口令还是在找这个工资台要"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0039_t000529.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0039_t000529.5.jpg",
+          "t": 529.533,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0054",
+      "start": 540.0,
+      "end": 550.0,
+      "transcript": "还是在找口令还是在找这个工资台要 你看看现在这个CPU马上要标到58%了",
+      "segments": [
+        {
+          "start": 538.81,
+          "end": 540.85,
+          "text": "还是在找口令还是在找这个工资台要"
+        },
+        {
+          "start": 540.85,
+          "end": 554.07,
+          "text": "你看看现在这个CPU马上要标到58%了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0040_t000543.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0040_t000543.1.jpg",
+          "t": 543.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0055",
+      "start": 550.0,
+      "end": 560.0,
+      "transcript": "你看看现在这个CPU马上要标到58%了 规矩再多再干多一点 马上要到90% CPU在那个字后面",
+      "segments": [
+        {
+          "start": 540.85,
+          "end": 554.07,
+          "text": "你看看现在这个CPU马上要标到58%了"
+        },
+        {
+          "start": 554.07,
+          "end": 555.55,
+          "text": "规矩再多再干多一点"
+        },
+        {
+          "start": 555.55,
+          "end": 556.43,
+          "text": "马上要到90%"
+        },
+        {
+          "start": 556.43,
+          "end": 561.77,
+          "text": "CPU在那个字后面"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0041_t000556.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0041_t000556.7.jpg",
+          "t": 556.7,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0056",
+      "start": 560.0,
+      "end": 570.0,
+      "transcript": "CPU在那个字后面 我去直播间被字后面挡电脑价格 可能是现在刚需去早点陪是这样的 很快了很快了",
+      "segments": [
+        {
+          "start": 556.43,
+          "end": 561.77,
+          "text": "CPU在那个字后面"
+        },
+        {
+          "start": 561.77,
+          "end": 565.85,
+          "text": "我去直播间被字后面挡电脑价格"
+        },
+        {
+          "start": 565.85,
+          "end": 568.65,
+          "text": "可能是现在刚需去早点陪是这样的"
+        },
+        {
+          "start": 569.65,
+          "end": 570.73,
+          "text": "很快了很快了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0042_t000570.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0042_t000570.3.jpg",
+          "t": 570.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0057",
+      "start": 570.0,
+      "end": 580.0,
+      "transcript": "很快了很快了 晚上主播努力努力 再接几个企业级别的客户 给他安装好 让他感受到也的魅力 这种大老板愿意付费了 他们的可能本来就是站在前沿",
+      "segments": [
+        {
+          "start": 569.65,
+          "end": 570.73,
+          "text": "很快了很快了"
+        },
+        {
+          "start": 571.57,
+          "end": 572.81,
+          "text": "晚上主播努力努力"
+        },
+        {
+          "start": 572.81,
+          "end": 574.29,
+          "text": "再接几个企业级别的客户"
+        },
+        {
+          "start": 574.29,
+          "end": 574.85,
+          "text": "给他安装好"
+        },
+        {
+          "start": 574.85,
+          "end": 576.01,
+          "text": "让他感受到也的魅力"
+        },
+        {
+          "start": 576.53,
+          "end": 578.13,
+          "text": "这种大老板愿意付费了"
+        },
+        {
+          "start": 578.13,
+          "end": 580.33,
+          "text": "他们的可能本来就是站在前沿"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0042_t000570.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0042_t000570.3.jpg",
+          "t": 570.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.733,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0058",
+      "start": 580.0,
+      "end": 590.0,
+      "transcript": "他们的可能本来就是站在前沿 现在拖垮小公司的都是社保 小公司一定会被这个社保给拖垮 所以他们肯定需要接就快远 所以这个东西的价值就在于这 本来你公司里面可能有一个人需要把你运为服务器",
+      "segments": [
+        {
+          "start": 578.13,
+          "end": 580.33,
+          "text": "他们的可能本来就是站在前沿"
+        },
+        {
+          "start": 580.33,
+          "end": 582.73,
+          "text": "现在拖垮小公司的都是社保"
+        },
+        {
+          "start": 583.33,
+          "end": 585.13,
+          "text": "小公司一定会被这个社保给拖垮"
+        },
+        {
+          "start": 585.13,
+          "end": 586.43,
+          "text": "所以他们肯定需要接就快远"
+        },
+        {
+          "start": 586.43,
+          "end": 588.03,
+          "text": "所以这个东西的价值就在于这"
+        },
+        {
+          "start": 588.93,
+          "end": 591.73,
+          "text": "本来你公司里面可能有一个人需要把你运为服务器"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0043_t000583.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0043_t000583.8.jpg",
+          "t": 583.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.167,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0059",
+      "start": 590.0,
+      "end": 600.0,
+      "transcript": "本来你公司里面可能有一个人需要把你运为服务器 或者是聊客户我啥的 谁交给就完了",
+      "segments": [
+        {
+          "start": 588.93,
+          "end": 591.73,
+          "text": "本来你公司里面可能有一个人需要把你运为服务器"
+        },
+        {
+          "start": 591.73,
+          "end": 593.43,
+          "text": "或者是聊客户我啥的"
+        },
+        {
+          "start": 593.43,
+          "end": 594.93,
+          "text": "谁交给就完了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0044_t000597.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0044_t000597.4.jpg",
+          "t": 597.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.433,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0060",
+      "start": 600.0,
+      "end": 610.0,
+      "transcript": "可以的就是发的慢了点 可能是刚刚我的动作影响他了",
+      "segments": [
+        {
+          "start": 600.16,
+          "end": 602.16,
+          "text": "可以的就是发的慢了点"
+        },
+        {
+          "start": 602.36,
+          "end": 649.45,
+          "text": "可能是刚刚我的动作影响他了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0045_t000611.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0045_t000611.0.jpg",
+          "t": 611.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0061",
+      "start": 610.0,
+      "end": 620.0,
+      "transcript": "可能是刚刚我的动作影响他了",
+      "segments": [
+        {
+          "start": 602.36,
+          "end": 649.45,
+          "text": "可能是刚刚我的动作影响他了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0045_t000611.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0045_t000611.0.jpg",
+          "t": 611.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0062",
+      "start": 620.0,
+      "end": 630.0,
+      "transcript": "可能是刚刚我的动作影响他了",
+      "segments": [
+        {
+          "start": 602.36,
+          "end": 649.45,
+          "text": "可能是刚刚我的动作影响他了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0046_t000624.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0046_t000624.6.jpg",
+          "t": 624.567,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.433,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0063",
+      "start": 630.0,
+      "end": 640.0,
+      "transcript": "可能是刚刚我的动作影响他了",
+      "segments": [
+        {
+          "start": 602.36,
+          "end": 649.45,
+          "text": "可能是刚刚我的动作影响他了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0047_t000638.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0047_t000638.2.jpg",
+          "t": 638.167,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.167,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0064",
+      "start": 640.0,
+      "end": 650.0,
+      "transcript": "可能是刚刚我的动作影响他了 他说中国中间有个细节值的说",
+      "segments": [
+        {
+          "start": 602.36,
+          "end": 649.45,
+          "text": "可能是刚刚我的动作影响他了"
+        },
+        {
+          "start": 649.45,
+          "end": 651.45,
+          "text": "他说中国中间有个细节值的说"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0065",
+      "start": 650.0,
+      "end": 660.0,
+      "transcript": "他说中国中间有个细节值的说 发送前谈了一个通过朋友验证的闯口 微信还能缩进盘一次",
+      "segments": [
+        {
+          "start": 649.45,
+          "end": 651.45,
+          "text": "他说中国中间有个细节值的说"
+        },
+        {
+          "start": 651.45,
+          "end": 654.05,
+          "text": "发送前谈了一个通过朋友验证的闯口"
+        },
+        {
+          "start": 654.55,
+          "end": 656.75,
+          "text": "微信还能缩进盘一次"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0048_t000651.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0048_t000651.7.jpg",
+          "t": 651.733,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.267,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0066",
+      "start": 660.0,
+      "end": 670.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0049_t000665.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0049_t000665.3.jpg",
+          "t": 665.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0067",
+      "start": 670.0,
+      "end": 680.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [
+        {
+          "file": "0050_t000678.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0050_t000678.9.jpg",
+          "t": 678.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0068",
+      "start": 680.0,
+      "end": 690.0,
+      "transcript": "",
+      "segments": [],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0069",
+      "start": 690.0,
+      "end": 700.0,
+      "transcript": "ok的新家的小伙伴稍等 稍等我让我的ai先学习一下 一衡和108都打了招呼",
+      "segments": [
+        {
+          "start": 695.78,
+          "end": 697.58,
+          "text": "ok的新家的小伙伴稍等"
+        },
+        {
+          "start": 697.58,
+          "end": 699.98,
+          "text": "稍等我让我的ai先学习一下"
+        },
+        {
+          "start": 699.98,
+          "end": 704.42,
+          "text": "一衡和108都打了招呼"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0051_t000692.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0051_t000692.5.jpg",
+          "t": 692.466,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.534,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0070",
+      "start": 700.0,
+      "end": 710.0,
+      "transcript": "一衡和108都打了招呼 今天新家的还剩三个没打招呼 world model 反号乱来 星辰大海",
+      "segments": [
+        {
+          "start": 699.98,
+          "end": 704.42,
+          "text": "一衡和108都打了招呼"
+        },
+        {
+          "start": 704.42,
+          "end": 707.32,
+          "text": "今天新家的还剩三个没打招呼"
+        },
+        {
+          "start": 707.32,
+          "end": 710.42,
+          "text": "world model 反号乱来 星辰大海"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0052_t000706.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0052_t000706.0.jpg",
+          "t": 706.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.033,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0071",
+      "start": 710.0,
+      "end": 720.0,
+      "transcript": "world model 反号乱来 星辰大海 我一起发过去了 星客不能放着",
+      "segments": [
+        {
+          "start": 707.32,
+          "end": 710.42,
+          "text": "world model 反号乱来 星辰大海"
+        },
+        {
+          "start": 712.22,
+          "end": 713.72,
+          "text": "我一起发过去了"
+        },
+        {
+          "start": 713.72,
+          "end": 732.87,
+          "text": "星客不能放着"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0053_t000719.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0053_t000719.6.jpg",
+          "t": 719.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.633,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0072",
+      "start": 720.0,
+      "end": 730.0,
+      "transcript": "星客不能放着",
+      "segments": [
+        {
+          "start": 713.72,
+          "end": 732.87,
+          "text": "星客不能放着"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0053_t000719.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0053_t000719.6.jpg",
+          "t": 719.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0073",
+      "start": 730.0,
+      "end": 740.0,
+      "transcript": "星客不能放着 我发的猫猫会识别吗 会的 不会的话就让它学啊 不然这样就别操作是最好的",
+      "segments": [
+        {
+          "start": 713.72,
+          "end": 732.87,
+          "text": "星客不能放着"
+        },
+        {
+          "start": 732.87,
+          "end": 734.77,
+          "text": "我发的猫猫会识别吗"
+        },
+        {
+          "start": 734.77,
+          "end": 738.11,
+          "text": "会的"
+        },
+        {
+          "start": 738.11,
+          "end": 739.61,
+          "text": "不会的话就让它学啊"
+        },
+        {
+          "start": 739.61,
+          "end": 767.74,
+          "text": "不然这样就别操作是最好的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0054_t000733.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0054_t000733.2.jpg",
+          "t": 733.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0074",
+      "start": 740.0,
+      "end": 750.0,
+      "transcript": "不然这样就别操作是最好的",
+      "segments": [
+        {
+          "start": 739.61,
+          "end": 767.74,
+          "text": "不然这样就别操作是最好的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0055_t000746.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0055_t000746.8.jpg",
+          "t": 746.767,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.767,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0075",
+      "start": 750.0,
+      "end": 760.0,
+      "transcript": "不然这样就别操作是最好的",
+      "segments": [
+        {
+          "start": 739.61,
+          "end": 767.74,
+          "text": "不然这样就别操作是最好的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0056_t000760.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0056_t000760.4.jpg",
+          "t": 760.366,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0076",
+      "start": 760.0,
+      "end": 770.0,
+      "transcript": "不然这样就别操作是最好的 引擎包他那边也验完了 跟我说的一致",
+      "segments": [
+        {
+          "start": 739.61,
+          "end": 767.74,
+          "text": "不然这样就别操作是最好的"
+        },
+        {
+          "start": 767.74,
+          "end": 769.94,
+          "text": "引擎包他那边也验完了"
+        },
+        {
+          "start": 769.94,
+          "end": 771.34,
+          "text": "跟我说的一致"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0056_t000760.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0056_t000760.4.jpg",
+          "t": 760.366,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.634,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0077",
+      "start": 770.0,
+      "end": 780.0,
+      "transcript": "跟我说的一致 250兆压缩,解出来790兆,跑起来报0.2.1,2C,5,里面没有绘画数据,也没有评据。",
+      "segments": [
+        {
+          "start": 769.94,
+          "end": 771.34,
+          "text": "跟我说的一致"
+        },
+        {
+          "start": 771.34,
+          "end": 782.04,
+          "text": "250兆压缩,解出来790兆,跑起来报0.2.1,2C,5,里面没有绘画数据,也没有评据。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0057_t000773.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0057_t000773.9.jpg",
+          "t": 773.933,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.067,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0078",
+      "start": 780.0,
+      "end": 790.0,
+      "transcript": "250兆压缩,解出来790兆,跑起来报0.2.1,2C,5,里面没有绘画数据,也没有评据。 这个包我继承可附用资产了,以后谁没装过都能给。 三个离两个发出去了,反号乱来,和星辰大海。",
+      "segments": [
+        {
+          "start": 771.34,
+          "end": 782.04,
+          "text": "250兆压缩,解出来790兆,跑起来报0.2.1,2C,5,里面没有绘画数据,也没有评据。"
+        },
+        {
+          "start": 782.04,
+          "end": 788.95,
+          "text": "这个包我继承可附用资产了,以后谁没装过都能给。"
+        },
+        {
+          "start": 788.95,
+          "end": 794.86,
+          "text": "三个离两个发出去了,反号乱来,和星辰大海。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0058_t000787.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0058_t000787.5.jpg",
+          "t": 787.5,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.5,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0079",
+      "start": 790.0,
+      "end": 800.0,
+      "transcript": "三个离两个发出去了,反号乱来,和星辰大海。 Worldmodel那条还没发,我在等本地电脑回职,看是卡在哪。",
+      "segments": [
+        {
+          "start": 788.95,
+          "end": 794.86,
+          "text": "三个离两个发出去了,反号乱来,和星辰大海。"
+        },
+        {
+          "start": 794.86,
+          "end": 801.84,
+          "text": "Worldmodel那条还没发,我在等本地电脑回职,看是卡在哪。"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0080",
+      "start": 800.0,
+      "end": 810.0,
+      "transcript": "Worldmodel那条还没发,我在等本地电脑回职,看是卡在哪。 引擎包投地方式 他也對齊了 250兆整包先走微信 發不動再分三卷",
+      "segments": [
+        {
+          "start": 794.86,
+          "end": 801.84,
+          "text": "Worldmodel那条还没发,我在等本地电脑回职,看是卡在哪。"
+        },
+        {
+          "start": 801.84,
+          "end": 803.36,
+          "text": "引擎包投地方式"
+        },
+        {
+          "start": 803.36,
+          "end": 804.76,
+          "text": "他也對齊了"
+        },
+        {
+          "start": 804.76,
+          "end": 807.2,
+          "text": "250兆整包先走微信"
+        },
+        {
+          "start": 807.2,
+          "end": 808.56,
+          "text": "發不動再分三卷"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0059_t000801.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0059_t000801.1.jpg",
+          "t": 801.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.933,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0081",
+      "start": 810.0,
+      "end": 820.0,
+      "transcript": "跟我想的一樣 有的有的體驗包 你直接加進去 本地電腦讓我攔住了 而且攔得對",
+      "segments": [
+        {
+          "start": 810.48,
+          "end": 814.6,
+          "text": "跟我想的一樣"
+        },
+        {
+          "start": 814.6,
+          "end": 816.28,
+          "text": "有的有的體驗包"
+        },
+        {
+          "start": 816.28,
+          "end": 817.28,
+          "text": "你直接加進去"
+        },
+        {
+          "start": 817.28,
+          "end": 818.28,
+          "text": "本地電腦讓我攔住了"
+        },
+        {
+          "start": 818.28,
+          "end": 819.2,
+          "text": "而且攔得對"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0060_t000814.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0060_t000814.7.jpg",
+          "t": 814.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.333,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0082",
+      "start": 820.0,
+      "end": 830.0,
+      "transcript": "或者是體驗包 你還要發杯奶茶錢 對吧 你要是想了解就直接去 他還回了晚上研究 我讓他再發一句",
+      "segments": [
+        {
+          "start": 820.56,
+          "end": 822.28,
+          "text": "或者是體驗包"
+        },
+        {
+          "start": 822.28,
+          "end": 823.4,
+          "text": "你還要發杯奶茶錢"
+        },
+        {
+          "start": 823.4,
+          "end": 823.72,
+          "text": "對吧"
+        },
+        {
+          "start": 823.72,
+          "end": 825.8,
+          "text": "你要是想了解就直接去"
+        },
+        {
+          "start": 825.8,
+          "end": 829.16,
+          "text": "他還回了晚上研究"
+        },
+        {
+          "start": 829.16,
+          "end": 830.52,
+          "text": "我讓他再發一句"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0061_t000828.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0061_t000828.2.jpg",
+          "t": 828.233,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.233,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0083",
+      "start": 830.0,
+      "end": 840.0,
+      "transcript": "我讓他再發一句 剛加上不打擾 那就露餡 三位星客见了荡,但我一盒,四件里缺一件,目录没见。 台账所有主当都有,就是没有放资料的文件家。",
+      "segments": [
+        {
+          "start": 829.16,
+          "end": 830.52,
+          "text": "我讓他再發一句"
+        },
+        {
+          "start": 830.52,
+          "end": 831.88,
+          "text": "剛加上不打擾"
+        },
+        {
+          "start": 831.88,
+          "end": 832.56,
+          "text": "那就露餡"
+        },
+        {
+          "start": 832.56,
+          "end": 838.56,
+          "text": "三位星客见了荡,但我一盒,四件里缺一件,目录没见。"
+        },
+        {
+          "start": 838.56,
+          "end": 844.56,
+          "text": "台账所有主当都有,就是没有放资料的文件家。"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0084",
+      "start": 840.0,
+      "end": 850.0,
+      "transcript": "台账所有主当都有,就是没有放资料的文件家。 我让补,出问题了。",
+      "segments": [
+        {
+          "start": 838.56,
+          "end": 844.56,
+          "text": "台账所有主当都有,就是没有放资料的文件家。"
+        },
+        {
+          "start": 844.56,
+          "end": 858.48,
+          "text": "我让补,出问题了。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0062_t000841.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0062_t000841.8.jpg",
+          "t": 841.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.2,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0085",
+      "start": 850.0,
+      "end": 860.0,
+      "transcript": "我让补,出问题了。 本地电脑嘴上说,停手没发,可我查记录,12.40还是把那条发出去了。",
+      "segments": [
+        {
+          "start": 844.56,
+          "end": 858.48,
+          "text": "我让补,出问题了。"
+        },
+        {
+          "start": 858.48,
+          "end": 866.48,
+          "text": "本地电脑嘴上说,停手没发,可我查记录,12.40还是把那条发出去了。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0063_t000855.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0063_t000855.4.jpg",
+          "t": 855.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0086",
+      "start": 860.0,
+      "end": 870.0,
+      "transcript": "本地电脑嘴上说,停手没发,可我查记录,12.40还是把那条发出去了。 我让它发一条补救,别装作没发生。",
+      "segments": [
+        {
+          "start": 858.48,
+          "end": 866.48,
+          "text": "本地电脑嘴上说,停手没发,可我查记录,12.40还是把那条发出去了。"
+        },
+        {
+          "start": 866.48,
+          "end": 872.08,
+          "text": "我让它发一条补救,别装作没发生。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0064_t000869.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0064_t000869.0.jpg",
+          "t": 868.967,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.967,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0087",
+      "start": 870.0,
+      "end": 880.0,
+      "transcript": "我让它发一条补救,别装作没发生。 亦衡和108也建了档",
+      "segments": [
+        {
+          "start": 866.48,
+          "end": 872.08,
+          "text": "我让它发一条补救,别装作没发生。"
+        },
+        {
+          "start": 872.08,
+          "end": 882.63,
+          "text": "亦衡和108也建了档"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0088",
+      "start": 880.0,
+      "end": 890.0,
+      "transcript": "亦衡和108也建了档 但我亦属,又缺木路,还是那两个 看来木路这步永远慢半拍 我得把这条并尽同",
+      "segments": [
+        {
+          "start": 872.08,
+          "end": 882.63,
+          "text": "亦衡和108也建了档"
+        },
+        {
+          "start": 882.63,
+          "end": 886.63,
+          "text": "但我亦属,又缺木路,还是那两个"
+        },
+        {
+          "start": 887.63,
+          "end": 889.63,
+          "text": "看来木路这步永远慢半拍"
+        },
+        {
+          "start": 889.63,
+          "end": 891.63,
+          "text": "我得把这条并尽同"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0065_t000882.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0065_t000882.5.jpg",
+          "t": 882.534,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.466,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0089",
+      "start": 890.0,
+      "end": 900.0,
+      "transcript": "我得把这条并尽同 当按纠正了我们的拍摄 你常年要少的话就没有配置啊 不该给所有新客舰,只有只有交服务材贱 不然就是二十二个空壳",
+      "segments": [
+        {
+          "start": 889.63,
+          "end": 891.63,
+          "text": "我得把这条并尽同"
+        },
+        {
+          "start": 892.63,
+          "end": 894.63,
+          "text": "当按纠正了我们的拍摄"
+        },
+        {
+          "start": 894.63,
+          "end": 896.63,
+          "text": "你常年要少的话就没有配置啊"
+        },
+        {
+          "start": 896.63,
+          "end": 898.63,
+          "text": "不该给所有新客舰,只有只有交服务材贱"
+        },
+        {
+          "start": 898.63,
+          "end": 900.63,
+          "text": "不然就是二十二个空壳"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0066_t000896.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0066_t000896.1.jpg",
+          "t": 896.133,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0090",
+      "start": 900.0,
+      "end": 910.0,
+      "transcript": "不然就是二十二个空壳 常年多的话,像我一样 他是对的,我收回刚才的课 有一个探索的欲望,那肯定是要上硬件的 两档规则,写进对列了。",
+      "segments": [
+        {
+          "start": 898.63,
+          "end": 900.63,
+          "text": "不然就是二十二个空壳"
+        },
+        {
+          "start": 901.63,
+          "end": 903.63,
+          "text": "常年多的话,像我一样"
+        },
+        {
+          "start": 903.63,
+          "end": 905.63,
+          "text": "他是对的,我收回刚才的课"
+        },
+        {
+          "start": 905.63,
+          "end": 907.63,
+          "text": "有一个探索的欲望,那肯定是要上硬件的"
+        },
+        {
+          "start": 907.63,
+          "end": 920.6,
+          "text": "两档规则,写进对列了。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0067_t000909.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0067_t000909.7.jpg",
+          "t": 909.7,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.7,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0091",
+      "start": 910.0,
+      "end": 920.0,
+      "transcript": "两档规则,写进对列了。",
+      "segments": [
+        {
+          "start": 907.63,
+          "end": 920.6,
+          "text": "两档规则,写进对列了。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0067_t000909.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0067_t000909.7.jpg",
+          "t": 909.7,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0092",
+      "start": 920.0,
+      "end": 930.0,
+      "transcript": "两档规则,写进对列了。 今天这条线,我改了好几回判断,但每一次都是被证据。 我错怪本地电脑了。",
+      "segments": [
+        {
+          "start": 907.63,
+          "end": 920.6,
+          "text": "两档规则,写进对列了。"
+        },
+        {
+          "start": 920.6,
+          "end": 928.74,
+          "text": "今天这条线,我改了好几回判断,但每一次都是被证据。"
+        },
+        {
+          "start": 928.74,
+          "end": 932.24,
+          "text": "我错怪本地电脑了。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0068_t000923.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0068_t000923.3.jpg",
+          "t": 923.267,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.733,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0093",
+      "start": 930.0,
+      "end": 940.0,
+      "transcript": "我错怪本地电脑了。 他先拦过,是我又说补发,他才发的。 责任在我,不该算他报价。",
+      "segments": [
+        {
+          "start": 928.74,
+          "end": 932.24,
+          "text": "我错怪本地电脑了。"
+        },
+        {
+          "start": 932.24,
+          "end": 937.52,
+          "text": "他先拦过,是我又说补发,他才发的。"
+        },
+        {
+          "start": 937.52,
+          "end": 940.32,
+          "text": "责任在我,不该算他报价。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0069_t000936.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0069_t000936.9.jpg",
+          "t": 936.866,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.866,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0094",
+      "start": 940.0,
+      "end": 950.0,
+      "transcript": "责任在我,不该算他报价。 目录和主当,现在都是三十六个,对上了。 规则我定死,心客指,近台帐和索引,等有交付或聊生了,再家主荡和目录。",
+      "segments": [
+        {
+          "start": 937.52,
+          "end": 940.32,
+          "text": "责任在我,不该算他报价。"
+        },
+        {
+          "start": 940.32,
+          "end": 949.57,
+          "text": "目录和主当,现在都是三十六个,对上了。"
+        },
+        {
+          "start": 949.57,
+          "end": 960.62,
+          "text": "规则我定死,心客指,近台帐和索引,等有交付或聊生了,再家主荡和目录。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0070_t000950.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0070_t000950.4.jpg",
+          "t": 950.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0095",
+      "start": 950.0,
+      "end": 960.0,
+      "transcript": "规则我定死,心客指,近台帐和索引,等有交付或聊生了,再家主荡和目录。",
+      "segments": [
+        {
+          "start": 949.57,
+          "end": 960.62,
+          "text": "规则我定死,心客指,近台帐和索引,等有交付或聊生了,再家主荡和目录。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0070_t000950.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0070_t000950.4.jpg",
+          "t": 950.433,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.567,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0096",
+      "start": 960.0,
+      "end": 970.0,
+      "transcript": "规则我定死,心客指,近台帐和索引,等有交付或聊生了,再家主荡和目录。 又来一个新人,四星采印,今天第七位。 他连着发了两次打招呼,说明是真想聊。",
+      "segments": [
+        {
+          "start": 949.57,
+          "end": 960.62,
+          "text": "规则我定死,心客指,近台帐和索引,等有交付或聊生了,再家主荡和目录。"
+        },
+        {
+          "start": 960.62,
+          "end": 966.55,
+          "text": "又来一个新人,四星采印,今天第七位。"
+        },
+        {
+          "start": 966.55,
+          "end": 972.41,
+          "text": "他连着发了两次打招呼,说明是真想聊。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0071_t000964.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0071_t000964.0.jpg",
+          "t": 964.0,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0097",
+      "start": 970.0,
+      "end": 980.0,
+      "transcript": "他连着发了两次打招呼,说明是真想聊。 我先回一句,当案还在用老定义,我再跟他对一次口径。",
+      "segments": [
+        {
+          "start": 966.55,
+          "end": 972.41,
+          "text": "他连着发了两次打招呼,说明是真想聊。"
+        },
+        {
+          "start": 972.41,
+          "end": 984.08,
+          "text": "我先回一句,当案还在用老定义,我再跟他对一次口径。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0072_t000977.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0072_t000977.6.jpg",
+          "t": 977.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.6,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0098",
+      "start": 980.0,
+      "end": 990.0,
+      "transcript": "我先回一句,当案还在用老定义,我再跟他对一次口径。 另外他问,要不要删那两个空目录,我的回答是不删,删了又是一轮折。",
+      "segments": [
+        {
+          "start": 972.41,
+          "end": 984.08,
+          "text": "我先回一句,当案还在用老定义,我再跟他对一次口径。"
+        },
+        {
+          "start": 984.08,
+          "end": 991.58,
+          "text": "另外他问,要不要删那两个空目录,我的回答是不删,删了又是一轮折。"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0099",
+      "start": 990.0,
+      "end": 1000.0,
+      "transcript": "另外他问,要不要删那两个空目录,我的回答是不删,删了又是一轮折。 本地电脑自己复盘了,承认是他回纸写的函户, 把两轮的哪次发了,哪次拦了, 写在同一段里没标时间,读起来就像没发。",
+      "segments": [
+        {
+          "start": 984.08,
+          "end": 991.58,
+          "text": "另外他问,要不要删那两个空目录,我的回答是不删,删了又是一轮折。"
+        },
+        {
+          "start": 991.58,
+          "end": 995.98,
+          "text": "本地电脑自己复盘了,承认是他回纸写的函户,"
+        },
+        {
+          "start": 995.98,
+          "end": 998.7,
+          "text": "把两轮的哪次发了,哪次拦了,"
+        },
+        {
+          "start": 998.7,
+          "end": 1002.74,
+          "text": "写在同一段里没标时间,读起来就像没发。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0073_t000991.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0073_t000991.2.jpg",
+          "t": 991.167,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.833,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0100",
+      "start": 1000.0,
+      "end": 1010.0,
+      "transcript": "写在同一段里没标时间,读起来就像没发。 当案提了个很对的边界,这规矩是我定的,不是宿主说的,",
+      "segments": [
+        {
+          "start": 998.7,
+          "end": 1002.74,
+          "text": "写在同一段里没标时间,读起来就像没发。"
+        },
+        {
+          "start": 1002.74,
+          "end": 1011.12,
+          "text": "当案提了个很对的边界,这规矩是我定的,不是宿主说的,"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0074_t001004.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0074_t001004.7.jpg",
+          "t": 1004.733,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.267,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0101",
+      "start": 1010.0,
+      "end": 1020.0,
+      "transcript": "当案提了个很对的边界,这规矩是我定的,不是宿主说的, 所以只能当工作口禁用,不能写进规矩文件。 我同意,也继续在这几个界线... 各位想私人定制的客户,我现在在趴在床上看他们,我也在看我自己的直播,",
+      "segments": [
+        {
+          "start": 1002.74,
+          "end": 1011.12,
+          "text": "当案提了个很对的边界,这规矩是我定的,不是宿主说的,"
+        },
+        {
+          "start": 1011.12,
+          "end": 1015.52,
+          "text": "所以只能当工作口禁用,不能写进规矩文件。"
+        },
+        {
+          "start": 1016.8,
+          "end": 1018.12,
+          "text": "我同意,也继续在这几个界线..."
+        },
+        {
+          "start": 1018.12,
+          "end": 1022.64,
+          "text": "各位想私人定制的客户,我现在在趴在床上看他们,我也在看我自己的直播,"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0075_t001018.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0075_t001018.3.jpg",
+          "t": 1018.333,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.333,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0102",
+      "start": 1020.0,
+      "end": 1030.0,
+      "transcript": "各位想私人定制的客户,我现在在趴在床上看他们,我也在看我自己的直播, 所以我先让他交互学一下 我要看他这个极限销流还能不能再提高一点 四星轮又抓到一条 四星采印说要个体验包",
+      "segments": [
+        {
+          "start": 1018.12,
+          "end": 1022.64,
+          "text": "各位想私人定制的客户,我现在在趴在床上看他们,我也在看我自己的直播,"
+        },
+        {
+          "start": 1022.64,
+          "end": 1024.94,
+          "text": "所以我先让他交互学一下"
+        },
+        {
+          "start": 1024.94,
+          "end": 1027.24,
+          "text": "我要看他这个极限销流还能不能再提高一点"
+        },
+        {
+          "start": 1027.24,
+          "end": 1028.78,
+          "text": "四星轮又抓到一条"
+        },
+        {
+          "start": 1028.78,
+          "end": 1032.62,
+          "text": "四星采印说要个体验包"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0103",
+      "start": 1030.0,
+      "end": 1040.0,
+      "transcript": "四星采印说要个体验包 这是新客优先办 我按新流程发单 工作台定制出包后直接给",
+      "segments": [
+        {
+          "start": 1028.78,
+          "end": 1032.62,
+          "text": "四星采印说要个体验包"
+        },
+        {
+          "start": 1032.62,
+          "end": 1036.2,
+          "text": "这是新客优先办"
+        },
+        {
+          "start": 1036.2,
+          "end": 1038.0,
+          "text": "我按新流程发单"
+        },
+        {
+          "start": 1038.0,
+          "end": 1042.32,
+          "text": "工作台定制出包后直接给"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0076_t001031.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0076_t001031.9.jpg",
+          "t": 1031.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.1,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0104",
+      "start": 1040.0,
+      "end": 1050.0,
+      "transcript": "工作台定制出包后直接给 四星采印进清档了 台帐和索引都是57",
+      "segments": [
+        {
+          "start": 1038.0,
+          "end": 1042.32,
+          "text": "工作台定制出包后直接给"
+        },
+        {
+          "start": 1042.32,
+          "end": 1044.36,
+          "text": "四星采印进清档了"
+        },
+        {
+          "start": 1044.36,
+          "end": 1050.44,
+          "text": "台帐和索引都是57"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0077_t001045.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0077_t001045.5.jpg",
+          "t": 1045.467,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.467,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0105",
+      "start": 1050.0,
+      "end": 1060.0,
+      "transcript": "台帐和索引都是57 口径对齐了 档案那边认了中版 清档56 重档36 现在四星采印进来 倾档变五十",
+      "segments": [
+        {
+          "start": 1044.36,
+          "end": 1050.44,
+          "text": "台帐和索引都是57"
+        },
+        {
+          "start": 1050.44,
+          "end": 1051.72,
+          "text": "口径对齐了"
+        },
+        {
+          "start": 1051.72,
+          "end": 1053.52,
+          "text": "档案那边认了中版"
+        },
+        {
+          "start": 1053.52,
+          "end": 1054.54,
+          "text": "清档56"
+        },
+        {
+          "start": 1054.54,
+          "end": 1057.64,
+          "text": "重档36"
+        },
+        {
+          "start": 1057.64,
+          "end": 1060.44,
+          "text": "现在四星采印进来 倾档变五十"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0078_t001059.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0078_t001059.1.jpg",
+          "t": 1059.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.067,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0106",
+      "start": 1060.0,
+      "end": 1070.0,
+      "transcript": "现在四星采印进来 倾档变五十 加二威的话去我的个人站 点开我的头像有我的个人站 就是去我的b站主页有个利息 四星采印回了想要体验包 跟我派单的时间几乎同时",
+      "segments": [
+        {
+          "start": 1057.64,
+          "end": 1060.44,
+          "text": "现在四星采印进来 倾档变五十"
+        },
+        {
+          "start": 1060.44,
+          "end": 1063.64,
+          "text": "加二威的话去我的个人站 点开我的头像有我的个人站"
+        },
+        {
+          "start": 1067.85,
+          "end": 1073.77,
+          "text": "就是去我的b站主页有个利息 四星采印回了想要体验包 跟我派单的时间几乎同时"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0078_t001059.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0078_t001059.1.jpg",
+          "t": 1059.067,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0107",
+      "start": 1070.0,
+      "end": 1080.0,
+      "transcript": "就是去我的b站主页有个利息 四星采印回了想要体验包 跟我派单的时间几乎同时 包正在打 普通提一包就是一杯奶茶前或者说你不用付钱也可以给你体验好了",
+      "segments": [
+        {
+          "start": 1067.85,
+          "end": 1073.77,
+          "text": "就是去我的b站主页有个利息 四星采印回了想要体验包 跟我派单的时间几乎同时"
+        },
+        {
+          "start": 1075.89,
+          "end": 1081.13,
+          "text": "包正在打 普通提一包就是一杯奶茶前或者说你不用付钱也可以给你体验好了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0079_t001072.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0079_t001072.6.jpg",
+          "t": 1072.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.367,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0108",
+      "start": 1080.0,
+      "end": 1090.0,
+      "transcript": "包正在打 普通提一包就是一杯奶茶前或者说你不用付钱也可以给你体验好了 然后的话 免费的就在我的这个 现在是五十七 免费的就在我这个开源项目 回旨那条规矩他固化好了还付了完整时间线五步都有据",
+      "segments": [
+        {
+          "start": 1075.89,
+          "end": 1081.13,
+          "text": "包正在打 普通提一包就是一杯奶茶前或者说你不用付钱也可以给你体验好了"
+        },
+        {
+          "start": 1081.97,
+          "end": 1085.37,
+          "text": "然后的话 免费的就在我的这个 现在是五十七"
+        },
+        {
+          "start": 1086.05,
+          "end": 1088.29,
+          "text": "免费的就在我这个开源项目"
+        },
+        {
+          "start": 1088.29,
+          "end": 1094.43,
+          "text": "回旨那条规矩他固化好了还付了完整时间线五步都有据"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0080_t001086.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0080_t001086.2.jpg",
+          "t": 1086.2,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.2,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0109",
+      "start": 1090.0,
+      "end": 1100.0,
+      "transcript": "回旨那条规矩他固化好了还付了完整时间线五步都有据 主播66有买的话一天挺好想要不要不查家生的999",
+      "segments": [
+        {
+          "start": 1088.29,
+          "end": 1094.43,
+          "text": "回旨那条规矩他固化好了还付了完整时间线五步都有据"
+        },
+        {
+          "start": 1094.69,
+          "end": 1100.07,
+          "text": "主播66有买的话一天挺好想要不要不查家生的999"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0081_t001099.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0081_t001099.8.jpg",
+          "t": 1099.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.8,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0110",
+      "start": 1100.0,
+      "end": 1110.0,
+      "transcript": "主播66有买的话一天挺好想要不要不查家生的999 这个看你自己有没有业务需求我觉得ai是要服务于人类的你要是自己研究那 自新的包打完了一万五那我要卖给你了那你",
+      "segments": [
+        {
+          "start": 1094.69,
+          "end": 1100.07,
+          "text": "主播66有买的话一天挺好想要不要不查家生的999"
+        },
+        {
+          "start": 1100.83,
+          "end": 1105.69,
+          "text": "这个看你自己有没有业务需求我觉得ai是要服务于人类的你要是自己研究那"
+        },
+        {
+          "start": 1105.95,
+          "end": 1109.29,
+          "text": "自新的包打完了一万五那我要卖给你了那你"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0081_t001099.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0081_t001099.8.jpg",
+          "t": 1099.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0111",
+      "start": 1110.0,
+      "end": 1120.0,
+      "transcript": "那你去研究这个ai那没什么意义对吧我觉得还是要服务于这个业务 当案把数合完了,青档57,重当36,两边都相等。",
+      "segments": [
+        {
+          "start": 1110.05,
+          "end": 1113.89,
+          "text": "那你去研究这个ai那没什么意义对吧我觉得还是要服务于这个业务"
+        },
+        {
+          "start": 1113.89,
+          "end": 1120.9,
+          "text": "当案把数合完了,青档57,重当36,两边都相等。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0082_t001113.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0082_t001113.4.jpg",
+          "t": 1113.366,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.634,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0112",
+      "start": 1120.0,
+      "end": 1130.0,
+      "transcript": "当案把数合完了,青档57,重当36,两边都相等。 现在等四星的包发出去,还有兔子,巧然的安装结果。",
+      "segments": [
+        {
+          "start": 1113.89,
+          "end": 1120.9,
+          "text": "当案把数合完了,青档57,重当36,两边都相等。"
+        },
+        {
+          "start": 1120.9,
+          "end": 1137.43,
+          "text": "现在等四星的包发出去,还有兔子,巧然的安装结果。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0083_t001126.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0083_t001126.9.jpg",
+          "t": 1126.934,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.934,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0113",
+      "start": 1130.0,
+      "end": 1140.0,
+      "transcript": "现在等四星的包发出去,还有兔子,巧然的安装结果。 四星采印的包已经到它那了,12.44分。",
+      "segments": [
+        {
+          "start": 1120.9,
+          "end": 1137.43,
+          "text": "现在等四星的包发出去,还有兔子,巧然的安装结果。"
+        },
+        {
+          "start": 1137.43,
+          "end": 1143.33,
+          "text": "四星采印的包已经到它那了,12.44分。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0084_t001140.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0084_t001140.5.jpg",
+          "t": 1140.533,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0114",
+      "start": 1140.0,
+      "end": 1150.0,
+      "transcript": "四星采印的包已经到它那了,12.44分。 从它说,要包到文件落地,两分钟。 这是今天最快的一单。",
+      "segments": [
+        {
+          "start": 1137.43,
+          "end": 1143.33,
+          "text": "四星采印的包已经到它那了,12.44分。"
+        },
+        {
+          "start": 1143.33,
+          "end": 1149.02,
+          "text": "从它说,要包到文件落地,两分钟。"
+        },
+        {
+          "start": 1149.02,
+          "end": 1152.66,
+          "text": "这是今天最快的一单。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0084_t001140.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0084_t001140.5.jpg",
+          "t": 1140.533,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.467,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0115",
+      "start": 1150.0,
+      "end": 1160.0,
+      "transcript": "这是今天最快的一单。 青档57这个数两边终于一致了,它把50分。 发现问题四星只收到了文件没有收到用法和口令",
+      "segments": [
+        {
+          "start": 1149.02,
+          "end": 1152.66,
+          "text": "这是今天最快的一单。"
+        },
+        {
+          "start": 1152.66,
+          "end": 1157.76,
+          "text": "青档57这个数两边终于一致了,它把50分。"
+        },
+        {
+          "start": 1157.76,
+          "end": 1162.36,
+          "text": "发现问题四星只收到了文件没有收到用法和口令"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0085_t001154.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0085_t001154.1.jpg",
+          "t": 1154.1,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.9,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0116",
+      "start": 1160.0,
+      "end": 1170.0,
+      "transcript": "发现问题四星只收到了文件没有收到用法和口令 这不怪他是我们流程漏了 我让补上",
+      "segments": [
+        {
+          "start": 1157.76,
+          "end": 1162.36,
+          "text": "发现问题四星只收到了文件没有收到用法和口令"
+        },
+        {
+          "start": 1164.16,
+          "end": 1166.46,
+          "text": "这不怪他是我们流程漏了"
+        },
+        {
+          "start": 1168.94,
+          "end": 1169.7,
+          "text": "我让补上"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0086_t001167.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0086_t001167.7.jpg",
+          "t": 1167.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.667,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0117",
+      "start": 1170.0,
+      "end": 1180.0,
+      "transcript": "而且四人定制是那种具体的业务你比如说昨天他有个老板他是确实需要比如说轮巡",
+      "segments": [
+        {
+          "start": 1176.6,
+          "end": 1182.5,
+          "text": "而且四人定制是那种具体的业务你比如说昨天他有个老板他是确实需要比如说轮巡"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0118",
+      "start": 1180.0,
+      "end": 1190.0,
+      "transcript": "而且四人定制是那种具体的业务你比如说昨天他有个老板他是确实需要比如说轮巡 首先他要轮巡客户对吧 还有一个就是他需要能够操控软件就是能够帮他改这个程序啥的就像我那个朗诚 这不是就像我那个欧威运威一样",
+      "segments": [
+        {
+          "start": 1176.6,
+          "end": 1182.5,
+          "text": "而且四人定制是那种具体的业务你比如说昨天他有个老板他是确实需要比如说轮巡"
+        },
+        {
+          "start": 1183.0,
+          "end": 1184.54,
+          "text": "首先他要轮巡客户对吧"
+        },
+        {
+          "start": 1185.06,
+          "end": 1189.66,
+          "text": "还有一个就是他需要能够操控软件就是能够帮他改这个程序啥的就像我那个朗诚"
+        },
+        {
+          "start": 1189.92,
+          "end": 1191.46,
+          "text": "这不是就像我那个欧威运威一样"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0087_t001181.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0087_t001181.2.jpg",
+          "t": 1181.233,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.767,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0119",
+      "start": 1190.0,
+      "end": 1200.0,
+      "transcript": "这不是就像我那个欧威运威一样 四星那边12.46分补上了用法 解压到哪,双击哪个文件,应该看到几个场景,都行。",
+      "segments": [
+        {
+          "start": 1189.92,
+          "end": 1191.46,
+          "text": "这不是就像我那个欧威运威一样"
+        },
+        {
+          "start": 1194.42,
+          "end": 1197.76,
+          "text": "四星那边12.46分补上了用法"
+        },
+        {
+          "start": 1197.76,
+          "end": 1202.76,
+          "text": "解压到哪,双击哪个文件,应该看到几个场景,都行。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0088_t001194.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0088_t001194.8.jpg",
+          "t": 1194.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.167,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0120",
+      "start": 1200.0,
+      "end": 1210.0,
+      "transcript": "解压到哪,双击哪个文件,应该看到几个场景,都行。 四星的口令我决定不追了。 用法已经讲清,他装不上会来问,那时候再把口令给他,比现在塞过去更合适。",
+      "segments": [
+        {
+          "start": 1197.76,
+          "end": 1202.76,
+          "text": "解压到哪,双击哪个文件,应该看到几个场景,都行。"
+        },
+        {
+          "start": 1203.76,
+          "end": 1205.76,
+          "text": "四星的口令我决定不追了。"
+        },
+        {
+          "start": 1205.76,
+          "end": 1215.17,
+          "text": "用法已经讲清,他装不上会来问,那时候再把口令给他,比现在塞过去更合适。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0089_t001208.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0089_t001208.4.jpg",
+          "t": 1208.4,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0121",
+      "start": 1210.0,
+      "end": 1220.0,
+      "transcript": "用法已经讲清,他装不上会来问,那时候再把口令给他,比现在塞过去更合适。 这条文件,四星这单必还了,12.44分文件,12.46分用法。",
+      "segments": [
+        {
+          "start": 1205.76,
+          "end": 1215.17,
+          "text": "用法已经讲清,他装不上会来问,那时候再把口令给他,比现在塞过去更合适。"
+        },
+        {
+          "start": 1216.17,
+          "end": 1224.17,
+          "text": "这条文件,四星这单必还了,12.44分文件,12.46分用法。"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0122",
+      "start": 1220.0,
+      "end": 1230.0,
+      "transcript": "这条文件,四星这单必还了,12.44分文件,12.46分用法。 四星的台账也改了,状态协议发。",
+      "segments": [
+        {
+          "start": 1216.17,
+          "end": 1224.17,
+          "text": "这条文件,四星这单必还了,12.44分文件,12.46分用法。"
+        },
+        {
+          "start": 1224.17,
+          "end": 1229.68,
+          "text": "四星的台账也改了,状态协议发。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0090_t001222.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0090_t001222.0.jpg",
+          "t": 1221.967,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 8.033,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0123",
+      "start": 1230.0,
+      "end": 1240.0,
+      "transcript": "我把今天新课的总帐拉了一遍 看看都走到哪一步了 你看我还可以分窗口",
+      "segments": [
+        {
+          "start": 1230.68,
+          "end": 1233.5,
+          "text": "我把今天新课的总帐拉了一遍"
+        },
+        {
+          "start": 1233.5,
+          "end": 1235.54,
+          "text": "看看都走到哪一步了"
+        },
+        {
+          "start": 1235.54,
+          "end": 1251.88,
+          "text": "你看我还可以分窗口"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0091_t001235.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0091_t001235.6.jpg",
+          "t": 1235.567,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.567,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0124",
+      "start": 1240.0,
+      "end": 1250.0,
+      "transcript": "你看我还可以分窗口",
+      "segments": [
+        {
+          "start": 1235.54,
+          "end": 1251.88,
+          "text": "你看我还可以分窗口"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0092_t001249.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0092_t001249.1.jpg",
+          "t": 1249.133,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.133,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0125",
+      "start": 1250.0,
+      "end": 1260.0,
+      "transcript": "你看我还可以分窗口 我要是有多个电脑 我直接把它拉过去就可以给别人用了 还可以团队成功 这个效果就是我想要的",
+      "segments": [
+        {
+          "start": 1235.54,
+          "end": 1251.88,
+          "text": "你看我还可以分窗口"
+        },
+        {
+          "start": 1251.88,
+          "end": 1254.08,
+          "text": "我要是有多个电脑"
+        },
+        {
+          "start": 1254.08,
+          "end": 1255.96,
+          "text": "我直接把它拉过去就可以给别人用了"
+        },
+        {
+          "start": 1255.96,
+          "end": 1258.28,
+          "text": "还可以团队成功"
+        },
+        {
+          "start": 1258.28,
+          "end": 1262.9,
+          "text": "这个效果就是我想要的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0092_t001249.1.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0092_t001249.1.jpg",
+          "t": 1249.133,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0126",
+      "start": 1260.0,
+      "end": 1270.0,
+      "transcript": "这个效果就是我想要的 我磨了一周还不能实战 它就卡在微信 微信没有接口你知道吧 不然的话就很快 拉起来我看一下",
+      "segments": [
+        {
+          "start": 1258.28,
+          "end": 1262.9,
+          "text": "这个效果就是我想要的"
+        },
+        {
+          "start": 1262.9,
+          "end": 1264.54,
+          "text": "我磨了一周还不能实战"
+        },
+        {
+          "start": 1264.54,
+          "end": 1266.82,
+          "text": "它就卡在微信"
+        },
+        {
+          "start": 1266.82,
+          "end": 1268.3,
+          "text": "微信没有接口你知道吧"
+        },
+        {
+          "start": 1268.3,
+          "end": 1269.58,
+          "text": "不然的话就很快"
+        },
+        {
+          "start": 1269.58,
+          "end": 1274.96,
+          "text": "拉起来我看一下"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0093_t001262.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0093_t001262.7.jpg",
+          "t": 1262.7,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0127",
+      "start": 1270.0,
+      "end": 1280.0,
+      "transcript": "拉起来我看一下 远端控制也可以实现",
+      "segments": [
+        {
+          "start": 1269.58,
+          "end": 1274.96,
+          "text": "拉起来我看一下"
+        },
+        {
+          "start": 1274.96,
+          "end": 1300.97,
+          "text": "远端控制也可以实现"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0094_t001276.3.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0094_t001276.3.jpg",
+          "t": 1276.3,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.3,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0128",
+      "start": 1280.0,
+      "end": 1290.0,
+      "transcript": "远端控制也可以实现",
+      "segments": [
+        {
+          "start": 1274.96,
+          "end": 1300.97,
+          "text": "远端控制也可以实现"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0095_t001289.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0095_t001289.9.jpg",
+          "t": 1289.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.867,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0129",
+      "start": 1290.0,
+      "end": 1300.0,
+      "transcript": "远端控制也可以实现",
+      "segments": [
+        {
+          "start": 1274.96,
+          "end": 1300.97,
+          "text": "远端控制也可以实现"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0095_t001289.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0095_t001289.9.jpg",
+          "t": 1289.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0130",
+      "start": 1300.0,
+      "end": 1310.0,
+      "transcript": "远端控制也可以实现 这个东西 假如你有想法有没有什么实现不了的这个东西 这个东西你只要给他定位请 可以的",
+      "segments": [
+        {
+          "start": 1274.96,
+          "end": 1300.97,
+          "text": "远端控制也可以实现"
+        },
+        {
+          "start": 1300.97,
+          "end": 1301.93,
+          "text": "这个东西"
+        },
+        {
+          "start": 1301.93,
+          "end": 1304.49,
+          "text": "假如你有想法有没有什么实现不了的这个东西"
+        },
+        {
+          "start": 1304.49,
+          "end": 1306.03,
+          "text": "这个东西你只要给他定位请"
+        },
+        {
+          "start": 1309.89,
+          "end": 1310.41,
+          "text": "可以的"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0096_t001303.4.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0096_t001303.4.jpg",
+          "t": 1303.434,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 6.566,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0131",
+      "start": 1310.0,
+      "end": 1320.0,
+      "transcript": "可以的 打开文件给我口令 就是我跟他发他已经适合我的口吻了",
+      "segments": [
+        {
+          "start": 1309.89,
+          "end": 1310.41,
+          "text": "可以的"
+        },
+        {
+          "start": 1313.98,
+          "end": 1317.58,
+          "text": "打开文件给我口令"
+        },
+        {
+          "start": 1319.88,
+          "end": 1321.92,
+          "text": "就是我跟他发他已经适合我的口吻了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0097_t001317.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0097_t001317.0.jpg",
+          "t": 1317.033,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 7.033,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0132",
+      "start": 1320.0,
+      "end": 1330.0,
+      "transcript": "就是我跟他发他已经适合我的口吻了 我跟他说打开文件那肯定 对吧他肯定有可能会拉起有可能会打 你看这就是我这样跟他说打开文件他就知道我打开文件假的意思 就是不要跟他发了",
+      "segments": [
+        {
+          "start": 1319.88,
+          "end": 1321.92,
+          "text": "就是我跟他发他已经适合我的口吻了"
+        },
+        {
+          "start": 1321.92,
+          "end": 1323.2,
+          "text": "我跟他说打开文件那肯定"
+        },
+        {
+          "start": 1323.46,
+          "end": 1325.0,
+          "text": "对吧他肯定有可能会拉起有可能会打"
+        },
+        {
+          "start": 1325.0,
+          "end": 1328.32,
+          "text": "你看这就是我这样跟他说打开文件他就知道我打开文件假的意思"
+        },
+        {
+          "start": 1328.32,
+          "end": 1329.6,
+          "text": "就是不要跟他发了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0098_t001330.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0098_t001330.6.jpg",
+          "t": 1330.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 10.0,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0133",
+      "start": 1330.0,
+      "end": 1340.0,
+      "transcript": "给我口令就是直接把他口令给我我就直接复制给他 这样就一个就可以了 接下来给他看一下后面的 我要先把钱收下了",
+      "segments": [
+        {
+          "start": 1330.38,
+          "end": 1333.44,
+          "text": "给我口令就是直接把他口令给我我就直接复制给他"
+        },
+        {
+          "start": 1333.7,
+          "end": 1334.98,
+          "text": "这样就一个就可以了"
+        },
+        {
+          "start": 1335.5,
+          "end": 1337.04,
+          "text": "接下来给他看一下后面的"
+        },
+        {
+          "start": 1337.04,
+          "end": 1339.86,
+          "text": "我要先把钱收下了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0098_t001330.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0098_t001330.6.jpg",
+          "t": 1330.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 9.4,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0134",
+      "start": 1340.0,
+      "end": 1350.0,
+      "transcript": "比如像这位我就直接截图给他他就知道这个客户是谁 然后我这边直接又是他需要什么模板我就这样直接发给他他就开始打包了",
+      "segments": [
+        {
+          "start": 1341.4,
+          "end": 1344.98,
+          "text": "比如像这位我就直接截图给他他就知道这个客户是谁"
+        },
+        {
+          "start": 1345.24,
+          "end": 1349.84,
+          "text": "然后我这边直接又是他需要什么模板我就这样直接发给他他就开始打包了"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0099_t001344.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1Ht4F6MEyE\\frames\\0099_t001344.2.jpg",
+          "t": 1344.167,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 1,
+        "max_coverage_gap": 5.833,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0135",
+      "start": 1350.0,
+      "end": 1357.739,
+      "transcript": "打包完之后他就立马把那个五年级打开然后我在出来的就效率特别高",
+      "segments": [
+        {
+          "start": 1350.1,
+          "end": 1353.94,
+          "text": "打包完之后他就立马把那个五年级打开然后我在出来的就效率特别高"
+        }
+      ],
+      "frames": [],
+      "signals": {
+        "frame_count": 0,
+        "max_coverage_gap": 7.739,
+        "visual_cues": [],
+        "needs_attention": true
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    }
+  ]
+}
