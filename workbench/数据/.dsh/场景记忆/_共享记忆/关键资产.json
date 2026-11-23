@@ -1,0 +1,1227 @@
+{
+  "_note": "关键资产清单 —— 删除前必查。依据视频 BV1Lwxz6vEH8「删错乱记忆把好功能删了」",
+  "_at": "2026-11-12T03:50:07.555Z",
+  "levels": {
+    "critical": {
+      "name": "绝不可删",
+      "desc": "删了系统就废了",
+      "allowDelete": false,
+      "needBackup": false
+    },
+    "valuable": {
+      "name": "删前必须备份",
+      "desc": "有价值但可重建",
+      "allowDelete": true,
+      "needBackup": true
+    },
+    "temp": {
+      "name": "可自由删",
+      "desc": "临时产物",
+      "allowDelete": true,
+      "needBackup": false
+    }
+  },
+  "count": 240,
+  "assets": [
+    {
+      "pattern": "workbench/数据/.dsh/AGENTS.md",
+      "level": "critical",
+      "why": "全局宪法，每个会话都读"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景路由.yaml",
+      "level": "critical",
+      "why": "场景路由表，中枢判断归属靠它"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景层级.yaml",
+      "level": "critical",
+      "why": "场景层级，主/子关系"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/偏好记忆/偏好.yaml",
+      "level": "critical",
+      "why": "六类偏好，用户红线"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/成本预算.json",
+      "level": "critical",
+      "why": "成本闸配置"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/画像/主画像.md",
+      "level": "critical",
+      "why": "用户主画像（唯一权威）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/中枢/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/中枢/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/中枢/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/实施计划/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/实施计划/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/实施计划/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/故障分析/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/故障分析/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/故障分析/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/本地电脑/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/本地电脑/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/本地电脑/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/架构梳理/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/架构梳理/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/架构梳理/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/竞品拆解/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/竞品拆解/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/竞品拆解/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/自我复盘/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/自我复盘/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/自我复盘/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/调研/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/调研/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/调研/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/逆向分析/AGENTS.local.md",
+      "level": "critical",
+      "why": "场景注入文件，AI 靠它认领身份"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/逆向分析/场景私有记忆.md",
+      "level": "valuable",
+      "why": "场景记忆（有价值但可从归档重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/逆向分析/身份卡.md",
+      "level": "valuable",
+      "why": "身份卡"
+    },
+    {
+      "pattern": "workbench/工具/机制体检.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/路由表.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/派单.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/投递通道.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆写入.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆注入.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/影子记忆.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/偏好记忆.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/验证闸.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/场景层级.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/成本闸.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/硬规矩.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/画像.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/封存集.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆评估.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/场地地图.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/越界哨兵.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆哨兵.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/身份哨兵.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/中枢调度卡.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/场景注入.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/A档确认.mjs",
+      "level": "critical",
+      "why": "核心机制工具"
+    },
+    {
+      "pattern": "workbench/工具/arch.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/Cdp.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/ci.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/collab.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/mem-init.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/mem-map.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/memory.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/migrate-to-hub.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/platform-init.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/scene-audit.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/scene-bind.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/scene-edit.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/scene-hatch.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/scene-validate.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/sceneflow.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/tools.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/_共用-场景记忆.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/_经验识别.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/三方一致.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/中枢代写.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/中枢调度卡哨兵.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/事故档案.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/互问.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/会话绑定.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/会话绑定验证.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/会话选择体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/体检报告.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/健康哨兵.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/健康哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/健康度计算.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/全场景检查.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/六件套.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/关键资产.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/内容哨兵.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/内容哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/切换provider.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/历练任务库.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/发布前检查.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/发消息.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/变异测试.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/口径对齐.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/合并重复章节.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/回滚.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景判定.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景判定.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景历练.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景工作目录.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景待办标记.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景画像.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/场景记忆.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/基线.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/备份.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/备份.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/封存集判分.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/封装.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/工具去重体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/建场景会话.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/归因.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/归因.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/归档.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/截图.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/技能可见性体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/技能执行器.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/整体体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/文件索引写入.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/文档体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/文档命令体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/机制审计.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/机制清单.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/检查器可靠性体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/检查真实性审计.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/汇总校验.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/沙箱体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/派单哨兵.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/派单哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/派单闭环验证.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/派单验证生成.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/消息闸.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/点击.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/界面功能体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/界面回归.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/看板.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/破坏性验证.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/端到端闭环.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/管线产物体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/管线写入.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/管线调度.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/经验真实性体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/自动回执.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆召回哨兵.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆填充.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆注入效果体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/记忆精简.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/设计一致性.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/负载闸.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/越界哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/身份.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/身份哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/身份索引重建.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/进化.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/进化哨兵.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/进化哨兵.selftest.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/进度判定.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/闭环断点体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/闭环验证.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/工具/面板体检.mjs",
+      "level": "valuable",
+      "why": "辅助工具"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/arch-review-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/arch-review.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/build-plan-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/build-plan.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/competitor-analyze-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/competitor-analyze.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/hub-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/hub.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/incident-analysis-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/incident-analysis.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/pc-cleanup-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/pc-cleanup.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/research-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/research.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/reverse-eng-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/reverse-eng.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/self-review-context.md",
+      "level": "valuable",
+      "why": "场景定位卡"
+    },
+    {
+      "pattern": "workbench/外壳/scenarios/self-review.json",
+      "level": "critical",
+      "why": "场景配置"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/arch-review/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/arch-review/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/arch-review/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/build-plan/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/build-plan/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/build-plan/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/competitor-analyze/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/competitor-analyze/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/competitor-analyze/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/hub/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/hub/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/hub/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/incident-analysis/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/incident-analysis/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/incident-analysis/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/pc-cleanup/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/pc-cleanup/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/pc-cleanup/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/research/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/research/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/research/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/reverse-eng/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/reverse-eng/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/reverse-eng/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/self-review/SKILL.md",
+      "level": "critical",
+      "why": "技能正文（删了功能就没了）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/self-review/check.mjs",
+      "level": "critical",
+      "why": "技能验收脚本"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/skills/self-review/skill.json",
+      "level": "valuable",
+      "why": "技能元数据（可从 md 重建）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/中枢/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/实施计划/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/故障分析/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/本地电脑/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/架构梳理/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/竞品拆解/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/自我复盘/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/调研/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/封存集/逆向分析/cases.json",
+      "level": "valuable",
+      "why": "评估用例（Agent 不可见）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/areas",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/A档确认.json",
+      "level": "critical",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/_待办.md",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/_跨场景通知.md",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/体检结果.json",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/健康度.json",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/关键资产.json",
+      "level": "critical",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/冲突.md",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/场地地图.json",
+      "level": "critical",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/基线.json",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/基线历史",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/派单台账.json",
+      "level": "critical",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/索引.json",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/索引.md",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/记忆地图.json",
+      "level": "critical",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/身份索引.json",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/进化台账.json",
+      "level": "critical",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/项目.json",
+      "level": "valuable",
+      "why": "共享台账"
+    },
+    {
+      "pattern": "prototype/**",
+      "level": "temp",
+      "why": "临时脚本"
+    },
+    {
+      "pattern": "workbench/外壳/server.log",
+      "level": "temp",
+      "why": "运行日志"
+    },
+    {
+      "pattern": "workbench/外壳/**/*.log",
+      "level": "temp",
+      "why": "运行日志"
+    },
+    {
+      "pattern": "研究素材/视频转写/**",
+      "level": "temp",
+      "why": "视频转写产物（可重生成）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/影子记忆/**",
+      "level": "valuable",
+      "why": "历史快照（可重建但丢了就丢历史）"
+    },
+    {
+      "pattern": "workbench/数据/.dsh/成本台账.jsonl",
+      "level": "temp",
+      "why": "成本记录（首次记账前不存在）"
+    }
+  ]
+}

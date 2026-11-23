@@ -1,0 +1,1562 @@
+[
+ {
+  "start": 0.24,
+  "end": 4.34,
+  "text": "就是很多人都不知道就是主播是怎么做记忆的对吧",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 4.6,
+  "end": 7.92,
+  "text": "然后很多人说自己搞了一个什么支持库啥的",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 8.18,
+  "end": 10.98,
+  "text": "然后就变得非常的这个繁重啊就觉得",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 11.24,
+  "end": 12.02,
+  "text": "不是很好",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 13.04,
+  "end": 17.4,
+  "text": "然后主播的话现在就录一个屏幕给大家讲一下主播的记忆机制",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 18.16,
+  "end": 23.02,
+  "text": "其实我是不见知识库的因为在我眼里我是想做这个自我进化的一个完整的东西",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 23.28,
+  "end": 25.84,
+  "text": "就像个智能体样对我来讲知识库就是他查的字典",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 26.6,
+  "end": 29.68,
+  "text": "所以说的话主播的这个记忆链条是按场景分的",
+  "avg_logprob": -0.191,
+  "no_speech_prob": 0.19273,
+  "compression_ratio": 1.523364,
+  "temperature": 0.0,
+  "confidence": 0.826133
+ },
+ {
+  "start": 29.68,
+  "end": 32.52,
+  "text": "这里的话咱们还是拿了个源头来",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 33.52,
+  "end": 35.88,
+  "text": "比如说咱们长进一长进一的话",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 35.88,
+  "end": 37.08,
+  "text": "它是有自己的私有记忆的",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 37.08,
+  "end": 38.88,
+  "text": "这个私有记忆是怎么来的呢",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 38.88,
+  "end": 41.48,
+  "text": "这个私有记忆是在通过这个绘画的吧",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 41.48,
+  "end": 43.28,
+  "text": "这个绘画其实就是这个集是推点模型",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 43.28,
+  "end": 45.68,
+  "text": "他在做项目的时候是提炼出来了",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 45.68,
+  "end": 47.48,
+  "text": "这个私有记忆其实不会有多少的",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 47.48,
+  "end": 48.58,
+  "text": "你比如他做这个项目",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 48.58,
+  "end": 50.18,
+  "text": "这个项目是做一个网页",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 50.18,
+  "end": 52.68,
+  "text": "这个网页最多也就是一个网址",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 52.68,
+  "end": 52.98,
+  "text": "对吧",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 52.98,
+  "end": 54.68,
+  "text": "然后修改哪些地方就是哪些地方",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 54.68,
+  "end": 56.48,
+  "text": "然后有什么文念夹什么样",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 56.48,
+  "end": 58.88,
+  "text": "他这个私有记忆纸包含他的职责",
+  "avg_logprob": -0.212286,
+  "no_speech_prob": 0.306735,
+  "compression_ratio": 1.742857,
+  "temperature": 0.0,
+  "confidence": 0.808734
+ },
+ {
+  "start": 58.88,
+  "end": 60.58,
+  "text": "或者是再加一些额外的东西",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 60.58,
+  "end": 61.68,
+  "text": "你比如说",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 61.68,
+  "end": 62.98,
+  "text": "他要记住什么",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 62.98,
+  "end": 64.68,
+  "text": "你要发布一个网页对吧",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 64.68,
+  "end": 65.88,
+  "text": "比如在那个codefire",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 65.88,
+  "end": 68.28,
+  "text": "你要寄一个API可以让他能操作的吧",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 68.28,
+  "end": 70.08,
+  "text": "你比如说你要推那个github",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 70.08,
+  "end": 71.68,
+  "text": "他就只寄这些简单的就行",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 71.68,
+  "end": 73.38,
+  "text": "他其实没有多少记忆的",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 73.38,
+  "end": 75.48,
+  "text": "哪怕你加一个项目二是程序开发的",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 75.48,
+  "end": 77.88,
+  "text": "他也只要寄一些比较核心的东西",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 77.88,
+  "end": 79.58,
+  "text": "然后像大家可能会觉得",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 79.58,
+  "end": 80.98,
+  "text": "我做这个会做这个项目",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 80.98,
+  "end": 82.08,
+  "text": "他产生了项目信息",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 82.08,
+  "end": 82.98,
+  "text": "他就是他的记忆",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 82.98,
+  "end": 84.08,
+  "text": "但其实不是的",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 84.08,
+  "end": 84.88,
+  "text": "他做这个东西",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 84.88,
+  "end": 85.68,
+  "text": "他产生的项目信息",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 85.68,
+  "end": 86.68,
+  "text": "他是独立的",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 86.68,
+  "end": 87.98,
+  "text": "每个项目都有自己的项目信息",
+  "avg_logprob": -0.172589,
+  "no_speech_prob": 0.10714,
+  "compression_ratio": 1.546448,
+  "temperature": 0.0,
+  "confidence": 0.841484
+ },
+ {
+  "start": 87.98,
+  "end": 90.18,
+  "text": "这其实我没有规律到他的记忆里",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 90.18,
+  "end": 93.38,
+  "text": "还有一些比如说已经救了的项目信息或者合并的",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 93.38,
+  "end": 95.78,
+  "text": "只要丢到原始层原始层就是指甲不减",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 95.78,
+  "end": 98.58,
+  "text": "就是后面如果说真的有什么东西重要的东西",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 98.58,
+  "end": 99.28,
+  "text": "没有体验的话",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 99.28,
+  "end": 101.18,
+  "text": "这个原始层还可以再体验",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 101.18,
+  "end": 102.68,
+  "text": "其次就是主播这边",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 102.68,
+  "end": 103.88,
+  "text": "你比如像这个历史绘画",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 103.88,
+  "end": 106.38,
+  "text": "他也是丢到这个原始层的",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 106.38,
+  "end": 107.58,
+  "text": "然后场景一的话",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 107.58,
+  "end": 110.88,
+  "text": "这个一个私有记忆就是场景一的记忆情况的话",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 110.88,
+  "end": 111.88,
+  "text": "就是他的私有记忆",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 111.88,
+  "end": 113.88,
+  "text": "以他这个项目信息",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 113.88,
+  "end": 116.18,
+  "text": "然后再看共享层共享层的话",
+  "avg_logprob": -0.169234,
+  "no_speech_prob": 0.017745,
+  "compression_ratio": 1.654839,
+  "temperature": 0.0,
+  "confidence": 0.844311
+ },
+ {
+  "start": 116.18,
+  "end": 119.38,
+  "text": "其实就是一个共享技能跟这个自由技能其实是一样的",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 119.38,
+  "end": 121.38,
+  "text": "也算是一个知识库吧",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 121.38,
+  "end": 123.58,
+  "text": "比如说场景一他发现了一个什么好东西",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 123.58,
+  "end": 125.38,
+  "text": "他可以共享到这个共享技能上",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 125.38,
+  "end": 127.58,
+  "text": "然后别人就可以和他一样",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 127.58,
+  "end": 128.88,
+  "text": "对吧别人看到这个共享技能",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 128.88,
+  "end": 129.68,
+  "text": "他就就会了",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 129.68,
+  "end": 131.38,
+  "text": "比如他操纵我可巴黎之类的",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 132.18,
+  "end": 134.08,
+  "text": "然后整个就是一个这样的",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 134.08,
+  "end": 135.48,
+  "text": "还有一个就是我个人的",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 136.08,
+  "end": 138.08,
+  "text": "个人的话就是我是这样分的",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 138.08,
+  "end": 139.48,
+  "text": "我这边再打开一个网页",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 141.55,
+  "end": 143.65,
+  "text": "像我整理个人的知识库",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 143.65,
+  "end": 145.85,
+  "text": "我的知识库都是交给某一个场景的",
+  "avg_logprob": -0.175855,
+  "no_speech_prob": 0.070252,
+  "compression_ratio": 1.717172,
+  "temperature": 0.0,
+  "confidence": 0.838739
+ },
+ {
+  "start": 145.85,
+  "end": 148.41,
+  "text": "比如说我的个人负盘和私人档案",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 148.67,
+  "end": 151.47,
+  "text": "我全部都是交给这一个场景去干的",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 151.73,
+  "end": 153.53,
+  "text": "因为我不需要说很多很多的知识",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 153.79,
+  "end": 154.81,
+  "text": "比如说我要看什么",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 155.07,
+  "end": 157.37,
+  "text": "文章什么东西啊我只需要让他抓一些",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 157.63,
+  "end": 160.45,
+  "text": "关键东西对吧然后把原文比如说保存在哪个地方啊",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 160.71,
+  "end": 161.47,
+  "text": "或者是怎么样",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 161.97,
+  "end": 164.29,
+  "text": "就可以啊因为这是你自己看的一个东西啊",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 165.57,
+  "end": 168.13,
+  "text": "所以说就是平常你根本就不需要去",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 168.89,
+  "end": 171.97,
+  "text": "打理的你自己一个人的这个知识含量是有限的",
+  "avg_logprob": -0.171506,
+  "no_speech_prob": 0.058969,
+  "compression_ratio": 1.48,
+  "temperature": 0.0,
+  "confidence": 0.842395
+ },
+ {
+  "start": 171.97,
+  "end": 173.97,
+  "text": "每次提取的东西也是有限的",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 173.97,
+  "end": 175.97,
+  "text": "把这些我觉得能用的理解就行",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 175.97,
+  "end": 181.97,
+  "text": "其次还有一个算是这个记忆层的就是咱们这个软件的一个记忆",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 181.97,
+  "end": 184.97,
+  "text": "软件的话我是把它做成了一个零件库",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 184.97,
+  "end": 188.97,
+  "text": "就是相当于是可以自己改装自己的这么一个本地检索的一个东西",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 188.97,
+  "end": 191.97,
+  "text": "它的话就是把网上几乎能搜索到的信息",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 191.97,
+  "end": 192.97,
+  "text": "全部都保留在本地",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 192.97,
+  "end": 195.97,
+  "text": "然后避免再次浪费这个talk",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 195.97,
+  "end": 197.97,
+  "text": "如果说有哪一方面需要的升级",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 197.97,
+  "end": 199.97,
+  "text": "它就直接去读就可以了",
+  "avg_logprob": -0.114543,
+  "no_speech_prob": 0.453895,
+  "compression_ratio": 1.429448,
+  "temperature": 0.0,
+  "confidence": 0.891774
+ },
+ {
+  "start": 199.97,
+  "end": 207.05,
+  "text": "然后像这个记忆机制的话就是这么一个情况",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 207.05,
+  "end": 210.11,
+  "text": "从这个全图来看的话就比较简单啊",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 210.11,
+  "end": 214.99,
+  "text": "主播是分为一个L5归党层 归党层的话他就是指定不改",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 214.99,
+  "end": 217.29,
+  "text": "什么没用的东西有用的东西或者说",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 217.29,
+  "end": 220.61,
+  "text": "产生的各种东西都往这边搬啊 这个东西就是指定不改",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 220.61,
+  "end": 224.99,
+  "text": "如果有重复自断就可以自动合并啊",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 224.99,
+  "end": 229.35,
+  "text": "L4层是一个运行时 运行时的话其实它有一个审计的这么一个东西",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 229.35,
+  "end": 232.15,
+  "text": "它算是一个类似文档或者说一个任务",
+  "avg_logprob": -0.158925,
+  "no_speech_prob": 0.162236,
+  "compression_ratio": 1.553691,
+  "temperature": 0.0,
+  "confidence": 0.853061
+ },
+ {
+  "start": 232.15,
+  "end": 233.69,
+  "text": "其实也可以包含到记忆里面去",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 237.62,
+  "end": 241.46,
+  "text": "然后还有一个项目写回恋 比如说真实项目有自动规纳",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 241.72,
+  "end": 244.54,
+  "text": "然后再到这个主人确认 这个主人下面是有个闸门的",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 245.04,
+  "end": 247.1,
+  "text": "就是必须得是他的项目 他才可以确认",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 248.38,
+  "end": 250.94,
+  "text": "然后后面就是项目记忆再加一个s0的指针",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 252.22,
+  "end": 255.02,
+  "text": "像主播的场景比较多 他每个场景都有自己的私有记忆",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 255.28,
+  "end": 255.54,
+  "text": "所以说",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 256.06,
+  "end": 259.64,
+  "text": "根本就不会存在说他记了很多东西 他要读很多东西 其实没有",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 259.9,
+  "end": 261.18,
+  "text": "比如说就像一个人一样",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 261.7,
+  "end": 263.48,
+  "text": "你一个人的话 你去",
+  "avg_logprob": -0.167632,
+  "no_speech_prob": 0.021707,
+  "compression_ratio": 1.513846,
+  "temperature": 0.0,
+  "confidence": 0.845665
+ },
+ {
+  "start": 263.48,
+  "end": 267.06,
+  "text": "在这个工作中对吧你的职责都是固定的",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 267.32,
+  "end": 271.42,
+  "text": "你需要记住什么你只需要记住早上起来吃饭什么时候去上班",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 271.68,
+  "end": 272.96,
+  "text": "什么时候做好自己的事情",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 273.46,
+  "end": 276.28,
+  "text": "对吧记住老板是谁该打招呼打招呼其实没有多少的",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 276.8,
+  "end": 278.32,
+  "text": "大家不信你可以拆解一下",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 279.36,
+  "end": 282.16,
+  "text": "对吧刚刚在这个录频可能讲的时候有一些",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 282.42,
+  "end": 285.24,
+  "text": "简单的混乱你就比如说我这一个场景他就像一个人一样",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 285.76,
+  "end": 289.84,
+  "text": "他运为我这个服务器运为这个网站他就只干这些事对吧他就相当于",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 290.1,
+  "end": 293.44,
+  "text": "他不会有其他的记忆他只要记住他的职责要记一下这个",
+  "avg_logprob": -0.138754,
+  "no_speech_prob": 0.493383,
+  "compression_ratio": 1.582609,
+  "temperature": 0.0,
+  "confidence": 0.870442
+ },
+ {
+  "start": 293.48,
+  "end": 297.38,
+  "text": "怎么连接服务器的这个服务器的这个IP地址什么这个密码什么好了",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 297.38,
+  "end": 299.18,
+  "text": "他这个服务器就这么对就这么多东西",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 299.18,
+  "end": 302.38,
+  "text": "然后他再记一下这个家长端是怎么推送发布的",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 302.38,
+  "end": 303.98,
+  "text": "记不记一下这个链条对吧",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 303.98,
+  "end": 306.78,
+  "text": "他再记一下别的端是怎么推送发布的",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 306.78,
+  "end": 308.68,
+  "text": "然后再记一下几个网址",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 308.68,
+  "end": 309.88,
+  "text": "就把这些核心的记了之后",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 309.88,
+  "end": 311.48,
+  "text": "他其实就没有啥了",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 311.48,
+  "end": 313.18,
+  "text": "这个剩下的文件都是缩影",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 313.18,
+  "end": 315.38,
+  "text": "他要改什么地方改成东西",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 315.38,
+  "end": 319.72,
+  "text": "就是地图和缩影啊",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 319.72,
+  "end": 323.12,
+  "text": "所以我建议大家不要像网上一样说",
+  "avg_logprob": -0.182906,
+  "no_speech_prob": 0.054368,
+  "compression_ratio": 1.679054,
+  "temperature": 0.0,
+  "confidence": 0.832847
+ },
+ {
+  "start": 323.12,
+  "end": 324.66,
+  "text": "我不太喜歡那個",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 325.42,
+  "end": 326.46,
+  "text": "那個第二大腦啊",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 326.46,
+  "end": 329.26,
+  "text": "我是覺得你一個人也好或者是對於他來好",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 329.26,
+  "end": 331.06,
+  "text": "或者對於某個場景你要把它分開來的",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 331.56,
+  "end": 333.1,
+  "text": "就是你的記憶是你的記憶",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 333.36,
+  "end": 334.38,
+  "text": "我的記憶是我的記憶",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 334.9,
+  "end": 338.22,
+  "text": "你的需要這種翻了就像人用詞典一樣",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 338.22,
+  "end": 339.76,
+  "text": "他也需要翻一個東西",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 340.02,
+  "end": 341.04,
+  "text": "就像他的詞典一樣",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 341.54,
+  "end": 343.86,
+  "text": "就是把它好好的分層管理一下就是最好的",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 344.36,
+  "end": 346.16,
+  "text": "不要說把什麼東西都丟一塊",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 346.42,
+  "end": 347.18,
+  "text": "再建一個地圖",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 348.2,
+  "end": 350.26,
+  "text": "那其實就像是人是茶字典對吧",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 350.26,
+  "end": 353.06,
+  "text": "後面的話主播有可能會做一個這種百科全庫",
+  "avg_logprob": -0.181592,
+  "no_speech_prob": 0.018013,
+  "compression_ratio": 1.579439,
+  "temperature": 0.0,
+  "confidence": 0.833941
+ },
+ {
+  "start": 353.12,
+  "end": 356.7,
+  "text": "但是也只是独立在这个智能体之外了",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 356.96,
+  "end": 359.52,
+  "text": "他就像一个他整体这么多场景加一块",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 359.78,
+  "end": 360.8,
+  "text": "他们就像一个人一样",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 361.06,
+  "end": 364.12,
+  "text": "他不需要把这些知识库全部拆进他的记忆他只需要在他",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 364.38,
+  "end": 366.44,
+  "text": "想会的时候去找就行了对吧",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 367.96,
+  "end": 370.26,
+  "text": "主播的意见啊你就像一个人一样",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 370.52,
+  "end": 371.04,
+  "text": "其实没必要",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 371.3,
+  "end": 375.14,
+  "text": "就是有些东西你放进去对吧你只要不是什么做律师啊",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 375.4,
+  "end": 378.72,
+  "text": "或者说你要写这个招标文件基本上不会说有多少文件的",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 379.24,
+  "end": 381.28,
+  "text": "就算是你是一个做学术的",
+  "avg_logprob": -0.18789,
+  "no_speech_prob": 0.182271,
+  "compression_ratio": 1.466667,
+  "temperature": 0.0,
+  "confidence": 0.828706
+ },
+ {
+  "start": 381.28,
+  "end": 384.86,
+  "text": "你把那个pdf一提炼对吧其实也没有多少东西啊",
+  "avg_logprob": -0.357808,
+  "no_speech_prob": 0.027196,
+  "compression_ratio": 0.891089,
+  "temperature": 0.0,
+  "confidence": 0.699207
+ },
+ {
+  "start": 386.81,
+  "end": 388.85,
+  "text": "整体就是这么一个情况",
+  "avg_logprob": -0.357808,
+  "no_speech_prob": 0.027196,
+  "compression_ratio": 0.891089,
+  "temperature": 0.0,
+  "confidence": 0.699207
+ }
+]

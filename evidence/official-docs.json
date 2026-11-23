@@ -1,0 +1,1025 @@
+{
+  "what": "闭源系统（ChatGPT / Claude）官方文档 URL 的实测可达性",
+  "rule": "只有 PASS/WARN 的 URL 才写进矩阵；FAIL 的绝不写入；UNKNOWN 待重试",
+  "at": "2026-11-14T17:24:04.445Z",
+  "tally": {
+    "pass": 16,
+    "warn": 0,
+    "fail": 0,
+    "unknown": 17
+  },
+  "detail": [
+    {
+      "dim": "A1",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/code-generation",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A1",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A2",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/tools-shell",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A2",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/bash-tool",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A3",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/tools-web-search",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A3",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A4",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/vision",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A4",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A5",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/conversation-state",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A5",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/context-windows",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A6",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/memory",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A6",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/memory",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A7",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/safety-best-practices",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A7",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/memory",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A8",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/agents",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A8",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agents",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A11",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/assistants/deep-dive",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A11",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agents",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A12",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/assistants/tools",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A12",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A13",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/mcp",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A13",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A14",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/models",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A14",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A15",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/safety-best-practices",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A15",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "A16",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/production-best-practices",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "A16",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/usage-cost-api",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "B1",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/agents",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "B1",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agents",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "B2",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/safety-best-practices",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "B2",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/context-windows",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "B3",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/libraries",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "B3",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/api/client-sdks",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "B4",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/production-best-practices",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "B4",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "C1",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/assistants/deep-dive",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "C1",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agents",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "C2",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/memory",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "C2",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/memory",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "C3",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/production-best-practices",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "C3",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "C4",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/evals",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "C4",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/test-and-evaluate",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "D1",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/overview",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "D1",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/overview",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "D2",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/overview",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "D2",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/overview",
+      "state": "PASS",
+      "accepted": true
+    },
+    {
+      "dim": "D3",
+      "subject": "chatgpt",
+      "url": "https://platform.openai.com/docs/guides/usage",
+      "state": "UNKNOWN",
+      "accepted": false
+    },
+    {
+      "dim": "D3",
+      "subject": "claude",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/usage-cost-api",
+      "state": "PASS",
+      "accepted": true
+    }
+  ],
+  "results": [
+    {
+      "url": "https://platform.openai.com/docs/guides/code-generation",
+      "finalUrl": "https://platform.openai.com/docs/guides/code-generation",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "886b75e5e21463eb",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:12.671Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "finalUrl": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "5ffefc1c9754d8c5",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:22:23.965Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/tools-shell",
+      "finalUrl": "https://platform.openai.com/docs/guides/tools-shell",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "3fb909bc508a5236",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:24.624Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/bash-tool",
+      "finalUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/bash-tool",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "9a1ac685d6dbf5a4",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:22:29.538Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/tools-web-search",
+      "finalUrl": "https://platform.openai.com/docs/guides/tools-web-search",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "6ba945349327f9c7",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:30.246Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
+      "finalUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/web-search-tool",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "7da5575416baaa1f",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:22:36.482Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/vision",
+      "finalUrl": "https://platform.openai.com/docs/guides/vision",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "53adac05198b00d1",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:37.502Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+      "finalUrl": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "9d72353e60dd1a71",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:22:42.189Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/conversation-state",
+      "finalUrl": "https://platform.openai.com/docs/guides/conversation-state",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "c0d83d97c507df14",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:46.253Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/context-windows",
+      "finalUrl": "https://docs.anthropic.com/en/docs/build-with-claude/context-windows",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "97adc2e66eae623c",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:22:51.239Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/memory",
+      "finalUrl": "https://platform.openai.com/docs/guides/memory",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "75020f9e40d4aab0",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:52.132Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/memory",
+      "finalUrl": "https://docs.anthropic.com/en/docs/build-with-claude/memory",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "a240375b9c11f9fa",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:22:57.007Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/safety-best-practices",
+      "finalUrl": "https://platform.openai.com/docs/guides/safety-best-practices",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "8723b476def3ca3d",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:58.002Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/agents",
+      "finalUrl": "https://platform.openai.com/docs/guides/agents",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "a554ee3926652adf",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:22:58.991Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agents",
+      "finalUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/agents",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "942189a826d8582b",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:05.029Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/assistants/deep-dive",
+      "finalUrl": "https://platform.openai.com/docs/assistants/deep-dive",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "f0937c9c714e8219",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:05.743Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/assistants/tools",
+      "finalUrl": "https://platform.openai.com/docs/assistants/tools",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "98579c834dbb6a4f",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:07.600Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills",
+      "finalUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "f608acc6032b9944",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:12.928Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/mcp",
+      "finalUrl": "https://platform.openai.com/docs/mcp",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "37e954dea10cfe06",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:13.947Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp",
+      "finalUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp",
+      "state": "PASS",
+      "why": "HTTP 200，158336 字节",
+      "httpCode": 200,
+      "bytes": 158336,
+      "sha256": "fcaf6b1abe7d1026",
+      "preview": "<!doctype html> <html lang=\"en\" class=\"dark\" data-banner-state=\"visible\" data-assistant-state=\"closed\" data-page-mode=\"none\" data-current-path=\"/\" > <head> <!-- AI agents: this pag",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 158336,
+          "state": "PASS",
+          "why": "HTTP 200，158336 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:16.682Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/models",
+      "finalUrl": "https://platform.openai.com/docs/models",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "45816e497624febc",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:17.434Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "finalUrl": "https://docs.anthropic.com/en/docs/about-claude/models",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "04d6c85a8aabcae2",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:23.784Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+      "finalUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "be51b5d88ad675e2",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:28.634Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/production-best-practices",
+      "finalUrl": "https://platform.openai.com/docs/guides/production-best-practices",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "6771bfe2e5aaffb4",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:30.022Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/usage-cost-api",
+      "finalUrl": "https://docs.anthropic.com/en/docs/build-with-claude/usage-cost-api",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "7b823b7232f52500",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:35.351Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/libraries",
+      "finalUrl": "https://platform.openai.com/docs/libraries",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "1dfcd933e73cc05e",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:36.978Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/api/client-sdks",
+      "finalUrl": "https://docs.anthropic.com/en/api/client-sdks",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "147a2e68b1cb91c9",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:42.570Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "finalUrl": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "3ca4ce0c02e8c4d4",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:47.266Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/evals",
+      "finalUrl": "https://platform.openai.com/docs/guides/evals",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "612dfd68d46c3de3",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:48.159Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/test-and-evaluate",
+      "finalUrl": "https://docs.anthropic.com/en/docs/test-and-evaluate",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "20b3139c47ca6ad2",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:23:53.358Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/overview",
+      "finalUrl": "https://platform.openai.com/docs/overview",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "202c918fd86a72ce",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:23:57.319Z"
+    },
+    {
+      "url": "https://docs.anthropic.com/en/docs/overview",
+      "finalUrl": "https://docs.anthropic.com/en/docs/overview",
+      "state": "PASS",
+      "why": "HTTP 200，301107 字节",
+      "httpCode": 200,
+      "bytes": 301107,
+      "sha256": "a98543c4583ba5c5",
+      "preview": "<!DOCTYPE html><html lang=\"en\" class=\"anthropicsans_719af1d7-module__lhEOyW__variable anthropicserif_f333750b-module__L8NIwG__variable anthropicmono_9ef76b8f-module__DBYhiG__variab",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 200,
+          "bytes": 301107,
+          "state": "PASS",
+          "why": "HTTP 200，301107 字节"
+        }
+      ],
+      "at": "2026-11-14T17:24:03.436Z"
+    },
+    {
+      "url": "https://platform.openai.com/docs/guides/usage",
+      "finalUrl": "https://platform.openai.com/docs/guides/usage",
+      "state": "UNKNOWN",
+      "why": "HTTP 403 —— 站点级访问控制（实测该域名对本机及代理均返回 403），判不了，不等于文档不存在",
+      "httpCode": 403,
+      "bytes": 5660,
+      "sha256": "129e0aff6fb8661a",
+      "preview": "<!DOCTYPE html> <!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 7]> <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]--> <!--[if IE 8]> <h",
+      "attempts": [
+        {
+          "n": 1,
+          "httpCode": 403,
+          "bytes": 5660,
+          "state": "FAIL",
+          "why": "HTTP 403"
+        }
+      ],
+      "at": "2026-11-14T17:24:04.443Z"
+    }
+  ]
+}

@@ -1,0 +1,1542 @@
+[
+ {
+  "start": 0.18,
+  "end": 2.58,
+  "text": "我这里再举一个很简单的例子",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 2.58,
+  "end": 4.38,
+  "text": "为什么要创建多个场景",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 4.38,
+  "end": 6.38,
+  "text": "你跟每个场景对话都是不一样的",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 6.38,
+  "end": 8.18,
+  "text": "比如说你在自我副盘的时候",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 8.18,
+  "end": 11.38,
+  "text": "那你是深夜一个人遇到什么困难了",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 11.38,
+  "end": 13.38,
+  "text": "你感觉我真的有点伤心了",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 13.38,
+  "end": 15.38,
+  "text": "你跟他说你会问他各种事情",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 15.38,
+  "end": 16.38,
+  "text": "我会怎么怎么办吗",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 16.38,
+  "end": 17.58,
+  "text": "那是怎么怎么样的",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 17.58,
+  "end": 18.58,
+  "text": "那口吻能一样吗",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 18.58,
+  "end": 19.58,
+  "text": "那肯定是不一样的",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 19.58,
+  "end": 21.18,
+  "text": "你比如说我去工作的场景",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 21.18,
+  "end": 22.98,
+  "text": "哎呀我今天工作了",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 22.98,
+  "end": 25.18,
+  "text": "我要改软件某一个图标",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 25.18,
+  "end": 26.58,
+  "text": "对吧我点一下",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 26.58,
+  "end": 27.98,
+  "text": "我想问他什么什么事",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 27.98,
+  "end": 28.78,
+  "text": "他还没改好",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 28.78,
+  "end": 29.98,
+  "text": "你肯定会很生气",
+  "avg_logprob": -0.166891,
+  "no_speech_prob": 0.106448,
+  "compression_ratio": 1.544379,
+  "temperature": 0.0,
+  "confidence": 0.846292
+ },
+ {
+  "start": 29.98,
+  "end": 31.02,
+  "text": "你怎么还没改好",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 31.02,
+  "end": 32.1,
+  "text": "我上周提醒你多少遍",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 32.1,
+  "end": 32.74,
+  "text": "你怎么还没改好",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 32.74,
+  "end": 33.9,
+  "text": "那你跟每个场景都不一样",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 33.9,
+  "end": 35.02,
+  "text": "你是千人千面的",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 35.02,
+  "end": 35.5,
+  "text": "对不对",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 35.5,
+  "end": 37.3,
+  "text": "我再去做视频工作留的时候",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 37.3,
+  "end": 38.98,
+  "text": "视频工作留是我自己的",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 38.98,
+  "end": 41.1,
+  "text": "是我自己的账号对不对",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 42.1,
+  "end": 43.1,
+  "text": "是我自己的账号",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 43.1,
+  "end": 43.82,
+  "text": "然后我就",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 43.82,
+  "end": 44.86,
+  "text": "比如说我要做视频",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 44.86,
+  "end": 45.9,
+  "text": "我这边随便",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 45.9,
+  "end": 47.54,
+  "text": "我比如说我要点开路线",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 47.54,
+  "end": 48.46,
+  "text": "我要查看路线",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 48.46,
+  "end": 49.14,
+  "text": "怎么怎么样",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 49.14,
+  "end": 49.46,
+  "text": "对不对",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 49.46,
+  "end": 50.22,
+  "text": "我看到路线之后",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 50.22,
+  "end": 51.18,
+  "text": "我觉得这段能捡",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 51.18,
+  "end": 51.46,
+  "text": "对吧",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 51.46,
+  "end": 52.5,
+  "text": "我先把它关掉",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 52.9,
+  "end": 54.26,
+  "text": "然后我再去找",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 54.26,
+  "end": 55.7,
+  "text": "我去做让他写个文案",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 55.7,
+  "end": 56.94,
+  "text": "或者说我自己写个文案",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 56.94,
+  "end": 59.46,
+  "text": "我这边先随便找一个试一下",
+  "avg_logprob": -0.249805,
+  "no_speech_prob": 0.121371,
+  "compression_ratio": 1.731861,
+  "temperature": 0.0,
+  "confidence": 0.778952
+ },
+ {
+  "start": 60.7,
+  "end": 62.02,
+  "text": "哎其实我也没写过几个文案",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 62.02,
+  "end": 62.98,
+  "text": "我就写了三篇啊",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 64.1,
+  "end": 65.34,
+  "text": "哎我的文案放在哪来着",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 65.34,
+  "end": 66.66,
+  "text": "直播好久都没写过",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 66.66,
+  "end": 67.1,
+  "text": "我忘了",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 68.7,
+  "end": 69.1,
+  "text": "在这",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 70.02,
+  "end": 71.1,
+  "text": "对吧我这样问他",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 71.46,
+  "end": 72.82,
+  "text": "对吧因为这是我自己的东西",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 72.82,
+  "end": 74.38,
+  "text": "我比如说我这个我很精细的",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 74.38,
+  "end": 76.58,
+  "text": "我会说这个渲染几秒要什么什么要求",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 77.02,
+  "end": 77.86,
+  "text": "是不是也不一样",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 80.12,
+  "end": 80.68,
+  "text": "然后呢",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 81.2,
+  "end": 82.64,
+  "text": "比如说我再去别的地方",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 82.64,
+  "end": 84.4,
+  "text": "比如说我去这个本地电脑清理",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 84.4,
+  "end": 85.6,
+  "text": "哎他就是个机器",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 85.6,
+  "end": 86.52,
+  "text": "我觉得他就跟工具一样",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 86.52,
+  "end": 87.88,
+  "text": "我就跟他说你去清理",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 88.2,
+  "end": 89.88,
+  "text": "那每个每个场景都不一样",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 89.88,
+  "end": 91.2,
+  "text": "那不就是把你凑起来了吗",
+  "avg_logprob": -0.275741,
+  "no_speech_prob": 0.197426,
+  "compression_ratio": 1.545455,
+  "temperature": 0.0,
+  "confidence": 0.759009
+ },
+ {
+  "start": 91.48,
+  "end": 94.04,
+  "text": "好吧這個我怎麼說懂的都懂啊",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 94.04,
+  "end": 98.29,
+  "text": "然後我再給我的AI說一下",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 98.29,
+  "end": 101.89,
+  "text": "接下來你可以輪循一下",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 101.89,
+  "end": 104.45,
+  "text": "因為主人對跟每個場景",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 104.45,
+  "end": 106.75,
+  "text": "他的說話的情緒與其都是不一樣的",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 106.75,
+  "end": 111.09,
+  "text": "你去查看一下每個場景有沒有更新這個畫像",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 111.09,
+  "end": 113.41,
+  "text": "只有DSA去改造和這個",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 113.41,
+  "end": 115.45,
+  "text": "自我副盤才可以更新我的主畫像",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 115.45,
+  "end": 119.29,
+  "text": "其他的只能寫那個副畫像來作為參考",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 119.29,
+  "end": 120.57,
+  "text": "你去查看一下吧",
+  "avg_logprob": -0.226864,
+  "no_speech_prob": 0.214569,
+  "compression_ratio": 1.421456,
+  "temperature": 0.0,
+  "confidence": 0.797029
+ },
+ {
+  "start": 120.57,
+  "end": 124.37,
+  "text": "那我就直接可以去读取它是怎么改",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 124.37,
+  "end": 127.37,
+  "text": "画像这块我先查了文件,是实是这样的",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 127.37,
+  "end": 131.77,
+  "text": "主画像素主画像点MD,今天11.26更新过",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 131.77,
+  "end": 136.57,
+  "text": "现在是第700,副画像那个参考文件从10月31号",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 136.57,
+  "end": 144.14,
+  "text": "素主,DSH改造回了,而且我合过文件",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 144.14,
+  "end": 149.64,
+  "text": "主画像它确实写了,11.26只加了语音播报那一条",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 149.64,
+  "end": 154.69,
+  "text": "现在大家明白了吧",
+  "avg_logprob": -0.281902,
+  "no_speech_prob": 0.250085,
+  "compression_ratio": 1.25969,
+  "temperature": 0.0,
+  "confidence": 0.754348
+ },
+ {
+  "start": 154.69,
+  "end": 157.19,
+  "text": "地站也回了,6分之3",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 157.19,
+  "end": 158.69,
+  "text": "他沒碰主畫像",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 158.69,
+  "end": 162.29,
+  "text": "我和過主畫像的時間戳還是11點26",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 162.29,
+  "end": 169.49,
+  "text": "一動沒動,副畫像第51到5",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 169.49,
+  "end": 173.39,
+  "text": "宿主,本地電腦也回了,6分之4",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 173.39,
+  "end": 176.99,
+  "text": "他沒碰主畫像,副畫像補了三條圓畫",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 176.99,
+  "end": 181.09,
+  "text": "15點30,現在他是以後都是你們自動加油",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 181.09,
+  "end": 184.39,
+  "text": "你接手時,說現在是我操作先不拍了",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 184.39,
+  "end": 191.11,
+  "text": "還有16點40那句,不用自動畫",
+  "avg_logprob": -0.2108,
+  "no_speech_prob": 0.65597,
+  "compression_ratio": 1.363636,
+  "temperature": 0.0,
+  "confidence": 0.809936
+ },
+ {
+  "start": 191.11,
+  "end": 193.35,
+  "text": "宿主 画像轮旋齐了",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 193.35,
+  "end": 196.27,
+  "text": "六个人全写完 而且零月全",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 196.27,
+  "end": 203.46,
+  "text": "我主行合过文件 主画",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 203.46,
+  "end": 206.42,
+  "text": "宿主 工作台定制的回执道了",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 206.42,
+  "end": 208.58,
+  "text": "内容跟我上一轮合的一致",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 208.58,
+  "end": 211.38,
+  "text": "它说的139-143型",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 211.38,
+  "end": 213.66,
+  "text": "如果大家想要怎么升级 都可以",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 213.66,
+  "end": 215.3,
+  "text": "廉麦稍等一下 稍等一下",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 215.3,
+  "end": 217.38,
+  "text": "我这边看完会立马廉麦",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 217.38,
+  "end": 218.9,
+  "text": "有什么问题都可以问 好吧",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 220.1,
+  "end": 221.1,
+  "text": "现在大家懂了吧",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 221.1,
+  "end": 222.26,
+  "text": "他没碰主画像",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 222.26,
+  "end": 223.66,
+  "text": "你本来就是签人签名",
+  "avg_logprob": -0.356362,
+  "no_speech_prob": 0.140242,
+  "compression_ratio": 1.277966,
+  "temperature": 0.0,
+  "confidence": 0.700219
+ },
+ {
+  "start": 223.66,
+  "end": 226.86,
+  "text": "你跟一个AI聊这个聊那个他怎么记得做",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 226.86,
+  "end": 228.86,
+  "text": "副画像改成各写歌的在会中",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 228.86,
+  "end": 230.06,
+  "text": "你比如说腾讯他的强项",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 230.06,
+  "end": 231.06,
+  "text": "他的无法把你强项",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 231.06,
+  "end": 232.46,
+  "text": "不就是做一个英文画像吗",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 232.46,
+  "end": 234.06,
+  "text": "你把他的强项拉到一个场景来",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 234.06,
+  "end": 236.46,
+  "text": "那你不就无敌了吗兄弟",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 236.46,
+  "end": 237.06,
+  "text": "是不是",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 237.06,
+  "end": 240.26,
+  "text": "这不就是集思广义吗",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 240.26,
+  "end": 241.26,
+  "text": "他做一个英文画像",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 241.26,
+  "end": 242.26,
+  "text": "他怎么能画得准呢",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 242.26,
+  "end": 244.26,
+  "text": "我这么多场景做画像",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 244.26,
+  "end": 245.46,
+  "text": "就算我现在不是自动的",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 245.46,
+  "end": 247.06,
+  "text": "我就手动口头说一句",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 247.06,
+  "end": 248.26,
+  "text": "让他们开个会",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 248.26,
+  "end": 250.36,
+  "text": "那肯定也比这个好啊",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 250.36,
+  "end": 252.46,
+  "text": "有人担心这个记忆他会污染",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 252.46,
+  "end": 252.76,
+  "text": "对吧",
+  "avg_logprob": -0.234664,
+  "no_speech_prob": 0.178445,
+  "compression_ratio": 1.506061,
+  "temperature": 0.0,
+  "confidence": 0.790837
+ },
+ {
+  "start": 252.76,
+  "end": 255.92,
+  "text": "我告诉你 记忆不是有概率",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 255.92,
+  "end": 261.42,
+  "text": "是你只需要简单的手动维护以及你自动的去做系统",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 261.42,
+  "end": 262.96,
+  "text": "通过架构是可以不维护了",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 262.96,
+  "end": 263.68,
+  "text": "为什么",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 263.68,
+  "end": 268.24,
+  "text": "首先 比如说我为了怕这个场景医记忆会污染",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 268.24,
+  "end": 268.48,
+  "text": "对不对",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 268.48,
+  "end": 269.84,
+  "text": "或者我怕场景医记忆会污染",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 269.84,
+  "end": 272.48,
+  "text": "我会派一个专员检查他们记忆有没有污染",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 272.48,
+  "end": 273.84,
+  "text": "是不是",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 273.84,
+  "end": 275.76,
+  "text": "然后你可以做个影子验证",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 275.76,
+  "end": 276.64,
+  "text": "就像一个影子一样",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 276.64,
+  "end": 278.32,
+  "text": "你把他之前记忆备份一下",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 278.32,
+  "end": 279.96,
+  "text": "他过七天之后他记得值得",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 279.96,
+  "end": 280.96,
+  "text": "是不是他需要了",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 280.96,
+  "end": 282.24,
+  "text": "你是不是可以验证",
+  "avg_logprob": -0.213566,
+  "no_speech_prob": 0.029759,
+  "compression_ratio": 1.520767,
+  "temperature": 0.0,
+  "confidence": 0.807699
+ },
+ {
+  "start": 282.24,
+  "end": 285.06,
+  "text": "你验证完,你做了这个实验之后,你是不是可以改进",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 285.06,
+  "end": 288.14,
+  "text": "你改进完之后,你是不是可以把这一整套做成一个系统",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 289.14,
+  "end": 290.18,
+  "text": "从决策",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 290.44,
+  "end": 292.48,
+  "text": "对吧,到执行,到验收",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 293.26,
+  "end": 296.32,
+  "text": "对吧,再到最后这么一个类似评证,有这么四步啊",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 296.84,
+  "end": 301.44,
+  "text": "对吧,当然不止,你这个你自己去设计啊,它整个系统是可以达到一个文态的",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 301.7,
+  "end": 304.76,
+  "text": "你只需要保证一个关键的核心的一个人,不被污染就行",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 305.02,
+  "end": 309.38,
+  "text": "或者是你能,你能让它被污染之后能恢复就行,它不是有影子记忆吗",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 309.88,
+  "end": 310.4,
+  "text": "对不对",
+  "avg_logprob": -0.192761,
+  "no_speech_prob": 0.012567,
+  "compression_ratio": 1.570064,
+  "temperature": 0.0,
+  "confidence": 0.824679
+ },
+ {
+  "start": 310.4,
+  "end": 317.32,
+  "text": "说实话我都说了它定位卡场景画像四有机四有机就这么多能有多少东西你背分一下就几KB几十KB",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 317.82,
+  "end": 318.86,
+  "text": "就假是EMB",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 319.36,
+  "end": 321.92,
+  "text": "你让他你把他的记忆保存了你就让他给他问他一下",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 322.18,
+  "end": 323.2,
+  "text": "你就问他一下你说哎呀",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 323.46,
+  "end": 328.06,
+  "text": "你前年做项目你这个记忆没部位啊你跟之前对比一下你看一下核心值得有什么区别",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 328.32,
+  "end": 329.34,
+  "text": "那你自己是不是就",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 329.6,
+  "end": 330.38,
+  "text": "清新明了",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 330.88,
+  "end": 334.72,
+  "text": "那你把这个链条优化一下你交给一个ai去做那是不是更简单",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 336.81,
+  "end": 338.59,
+  "text": "大概就是这样啊然后",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 338.85,
+  "end": 341.15,
+  "text": "今天可以作为本期视频来发了",
+  "avg_logprob": -0.253354,
+  "no_speech_prob": 0.017578,
+  "compression_ratio": 1.441667,
+  "temperature": 0.0,
+  "confidence": 0.776193
+ },
+ {
+  "start": 341.97,
+  "end": 343.97,
+  "text": "字幕by索兰娅",
+  "avg_logprob": -0.912784,
+  "no_speech_prob": 0.702031,
+  "compression_ratio": 0.653846,
+  "temperature": 0.0,
+  "confidence": 0.401405
+ }
+]

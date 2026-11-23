@@ -1,0 +1,1023 @@
+{
+  "version": 1,
+  "created_at": "2026-11-10T23:22:31",
+  "source": {
+    "transcript_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\transcript.json",
+    "frames_json": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\frames.json"
+  },
+  "duration": 119.533,
+  "range": {
+    "start": 0.0,
+    "end": 119.533
+  },
+  "window_seconds": 10.0,
+  "attention_gap_seconds": 5.0,
+  "relation_labels": [
+    "supports",
+    "complements",
+    "contradicts",
+    "unrelated",
+    "insufficient"
+  ],
+  "instructions": "Inspect the listed frames and transcript for each unit. Set assessment.relation, confidence (0..1), notes, and refine. Treat complementary audio/visual evidence as complements, not a conflict.",
+  "units": [
+    {
+      "id": "w0000",
+      "start": 0.0,
+      "end": 10.0,
+      "transcript": "那么既然各家AI网页版都是免费的 那就可以利用节省Token 我把DeepSick,豆包,千吻,质譜,Timmie 全部内置到了我的DSH里",
+      "segments": [
+        {
+          "start": 0.05,
+          "end": 2.85,
+          "text": "那么既然各家AI网页版都是免费的"
+        },
+        {
+          "start": 2.85,
+          "end": 4.75,
+          "text": "那就可以利用节省Token"
+        },
+        {
+          "start": 4.75,
+          "end": 8.55,
+          "text": "我把DeepSick,豆包,千吻,质譜,Timmie"
+        },
+        {
+          "start": 8.55,
+          "end": 10.85,
+          "text": "全部内置到了我的DSH里"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0000_t000000.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0000_t000000.0.jpg",
+          "t": 0.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0001_t000002.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0001_t000002.0.jpg",
+          "t": 2.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0002_t000004.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0002_t000004.0.jpg",
+          "t": 4.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0003_t000006.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0003_t000006.0.jpg",
+          "t": 6.0,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0004_t000007.2.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0004_t000007.2.jpg",
+          "t": 7.234,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0005_t000010.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0005_t000010.0.jpg",
+          "t": 9.967,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0006_t000010.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0006_t000010.5.jpg",
+          "t": 10.5,
+          "source": "scene",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 6,
+        "max_coverage_gap": 2.733,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0001",
+      "start": 10.0,
+      "end": 20.0,
+      "transcript": "全部内置到了我的DSH里 然后建立了一个桥 写了个技能让DSH随时可以命令以及拿到结果 根据他们各自擅长的东西分配任务 实测下来",
+      "segments": [
+        {
+          "start": 8.55,
+          "end": 10.85,
+          "text": "全部内置到了我的DSH里"
+        },
+        {
+          "start": 10.85,
+          "end": 12.45,
+          "text": "然后建立了一个桥"
+        },
+        {
+          "start": 12.45,
+          "end": 16.25,
+          "text": "写了个技能让DSH随时可以命令以及拿到结果"
+        },
+        {
+          "start": 16.25,
+          "end": 18.85,
+          "text": "根据他们各自擅长的东西分配任务"
+        },
+        {
+          "start": 18.85,
+          "end": 20.05,
+          "text": "实测下来"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0005_t000010.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0005_t000010.0.jpg",
+          "t": 9.967,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0006_t000010.5.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0006_t000010.5.jpg",
+          "t": 10.5,
+          "source": "scene",
+          "pass_id": "base"
+        },
+        {
+          "file": "0007_t000014.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0007_t000014.0.jpg",
+          "t": 13.966,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0008_t000016.0.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0008_t000016.0.jpg",
+          "t": 15.966,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0009_t000017.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0009_t000017.9.jpg",
+          "t": 17.933,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0010_t000019.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0010_t000019.9.jpg",
+          "t": 19.934,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 3.466,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0002",
+      "start": 20.0,
+      "end": 30.0,
+      "transcript": "实测下来 DeepSick,豆包,千吻,质譜最好用 像混源之类的其他的网页版免费AI我也试过 但是回复速度各方面确实比不上一线的这些。",
+      "segments": [
+        {
+          "start": 18.85,
+          "end": 20.05,
+          "text": "实测下来"
+        },
+        {
+          "start": 20.05,
+          "end": 23.25,
+          "text": "DeepSick,豆包,千吻,质譜最好用"
+        },
+        {
+          "start": 23.25,
+          "end": 26.85,
+          "text": "像混源之类的其他的网页版免费AI我也试过"
+        },
+        {
+          "start": 26.85,
+          "end": 30.35,
+          "text": "但是回复速度各方面确实比不上一线的这些。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0010_t000019.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0010_t000019.9.jpg",
+          "t": 19.934,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0011_t000021.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0011_t000021.9.jpg",
+          "t": 21.934,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0012_t000023.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0012_t000023.9.jpg",
+          "t": 23.933,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0013_t000025.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0013_t000025.9.jpg",
+          "t": 25.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0014_t000027.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0014_t000027.9.jpg",
+          "t": 27.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0015_t000029.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0015_t000029.9.jpg",
+          "t": 29.9,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0003",
+      "start": 30.0,
+      "end": 40.0,
+      "transcript": "但是回复速度各方面确实比不上一线的这些。 这样花钱的智能体只负责发指令,拼接结果就行。 对于一些碎片画的任务非常好用。 一些轮次很多的绘画会越来越好token。 新的一轮聊天会读旧的轮次的内容。",
+      "segments": [
+        {
+          "start": 26.85,
+          "end": 30.35,
+          "text": "但是回复速度各方面确实比不上一线的这些。"
+        },
+        {
+          "start": 30.35,
+          "end": 34.15,
+          "text": "这样花钱的智能体只负责发指令,拼接结果就行。"
+        },
+        {
+          "start": 34.15,
+          "end": 36.65,
+          "text": "对于一些碎片画的任务非常好用。"
+        },
+        {
+          "start": 36.65,
+          "end": 39.65,
+          "text": "一些轮次很多的绘画会越来越好token。"
+        },
+        {
+          "start": 39.65,
+          "end": 42.35,
+          "text": "新的一轮聊天会读旧的轮次的内容。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0015_t000029.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0015_t000029.9.jpg",
+          "t": 29.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0016_t000031.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0016_t000031.9.jpg",
+          "t": 31.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0017_t000033.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0017_t000033.9.jpg",
+          "t": 33.9,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0018_t000035.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0018_t000035.9.jpg",
+          "t": 35.867,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0019_t000037.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0019_t000037.9.jpg",
+          "t": 37.867,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0020_t000039.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0020_t000039.9.jpg",
+          "t": 39.867,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0004",
+      "start": 40.0,
+      "end": 50.0,
+      "transcript": "新的一轮聊天会读旧的轮次的内容。 轮次越多,新的一轮消耗的token越多。 所以要把记忆内容放在一个单独的文件。 轮次多了就建立新绘画显接。",
+      "segments": [
+        {
+          "start": 39.65,
+          "end": 42.35,
+          "text": "新的一轮聊天会读旧的轮次的内容。"
+        },
+        {
+          "start": 42.35,
+          "end": 45.35,
+          "text": "轮次越多,新的一轮消耗的token越多。"
+        },
+        {
+          "start": 45.35,
+          "end": 48.15,
+          "text": "所以要把记忆内容放在一个单独的文件。"
+        },
+        {
+          "start": 48.15,
+          "end": 50.35,
+          "text": "轮次多了就建立新绘画显接。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0020_t000039.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0020_t000039.9.jpg",
+          "t": 39.867,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0021_t000041.9.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0021_t000041.9.jpg",
+          "t": 41.866,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0022_t000043.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0022_t000043.8.jpg",
+          "t": 43.833,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0023_t000045.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0023_t000045.8.jpg",
+          "t": 45.833,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0024_t000047.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0024_t000047.8.jpg",
+          "t": 47.834,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0025_t000049.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0025_t000049.8.jpg",
+          "t": 49.833,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.001,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0005",
+      "start": 50.0,
+      "end": 60.0,
+      "transcript": "轮次多了就建立新绘画显接。 我这里是用技能显接画绘画脚本。 告诉他画绘画,他就会建一条名字一模一样的。 然后更新记忆文件,写交接文档。 新绘画紧接着继续工作。",
+      "segments": [
+        {
+          "start": 48.15,
+          "end": 50.35,
+          "text": "轮次多了就建立新绘画显接。"
+        },
+        {
+          "start": 50.35,
+          "end": 52.95,
+          "text": "我这里是用技能显接画绘画脚本。"
+        },
+        {
+          "start": 52.95,
+          "end": 56.45,
+          "text": "告诉他画绘画,他就会建一条名字一模一样的。"
+        },
+        {
+          "start": 56.45,
+          "end": 59.45,
+          "text": "然后更新记忆文件,写交接文档。"
+        },
+        {
+          "start": 59.45,
+          "end": 62.45,
+          "text": "新绘画紧接着继续工作。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0025_t000049.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0025_t000049.8.jpg",
+          "t": 49.833,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0026_t000051.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0026_t000051.8.jpg",
+          "t": 51.8,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0027_t000053.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0027_t000053.8.jpg",
+          "t": 53.8,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0028_t000055.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0028_t000055.8.jpg",
+          "t": 55.8,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0029_t000057.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0029_t000057.8.jpg",
+          "t": 57.8,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0030_t000059.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0030_t000059.8.jpg",
+          "t": 59.8,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0006",
+      "start": 60.0,
+      "end": 70.0,
+      "transcript": "新绘画紧接着继续工作。 历史绘画会自动归档。 还有一个省token的方法, 就是把技能、插件、MCP都列出来、 树里清晰,把技能对应到各自场景或者绘画。",
+      "segments": [
+        {
+          "start": 59.45,
+          "end": 62.45,
+          "text": "新绘画紧接着继续工作。"
+        },
+        {
+          "start": 62.45,
+          "end": 64.45,
+          "text": "历史绘画会自动归档。"
+        },
+        {
+          "start": 64.45,
+          "end": 66.45,
+          "text": "还有一个省token的方法,"
+        },
+        {
+          "start": 66.45,
+          "end": 69.45,
+          "text": "就是把技能、插件、MCP都列出来、"
+        },
+        {
+          "start": 69.45,
+          "end": 73.45,
+          "text": "树里清晰,把技能对应到各自场景或者绘画。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0030_t000059.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0030_t000059.8.jpg",
+          "t": 59.8,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0031_t000061.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0031_t000061.8.jpg",
+          "t": 61.767,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0032_t000063.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0032_t000063.8.jpg",
+          "t": 63.767,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0033_t000065.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0033_t000065.8.jpg",
+          "t": 65.767,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0034_t000067.8.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0034_t000067.8.jpg",
+          "t": 67.766,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0035_t000069.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0035_t000069.7.jpg",
+          "t": 69.733,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0007",
+      "start": 70.0,
+      "end": 80.0,
+      "transcript": "树里清晰,把技能对应到各自场景或者绘画。 不然有些每次开场就读, 还有个大头就是MCP工具, 如果默认使用,就会每轮都消耗固定的token。",
+      "segments": [
+        {
+          "start": 69.45,
+          "end": 73.45,
+          "text": "树里清晰,把技能对应到各自场景或者绘画。"
+        },
+        {
+          "start": 73.45,
+          "end": 75.45,
+          "text": "不然有些每次开场就读,"
+        },
+        {
+          "start": 75.45,
+          "end": 77.45,
+          "text": "还有个大头就是MCP工具,"
+        },
+        {
+          "start": 77.45,
+          "end": 80.45,
+          "text": "如果默认使用,就会每轮都消耗固定的token。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0035_t000069.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0035_t000069.7.jpg",
+          "t": 69.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0036_t000071.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0036_t000071.7.jpg",
+          "t": 71.733,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0037_t000073.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0037_t000073.7.jpg",
+          "t": 73.734,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0038_t000075.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0038_t000075.7.jpg",
+          "t": 75.734,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0039_t000077.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0039_t000077.7.jpg",
+          "t": 77.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0040_t000079.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0040_t000079.7.jpg",
+          "t": 79.7,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.001,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0008",
+      "start": 80.0,
+      "end": 90.0,
+      "transcript": "如果默认使用,就会每轮都消耗固定的token。 比如你的DSH下载了通过MCP操作电脑的驱动, 默认打开每轮都会消耗两万多token,可以做一个开关,不用的时候关闭,另外全自动工作流也有了好方法。",
+      "segments": [
+        {
+          "start": 77.45,
+          "end": 80.45,
+          "text": "如果默认使用,就会每轮都消耗固定的token。"
+        },
+        {
+          "start": 80.45,
+          "end": 84.45,
+          "text": "比如你的DSH下载了通过MCP操作电脑的驱动,"
+        },
+        {
+          "start": 84.45,
+          "end": 92.45,
+          "text": "默认打开每轮都会消耗两万多token,可以做一个开关,不用的时候关闭,另外全自动工作流也有了好方法。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0040_t000079.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0040_t000079.7.jpg",
+          "t": 79.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0041_t000081.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0041_t000081.7.jpg",
+          "t": 81.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0042_t000083.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0042_t000083.7.jpg",
+          "t": 83.7,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0043_t000085.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0043_t000085.7.jpg",
+          "t": 85.666,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0044_t000087.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0044_t000087.7.jpg",
+          "t": 87.666,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0045_t000089.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0045_t000089.7.jpg",
+          "t": 89.667,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.001,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0009",
+      "start": 90.0,
+      "end": 100.0,
+      "transcript": "默认打开每轮都会消耗两万多token,可以做一个开关,不用的时候关闭,另外全自动工作流也有了好方法。 通过节点连线告诉AI用什么工具,什么方式实现什么。我在DSH里内置了一个画布,AI可以读取。 这个方法参考了康泛EOI工作流,只是作为用户不需要看工具,只需要看状态和结果。",
+      "segments": [
+        {
+          "start": 84.45,
+          "end": 92.45,
+          "text": "默认打开每轮都会消耗两万多token,可以做一个开关,不用的时候关闭,另外全自动工作流也有了好方法。"
+        },
+        {
+          "start": 92.45,
+          "end": 99.45,
+          "text": "通过节点连线告诉AI用什么工具,什么方式实现什么。我在DSH里内置了一个画布,AI可以读取。"
+        },
+        {
+          "start": 99.45,
+          "end": 106.45,
+          "text": "这个方法参考了康泛EOI工作流,只是作为用户不需要看工具,只需要看状态和结果。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0045_t000089.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0045_t000089.7.jpg",
+          "t": 89.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0046_t000091.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0046_t000091.7.jpg",
+          "t": 91.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0047_t000093.7.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0047_t000093.7.jpg",
+          "t": 93.667,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0048_t000095.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0048_t000095.6.jpg",
+          "t": 95.633,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0049_t000097.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0049_t000097.6.jpg",
+          "t": 97.633,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0050_t000099.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0050_t000099.6.jpg",
+          "t": 99.633,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0010",
+      "start": 100.0,
+      "end": 110.0,
+      "transcript": "这个方法参考了康泛EOI工作流,只是作为用户不需要看工具,只需要看状态和结果。 目前还在改进,因为AI会一直变强,所以重要的是方法和流程,不是让AI学会啥。",
+      "segments": [
+        {
+          "start": 99.45,
+          "end": 106.45,
+          "text": "这个方法参考了康泛EOI工作流,只是作为用户不需要看工具,只需要看状态和结果。"
+        },
+        {
+          "start": 106.45,
+          "end": 113.45,
+          "text": "目前还在改进,因为AI会一直变强,所以重要的是方法和流程,不是让AI学会啥。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0050_t000099.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0050_t000099.6.jpg",
+          "t": 99.633,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0051_t000101.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0051_t000101.6.jpg",
+          "t": 101.634,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0052_t000103.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0052_t000103.6.jpg",
+          "t": 103.6,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0053_t000105.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0053_t000105.6.jpg",
+          "t": 105.6,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0054_t000107.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0054_t000107.6.jpg",
+          "t": 107.6,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0055_t000109.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0055_t000109.6.jpg",
+          "t": 109.6,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 5,
+        "max_coverage_gap": 2.0,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    },
+    {
+      "id": "w0011",
+      "start": 110.0,
+      "end": 119.533,
+      "transcript": "目前还在改进,因为AI会一直变强,所以重要的是方法和流程,不是让AI学会啥。 OK啊,以後還會更新更多經驗,我將成為DSH最忠誠的用戶。",
+      "segments": [
+        {
+          "start": 106.45,
+          "end": 113.45,
+          "text": "目前还在改进,因为AI会一直变强,所以重要的是方法和流程,不是让AI学会啥。"
+        },
+        {
+          "start": 113.45,
+          "end": 119.45,
+          "text": "OK啊,以後還會更新更多經驗,我將成為DSH最忠誠的用戶。"
+        }
+      ],
+      "frames": [
+        {
+          "file": "0055_t000109.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0055_t000109.6.jpg",
+          "t": 109.6,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0056_t000111.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0056_t000111.6.jpg",
+          "t": 111.567,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0057_t000113.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0057_t000113.6.jpg",
+          "t": 113.566,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0058_t000115.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0058_t000115.6.jpg",
+          "t": 115.567,
+          "source": "uniform",
+          "pass_id": "base"
+        },
+        {
+          "file": "0059_t000117.6.jpg",
+          "path": "D:\\file\\AI Temp\\DeepSeek\\Agent自研\\研究素材\\视频转写\\BV1KahH6SEPz\\frames\\0059_t000117.6.jpg",
+          "t": 117.567,
+          "source": "uniform",
+          "pass_id": "base"
+        }
+      ],
+      "signals": {
+        "frame_count": 4,
+        "max_coverage_gap": 2.001,
+        "visual_cues": [],
+        "needs_attention": false
+      },
+      "assessment": {
+        "relation": null,
+        "confidence": null,
+        "notes": "",
+        "refine": null
+      }
+    }
+  ]
+}

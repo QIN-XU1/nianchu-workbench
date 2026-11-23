@@ -1,0 +1,1676 @@
+{
+  "what": "参照项目盘点（16 项）",
+  "rule": "measured 是本地源码实测（自己数的，不是抄 README）；analysis 由人填写，不在脚本里编造",
+  "at": "2026-11-15T00:18:19.760Z",
+  "generator": "tools/benchmark/survey.mjs",
+  "count": 22,
+  "withSource": 15,
+  "closed": 7,
+  "projects": [
+    {
+      "id": "openbitfun",
+      "name": "OpenBitFun",
+      "repo": "https://github.com/openBitFun/OpenBitFun",
+      "local": "D:/refs/openbitfun-src/OpenBitFun-main",
+      "kind": "oss",
+      "tier": "fork",
+      "tagline": "我们前端基座：已 fork 进 apps/vouch-web",
+      "note": "MIT。React 18 + Vite 7 + Tauri v2，pnpm workspace，design-system 独立包。",
+      "measured": {
+        "files": 10526,
+        "mb": 187.9,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 4584
+          },
+          {
+            "lang": "Rust",
+            "files": 2329
+          },
+          {
+            "lang": "JavaScript",
+            "files": 635
+          },
+          {
+            "lang": "Markdown",
+            "files": 465
+          },
+          {
+            "lang": "JSON",
+            "files": 385
+          },
+          {
+            "lang": "SCSS",
+            "files": 358
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "src",
+            "files": 8554
+          },
+          {
+            "dir": "design-system",
+            "files": 723
+          },
+          {
+            "dir": "scripts",
+            "files": 240
+          },
+          {
+            "dir": "tests",
+            "files": 228
+          },
+          {
+            "dir": "third_party",
+            "files": 228
+          },
+          {
+            "dir": "docs",
+            "files": 142
+          },
+          {
+            "dir": "OpenBitFun-Installer",
+            "files": 76
+          },
+          {
+            "dir": "MiniApp",
+            "files": 75
+          },
+          {
+            "dir": "packages",
+            "files": 71
+          },
+          {
+            "dir": "assets",
+            "files": 48
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "package.json",
+            "bytes": 15423
+          },
+          {
+            "name": "pnpm-workspace.yaml",
+            "bytes": 492
+          },
+          {
+            "name": "pnpm-lock.yaml",
+            "bytes": 421516
+          },
+          {
+            "name": "Cargo.toml",
+            "bytes": 11991
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 22075
+          },
+          {
+            "name": "README.md",
+            "bytes": 11060
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1062
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 4492
+          },
+          {
+            "name": "design-system/package.json",
+            "bytes": 1450
+          },
+          {
+            "name": "design-system/AGENTS.md",
+            "bytes": 7141
+          },
+          {
+            "name": "OpenBitFun-Installer/package.json",
+            "bytes": 2235
+          },
+          {
+            "name": "OpenBitFun-Installer/AGENTS.md",
+            "bytes": 3508
+          },
+          {
+            "name": "website/package.json",
+            "bytes": 418
+          }
+        ],
+        "truncated": false,
+        "ms": 220
+      }
+    },
+    {
+      "id": "chatgpt-codex",
+      "name": "ChatGPT / Codex",
+      "repo": "https://chatgpt.com/codex",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源标杆：对话式 + 云端任务",
+      "note": "无法读源码；只能从产品行为与官方文档取证据。",
+      "measured": null
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code 桌面版",
+      "repo": "https://claude.com/product/claude-code",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源标杆：终端原生 agent + 桌面壳",
+      "note": "无法读源码；官方文档 + 产品行为取证。",
+      "measured": null
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "repo": "https://cursor.com",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源标杆：编辑器内 agent",
+      "note": "VS Code fork，闭源。学它的 inline diff 与上下文选择。",
+      "measured": null
+    },
+    {
+      "id": "trae",
+      "name": "Trae",
+      "repo": "https://trae.ai",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源：字节的 AI IDE",
+      "note": "学它的 Builder 模式与中文场景适配。",
+      "measured": null
+    },
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy",
+      "repo": "",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源：办公场景 agent",
+      "note": "资料有限，只做行为观察。",
+      "measured": null
+    },
+    {
+      "id": "codebuddy",
+      "name": "CodeBuddy",
+      "repo": "https://copilot.tencent.com",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源：腾讯的编码助手",
+      "note": "学它的企业内集成方式。",
+      "measured": null
+    },
+    {
+      "id": "qoder",
+      "name": "Qoder",
+      "repo": "https://qoder.com",
+      "local": null,
+      "kind": "closed",
+      "tier": "learn",
+      "tagline": "闭源：阿里 agentic IDE",
+      "note": "学它的 repo 级上下文理解。",
+      "measured": null
+    },
+    {
+      "id": "dsh",
+      "name": "DeepSeek Harness",
+      "repo": "https://github.com/deepseek-ai/deepseek-harness",
+      "local": "D:/file/AI Temp/DeepSeek/Agent自研/evidence/dsh-src",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "同族竞品：everything-is-a-plugin，338 个包",
+      "note": "asar 已解出 8030 个源码文件在 evidence/dsh-src。包分解是它的核心优势。",
+      "measured": {
+        "files": 7953,
+        "mb": 63.3,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 2655
+          },
+          {
+            "lang": "JSON",
+            "files": 2569
+          },
+          {
+            "lang": "Markdown",
+            "files": 1461
+          },
+          {
+            "lang": "JavaScript",
+            "files": 1268
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "dsh",
+            "files": 7827
+          },
+          {
+            "dir": "node_modules",
+            "files": 126
+          }
+        ],
+        "keyFiles": [],
+        "truncated": false,
+        "ms": 295
+      }
+    },
+    {
+      "id": "openclaw",
+      "name": "openclaw",
+      "repo": "https://github.com/openclaw/openclaw",
+      "local": "D:/refs/openclaw/openclaw-main",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "多通道 + 五层记忆 + 41 贡献点",
+      "note": "71 文件 AGENTS.md，714MB。通道插件化与 dreaming 记忆值得学。",
+      "measured": {
+        "files": 63766,
+        "mb": 713.5,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 52246
+          },
+          {
+            "lang": "Markdown",
+            "files": 2511
+          },
+          {
+            "lang": "Swift",
+            "files": 1815
+          },
+          {
+            "lang": "JavaScript",
+            "files": 1307
+          },
+          {
+            "lang": "JSON",
+            "files": 1037
+          },
+          {
+            "lang": "YAML",
+            "files": 850
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "src",
+            "files": 29750
+          },
+          {
+            "dir": "extensions",
+            "files": 13042
+          },
+          {
+            "dir": "ui",
+            "files": 6573
+          },
+          {
+            "dir": "scripts",
+            "files": 3412
+          },
+          {
+            "dir": "apps",
+            "files": 3269
+          },
+          {
+            "dir": "test",
+            "files": 2718
+          },
+          {
+            "dir": "packages",
+            "files": 1619
+          },
+          {
+            "dir": "docs",
+            "files": 1490
+          },
+          {
+            "dir": "qa",
+            "files": 625
+          },
+          {
+            "dir": ".agents",
+            "files": 355
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "package.json",
+            "bytes": 156485
+          },
+          {
+            "name": "pnpm-workspace.yaml",
+            "bytes": 5330
+          },
+          {
+            "name": "pnpm-lock.yaml",
+            "bytes": 641486
+          },
+          {
+            "name": "tsconfig.json",
+            "bytes": 18171
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 19607
+          },
+          {
+            "name": "README.md",
+            "bytes": 113287
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1076
+          },
+          {
+            "name": "Dockerfile",
+            "bytes": 29531
+          },
+          {
+            "name": "docker-compose.yml",
+            "bytes": 5976
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 5971
+          },
+          {
+            "name": "crates/Cargo.toml",
+            "bytes": 87
+          },
+          {
+            "name": "docs/AGENTS.md",
+            "bytes": 4200
+          },
+          {
+            "name": "extensions/AGENTS.md",
+            "bytes": 3848
+          },
+          {
+            "name": "scripts/AGENTS.md",
+            "bytes": 6273
+          },
+          {
+            "name": "skills/pyproject.toml",
+            "bytes": 193
+          },
+          {
+            "name": "test/AGENTS.md",
+            "bytes": 256
+          },
+          {
+            "name": "ui/package.json",
+            "bytes": 2507
+          },
+          {
+            "name": "ui/AGENTS.md",
+            "bytes": 15839
+          }
+        ],
+        "truncated": false,
+        "ms": 804
+      }
+    },
+    {
+      "id": "ecc",
+      "name": "ECC",
+      "repo": "https://github.com/affaan-m/ECC",
+      "local": "D:/refs/ECC/ECC-main",
+      "kind": "oss",
+      "tier": "learn",
+      "tagline": "配置层生态：314 skills + 71 agents + 多端适配",
+      "note": "不是运行时，是跨 8 个 AI 工具的配置集。学它的跨端适配矩阵。",
+      "measured": {
+        "files": 4701,
+        "mb": 60,
+        "languages": [
+          {
+            "lang": "Markdown",
+            "files": 2878
+          },
+          {
+            "lang": "JavaScript",
+            "files": 1071
+          },
+          {
+            "lang": "JSON",
+            "files": 258
+          },
+          {
+            "lang": "Python",
+            "files": 169
+          },
+          {
+            "lang": "YAML",
+            "files": 80
+          },
+          {
+            "lang": "Shell",
+            "files": 34
+          }
+        ],
+        "mainLang": "Markdown",
+        "topDirs": [
+          {
+            "dir": "docs",
+            "files": 1540
+          },
+          {
+            "dir": "skills",
+            "files": 620
+          },
+          {
+            "dir": "tests",
+            "files": 534
+          },
+          {
+            "dir": "scripts",
+            "files": 374
+          },
+          {
+            "dir": "docker",
+            "files": 333
+          },
+          {
+            "dir": "pi",
+            "files": 213
+          },
+          {
+            "dir": ".kiro",
+            "files": 153
+          },
+          {
+            "dir": "rules",
+            "files": 122
+          },
+          {
+            "dir": ".agents",
+            "files": 114
+          },
+          {
+            "dir": "commands",
+            "files": 98
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "package.json",
+            "bytes": 21513
+          },
+          {
+            "name": "yarn.lock",
+            "bytes": 100999
+          },
+          {
+            "name": "package-lock.json",
+            "bytes": 145027
+          },
+          {
+            "name": "pyproject.toml",
+            "bytes": 1992
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 13204
+          },
+          {
+            "name": "CLAUDE.md",
+            "bytes": 4421
+          },
+          {
+            "name": "README.md",
+            "bytes": 116660
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1071
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 1513
+          },
+          {
+            "name": ".codex/AGENTS.md",
+            "bytes": 6141
+          },
+          {
+            "name": ".opencode/package.json",
+            "bytes": 1554
+          },
+          {
+            "name": "ecc2/Cargo.toml",
+            "bytes": 1263
+          }
+        ],
+        "truncated": false,
+        "ms": 109
+      }
+    },
+    {
+      "id": "hermes",
+      "name": "hermes-agent",
+      "repo": "https://github.com/nousresearch/hermes-agent",
+      "local": "C:/hermes",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "我们曾经的补丁基线：67 工具 + 星图 + 6 执行后端",
+      "note": "A15 之前的审批闸、A5 的压缩器都源自它。现在要在自研上超过它。",
+      "measured": {
+        "files": 25501,
+        "mb": 243,
+        "languages": [
+          {
+            "lang": "Python",
+            "files": 11496
+          },
+          {
+            "lang": "TypeScript",
+            "files": 5601
+          },
+          {
+            "lang": "YAML",
+            "files": 2601
+          },
+          {
+            "lang": "Markdown",
+            "files": 1551
+          },
+          {
+            "lang": "JavaScript",
+            "files": 342
+          },
+          {
+            "lang": "JSON",
+            "files": 314
+          }
+        ],
+        "mainLang": "Python",
+        "topDirs": [
+          {
+            "dir": "tests",
+            "files": 8343
+          },
+          {
+            "dir": "apps",
+            "files": 5043
+          },
+          {
+            "dir": "contributors",
+            "files": 3000
+          },
+          {
+            "dir": "plugin-catalog",
+            "files": 2312
+          },
+          {
+            "dir": "hermes_cli",
+            "files": 865
+          },
+          {
+            "dir": "optional-skills",
+            "files": 819
+          },
+          {
+            "dir": "website",
+            "files": 792
+          },
+          {
+            "dir": "ui-tui",
+            "files": 664
+          },
+          {
+            "dir": "plugins",
+            "files": 533
+          },
+          {
+            "dir": "agent",
+            "files": 432
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "package.json",
+            "bytes": 1809
+          },
+          {
+            "name": "pnpm-workspace.yaml",
+            "bytes": 2995
+          },
+          {
+            "name": "pnpm-lock.yaml",
+            "bytes": 464404
+          },
+          {
+            "name": "pyproject.toml",
+            "bytes": 47195
+          },
+          {
+            "name": "setup.py",
+            "bytes": 4085
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 11439
+          },
+          {
+            "name": "README.md",
+            "bytes": 17496
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1070
+          },
+          {
+            "name": "Dockerfile",
+            "bytes": 35413
+          },
+          {
+            "name": "docker-compose.yml",
+            "bytes": 3454
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 11084
+          },
+          {
+            "name": "agent/AGENTS.md",
+            "bytes": 10597
+          },
+          {
+            "name": "cron/AGENTS.md",
+            "bytes": 14495
+          },
+          {
+            "name": "gateway/AGENTS.md",
+            "bytes": 18145
+          },
+          {
+            "name": "hermes_cli/AGENTS.md",
+            "bytes": 18232
+          },
+          {
+            "name": "hermes_platform/AGENTS.md",
+            "bytes": 1011
+          },
+          {
+            "name": "plugins/AGENTS.md",
+            "bytes": 16966
+          },
+          {
+            "name": "pm/AGENTS.md",
+            "bytes": 2747
+          },
+          {
+            "name": "pm/pyproject.toml",
+            "bytes": 415
+          },
+          {
+            "name": "skills/AGENTS.md",
+            "bytes": 5981
+          },
+          {
+            "name": "tests/AGENTS.md",
+            "bytes": 10009
+          },
+          {
+            "name": "tests-js/package.json",
+            "bytes": 765
+          },
+          {
+            "name": "tools/AGENTS.md",
+            "bytes": 18221
+          },
+          {
+            "name": "tui_gateway/AGENTS.md",
+            "bytes": 16212
+          },
+          {
+            "name": "ui-tui/package.json",
+            "bytes": 1418
+          },
+          {
+            "name": "web/package.json",
+            "bytes": 1631
+          },
+          {
+            "name": "web/AGENTS.md",
+            "bytes": 3034
+          },
+          {
+            "name": "website/package.json",
+            "bytes": 1981
+          }
+        ],
+        "truncated": false,
+        "ms": 298
+      }
+    },
+    {
+      "id": "open-design",
+      "name": "open-design",
+      "repo": "https://github.com/nexu-io/open-design",
+      "local": "D:/refs/open-design",
+      "kind": "oss",
+      "tier": "learn",
+      "tagline": "设计系统参考",
+      "note": "看它的 token 体系与组件规范。",
+      "measured": {
+        "files": 4826,
+        "mb": 89.7,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 4266
+          },
+          {
+            "lang": "CSS",
+            "files": 166
+          },
+          {
+            "lang": "YAML",
+            "files": 68
+          },
+          {
+            "lang": "JSON",
+            "files": 58
+          },
+          {
+            "lang": "Markdown",
+            "files": 48
+          },
+          {
+            "lang": "Shell",
+            "files": 23
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "open-design-main",
+            "files": 4826
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "open-design-main/AGENTS.md",
+            "bytes": 59523
+          }
+        ],
+        "truncated": false,
+        "ms": 60
+      }
+    },
+    {
+      "id": "omp-studio",
+      "name": "omp-studio",
+      "repo": "https://github.com/the-snowpear/omp-studio",
+      "local": "D:/refs/omp-studio",
+      "kind": "oss",
+      "tier": "learn",
+      "tagline": "界面参考（曾指定参考它）",
+      "note": "清单里出现两次，去重后一项。",
+      "measured": {
+        "files": 2787,
+        "mb": 61.1,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 1805
+          },
+          {
+            "lang": "JavaScript",
+            "files": 169
+          },
+          {
+            "lang": "Markdown",
+            "files": 131
+          },
+          {
+            "lang": "CSS",
+            "files": 118
+          },
+          {
+            "lang": "JSON",
+            "files": 66
+          },
+          {
+            "lang": "HTML",
+            "files": 39
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "apps",
+            "files": 1415
+          },
+          {
+            "dir": "packages",
+            "files": 343
+          },
+          {
+            "dir": "omp-patch",
+            "files": 289
+          },
+          {
+            "dir": "website",
+            "files": 283
+          },
+          {
+            "dir": "scripts",
+            "files": 124
+          },
+          {
+            "dir": "ui_reference",
+            "files": 122
+          },
+          {
+            "dir": "docs",
+            "files": 111
+          },
+          {
+            "dir": "doc",
+            "files": 38
+          },
+          {
+            "dir": "packaging",
+            "files": 23
+          },
+          {
+            "dir": ".github",
+            "files": 16
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "package.json",
+            "bytes": 4071
+          },
+          {
+            "name": "package-lock.json",
+            "bytes": 373119
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 13469
+          },
+          {
+            "name": "README.md",
+            "bytes": 22703
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1093
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 2146
+          },
+          {
+            "name": "website/package.json",
+            "bytes": 854
+          }
+        ],
+        "truncated": false,
+        "ms": 37
+      }
+    },
+    {
+      "id": "orca",
+      "name": "orca",
+      "repo": "https://github.com/stablyai/orca",
+      "local": "D:/refs/orca",
+      "kind": "oss",
+      "tier": "learn",
+      "tagline": "界面参考（曾指定参考它）",
+      "note": "",
+      "measured": {
+        "files": 37169,
+        "mb": 253,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 34336
+          },
+          {
+            "lang": "JavaScript",
+            "files": 984
+          },
+          {
+            "lang": "JSON",
+            "files": 617
+          },
+          {
+            "lang": "Markdown",
+            "files": 180
+          },
+          {
+            "lang": "YAML",
+            "files": 138
+          },
+          {
+            "lang": "Swift",
+            "files": 77
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "src",
+            "files": 30547
+          },
+          {
+            "dir": "mobile",
+            "files": 3239
+          },
+          {
+            "dir": "tests",
+            "files": 1166
+          },
+          {
+            "dir": "config",
+            "files": 1069
+          },
+          {
+            "dir": "cloud",
+            "files": 421
+          },
+          {
+            "dir": "docs",
+            "files": 270
+          },
+          {
+            "dir": ".github",
+            "files": 128
+          },
+          {
+            "dir": "resources",
+            "files": 121
+          },
+          {
+            "dir": "native",
+            "files": 87
+          },
+          {
+            "dir": "examples",
+            "files": 43
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "package.json",
+            "bytes": 40376
+          },
+          {
+            "name": "pnpm-workspace.yaml",
+            "bytes": 5611
+          },
+          {
+            "name": "pnpm-lock.yaml",
+            "bytes": 578918
+          },
+          {
+            "name": "tsconfig.json",
+            "bytes": 297
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 4526
+          },
+          {
+            "name": "README.md",
+            "bytes": 20344
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1070
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 3608
+          },
+          {
+            "name": "cloud/package.json",
+            "bytes": 1079
+          },
+          {
+            "name": "config/package.json",
+            "bytes": 23
+          },
+          {
+            "name": "mobile/package.json",
+            "bytes": 4246
+          },
+          {
+            "name": "tests/AGENTS.md",
+            "bytes": 1474
+          }
+        ],
+        "truncated": false,
+        "ms": 538
+      }
+    },
+    {
+      "id": "pi",
+      "name": "pi",
+      "repo": "https://github.com/earendil-works/pi",
+      "local": "D:/refs/pi-main",
+      "kind": "oss",
+      "tier": "learn",
+      "tagline": "研究机制",
+      "note": "",
+      "measured": {
+        "files": 4541,
+        "mb": 50.4,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 3524
+          },
+          {
+            "lang": "JSON",
+            "files": 386
+          },
+          {
+            "lang": "Markdown",
+            "files": 297
+          },
+          {
+            "lang": "JavaScript",
+            "files": 74
+          },
+          {
+            "lang": "HTML",
+            "files": 36
+          },
+          {
+            "lang": "CSS",
+            "files": 27
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "pi-main",
+            "files": 4541
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "pi-main/package.json",
+            "bytes": 5026
+          },
+          {
+            "name": "pi-main/AGENTS.md",
+            "bytes": 13547
+          }
+        ],
+        "truncated": false,
+        "ms": 73
+      }
+    },
+    {
+      "id": "luanyujia",
+      "name": "luanyujia-workbench",
+      "repo": "https://github.com/mashanglinyu/luanyujia-workbench",
+      "local": "D:/refs/luanyujia/luanyujia-workbench-main",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "中文场景工作台：面板式 + 免费AI桥",
+      "note": "22MB，面板-harness-AI会话.js 173KB。学它的中文场景切分。",
+      "measured": {
+        "files": 196,
+        "mb": 21.9,
+        "languages": [
+          {
+            "lang": "Markdown",
+            "files": 93
+          },
+          {
+            "lang": "JavaScript",
+            "files": 43
+          },
+          {
+            "lang": "JSON",
+            "files": 15
+          },
+          {
+            "lang": "YAML",
+            "files": 3
+          },
+          {
+            "lang": "HTML",
+            "files": 2
+          },
+          {
+            "lang": "CSS",
+            "files": 2
+          }
+        ],
+        "mainLang": "Markdown",
+        "topDirs": [
+          {
+            "dir": "12-源码照搬",
+            "files": 96
+          },
+          {
+            "dir": "配图",
+            "files": 14
+          },
+          {
+            "dir": "10-源码",
+            "files": 13
+          },
+          {
+            "dir": "04-工作台搭建",
+            "files": 8
+          },
+          {
+            "dir": "模板",
+            "files": 8
+          },
+          {
+            "dir": "00-核心机制",
+            "files": 7
+          },
+          {
+            "dir": "02-会话定位与跟随",
+            "files": 7
+          },
+          {
+            "dir": "13-公开情报",
+            "files": 7
+          },
+          {
+            "dir": "01-场景模式",
+            "files": 6
+          },
+          {
+            "dir": "05-协作与规矩",
+            "files": 5
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "README.md",
+            "bytes": 20880
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1081
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 699
+          }
+        ],
+        "truncated": false,
+        "ms": 5
+      }
+    },
+    {
+      "id": "craft-anything",
+      "name": "craft-anything",
+      "repo": "https://github.com/storytold/craft-anything",
+      "local": "D:/refs/craft-anything/craft-anything-main",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "待拆解",
+      "note": "新下载。",
+      "measured": {
+        "files": 1071,
+        "mb": 21.3,
+        "languages": [
+          {
+            "lang": "Rust",
+            "files": 780
+          },
+          {
+            "lang": "Markdown",
+            "files": 47
+          },
+          {
+            "lang": "TOML",
+            "files": 30
+          },
+          {
+            "lang": "YAML",
+            "files": 12
+          },
+          {
+            "lang": "Shell",
+            "files": 12
+          },
+          {
+            "lang": "PowerShell",
+            "files": 4
+          }
+        ],
+        "mainLang": "Rust",
+        "topDirs": [
+          {
+            "dir": "crates",
+            "files": 723
+          },
+          {
+            "dir": "assets",
+            "files": 111
+          },
+          {
+            "dir": "vendor",
+            "files": 85
+          },
+          {
+            "dir": "packaging",
+            "files": 35
+          },
+          {
+            "dir": "docs",
+            "files": 31
+          },
+          {
+            "dir": "apps",
+            "files": 26
+          },
+          {
+            "dir": ".github",
+            "files": 11
+          },
+          {
+            "dir": "examples",
+            "files": 10
+          },
+          {
+            "dir": "xtask",
+            "files": 7
+          },
+          {
+            "dir": ".cargo",
+            "files": 1
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "Cargo.toml",
+            "bytes": 3185
+          },
+          {
+            "name": "AGENTS.md",
+            "bytes": 11797
+          },
+          {
+            "name": "CLAUDE.md",
+            "bytes": 495
+          },
+          {
+            "name": "README.md",
+            "bytes": 27804
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 221
+          },
+          {
+            "name": "xtask/Cargo.toml",
+            "bytes": 322
+          }
+        ],
+        "truncated": false,
+        "ms": 15
+      }
+    },
+    {
+      "id": "solo-to-team-skills",
+      "name": "solo-to-team-skills",
+      "repo": "https://github.com/dabingfy-dot/solo-to-team-skills",
+      "local": "D:/refs/solo-to-team-skills/solo-to-team-skills-main",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "待拆解：单人→团队的 skill 组织",
+      "note": "新下载，38 项。重点看 skill 的分层组织方式。",
+      "measured": {
+        "files": 23,
+        "mb": 13.8,
+        "languages": [
+          {
+            "lang": "Markdown",
+            "files": 15
+          },
+          {
+            "lang": "JSON",
+            "files": 5
+          }
+        ],
+        "mainLang": "Markdown",
+        "topDirs": [
+          {
+            "dir": "examples",
+            "files": 7
+          },
+          {
+            "dir": "skills",
+            "files": 5
+          },
+          {
+            "dir": ".claude-plugin",
+            "files": 2
+          },
+          {
+            "dir": ".agents",
+            "files": 1
+          },
+          {
+            "dir": ".codex-plugin",
+            "files": 1
+          },
+          {
+            "dir": "docs",
+            "files": 1
+          },
+          {
+            "dir": "templates",
+            "files": 1
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "README.md",
+            "bytes": 27995
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 1075
+          }
+        ],
+        "truncated": false,
+        "ms": 1
+      }
+    },
+    {
+      "id": "cl4r1t4s",
+      "name": "CL4R1T4S",
+      "repo": "https://github.com/elder-plinius/CL4R1T4S",
+      "local": "D:/refs/CL4R1T4S/CL4R1T4S-main",
+      "kind": "spec",
+      "tier": "study",
+      "tagline": "待拆解：系统提示词/行为规范集",
+      "note": "新下载，111 项。研究 agent 行为约束的一手材料。",
+      "measured": {
+        "files": 82,
+        "mb": 8,
+        "languages": [
+          {
+            "lang": "Markdown",
+            "files": 36
+          },
+          {
+            "lang": "JSON",
+            "files": 4
+          }
+        ],
+        "mainLang": "Markdown",
+        "topDirs": [
+          {
+            "dir": "OPENAI",
+            "files": 18
+          },
+          {
+            "dir": "ANTHROPIC",
+            "files": 17
+          },
+          {
+            "dir": "XAI",
+            "files": 7
+          },
+          {
+            "dir": "CURSOR",
+            "files": 3
+          },
+          {
+            "dir": "DEVIN",
+            "files": 3
+          },
+          {
+            "dir": "GOOGLE",
+            "files": 3
+          },
+          {
+            "dir": "REPLIT",
+            "files": 3
+          },
+          {
+            "dir": "ZAI",
+            "files": 3
+          },
+          {
+            "dir": "DIA",
+            "files": 2
+          },
+          {
+            "dir": "MANUS",
+            "files": 2
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "README.md",
+            "bytes": 1620
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 34523
+          }
+        ],
+        "truncated": false,
+        "ms": 3
+      }
+    },
+    {
+      "id": "aionui",
+      "name": "AionUi",
+      "repo": "https://github.com/iOfficeAI/AionUi",
+      "local": "D:/refs/aionui",
+      "kind": "oss",
+      "tier": "learn",
+      "tagline": "界面参考（曾指定参考它）",
+      "note": "",
+      "measured": {
+        "files": 1518,
+        "mb": 69.1,
+        "languages": [
+          {
+            "lang": "TypeScript",
+            "files": 944
+          },
+          {
+            "lang": "JSON",
+            "files": 317
+          },
+          {
+            "lang": "Markdown",
+            "files": 96
+          },
+          {
+            "lang": "CSS",
+            "files": 34
+          },
+          {
+            "lang": "YAML",
+            "files": 25
+          },
+          {
+            "lang": "JavaScript",
+            "files": 15
+          }
+        ],
+        "mainLang": "TypeScript",
+        "topDirs": [
+          {
+            "dir": "AionUi-main",
+            "files": 1518
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "AionUi-main/package.json",
+            "bytes": 10644
+          },
+          {
+            "name": "AionUi-main/AGENTS.md",
+            "bytes": 7768
+          }
+        ],
+        "truncated": false,
+        "ms": 31
+      }
+    },
+    {
+      "id": "weknora",
+      "name": "WeKnora",
+      "repo": "https://github.com/Tencent/WeKnora",
+      "local": "D:/refs/WeKnora/WeKnora-main",
+      "kind": "oss",
+      "tier": "study",
+      "tagline": "待拆解：腾讯的知识库/RAG 框架",
+      "note": "新下载，119MB / 6708 项。看它的检索与知识组织。",
+      "measured": {
+        "files": 6244,
+        "mb": 168.9,
+        "languages": [
+          {
+            "lang": "Go",
+            "files": 3735
+          },
+          {
+            "lang": "TypeScript",
+            "files": 658
+          },
+          {
+            "lang": "Vue",
+            "files": 272
+          },
+          {
+            "lang": "Markdown",
+            "files": 163
+          },
+          {
+            "lang": "Python",
+            "files": 153
+          },
+          {
+            "lang": "JavaScript",
+            "files": 137
+          }
+        ],
+        "mainLang": "Go",
+        "topDirs": [
+          {
+            "dir": "internal",
+            "files": 3433
+          },
+          {
+            "dir": "frontend",
+            "files": 1131
+          },
+          {
+            "dir": "migrations",
+            "files": 384
+          },
+          {
+            "dir": "cli",
+            "files": 324
+          },
+          {
+            "dir": "website-docs",
+            "files": 284
+          },
+          {
+            "dir": "docreader",
+            "files": 132
+          },
+          {
+            "dir": "docs",
+            "files": 111
+          },
+          {
+            "dir": "client",
+            "files": 53
+          },
+          {
+            "dir": "docker",
+            "files": 52
+          },
+          {
+            "dir": "scripts",
+            "files": 43
+          }
+        ],
+        "keyFiles": [
+          {
+            "name": "go.mod",
+            "bytes": 18277
+          },
+          {
+            "name": "README.md",
+            "bytes": 37879
+          },
+          {
+            "name": "LICENSE",
+            "bytes": 15291
+          },
+          {
+            "name": "docker-compose.yml",
+            "bytes": 54975
+          },
+          {
+            "name": ".gitignore",
+            "bytes": 973
+          },
+          {
+            "name": "cli/AGENTS.md",
+            "bytes": 33014
+          },
+          {
+            "name": "docreader/pyproject.toml",
+            "bytes": 1059
+          },
+          {
+            "name": "frontend/package.json",
+            "bytes": 2229
+          },
+          {
+            "name": "mcp-server/pyproject.toml",
+            "bytes": 2811
+          },
+          {
+            "name": "miniprogram/package.json",
+            "bytes": 213
+          },
+          {
+            "name": "website-docs/package.json",
+            "bytes": 1179
+          }
+        ],
+        "truncated": false,
+        "ms": 71
+      }
+    }
+  ]
+}

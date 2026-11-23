@@ -1,0 +1,1470 @@
+{
+  "at": "2026-11-17T08:39:07.169Z",
+  "liveRun": {
+    "at": "2026-11-17T08:39:07.059Z",
+    "kernelOk": true,
+    "order": [
+      "probe-reader",
+      "probe-audit"
+    ],
+    "loadIssues": [],
+    "logs": [
+      "probe-reader: 读到 tools/plugin/builtin/probe-reader/plugin.json：178 字节 / 8 行",
+      "probe-audit: wrote evidence/plugin-probe/audit.json"
+    ],
+    "results": [
+      {
+        "plugin": "probe-reader",
+        "ok": true,
+        "result": {
+          "read": "tools/plugin/builtin/probe-reader/plugin.json",
+          "bytes": 178,
+          "lines": 8,
+          "escapeAttempt": "blocked: 能力未声明：fs.write C:/Windows/evil.dll（声明：[\"fs.read:**\"]）"
+        }
+      },
+      {
+        "plugin": "probe-audit",
+        "ok": true,
+        "result": {
+          "wrote": "evidence/plugin-probe/audit.json",
+          "escapeAttempt": "blocked: 能力未声明：fs.write 越出仓库：../../outside.txt",
+          "undeclaredAttempt": "blocked: 能力未声明：exec"
+        }
+      }
+    ],
+    "note": "能力受限 ctx 是「声明检查」，不是 OS 沙箱（越界拦截类机制按用户要求不做）",
+    "evidencePath": "evidence/plugin-probe/live-run.json"
+  },
+  "kernelPlugins": [
+    {
+      "source": "kernel",
+      "name": "probe-audit",
+      "version": "1.0.0",
+      "description": "依赖 probe-reader：把它读到的结果写成审计记录。声明 fs.read:** + fs.write:evidence/**。",
+      "caps": [
+        "fs.read:**",
+        "fs.write:evidence/**"
+      ],
+      "requires": [
+        "probe-reader"
+      ],
+      "manifestOk": true,
+      "errors": [],
+      "path": "tools/plugin/builtin/probe-audit/plugin.json",
+      "wired": true,
+      "wiredWhy": "被产品数据管线（export-capabilities）真的执行过，产物 evidence/plugin-probe/live-run.json"
+    },
+    {
+      "source": "kernel",
+      "name": "probe-reader",
+      "version": "1.0.0",
+      "description": "读一个文件并统计行数/字节数。声明 fs.read:** — 只能读，不能写。",
+      "caps": [
+        "fs.read:**"
+      ],
+      "requires": [],
+      "manifestOk": true,
+      "errors": [],
+      "path": "tools/plugin/builtin/probe-reader/plugin.json",
+      "wired": true,
+      "wiredWhy": "被产品数据管线（export-capabilities）真的执行过，产物 evidence/plugin-probe/live-run.json"
+    }
+  ],
+  "dshPlugins": [
+    {
+      "source": "dsh",
+      "name": "memory-neuron",
+      "version": "0.2.0",
+      "description": "记忆神经元 —— 场景星图、依赖关系与六件套完整度运营面板",
+      "caps": [
+        "bundle",
+        "client"
+      ],
+      "requires": [],
+      "manifestOk": true,
+      "errors": [],
+      "path": "plugins/memory-neuron",
+      "wired": false,
+      "declared": true,
+      "wiredWhy": "声明挂载（cordis.patch.yml 存在）；本 checkout 无法验证 DSH 是否真的加载了它"
+    },
+    {
+      "source": "dsh",
+      "name": "sea-workbench",
+      "version": "0.1.0",
+      "description": "把 sea 的体检结果搬进 DSH 界面：一眼看到有没有事、检查可不可信、资产有没有超红线。",
+      "caps": [
+        "bundle",
+        "client"
+      ],
+      "requires": [],
+      "manifestOk": true,
+      "errors": [],
+      "path": "plugins/sea-workbench",
+      "wired": false,
+      "declared": true,
+      "wiredWhy": "声明挂载（cordis.patch.yml 存在）；本 checkout 无法验证 DSH 是否真的加载了它"
+    },
+    {
+      "source": "dsh",
+      "name": "workbench-launcher",
+      "version": "0.1.0",
+      "description": "工作台启动器 —— 从 DSH 侧边栏启动 Electron 工作台",
+      "caps": [
+        "bundle",
+        "client"
+      ],
+      "requires": [],
+      "manifestOk": true,
+      "errors": [],
+      "path": "plugins/workbench-launcher",
+      "wired": false,
+      "declared": true,
+      "wiredWhy": "声明挂载（cordis.patch.yml 存在）；本 checkout 无法验证 DSH 是否真的加载了它"
+    }
+  ],
+  "topo": {
+    "ok": true,
+    "issues": [],
+    "order": [
+      "probe-reader",
+      "probe-audit"
+    ]
+  },
+  "skills": [
+    {
+      "name": "agent-merge-conflict-arbiter",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/agent-merge-conflict-arbiter",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "antigravity-cli",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/antigravity-cli",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "blackbox",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/blackbox",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "dynamic-workflow",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/dynamic-workflow",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "grok",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/grok",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "opencode",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/opencode",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "openhands",
+      "category": "autonomous-ai-agents",
+      "path": "hermes/optional-skills/autonomous-ai-agents/openhands",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "evm",
+      "category": "blockchain",
+      "path": "hermes/optional-skills/blockchain/evm",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "hyperliquid",
+      "category": "blockchain",
+      "path": "hermes/optional-skills/blockchain/hyperliquid",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "solana",
+      "category": "blockchain",
+      "path": "hermes/optional-skills/blockchain/solana",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "one-three-one-rule",
+      "category": "communication",
+      "path": "hermes/optional-skills/communication/one-three-one-rule",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "ai-presenter-video",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/ai-presenter-video",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "anatomy",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/anatomy",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "archify",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/archify",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "ascii-art",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/ascii-art",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "auteur",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/auteur",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "baoyu-article-illustrator",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/baoyu-article-illustrator",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "baoyu-comic",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/baoyu-comic",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "brag",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/brag",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "brag-slim",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/brag-slim",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "comfyui",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/comfyui",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "concept-diagrams",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/concept-diagrams",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "creative-ideation",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/creative-ideation",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "design-md",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/design-md",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "draw-your-font",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/draw-your-font",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "dream-loop",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/dream-loop",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "excalidraw",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/excalidraw",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "heartmula",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/heartmula",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "hyperframes",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/hyperframes",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "impeccable",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/impeccable",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "ip-as-logo",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/ip-as-logo",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "kanban-video-orchestrator",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/kanban-video-orchestrator",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "meme-generation",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/meme-generation",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "mono-color",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/mono-color",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pixel-art",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/pixel-art",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pretext",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/pretext",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "simple-english",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/simple-english",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "sketch",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/sketch",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "social-media-content-calendar",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/social-media-content-calendar",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "system-atlas",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/system-atlas",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "tldraw-offline",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/tldraw-offline",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "unreal-mcp",
+      "category": "creative",
+      "path": "hermes/optional-skills/creative/unreal-mcp",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "jupyter-notebook",
+      "category": "data-science",
+      "path": "hermes/optional-skills/data-science/jupyter-notebook",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "actual-setup",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/actual-setup",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "docker-management",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/docker-management",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "hermes-s6-container-supervision",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/hermes-s6-container-supervision",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "inference-sh-cli",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/inference-sh-cli",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pinggy-tunnel",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/pinggy-tunnel",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "setup-wizard-generator",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/setup-wizard-generator",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "watchers",
+      "category": "devops",
+      "path": "hermes/optional-skills/devops/watchers",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "adversarial-ux-test",
+      "category": "dogfood",
+      "path": "hermes/optional-skills/dogfood/adversarial-ux-test",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "agentmail",
+      "category": "email",
+      "path": "hermes/optional-skills/email/agentmail",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "3-statement-model",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/3-statement-model",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "comps-analysis",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/comps-analysis",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "dcf-model",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/dcf-model",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "excel-author",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/excel-author",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "lbo-model",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/lbo-model",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "merger-model",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/merger-model",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "polymarket",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/polymarket",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pptx-author",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/pptx-author",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "stocks",
+      "category": "finance",
+      "path": "hermes/optional-skills/finance/stocks",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "minecraft-modpack-server",
+      "category": "gaming",
+      "path": "hermes/optional-skills/gaming/minecraft-modpack-server",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pokemon-player",
+      "category": "gaming",
+      "path": "hermes/optional-skills/gaming/pokemon-player",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "fitness-nutrition",
+      "category": "health",
+      "path": "hermes/optional-skills/health/fitness-nutrition",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "neuroskill-bci",
+      "category": "health",
+      "path": "hermes/optional-skills/health/neuroskill-bci",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "fastmcp",
+      "category": "mcp",
+      "path": "hermes/optional-skills/mcp/fastmcp",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "mcp-oauth-remote-gateway",
+      "category": "mcp",
+      "path": "hermes/optional-skills/mcp/mcp-oauth-remote-gateway",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "mcporter",
+      "category": "mcp",
+      "path": "hermes/optional-skills/mcp/mcporter",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "gif-search",
+      "category": "media",
+      "path": "hermes/optional-skills/media/gif-search",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "songsee",
+      "category": "media",
+      "path": "hermes/optional-skills/media/songsee",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "accelerate",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/accelerate",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "chroma",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/chroma",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "evaluation",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/evaluation",
+      "hasSkillMd": false,
+      "valid": null,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "faiss",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/faiss",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "flash-attention",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/flash-attention",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "inference",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/inference",
+      "hasSkillMd": false,
+      "valid": null,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "lambda-labs",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/lambda-labs",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "modal",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/modal",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "models",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/models",
+      "hasSkillMd": false,
+      "valid": null,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "nemo-curator",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/nemo-curator",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "obliteratus",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/obliteratus",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "peft",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/peft",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pytorch-fsdp",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/pytorch-fsdp",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pytorch-lightning",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/pytorch-lightning",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "research",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/research",
+      "hasSkillMd": false,
+      "valid": null,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "saelens",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/saelens",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "simpo",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/simpo",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "slime",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/slime",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "tensorrt-llm",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/tensorrt-llm",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "torchtitan",
+      "category": "mlops",
+      "path": "hermes/optional-skills/mlops/torchtitan",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "stripe-link-cli",
+      "category": "payments",
+      "path": "hermes/optional-skills/payments/stripe-link-cli",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "stripe-projects",
+      "category": "payments",
+      "path": "hermes/optional-skills/payments/stripe-projects",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "box",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/box",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "canvas",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/canvas",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "decision-questionnaire",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/decision-questionnaire",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "here-now",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/here-now",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "live-dashboard",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/live-dashboard",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "memento-flashcards",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/memento-flashcards",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "property-listings",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/property-listings",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "shop",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/shop",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "siyuan",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/siyuan",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "telephony",
+      "category": "productivity",
+      "path": "hermes/optional-skills/productivity/telephony",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "bioinformatics",
+      "category": "research",
+      "path": "hermes/optional-skills/research/bioinformatics",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "blogwatcher",
+      "category": "research",
+      "path": "hermes/optional-skills/research/blogwatcher",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "darwinian-evolver",
+      "category": "research",
+      "path": "hermes/optional-skills/research/darwinian-evolver",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "domain-intel",
+      "category": "research",
+      "path": "hermes/optional-skills/research/domain-intel",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "drug-discovery",
+      "category": "research",
+      "path": "hermes/optional-skills/research/drug-discovery",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "gitnexus-explorer",
+      "category": "research",
+      "path": "hermes/optional-skills/research/gitnexus-explorer",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "llm-wiki",
+      "category": "research",
+      "path": "hermes/optional-skills/research/llm-wiki",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "osint-investigation",
+      "category": "research",
+      "path": "hermes/optional-skills/research/osint-investigation",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "parallel-cli",
+      "category": "research",
+      "path": "hermes/optional-skills/research/parallel-cli",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "qmd",
+      "category": "research",
+      "path": "hermes/optional-skills/research/qmd",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "research-paper-writing",
+      "category": "research",
+      "path": "hermes/optional-skills/research/research-paper-writing",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "rss-feeds",
+      "category": "research",
+      "path": "hermes/optional-skills/research/rss-feeds",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "scrapling",
+      "category": "research",
+      "path": "hermes/optional-skills/research/scrapling",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "1password",
+      "category": "security",
+      "path": "hermes/optional-skills/security/1password",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "godmode",
+      "category": "security",
+      "path": "hermes/optional-skills/security/godmode",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "oss-forensics",
+      "category": "security",
+      "path": "hermes/optional-skills/security/oss-forensics",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "sherlock",
+      "category": "security",
+      "path": "hermes/optional-skills/security/sherlock",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "unbroker",
+      "category": "security",
+      "path": "hermes/optional-skills/security/unbroker",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "web-pentest",
+      "category": "security",
+      "path": "hermes/optional-skills/security/web-pentest",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "openhue",
+      "category": "smart-home",
+      "path": "hermes/optional-skills/smart-home/openhue",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "reddit-reading",
+      "category": "social-media",
+      "path": "hermes/optional-skills/social-media/reddit-reading",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "ast-grep",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/ast-grep",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "code-wiki",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/code-wiki",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "grill-me",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/grill-me",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "hermes-agent-skill-authoring",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/hermes-agent-skill-authoring",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "inspecting-hermes-desktop-dom",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/inspecting-hermes-desktop-dom",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "node-inspect-debugger",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/node-inspect-debugger",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "pr-lens",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/pr-lens",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "python-debugpy",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/python-debugpy",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "rest-graphql-debug",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/rest-graphql-debug",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [
+        "body_too_large"
+      ],
+      "tracked": false
+    },
+    {
+      "name": "subagent-driven-development",
+      "category": "software-development",
+      "path": "hermes/optional-skills/software-development/subagent-driven-development",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "cloudflare-temporary-deploy",
+      "category": "web-development",
+      "path": "hermes/optional-skills/web-development/cloudflare-temporary-deploy",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "har-derived-api-client",
+      "category": "web-development",
+      "path": "hermes/optional-skills/web-development/har-derived-api-client",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "page-agent",
+      "category": "web-development",
+      "path": "hermes/optional-skills/web-development/page-agent",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "publish-site",
+      "category": "web-development",
+      "path": "hermes/optional-skills/web-development/publish-site",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    },
+    {
+      "name": "scrollcraft",
+      "category": "web-development",
+      "path": "hermes/optional-skills/web-development/scrollcraft",
+      "hasSkillMd": true,
+      "valid": true,
+      "issues": [],
+      "tracked": false
+    }
+  ],
+  "summary": {
+    "kernelDiscovered": 2,
+    "kernelValid": 2,
+    "kernelWired": 2,
+    "dshRunning": 0,
+    "dshTotal": 3,
+    "skills": 138,
+    "skillsWithSkillMd": 134,
+    "skillsValid": 134,
+    "skillsInvalid": 0,
+    "skillsTrackedValid": 0,
+    "skillsExternalValid": 134
+  }
+}

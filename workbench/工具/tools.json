@@ -1,0 +1,1146 @@
+{
+  "at": "2026-11-07T02:59:10.112Z",
+  "count": 95,
+  "tools": [
+    {
+      "name": "_共用-场景记忆.mjs",
+      "path": "workbench/工具/_共用-场景记忆.mjs",
+      "purpose": "场景记忆 · 路径解析（公开模板版）",
+      "kind": "库",
+      "bytes": 1329,
+      "lines": 36,
+      "usages": [],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "场景记忆.mjs",
+      "path": "workbench/工具/场景记忆.mjs",
+      "purpose": "场景记忆 v2 · 统一工具（2026",
+      "kind": "CLI",
+      "bytes": 33202,
+      "lines": 621,
+      "usages": [
+        "node 场景记忆.mjs list                       # 一览：三文档/归档/项目记忆 缺什么",
+        "node 场景记忆.mjs init    --场景 刷抖音       # 建目录骨架 + 三文档（已存在不覆盖）",
+        "node 场景记忆.mjs stamp   --场景 刷抖音       # 重生成 身份卡 + 场景画像"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "发布前检查.mjs",
+      "path": "workbench/工具/发布前检查.mjs",
+      "purpose": "发布前检查.mjs",
+      "kind": "脚本",
+      "bytes": 1494,
+      "lines": 42,
+      "usages": [
+        "node 工具\\发布前检查.mjs"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "发消息.mjs",
+      "path": "workbench/工具/发消息.mjs",
+      "purpose": "发消息.mjs",
+      "kind": "脚本",
+      "bytes": 2122,
+      "lines": 51,
+      "usages": [
+        "node 工具\\发消息.mjs --to 命令 \"内容\"",
+        "node 工具\\发消息.mjs --list          # 看最近的消息",
+        "node 工具\\\\发消息.mjs --to <场景目录> \"内容\"'); process.exit(1) }"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "封装.mjs",
+      "path": "workbench/工具/封装.mjs",
+      "purpose": "封装.mjs",
+      "kind": "CLI",
+      "bytes": 7210,
+      "lines": 169,
+      "usages": [
+        "node 工具\\封装.mjs --out <盘根>:\\发布            # 默认：只打工作台层（不带引擎）",
+        "node 工具\\封装.mjs --out <盘根>:\\发布 --with-engine   # 客户机没引擎时才用（≈5GB）",
+        "node 工具\\封装.mjs --out <盘根>:\\发布 --dry           # 只打印会打什么"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "mem-init.mjs",
+      "path": "workbench/工具/mem-init.mjs",
+      "purpose": "记忆初始化",
+      "kind": "脚本",
+      "bytes": 5786,
+      "lines": 158,
+      "usages": [
+        "node 工具\\mem-init.mjs --all          为所有缺记忆的场景建骨架",
+        "node 工具\\mem-init.mjs --scene <id>   为指定场景建",
+        "node 工具\\mem-init.mjs --dry          只打印将要做什么"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "mem-map.mjs",
+      "path": "workbench/工具/mem-map.mjs",
+      "purpose": "补全记忆地图",
+      "kind": "脚本",
+      "bytes": 7534,
+      "lines": 211,
+      "usages": [
+        "node 工具\\mem-map.mjs           重建记忆地图",
+        "node 工具\\mem-map.mjs --dry     预览",
+        "node 工具\\mem-map.mjs --check   只校验"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "platform-init.mjs",
+      "path": "workbench/工具/platform-init.mjs",
+      "purpose": "L0 平台层初始化",
+      "kind": "脚本",
+      "bytes": 5729,
+      "lines": 127,
+      "usages": [
+        "node 工具\\platform-init.mjs         建骨架",
+        "node 工具\\platform-init.mjs --check 只校验"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "scene-validate.mjs",
+      "path": "workbench/工具/scene-validate.mjs",
+      "purpose": "技能/场景质量验证器",
+      "kind": "CLI",
+      "bytes": 11583,
+      "lines": 287,
+      "usages": [
+        "node 工具\\scene-validate.mjs                    验证全部",
+        "node 工具\\scene-validate.mjs --skill <名>        只验证某技能",
+        "node 工具\\scene-validate.mjs --json             输出 JSON"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "sceneflow.mjs",
+      "path": "workbench/工具/sceneflow.mjs",
+      "purpose": "Sceneflow",
+      "kind": "CLI",
+      "bytes": 17502,
+      "lines": 489,
+      "usages": [
+        "node 工具\\sceneflow.mjs publish --scene research --id competitor-list --name 竞品清单 --type com",
+        "node 工具\\sceneflow.mjs inbox --scene competitor-analyze",
+        "node 工具\\sceneflow.mjs claim --scene competitor-analyze --artifact <id>"
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "tools.mjs",
+      "path": "workbench/工具/tools.mjs",
+      "purpose": "L1 执行层",
+      "kind": "CLI",
+      "bytes": 6121,
+      "lines": 175,
+      "usages": [
+        "node 工具\\tools.mjs            生成注册表",
+        "node 工具\\tools.mjs --check    只校验",
+        "node xxx.mjs\""
+      ],
+      "layer": "L1",
+      "scope": "工作台工具"
+    },
+    {
+      "name": "ask.mjs",
+      "path": "prototype/ask.mjs",
+      "purpose": "桥工具化：让场景能\"调用桥\"",
+      "kind": "CLI",
+      "bytes": 8392,
+      "lines": 222,
+      "usages": [
+        "node prototype/capabilities.mjs on bridge.${site}`,",
+        "node prototype/auth.mjs set auto${C.reset}`);",
+        "node ask.mjs \"<问题>\"        通过桥问一句（受开关+机密闸+授权模式三重控制）');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "audit2.mjs",
+      "path": "prototype/audit2.mjs",
+      "purpose": "补充审计：哪些是\"真的在跑\"，哪些是\"我造的空壳\"",
+      "kind": "脚本",
+      "bytes": 6096,
+      "lines": 123,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "auth.mjs",
+      "path": "prototype/auth.mjs",
+      "purpose": "授权模式（Accept Mode）：off / observe / auto",
+      "kind": "CLI",
+      "bytes": 11237,
+      "lines": 280,
+      "usages": [
+        "node auth.mjs set observe）',",
+        "node auth.mjs show                    看当前模式');",
+        "node auth.mjs set <off|observe|auto> [scene]  改模式（只有人能改）');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "boards.mjs",
+      "path": "prototype/boards.mjs",
+      "purpose": "共享层四块板（Shared Boards）",
+      "kind": "CLI",
+      "bytes": 12410,
+      "lines": 289,
+      "usages": [
+        "node boards.mjs notice <场景> \"<摘要>\" [\"<细节>\"]'); process.exit(2); }",
+        "node boards.mjs todo \"<事项>\" [负责]'); process.exit(2); }",
+        "node boards.mjs index <类型> <名称> <位置> [说明]'); process.exit(2); }"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "capabilities.mjs",
+      "path": "prototype/capabilities.mjs",
+      "purpose": "能力开关（Capability Switch）",
+      "kind": "CLI",
+      "bytes": 9959,
+      "lines": 257,
+      "usages": [
+        "node capabilities.mjs on <target>  例：on bridge.deepseek'); process.exit(2); }",
+        "node capabilities.mjs list                列出所有开关');",
+        "node capabilities.mjs on  <target>        开启');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "collab.mjs",
+      "path": "prototype/collab.mjs",
+      "purpose": "场景间协作（Cross",
+      "kind": "CLI",
+      "bytes": 12871,
+      "lines": 330,
+      "usages": [
+        "node collab.mjs notify <from> <to> \"<消息>\"'); process.exit(2); }",
+        "node collab.mjs request <from> <to> --phenomenon \"...\" --owner \"...\" --how \"...\" --verify ",
+        "node collab.mjs inbox <sceneId>'); process.exit(2); }"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "diag-colors.mjs",
+      "path": "prototype/diag-colors.mjs",
+      "purpose": "实测关键元素的真实颜色",
+      "kind": "脚本",
+      "bytes": 3205,
+      "lines": 77,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "doc-index-judge.mjs",
+      "path": "prototype/doc-index-judge.mjs",
+      "purpose": "文档密度索引判定（需求 6 的后半段）",
+      "kind": "库",
+      "bytes": 4629,
+      "lines": 127,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "doc-index-selfcheck.mjs",
+      "path": "prototype/doc-index-selfcheck.mjs",
+      "purpose": "文档密度索引的元验证。",
+      "kind": "脚本",
+      "bytes": 3522,
+      "lines": 92,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "evaluate-authored.mjs",
+      "path": "prototype/evaluate-authored.mjs",
+      "purpose": "Agent 自写 check 的评测器。",
+      "kind": "脚本",
+      "bytes": 4577,
+      "lines": 129,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "find-violators.mjs",
+      "path": "prototype/find-violators.mjs",
+      "purpose": "1. 确认 enforce CSS 真的加载了",
+      "kind": "脚本",
+      "bytes": 4329,
+      "lines": 108,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "floor-selfcheck.mjs",
+      "path": "prototype/floor-selfcheck.mjs",
+      "purpose": "不变量下限的元验证：证明\"声明过弱\"会被拒。",
+      "kind": "脚本",
+      "bytes": 2693,
+      "lines": 80,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "gate-cli.mjs",
+      "path": "prototype/gate-cli.mjs",
+      "purpose": "gate CLI 入口（独立文件，避免\"库 vs 入口\"的判定问题）。",
+      "kind": "脚本",
+      "bytes": 4610,
+      "lines": 103,
+      "usages": [
+        "node gate.mjs selfcheck`",
+        "node gate-cli.mjs validate <check.mjs> <sceneId> [--root <dir>]`);",
+        "node gate-cli.mjs selfcheck [--root <dir>]`);"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "gate.mjs",
+      "path": "prototype/gate.mjs",
+      "purpose": "sea 门禁（Gate）：判断一个 DoneSpec check 是否**值得信任**。",
+      "kind": "库",
+      "bytes": 5994,
+      "lines": 143,
+      "usages": [
+        "node gate.mjs validate <check.mjs> <sceneId> [--root <dir>]",
+        "node gate.mjs selfcheck [--root <dir>]"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "hygiene.mjs",
+      "path": "prototype/hygiene.mjs",
+      "purpose": "自检卫生（Test Hygiene）",
+      "kind": "CLI",
+      "bytes": 6398,
+      "lines": 187,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "idempotent-test.mjs",
+      "path": "prototype/idempotent-test.mjs",
+      "purpose": "检查状态是否被污染",
+      "kind": "脚本",
+      "bytes": 3286,
+      "lines": 93,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "identity.mjs",
+      "path": "prototype/identity.mjs",
+      "purpose": "身份认领（Identity Claim）",
+      "kind": "CLI",
+      "bytes": 7597,
+      "lines": 198,
+      "usages": [
+        "node identity.mjs claim <sessionId> [scenesRoot]');",
+        "node identity.mjs verify [scenesRoot]');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "induct.mjs",
+      "path": "prototype/induct.mjs",
+      "purpose": "自动归纳（Auto",
+      "kind": "CLI",
+      "bytes": 10252,
+      "lines": 250,
+      "usages": [
+        "node induct.mjs propose <sceneId> \"<你的工作记录>\"');",
+        "node induct.mjs propose <sceneId> \"<工作记录>\"   生成候选（不自动写）');",
+        "node induct.mjs selftest                        判据自检');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "inject.mjs",
+      "path": "prototype/inject.mjs",
+      "purpose": "上下文注入层（引力注入 / Context Injection）",
+      "kind": "CLI",
+      "bytes": 15299,
+      "lines": 376,
+      "usages": [
+        "node inject.mjs show [sceneId]       预览注入内容');",
+        "node inject.mjs channels [sceneId]   只看账本');",
+        "node inject.mjs selftest             自检');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "invariant-floor.mjs",
+      "path": "prototype/invariant-floor.mjs",
+      "purpose": "不变量下限（Invariant Floor）",
+      "kind": "库",
+      "bytes": 6564,
+      "lines": 167,
+      "usages": [
+        "node invariant-floor.mjs <sceneRoot> */"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "mcp-e2e.mjs",
+      "path": "prototype/mcp-e2e.mjs",
+      "purpose": "保存原状态",
+      "kind": "脚本",
+      "bytes": 2892,
+      "lines": 79,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "mcp-fs-server.mjs",
+      "path": "prototype/mcp-fs-server.mjs",
+      "purpose": "最小可用的 MCP 服务器（只读文件系统）",
+      "kind": "脚本",
+      "bytes": 4262,
+      "lines": 147,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "mcp.mjs",
+      "path": "prototype/mcp.mjs",
+      "purpose": "MCP 客户端（零依赖）",
+      "kind": "CLI",
+      "bytes": 13103,
+      "lines": 319,
+      "usages": [
+        "node mcp.mjs probe <serverName>'); process.exit(2); }",
+        "node mcp.mjs servers              列出配置的服务器');",
+        "node mcp.mjs probe <name>         探测某服务器可用性');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "mem.mjs",
+      "path": "prototype/mem.mjs",
+      "purpose": "记忆交接 CLI",
+      "kind": "CLI",
+      "bytes": 10216,
+      "lines": 251,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "memory-guard-selfcheck.mjs",
+      "path": "prototype/memory-guard-selfcheck.mjs",
+      "purpose": "记忆体量红线的元验证：证明检查会失败、归档不丢内容。",
+      "kind": "脚本",
+      "bytes": 4739,
+      "lines": 121,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "memory-guard.mjs",
+      "path": "prototype/memory-guard.mjs",
+      "purpose": "记忆体量红线检查器（需求 3 + 6 的最小实现）",
+      "kind": "库",
+      "bytes": 9407,
+      "lines": 267,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "mutations.mjs",
+      "path": "prototype/mutations.mjs",
+      "purpose": "不变量目录（Invariant Catalog）",
+      "kind": "库",
+      "bytes": 9015,
+      "lines": 257,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "neuron-debug.mjs",
+      "path": "prototype/neuron-debug.mjs",
+      "purpose": "深查神经元的两个问题：",
+      "kind": "脚本",
+      "bytes": 5250,
+      "lines": 120,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "neuron-nodes.mjs",
+      "path": "prototype/neuron-nodes.mjs",
+      "purpose": "找出 9 个\"路径失效\"节点的确切身份",
+      "kind": "脚本",
+      "bytes": 5830,
+      "lines": 141,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "neuron-paths.mjs",
+      "path": "prototype/neuron-paths.mjs",
+      "purpose": "精确找出哪 2 个节点的路径失效",
+      "kind": "脚本",
+      "bytes": 4599,
+      "lines": 99,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "neuron-verify.mjs",
+      "path": "prototype/neuron-verify.mjs",
+      "purpose": "记忆神经元验证：它到底能不能读到数据、能不能写入",
+      "kind": "脚本",
+      "bytes": 6634,
+      "lines": 141,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "newcap-test.mjs",
+      "path": "prototype/newcap-test.mjs",
+      "purpose": "新能力的统一度量（可回归）",
+      "kind": "脚本",
+      "bytes": 8339,
+      "lines": 210,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "profiles.mjs",
+      "path": "prototype/profiles.mjs",
+      "purpose": "自我复盘的档案浏览（Host 侧）",
+      "kind": "库",
+      "bytes": 3841,
+      "lines": 109,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "rui-audit.mjs",
+      "path": "prototype/rui-audit.mjs",
+      "purpose": "Refactoring UI 正式审计",
+      "kind": "脚本",
+      "bytes": 8686,
+      "lines": 206,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "scene-loader.mjs",
+      "path": "prototype/scene-loader.mjs",
+      "purpose": "场景加载器：把\"放文件即新增场景\"变成现实。",
+      "kind": "CLI",
+      "bytes": 3339,
+      "lines": 90,
+      "usages": [
+        "node scene-loader.mjs —— 列出发现的场景 */"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "sea-audit.mjs",
+      "path": "prototype/sea-audit.mjs",
+      "purpose": "记忆与索引体检（独立 CLI，不侵入 sea.mjs）",
+      "kind": "CLI",
+      "bytes": 3255,
+      "lines": 81,
+      "usages": [
+        "node sea-audit.mjs memory <root>     # 检查各场景 MEMORY.md 的红线",
+        "node sea-audit.mjs index <root>      # 检查文档密集目录是否缺索引",
+        "node sea-audit.mjs memory <scenesRoot>`);"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "sea.mjs",
+      "path": "prototype/sea.mjs",
+      "purpose": "sea",
+      "kind": "脚本",
+      "bytes": 15124,
+      "lines": 354,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "selfcheck-cache.mjs",
+      "path": "prototype/selfcheck-cache.mjs",
+      "purpose": "自检结果缓存：把慢的自检（gate selfcheck / floor selfcheck）结果缓存起来。",
+      "kind": "CLI",
+      "bytes": 5466,
+      "lines": 140,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "sessions.mjs",
+      "path": "prototype/sessions.mjs",
+      "purpose": "场景 ↔ 会话 绑定",
+      "kind": "CLI",
+      "bytes": 13614,
+      "lines": 335,
+      "usages": [
+        "node sessions.mjs bind <sceneId> <sessionId> [会话标题]');",
+        "node sessions.mjs unbind <sceneId>'); process.exit(2); }",
+        "node sessions.mjs list                     列出 DSH 会话与绑定');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "sf-test.mjs",
+      "path": "prototype/sf-test.mjs",
+      "purpose": "Sceneflow 端到端测试",
+      "kind": "脚本",
+      "bytes": 8166,
+      "lines": 186,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "sf-ui-verify.mjs",
+      "path": "prototype/sf-ui-verify.mjs",
+      "purpose": "验证 Sceneflow 面板在界面上真的能工作",
+      "kind": "脚本",
+      "bytes": 6865,
+      "lines": 133,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "shell-guard.mjs",
+      "path": "prototype/shell-guard.mjs",
+      "purpose": "外壳哨兵（L0 Shell Sentinels）",
+      "kind": "CLI",
+      "bytes": 9240,
+      "lines": 232,
+      "usages": [
+        "node shell-guard.mjs guard <路径>'); process.exit(2); }",
+        "node shell-guard.mjs audit       审计根目录与临时文件');",
+        "node shell-guard.mjs guard <路径> 判断路径是否允许');"
+      ],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "shot-dark.mjs",
+      "path": "prototype/shot-dark.mjs",
+      "purpose": "确保 dark",
+      "kind": "脚本",
+      "bytes": 2734,
+      "lines": 62,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "skill-test.mjs",
+      "path": "prototype/skill-test.mjs",
+      "purpose": "验证：技能是否真的能被场景使用 + token 预算是否真实生效",
+      "kind": "脚本",
+      "bytes": 4698,
+      "lines": 96,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "tui-audit.mjs",
+      "path": "prototype/tui-audit.mjs",
+      "purpose": "深挖：哪些元素还没被终端化",
+      "kind": "脚本",
+      "bytes": 3509,
+      "lines": 79,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "tui-check-fill.mjs",
+      "path": "prototype/tui-check-fill.mjs",
+      "purpose": "专门查「面板高 vs 内容高」的差",
+      "kind": "脚本",
+      "bytes": 3776,
+      "lines": 94,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "tui-check-pipeline.mjs",
+      "path": "prototype/tui-check-pipeline.mjs",
+      "purpose": "先切到 pipeline",
+      "kind": "脚本",
+      "bytes": 3522,
+      "lines": 87,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "tui-diag-layout.mjs",
+      "path": "prototype/tui-diag-layout.mjs",
+      "purpose": "诊断面板留白的真实原因",
+      "kind": "脚本",
+      "bytes": 3447,
+      "lines": 90,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "tui-verify.mjs",
+      "path": "prototype/tui-verify.mjs",
+      "purpose": "终端模式界面验证 + 截图",
+      "kind": "脚本",
+      "bytes": 7845,
+      "lines": 167,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "undo.mjs",
+      "path": "prototype/undo.mjs",
+      "purpose": "撤回能力（U5）：让任何改动都可以一键退回。",
+      "kind": "库",
+      "bytes": 2565,
+      "lines": 69,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "usability-test.mjs",
+      "path": "prototype/usability-test.mjs",
+      "purpose": "---------- 备份 / 恢复所有场景数据 ----------",
+      "kind": "脚本",
+      "bytes": 11745,
+      "lines": 305,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "validation-cache.mjs",
+      "path": "prototype/validation-cache.mjs",
+      "purpose": "check 认证结果缓存：gate validate 很贵（每场景 ~270ms × 6 次子进程）。",
+      "kind": "库",
+      "bytes": 3724,
+      "lines": 110,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-ab-test.mjs",
+      "path": "prototype/wb-ab-test.mjs",
+      "purpose": "A/B 实验：关闭 4 个免费 AI 站，看 GPU 内存掉多少",
+      "kind": "脚本",
+      "bytes": 8555,
+      "lines": 195,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-ab2.mjs",
+      "path": "prototype/wb-ab2.mjs",
+      "purpose": "重做 A/B 实验（这次量准）",
+      "kind": "脚本",
+      "bytes": 8007,
+      "lines": 188,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-bisect.mjs",
+      "path": "prototype/wb-bisect.mjs",
+      "purpose": "二分定位：逐个禁用 webview，量内存差，找出最耗资源的那个",
+      "kind": "脚本",
+      "bytes": 7144,
+      "lines": 168,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-destroy-test.mjs",
+      "path": "prototype/wb-destroy-test.mjs",
+      "purpose": "关键实验：销毁 webview 元素（从 DOM 移除）能否真正释放 renderer 进程",
+      "kind": "脚本",
+      "bytes": 7921,
+      "lines": 152,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-diag-btn.mjs",
+      "path": "prototype/wb-diag-btn.mjs",
+      "purpose": "诊断：webai",
+      "kind": "脚本",
+      "bytes": 3453,
+      "lines": 79,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-diag-gc2.mjs",
+      "path": "prototype/wb-diag-gc2.mjs",
+      "purpose": "诊断：为什么第二次跑测试时销毁后 webview 又变成 6",
+      "kind": "脚本",
+      "bytes": 5708,
+      "lines": 118,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-diag-restore.mjs",
+      "path": "prototype/wb-diag-restore.mjs",
+      "purpose": "诊断：为什么点了顶栏按钮 webview 没重建",
+      "kind": "脚本",
+      "bytes": 4465,
+      "lines": 101,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-diag-sweep0.mjs",
+      "path": "prototype/wb-diag-sweep0.mjs",
+      "purpose": "精确诊断 sweep 为什么销毁 0 个",
+      "kind": "脚本",
+      "bytes": 5266,
+      "lines": 121,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-diag-webview.mjs",
+      "path": "prototype/wb-diag-webview.mjs",
+      "purpose": "诊断：webview 的 did",
+      "kind": "脚本",
+      "bytes": 4488,
+      "lines": 103,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-fault-test.mjs",
+      "path": "prototype/wb-fault-test.mjs",
+      "purpose": "故障注入测试",
+      "kind": "脚本",
+      "bytes": 7306,
+      "lines": 153,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-fault-test2.mjs",
+      "path": "prototype/wb-fault-test2.mjs",
+      "purpose": "容错链路端到端测试（可靠版）",
+      "kind": "脚本",
+      "bytes": 7394,
+      "lines": 159,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-fault.mjs",
+      "path": "prototype/wb-fault.mjs",
+      "purpose": "深度探针 3：错误恢复能力",
+      "kind": "脚本",
+      "bytes": 4867,
+      "lines": 111,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-gpu-deep.mjs",
+      "path": "prototype/wb-gpu-deep.mjs",
+      "purpose": "GPU 进程深挖",
+      "kind": "脚本",
+      "bytes": 6475,
+      "lines": 136,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-gpu-probe.mjs",
+      "path": "prototype/wb-gpu-probe.mjs",
+      "purpose": "GPU 进程深挖 2：用 Electron 官方 API 拿 GPU 真实状态",
+      "kind": "脚本",
+      "bytes": 5701,
+      "lines": 132,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-health.mjs",
+      "path": "prototype/wb-health.mjs",
+      "purpose": "工作台健康度总检（一条命令给出全部关键指标）",
+      "kind": "脚本",
+      "bytes": 9274,
+      "lines": 190,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-idle-test.mjs",
+      "path": "prototype/wb-idle-test.mjs",
+      "purpose": "生命周期管理：闲置 webview 自动销毁",
+      "kind": "脚本",
+      "bytes": 5965,
+      "lines": 137,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-idle-verify.mjs",
+      "path": "prototype/wb-idle-verify.mjs",
+      "purpose": "闲置销毁 · 端到端验证",
+      "kind": "脚本",
+      "bytes": 10222,
+      "lines": 201,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-idle-verify2.mjs",
+      "path": "prototype/wb-idle-verify2.mjs",
+      "purpose": "闲置销毁 · 确定性端到端验证（v2）",
+      "kind": "脚本",
+      "bytes": 7499,
+      "lines": 155,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-leak.mjs",
+      "path": "prototype/wb-leak.mjs",
+      "purpose": "累积泄漏验证：连续切 6 次，看 webview 与内存是否持续增长",
+      "kind": "脚本",
+      "bytes": 4689,
+      "lines": 100,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-mem-double.mjs",
+      "path": "prototype/wb-mem-double.mjs",
+      "purpose": "诊断：为什么重启后内存翻倍",
+      "kind": "脚本",
+      "bytes": 3944,
+      "lines": 90,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-memory-board.mjs",
+      "path": "prototype/wb-memory-board.mjs",
+      "purpose": "内存看板（Host 侧）：把内存测量做成主进程服务",
+      "kind": "CLI",
+      "bytes": 8246,
+      "lines": 190,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-memory-breakdown.mjs",
+      "path": "prototype/wb-memory-breakdown.mjs",
+      "purpose": "内存去向拆解（P3）",
+      "kind": "脚本",
+      "bytes": 7204,
+      "lines": 155,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-memory-verdict.mjs",
+      "path": "prototype/wb-memory-verdict.mjs",
+      "purpose": "GPU 内存的真相：可控 vs 不可控",
+      "kind": "脚本",
+      "bytes": 6129,
+      "lines": 125,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-memory.mjs",
+      "path": "prototype/wb-memory.mjs",
+      "purpose": "深入测量：内存去向与 0x0 面板",
+      "kind": "脚本",
+      "bytes": 4853,
+      "lines": 102,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-probe.mjs",
+      "path": "prototype/wb-probe.mjs",
+      "purpose": "工作台运行时探针（通过 CDP 真实测量）",
+      "kind": "脚本",
+      "bytes": 6899,
+      "lines": 161,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-process-map.mjs",
+      "path": "prototype/wb-process-map.mjs",
+      "purpose": "定位最大的那个进程：PID 11052 占 478MB 工作集 / 438MB 私有",
+      "kind": "脚本",
+      "bytes": 3604,
+      "lines": 89,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-stress.mjs",
+      "path": "prototype/wb-stress.mjs",
+      "purpose": "深度探针 2：并发与稳定性",
+      "kind": "脚本",
+      "bytes": 6226,
+      "lines": 125,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-webai-api.mjs",
+      "path": "prototype/wb-webai-api.mjs",
+      "purpose": "查 webai API",
+      "kind": "脚本",
+      "bytes": 3704,
+      "lines": 83,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-wv-recycle.mjs",
+      "path": "prototype/wb-wv-recycle.mjs",
+      "purpose": "验证：场景切换时旧 webview 是否被正确回收",
+      "kind": "脚本",
+      "bytes": 5082,
+      "lines": 110,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "wb-zero-wv.mjs",
+      "path": "prototype/wb-zero-wv.mjs",
+      "purpose": "（无说明）",
+      "kind": "脚本",
+      "bytes": 4312,
+      "lines": 94,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "weak-declaration-test.mjs",
+      "path": "prototype/weak-declaration-test.mjs",
+      "purpose": "验证：声明过弱的场景，门禁会不会拒？",
+      "kind": "脚本",
+      "bytes": 2882,
+      "lines": 66,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    },
+    {
+      "name": "write-audit.mjs",
+      "path": "prototype/write-audit.mjs",
+      "purpose": "全量\"实际写入\"审计",
+      "kind": "脚本",
+      "bytes": 11250,
+      "lines": 250,
+      "usages": [],
+      "layer": "L6",
+      "scope": "验证探针"
+    }
+  ]
+}

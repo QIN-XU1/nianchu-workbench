@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DSH 工作台 · 设计系统预览</title>
+<link rel="stylesheet" href="./styles/tokens.css" />
+<link rel="stylesheet" href="./styles/base.css" />
+<link rel="stylesheet" href="./styles/layout.css" />
+<link rel="stylesheet" href="./styles/components.css" />
+<link rel="stylesheet" href="./styles/animations.css" />
+<style>
+  /* 预览页自己的外壳，不属于设计系统 */
+  html, body { overflow: auto; }
+  body {
+    background: var(--color-void);
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-ui);
+  }
+  .pv-wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-5) var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  .pv-head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .pv-head h1 { font-family: var(--font-mono); font-size: var(--fs-22); margin: 0; }
+  .pv-head .meta { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--color-txt-3); }
+  .pv-head .pv-tools { margin-left: auto; display: flex; gap: var(--space-2); }
+
+  .pv-sec {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    background: var(--color-base);
+    border-radius: var(--r-2);
+    padding: var(--space-4);
+  }
+  .pv-sec > .pv-sec-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--fs-11);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-txt-3);
+  }
+  .pv-sec > .pv-sec-title::after {
+    content: ""; flex: 1; height: 1px; background: var(--color-line);
+  }
+  .pv-grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+    gap: var(--space-3);
+    align-items: start;
+  }
+  .pv-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+  .pv-label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-11);
+    color: var(--color-txt-3);
+    min-width: 92px;
+    flex-shrink: 0;
+  }
+  .pv-item { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+  .pv-note {
+    font-size: var(--fs-11);
+    line-height: 15px;
+    color: var(--color-txt-3);
+    font-family: var(--font-mono);
+  }
+  /* 色板：flex 换行，最后一格不会被拉成空格子 */
+  .pv-swatches { display: flex; flex-wrap: wrap; gap: 1px; background: var(--color-line); }
+  .pv-sw { flex: 1 1 104px; min-width: 104px; background: var(--color-base); padding: var(--space-2); display: flex; flex-direction: column; gap: 4px; }
+  .pv-sw i { height: 28px; border-radius: var(--r-1); display: block; }
+  .pv-sw b { font-family: var(--font-mono); font-size: var(--fs-11); font-weight: 500; color: var(--color-txt-1); }
+  .pv-sw span { font-family: var(--font-mono); font-size: var(--fs-11); line-height: 15px; color: var(--color-txt-3); }
+
+  /* 预览页专用卡片栅格：按内容最小宽度自适应，不挤断标题 */
+  .pv-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-3); align-items: start; }
+  /* 720 窄窗口模拟 */
+  .pv-narrow {
+    width: 720px;
+    max-width: 100%;
+    height: 320px;
+    border-radius: var(--r-1);
+    overflow: hidden;
+    position: relative;
+    outline: 1px dashed var(--color-line-strong);
+    background: var(--color-void);
+  }
+  /* 尺寸刻度 */
+  .pv-scale { display: flex; flex-direction: column; gap: var(--space-2); }
+  .pv-scale-row { display: flex; align-items: baseline; gap: var(--space-3); }
+  .pv-scale-row .tag { font-family: var(--font-mono); font-size: var(--fs-11); color: var(--color-txt-3); width: 56px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<div class="pv-wrap">
+
+  <!-- ═══════════ 头 ═══════════ -->
+  <div class="pv-head">
+    <h1>dsh 工作台 · 设计系统</h1>
+    <span class="meta">Terminal-native / 信息密度优先 / 层次靠明度差</span>
+    <div class="pv-tools">
+      <button class="wb-btn wb-btn--secondary wb-btn--sm" id="btn-theme">切换明暗</button>
+      <button class="wb-btn wb-btn--ghost wb-btn--sm" id="btn-narrow">720px 窄窗</button>
+    </div>
+  </div>
+
+  <!-- ═══════════ 1. 色板 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">surface 7 级明度（层次的唯一来源）</div>
+    <div class="pv-swatches">
+      <div class="pv-sw"><i style="background:var(--color-void)"></i><b>void</b><span>窗口底</span></div>
+      <div class="pv-sw"><i style="background:var(--color-sunken)"></i><b>sunken</b><span>凹陷</span></div>
+      <div class="pv-sw"><i style="background:var(--color-base)"></i><b>base</b><span>页面</span></div>
+      <div class="pv-sw"><i style="background:var(--color-panel)"></i><b>panel</b><span>面板</span></div>
+      <div class="pv-sw"><i style="background:var(--color-raised)"></i><b>raised</b><span>抬起</span></div>
+      <div class="pv-sw"><i style="background:var(--color-hover)"></i><b>hover</b><span>悬停</span></div>
+      <div class="pv-sw"><i style="background:var(--color-active)"></i><b>active</b><span>按下</span></div>
+    </div>
+
+    <div class="pv-sec-title" style="margin-top:var(--space-4)">文字 / 强调 / 状态</div>
+    <div class="pv-swatches">
+      <div class="pv-sw"><i style="background:var(--color-txt-1)"></i><b>txt-1</b><span>正文一级</span></div>
+      <div class="pv-sw"><i style="background:var(--color-txt-2)"></i><b>txt-2</b><span>二级</span></div>
+      <div class="pv-sw"><i style="background:var(--color-txt-3)"></i><b>txt-3</b><span>三级</span></div>
+      <div class="pv-sw"><i style="background:var(--color-txt-disabled)"></i><b>txt-disabled</b><span>禁用</span></div>
+      <div class="pv-sw"><i style="background:var(--color-accent)"></i><b>accent</b><span>唯一强调</span></div>
+      <div class="pv-sw"><i style="background:var(--color-ok)"></i><b>ok</b><span>成功</span></div>
+      <div class="pv-sw"><i style="background:var(--color-warn)"></i><b>warn</b><span>警告</span></div>
+      <div class="pv-sw"><i style="background:var(--color-err)"></i><b>err</b><span>错误</span></div>
+    </div>
+    <div class="pv-note">实测对比度见 prototype/check-contrast.mjs 输出：正文类最低 4.59:1（暗）/ 4.77:1（亮）。</div>
+  </div>
+
+  <!-- ═══════════ 2. 字号与间距 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">字号 7 档（不允许第 8 档）</div>
+    <div class="pv-scale">
+      <div class="pv-scale-row"><span class="tag">fs-28</span><span class="wb-fs-28">28px 大标题</span></div>
+      <div class="pv-scale-row"><span class="tag">fs-22</span><span class="wb-fs-22">22px 面板级标题</span></div>
+      <div class="pv-scale-row"><span class="tag">fs-18</span><span class="wb-fs-18">18px 分区标题 / 指标数字</span></div>
+      <div class="pv-scale-row"><span class="tag">fs-15</span><span class="wb-fs-15">15px 强调正文</span></div>
+      <div class="pv-scale-row"><span class="tag">fs-13</span><span class="wb-fs-13">13px 主正文（中文推荐）</span></div>
+      <div class="pv-scale-row"><span class="tag">fs-12</span><span class="wb-fs-12">12px 默认正文 / 表格</span></div>
+      <div class="pv-scale-row"><span class="tag">fs-11</span><span class="wb-fs-11">11px 标签 / 徽标 / 密集列表</span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 3. 按钮 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">BUTTON · 4 级 + 尺寸 + 状态</div>
+    <div class="pv-row">
+      <span class="pv-label">4 级</span>
+      <button class="wb-btn wb-btn--primary">主操作</button>
+      <button class="wb-btn wb-btn--secondary">次操作</button>
+      <button class="wb-btn wb-btn--ghost">幽灵</button>
+      <button class="wb-btn wb-btn--danger">删除</button>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">尺寸</span>
+      <button class="wb-btn wb-btn--secondary wb-btn--sm">sm 22px</button>
+      <button class="wb-btn wb-btn--secondary">md 26px</button>
+      <button class="wb-btn wb-btn--secondary wb-btn--lg">lg 30px</button>
+      <button class="wb-btn wb-btn--secondary wb-btn--icon" title="图标按钮">▣</button>
+      <button class="wb-btn wb-btn--secondary" disabled>禁用</button>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">按钮组</span>
+      <div class="wb-btn-group">
+        <button class="wb-btn wb-btn--ghost wb-btn--sm is-active">日</button>
+        <button class="wb-btn wb-btn--ghost wb-btn--sm">周</button>
+        <button class="wb-btn wb-btn--ghost wb-btn--sm">月</button>
+      </div>
+      <div class="wb-segmented">
+        <button class="wb-btn wb-btn--ghost wb-btn--sm is-active">运行</button>
+        <button class="wb-btn wb-btn--ghost wb-btn--sm">暂停</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 4. 输入框 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">INPUT · text / textarea / select</div>
+    <div class="pv-grid-auto" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
+      <div class="wb-field">
+        <label class="wb-field-label">text · 普通</label>
+        <input class="wb-input" placeholder="输入任务名…" value="" />
+        <span class="wb-field-hint">mono 12px / 控件高 26px</span>
+      </div>
+      <div class="wb-field">
+        <label class="wb-field-label">text · 带前缀</label>
+        <div class="wb-input-shell">
+          <span class="wb-input-shell-prefix">$</span>
+          <input class="wb-input" placeholder="命令…" />
+        </div>
+        <span class="wb-field-hint">shell / 命令补全用</span>
+      </div>
+      <div class="wb-field">
+        <label class="wb-field-label">select</label>
+        <select class="wb-select">
+          <option>架构梳理</option>
+          <option>自我复盘</option>
+          <option>B 站运营</option>
+        </select>
+        <span class="wb-field-hint">自绘箭头，不破相</span>
+      </div>
+      <div class="wb-field">
+        <label class="wb-field-label">text · 错误态</label>
+        <input class="wb-input" aria-invalid="true" value="O-1 / 120 元" />
+        <span class="wb-field-error">金额与发货记录不一致</span>
+      </div>
+    </div>
+    <div class="wb-field" style="margin-top:var(--space-2)">
+      <label class="wb-field-label">textarea</label>
+      <textarea class="wb-textarea" rows="3" placeholder="描述要派发的任务…">把 c1-order-ledger 的 check 脚本补齐缺失的 referential-integrity 断言。</textarea>
+    </div>
+    <div class="pv-row" style="margin-top:var(--space-2)">
+      <span class="pv-label">搜索框</span>
+      <div class="wb-search" style="width:280px">
+        <span style="font-family:var(--font-mono);font-size:var(--fs-11);color:var(--color-txt-3)">/</span>
+        <input placeholder="搜索面板、场景、会话…" />
+        <span class="wb-kbd">⌘K</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 5. 标签页 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">TABS · 下划线式 + 紧凑徽标式</div>
+    <div class="wb-tabs" style="border-radius:var(--r-1) var(--r-1) 0 0">
+      <button class="wb-tab is-active">总览 <span class="wb-tab-count">12</span></button>
+      <button class="wb-tab">日志 <span class="wb-tab-count">48</span></button>
+      <button class="wb-tab">差异 <span class="wb-tab-count">3</span></button>
+      <button class="wb-tab">设置</button>
+    </div>
+    <div class="wb-tabs wb-tabs--compact" style="border-radius:var(--r-1)">
+      <button class="wb-tab is-active">子 Agent</button>
+      <button class="wb-tab">记忆</button>
+      <button class="wb-tab">技能</button>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6. 徽标 / 状态 / 键帽 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">BADGE / DOT / STATUS / KBD</div>
+    <div class="pv-row">
+      <span class="pv-label">徽标</span>
+      <span class="wb-badge">默认</span>
+      <span class="wb-badge wb-badge--accent">accent</span>
+      <span class="wb-badge wb-badge--ok">通过 4</span>
+      <span class="wb-badge wb-badge--warn">警告 2</span>
+      <span class="wb-badge wb-badge--err">失败 1</span>
+      <span class="wb-badge wb-badge--ghost">ghost</span>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">状态点</span>
+      <span class="wb-status"><span class="wb-dot wb-dot--ok"></span>就绪</span>
+      <span class="wb-status"><span class="wb-dot wb-dot--accent"></span>运行中</span>
+      <span class="wb-status"><span class="wb-dot wb-dot--warn"></span>等待</span>
+      <span class="wb-status"><span class="wb-dot wb-dot--err"></span>失败</span>
+      <span class="wb-status"><span class="wb-dot wb-dot--idle"></span>空闲</span>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">shell 状态</span>
+      <span class="wb-status" data-state="ok"><span class="wb-status-dot"></span>引擎在线</span>
+      <span class="wb-status" data-state="warn"><span class="wb-status-dot"></span>高延迟</span>
+      <span class="wb-status" data-state="err"><span class="wb-status-dot"></span>断开</span>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">键帽</span>
+      <span class="wb-kbd">⌘</span><span class="wb-kbd">K</span>
+      <span class="wb-kbd">Esc</span>
+      <span class="pv-note">终端风格：方块、等宽、无阴影</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 7. 卡片 / 指标 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">CARD / STAT</div>
+    <div class="pv-cards">
+      <div class="wb-card wb-card--interactive">
+        <div class="wb-card-head">
+          <span class="wb-card-title">c1-order-ledger</span>
+          <span class="wb-card-head-meta"><span class="wb-badge wb-badge--ok">PASS</span></span>
+        </div>
+        <div class="wb-card-body">
+          <div class="wb-fs-13 wb-t1">差异集合 = 0</div>
+          <div class="wb-fs-11 wb-t3" style="margin-top:4px">orders 3 / shipments 3</div>
+        </div>
+      </div>
+      <div class="wb-card wb-card--interactive">
+        <div class="wb-card-head">
+          <span class="wb-card-title">c2-config-sync</span>
+          <span class="wb-card-head-meta"><span class="wb-badge wb-badge--err">FAIL</span></span>
+        </div>
+        <div class="wb-card-body">
+          <div class="wb-fs-13 wb-t1">差异集合 = 2 项</div>
+          <div class="wb-fs-11 wb-t3" style="margin-top:4px">键丢失 / 值类型不符</div>
+        </div>
+      </div>
+      <div class="wb-card">
+        <div class="wb-card-head"><span class="wb-card-title">带底部操作</span></div>
+        <div class="wb-card-body">
+          <div class="wb-fs-12 wb-t2">卡片层次来自 panel 底色，不靠描边。</div>
+        </div>
+        <div class="wb-card-foot">
+          <button class="wb-btn wb-btn--ghost wb-btn--sm">取消</button>
+          <button class="wb-btn wb-btn--primary wb-btn--sm" style="margin-left:auto">执行</button>
+        </div>
+      </div>
+      <div class="wb-stat">
+        <span class="wb-stat-label">今日派单</span>
+        <span class="wb-stat-value">37</span>
+        <span class="wb-stat-delta wb-stat-delta--up">+12 vs 昨日</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 8. 表格 / 列表行 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">TABLE · 高密度（26px 行高）</div>
+    <div class="wb-table-wrap">
+      <table class="wb-table">
+        <thead>
+          <tr>
+            <th>场景</th>
+            <th style="width:96px">状态</th>
+            <th class="col-num" style="width:56px">差异</th>
+            <th class="col-num" style="width:64px">耗时</th>
+            <th style="width:64px">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>c1-order-ledger</td><td><span class="wb-badge wb-badge--ok">PASS</span></td><td class="col-num">0</td><td class="col-num">0.42s</td><td><button class="wb-btn wb-btn--ghost wb-btn--sm">详情</button></td></tr>
+          <tr aria-selected="true"><td>c2-config-sync</td><td><span class="wb-badge wb-badge--err">FAIL</span></td><td class="col-num">2</td><td class="col-num">1.08s</td><td><button class="wb-btn wb-btn--ghost wb-btn--sm">详情</button></td></tr>
+          <tr><td>c3-inventory-count</td><td><span class="wb-badge wb-badge--warn">WARN</span></td><td class="col-num">1</td><td class="col-num">0.77s</td><td><button class="wb-btn wb-btn--ghost wb-btn--sm">详情</button></td></tr>
+          <tr><td>c4-shipment-batch</td><td><span class="wb-badge wb-badge--ok">PASS</span></td><td class="col-num">0</td><td class="col-num">0.31s</td><td><button class="wb-btn wb-btn--ghost wb-btn--sm">详情</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pv-sec-title" style="margin-top:var(--space-4)">LIST ROW · 列表行（悬停显示操作）</div>
+    <ul class="wb-list" style="background:var(--color-panel);border-radius:var(--r-1);overflow:hidden">
+      <li>
+        <div class="wb-row wb-row--interactive">
+          <span class="wb-row-lead"><span class="wb-dot wb-dot--ok"></span></span>
+          <span class="wb-row-main">
+            <span class="wb-row-title">架构梳理</span>
+            <span class="wb-row-sub">scene · 汇总裁判 · 已绑定会话</span>
+          </span>
+          <span class="wb-row-meta">12 任务</span>
+          <span class="wb-row-actions"><button class="wb-btn wb-btn--ghost wb-btn--sm">派单</button></span>
+        </div>
+      </li>
+      <li>
+        <div class="wb-row wb-row--interactive">
+          <span class="wb-row-lead"><span class="wb-dot wb-dot--accent"></span></span>
+          <span class="wb-row-main">
+            <span class="wb-row-title">自我复盘</span>
+            <span class="wb-row-sub">scene · 记忆沉淀 · 运行中</span>
+          </span>
+          <span class="wb-row-meta">3 任务</span>
+          <span class="wb-row-actions"><button class="wb-btn wb-btn--ghost wb-btn--sm">停止</button></span>
+        </div>
+      </li>
+      <li>
+        <div class="wb-row wb-row--interactive">
+          <span class="wb-row-lead"><span class="wb-dot wb-dot--warn"></span></span>
+          <span class="wb-row-main">
+            <span class="wb-row-title">B 站运营</span>
+            <span class="wb-row-sub">scene · 需重新授权</span>
+          </span>
+          <span class="wb-row-meta">0 任务</span>
+          <span class="wb-row-actions"><button class="wb-btn wb-btn--ghost wb-btn--sm">授权</button></span>
+        </div>
+      </li>
+      <li>
+        <div class="wb-row wb-row--dense">
+          <span class="wb-row-lead"><span class="wb-dot wb-dot--idle"></span></span>
+          <span class="wb-row-main"><span class="wb-row-title">本地电脑（紧凑行 22px）</span></span>
+          <span class="wb-row-meta">idle</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══════════ 9. 空状态 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">EMPTY STATE · 完整 / 内嵌一行</div>
+    <div class="pv-cards" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+      <div class="wb-card">
+        <div class="wb-card-head"><span class="wb-card-title">无数据</span></div>
+        <div class="wb-card-body" style="display:flex">
+          <div class="wb-empty">
+            <span class="wb-empty-glyph">[ ]</span>
+            <span class="wb-empty-title">还没有选中的场景</span>
+            <p class="wb-empty-desc">在顶部场景栏选择一个场景，或直接在主 Agent 里派单。</p>
+            <div class="wb-empty-actions">
+              <button class="wb-btn wb-btn--secondary wb-btn--sm">去选场景</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wb-card">
+        <div class="wb-card-head"><span class="wb-card-title">内嵌一行</span></div>
+        <div class="wb-card-body wb-card-body--flush">
+          <div class="wb-empty wb-empty--inline">$ 无匹配结果（3 个面板被过滤）</div>
+          <div class="wb-empty wb-empty--inline" style="border-top:1px solid var(--color-line)">$ 面板尚未 mount</div>
+          <div class="wb-empty wb-empty--inline" style="border-top:1px solid var(--color-line)">$ 等待首次事件…<span class="wb-caret"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 10. 开关 / 进度 / 通知 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">SWITCH / CHECK / BAR / TOAST / NOTICE</div>
+    <div class="pv-row">
+      <span class="pv-label">开关</span>
+      <button class="wb-switch" aria-checked="true"></button>
+      <button class="wb-switch" aria-checked="false"></button>
+      <span class="pv-note">16px 高，方形滑块（节奏与终端一致）</span>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">复选框</span>
+      <input type="checkbox" class="wb-check" checked />
+      <input type="checkbox" class="wb-check" />
+      <span class="pv-note">13px / 强调色实心</span>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">进度 60%</span>
+      <div class="wb-bar" style="width:220px"><div class="wb-bar-fill" style="width:60%"></div></div>
+      <div class="wb-bar wb-bar--ok" style="width:120px"><div class="wb-bar-fill" style="width:100%"></div></div>
+      <div class="wb-bar wb-bar--warn" style="width:120px"><div class="wb-bar-fill" style="width:45%"></div></div>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">不定进度</span>
+      <div class="wb-bar wb-bar--indeterminate" style="width:220px"><div class="wb-bar-fill"></div></div>
+      <span class="pv-note">只在真正无进度时使用</span>
+    </div>
+    <div class="pv-row" style="align-items:flex-start">
+      <span class="pv-label">通知</span>
+      <div style="display:flex;flex-direction:column;gap:var(--space-2);flex:1;min-width:0">
+        <div class="wb-toast wb-toast--accent"><span class="wb-toast-icon">›</span><div class="wb-toast-body">已派单到「架构梳理」，等回执…</div><button class="wb-toast-close">×</button></div>
+        <div class="wb-toast wb-toast--ok"><span class="wb-toast-icon">✓</span><div class="wb-toast-body">c1-order-ledger 通过，差异集合 = 0</div><button class="wb-toast-close">×</button></div>
+        <div class="wb-toast wb-toast--err"><span class="wb-toast-icon">!</span><div class="wb-toast-body">引擎断开：session/prompt 失败（ECONNREFUSED 3080）</div><button class="wb-toast-close">×</button></div>
+      </div>
+    </div>
+    <div class="pv-row" style="align-items:flex-start;margin-top:var(--space-4)">
+      <span class="pv-label">提示条</span>
+      <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0">
+        <div class="wb-notice"><span>[i]</span><span>面板类型未知时会显示降级卡片，不会白屏。</span></div>
+        <div class="wb-notice wb-notice--warn"><span>[!]</span><span>720px 下右栏转为抽屉，按 Esc 关闭。</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 11. 面板 / 工具栏 / 代码 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">PANEL / TOOLBAR / CODE</div>
+    <div class="wb-panel-split" style="height:280px">
+      <div class="wb-panel">
+        <div class="wb-panel-head">
+          <span class="wb-panel-title"><span class="wb-avatar">A</span>主控对话</span>
+          <span class="wb-panel-head-meta">42%</span>
+        </div>
+        <div class="wb-toolbar">
+          <button class="wb-btn wb-btn--ghost wb-btn--sm is-active">对话</button>
+          <button class="wb-btn wb-btn--ghost wb-btn--sm">派发</button>
+          <div class="wb-vr"></div>
+          <button class="wb-btn wb-btn--ghost wb-btn--sm">＋ 新会话</button>
+        </div>
+        <div class="wb-panel-body" style="padding:var(--space-3)">
+          <pre class="wb-code"><span class="tok-cmd">$</span> dsh --profile web-gw --port 3080 --no-open
+<span class="tok-dim">[engine]</span> listening on <span class="tok-cmd">http://127.0.0.1:3080</span>
+<span class="tok-ok">[ok]</span> c1-order-ledger 差异集合 = 0
+<span class="tok-err">[err]</span> c2-config-sync 差异集合 = 2 项</pre>
+        </div>
+      </div>
+      <div class="wb-panel">
+        <div class="wb-panel-head">
+          <span class="wb-panel-title">子 Agent</span>
+          <span class="wb-panel-head-meta">11 个</span>
+        </div>
+        <div class="wb-panel-body">
+          <ul class="wb-list">
+            <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--ok"></span><span class="wb-row-main"><span class="wb-row-title">架构梳理</span></span><span class="wb-row-meta">ready</span></div></li>
+            <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--accent"></span><span class="wb-row-main"><span class="wb-row-title">自我复盘</span></span><span class="wb-row-meta">busy</span></div></li>
+            <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--warn"></span><span class="wb-row-main"><span class="wb-row-title">B 站运营</span></span><span class="wb-row-meta">auth</span></div></li>
+            <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--idle"></span><span class="wb-row-main"><span class="wb-row-title">本地电脑</span></span><span class="wb-row-meta">idle</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 12. 完整骨架（可交互拖拽演示） ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">SKELETON · 三段式完整骨架（真实 shell 类名）</div>
+    <div style="height:420px;border-radius:var(--r-1);overflow:hidden;outline:1px dashed var(--color-line-strong)">
+      <div class="wb-app">
+        <div class="wb-titlebar">
+          <div class="wb-brand"><span class="wb-brand-dot"></span><span>DSH 工作台</span></div>
+          <div class="wb-statuses">
+            <span class="wb-status" data-state="ok"><span class="wb-status-dot"></span>引擎 3080</span>
+            <span class="wb-status" data-state="warn"><span class="wb-status-dot"></span>内存 812MB</span>
+          </div>
+          <div class="wb-titlebar-spacer"></div>
+          <div class="wb-winbtns">
+            <button class="wb-winbtn" data-act="min"><svg class="icon" viewBox="0 0 16 16"><path d="M4 8h12"/></svg></button>
+            <button class="wb-winbtn" data-act="max"><svg class="icon" viewBox="0 0 16 16"><path d="M3 3h10v10H3z"/></svg></button>
+            <button class="wb-winbtn" data-act="close"><svg class="icon" viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+          </div>
+        </div>
+        <div class="wb-scenebar">
+          <button class="wb-scenetab" data-active="1" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>架构梳理</span></button>
+          <button class="wb-scenetab" data-active="0" data-busy="1"><span class="wb-scenetab-icon">◉</span><span>自我复盘</span></button>
+          <button class="wb-scenetab" data-active="0" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>B 站运营</span></button>
+          <button class="wb-scenetab" data-active="0" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>关系军师</span></button>
+          <button class="wb-scenetab" data-active="0" data-busy="0"><span class="wb-scenetab-icon">◦</span><span>调研</span></button>
+          <div class="wb-scenebar-spacer"></div>
+        </div>
+        <div class="wb-body">
+          <div class="wb-split" id="pv-split">
+            <div class="wb-main">
+              <div class="wb-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+                <div class="wb-panel">
+                  <div class="wb-panel-head"><span class="wb-panel-title">订单台账</span><span class="wb-panel-head-meta">PASS</span></div>
+                  <div class="wb-panel-body">
+                    <table class="wb-table">
+                      <thead><tr><th>id</th><th class="col-num">amount</th><th>status</th></tr></thead>
+                      <tbody>
+                      <tr><td>O-1</td><td class="col-num">120</td><td><span class="wb-badge wb-badge--ok">paid</span></td></tr>
+                      <tr><td>O-2</td><td class="col-num">80</td><td><span class="wb-badge wb-badge--ok">paid</span></td></tr>
+                      <tr><td>O-3</td><td class="col-num">200</td><td><span class="wb-badge wb-badge--warn">pending</span></td></tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+                <div class="wb-panel">
+                  <div class="wb-panel-head"><span class="wb-panel-title">发货记录</span><span class="wb-panel-head-meta">3 条</span></div>
+                  <div class="wb-panel-body">
+                    <ul class="wb-list">
+                      <li><div class="wb-row wb-row--dense"><span class="wb-row-main"><span class="wb-row-title">S-1 → O-1</span></span><span class="wb-row-meta">120</span></div></li>
+                      <li><div class="wb-row wb-row--dense"><span class="wb-row-main"><span class="wb-row-title">S-2 → O-2</span></span><span class="wb-row-meta">80</span></div></li>
+                      <li><div class="wb-row wb-row--dense"><span class="wb-row-main"><span class="wb-row-title">S-3 → O-3</span></span><span class="wb-row-meta">200</span></div></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wb-split-handle" id="pv-handle" role="separator" aria-orientation="vertical" tabindex="0" title="拖拽调整宽度 · 双击复位"></div>
+            <div class="wb-side">
+              <div class="wb-side-stack">
+                <div class="wb-side-pane">
+                  <div class="wb-panel-head"><span class="wb-panel-title"><span class="wb-avatar">A</span>主 Agent</span><span class="wb-panel-head-meta">在线</span></div>
+                  <div class="wb-side-pane-body" style="padding:var(--space-2)">
+                    <div class="wb-notice wb-notice--accent">已连接 11/11 场景 · 等待派单</div>
+                  </div>
+                  <div class="wb-side-pane-foot">
+                    <button class="wb-btn wb-btn--primary wb-btn--sm wb-btn--block">＋ 新会话</button>
+                  </div>
+                </div>
+                <div class="wb-side-pane">
+                  <div class="wb-panel-head"><span class="wb-panel-title">子 Agent</span><span class="wb-panel-head-meta">11</span></div>
+                  <div class="wb-side-pane-body">
+                    <ul class="wb-list">
+                      <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--ok"></span><span class="wb-row-main"><span class="wb-row-title">架构梳理</span></span></div></li>
+                      <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--accent"></span><span class="wb-row-main"><span class="wb-row-title">自我复盘</span></span></div></li>
+                      <li><div class="wb-row wb-row--dense"><span class="wb-dot wb-dot--idle"></span><span class="wb-row-main"><span class="wb-row-title">调研</span></span></div></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="wb-side-pane">
+                  <div class="wb-panel-head"><span class="wb-panel-title">任务派发</span></div>
+                  <div class="wb-side-pane-body" style="padding:var(--space-2)">
+                    <select class="wb-select wb-select" style="margin-bottom:6px">
+                      <option>架构梳理</option><option>自我复盘</option>
+                    </select>
+                    <textarea class="wb-textarea" rows="2" placeholder="要做什么…"></textarea>
+                  </div>
+                  <div class="wb-side-pane-foot">
+                    <button class="wb-btn wb-btn--primary wb-btn--sm wb-btn--block">派发</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wb-footbar">
+          <div class="grow truncate">scene: 架构梳理 · panel: 2 · DSH 3080</div>
+          <div class="spacer"></div>
+          <div class="nowrap">RAM 812MB · CPU 4%</div>
+        </div>
+      </div>
+    </div>
+    <div class="pv-note">拖拽中间手柄可调宽度（5px 命中区，1px 视觉线）；双击复位。</div>
+  </div>
+
+  <!-- ═══════════ 13. 720px 窄窗口（iframe 独立视口，媒体查询真实生效） ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">NARROW · 720px 硬指标（真实视口，非容器模拟）</div>
+    <div class="pv-narrow" id="pv-narrow">
+      <iframe src="./skeleton.html" title="720px 窄窗口预览" style="width:720px;height:100%;border:0;display:block"></iframe>
+    </div>
+    <div class="pv-note">该 iframe 视口宽度 = 720px。媒体查询真实生效：右栏转抽屉并覆盖在主区右侧，主区占满 720px。</div>
+    <div class="pv-row" style="margin-top:var(--space-2)">
+      <span class="pv-label">其他宽度</span>
+      <button class="wb-btn wb-btn--secondary wb-btn--sm" data-vw="900">900px</button>
+      <button class="wb-btn wb-btn--secondary wb-btn--sm" data-vw="1280">1280px</button>
+      <button class="wb-btn wb-btn--secondary wb-btn--sm" data-vw="1440">1440px</button>
+      <span class="pv-note" id="pv-vw-note">当前 720px</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 14. 动效 ═══════════ -->
+  <div class="pv-sec">
+    <div class="pv-sec-title">MOTION · 克制（全部 ≤240ms，只动 opacity/transform/bg）</div>
+    <div class="pv-row">
+      <span class="pv-label">时长</span>
+      <span class="wb-kbd">dur-1 90ms</span>
+      <span class="wb-kbd">dur-2 140ms</span>
+      <span class="wb-kbd">dur-3 200ms</span>
+      <span class="wb-kbd">dur-4 240ms</span>
+    </div>
+    <div class="pv-row">
+      <span class="pv-label">回放</span>
+      <button class="wb-btn wb-btn--secondary wb-btn--sm" id="btn-anim">重放进入动画</button>
+      <span class="pv-note" id="anim-stage">状态：待触发</span>
+    </div>
+    <div style="display:flex;gap:var(--space-3)">
+      <div class="wb-card" id="anim-card" style="width:180px">
+        <div class="wb-card-head"><span class="wb-card-title">rise-in</span></div>
+        <div class="wb-card-body"><div class="wb-fs-11 wb-t3">opacity + translateY(4px)</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+        <div class="pv-row"><span class="pv-label">骨架屏</span><div class="wb-skeleton" style="width:160px"></div></div>
+        <div class="pv-row"><span class="pv-label">脉冲(亮起)</span><span class="wb-dot wb-dot--accent wb-anim-flash-accent" style="width:10px;height:10px"></span></div>
+        <div class="pv-row"><span class="pv-label">光标</span><span class="wb-caret"></span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="module">
+  // 预览页交互：主题切换 / 分栏拖拽 / 动画回放 / 窄窗提示
+  // ⚠️ 这是预览页脚本，不属于设计系统
+
+  const root = document.documentElement;
+
+  // 支持 ?theme=light / ?theme=dark 直接打开指定主题（便于评审与截图）
+  const qs = new URLSearchParams(location.search).get('theme');
+  if (qs === 'light' || qs === 'dark') root.dataset.theme = qs;
+
+  document.getElementById('btn-theme').addEventListener('click', () => {
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+  });
+
+  document.getElementById('btn-narrow').addEventListener('click', () => {
+    document.getElementById('pv-narrow').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // ── 简易分栏拖拽（演示 layout.css 的 .wb-split-handle） ──
+  const split = document.getElementById('pv-split');
+  const handle = document.getElementById('pv-handle');
+  let drag = false, startX = 0, startW = 300;
+
+  handle.addEventListener('pointerdown', (e) => {
+    drag = true;
+    startX = e.clientX;
+    const side = split.children[2];
+    startW = side.getBoundingClientRect().width;
+    handle.setPointerCapture?.(e.pointerId);
+    handle.classList.add('wb-dragging');
+    document.body.classList.add('wb-resizing');
+    e.preventDefault();
+  });
+  handle.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const w = Math.max(220, Math.min(520, startW - (e.clientX - startX)));
+    split.style.gridTemplateColumns = `minmax(0, 1fr) 5px ${Math.round(w)}px`;
+  });
+  function endDrag(e) {
+    if (!drag) return;
+    drag = false;
+    handle.releasePointerCapture?.(e.pointerId);
+    handle.classList.remove('wb-dragging');
+    document.body.classList.remove('wb-resizing');
+  }
+  handle.addEventListener('pointerup', endDrag);
+  handle.addEventListener('pointercancel', endDrag);
+  handle.addEventListener('dblclick', () => {
+    split.style.gridTemplateColumns = 'minmax(0, 1fr) 5px 300px';
+  });
+
+  // ── 动画回放 ──
+  const card = document.getElementById('anim-card');
+  const stage = document.getElementById('anim-stage');
+  document.getElementById('btn-anim').addEventListener('click', () => {
+    card.classList.remove('wb-anim-rise');
+    void card.offsetWidth;            // 强制重排以重启动画
+    card.classList.add('wb-anim-rise');
+    stage.textContent = '状态：rise-in 已播放（200ms）';
+  });
+  // ── iframe 宽度切换（真实视口，验证各断点）+ 主题同步 ──
+  const pf = document.querySelector('#pv-narrow iframe');
+  const vwNote = document.getElementById('pv-vw-note');
+  function syncIframeTheme() {
+    const t = document.documentElement.dataset.theme || 'dark';
+    const src = './skeleton.html?theme=' + t;
+    if (pf.getAttribute('src') !== src) pf.setAttribute('src', src);
+  }
+  syncIframeTheme();
+  document.querySelectorAll('[data-vw]').forEach((b) => {
+    b.addEventListener('click', () => {
+      const w = b.dataset.vw;
+      pf.style.width = w + 'px';
+      if (vwNote) vwNote.textContent = '当前 ' + w + 'px';
+    });
+  });
+  // 主题按钮点击后同步 iframe（在 setAttribute 之后重新绑定）
+  document.getElementById('btn-theme').addEventListener('click', () => {
+    setTimeout(syncIframeTheme, 0);
+  });
+</script>
+</body>
+</html>
