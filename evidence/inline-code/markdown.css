@@ -1,0 +1,782 @@
+@charset "UTF-8";
+/* Markdown renderer styles */
+.markdown-renderer {
+  --markdown-block-gap: var(--openbitfun-space-3);
+  --markdown-paragraph-gap: var(--openbitfun-control-flow-chat-paragraph-gap);
+  --markdown-list-item-gap: var(--openbitfun-space-1);
+  --markdown-list-nested-gap: var(--openbitfun-space-1);
+  --markdown-heading-gap-before: var(--openbitfun-space-5);
+  --markdown-heading-gap-after: var(--openbitfun-space-2);
+  --markdown-code-block-gap: var(--openbitfun-space-3);
+  --markdown-code-block-pad-y: var(--openbitfun-space-3);
+  --markdown-code-block-pad-x: var(--openbitfun-space-4);
+  --markdown-table-cell-pad-y: calc(var(--markdown-paragraph-gap) / 2);
+  --markdown-table-cell-pad-x: var(--openbitfun-space-4);
+  --markdown-blockquote-border: var(--openbitfun-color-border-default);
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--openbitfun-color-content-primary);
+  font-family: var(--openbitfun-type-flow-body-font-family);
+  font-size: var(--openbitfun-type-flow-body-font-size);
+  font-weight: var(--openbitfun-type-flow-body-font-weight);
+  line-height: var(--openbitfun-type-flow-body-line-height);
+  letter-spacing: var(--openbitfun-type-flow-body-letter-spacing);
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: text;
+  user-select: text;
+}
+
+.markdown-renderer > *,
+.thinking-markdown-full > * {
+  margin-block: 0;
+}
+
+.markdown-renderer > *:first-child,
+.thinking-markdown-full > *:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-renderer > *:last-child,
+.thinking-markdown-full > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-renderer > :where(:not(:first-child)),
+.thinking-markdown-full > :where(:not(:first-child)) {
+  margin-top: var(--markdown-block-gap);
+}
+
+.thinking-markdown-full {
+  display: contents;
+}
+
+.markdown-renderer > .thinking-markdown-preview {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  line-height: inherit;
+  overflow-wrap: anywhere;
+}
+
+[data-thinking-viewport=compact] .thinking-markdown-full {
+  display: none;
+}
+
+[data-thinking-viewport=compact] .thinking-markdown-preview {
+  display: block;
+}
+
+.markdown-renderer p {
+  display: block;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-renderer p:where(.markdown-paragraph) + p:where(.markdown-paragraph) {
+  margin-top: var(--markdown-paragraph-gap);
+}
+
+.markdown-renderer h1,
+.markdown-renderer h2,
+.markdown-renderer h3,
+.markdown-renderer h4,
+.markdown-renderer h5,
+.markdown-renderer h6 {
+  margin: var(--markdown-heading-gap-before) 0 var(--markdown-heading-gap-after);
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--openbitfun-type-heading-section-font-size);
+  font-weight: var(--openbitfun-type-heading-section-font-weight);
+  line-height: var(--openbitfun-type-heading-section-line-height);
+  letter-spacing: var(--openbitfun-type-heading-section-letter-spacing);
+}
+
+.markdown-renderer ul,
+.markdown-renderer ol {
+  margin: var(--markdown-block-gap) 0;
+  padding-inline-start: var(--openbitfun-space-6);
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-renderer li {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow-wrap: anywhere;
+}
+
+.markdown-renderer li:where(.markdown-list-item) + li:where(.markdown-list-item) {
+  margin-top: var(--markdown-list-item-gap);
+}
+
+.markdown-renderer li > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-renderer li > :where(:not(:first-child)) {
+  margin-top: var(--markdown-list-nested-gap);
+}
+
+.markdown-renderer ul ul,
+.markdown-renderer ol ol,
+.markdown-renderer ul ol,
+.markdown-renderer ol ul {
+  margin-top: var(--markdown-list-nested-gap);
+  margin-bottom: 0;
+  padding-inline-start: var(--openbitfun-space-5);
+}
+
+.markdown-renderer ul > li::marker,
+.markdown-renderer ol > li::marker {
+  color: var(--openbitfun-color-content-muted);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.markdown-renderer code,
+.markdown-renderer kbd,
+.markdown-renderer samp,
+.markdown-renderer tt {
+  display: inline;
+  font-family: var(--openbitfun-type-flow-code-font-family);
+}
+
+/*
+ * Inline code is a chip, not a hole. A surface token is absolute, so on a
+ * message bubble tinted with `action-quiet-hover` a `surface-tertiary` chip
+ * measured 1.03:1 in light mode and 1.11:1 in dark mode — the same grey as
+ * the bubble, and darker than it in dark mode. Mixing the *inherited* text
+ * colour instead keeps one recipe legible on every surface it lands on: the
+ * plain transcript, the tinted user bubble, and the neutral card. 12% sits
+ * near 1.27:1 (light) / 1.42:1 (dark): clearly a chip, still quiet enough
+ * that a paragraph of identifiers does not turn into a page of highlights.
+ */
+.markdown-renderer .inline-code {
+  --markdown-inline-code-wash: color-mix(in srgb, currentColor 12%, transparent);
+  --markdown-inline-code-edge: color-mix(in srgb, currentColor 18%, transparent);
+  display: inline;
+  padding: 0.1em 0.36em;
+  border: 0;
+  border-radius: var(--openbitfun-radius-xs);
+  background: var(--markdown-inline-code-wash);
+  box-shadow: inset 0 0 0 var(--openbitfun-border-width-default) var(--markdown-inline-code-edge);
+  color: inherit;
+  font-family: var(--openbitfun-type-flow-code-font-family);
+  font-size: inherit;
+  font-weight: var(--openbitfun-type-flow-body-font-weight);
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  vertical-align: baseline;
+  user-select: text !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.markdown-renderer pre {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: var(--markdown-code-block-gap) 0;
+  padding: var(--markdown-code-block-pad-y) var(--markdown-code-block-pad-x);
+  overflow: auto;
+  border: 0;
+  border-radius: var(--openbitfun-radius-lg);
+  background: color-mix(in srgb, var(--openbitfun-color-surface-tertiary) 50%, var(--openbitfun-color-surface-scene));
+  box-shadow: none;
+  color: var(--openbitfun-color-content-secondary);
+  font-family: var(--openbitfun-type-flow-code-font-family);
+  font-size: var(--openbitfun-type-flow-code-font-size);
+  font-weight: var(--openbitfun-type-flow-code-font-weight);
+  line-height: var(--openbitfun-type-flow-code-line-height);
+  letter-spacing: var(--openbitfun-type-flow-code-letter-spacing);
+  overflow-wrap: normal;
+}
+
+.markdown-renderer pre code,
+.markdown-renderer pre > .inline-code {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: pre;
+  word-wrap: normal;
+  user-select: text !important;
+}
+
+.markdown-renderer .code-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: var(--markdown-code-block-gap) 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--openbitfun-radius-lg);
+  background: color-mix(in srgb, var(--openbitfun-color-surface-tertiary) 50%, var(--openbitfun-color-surface-scene));
+  box-shadow: none;
+}
+
+.markdown-renderer .code-block-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--openbitfun-control-flow-chat-control-gap);
+  min-height: var(--openbitfun-control-height-sm);
+  padding: calc(var(--openbitfun-space-1) / 2) var(--openbitfun-space-2) calc(var(--openbitfun-space-1) / 2) var(--markdown-code-block-pad-x);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-bottom: 0;
+  background: var(--openbitfun-color-surface-tertiary);
+}
+
+.markdown-renderer .code-block-lang {
+  color: var(--openbitfun-color-content-secondary);
+  font-family: inherit;
+  font-size: var(--openbitfun-type-flow-meta-font-size);
+  font-weight: var(--openbitfun-type-flow-meta-font-weight);
+  letter-spacing: var(--openbitfun-type-flow-meta-letter-spacing);
+  line-height: var(--openbitfun-type-flow-meta-line-height);
+  user-select: none;
+}
+
+.markdown-renderer .code-block-body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  overflow-x: auto;
+  background: transparent;
+  font-family: var(--openbitfun-type-flow-code-font-family);
+  font-size: var(--openbitfun-type-flow-code-font-size);
+  font-weight: var(--openbitfun-type-flow-code-font-weight);
+  line-height: var(--openbitfun-type-flow-code-line-height);
+  letter-spacing: var(--openbitfun-type-flow-code-letter-spacing);
+}
+
+.markdown-renderer .code-block-wrapper pre {
+  position: relative;
+  margin: 0;
+  padding: var(--markdown-code-block-pad-y) var(--markdown-code-block-pad-x);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.markdown-renderer .copy-button.copy-success {
+  color: var(--openbitfun-color-status-success-content);
+}
+
+.markdown-renderer pre:has(.code-block-wrapper),
+.markdown-renderer pre:has(.mermaid-block) {
+  margin: var(--markdown-code-block-gap) 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  position: static !important;
+}
+
+.markdown-renderer pre:has(.code-block-wrapper):hover,
+.markdown-renderer pre:has(.mermaid-block):hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.markdown-renderer blockquote,
+.markdown-renderer .custom-blockquote {
+  margin: var(--markdown-block-gap) 0;
+  padding: 0;
+  padding-inline-start: var(--openbitfun-space-3);
+  border-inline-start: var(--openbitfun-border-width-default) solid var(--markdown-blockquote-border);
+  border-radius: 0;
+  background: transparent;
+  color: var(--openbitfun-color-content-secondary);
+  font-style: normal;
+}
+
+.markdown-renderer blockquote > :first-child,
+.markdown-renderer .custom-blockquote > :first-child {
+  margin-top: 0;
+}
+
+.markdown-renderer blockquote > :last-child,
+.markdown-renderer .custom-blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-renderer details,
+.markdown-renderer [data-type=details] {
+  margin: var(--markdown-block-gap) 0;
+  padding: var(--openbitfun-space-3);
+  border: var(--openbitfun-border-width-default) solid var(--openbitfun-color-border-subtle);
+  border-radius: var(--openbitfun-control-flow-chat-card-radius);
+  background: var(--openbitfun-color-surface-panel);
+}
+
+.markdown-renderer summary {
+  color: var(--openbitfun-color-content-primary);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--openbitfun-type-heading-card-font-size);
+  font-weight: var(--openbitfun-type-heading-card-font-weight);
+  line-height: var(--openbitfun-type-heading-card-line-height);
+  letter-spacing: var(--openbitfun-type-heading-card-letter-spacing);
+}
+
+.markdown-renderer details[open] > summary {
+  margin-bottom: var(--markdown-block-gap);
+}
+
+.markdown-renderer [data-type=details] [data-type=detailsContent] {
+  padding-top: var(--markdown-block-gap);
+}
+
+.markdown-renderer hr {
+  height: var(--openbitfun-border-width-default);
+  margin: var(--openbitfun-space-5) 0;
+  padding: 0;
+  border: 0;
+  background: var(--openbitfun-color-border-default);
+}
+
+/* inline-block so multiple badges / linked images can sit on one row (shields, etc.) */
+.markdown-renderer img,
+.markdown-renderer .markdown-image {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin: var(--openbitfun-space-1) 0;
+  vertical-align: middle;
+  border-radius: var(--openbitfun-control-flow-chat-card-radius);
+}
+
+/* README-style centered badge rows: each badge is often its own <p> inside a div */
+.markdown-renderer div[align=center] {
+  text-align: center;
+}
+
+.markdown-renderer div[align=center] > p {
+  display: inline-block;
+  margin: var(--openbitfun-space-1);
+  vertical-align: middle;
+}
+
+.markdown-renderer div[align=center] > p:where(.markdown-paragraph) + p:where(.markdown-paragraph) {
+  margin-top: var(--openbitfun-space-1);
+}
+
+.markdown-renderer div[align=center] > p > a:has(> img) + br,
+.markdown-renderer div[align=center] > p > img + br {
+  display: none;
+}
+
+.markdown-renderer .markdown-image--loading {
+  opacity: 0.75;
+}
+
+/* Only sources with real bytes reach this state, so the affordance is honest. */
+.markdown-renderer .markdown-image--previewable {
+  cursor: zoom-in;
+}
+
+/* Conversation previews stay compact; the lightbox retains the original bytes. */
+.markdown-renderer--thumbnails img {
+  max-width: min(100%, 18rem);
+  max-height: 14rem;
+  object-fit: contain;
+}
+
+.markdown-renderer .markdown-image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: var(--openbitfun-space-2);
+  width: min(100%, 32rem);
+  margin-block: var(--openbitfun-space-2);
+}
+
+.markdown-renderer .markdown-image-gallery--single {
+  width: min(100%, 18rem);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.markdown-renderer .markdown-image-gallery--paired {
+  width: min(100%, 26rem);
+}
+
+.markdown-renderer .markdown-image-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: var(--openbitfun-control-flow-chat-card-radius);
+  background: var(--openbitfun-color-surface-subtle);
+}
+
+.markdown-renderer .markdown-image-tile > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+
+.markdown-renderer .markdown-image-thumbnail:focus-visible {
+  outline: var(--openbitfun-border-width-default) solid var(--openbitfun-color-border-default);
+  outline-offset: calc(-1 * var(--openbitfun-space-1));
+}
+
+/* A linked image belongs to its link, not to the preview affordance. */
+.markdown-renderer :is(a, button):has(> img) > img.markdown-image--previewable {
+  cursor: pointer;
+}
+
+.markdown-renderer .markdown-image-fallback {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--openbitfun-space-2);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: var(--openbitfun-space-1) 0;
+  padding: var(--openbitfun-space-1) var(--openbitfun-space-2);
+  border: var(--openbitfun-border-width-default) dashed var(--openbitfun-color-border-default);
+  border-radius: var(--openbitfun-control-flow-chat-card-radius);
+  color: var(--openbitfun-color-content-secondary);
+  font-family: inherit;
+  font-size: var(--openbitfun-type-flow-support-font-size);
+  font-weight: var(--openbitfun-type-flow-support-font-weight);
+  line-height: var(--openbitfun-type-flow-support-line-height);
+  letter-spacing: var(--openbitfun-type-flow-support-letter-spacing);
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+
+.markdown-renderer .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--openbitfun-space-1) 0;
+}
+
+.markdown-renderer .table-wrapper {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: var(--markdown-block-gap) 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow-wrap: normal;
+  border: 0;
+  border-radius: var(--openbitfun-radius-lg);
+  background: color-mix(in srgb, var(--openbitfun-color-surface-tertiary) 50%, var(--openbitfun-color-surface-scene));
+  box-shadow: none;
+}
+
+.markdown-renderer .table-wrapper table {
+  width: 100%;
+  table-layout: auto;
+  margin: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--openbitfun-type-flow-body-font-size);
+  font-weight: var(--openbitfun-type-flow-body-font-weight);
+  line-height: var(--openbitfun-type-flow-body-line-height);
+  letter-spacing: var(--openbitfun-type-flow-body-letter-spacing);
+}
+
+.markdown-renderer .table-wrapper th,
+.markdown-renderer .table-wrapper td {
+  min-width: calc(8ch + 2 * var(--markdown-table-cell-pad-x));
+  padding: var(--markdown-table-cell-pad-y) var(--markdown-table-cell-pad-x);
+  border: 0;
+  background: transparent;
+  color: var(--openbitfun-color-content-primary);
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown-renderer .table-wrapper .inline-code {
+  overflow-wrap: normal;
+}
+
+.markdown-header-cell::selection,
+.markdown-data-cell::selection {
+  background-color: transparent;
+}
+
+.markdown-table-cell-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.markdown-table-cell-body {
+  min-width: 0;
+}
+
+.markdown-renderer .table-wrapper th {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  color: var(--openbitfun-color-content-secondary);
+  font-family: inherit;
+  font-size: var(--openbitfun-type-label-sm-font-size);
+  font-weight: var(--openbitfun-type-label-sm-font-weight);
+  line-height: var(--openbitfun-type-label-sm-line-height);
+  letter-spacing: var(--openbitfun-type-label-sm-letter-spacing);
+}
+
+.markdown-renderer .table-wrapper thead,
+.markdown-renderer .table-wrapper table[data-type=markdown-table] > tbody > tr:first-child {
+  background: var(--openbitfun-color-surface-tertiary);
+  border-bottom: 0;
+}
+
+@media (hover: hover) {
+  .markdown-renderer .table-wrapper tbody > tr:hover {
+    background: var(--openbitfun-color-action-quiet-hover);
+  }
+  .markdown-renderer .code-block-body[data-code-line-hover]::before {
+    content: "";
+    position: absolute;
+    top: var(--markdown-code-hover-top);
+    inset-inline: 0;
+    height: var(--markdown-code-hover-height);
+    background: var(--openbitfun-color-action-quiet-hover);
+    pointer-events: none;
+  }
+}
+.markdown-renderer a,
+.markdown-renderer .file-link,
+.markdown-renderer .canvas-link,
+.markdown-renderer .visualization-link,
+.markdown-renderer .tab-link {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--openbitfun-color-link-default);
+  cursor: pointer;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.markdown-renderer a:hover,
+.markdown-renderer .file-link:hover,
+.markdown-renderer .canvas-link:hover,
+.markdown-renderer .visualization-link:hover,
+.markdown-renderer .tab-link:hover {
+  color: var(--openbitfun-color-link-hover);
+}
+
+.markdown-renderer a:focus-visible,
+.markdown-renderer .file-link:focus-visible,
+.markdown-renderer .canvas-link:focus-visible,
+.markdown-renderer .visualization-link:focus-visible,
+.markdown-renderer .tab-link:focus-visible {
+  outline: var(--openbitfun-focus-width) solid var(--openbitfun-color-focus-ring);
+  outline-offset: var(--openbitfun-focus-offset);
+}
+
+.markdown-link-path-tooltip {
+  display: inline-block;
+  max-width: min(520px, 80vw);
+  overflow-wrap: anywhere;
+  text-align: left;
+  font-family: var(--openbitfun-type-flow-body-font-family);
+  font-size: var(--openbitfun-type-code-sm-font-size);
+  font-weight: var(--openbitfun-type-code-sm-font-weight);
+  line-height: var(--openbitfun-type-code-sm-line-height);
+  letter-spacing: var(--openbitfun-type-code-sm-letter-spacing);
+}
+
+.markdown-renderer strong {
+  color: inherit;
+  font-weight: var(--openbitfun-type-label-selected-font-weight);
+}
+
+.markdown-renderer em {
+  color: inherit;
+  font-style: italic;
+}
+
+.markdown-renderer del {
+  text-decoration: line-through;
+}
+
+.markdown-renderer input[type=checkbox] {
+  width: 1em;
+  height: 1em;
+  margin: 0 0.35em 0 0;
+  vertical-align: -0.12em;
+}
+
+.markdown-renderer * {
+  will-change: auto;
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-0) {
+  color: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-1) {
+  color: color-mix(in srgb, currentColor 22.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-2) {
+  color: color-mix(in srgb, currentColor 25%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-3) {
+  color: color-mix(in srgb, currentColor 27.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-4) {
+  color: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-5) {
+  color: color-mix(in srgb, currentColor 32.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-6) {
+  color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-7) {
+  color: color-mix(in srgb, currentColor 37.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-8) {
+  color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-9) {
+  color: color-mix(in srgb, currentColor 42.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-10) {
+  color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-11) {
+  color: color-mix(in srgb, currentColor 47.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-12) {
+  color: color-mix(in srgb, currentColor 50%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-13) {
+  color: color-mix(in srgb, currentColor 52.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-14) {
+  color: color-mix(in srgb, currentColor 55%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-15) {
+  color: color-mix(in srgb, currentColor 57.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-16) {
+  color: color-mix(in srgb, currentColor 60%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-17) {
+  color: color-mix(in srgb, currentColor 62.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-18) {
+  color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-19) {
+  color: color-mix(in srgb, currentColor 67.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-20) {
+  color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-21) {
+  color: color-mix(in srgb, currentColor 72.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-22) {
+  color: color-mix(in srgb, currentColor 75%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-23) {
+  color: color-mix(in srgb, currentColor 77.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-24) {
+  color: color-mix(in srgb, currentColor 80%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-25) {
+  color: color-mix(in srgb, currentColor 82.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-26) {
+  color: color-mix(in srgb, currentColor 85%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-27) {
+  color: color-mix(in srgb, currentColor 87.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-28) {
+  color: color-mix(in srgb, currentColor 90%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-29) {
+  color: color-mix(in srgb, currentColor 92.5%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-30) {
+  color: color-mix(in srgb, currentColor 95%, transparent);
+}
+
+[data-stream-reveal-active]::highlight(openbitfun-stream-reveal-31) {
+  color: color-mix(in srgb, currentColor 97.5%, transparent);
+}

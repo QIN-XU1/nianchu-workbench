@@ -1,0 +1,795 @@
+{
+  "what": "定向锚点验证：每个能力在参照系统源码里是否真的存在",
+  "rule": "verified=源码里找到并已补进矩阵｜not-found=去那儿找了但没有（需复核该格状态）｜no-local-source=该参照系统无本地源码",
+  "at": "2026-11-14T17:26:49.055Z",
+  "anchors": 100,
+  "tally": {
+    "verified": 96,
+    "not-found": 4
+  },
+  "results": [
+    {
+      "key": "A1.openclaw",
+      "pattern": "apply_patch",
+      "why": "openclaw 的编辑能力走 agent runtime 的补丁工具",
+      "verdict": "verified",
+      "cite": "openclaw-main/extensions/agentsapi/agentsapi-harness.ts:35",
+      "state": "部分"
+    },
+    {
+      "key": "A1.hermes",
+      "pattern": "write_file",
+      "why": "hermes 67 工具里有 write_file/read_file",
+      "verdict": "verified",
+      "cite": "acp_adapter/events.py:153",
+      "state": "有"
+    },
+    {
+      "key": "A1.dsh",
+      "why": "DSH 内建工具包名",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-tools/lib/index.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A1.ecc",
+      "pattern": "apply_patch",
+      "why": "ECC 提供 skill 指导，需确认是否有补丁语义",
+      "verdict": "verified",
+      "cite": "ecc2/src/worktree/mod.rs:406",
+      "state": "部分"
+    },
+    {
+      "key": "A2.openclaw",
+      "pattern": "node-host",
+      "why": "openclaw 的 sidecar 执行宿主",
+      "verdict": "verified",
+      "cite": "openclaw-main/node-host-launcher.mjs:22",
+      "state": "有"
+    },
+    {
+      "key": "A2.hermes",
+      "pattern": "docker",
+      "why": "hermes 的 6 种执行后端之一",
+      "verdict": "verified",
+      "cite": "batch_runner.py:181",
+      "state": "有"
+    },
+    {
+      "key": "A2.dsh",
+      "why": "DSH 沙箱包名",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-bash-sandbox/lib/index.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A2.ecc",
+      "pattern": "hooks",
+      "why": "ECC 用 hooks 执行，需确认无沙箱",
+      "verdict": "verified",
+      "cite": "docker/gateguard-effectiveness/arms.js:18",
+      "state": "部分"
+    },
+    {
+      "key": "A3.openclaw",
+      "pattern": "web-search",
+      "why": "openclaw src/web-search",
+      "verdict": "verified",
+      "cite": "openclaw-main/config/knip.config.ts:853",
+      "state": "有"
+    },
+    {
+      "key": "A3.hermes",
+      "pattern": "web_search",
+      "why": "hermes tools 内建搜索",
+      "verdict": "verified",
+      "cite": "acp_adapter/tools.py:27",
+      "state": "有"
+    },
+    {
+      "key": "A3.dsh",
+      "why": "DSH web 工具包名",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-web-fetch-http/lib/index.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A6.openclaw",
+      "pattern": "dreaming",
+      "why": "openclaw 五层记忆 + dreaming 三阶段",
+      "verdict": "verified",
+      "cite": "openclaw-main/config/knip.config.ts:397",
+      "state": "有"
+    },
+    {
+      "key": "A6.hermes",
+      "pattern": "MEMORY.md",
+      "why": "hermes 记忆文件",
+      "verdict": "verified",
+      "cite": "agent/agent_init.py:1156",
+      "state": "有"
+    },
+    {
+      "key": "A6.dsh",
+      "why": "验证 DSH 是否真的无 memory 包（grep 应少或无）",
+      "verdict": "not-found",
+      "state": "无"
+    },
+    {
+      "key": "A7.openclaw",
+      "pattern": "provenance",
+      "why": "openclaw 记忆溯源闭环",
+      "verdict": "verified",
+      "cite": "openclaw-main/cli-invocation.mjs:54",
+      "state": "有"
+    },
+    {
+      "key": "A8.openclaw",
+      "pattern": "subagent",
+      "why": "openclaw 子代理",
+      "verdict": "verified",
+      "cite": "openclaw-main/config/knip.config.ts:770",
+      "state": "有"
+    },
+    {
+      "key": "A8.hermes",
+      "pattern": "delegate_task",
+      "why": "hermes 单向扇出",
+      "verdict": "verified",
+      "cite": "agent/agent_runtime_helpers.py:93",
+      "state": "部分"
+    },
+    {
+      "key": "A8.dsh",
+      "why": "DSH 子代理包",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-subagent/lib/index.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A11.openclaw",
+      "pattern": "cron",
+      "why": "openclaw src/cron",
+      "verdict": "verified",
+      "cite": "openclaw-main/apps/ios/UITests/SystemsNavigationUITests.swift:8",
+      "state": "有"
+    },
+    {
+      "key": "A11.hermes",
+      "pattern": "scheduler_provider",
+      "why": "hermes 调度器",
+      "verdict": "verified",
+      "cite": "hermes_cli/cron.py:40",
+      "state": "有"
+    },
+    {
+      "key": "A11.dsh",
+      "why": "DSH 调度包",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-schedule/lib/index.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A12.openclaw",
+      "pattern": "extensions",
+      "why": "openclaw ~180 插件",
+      "verdict": "verified",
+      "cite": "openclaw-main/apps/android/app/src/testShared/java/ai/openclaw/app/gateway/GatewayTlsTestFixtures.kt:99",
+      "state": "有"
+    },
+    {
+      "key": "A12.hermes",
+      "pattern": "skills",
+      "why": "hermes 技能目录",
+      "verdict": "verified",
+      "cite": "agent/agent_init.py:502",
+      "state": "有"
+    },
+    {
+      "key": "A12.ecc",
+      "pattern": "skills",
+      "why": "ECC 314 skills",
+      "verdict": "verified",
+      "cite": "ecc_dashboard.py:108",
+      "state": "有"
+    },
+    {
+      "key": "A12.dsh",
+      "why": "DSH 插件管理",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-client-ui-plugin-manager/lib/client.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A13.openclaw",
+      "pattern": "mcp",
+      "why": "openclaw src/mcp",
+      "verdict": "verified",
+      "cite": "openclaw-main/config/knip.config.ts:257",
+      "state": "有"
+    },
+    {
+      "key": "A13.hermes",
+      "pattern": "mcps",
+      "why": "hermes optional-mcps",
+      "verdict": "verified",
+      "cite": "hermes_constants.py:500",
+      "state": "有"
+    },
+    {
+      "key": "A13.dsh",
+      "why": "DSH MCP 包",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-mcp-client/lib/index.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A13.ecc",
+      "pattern": "mcp-config",
+      "why": "ECC mcp-configs/",
+      "verdict": "verified",
+      "cite": "docker/gateguard-effectiveness/user-sim.js:73",
+      "state": "有"
+    },
+    {
+      "key": "A15.openclaw",
+      "pattern": "trust",
+      "why": "openclaw trust-model",
+      "verdict": "verified",
+      "cite": "openclaw-main/apps/linux/ui/quickchat.js:306",
+      "state": "有"
+    },
+    {
+      "key": "A15.hermes",
+      "pattern": "approval",
+      "why": "hermes 审批闸",
+      "verdict": "verified",
+      "cite": "acp_adapter/edit_approval.py:1",
+      "state": "部分"
+    },
+    {
+      "key": "A15.dsh",
+      "why": "DSH 工具 waterfall 审批",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-client-ui-approval/lib/client.js:1",
+      "state": "有"
+    },
+    {
+      "key": "A16.openclaw",
+      "pattern": "audit",
+      "why": "openclaw security/audit",
+      "verdict": "verified",
+      "cite": "openclaw-main/tsdown.config.ts:618",
+      "state": "有"
+    },
+    {
+      "key": "A16.hermes",
+      "pattern": "evidence",
+      "why": "hermes evidence ledger",
+      "verdict": "verified",
+      "cite": "gateway/config_env.py:238",
+      "state": "部分"
+    },
+    {
+      "key": "A16.dsh",
+      "why": "DSH 日志即真相",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-client-ui-trajectory/lib/client.js:1",
+      "state": "有"
+    },
+    {
+      "key": "B1.hermes",
+      "pattern": "plugin_api",
+      "why": "hermes 插件白名单",
+      "verdict": "verified",
+      "cite": "agent/memory_manager.py:24",
+      "state": "有"
+    },
+    {
+      "key": "B1.openclaw",
+      "pattern": "ChannelPlugin",
+      "why": "openclaw 贡献点",
+      "verdict": "verified",
+      "cite": "openclaw-main/extensions/zalouser/src/shared.ts:8",
+      "state": "有"
+    },
+    {
+      "key": "B1.dsh",
+      "why": "DSH 客户端 UI 包分解",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-client-ui-layout/lib/client.js:1",
+      "state": "有"
+    },
+    {
+      "key": "B2.openclaw",
+      "pattern": "workspace",
+      "why": "openclaw 工作区隔离",
+      "verdict": "verified",
+      "cite": "openclaw-main/cli-root-options.mjs:182",
+      "state": "部分"
+    },
+    {
+      "key": "B3.hermes",
+      "pattern": "acp",
+      "why": "hermes ACP 编辑器集成",
+      "verdict": "verified",
+      "cite": "agent/acp_client.py:35",
+      "state": "有"
+    },
+    {
+      "key": "B3.dsh",
+      "why": "DSH ACP",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-acp/lib/index.js:1",
+      "state": "部分"
+    },
+    {
+      "key": "B4.hermes",
+      "pattern": "PRIVATE",
+      "why": "hermes 记忆哨兵字节红线",
+      "verdict": "verified",
+      "cite": "evals/desktop_bug_campaign/async-report-producer.py:29",
+      "state": "部分"
+    },
+    {
+      "key": "C1.openclaw",
+      "pattern": "scheduler",
+      "why": "openclaw 调度",
+      "verdict": "verified",
+      "cite": "openclaw-main/tsdown.config.ts:642",
+      "state": "有"
+    },
+    {
+      "key": "C1.hermes",
+      "pattern": "cron",
+      "why": "hermes 定时",
+      "verdict": "verified",
+      "cite": "hermes_constants.py:408",
+      "state": "有"
+    },
+    {
+      "key": "C2.openclaw",
+      "pattern": "memory",
+      "why": "openclaw 记忆",
+      "verdict": "verified",
+      "cite": "openclaw-main/config/knip.config.ts:184",
+      "state": "有"
+    },
+    {
+      "key": "C2.hermes",
+      "pattern": "MEMORY",
+      "why": "hermes 记忆",
+      "verdict": "verified",
+      "cite": "agent/agent_init.py:1156",
+      "state": "部分"
+    },
+    {
+      "key": "C4.openclaw",
+      "pattern": "verif",
+      "why": "openclaw 验证相关",
+      "verdict": "verified",
+      "cite": "openclaw-main/cli-invocation.mjs:91",
+      "state": "有"
+    },
+    {
+      "key": "C4.hermes",
+      "pattern": "verify",
+      "why": "hermes 验证相关",
+      "verdict": "verified",
+      "cite": "acp_adapter/entry.py:191",
+      "state": "有"
+    },
+    {
+      "key": "D1.dsh",
+      "why": "DSH 前端包",
+      "verdict": "verified",
+      "cite": "dsh/node_modules/@deepseek-ai/dsh-web-frontend/src/main.ts:1",
+      "state": "有"
+    },
+    {
+      "key": "D1.openclaw",
+      "pattern": "web-ui",
+      "why": "openclaw web-ui",
+      "verdict": "verified",
+      "cite": "openclaw-main/config/knip.config.ts:467",
+      "state": "部分"
+    },
+    {
+      "key": "D1.hermes",
+      "pattern": "starmap",
+      "why": "hermes 星图界面",
+      "verdict": "verified",
+      "cite": "agent/learning_graph_render.py:1",
+      "state": "有"
+    },
+    {
+      "key": "A1.luanyujia",
+      "pattern": "sessions.mjs",
+      "why": "它的会话壳实现在 10-源码/会话与切换/",
+      "verdict": "verified",
+      "cite": "10-源码/会话与切换/sessions.mjs:2",
+      "state": "无"
+    },
+    {
+      "key": "A2.luanyujia",
+      "pattern": "spawn",
+      "why": "拉起引擎进程（11-最小可运行壳 + 启动链路）",
+      "verdict": "verified",
+      "cite": "10-源码/启动链路/2-拉起引擎与等就绪.js:64",
+      "state": "部分"
+    },
+    {
+      "key": "A3.luanyujia",
+      "pattern": "webai",
+      "why": "免费AI桥 webai.mjs —— 靠桥接网页 AI 联网",
+      "verdict": "verified",
+      "cite": "10-源码/免费AI桥/webai.mjs:1",
+      "state": "部分"
+    },
+    {
+      "key": "A4.luanyujia",
+      "pattern": "contenteditable",
+      "why": "面板输入区（webview 上传/粘贴）",
+      "verdict": "verified",
+      "cite": "模板/MCP-站点薄壳.mjs:70",
+      "state": "部分"
+    },
+    {
+      "key": "A5.luanyujia",
+      "pattern": "压缩",
+      "why": "查是否真有上下文压缩实现",
+      "verdict": "verified",
+      "cite": "10-源码/面板实现/面板-harness-AI会话.js:2393",
+      "state": "无"
+    },
+    {
+      "key": "A6.luanyujia",
+      "pattern": "记忆",
+      "why": "00-核心机制/二-记忆机制 + 机制小工具",
+      "verdict": "verified",
+      "cite": "10-源码/面板实现/面板-harness-AI会话.js:29",
+      "state": "有"
+    },
+    {
+      "key": "A7.luanyujia",
+      "pattern": "哨兵",
+      "why": "机制小工具/临时哨兵.mjs（字节红线校验）",
+      "verdict": "verified",
+      "cite": "10-源码/机制小工具/临时哨兵.mjs:2",
+      "state": "部分"
+    },
+    {
+      "key": "A8.luanyujia",
+      "pattern": "dispatch",
+      "why": "04 派单机制 / sessions.mjs",
+      "verdict": "verified",
+      "cite": "10-源码/面板实现/面板-harness-AI会话.js:401",
+      "state": "部分"
+    },
+    {
+      "key": "A9.luanyujia",
+      "pattern": "派单",
+      "why": "00-核心机制/四-派单机制.md + 源码里的回执",
+      "verdict": "verified",
+      "cite": "10-源码/会话与切换/sessions.mjs:396",
+      "state": "部分"
+    },
+    {
+      "key": "A11.luanyujia",
+      "pattern": "cron",
+      "why": "查是否有定时器（矩阵记「无」，需确认）",
+      "verdict": "not-found",
+      "state": "无"
+    },
+    {
+      "key": "A12.luanyujia",
+      "pattern": "面板",
+      "why": "面板实现/ 三个大文件 = 它的技能/面板体系",
+      "verdict": "verified",
+      "cite": "07-顶栏与菜单栏/2-标签交互（热更新侧）.js:236",
+      "state": "部分"
+    },
+    {
+      "key": "A13.luanyujia",
+      "pattern": "mcp",
+      "why": "03-MCP接免费AI",
+      "verdict": "verified",
+      "cite": "10-源码/面板实现/面板-harness-AI会话.js:2886",
+      "state": "有"
+    },
+    {
+      "key": "A14.luanyujia",
+      "pattern": "webai",
+      "why": "免费AI桥 = 多供应商（桥接多个网页 AI）",
+      "verdict": "verified",
+      "cite": "10-源码/免费AI桥/webai.mjs:1",
+      "state": "有"
+    },
+    {
+      "key": "A15.luanyujia",
+      "pattern": "修改权",
+      "why": "05-协作与规矩：修改权五档",
+      "verdict": "not-found",
+      "state": "部分"
+    },
+    {
+      "key": "A16.luanyujia",
+      "pattern": "台账",
+      "why": "派单台账（00-核心机制/四-派单机制）",
+      "verdict": "verified",
+      "cite": "12-源码照搬/外壳/renderer/renderers.js:12287",
+      "state": "部分"
+    },
+    {
+      "key": "B1.luanyujia",
+      "pattern": "面板",
+      "why": "面板式扩展（面板实现/）",
+      "verdict": "verified",
+      "cite": "07-顶栏与菜单栏/2-标签交互（热更新侧）.js:236",
+      "state": "无"
+    },
+    {
+      "key": "B2.luanyujia",
+      "pattern": "场景",
+      "why": "01-场景模式：场景隔离",
+      "verdict": "verified",
+      "cite": "07-顶栏与菜单栏/2-标签交互（热更新侧）.js:3",
+      "state": "无"
+    },
+    {
+      "key": "B3.luanyujia",
+      "pattern": "sessions.mjs",
+      "why": "会话壳可换引擎（会话与切换/）",
+      "verdict": "verified",
+      "cite": "10-源码/会话与切换/换会话.mjs:9",
+      "state": "无"
+    },
+    {
+      "key": "B4.luanyujia",
+      "pattern": "负载闸",
+      "why": "机制小工具/负载闸.mjs（体量/负载控制）",
+      "verdict": "verified",
+      "cite": "10-源码/机制小工具/负载闸.mjs:2",
+      "state": "无"
+    },
+    {
+      "key": "C1.luanyujia",
+      "pattern": "scheduler",
+      "why": "查调度（矩阵记「无」）",
+      "verdict": "not-found",
+      "state": "部分"
+    },
+    {
+      "key": "C2.luanyujia",
+      "pattern": "记忆",
+      "why": "二-记忆机制",
+      "verdict": "verified",
+      "cite": "10-源码/面板实现/面板-harness-AI会话.js:29",
+      "state": "部分"
+    },
+    {
+      "key": "C3.luanyujia",
+      "pattern": "哨兵",
+      "why": "哨兵 = 自检机制",
+      "verdict": "verified",
+      "cite": "10-源码/机制小工具/临时哨兵.mjs:2",
+      "state": "部分"
+    },
+    {
+      "key": "C4.luanyujia",
+      "pattern": "验收",
+      "why": "查是否有验收机制",
+      "verdict": "verified",
+      "cite": "10-源码/会话与切换/sessions.mjs:298",
+      "state": "无"
+    },
+    {
+      "key": "D1.luanyujia",
+      "pattern": "顶栏",
+      "why": "07-顶栏与菜单栏",
+      "verdict": "verified",
+      "cite": "07-顶栏与菜单栏/1-建标签（外壳侧）.js:2",
+      "state": "有"
+    },
+    {
+      "key": "D2.luanyujia",
+      "pattern": "面板",
+      "why": "面板布局密度",
+      "verdict": "verified",
+      "cite": "07-顶栏与菜单栏/2-标签交互（热更新侧）.js:236",
+      "state": "有"
+    },
+    {
+      "key": "D3.luanyujia",
+      "pattern": "负载闸",
+      "why": "负载闸显示状态",
+      "verdict": "verified",
+      "cite": "10-源码/机制小工具/负载闸.mjs:2",
+      "state": "部分"
+    },
+    {
+      "key": "A3.ecc",
+      "pattern": "WebSearch",
+      "why": "查是否有联网工具定义",
+      "verdict": "verified",
+      "cite": "tests/scripts/qwen-adapt-agents.test.js:85",
+      "state": "无"
+    },
+    {
+      "key": "A4.ecc",
+      "pattern": "image",
+      "why": "查是否有图像输入定义",
+      "verdict": "verified",
+      "cite": "docker/context-profiles/run-podman.js:13",
+      "state": "无"
+    },
+    {
+      "key": "A5.ecc",
+      "pattern": "compact",
+      "why": "查是否有上下文压缩",
+      "verdict": "verified",
+      "cite": "ecc2/src/main.rs:926",
+      "state": "无"
+    },
+    {
+      "key": "A6.ecc",
+      "pattern": "memory",
+      "why": "skills/ 里的 memory skill",
+      "verdict": "verified",
+      "cite": "docker/context-profiles/run-sandbox.js:172",
+      "state": "部分"
+    },
+    {
+      "key": "A7.ecc",
+      "pattern": "memory",
+      "why": "记忆治理：查 provenance/TTL",
+      "verdict": "verified",
+      "cite": "examples/unified-memory/evidence.test.cjs:109",
+      "state": "无"
+    },
+    {
+      "key": "A8.ecc",
+      "pattern": "agents",
+      "why": "agents/ 目录 = 71 个 agent 定义",
+      "verdict": "verified",
+      "cite": "ecc_dashboard.py:44",
+      "state": "部分"
+    },
+    {
+      "key": "A9.ecc",
+      "pattern": "delegate",
+      "why": "查是否有协作协议",
+      "verdict": "verified",
+      "cite": "ecc2/src/tui/dashboard.rs:129",
+      "state": "无"
+    },
+    {
+      "key": "A10.ecc",
+      "pattern": "slack",
+      "why": "查是否有 IM 通道",
+      "verdict": "verified",
+      "cite": "tests/lib/eval-harness/envelope.test.js:83",
+      "state": "无"
+    },
+    {
+      "key": "A11.ecc",
+      "pattern": "cron",
+      "why": "查是否有定时任务",
+      "verdict": "verified",
+      "cite": "ecc2/src/session/store.rs:378",
+      "state": "无"
+    },
+    {
+      "key": "A14.ecc",
+      "pattern": "model",
+      "why": "多端适配的模型配置",
+      "verdict": "verified",
+      "cite": "ecc2/src/main.rs:10959",
+      "state": "有"
+    },
+    {
+      "key": "A15.ecc",
+      "pattern": "hooks",
+      "why": "hooks 可拦截（Claude 27 个 / 其他端 1 个）",
+      "verdict": "verified",
+      "cite": "hooks/hermes/config-protection.py:3",
+      "state": "部分"
+    },
+    {
+      "key": "A16.ecc",
+      "pattern": "audit",
+      "why": "hooks 审计",
+      "verdict": "verified",
+      "cite": "docker/plugin-setup/prepare-packed-cli.js:110",
+      "state": "部分"
+    },
+    {
+      "key": "B1.ecc",
+      "pattern": "plugin",
+      "why": ".claude-plugin / .codex-plugin",
+      "verdict": "verified",
+      "cite": "docker/plugin-setup/interactive-plan.js:7",
+      "state": "部分"
+    },
+    {
+      "key": "B2.ecc",
+      "pattern": "worktree",
+      "why": "ecc2/src/worktree = 工作区隔离",
+      "verdict": "verified",
+      "cite": "ecc2/src/main.rs:8",
+      "state": "无"
+    },
+    {
+      "key": "B3.ecc",
+      "pattern": "cursor",
+      "why": ".cursor/.codex/.gemini = 跨工具适配",
+      "verdict": "verified",
+      "cite": "tests/commands/issue-review.test.js:94",
+      "state": "部分"
+    },
+    {
+      "key": "B4.ecc",
+      "pattern": "size",
+      "why": "查是否有体量控制",
+      "verdict": "verified",
+      "cite": "ecc_dashboard.py:304",
+      "state": "部分"
+    },
+    {
+      "key": "C1.ecc",
+      "pattern": "schedule",
+      "why": "查调度",
+      "verdict": "verified",
+      "cite": "ecc2/src/session/store.rs:376",
+      "state": "无"
+    },
+    {
+      "key": "C2.ecc",
+      "pattern": "memory",
+      "why": "记忆",
+      "verdict": "verified",
+      "cite": "examples/unified-memory/evidence.test.cjs:109",
+      "state": "无"
+    },
+    {
+      "key": "C3.ecc",
+      "pattern": "verify",
+      "why": "查自检机制",
+      "verdict": "verified",
+      "cite": "docker/context-profiles/sandbox-smoke.js:65",
+      "state": "部分"
+    },
+    {
+      "key": "C4.ecc",
+      "pattern": "test",
+      "why": "查验收机制",
+      "verdict": "verified",
+      "cite": "commitlint.config.js:6",
+      "state": "无"
+    },
+    {
+      "key": "D1.ecc",
+      "pattern": "dashboard",
+      "why": "ecc_dashboard.py",
+      "verdict": "verified",
+      "cite": "ecc_dashboard.py:15",
+      "state": "不适用"
+    },
+    {
+      "key": "D2.ecc",
+      "pattern": "dashboard",
+      "why": "面板布局",
+      "verdict": "verified",
+      "cite": "ecc_dashboard.py:15",
+      "state": "不适用"
+    },
+    {
+      "key": "D3.ecc",
+      "pattern": "status",
+      "why": "查状态展示",
+      "verdict": "verified",
+      "cite": "ecc_dashboard.py:385",
+      "state": "不适用"
+    }
+  ]
+}

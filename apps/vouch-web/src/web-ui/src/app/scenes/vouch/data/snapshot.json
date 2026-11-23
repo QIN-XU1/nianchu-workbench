@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-14T14:29:10.217Z",
+  "generator": "tools/gen-snapshot.mjs",
+  "source": {
+    "kind": "local-snapshot",
+    "label": "本地快照",
+    "detail": "由我们自己的验收器与仓库文件生成，不是编造的演示数据"
+  },
+  "verify": {
+    "suites": [
+      {
+        "id": "arch",
+        "name": "架构分层",
+        "file": "prototype/hermes-agents/verify-arch.mjs",
+        "state": "pass",
+        "pass": 26,
+        "warn": 0,
+        "fail": 0,
+        "unknown": 0,
+        "exit": 0,
+        "ms": 205,
+        "checks": [
+          {
+            "ok": "pass",
+            "text": "Electron 主进程"
+          },
+          {
+            "ok": "pass",
+            "text": "agent 循环"
+          },
+          {
+            "ok": "pass",
+            "text": "gateway"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  场景 id 零泄漏"
+          },
+          {
+            "ok": "pass",
+            "text": "hermes agent 实现"
+          },
+          {
+            "ok": "pass",
+            "text": "工具注册表"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  业务名零泄漏"
+          },
+          {
+            "ok": "pass",
+            "text": "场景身份 + 布局 + 领域"
+          },
+          {
+            "ok": "pass",
+            "text": "场景契约（inputs/outputs/to）"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  无内嵌长正文"
+          },
+          {
+            "ok": "pass",
+            "text": "场景私有 + 共享记忆"
+          },
+          {
+            "ok": "pass",
+            "text": "注入层"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  纯数据"
+          },
+          {
+            "ok": "pass",
+            "text": "派单事实记录"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  76 条均有明确状态"
+          },
+          {
+            "ok": "pass",
+            "text": "构建软件管线"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  8 个场景引用全部有效"
+          },
+          {
+            "ok": "pass",
+            "text": "106 个机制守卫"
+          },
+          {
+            "ok": "pass",
+            "text": "神经元图语义审计"
+          },
+          {
+            "ok": "pass",
+            "text": "全量写入验收"
+          },
+          {
+            "ok": "pass",
+            "text": "星图端到端验收"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  只判定不改数据"
+          },
+          {
+            "ok": "pass",
+            "text": "hermes 星图（我们复用的可视化）"
+          },
+          {
+            "ok": "pass",
+            "text": "贡献点注册表"
+          },
+          {
+            "ok": "pass",
+            "text": "我们的叠加补丁集"
+          },
+          {
+            "ok": "pass",
+            "text": "边界成立  无数据副本（只加代码）"
+          }
+        ]
+      },
+      {
+        "id": "mechanisms",
+        "name": "机制",
+        "file": "prototype/hermes-agents/verify-mechanisms.mjs",
+        "state": "pass",
+        "pass": 37,
+        "warn": 0,
+        "fail": 0,
+        "unknown": 0,
+        "exit": 0,
+        "ms": 121,
+        "checks": [
+          {
+            "ok": "pass",
+            "text": "派单执行  25.8KB"
+          },
+          {
+            "ok": "pass",
+            "text": "闭环校验  34.4KB"
+          },
+          {
+            "ok": "pass",
+            "text": "管线编排  11.9KB"
+          },
+          {
+            "ok": "pass",
+            "text": "调度卡生成  14KB"
+          },
+          {
+            "ok": "pass",
+            "text": "已注册为体检守卫  派单哨兵 / 派单验证生成 / 派单闭环"
+          },
+          {
+            "ok": "pass",
+            "text": "体检脚本直接引用  派单.mjs"
+          },
+          {
+            "ok": "pass",
+            "text": "写入协议  38KB"
+          },
+          {
+            "ok": "pass",
+            "text": "注入  31.6KB"
+          },
+          {
+            "ok": "pass",
+            "text": "召回校验  19KB"
+          },
+          {
+            "ok": "pass",
+            "text": "效果评估  35.7KB"
+          },
+          {
+            "ok": "pass",
+            "text": "已注册为体检守卫  记忆哨兵 / 记忆召回哨兵 / 记忆注入效果体检 / 记忆写入协议"
+          },
+          {
+            "ok": "pass",
+            "text": "体检脚本直接引用  记忆写入.mjs"
+          },
+          {
+            "ok": "pass",
+            "text": "事后审查抓失信  18.1KB"
+          },
+          {
+            "ok": "pass",
+            "text": "回滚  29.8KB"
+          },
+          {
+            "ok": "pass",
+            "text": "进化登记  19.9KB"
+          },
+          {
+            "ok": "pass",
+            "text": "进化台账维护  28KB"
+          },
+          {
+            "ok": "pass",
+            "text": "已注册为体检守卫  进化哨兵 / 回滚 / 体检进化"
+          },
+          {
+            "ok": "pass",
+            "text": "体检脚本直接引用  后置审查.mjs"
+          },
+          {
+            "ok": "pass",
+            "text": "验收闸门  60.7KB"
+          },
+          {
+            "ok": "pass",
+            "text": "106 项机制守卫  77.1KB"
+          },
+          {
+            "ok": "pass",
+            "text": "反例验证（证明守卫真的会红）  99.1KB"
+          },
+          {
+            "ok": "pass",
+            "text": "验收器的反例  8.3KB"
+          },
+          {
+            "ok": "pass",
+            "text": "已注册为体检守卫  验证闸 / 破坏性验证"
+          },
+          {
+            "ok": "pass",
+            "text": "体检脚本直接引用  验证闸.mjs"
+          },
+          {
+            "ok": "pass",
+            "text": "派单台账真实记录  76 条"
+          },
+          {
+            "ok": "pass",
+            "text": "每条都有 from/to/subject/verify/state"
+          },
+          {
+            "ok": "pass",
+            "text": "状态全部明确  closed/cancelled"
+          },
+          {
+            "ok": "pass",
+            "text": "记忆文件存在  164 个 .md"
+          },
+          {
+            "ok": "pass",
+            "text": "记忆有实质内容（非模板）  67 个 >2KB"
+          },
+          {
+            "ok": "pass",
+            "text": "进化台账真实记录  2 条"
+          },
+          {
+            "ok": "pass",
+            "text": "每条进化都有 trigger（记录了是什么 bug 驱动的）"
+          },
+          {
+            "ok": "pass",
+            "text": "每条都有 id/level/target（可回滚）"
+          },
+          {
+            "ok": "pass",
+            "text": "L2 技能进化回测规则成立  当前无 L2 记录（规则待触发）"
+          },
+          {
+            "ok": "pass",
+            "text": "L3 身份进化需人工确认  当前无 L3 记录（规则待触发）"
+          },
+          {
+            "ok": "pass",
+            "text": "回滚锚点（基线）存在  31 个字段"
+          },
+          {
+            "ok": "pass",
+            "text": "健康度按场景重算  9 个场景"
+          },
+          {
+            "ok": "pass",
+            "text": "健康度带 evidenceIds 回指台账（可复算）  4/9"
+          }
+        ]
+      },
+      {
+        "id": "goal",
+        "name": "目标达成",
+        "file": "prototype/hermes-agents/verify-goal.mjs",
+        "state": "unknown",
+        "pass": 7,
+        "warn": 0,
+        "fail": 0,
+        "unknown": 0,
+        "exit": 2,
+        "ms": 397,
+        "checks": [
+          {
+            "ok": "unknown",
+            "text": "R8 改动进 git + 验收器全绿"
+          },
+          {
+            "ok": "unknown",
+            "text": "的含义：**判断不了**，不是不达成。原因："
+          }
+        ]
+      },
+      {
+        "id": "agent-ui",
+        "name": "界面设计系统",
+        "file": "prototype/agent-ui/verify-agent-ui.mjs",
+        "state": "pass",
+        "pass": 19,
+        "warn": 0,
+        "fail": 0,
+        "unknown": 0,
+        "exit": 0,
+        "ms": 46,
+        "checks": [
+          {
+            "ok": "pass",
+            "text": "界面文件在位（42KB 单文件，无构建依赖）"
+          },
+          {
+            "ok": "pass",
+            "text": "暗色主题 token 块解析成功（29 个变量）"
+          },
+          {
+            "ok": "pass",
+            "text": "亮色主题 token 块解析成功（29 个变量）"
+          },
+          {
+            "ok": "pass",
+            "text": "暗色 文字梯 —— 正文 text 14.62:1 (需 ≥4.5) · 次级 text-2 7.62:1 (需 ≥4.5) · 三级 text-3 5.34:1 (需 ≥4.5) · 最淡 text-faint 4.74:1 (需 ≥4.5)"
+          },
+          {
+            "ok": "pass",
+            "text": "暗色 四态色 —— 通过 7.77:1 (需 ≥4.5) · 待补 7.90:1 (需 ≥4.5) · 失败 5.68:1 (需 ≥4.5) · 判不了 6.90:1 (需 ≥4.5)"
+          },
+          {
+            "ok": "pass",
+            "text": "亮色 文字梯 —— 正文 text 17.68:1 (需 ≥4.5) · 次级 text-2 7.95:1 (需 ≥4.5) · 三级 text-3 5.83:1 (需 ≥4.5) · 最淡 text-faint 4.74:1 (需 ≥4.5)"
+          },
+          {
+            "ok": "pass",
+            "text": "亮色 四态色 —— 通过 5.33:1 (需 ≥4.5) · 待补 5.78:1 (需 ≥4.5) · 失败 5.89:1 (需 ≥4.5) · 判不了 6.06:1 (需 ≥4.5)"
+          },
+          {
+            "ok": "pass",
+            "text": "四态色齐备：通过（--st-pass，两个主题都有）"
+          },
+          {
+            "ok": "pass",
+            "text": "四态色齐备：待补（--st-warn，两个主题都有）"
+          },
+          {
+            "ok": "pass",
+            "text": "四态色齐备：失败（--st-fail，两个主题都有）"
+          },
+          {
+            "ok": "pass",
+            "text": "四态色齐备：判不了（--st-unknown，两个主题都有）"
+          },
+          {
+            "ok": "pass",
+            "text": "没有悬空的 token 引用（用到 72 个，全部已定义）"
+          },
+          {
+            "ok": "pass",
+            "text": "信息密度两档在位（紧凑 0.85× / 宽松 1.15×）"
+          },
+          {
+            "ok": "pass",
+            "text": "间距梯随密度缩放（--sp-* = calc(px × density-scale)）"
+          },
+          {
+            "ok": "pass",
+            "text": "字号梯不随密度缩放（--fs-* 是固定值，改密度不会改字号）"
+          },
+          {
+            "ok": "pass",
+            "text": "浮层深度用单一 --shadow-float（1px 环负责边界，微阴影只补厚度）"
+          },
+          {
+            "ok": "pass",
+            "text": "截图证据：我们-v0-dark.png  161KB"
+          },
+          {
+            "ok": "pass",
+            "text": "截图证据：我们-v0-light.png  160KB"
+          },
+          {
+            "ok": "pass",
+            "text": "截图证据：我们-v0-compact.png  168KB"
+          }
+        ]
+      },
+      {
+        "id": "s1s2",
+        "name": "S1+S2 令牌与外壳",
+        "file": "prototype/agent-ui/verify-s1s2.mjs",
+        "state": "pass",
+        "pass": 27,
+        "warn": 0,
+        "fail": 0,
+        "unknown": 0,
+        "exit": 0,
+        "ms": 3099,
+        "checks": [
+          {
+            "ok": "pass",
+            "text": "明暗两套语义色齐备（亮 154 / 暗 154）"
+          },
+          {
+            "ok": "pass",
+            "text": "与主题无关令牌 741 个"
+          },
+          {
+            "ok": "pass",
+            "text": "对比度实测样本 24 组（明暗 × 3 表面 × 4 级文字）"
+          },
+          {
+            "ok": "pass",
+            "text": "全部达到门槛（24 组，禁用态按 WCAG 豁免不设下限）"
+          },
+          {
+            "ok": "pass",
+            "text": "禁用态确实比次要文字更弱（6/6 组成立）"
+          },
+          {
+            "ok": "pass",
+            "text": "密度不改字号（8 个令牌）"
+          },
+          {
+            "ok": "pass",
+            "text": "密度确实缩放间距（6/8 个令牌属间距类）"
+          },
+          {
+            "ok": "pass",
+            "text": "紧凑与宽松两档的取值真的不同"
+          },
+          {
+            "ok": "pass",
+            "text": "产物里没有悬空的 var(--x)（用了 102 个变量）"
+          },
+          {
+            "ok": "pass",
+            "text": "注册表 8 个场景（session,verify,capabilities,tasks,memory,overview,settings,about）"
+          },
+          {
+            "ok": "pass",
+            "text": "每个场景都有视图实现"
+          },
+          {
+            "ok": "pass",
+            "text": "注册表表达了 pinned / closable 语义"
+          },
+          {
+            "ok": "pass",
+            "text": "常驻场景不可关闭（有提前 return 保护）"
+          },
+          {
+            "ok": "pass",
+            "text": "open 与 active 都持久化"
+          },
+          {
+            "ok": "pass",
+            "text": "监听 hashchange（刷新/后退保持）"
+          },
+          {
+            "ok": "pass",
+            "text": "SceneBar 对常驻场景不渲染关闭按钮"
+          },
+          {
+            "ok": "pass",
+            "text": "静态服务起在 127.0.0.1:5277"
+          },
+          {
+            "ok": "pass",
+            "text": "侧栏渲染出 8 个场景项（实测 8）"
+          },
+          {
+            "ok": "pass",
+            "text": "SceneBar 渲染出 3 个标签（默认可常驻 3 个）"
+          },
+          {
+            "ok": "pass",
+            "text": "常驻场景没有关闭按钮，普通场景有"
+          },
+          {
+            "ok": "pass",
+            "text": "顶栏有 3 个窗口控件（最小化/最大化/关闭）"
+          },
+          {
+            "ok": "pass",
+            "text": "已去掉 OpenBitFun 没有的两样：顶部品牌条与主区大标题行"
+          },
+          {
+            "ok": "pass",
+            "text": "hash 直达 /verify 生效（标题切换）"
+          },
+          {
+            "ok": "pass",
+            "text": "总览场景渲染出令牌说明"
+          },
+          {
+            "ok": "pass",
+            "text": "总览里 @openbitfun/ui 按钮真渲染"
+          },
+          {
+            "ok": "pass",
+            "text": "截图证据：我们-S1-令牌.png  54KB"
+          },
+          {
+            "ok": "pass",
+            "text": "截图证据：我们-S2-外壳.png  25KB"
+          }
+        ]
+      }
+    ],
+    "totals": {
+      "pass": 116,
+      "fail": 0,
+      "unknown": 0,
+      "suitesPass": 4,
+      "suitesFail": 0,
+      "suitesUnknown": 1
+    }
+  },
+  "capabilities": {
+    "source": "仓库文件系统（非编造）",
+    "skills": [],
+    "mcp": [],
+    "tools": [
+      {
+        "name": "align-shell.mjs",
+        "source": "tools/"
+      },
+      {
+        "name": "gen-snapshot.mjs",
+        "source": "tools/"
+      },
+      {
+        "name": "gen-tokens.mjs",
+        "source": "tools/"
+      },
+      {
+        "name": "parse-summary.mjs",
+        "source": "tools/"
+      },
+      {
+        "name": "serve-dist.mjs",
+        "source": "tools/"
+      },
+      {
+        "name": "write-s0-docs.mjs",
+        "source": "tools/"
+      }
+    ],
+    "patches": {
+      "files": [],
+      "targets": [
+        "agent",
+        "apps",
+        "tools"
+      ]
+    },
+    "models": [],
+    "note": "技能/工具取自仓库目录；MCP 与模型为空，因为确实还没配。"
+  },
+  "sessions": [],
+  "tasks": [],
+  "memory": [],
+  "about": {
+    "product": "四鉴 Vouch",
+    "version": "0.1.0",
+    "stage": "S2 完成 · S3 起待做",
+    "repo": "Agent自研",
+    "node": "v24.18.0"
+  }
+}

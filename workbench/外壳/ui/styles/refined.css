@@ -1,0 +1,404 @@
+/* ui/styles/refined.css —— 整体界面精修
+ *
+ * 目标：解决「界面丑」问题 —— 之前只改画布，没有动整体
+ *
+ * 设计原则（参考 3d-force-graph / 专业暗色设计系统）：
+ *   ① 深空底 + 微弱层次（不是纯黑，也不是灰）
+ *   ② 边框极细（1px，低透明度），靠留白分隔而非线条
+ *   ③ 标题栏要"薄"（40px → 36px），减少压迫
+ *   ④ 数字/标签用等宽字体，有科技感
+ *   ⑤ 强调色克制（只在关键处用藤黄/石青）
+ *   ⑥ 所有圆角统一（2px），不做大圆角
+ */
+
+/* ══════════════════════════════════════════════════════════════
+   1. 全局色调校准
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* 深空底（比之前更深、更蓝，有"夜"的感觉） */
+  --rf-void:     #010204;
+  --rf-deep:     #04060C;
+  --rf-panel:    #070A12;
+  --rf-raised:   #0B0F18;
+  --rf-overlay:  #0E131D;
+
+  /* 边框：极细、低对比（靠留白分隔） */
+  --rf-line:        rgba(120, 160, 200, 0.075);
+  --rf-line-strong: rgba(120, 160, 200, 0.14);
+  --rf-line-accent: rgba(111, 176, 220, 0.30);
+
+  /* 文字 */
+  --rf-text:   #E6E9EF;
+  --rf-text2:  #9BA5B4;
+  --rf-text3:  #6A7383;
+  --rf-text4:  #454C58;
+
+  /* 强调色（克制使用） */
+  --rf-jade:   #6FB0DC;   /* 石青：信息/主色 */
+  --rf-gold:   #D9B84A;   /* 藤黄：活跃/成功 */
+  --rf-cinn:   #E2735C;   /* 朱砂：警告 */
+  --rf-blood:  #C75B4A;   /* 朱殷：错误 */
+
+  /* 尺寸（统一） */
+  --rf-h-title: 36px;
+  --rf-h-scene: 30px;
+  --rf-h-foot:  22px;
+  --rf-radius:  2px;
+  --rf-gap:     6px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. 应用骨架 —— 去掉"卡片感"，做成一体化控制台
+   ══════════════════════════════════════════════════════════════ */
+
+.wb-app {
+  background: var(--rf-void);
+  color: var(--rf-text);
+  font-family: "Inter", "HarmonyOS Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 标题栏：薄、有细线 ── */
+.wb-titlebar {
+  height: var(--rf-h-title) !important;
+  min-height: var(--rf-h-title) !important;
+  /* ⚠ 2026-11-14 修：这里是写死的深色渐变，浅色主题下标题栏变成纯黑，
+   *   而标题文字是深色（rgba(23,23,26,.74)）→ 对比度 1.09:1，完全不可读。
+   *   改成 token，跟随主题。 */
+  background: var(--color-panel);
+  border-bottom: 1px solid var(--color-line);
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.wb-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--rf-text2);
+}
+
+.wb-brand-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rf-jade);
+  box-shadow: 0 0 8px rgba(111, 176, 220, 0.7);
+}
+
+/* 窗口按钮：极简 */
+.wb-winbtns { gap: 2px; }
+
+.wb-winbtn {
+  width: 26px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--rf-radius);
+  color: var(--rf-text3);
+  cursor: pointer;
+  transition: all 0.14s;
+}
+.wb-winbtn:hover {
+  background: rgba(120, 160, 200, 0.08);
+  color: var(--rf-text);
+}
+.wb-winbtn[data-act="close"]:hover {
+  background: rgba(199, 91, 74, 0.18);
+  color: #FF9B87;
+}
+
+/* ── 状态徽标 ── */
+.wb-statuses { gap: 5px !important; }
+
+.wb-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 17px;
+  padding: 0 6px;
+  background: rgba(120, 160, 200, 0.055);
+  border: 1px solid var(--rf-line);
+  border-radius: var(--rf-radius);
+  color: var(--rf-text3);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+/* ⚠ 2026-11-14 修：状态徽章的语义色要按「能否读清」选，不能只看好看
+ *
+ *   原值：ok=藤黄 #C9A227 / warn=赤 #E68069 / err=朱殷
+ *   实测（浅色底 #fcfcfc）：
+ *     ok   2.36:1  ✗ 完全不够（金黄的固有缺陷：亮而不深）
+ *     warn 3.21:1  ✗
+ *     err  4.12:1  ✗ 勉强
+ *
+ *   语义色在**深色底**上很好看，在浅色底上必须加深。
+ *   保持色相不变，降低明度。
+ */
+.wb-status[data-state="ok"] {
+  border-color: rgba(31, 138, 101, 0.35);
+  color: #1a7a58;
+  background: rgba(31, 138, 101, 0.08);
+}
+.wb-status[data-state="warn"] {
+  border-color: rgba(176, 110, 20, 0.35);
+  color: #8a5a10;
+  background: rgba(176, 110, 20, 0.08);
+}
+.wb-status[data-state="err"] {
+  border-color: rgba(190, 60, 45, 0.38);
+  color: #a83225;
+  background: rgba(190, 60, 45, 0.09);
+}
+
+/* ── 场景栏 ── */
+.wb-scenebar {
+  /* ⚠ 2026-11-14 修：这里是写死的深色渐变，是「三套色板并存」的残留。
+   *
+   *   原来：background: linear-gradient(180deg, #05070E 0%, #03050A 100%)
+   *   症状：切到浅色主题后，场景标签栏还是**纯黑**（实测 barBg = rgb(0,0,0)），
+   *        而标签文字是深色 → 对比度 2.48:1，完全读不出来。
+   *        设计一致性体检因此从 11/11 掉到 10/11（8 处文字不合格）。
+   *
+   *   修法：改成 token。背景跟 --color-base（页面主底），分隔线跟 --color-line。
+   *        这样亮/暗主题都能自适应。
+   */
+  background: var(--color-base);
+  border-bottom: 1px solid var(--color-line);
+  padding: 0 8px;
+  gap: 3px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   3. 面板 —— 去掉厚重边框，用"发光分隔"
+   ══════════════════════════════════════════════════════════════ */
+
+.wb-panel {
+  background: var(--rf-panel);
+  border: 1px solid var(--rf-line);
+  border-radius: var(--rf-radius);
+  overflow: hidden;
+  transition: border-color 0.18s;
+}
+.wb-panel:hover {
+  border-color: var(--rf-line-strong);
+}
+
+/* ── 面板头：紧凑 ── */
+.wb-panel-head {
+  height: 26px;
+  min-height: 26px;
+  padding: 0 8px;
+  background: linear-gradient(180deg, rgba(120,160,200,0.045) 0%, transparent 100%);
+  border-bottom: 1px solid var(--rf-line);
+  gap: 6px;
+}
+
+/* 序号徽标 */
+.wb-panel-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--rf-text3);
+  letter-spacing: 0.04em;
+  min-width: 13px;
+}
+
+/* 标题 */
+.wb-panel-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--rf-text2);
+  letter-spacing: 0.03em;
+}
+
+/* 副标题 */
+.wb-panel-sub {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  color: var(--rf-text4);
+  letter-spacing: 0.015em;
+}
+
+/* ── 面板头按钮 ── */
+.wb-panel-head button,
+.wb-panel-act {
+  height: 17px;
+  min-width: 17px;
+  padding: 0 5px;
+  background: transparent;
+  border: 1px solid var(--rf-line);
+  border-radius: var(--rf-radius);
+  color: var(--rf-text3);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.14s;
+}
+.wb-panel-head button:hover,
+.wb-panel-act:hover {
+  border-color: var(--rf-line-accent);
+  color: var(--rf-jade);
+  background: rgba(111, 176, 220, 0.07);
+}
+
+/* ── 面板体 ── */
+.wb-panel-body {
+  background: var(--rf-deep);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   4. 底部栏 ── 极简
+   ══════════════════════════════════════════════════════════════ */
+
+.wb-footbar {
+  height: var(--rf-h-foot) !important;
+  min-height: var(--rf-h-foot) !important;
+  background: linear-gradient(180deg, #03050A 0%, #020306 100%);
+  border-top: 1px solid var(--rf-line);
+  padding: 0 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  color: var(--rf-text4);
+  letter-spacing: 0.02em;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   5. 滚动条 —— 极细
+   ══════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 160, 200, 0.13);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 160, 200, 0.24);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   6. 输入控件统一
+   ══════════════════════════════════════════════════════════════ */
+
+input[type="text"],
+input[type="search"],
+textarea,
+select {
+  background: rgba(4, 6, 12, 0.85);
+  border: 1px solid var(--rf-line);
+  border-radius: var(--rf-radius);
+  color: var(--rf-text);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 3px 7px;
+  outline: none;
+  transition: border-color 0.16s, box-shadow 0.16s;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--rf-line-accent);
+  box-shadow: 0 0 0 1px rgba(111, 176, 220, 0.12);
+}
+
+button {
+  font-family: inherit;
+  transition: all 0.14s;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   7. 分栏拖拽手柄 —— 几乎看不见，hover 才亮
+   ══════════════════════════════════════════════════════════════ */
+
+.wb-split-handle {
+  background: transparent;
+  transition: background 0.16s;
+}
+.wb-split-handle:hover,
+.wb-split-handle.active {
+  background: rgba(111, 176, 220, 0.22);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   8. 中枢面板（右侧主 Agent）
+   ══════════════════════════════════════════════════════════════ */
+
+.wb-panel[data-panel-type="main-agent"] .wb-panel-head {
+  border-bottom-color: rgba(217, 184, 74, 0.16);
+  background: linear-gradient(180deg, rgba(217,184,74,0.055) 0%, transparent 100%);
+}
+.wb-panel[data-panel-type="main-agent"] .wb-panel-title {
+  color: var(--rf-gold);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   9. 神经元面板 —— 让它满铺，去掉边框（沉浸感）
+   ══════════════════════════════════════════════════════════════ */
+
+.wb-panel[data-panel-type="neuron"] {
+  border-color: rgba(120, 160, 200, 0.095);
+}
+.wb-panel[data-panel-type="neuron"] .wb-panel-body {
+  padding: 0;
+  background: #010204;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   10. 统一字体层级
+   ══════════════════════════════════════════════════════════════ */
+
+.mono, code, .wb-panel-sub, .wb-status, .wb-footbar {
+  font-family: "JetBrains Mono", "Cascadia Code", "Consolas", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   国色桥接（自检修复：guoxue-tokens.css 的 53 个变量之前零使用）
+
+   把 --rf-*（refined 精修体系的变量）映射到 --gu-*（国色体系）
+   这样整个界面真正用上了国色，而不只是"定义了没用"
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* 底：玄色五级 */
+  --rf-void:    var(--gu-xuan-ji, #050607);
+  --rf-deep:    var(--gu-xuan-deep, #08090B);
+  --rf-panel:   var(--gu-xuan, #0C0E11);
+  --rf-raised:  var(--gu-xuan-light, #121519);
+  --rf-overlay: var(--gu-xuan-raised, #181C21);
+
+  /* 文字：素色
+   *
+   * ⚠ 2026-11-14 拆桥：--rf-* 不再桥接到 --gu-*（国学深色值），
+   * 改为直连 hermes token。这是「三套色板并存」这条链的最后一环。
+   *
+   * 原来的链条：
+   *   refined.css  --rf-text4  ←  --gu-su-4  ←  #4A505A
+   *   ⇒ 浅色底（#f3f3f3）上用 #4A505A 的 54% 透明度 → 对比度 2.30:1
+   *   ⇒ 面板编号 "01"、副标题 "拖拽旋转…" 全都看不清（体检报 8 处不合格）
+   *
+   * 修法：4 档文字映射到 hermes 的透明度派生体系。
+   *      tertiary/quaternary 在浅色底上达不到 4.5，所以 text3/text4 统一升到 secondary。
+   *      （判据：装饰可以低对比，信息不行。面板编号是信息。）
+   */
+  --rf-text:   var(--ui-text-primary, #17171a);
+  --rf-text2:  var(--ui-text-secondary, #4b4b52);
+  --rf-text3:  var(--ui-text-secondary, #5a5a62);
+  --rf-text4:  var(--ui-text-secondary, #6a6a72);
+
+  /* 强调：五正色 */
+  --rf-jade:    var(--gu-qing, #6FB0DC);   /* 青 */
+  --rf-gold:    var(--gu-huang, #C9A227); /* 黄 */
+  --rf-cinn:    var(--gu-chi, #E68069);    /* 赤 */
+  --rf-blood:   var(--gu-err, #EC6B58);    /* 赤深 */
+}

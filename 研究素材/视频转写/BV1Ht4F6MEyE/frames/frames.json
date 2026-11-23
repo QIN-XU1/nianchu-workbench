@@ -1,0 +1,902 @@
+[
+  {
+    "file": "0000_t000000.0.jpg",
+    "t": 0.0,
+    "source": "uniform",
+    "requested_t": 0.0,
+    "actual_t": 0.0,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0001_t000013.6.jpg",
+    "t": 13.6,
+    "source": "uniform",
+    "requested_t": 13.577,
+    "actual_t": 13.6,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0002_t000027.2.jpg",
+    "t": 27.166,
+    "source": "uniform",
+    "requested_t": 27.155,
+    "actual_t": 27.166,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0003_t000040.7.jpg",
+    "t": 40.733,
+    "source": "uniform",
+    "requested_t": 40.732,
+    "actual_t": 40.733,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0004_t000054.3.jpg",
+    "t": 54.333,
+    "source": "uniform",
+    "requested_t": 54.31,
+    "actual_t": 54.333,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0005_t000067.9.jpg",
+    "t": 67.9,
+    "source": "uniform",
+    "requested_t": 67.887,
+    "actual_t": 67.9,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0006_t000081.5.jpg",
+    "t": 81.467,
+    "source": "uniform",
+    "requested_t": 81.464,
+    "actual_t": 81.467,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0007_t000095.1.jpg",
+    "t": 95.066,
+    "source": "uniform",
+    "requested_t": 95.042,
+    "actual_t": 95.066,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0008_t000108.6.jpg",
+    "t": 108.633,
+    "source": "uniform",
+    "requested_t": 108.619,
+    "actual_t": 108.633,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0009_t000122.2.jpg",
+    "t": 122.2,
+    "source": "uniform",
+    "requested_t": 122.196,
+    "actual_t": 122.2,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0010_t000135.8.jpg",
+    "t": 135.8,
+    "source": "uniform",
+    "requested_t": 135.774,
+    "actual_t": 135.8,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0011_t000149.4.jpg",
+    "t": 149.367,
+    "source": "uniform",
+    "requested_t": 149.351,
+    "actual_t": 149.367,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0012_t000162.9.jpg",
+    "t": 162.933,
+    "source": "uniform",
+    "requested_t": 162.929,
+    "actual_t": 162.933,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0013_t000176.5.jpg",
+    "t": 176.533,
+    "source": "uniform",
+    "requested_t": 176.506,
+    "actual_t": 176.533,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0014_t000190.1.jpg",
+    "t": 190.1,
+    "source": "uniform",
+    "requested_t": 190.083,
+    "actual_t": 190.1,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0015_t000203.7.jpg",
+    "t": 203.667,
+    "source": "uniform",
+    "requested_t": 203.661,
+    "actual_t": 203.667,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0016_t000217.3.jpg",
+    "t": 217.267,
+    "source": "uniform",
+    "requested_t": 217.238,
+    "actual_t": 217.267,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0017_t000230.8.jpg",
+    "t": 230.833,
+    "source": "uniform",
+    "requested_t": 230.816,
+    "actual_t": 230.833,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0018_t000244.4.jpg",
+    "t": 244.4,
+    "source": "uniform",
+    "requested_t": 244.393,
+    "actual_t": 244.4,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0019_t000258.0.jpg",
+    "t": 258.0,
+    "source": "uniform",
+    "requested_t": 257.97,
+    "actual_t": 258.0,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0020_t000271.6.jpg",
+    "t": 271.566,
+    "source": "uniform",
+    "requested_t": 271.548,
+    "actual_t": 271.566,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0021_t000285.1.jpg",
+    "t": 285.133,
+    "source": "uniform",
+    "requested_t": 285.125,
+    "actual_t": 285.133,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0022_t000298.7.jpg",
+    "t": 298.733,
+    "source": "uniform",
+    "requested_t": 298.703,
+    "actual_t": 298.733,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0023_t000312.3.jpg",
+    "t": 312.3,
+    "source": "uniform",
+    "requested_t": 312.28,
+    "actual_t": 312.3,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0024_t000325.9.jpg",
+    "t": 325.867,
+    "source": "uniform",
+    "requested_t": 325.857,
+    "actual_t": 325.867,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0025_t000339.5.jpg",
+    "t": 339.466,
+    "source": "uniform",
+    "requested_t": 339.435,
+    "actual_t": 339.466,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0026_t000353.0.jpg",
+    "t": 353.033,
+    "source": "uniform",
+    "requested_t": 353.012,
+    "actual_t": 353.033,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0027_t000366.6.jpg",
+    "t": 366.6,
+    "source": "uniform",
+    "requested_t": 366.589,
+    "actual_t": 366.6,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0028_t000380.2.jpg",
+    "t": 380.2,
+    "source": "uniform",
+    "requested_t": 380.167,
+    "actual_t": 380.2,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0029_t000393.8.jpg",
+    "t": 393.767,
+    "source": "uniform",
+    "requested_t": 393.744,
+    "actual_t": 393.767,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0030_t000407.3.jpg",
+    "t": 407.333,
+    "source": "uniform",
+    "requested_t": 407.322,
+    "actual_t": 407.333,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0031_t000420.9.jpg",
+    "t": 420.9,
+    "source": "uniform",
+    "requested_t": 420.899,
+    "actual_t": 420.9,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0032_t000434.5.jpg",
+    "t": 434.5,
+    "source": "uniform",
+    "requested_t": 434.476,
+    "actual_t": 434.5,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0033_t000448.1.jpg",
+    "t": 448.066,
+    "source": "uniform",
+    "requested_t": 448.054,
+    "actual_t": 448.066,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0034_t000461.6.jpg",
+    "t": 461.634,
+    "source": "uniform",
+    "requested_t": 461.631,
+    "actual_t": 461.634,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0035_t000475.2.jpg",
+    "t": 475.233,
+    "source": "uniform",
+    "requested_t": 475.209,
+    "actual_t": 475.233,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0036_t000488.8.jpg",
+    "t": 488.8,
+    "source": "uniform",
+    "requested_t": 488.786,
+    "actual_t": 488.8,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0037_t000502.4.jpg",
+    "t": 502.367,
+    "source": "uniform",
+    "requested_t": 502.363,
+    "actual_t": 502.367,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0038_t000516.0.jpg",
+    "t": 515.966,
+    "source": "uniform",
+    "requested_t": 515.941,
+    "actual_t": 515.966,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0039_t000529.5.jpg",
+    "t": 529.533,
+    "source": "uniform",
+    "requested_t": 529.518,
+    "actual_t": 529.533,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0040_t000543.1.jpg",
+    "t": 543.1,
+    "source": "uniform",
+    "requested_t": 543.096,
+    "actual_t": 543.1,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0041_t000556.7.jpg",
+    "t": 556.7,
+    "source": "uniform",
+    "requested_t": 556.673,
+    "actual_t": 556.7,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0042_t000570.3.jpg",
+    "t": 570.267,
+    "source": "uniform",
+    "requested_t": 570.25,
+    "actual_t": 570.267,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0043_t000583.8.jpg",
+    "t": 583.833,
+    "source": "uniform",
+    "requested_t": 583.828,
+    "actual_t": 583.833,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0044_t000597.4.jpg",
+    "t": 597.433,
+    "source": "uniform",
+    "requested_t": 597.405,
+    "actual_t": 597.433,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0045_t000611.0.jpg",
+    "t": 611.0,
+    "source": "uniform",
+    "requested_t": 610.982,
+    "actual_t": 611.0,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0046_t000624.6.jpg",
+    "t": 624.567,
+    "source": "uniform",
+    "requested_t": 624.56,
+    "actual_t": 624.567,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0047_t000638.2.jpg",
+    "t": 638.167,
+    "source": "uniform",
+    "requested_t": 638.137,
+    "actual_t": 638.167,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0048_t000651.7.jpg",
+    "t": 651.733,
+    "source": "uniform",
+    "requested_t": 651.715,
+    "actual_t": 651.733,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0049_t000665.3.jpg",
+    "t": 665.3,
+    "source": "uniform",
+    "requested_t": 665.292,
+    "actual_t": 665.3,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0050_t000678.9.jpg",
+    "t": 678.9,
+    "source": "uniform",
+    "requested_t": 678.869,
+    "actual_t": 678.9,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0051_t000692.5.jpg",
+    "t": 692.466,
+    "source": "uniform",
+    "requested_t": 692.447,
+    "actual_t": 692.466,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0052_t000706.0.jpg",
+    "t": 706.033,
+    "source": "uniform",
+    "requested_t": 706.024,
+    "actual_t": 706.033,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0053_t000719.6.jpg",
+    "t": 719.633,
+    "source": "uniform",
+    "requested_t": 719.602,
+    "actual_t": 719.633,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0054_t000733.2.jpg",
+    "t": 733.2,
+    "source": "uniform",
+    "requested_t": 733.179,
+    "actual_t": 733.2,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0055_t000746.8.jpg",
+    "t": 746.767,
+    "source": "uniform",
+    "requested_t": 746.756,
+    "actual_t": 746.767,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0056_t000760.4.jpg",
+    "t": 760.366,
+    "source": "uniform",
+    "requested_t": 760.334,
+    "actual_t": 760.366,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0057_t000773.9.jpg",
+    "t": 773.933,
+    "source": "uniform",
+    "requested_t": 773.911,
+    "actual_t": 773.933,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0058_t000787.5.jpg",
+    "t": 787.5,
+    "source": "uniform",
+    "requested_t": 787.488,
+    "actual_t": 787.5,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0059_t000801.1.jpg",
+    "t": 801.067,
+    "source": "uniform",
+    "requested_t": 801.066,
+    "actual_t": 801.067,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0060_t000814.7.jpg",
+    "t": 814.667,
+    "source": "uniform",
+    "requested_t": 814.643,
+    "actual_t": 814.667,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0061_t000828.2.jpg",
+    "t": 828.233,
+    "source": "uniform",
+    "requested_t": 828.221,
+    "actual_t": 828.233,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0062_t000841.8.jpg",
+    "t": 841.8,
+    "source": "uniform",
+    "requested_t": 841.798,
+    "actual_t": 841.8,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0063_t000855.4.jpg",
+    "t": 855.4,
+    "source": "uniform",
+    "requested_t": 855.375,
+    "actual_t": 855.4,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0064_t000869.0.jpg",
+    "t": 868.967,
+    "source": "uniform",
+    "requested_t": 868.953,
+    "actual_t": 868.967,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0065_t000882.5.jpg",
+    "t": 882.534,
+    "source": "uniform",
+    "requested_t": 882.53,
+    "actual_t": 882.534,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0066_t000896.1.jpg",
+    "t": 896.133,
+    "source": "uniform",
+    "requested_t": 896.108,
+    "actual_t": 896.133,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0067_t000909.7.jpg",
+    "t": 909.7,
+    "source": "uniform",
+    "requested_t": 909.685,
+    "actual_t": 909.7,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0068_t000923.3.jpg",
+    "t": 923.267,
+    "source": "uniform",
+    "requested_t": 923.262,
+    "actual_t": 923.267,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0069_t000936.9.jpg",
+    "t": 936.866,
+    "source": "uniform",
+    "requested_t": 936.84,
+    "actual_t": 936.866,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0070_t000950.4.jpg",
+    "t": 950.433,
+    "source": "uniform",
+    "requested_t": 950.417,
+    "actual_t": 950.433,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0071_t000964.0.jpg",
+    "t": 964.0,
+    "source": "uniform",
+    "requested_t": 963.995,
+    "actual_t": 964.0,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0072_t000977.6.jpg",
+    "t": 977.6,
+    "source": "uniform",
+    "requested_t": 977.572,
+    "actual_t": 977.6,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0073_t000991.2.jpg",
+    "t": 991.167,
+    "source": "uniform",
+    "requested_t": 991.149,
+    "actual_t": 991.167,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0074_t001004.7.jpg",
+    "t": 1004.733,
+    "source": "uniform",
+    "requested_t": 1004.727,
+    "actual_t": 1004.733,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0075_t001018.3.jpg",
+    "t": 1018.333,
+    "source": "uniform",
+    "requested_t": 1018.304,
+    "actual_t": 1018.333,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0076_t001031.9.jpg",
+    "t": 1031.9,
+    "source": "uniform",
+    "requested_t": 1031.881,
+    "actual_t": 1031.9,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0077_t001045.5.jpg",
+    "t": 1045.467,
+    "source": "uniform",
+    "requested_t": 1045.459,
+    "actual_t": 1045.467,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0078_t001059.1.jpg",
+    "t": 1059.067,
+    "source": "uniform",
+    "requested_t": 1059.036,
+    "actual_t": 1059.067,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0079_t001072.6.jpg",
+    "t": 1072.633,
+    "source": "uniform",
+    "requested_t": 1072.614,
+    "actual_t": 1072.633,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0080_t001086.2.jpg",
+    "t": 1086.2,
+    "source": "uniform",
+    "requested_t": 1086.191,
+    "actual_t": 1086.2,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0081_t001099.8.jpg",
+    "t": 1099.8,
+    "source": "uniform",
+    "requested_t": 1099.768,
+    "actual_t": 1099.8,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0082_t001113.4.jpg",
+    "t": 1113.366,
+    "source": "uniform",
+    "requested_t": 1113.346,
+    "actual_t": 1113.366,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0083_t001126.9.jpg",
+    "t": 1126.934,
+    "source": "uniform",
+    "requested_t": 1126.923,
+    "actual_t": 1126.934,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0084_t001140.5.jpg",
+    "t": 1140.533,
+    "source": "uniform",
+    "requested_t": 1140.501,
+    "actual_t": 1140.533,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0085_t001154.1.jpg",
+    "t": 1154.1,
+    "source": "uniform",
+    "requested_t": 1154.078,
+    "actual_t": 1154.1,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0086_t001167.7.jpg",
+    "t": 1167.667,
+    "source": "uniform",
+    "requested_t": 1167.655,
+    "actual_t": 1167.667,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0087_t001181.2.jpg",
+    "t": 1181.233,
+    "source": "uniform",
+    "requested_t": 1181.233,
+    "actual_t": 1181.233,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0088_t001194.8.jpg",
+    "t": 1194.833,
+    "source": "uniform",
+    "requested_t": 1194.81,
+    "actual_t": 1194.833,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0089_t001208.4.jpg",
+    "t": 1208.4,
+    "source": "uniform",
+    "requested_t": 1208.388,
+    "actual_t": 1208.4,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0090_t001222.0.jpg",
+    "t": 1221.967,
+    "source": "uniform",
+    "requested_t": 1221.965,
+    "actual_t": 1221.967,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0091_t001235.6.jpg",
+    "t": 1235.567,
+    "source": "uniform",
+    "requested_t": 1235.542,
+    "actual_t": 1235.567,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0092_t001249.1.jpg",
+    "t": 1249.133,
+    "source": "uniform",
+    "requested_t": 1249.12,
+    "actual_t": 1249.133,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0093_t001262.7.jpg",
+    "t": 1262.7,
+    "source": "uniform",
+    "requested_t": 1262.697,
+    "actual_t": 1262.7,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0094_t001276.3.jpg",
+    "t": 1276.3,
+    "source": "uniform",
+    "requested_t": 1276.274,
+    "actual_t": 1276.3,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0095_t001289.9.jpg",
+    "t": 1289.867,
+    "source": "uniform",
+    "requested_t": 1289.852,
+    "actual_t": 1289.867,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0096_t001303.4.jpg",
+    "t": 1303.434,
+    "source": "uniform",
+    "requested_t": 1303.429,
+    "actual_t": 1303.434,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0097_t001317.0.jpg",
+    "t": 1317.033,
+    "source": "uniform",
+    "requested_t": 1317.007,
+    "actual_t": 1317.033,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0098_t001330.6.jpg",
+    "t": 1330.6,
+    "source": "uniform",
+    "requested_t": 1330.584,
+    "actual_t": 1330.6,
+    "pass_id": "base",
+    "width": 512
+  },
+  {
+    "file": "0099_t001344.2.jpg",
+    "t": 1344.167,
+    "source": "uniform",
+    "requested_t": 1344.161,
+    "actual_t": 1344.167,
+    "pass_id": "base",
+    "width": 512
+  }
+]

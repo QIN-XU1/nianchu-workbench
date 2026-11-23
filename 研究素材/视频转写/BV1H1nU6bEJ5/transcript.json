@@ -1,0 +1,1052 @@
+[
+ {
+  "start": 0.05,
+  "end": 24.45,
+  "text": "DSH官方,一切皆插件,我,一切都将成为我DSH的零件,大家一定看过很多插件推荐视频,一个个好用的插件占满收藏家,但到时候还是不知道哪个好用,这个星星高,那个功能多,下了一个又一个,面板越来越多,功能越来越乱,同一个模块的插件功能有重叠也有缺失,选一个成品总不能满足所有。",
+  "avg_logprob": -0.122885,
+  "no_speech_prob": 0.234597,
+  "compression_ratio": 1.375465,
+  "temperature": 0.0,
+  "confidence": 0.884366
+ },
+ {
+  "start": 24.45,
+  "end": 29.15,
+  "text": "有沒有一種方法,我想要啥就加啥需要啥功能,就上什麼功能?",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 29.15,
+  "end": 32.95,
+  "text": "面板想做成啥樣就做成啥樣按鈕想放哪就放哪。",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 32.95,
+  "end": 38.95,
+  "text": "這裡我準備了一個終極方案,把市面上能公開解鎖到的能幫助DSH改造的內容。",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 38.95,
+  "end": 40.45,
+  "text": "做成一個酷!",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 40.45,
+  "end": 42.15,
+  "text": "它是零件酷的概念。",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 42.15,
+  "end": 45.65,
+  "text": "DSH需要啥直接讀酷按需刪選成品零件。",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 45.65,
+  "end": 48.15,
+  "text": "這個零件可以是插件工具機制。",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 48.15,
+  "end": 53.05,
+  "text": "然後讓DSH根據自己的情況,插零件或者照著零件自己造。",
+  "avg_logprob": -0.137647,
+  "no_speech_prob": 0.123805,
+  "compression_ratio": 1.424051,
+  "temperature": 0.0,
+  "confidence": 0.871407
+ },
+ {
+  "start": 53.05,
+  "end": 57.45,
+  "text": "只安装自己想要的部分,这个库本来是我自己用的本地库。",
+  "avg_logprob": -0.107996,
+  "no_speech_prob": 0.181233,
+  "compression_ratio": 1.324415,
+  "temperature": 0.0,
+  "confidence": 0.897631
+ },
+ {
+  "start": 57.45,
+  "end": 61.45,
+  "text": "现在把它发布成了网页,主要是节省搜索成本。",
+  "avg_logprob": -0.107996,
+  "no_speech_prob": 0.181233,
+  "compression_ratio": 1.324415,
+  "temperature": 0.0,
+  "confidence": 0.897631
+ },
+ {
+  "start": 61.45,
+  "end": 67.65,
+  "text": "比如我现在想完善记忆机制,我让DSH直接独库筛选出所有和记忆相关的插件。",
+  "avg_logprob": -0.107996,
+  "no_speech_prob": 0.181233,
+  "compression_ratio": 1.324415,
+  "temperature": 0.0,
+  "confidence": 0.897631
+ },
+ {
+  "start": 67.65,
+  "end": 75.15,
+  "text": "分析他们的逻辑,DSH会对照我的记忆框架识别哪些机制适合我,再把适合的部分拿来升级。",
+  "avg_logprob": -0.107996,
+  "no_speech_prob": 0.181233,
+  "compression_ratio": 1.324415,
+  "temperature": 0.0,
+  "confidence": 0.897631
+ },
+ {
+  "start": 75.15,
+  "end": 77.75,
+  "text": "为什么不直接下个成品记忆插件?",
+  "avg_logprob": -0.107996,
+  "no_speech_prob": 0.181233,
+  "compression_ratio": 1.324415,
+  "temperature": 0.0,
+  "confidence": 0.897631
+ },
+ {
+  "start": 77.75,
+  "end": 81.55,
+  "text": "因为我对记忆有要求,成品插件的机制是固定的。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 81.55,
+  "end": 84.55,
+  "text": "不符合我的要求,我的要求有四条。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 84.55,
+  "end": 89.25,
+  "text": "第一 前量备分记忆,不能只存在绘画里,要有可恢复的备份。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 89.25,
+  "end": 92.05,
+  "text": "第二 每个场景记忆独立不能篡位。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 92.05,
+  "end": 94.95,
+  "text": "第三 要有共享记忆场景之间能协作。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 94.95,
+  "end": 98.35,
+  "text": "第四 每种记忆要分层全局私有共享档案。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 98.35,
+  "end": 99.65,
+  "text": "各规各的。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 99.65,
+  "end": 102.95,
+  "text": "先说一个现实,AI软件没有完美的记忆。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 102.95,
+  "end": 106.55,
+  "text": "聊得越久模型越容易变笨,我的办法很直接。",
+  "avg_logprob": -0.12973,
+  "no_speech_prob": 0.128528,
+  "compression_ratio": 1.434783,
+  "temperature": 0.0,
+  "confidence": 0.878333
+ },
+ {
+  "start": 106.55,
+  "end": 111.25,
+  "text": "该画绘画就画绘画用一次干净的开始,把模型的聪明镜拉回来。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 111.25,
+  "end": 117.05,
+  "text": "我的记忆分四层,第一层是全局规则,第二层是每个场景自己的记忆文件。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 117.05,
+  "end": 123.05,
+  "text": "第三层是共享看板,跨场景通知代办总所以,文档台战和体检结果都在那里。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 123.05,
+  "end": 126.25,
+  "text": "第四层是档案包括规档备份和绘画档案。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 126.25,
+  "end": 129.25,
+  "text": "这套记忆不只计是实,还记偏好。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 129.25,
+  "end": 134.05,
+  "text": "我分六类。第一类是交互偏好,比如叫我宿主不叫老板。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 134.05,
+  "end": 136.45,
+  "text": "交互用中文路径单独标出来。",
+  "avg_logprob": -0.137632,
+  "no_speech_prob": 0.108975,
+  "compression_ratio": 1.453453,
+  "temperature": 0.0,
+  "confidence": 0.871419
+ },
+ {
+  "start": 136.45,
+  "end": 140.15,
+  "text": "第二类是工具偏好,比如清理找电脑清理场景。",
+  "avg_logprob": -0.138668,
+  "no_speech_prob": 0.210703,
+  "compression_ratio": 1.450909,
+  "temperature": 0.0,
+  "confidence": 0.870517
+ },
+ {
+  "start": 140.15,
+  "end": 144.45,
+  "text": "第三类是文件偏好,比如临时文件,核心资产文件。",
+  "avg_logprob": -0.138668,
+  "no_speech_prob": 0.210703,
+  "compression_ratio": 1.450909,
+  "temperature": 0.0,
+  "confidence": 0.870517
+ },
+ {
+  "start": 144.45,
+  "end": 149.15,
+  "text": "第四类是协作偏好,比如场景助手,只能自己的主场景用。",
+  "avg_logprob": -0.138668,
+  "no_speech_prob": 0.210703,
+  "compression_ratio": 1.450909,
+  "temperature": 0.0,
+  "confidence": 0.870517
+ },
+ {
+  "start": 149.15,
+  "end": 154.95,
+  "text": "第五类是安全偏好规则指认宿主不删别人的行,不碰启动器不自己重勤引擎。",
+  "avg_logprob": -0.138668,
+  "no_speech_prob": 0.210703,
+  "compression_ratio": 1.450909,
+  "temperature": 0.0,
+  "confidence": 0.870517
+ },
+ {
+  "start": 154.95,
+  "end": 161.75,
+  "text": "第六类是记忆偏好,直系实质工作,通知不进交阶段,决策与遇到的坑址追加。",
+  "avg_logprob": -0.138668,
+  "no_speech_prob": 0.210703,
+  "compression_ratio": 1.450909,
+  "temperature": 0.0,
+  "confidence": 0.870517
+ },
+ {
+  "start": 161.75,
+  "end": 164.31,
+  "text": "所以我的真实做法是两条腿走路",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 164.31,
+  "end": 166.51,
+  "text": "换绘画宝聪明记忆宝监视",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 166.51,
+  "end": 169.59,
+  "text": "平时我会在上下文变众之前主动换绘画",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 169.59,
+  "end": 171.75,
+  "text": "不是等到引擎压不动了才换",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 171.75,
+  "end": 174.87,
+  "text": "引擎的自动压缩是安全网不是我的主策略",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 174.87,
+  "end": 178.19,
+  "text": "常见的记忆方案其实就几种各有各的强项",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 178.19,
+  "end": 179.71,
+  "text": "也各有各的代价",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 179.71,
+  "end": 181.79,
+  "text": "Hermis的持久记忆和技能",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 181.79,
+  "end": 184.03,
+  "text": "记忆走的是持久写入这条路",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 184.03,
+  "end": 186.59,
+  "text": "把核心设定天号技能写成文件",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 186.59,
+  "end": 187.95,
+  "text": "开场自动加载",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 187.95,
+  "end": 189.63,
+  "text": "好处是跨绘画不丢",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 189.63,
+  "end": 191.35,
+  "text": "核心就是技能能沉淀",
+  "avg_logprob": -0.161942,
+  "no_speech_prob": 0.115826,
+  "compression_ratio": 1.400602,
+  "temperature": 0.0,
+  "confidence": 0.85049
+ },
+ {
+  "start": 191.35,
+  "end": 196.15,
+  "text": "代價是容量受限制,壓縮會丟細節,心就衝突容易堆在一起。",
+  "avg_logprob": -0.16323,
+  "no_speech_prob": 0.135282,
+  "compression_ratio": 1.231405,
+  "temperature": 0.0,
+  "confidence": 0.849396
+ },
+ {
+  "start": 196.15,
+  "end": 201.85,
+  "text": "RIG效量減索容量大,不占常駐上下文,但減索靠概率分不清時效。",
+  "avg_logprob": -0.16323,
+  "no_speech_prob": 0.135282,
+  "compression_ratio": 1.231405,
+  "temperature": 0.0,
+  "confidence": 0.849396
+ },
+ {
+  "start": 201.85,
+  "end": 205.05,
+  "text": "原生模型常用的滑動窗口,加自動摘要。",
+  "avg_logprob": -0.16323,
+  "no_speech_prob": 0.135282,
+  "compression_ratio": 1.231405,
+  "temperature": 0.0,
+  "confidence": 0.849396
+ },
+ {
+  "start": 205.05,
+  "end": 208.95,
+  "text": "簡單實施連貫,但越聊越常反覆摘要會丟細節。",
+  "avg_logprob": -0.16323,
+  "no_speech_prob": 0.135282,
+  "compression_ratio": 1.231405,
+  "temperature": 0.0,
+  "confidence": 0.849396
+ },
+ {
+  "start": 208.95,
+  "end": 212.85,
+  "text": "任務快照只能續跑同一個任務,不是通用長期記憶。",
+  "avg_logprob": -0.16323,
+  "no_speech_prob": 0.135282,
+  "compression_ratio": 1.231405,
+  "temperature": 0.0,
+  "confidence": 0.849396
+ },
+ {
+  "start": 212.85,
+  "end": 219.65,
+  "text": "騰訊開源的 Tencent DV Agent Memory,走的是分層,原始對話原子記憶任務歸難用戶畫像。",
+  "avg_logprob": -0.16323,
+  "no_speech_prob": 0.135282,
+  "compression_ratio": 1.231405,
+  "temperature": 0.0,
+  "confidence": 0.849396
+ },
+ {
+  "start": 219.65,
+  "end": 225.41,
+  "text": "再加上下文卸載和任務畫布,優勢是長任務,省頭坑畫像更準結構可查,",
+  "avg_logprob": -0.172631,
+  "no_speech_prob": 0.156884,
+  "compression_ratio": 1.323782,
+  "temperature": 0.0,
+  "confidence": 0.841448
+ },
+ {
+  "start": 225.41,
+  "end": 231.37,
+  "text": "代價是它還是圍繞一個用戶一個agent的做記憶,不負責多個角色之間的隔離和交接。",
+  "avg_logprob": -0.172631,
+  "no_speech_prob": 0.156884,
+  "compression_ratio": 1.323782,
+  "temperature": 0.0,
+  "confidence": 0.841448
+ },
+ {
+  "start": 231.37,
+  "end": 239.77,
+  "text": "我的DSH走的是另一條路,記憶按場景和主題拆成節點,可以打標籤記憶7標版本,按路由精準調取。",
+  "avg_logprob": -0.172631,
+  "no_speech_prob": 0.156884,
+  "compression_ratio": 1.323782,
+  "temperature": 0.0,
+  "confidence": 0.841448
+ },
+ {
+  "start": 239.77,
+  "end": 243.17,
+  "text": "優勢是從根上避開一條繪畫堆所有東西。",
+  "avg_logprob": -0.172631,
+  "no_speech_prob": 0.156884,
+  "compression_ratio": 1.323782,
+  "temperature": 0.0,
+  "confidence": 0.841448
+ },
+ {
+  "start": 243.17,
+  "end": 248.65,
+  "text": "多角色隔離可控可選記本地,代價是依賴標籤和路由,維護成本高。",
+  "avg_logprob": -0.172631,
+  "no_speech_prob": 0.156884,
+  "compression_ratio": 1.323782,
+  "temperature": 0.0,
+  "confidence": 0.841448
+ },
+ {
+  "start": 248.65,
+  "end": 253.65,
+  "text": "它不是完美方案,却是我目前找到的最适合我的长期管理的路线。",
+  "avg_logprob": -0.128989,
+  "no_speech_prob": 0.143241,
+  "compression_ratio": 1.304965,
+  "temperature": 0.0,
+  "confidence": 0.878983
+ },
+ {
+  "start": 253.65,
+  "end": 258.65,
+  "text": "记忆能沉淀,能迁移,能审计,越用越好用,上限很高。",
+  "avg_logprob": -0.128989,
+  "no_speech_prob": 0.143241,
+  "compression_ratio": 1.304965,
+  "temperature": 0.0,
+  "confidence": 0.878983
+ },
+ {
+  "start": 258.65,
+  "end": 266.15,
+  "text": "如果你要的是全自动,开箱及用,它不是合,如果你要的是几年后,还能查还能改的个人工作台。",
+  "avg_logprob": -0.128989,
+  "no_speech_prob": 0.143241,
+  "compression_ratio": 1.304965,
+  "temperature": 0.0,
+  "confidence": 0.878983
+ },
+ {
+  "start": 266.15,
+  "end": 272.65,
+  "text": "这条路值得走,场景是节点当前交接式连线共享看板式总限,所以是地图。",
+  "avg_logprob": -0.128989,
+  "no_speech_prob": 0.143241,
+  "compression_ratio": 1.304965,
+  "temperature": 0.0,
+  "confidence": 0.878983
+ },
+ {
+  "start": 272.65,
+  "end": 274.95,
+  "text": "记忆这块可能有点难理解",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 274.95,
+  "end": 276.75,
+  "text": "在比如启动动画插件",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 276.75,
+  "end": 278.65,
+  "text": "我对启动动画要求不高",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 278.65,
+  "end": 281.85,
+  "text": "但我希望它在设置里轻轻爽爽显示每一个",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 281.85,
+  "end": 284.05,
+  "text": "而且这个设置界面要能预览",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 284.05,
+  "end": 285.65,
+  "text": "市面上的成品插件",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 285.65,
+  "end": 286.55,
+  "text": "我不需要",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 286.55,
+  "end": 288.75,
+  "text": "于是让DSH自己写了一个",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 288.75,
+  "end": 291.15,
+  "text": "以后拉取别人的启动动画插件",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 291.15,
+  "end": 292.95,
+  "text": "我只需要拉动画本身",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 292.95,
+  "end": 294.85,
+  "text": "多一个画面选择就OK",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 294.85,
+  "end": 296.35,
+  "text": "想用哪个用哪个",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 296.35,
+  "end": 297.65,
+  "text": "皮肤也是一样",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 297.65,
+  "end": 300.15,
+  "text": "同例很多插件我不需要多个面板",
+  "avg_logprob": -0.109109,
+  "no_speech_prob": 0.282949,
+  "compression_ratio": 1.439863,
+  "temperature": 0.0,
+  "confidence": 0.896632
+ },
+ {
+  "start": 300.15,
+  "end": 303.71,
+  "text": "只想在不影响现有工作台的前提下多一个功能",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 303.71,
+  "end": 306.71,
+  "text": "可以是一个按钮,也可以是一个内在机制",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 306.71,
+  "end": 309.71,
+  "text": "这样安装同模块内容时才不会冲突",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 309.71,
+  "end": 312.27,
+  "text": "我个人觉得AI软件的终极模式",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 312.27,
+  "end": 315.79,
+  "text": "就是自定义自己的智能体方便自己的生活和工作",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 315.79,
+  "end": 317.95,
+  "text": "有人说你这就是Dalag玩具",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 317.95,
+  "end": 319.71,
+  "text": "国内生产力就Workbody",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 319.71,
+  "end": 322.39,
+  "text": "我只想说,Workbody就是个软件",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 322.39,
+  "end": 323.83,
+  "text": "随时可以搓出来",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 323.83,
+  "end": 325.91,
+  "text": "它的壁垒就是腾讯的生态",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 325.91,
+  "end": 327.43,
+  "text": "随着模型越厉害",
+  "avg_logprob": -0.171593,
+  "no_speech_prob": 0.138161,
+  "compression_ratio": 1.334375,
+  "temperature": 0.0,
+  "confidence": 0.842322
+ },
+ {
+  "start": 327.43,
+  "end": 330.31,
+  "text": "互联网大厂根本不存在软件技术壁垒",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 330.31,
+  "end": 333.07,
+  "text": "当然我也用workbody之类的AI软件",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 333.07,
+  "end": 336.27,
+  "text": "因为它可以成为我DSH里面场景的助手",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 336.27,
+  "end": 348.48,
+  "text": "我让我的DSH用workbody给大家打招呼",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 348.48,
+  "end": 349.32,
+  "text": "OK呀",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 349.32,
+  "end": 352.36,
+  "text": "我的DSH会用workbody这个生产工具",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 352.36,
+  "end": 354.6,
+  "text": "那它现在算生产力了吧",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 354.6,
+  "end": 356.6,
+  "text": "今天翻越评论区的时候",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 356.6,
+  "end": 358.6,
+  "text": "很多小伙伴用了我的仓库",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 358.6,
+  "end": 359.88,
+  "text": "还是没搭建好",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 359.88,
+  "end": 363.4,
+  "text": "仓库里已经把我出使工作台磨板的圆码放上去",
+  "avg_logprob": -0.150008,
+  "no_speech_prob": 0.059346,
+  "compression_ratio": 1.264331,
+  "temperature": 0.0,
+  "confidence": 0.860701
+ },
+ {
+  "start": 363.4,
+  "end": 366.54,
+  "text": "有三个场景适合小白体验和进一步修改",
+  "avg_logprob": -0.143493,
+  "no_speech_prob": 0.044003,
+  "compression_ratio": 1.136986,
+  "temperature": 0.0,
+  "confidence": 0.866327
+ },
+ {
+  "start": 366.54,
+  "end": 370.08,
+  "text": "其实不管什么工具只要能解放自己都是好工具",
+  "avg_logprob": -0.143493,
+  "no_speech_prob": 0.044003,
+  "compression_ratio": 1.136986,
+  "temperature": 0.0,
+  "confidence": 0.866327
+ },
+ {
+  "start": 370.08,
+  "end": 371.5,
+  "text": "本期就到这里",
+  "avg_logprob": -0.143493,
+  "no_speech_prob": 0.044003,
+  "compression_ratio": 1.136986,
+  "temperature": 0.0,
+  "confidence": 0.866327
+ },
+ {
+  "start": 371.5,
+  "end": 373.88,
+  "text": "后面会更新一些更基础的内容",
+  "avg_logprob": -0.143493,
+  "no_speech_prob": 0.044003,
+  "compression_ratio": 1.136986,
+  "temperature": 0.0,
+  "confidence": 0.866327
+ },
+ {
+  "start": 373.88,
+  "end": 377.5,
+  "text": "和刚接触DSH的小伙伴一起探索更多可能性",
+  "avg_logprob": -0.143493,
+  "no_speech_prob": 0.044003,
+  "compression_ratio": 1.136986,
+  "temperature": 0.0,
+  "confidence": 0.866327
+ },
+ {
+  "start": 377.5,
+  "end": 379.5,
+  "text": "我是DSH最忠实的用户",
+  "avg_logprob": -0.143493,
+  "no_speech_prob": 0.044003,
+  "compression_ratio": 1.136986,
+  "temperature": 0.0,
+  "confidence": 0.866327
+ }
+]

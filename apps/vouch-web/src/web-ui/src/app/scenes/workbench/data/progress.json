@@ -1,0 +1,418 @@
+{
+  "at": "2026-11-17T05:05:47.746Z",
+  "snapshot": {
+    "dirtyFiles": 2,
+    "usableAsBaseline": false,
+    "why": "工作树有 2 个未提交改动 ⇒ R8 会红 ⇒ 不是有效基线"
+  },
+  "verifyGoal": {
+    "exitCode": 1,
+    "ranAt": "2026-11-17T05:05:47.746Z",
+    "tally": {
+      "pass": 18,
+      "pending": 1,
+      "fail": 3,
+      "unknown": 0
+    },
+    "requirements": [
+      {
+        "mark": "✅",
+        "id": "R1",
+        "title": "7 个参照系统的实证研究",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "6 份报告，392 处 文件:行号 证据"
+      },
+      {
+        "mark": "✅",
+        "id": "R2",
+        "title": "30+ 维对比矩阵（每格带证据）",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "31 维 × 8 方 = 248 格；硬证据 156/248（63%：URL/文件行号/截图）；诚实性审计：假绿 0"
+      },
+      {
+        "mark": "🟡",
+        "id": "R3",
+        "title": "功能对等（缺口补齐且可验证）",
+        "kind": "hardRequirement",
+        "state": "WARN",
+        "detail": "仍有 2 个真缺口：A9 多代理协作协议（角色/黑板/协商） / C2 停止条件可判定（部分 21 项，声明非目标 1 项）"
+      },
+      {
+        "mark": "✅",
+        "id": "R4",
+        "title": "5+ 项参照系统都没有的能力",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "6 项能力，15 处验证命令引用"
+      },
+      {
+        "mark": "✅",
+        "id": "R5",
+        "title": "界面截图 + 可判定判据对比",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "我们 70 张 · 参照 45 张 · 22 个可复算数值 · 改动后截图 有 · 调研覆盖 20 个产品段"
+      },
+      {
+        "mark": "✅",
+        "id": "R6",
+        "title": "调度/记忆/自愈/验证 四机制",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "40 断言通过 / 0 失败（在位+可运行+真实触发三层）"
+      },
+      {
+        "mark": "✅",
+        "id": "R7",
+        "title": "8 层架构 + 每层代码位置与边界",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "8 层，26 断言（存在性+边界）全过"
+      },
+      {
+        "mark": "✅",
+        "id": "B4",
+        "title": "单文件体量红线（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "红线条数 0 · 扫描 202 个源文件 · 最大 115.5KB · 白名单 3 项（均写理由+复核日） · 排除 vendor 与上游原文件（红线只管我们自己写的代码）"
+      },
+      {
+        "mark": "✅",
+        "id": "A5",
+        "title": "上下文压缩（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "结构化压缩（分级打分 + 关键事实保护 + 摘要 + 收敛回退）· 验收 32 项通过 · 实测 10097 → 1489 tokens（压缩率 0.15） · 关键事实 3 类全保留：约束/错误/结论"
+      },
+      {
+        "mark": "✅",
+        "id": "A7",
+        "title": "记忆治理：溯源/冲突/TTL（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "溯源（无来源拒绝写入）+ 冲突（覆盖改为标 superseded，旧值仍可查）+ TTL（过期不进结果但保留历史） · 验收 34 项通过 · 实测 9 条记忆（有效 6） · gc 只删「过期且被推翻」"
+      },
+      {
+        "mark": "✅",
+        "id": "A3",
+        "title": "联网搜索与抓取（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "搜索（Bing/DDG 双结构解析 + 实体解码）+ 抓取（正文提取）+ 进界面 · 验收 28 项通过 · 实测 5 条搜索结果 · 正文 3909 字 · 5 个候选后端实测"
+      },
+      {
+        "mark": "✅",
+        "id": "A13",
+        "title": "MCP 客户端（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "stdio + JSON-RPC 2.0 客户端 · 验收 20 项通过 · 自检层（内置假 server，协议正确性）+ 真 server 层（官方 SDK 1.32.2） · 四态：握手成功 PASS / JSON-RPC error FAIL / 连不上 UNKNOWN"
+      },
+      {
+        "mark": "✅",
+        "id": "A11",
+        "title": "定时调度器（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "持久化 job + 五段 cron + 真实执行 + 留痕 · 验收 12 项通过 · 实测留痕 9 条 · 四态验证（PASS/FAIL/超时→UNKNOWN）· 退出码 0/1/2"
+      },
+      {
+        "mark": "✅",
+        "id": "D3",
+        "title": "运行时状态可见性（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "六类采集（进程/端口/网关/仓库/验收/资源）· 验收 14 项通过 · 实测进程 192 个 · 网关 880 个模型 · 反假绿断言（PASS 必须有实观测）全过"
+      },
+      {
+        "mark": "✅",
+        "id": "D2",
+        "title": "信息密度度量（自研）",
+        "kind": "dimensionCheck",
+        "state": "PASS",
+        "detail": "五类指标（填充率/字符密度/交互密度/留白/行密度）· 验收 12 项通过 · 可复算偏差 <5% · 诚实标注：界面密度未超上游（同源）"
+      },
+      {
+        "mark": "❌",
+        "id": "R8",
+        "title": "改动进 git + 验收器全绿",
+        "kind": "hardRequirement",
+        "state": "FAIL",
+        "detail": "未提交 2 项 · 界面层 15 项通过/0 失败（产物+启动+渲染+品牌）· 补丁集 在位"
+      },
+      {
+        "mark": "❌",
+        "id": "R9",
+        "title": "L4 改进闭环（假设→改→量→留或退→留痕）",
+        "kind": "hardRequirement",
+        "state": "FAIL",
+        "detail": "硬约束自检 27/27 · 度量没有四态结论"
+      },
+      {
+        "mark": "✅",
+        "id": "R10",
+        "title": "C6 成本可复算（含模型 id 解析层）",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "自检 10/10 · 价格表 71/110 有价（源 http://127.0.0.1:3425/v1/models） · 条目 9 · 复算一致 9 · UNKNOWN 0 · 记录后价格变过的 0 条（金额不变，冻结生效） · 真实记账 9 条 · 合计 $0.00023680"
+      },
+      {
+        "mark": "❌",
+        "id": "R11",
+        "title": "T5 横向领先（覆盖率第一 + 0 假绿）",
+        "kind": "hardRequirement",
+        "state": "FAIL",
+        "detail": "排名 6/8 · 自评领先 -10.5 分 · 假绿 0 · 我们「有」7 维 · 分解: 27 维双方可核验上领先 -9.0 分（反例自检 14/14） · **自评口径，非第三方评分**"
+      },
+      {
+        "mark": "✅",
+        "id": "R12",
+        "title": "数据新鲜度纪律（7 场景全覆盖 + 反例自检）",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "合规 6 · 违规 0 · 反例自检 8/8 全过"
+      },
+      {
+        "mark": "✅",
+        "id": "R13",
+        "title": "矩阵 ↔ 实现绑定（28/28 有真实路径 + 反例自检）",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "标「有」有真实路径 7/7 · 违规 0 · 反例自检 13/13 全过"
+      },
+      {
+        "mark": "✅",
+        "id": "R14",
+        "title": "跨组件存储同步（共用 key 必须有同步机制）",
+        "kind": "hardRequirement",
+        "state": "PASS",
+        "detail": "共用 key 5 个 · 隐患 0 · 反例自检 13/13 全过"
+      }
+    ],
+    "rawTail": [
+      "    通过 18   待补 1   失败 3   无法判断 0   （共 22 条硬要求）",
+      "  ────────────────────────────────────────────────────────────────────────────",
+      "  🟡 的含义：有实现但没补齐 —— 这是**已验证的不完整**，如实标注，不用 PASS 掩盖。"
+    ]
+  },
+  "conditions": [
+    {
+      "id": "T1",
+      "name": "闭环在转",
+      "state": "UNKNOWN",
+      "mappedBy": "验收器未单列（不是通过）",
+      "reqs": []
+    },
+    {
+      "id": "T2",
+      "name": "度量可信",
+      "state": "UNKNOWN",
+      "mappedBy": "验收器未单列（不是通过）",
+      "reqs": []
+    },
+    {
+      "id": "T3",
+      "name": "四态贯通",
+      "state": "UNKNOWN",
+      "mappedBy": "验收器未单列（不是通过）",
+      "reqs": []
+    },
+    {
+      "id": "T4",
+      "name": "六主张可验",
+      "state": "UNKNOWN",
+      "mappedBy": "验收器未单列（不是通过）",
+      "reqs": []
+    },
+    {
+      "id": "T5",
+      "name": "横向领先",
+      "state": "FAIL",
+      "mappedBy": "verify-goal 标题里写了 R11",
+      "reqs": [
+        {
+          "id": "R11",
+          "title": "T5 横向领先（覆盖率第一 + 0 假绿）",
+          "state": "FAIL",
+          "detail": "排名 6/8 · 自评领先 -10.5 分 · 假绿 0 · 我们「有」7 维 · 分解: 27 维双方可核验上领先 -9.0 分（反例自检 14/14） · **自评口径，非第三方评分**"
+        }
+      ]
+    }
+  ],
+  "ledger": {
+    "total": 145,
+    "closed": 28,
+    "closedIndependent": 28,
+    "partial": 54,
+    "refuted": 27,
+    "unknown": 36,
+    "recent": [
+      {
+        "id": "H-0145",
+        "at": "2026-11-17T04:39:55.000Z",
+        "status": "closed",
+        "independent": true,
+        "obs": "能力矩阵自评 28 维「有」，但独立审计员（另一个 agent 实例，只看到维度名与证据路径、看不到我们的判定）按矩阵自家 _legend「有=完整实现且默认生效」严判，只认 7 维「有」，20 维判「部分」、4 维判「无」。逐维对照得出 21 处假绿 —— 即我们违反了自家图例",
+        "metric": "矩阵里我们标「有」但独立审计不认可的维度数（假绿数）",
+        "baseline": 21,
+        "after": 0,
+        "samples": 31,
+        "verifier": "independent-subagent(matrix-auditor)"
+      },
+      {
+        "id": "H-0144",
+        "at": "2026-11-17T03:51:03.000Z",
+        "status": "partial",
+        "independent": false,
+        "obs": "工作台画布换成 React Flow 后，构建全绿但运行时是空的：12 个节点全 0x0 且 visibility:hidden，边 0 条（.react-flow__edges 容器存在但 children=0），viewport 被夹到 minZoom 0.2。而 Contr",
+        "metric": "画布上实际渲染出的边 path 数量（应 = 31 条边 × 2 条 path/边 = 62）",
+        "baseline": 0,
+        "after": 62,
+        "samples": 12,
+        "verifier": "lead"
+      },
+      {
+        "id": "H-0143",
+        "at": "2026-11-17T01:47:28.000Z",
+        "status": "unknown",
+        "independent": false,
+        "obs": "工作台画布卡片拖拽后，位置没有真正落盘：onCardUp 读的是闭包里的旧 pos，写进 localStorage 的是 \"{}\"。实测证据：拖拽 +30/+140 后卡片确实从 {14,76} 移到 {44,216}（渲染正确），但 K_WORKBENCH_POS 仍是 \"{}",
+        "metric": "拖拽结束后 localStorage 里是否为非空坐标对象（0=空/未落盘，1=已落盘）",
+        "baseline": 0,
+        "after": 1,
+        "samples": 2,
+        "verifier": "lead"
+      },
+      {
+        "id": "H-0142",
+        "at": "2026-11-16T19:33:47.993Z",
+        "status": "unknown",
+        "independent": true,
+        "obs": "场景记忆面板切到「项目记忆」时下方列表有 2 个 WARN 但右上徽章仍 PASS(绿): 徽章用 verdictForMemory 固定跑 validateMemory, 与列表 result 不同源 = 假绿",
+        "metric": "项目记忆模式下 tally 的 WARN 计数",
+        "baseline": 0,
+        "after": 1,
+        "samples": 4,
+        "verifier": "verifier-r6"
+      },
+      {
+        "id": "H-0141",
+        "at": "2026-11-16T18:50:50.770Z",
+        "status": "closed",
+        "independent": true,
+        "obs": "语义相关性检查器初版只读文件内容+中文关键词, 把 dsh-bash-sandbox(终端沙箱)/dsh-subagent(子代理) 等 12 个真相关锚点误判为不相关(假红), both 被压到 14",
+        "metric": "matrix-confidence both 维度数",
+        "baseline": 14,
+        "after": 20,
+        "samples": 31,
+        "verifier": "verifier-r5"
+      },
+      {
+        "id": "H-0140",
+        "at": "2026-11-16T18:15:51.287Z",
+        "status": "refuted",
+        "independent": true,
+        "obs": "独立验证 H-0139 的结论",
+        "metric": "matrix-confidence both 维度数",
+        "baseline": 17,
+        "after": 21,
+        "samples": 31,
+        "verifier": "independent-verifier"
+      },
+      {
+        "id": "H-0139",
+        "at": "2026-11-16T17:57:28.155Z",
+        "status": "closed",
+        "independent": true,
+        "obs": "T5 排名为自评口径: 29.0 vs openclaw 27.5 是给自己与 8 个参照打的分, 非第三方评分",
+        "metric": "matrix-confidence both 维度数",
+        "baseline": 17,
+        "after": 21,
+        "samples": 31,
+        "verifier": "verifier-r4"
+      },
+      {
+        "id": "H-0138",
+        "at": "2026-11-16T09:30:19.752Z",
+        "status": "partial",
+        "independent": false,
+        "obs": "上一轮给 audit-t1-protocol 加了 external（外部独立）口径，但没给它反例。按项目铁律「反例不报＝这个检查是假的」——一个没有反例的口径无法证明它会变红，可能永远返回固定值而不被发现",
+        "metric": "audit-t1-protocol 的自检条数",
+        "baseline": 8,
+        "after": 13,
+        "samples": 13,
+        "verifier": "lead"
+      },
+      {
+        "id": "H-0137",
+        "at": "2026-11-16T09:03:05.548Z",
+        "status": "partial",
+        "independent": false,
+        "obs": "H-0031/H-0034/H-0035 的 verdict=unknown（样本量 5/7/4 < 8），各自的 note 都写明「记为 UNKNOWN 不下判定」，但 status 记成了 closed——违反 T3「UNKNOWN 永不被并入通过」。同时 audit-led",
+        "metric": "台账 UNKNOWN 并入通过条数",
+        "baseline": 3,
+        "after": 0,
+        "samples": 136,
+        "verifier": "lead"
+      },
+      {
+        "id": "H-0136",
+        "at": "2026-11-16T08:57:48.463Z",
+        "status": "partial",
+        "independent": false,
+        "obs": "台账里 H-0031/H-0034/H-0035 三条 verdict=unknown（样本量 5/7/4 < 8）但 status=closed，它们自己的 note 都写着「记为 UNKNOWN，不下判定」——这是 T3 明令禁止的「UNKNOWN 被并入通过」。而 evol",
+        "metric": "被检出的台账字段级矛盾数（修正假阳性后）",
+        "baseline": 0,
+        "after": 3,
+        "samples": 134,
+        "verifier": "lead"
+      },
+      {
+        "id": "H-0135",
+        "at": "2026-11-16T08:57:48.402Z",
+        "status": "refuted",
+        "independent": true,
+        "obs": "独立验证 H-0134 的结论",
+        "metric": "被检出的台账字段级矛盾数",
+        "baseline": 0,
+        "after": 28,
+        "samples": 133,
+        "verifier": "independent-verifier"
+      },
+      {
+        "id": "H-0134",
+        "at": "2026-11-16T08:56:40.359Z",
+        "status": "partial",
+        "independent": false,
+        "obs": "台账完整性检查(tools/evolve/evolve.mjs:369)只看 e.independent，不看 notes。实测 28 条 closed 里 28 条(100%)的 notes 写着「C5：验证方与实现方是同一个 ⇒ 降为部分，不算独立验证」，但字段是 statu",
+        "metric": "被检出的台账字段级矛盾数",
+        "baseline": 0,
+        "after": 28,
+        "samples": 133,
+        "verifier": "lead"
+      }
+    ]
+  },
+  "matrix": {
+    "at": "2026-11-17T04:39:56.017Z",
+    "auditor": "independent-subagent",
+    "total": 31,
+    "fakeGreen": 0,
+    "underClaimed": 0,
+    "ourVerdicts": {
+      "部分": 21,
+      "无": 3,
+      "有": 7
+    },
+    "auditVerdicts": {
+      "部分": 20,
+      "无": 4,
+      "有": 7
+    },
+    "ok": true,
+    "issues": []
+  }
+}

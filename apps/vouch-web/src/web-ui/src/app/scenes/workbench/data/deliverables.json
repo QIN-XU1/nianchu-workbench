@@ -1,0 +1,486 @@
+{
+  "at": "2026-11-17T02:01:28.668Z",
+  "count": 48,
+  "docs": [
+    {
+      "id": "research-ui实测-小云雀与即梦-md",
+      "title": "小云雀 / 即梦 界面实测记录",
+      "path": "research/UI实测-小云雀与即梦.md",
+      "kind": "doc",
+      "sizeKB": 4.9,
+      "mtime": "2026-11-17T00:55:32.578Z",
+      "summary": "--color-primary = #945eff （主色，紫） --color-brand = #945eff --color-border = #ffffff1f （≈ rgba(255,255,255,.12)）",
+      "headings": 4
+    },
+    {
+      "id": "research-t5-独立复核报告-md",
+      "title": "T5 独立复核报告（H-0139 被驳回的依据）",
+      "path": "research/T5-独立复核报告.md",
+      "kind": "doc",
+      "sizeKB": 4.2,
+      "mtime": "2026-11-16T18:16:06.339Z",
+      "summary": "确定性：连续 3 次，both 恒为 21，pct 恒为 {68,10,13,10}。",
+      "headings": 4
+    },
+    {
+      "id": "evidence-verify-h0027b-md",
+      "title": "H-0027 attacks 补录合法性验证",
+      "path": "evidence/verify/h0027b.md",
+      "kind": "report",
+      "sizeKB": 12.9,
+      "mtime": "2026-11-16T09:19:25.897Z",
+      "summary": "验证方：`v-h0027b`（独立复核，全程只读） 时间：2026-11-16 仓库：`D:\\file\\AI Temp\\DeepSeek\\Agent自研`（HEAD = `d94a824d`）",
+      "headings": 6
+    },
+    {
+      "id": "evidence-verify-h0134-md",
+      "title": "H-0134 独立验证",
+      "path": "evidence/verify/h0134.md",
+      "kind": "report",
+      "sizeKB": 11.5,
+      "mtime": "2026-11-16T09:00:47.453Z",
+      "summary": "**refuted**",
+      "headings": 6
+    },
+    {
+      "id": "evidence-verify-h0023-md",
+      "title": "H-0023 / H-0027 独立验证",
+      "path": "evidence/verify/h0023.md",
+      "kind": "report",
+      "sizeKB": 16.3,
+      "mtime": "2026-11-16T08:55:05.499Z",
+      "summary": "验证方：`v-h0023`（独立复核，只读） 时间：2026-11-16 仓库：`D:\\file\\AI Temp\\DeepSeek\\Agent自研`（HEAD = `3c9c1df9`）",
+      "headings": 7
+    },
+    {
+      "id": "evidence-verify-h0133-md",
+      "title": "H-0133 独立验证",
+      "path": "evidence/verify/h0133.md",
+      "kind": "report",
+      "sizeKB": 12.7,
+      "mtime": "2026-11-16T07:38:18.005Z",
+      "summary": "验证方：v-h0133（只读；除本文件外未创建/修改/删除任何文件） 验证对象：`research/改进台账.json` 第 3383-3403 行 `H-0133`；代码 `tools/benchmark/executable-compare.mjs` 版本：验证期间工作区在变化——开始时该脚本 uncommitted（hash `4753FC1C…`，m",
+      "headings": 5
+    },
+    {
+      "id": "evidence-verify-h0131-md",
+      "title": "H-0131 独立验证",
+      "path": "evidence/verify/h0131.md",
+      "kind": "report",
+      "sizeKB": 22.4,
+      "mtime": "2026-11-16T07:01:47.786Z",
+      "summary": "验证对象：`research/改进台账.json` 的 `H-0131`（`tools/benchmark/executable-compare.mjs` 排除参考副本目录）",
+      "headings": 7
+    },
+    {
+      "id": "evidence-verify-h0127-md",
+      "title": "H-0127 独立验证",
+      "path": "evidence/verify/h0127.md",
+      "kind": "report",
+      "sizeKB": 17.3,
+      "mtime": "2026-11-16T05:35:59.880Z",
+      "summary": "验证方：`v-h0127`（独立，全程只读；未跑 `verify-mutation.mjs`，未做任何突变检验）",
+      "headings": 5
+    },
+    {
+      "id": "evidence-verify-h0037-md",
+      "title": "H-0037 独立验证",
+      "path": "evidence/verify/h0037.md",
+      "kind": "report",
+      "sizeKB": 16.8,
+      "mtime": "2026-11-16T04:53:38.029Z",
+      "summary": "验证方：`v-h0037`（独立验证方，任务=尽力推翻） 验证对象：`research/改进台账.json` → `H-0037` 仓库：`D:\\file\\AI Temp\\DeepSeek\\Agent自研` 本轮约束：完全只读（仅写本文件）；未跑 `verify-mutation.mjs` / `measure-verifier-efficacy.mjs` ",
+      "headings": 6
+    },
+    {
+      "id": "evidence-verify-h0124-md",
+      "title": "H-0124 独立验证",
+      "path": "evidence/verify/h0124.md",
+      "kind": "report",
+      "sizeKB": 12.4,
+      "mtime": "2026-11-16T04:38:32.241Z",
+      "summary": "**验证方**：v-h0124（独立只读） · **时间**：2026-11-16 12:34 (+08:00) **被验主张**：`research/改进台账.json:3117-3138`（H-0124，metric=双变体突变承重通过数，baseline 9 → after 12，samples 24） **本轮约束**：全程只读；未跑 `verify",
+      "headings": 5
+    },
+    {
+      "id": "evidence-verify-h0085-md",
+      "title": "H-0085 独立验证",
+      "path": "evidence/verify/h0085.md",
+      "kind": "report",
+      "sizeKB": 18.1,
+      "mtime": "2026-11-16T04:36:33.345Z",
+      "summary": "**refuted**",
+      "headings": 6
+    },
+    {
+      "id": "evidence-verify-h0123-md",
+      "title": "H-0123 独立验证",
+      "path": "evidence/verify/h0123.md",
+      "kind": "report",
+      "sizeKB": 22.2,
+      "mtime": "2026-11-16T03:03:26.246Z",
+      "summary": "验证对象：`research/改进台账.json` 中 `H-0123`（commit `b421a2f8`，2026-11-16 10:13:25 +0800） 验证时间：2026-11-16 10:20–11:00 +0800 验证方：`v-h0123`（独立验证方，只读）",
+      "headings": 6
+    },
+    {
+      "id": "evidence-verify-h0121-md",
+      "title": "H-0121 独立验证",
+      "path": "evidence/verify/h0121.md",
+      "kind": "report",
+      "sizeKB": 14.3,
+      "mtime": "2026-11-16T01:59:06.202Z",
+      "summary": "**验证对象**：`research/改进台账.json` → `H-0121` **主张**：对 8 个核心验收器各写一条突变规格（把被测核心函数改成永远失效），若每条都让该文件 `--selftest` 变红，则证明这些断言真的承重。 **度量**：突变后自检变红的规格数；基线 0 → 改后 8；样本量 8；verdict=keep",
+      "headings": 5
+    },
+    {
+      "id": "evidence-verify-h0073b-md",
+      "title": "H-0073 独立验证",
+      "path": "evidence/verify/h0073b.md",
+      "kind": "report",
+      "sizeKB": 12,
+      "mtime": "2026-11-16T01:39:26.237Z",
+      "summary": "验证方：v-h0073b（独立，未参与实现） 对象：`research/改进台账.json` → `H-0073`（`status: partial`, `independent: false`, `baseline: 1`, `after: 0`, `samples: 31`, `verdict: keep`） 工作区：HEAD `3c17067f`（`f",
+      "headings": 5
+    },
+    {
+      "id": "evidence-verify-h0074-md",
+      "title": "H-0074 独立验证",
+      "path": "evidence/verify/h0074.md",
+      "kind": "report",
+      "sizeKB": 15.5,
+      "mtime": "2026-11-16T01:12:36.449Z",
+      "summary": "验证方：v-h0074（独立于实现方 lead）· 时间：2026-11-16 08:58–09:12 +0800 · 全程只读（唯一写盘：本报告）",
+      "headings": 5
+    },
+    {
+      "id": "evidence-verify-h0075-md",
+      "title": "H-0075 独立验证",
+      "path": "evidence/verify/h0075.md",
+      "kind": "report",
+      "sizeKB": 19.3,
+      "mtime": "2026-11-16T01:11:30.722Z",
+      "summary": "验证方：`v-h0075`（与实现方 `lead` 非同一方） 时间：2026-11-16 09:00–09:20 (Asia/Shanghai) 被验条目：`research/改进台账.json:1715-1740`（`id: H-0075`，L1716）",
+      "headings": 7
+    },
+    {
+      "id": "evidence-verify-h0081-md",
+      "title": "H-0081 独立验证",
+      "path": "evidence/verify/h0081.md",
+      "kind": "report",
+      "sizeKB": 15.4,
+      "mtime": "2026-11-16T01:08:41.465Z",
+      "summary": "- 验证对象：`research/改进台账.json` 中 `H-0081`（obs 行约在 `research/改进台账.json:1889`） - 被测量文件：`tools/benchmark/audit-coverage.mjs` - 对应提交：`28d4d802 fix(coverage): 修掉 2 条「空集恒真」假绿`（`git show --s",
+      "headings": 6
+    },
+    {
+      "id": "evidence-verify-h0080-md",
+      "title": "H-0080 独立验证",
+      "path": "evidence/verify/h0080.md",
+      "kind": "report",
+      "sizeKB": 9.9,
+      "mtime": "2026-11-16T00:55:34.584Z",
+      "summary": "验证方：v-h0080（独立于实现方 lead） 时间：2026-11-16 08:5x (+08:00) 被测：`prototype/hermes-agents/audit-matrix-honesty.mjs` @ `7fd9a349` 台账条目：`research/改进台账.json:1831-1852`",
+      "headings": 5
+    },
+    {
+      "id": "research-独立验证-第三轮-md",
+      "title": "独立验证报告：第三轮（最小范围）",
+      "path": "research/独立验证-第三轮.md",
+      "kind": "doc",
+      "sizeKB": 18.8,
+      "mtime": "2026-11-15T12:14:26.279Z",
+      "summary": "**verdict**: refuted",
+      "headings": 14
+    },
+    {
+      "id": "research-独立验证-第二轮-md",
+      "title": "独立验证报告：第二轮",
+      "path": "research/独立验证-第二轮.md",
+      "kind": "doc",
+      "sizeKB": 8.9,
+      "mtime": "2026-11-15T07:06:32.883Z",
+      "summary": "**verdict**: refuted",
+      "headings": 5
+    },
+    {
+      "id": "research-r2-处理-md",
+      "title": "R2 处理：fpr 0.375 → 0.000 到底证明了什么",
+      "path": "research/R2-处理.md",
+      "kind": "doc",
+      "sizeKB": 5.1,
+      "mtime": "2026-11-15T04:38:22.010Z",
+      "summary": "**结论：三个都不是验收器的准确性问题。**",
+      "headings": 6
+    },
+    {
+      "id": "research-独立验证-h0001-md",
+      "title": "独立验证报告：H-0001",
+      "path": "research/独立验证-H0001.md",
+      "kind": "doc",
+      "sizeKB": 21.9,
+      "mtime": "2026-11-15T03:48:32.115Z",
+      "summary": "1. **不是实现方**：我是独立会话里的 `independent-verifier`，H-0001 的代码、故障目录、度量器都不是我写的，我也没参与任何一次提交。 2. **没有参与主张形成**：我不知道「为什么这 8 条故障是这 8 条」「为什么用 expectOutput」「为什么 0.750 是基线」的形成过程；本报告里所有数字都是我自己从文件/提",
+      "headings": 6
+    },
+    {
+      "id": "research-念初-本体论-md",
+      "title": "念初 · 本体论",
+      "path": "research/念初-本体论.md",
+      "kind": "doc",
+      "sizeKB": 14.5,
+      "mtime": "2026-11-15T03:00:51.296Z",
+      "summary": "「像 AGI」这句话有两种接法，一种会毁掉项目，一种不会。",
+      "headings": 10
+    },
+    {
+      "id": "research-对比矩阵-md",
+      "title": "31 维对比矩阵：我们 vs 7 个参照系统",
+      "path": "research/对比矩阵.md",
+      "kind": "doc",
+      "sizeKB": 38,
+      "mtime": "2026-11-15T02:58:10.536Z",
+      "summary": "- **有**：完整实现且默认生效 - **部分**：有实现但残缺/默认关/只在某端生效 - **无**：没有这个能力 - **不适用**：该产品的形态决定了它不需要这个",
+      "headings": 7
+    },
+    {
+      "id": "research-依赖与镜像说明-md",
+      "title": "依赖与镜像说明（网络间歇性下怎么装得上）",
+      "path": "research/依赖与镜像说明.md",
+      "kind": "doc",
+      "sizeKB": 2.1,
+      "mtime": "2026-11-14T13:30:07.140Z",
+      "summary": "本机实测网络是**间歇性**的，同一个域名前一次 200、后一次 000。 本文把「怎么装得上」固化成可复现步骤，避免每次重装靠运气。",
+      "headings": 6
+    },
+    {
+      "id": "research-ui基座方案-md",
+      "title": "UI 基座方案（站在 OpenBitFun 之上）",
+      "path": "research/UI基座方案.md",
+      "kind": "doc",
+      "sizeKB": 11.8,
+      "mtime": "2026-11-14T13:11:31.327Z",
+      "summary": "**基座用 OpenBitFun 的安装版前端（不改一行）；我们的产品是它的一个官方「Creation UI」层， 通过 `openbitfun-creation.{js,css}` + `creation-assets/` 挂上去；我们的后端通过 `ui.commands.register` 的 handler 转出站 HTTP 调用。**",
+      "headings": 10
+    },
+    {
+      "id": "research-我们产品的方案-md",
+      "title": "我们自己的产品 · 方案（修正版）",
+      "path": "research/我们产品的方案.md",
+      "kind": "doc",
+      "sizeKB": 11.7,
+      "mtime": "2026-11-14T13:11:05.430Z",
+      "summary": "**做法：我们自己建前端工程（Vite + React + TS），把它的 `design-system` 三个包原样 vendor 进来 当基础组件与令牌（MIT 许可，可自由复制修改），外壳、场景、功能、后端全部由我们自己写。**",
+      "headings": 8
+    },
+    {
+      "id": "research-界面复用对比-md",
+      "title": "界面复用对比（v4）",
+      "path": "research/界面复用对比.md",
+      "kind": "doc",
+      "sizeKB": 21.8,
+      "mtime": "2026-11-14T11:31:12.625Z",
+      "summary": "**手搓组件是根因。** 一个成熟组件库在按钮内边距、圆角、过渡曲线、焦点环这些细节上累积了几百次调整，不是临时能画出来的。",
+      "headings": 21
+    },
+    {
+      "id": "research-界面编排设计-md",
+      "title": "界面编排设计（v3）",
+      "path": "research/界面编排设计.md",
+      "kind": "doc",
+      "sizeKB": 11,
+      "mtime": "2026-11-14T10:22:03.129Z",
+      "summary": "**根本错误：只有「面板」，没有「页面」。**",
+      "headings": 5
+    },
+    {
+      "id": "research-界面设计全量调研-md",
+      "title": "界面设计全量调研：25 个 Agent 产品/框架",
+      "path": "research/界面设计全量调研.md",
+      "kind": "doc",
+      "sizeKB": 28.2,
+      "mtime": "2026-11-14T09:24:11.457Z",
+      "summary": "**为什么不用 web_search**：DeepSeek 账户余额 402，`web_search` / `web_fetch` 全部不可用。 所有联网取证走系统代理 `127.0.0.1:7897` + curl。",
+      "headings": 11
+    },
+    {
+      "id": "research-架构分层-md",
+      "title": "架构分层：8 层 + 每层的代码位置与边界判据",
+      "path": "research/架构分层.md",
+      "kind": "doc",
+      "sizeKB": 10.7,
+      "mtime": "2026-11-14T09:07:11.045Z",
+      "summary": "┌──────────────────────────────────────────────────────────────────────────┐ │ L7 界面层 星图 / 贡献点 / 布局 ← 衍生 hermes，不自研 │ │ 边界：不持有业务数据 │",
+      "headings": 4
+    },
+    {
+      "id": "research-vs-orca-md",
+      "title": "Orca 全量拆解",
+      "path": "research/vs-orca.md",
+      "kind": "doc",
+      "sizeKB": 29,
+      "mtime": "2026-11-14T08:51:11.986Z",
+      "summary": "**Orca 已经支持 Hermes Agent 和 DeepSeek Harness 了。**",
+      "headings": 11
+    },
+    {
+      "id": "research-vs-omp-studio-md",
+      "title": "omp-studio 全量拆解",
+      "path": "research/vs-omp-studio.md",
+      "kind": "doc",
+      "sizeKB": 27.4,
+      "mtime": "2026-11-14T08:50:56.534Z",
+      "summary": "omp-studio 是 **oh-my-pi（OMP）运行时的桌面控制台**，它的价值不在功能多少，而在**它把「GUI ↔ 运行时」这条缝做成了可验证的工程契约**——类型化 Studio Bridge、6 条架构不变式、overlay/seam 两层补丁纪律。它和我们是同一类东西（给别人的 agent 运行时做桌面端），所以我们踩的坑它都踩过，而且它的",
+      "headings": 10
+    },
+    {
+      "id": "research-界面设计研究-md",
+      "title": "主流 Agent 界面设计研究",
+      "path": "research/界面设计研究.md",
+      "kind": "doc",
+      "sizeKB": 12.9,
+      "mtime": "2026-11-14T06:50:11.262Z",
+      "summary": "主流 agent 的界面设计，本质在回答**同一个问题**：",
+      "headings": 8
+    },
+    {
+      "id": "research-vs-pi-md",
+      "title": "Pi（earendil-works/pi）源码级剖析",
+      "path": "research/vs-pi.md",
+      "kind": "doc",
+      "sizeKB": 10.9,
+      "mtime": "2026-11-14T06:49:16.380Z",
+      "summary": "一个**极简内核 + 包扩展**的 agent harness。README 明说：",
+      "headings": 9
+    },
+    {
+      "id": "research-差异化优势-md",
+      "title": "差异化优势：6 项参照系统都没有的能力",
+      "path": "research/差异化优势.md",
+      "kind": "doc",
+      "sizeKB": 9.2,
+      "mtime": "2026-11-14T06:17:37.695Z",
+      "summary": "**是什么** 场景之间不是「派个活儿」，而是**带契约的交接**：每个场景的契约里有 `inputs[]`（吃什么，谁给的）、`outputs[].to`（吐给谁）、`notDo`（越界清单）、`boundary`（验收判据）。 派单必须带 `subject / verify / createdAt / state`，落在 `派单台账.json`，可追溯、",
+      "headings": 8
+    },
+    {
+      "id": "research-界面对比-md",
+      "title": "界面对比：可判定判据，不是「看起来更好」",
+      "path": "research/界面对比.md",
+      "kind": "doc",
+      "sizeKB": 6.6,
+      "mtime": "2026-11-14T06:16:00.879Z",
+      "summary": "用户原话：**「界面设计还是在 hermes-agent 上做衍生吧，你的界面设计始终欠缺，而这些成熟的 agent 则刚好可以直接用」**。",
+      "headings": 6
+    },
+    {
+      "id": "research-00-七家深读总论-md",
+      "title": "7 个参照系统深读：共同结论与我们的路径",
+      "path": "research/00-七家深读总论.md",
+      "kind": "doc",
+      "sizeKB": 6.2,
+      "mtime": "2026-11-14T05:48:41.705Z",
+      "summary": "闭源两个不是靠二手描述，是靠本机发行物取证（`claude --help` 全量参数、`sdk-tools.d.ts` 枚举、SQLite schema 直读）。",
+      "headings": 7
+    },
+    {
+      "id": "research-vs-openclaw-md",
+      "title": "openclaw 剖析",
+      "path": "research/vs-openclaw.md",
+      "kind": "doc",
+      "sizeKB": 45.2,
+      "mtime": "2026-11-14T05:46:32.805Z",
+      "summary": "**OpenClaw 是一个\"跑在你自己机器上、住进你已有聊天软件里\"的多通道 AI 助手网关**：一个常驻 `Gateway` 进程把 28 个消息通道、几十家模型供应商、多种可替换 agent 运行时（自家 loop / Codex / Copilot / Claude CLI / ACP）、会话、工具、审批、密钥、记忆全部收进同一套控制平面，再用一条 ",
+      "headings": 13
+    },
+    {
+      "id": "research-vs-ecc-md",
+      "title": "ECC (Everything Claude Code) 剖析",
+      "path": "research/vs-ecc.md",
+      "kind": "doc",
+      "sizeKB": 24.6,
+      "mtime": "2026-11-14T05:36:00.882Z",
+      "summary": "ECC 自称 \"Harness-native agent operating system\"（`package.json:4`），实际形态是：**一套以 Markdown 为载体的 314 skills / 71 agents / 98 commands / 122 rules / 27 hooks 资产库，加一个 Node.js 选择性安装器（16 个目标",
+      "headings": 11
+    },
+    {
+      "id": "research-vs-dsh-md",
+      "title": "DeepSeek Harness 源码剖析",
+      "path": "research/vs-dsh.md",
+      "kind": "doc",
+      "sizeKB": 34.4,
+      "mtime": "2026-11-14T05:33:26.883Z",
+      "summary": "**一个\"没有特权的核心\"的插件树产品**：338 个包目录（336 个 npm 包）里没有一个\"主程序\"，整个 Harness 由 99 行 YAML 行（row）拼装出的 Cordis 插件树构成；模型适配、工具注册表、会话日志、沙箱、子代理、甚至 agent 循环本身都是可被配置替换的 `Service`，浏览器端再跑第二个 Cordis 实例，把 6",
+      "headings": 12
+    },
+    {
+      "id": "research-vs-closed-products-md",
+      "title": "ChatGPT 与 Claude Code 能力剖析（闭源，产品级）",
+      "path": "research/vs-closed-products.md",
+      "kind": "doc",
+      "sizeKB": 22.4,
+      "mtime": "2026-11-14T05:32:46.867Z",
+      "summary": "- **[确证]**：可由本机已安装的官方分发物／官方类型定义／官方发布物复现，注明文件、版本或字段。 - **[高置信]**：多来源一致，或来自官方文档但我方本机无法复核（本环境 `docs.claude.com`、`developers.openai.com`、`help.openai.com` 均被拦截或返回 403）。",
+      "headings": 6
+    },
+    {
+      "id": "research-vs-luanyujia-md",
+      "title": "vs-luanyujia",
+      "path": "research/vs-luanyujia.md",
+      "kind": "doc",
+      "sizeKB": 55.8,
+      "mtime": "2026-11-14T05:28:58.365Z",
+      "summary": "**它不是代码库，是一套\"让 10 条 AI 会话像 10 个同事一样长期不散架\"的操作系统式规矩，外加一个真跑过一年的 Electron 壳。** 一句话证据：`00-核心机制/README.md:79` 自述\"这三套机制**不是设计出来的，是被事故逼出来的**\"； `总纲.md:13` 自述\"核心只有一句：**记忆在文件里，不在会话里**\"。",
+      "headings": 14
+    },
+    {
+      "id": "research-vs-hermes-md",
+      "title": "hermes-agent 源码剖析",
+      "path": "research/vs-hermes.md",
+      "kind": "doc",
+      "sizeKB": 40.9,
+      "mtime": "2026-11-14T05:28:03.537Z",
+      "summary": "**Hermes = \"一个 agent core + 极窄工具腰 + 边缘能力\" 的个人通用 Agent 平台**：`agent/` 里一个同步 turn 循环（约 13.8 万行）被 CLI / TUI / Electron 桌面 / Web dashboard / ACP 编辑器 / 26 个消息平台插件共用，能力通过 **plugins + skil",
+      "headings": 13
+    },
+    {
+      "id": "research-记忆系统顶尖实践-调研报告-md",
+      "title": "Agent 记忆系统：顶尖实践调研（可查证版）",
+      "path": "research/记忆系统顶尖实践-调研报告.md",
+      "kind": "doc",
+      "sizeKB": 35.2,
+      "mtime": "2026-11-10T00:33:07.641Z",
+      "summary": "我在你的工作区里实跑了几件事，结论比\"25.6 KB\"这个数字更重要：",
+      "headings": 8
+    },
+    {
+      "id": "research-deep-luanyujia-md",
+      "title": "深读 3 · luanyujia-workbench",
+      "path": "research/deep-luanyujia.md",
+      "kind": "doc",
+      "sizeKB": 19.7,
+      "mtime": "2026-11-06T09:30:51.288Z",
+      "summary": "仓库 | `mashanglinyu/luanyujia-workbench`（196 文件：93 篇 md + 43 代码） | 本地 | `research/repos/luanyujia-workbench-main/` | 已读 | `00-核心机制/`：一-协作机制(前70行)、二-记忆机制(**全文253行**)、三-场景体系(前80行)、六-场",
+      "headings": 12
+    },
+    {
+      "id": "research-deep-vcp-md",
+      "title": "深读 2 · VCPToolBox 架构",
+      "path": "research/deep-vcp.md",
+      "kind": "doc",
+      "sizeKB": 11.5,
+      "mtime": "2026-11-06T09:29:25.816Z",
+      "summary": "仓库 | `lioensky/VCPToolBox`（3337 文件，Node.js CommonJS，70+ 插件） | 本地材料 | `research/raw/vcp/`（19 篇 / 709 KB）+ `vcp-tree.json` | 已读 | `docs/TECHNICAL_LITE.md` 全文 · `docs/ARCHITECTURE.md`",
+      "headings": 9
+    },
+    {
+      "id": "research-deep-superagent-md",
+      "title": "深读 1 · superagent 授权与执行模型",
+      "path": "research/deep-superagent.md",
+      "kind": "doc",
+      "sizeKB": 8.6,
+      "mtime": "2026-11-06T09:28:26.432Z",
+      "summary": "仓库 | `dsh-superagent-prototype`（MIT，TypeScript，216 文件） | 本地 | `research/repos/superagent/` | 已读 | `docs/000-philosophy.md` 全文 · `001-domain.md` 全文 · `002-authorization.md` 全文 · `00",
+      "headings": 8
+    }
+  ]
+}

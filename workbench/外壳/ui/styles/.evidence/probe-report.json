@@ -1,0 +1,1146 @@
+{
+  "generatedAt": "2026-11-08T03:04:06.233Z",
+  "chrome": "C:/Users/15282/AppData/Local/Google/Chrome/Application/chrome.exe",
+  "pad": 18,
+  "runs": [
+    {
+      "label": "1440",
+      "url": "probe-skeleton.html",
+      "vw": 1440,
+      "vh": 748,
+      "pageOverflow": false,
+      "scrollW": 1440,
+      "clientW": 1440,
+      "shell": {
+        "app": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 748,
+          "right": 1440,
+          "pos": "static"
+        },
+        "top": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 40,
+          "right": 1440,
+          "pos": "relative"
+        },
+        "scene": {
+          "x": 0,
+          "y": 40,
+          "w": 1440,
+          "h": 34,
+          "right": 1440,
+          "pos": "static"
+        },
+        "body": {
+          "x": 0,
+          "y": 74,
+          "w": 1440,
+          "h": 650,
+          "right": 1440,
+          "pos": "relative"
+        },
+        "main": {
+          "x": 0,
+          "y": 74,
+          "w": 1095,
+          "h": 650,
+          "right": 1095,
+          "pos": "relative"
+        },
+        "side": {
+          "x": 1100,
+          "y": 74,
+          "w": 340,
+          "h": 650,
+          "right": 1440,
+          "pos": "static"
+        },
+        "handle": {
+          "x": 1095,
+          "y": 74,
+          "w": 5,
+          "h": 650,
+          "right": 1100,
+          "pos": "relative"
+        },
+        "foot": {
+          "x": 0,
+          "y": 724,
+          "w": 1440,
+          "h": 24,
+          "right": 1440,
+          "pos": "static"
+        },
+        "grid": {
+          "x": 0,
+          "y": 74,
+          "w": 1095,
+          "h": 650,
+          "right": 1095,
+          "pos": "static"
+        }
+      },
+      "sideMode": "inline",
+      "sideTransform": "none",
+      "sideVisible": true,
+      "spills": [],
+      "spillCount": 0,
+      "bodyScrollLeft": 0,
+      "verticalText": [],
+      "verticalCount": 0,
+      "scale": {
+        "fonts": [
+          "11px",
+          "12px"
+        ],
+        "fontCount": 2,
+        "radii": [
+          "4px"
+        ],
+        "radiusCount": 1,
+        "shadowCount": 1
+      },
+      "contrast": [
+        {
+          "what": "正文一级",
+          "ratio": 15.58
+        },
+        {
+          "what": "正文二级",
+          "ratio": 5.58
+        },
+        {
+          "what": "正文三级",
+          "ratio": 5.97
+        },
+        {
+          "what": "表格正文",
+          "ratio": 15.58
+        },
+        {
+          "what": "徽标 ok",
+          "ratio": 6.19
+        },
+        {
+          "what": "强调文字",
+          "ratio": 8.88
+        }
+      ],
+      "counts": {
+        "wb-titlebar": 1,
+        "wb-scenebar": 1,
+        "wb-body": 1,
+        "wb-split": 1,
+        "wb-main": 1,
+        "wb-side": 1,
+        "wb-footbar": 1,
+        "wb-btn": 2,
+        "wb-input": 0,
+        "wb-textarea": 1,
+        "wb-select": 1,
+        "wb-badge": 4,
+        "wb-card": 0,
+        "wb-row": 6,
+        "wb-table": 1,
+        "wb-tabs": 0,
+        "wb-tab": 0,
+        "wb-empty": 0,
+        "wb-toast": 0,
+        "wb-switch": 0,
+        "wb-bar": 0,
+        "wb-panel": 2,
+        "wb-panel-head": 5,
+        "wb-panel-body": 2,
+        "wb-split-handle": 1
+      },
+      "fill": {
+        "gridH": 650,
+        "panelH": 648,
+        "gapBottom": 1,
+        "fillRatio": 1
+      }
+    },
+    {
+      "label": "1280",
+      "url": "probe-skeleton.html",
+      "vw": 1280,
+      "vh": 708,
+      "pageOverflow": false,
+      "scrollW": 1280,
+      "clientW": 1280,
+      "shell": {
+        "app": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 708,
+          "right": 1280,
+          "pos": "static"
+        },
+        "top": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 40,
+          "right": 1280,
+          "pos": "relative"
+        },
+        "scene": {
+          "x": 0,
+          "y": 40,
+          "w": 1280,
+          "h": 34,
+          "right": 1280,
+          "pos": "static"
+        },
+        "body": {
+          "x": 0,
+          "y": 74,
+          "w": 1280,
+          "h": 610,
+          "right": 1280,
+          "pos": "relative"
+        },
+        "main": {
+          "x": 0,
+          "y": 74,
+          "w": 975,
+          "h": 610,
+          "right": 975,
+          "pos": "relative"
+        },
+        "side": {
+          "x": 980,
+          "y": 74,
+          "w": 300,
+          "h": 610,
+          "right": 1280,
+          "pos": "static"
+        },
+        "handle": {
+          "x": 975,
+          "y": 74,
+          "w": 5,
+          "h": 610,
+          "right": 980,
+          "pos": "relative"
+        },
+        "foot": {
+          "x": 0,
+          "y": 684,
+          "w": 1280,
+          "h": 24,
+          "right": 1280,
+          "pos": "static"
+        },
+        "grid": {
+          "x": 0,
+          "y": 74,
+          "w": 975,
+          "h": 610,
+          "right": 975,
+          "pos": "static"
+        }
+      },
+      "sideMode": "inline",
+      "sideTransform": "none",
+      "sideVisible": true,
+      "spills": [],
+      "spillCount": 0,
+      "bodyScrollLeft": 0,
+      "verticalText": [],
+      "verticalCount": 0,
+      "scale": {
+        "fonts": [
+          "11px",
+          "12px"
+        ],
+        "fontCount": 2,
+        "radii": [
+          "4px"
+        ],
+        "radiusCount": 1,
+        "shadowCount": 1
+      },
+      "contrast": [
+        {
+          "what": "正文一级",
+          "ratio": 15.58
+        },
+        {
+          "what": "正文二级",
+          "ratio": 5.58
+        },
+        {
+          "what": "正文三级",
+          "ratio": 5.97
+        },
+        {
+          "what": "表格正文",
+          "ratio": 15.58
+        },
+        {
+          "what": "徽标 ok",
+          "ratio": 6.19
+        },
+        {
+          "what": "强调文字",
+          "ratio": 8.88
+        }
+      ],
+      "counts": {
+        "wb-titlebar": 1,
+        "wb-scenebar": 1,
+        "wb-body": 1,
+        "wb-split": 1,
+        "wb-main": 1,
+        "wb-side": 1,
+        "wb-footbar": 1,
+        "wb-btn": 2,
+        "wb-input": 0,
+        "wb-textarea": 1,
+        "wb-select": 1,
+        "wb-badge": 4,
+        "wb-card": 0,
+        "wb-row": 6,
+        "wb-table": 1,
+        "wb-tabs": 0,
+        "wb-tab": 0,
+        "wb-empty": 0,
+        "wb-toast": 0,
+        "wb-switch": 0,
+        "wb-bar": 0,
+        "wb-panel": 2,
+        "wb-panel-head": 5,
+        "wb-panel-body": 2,
+        "wb-split-handle": 1
+      },
+      "fill": {
+        "gridH": 610,
+        "panelH": 608,
+        "gapBottom": 1,
+        "fillRatio": 1
+      }
+    },
+    {
+      "label": "1100",
+      "url": "probe-skeleton.html",
+      "vw": 1100,
+      "vh": 668,
+      "pageOverflow": false,
+      "scrollW": 1100,
+      "clientW": 1100,
+      "shell": {
+        "app": {
+          "x": 0,
+          "y": 0,
+          "w": 1100,
+          "h": 668,
+          "right": 1100,
+          "pos": "static"
+        },
+        "top": {
+          "x": 0,
+          "y": 0,
+          "w": 1100,
+          "h": 40,
+          "right": 1100,
+          "pos": "relative"
+        },
+        "scene": {
+          "x": 0,
+          "y": 40,
+          "w": 1100,
+          "h": 34,
+          "right": 1100,
+          "pos": "static"
+        },
+        "body": {
+          "x": 0,
+          "y": 74,
+          "w": 1100,
+          "h": 570,
+          "right": 1100,
+          "pos": "relative"
+        },
+        "main": {
+          "x": 0,
+          "y": 74,
+          "w": 795,
+          "h": 570,
+          "right": 795,
+          "pos": "relative"
+        },
+        "side": {
+          "x": 800,
+          "y": 74,
+          "w": 300,
+          "h": 570,
+          "right": 1100,
+          "pos": "static"
+        },
+        "handle": {
+          "x": 795,
+          "y": 74,
+          "w": 5,
+          "h": 570,
+          "right": 800,
+          "pos": "relative"
+        },
+        "foot": {
+          "x": 0,
+          "y": 644,
+          "w": 1100,
+          "h": 24,
+          "right": 1100,
+          "pos": "static"
+        },
+        "grid": {
+          "x": 0,
+          "y": 74,
+          "w": 795,
+          "h": 570,
+          "right": 795,
+          "pos": "static"
+        }
+      },
+      "sideMode": "inline",
+      "sideTransform": "none",
+      "sideVisible": true,
+      "spills": [],
+      "spillCount": 0,
+      "bodyScrollLeft": 0,
+      "verticalText": [],
+      "verticalCount": 0,
+      "scale": {
+        "fonts": [
+          "11px",
+          "12px"
+        ],
+        "fontCount": 2,
+        "radii": [
+          "4px"
+        ],
+        "radiusCount": 1,
+        "shadowCount": 1
+      },
+      "contrast": [
+        {
+          "what": "正文一级",
+          "ratio": 15.58
+        },
+        {
+          "what": "正文二级",
+          "ratio": 5.58
+        },
+        {
+          "what": "正文三级",
+          "ratio": 5.97
+        },
+        {
+          "what": "表格正文",
+          "ratio": 15.58
+        },
+        {
+          "what": "徽标 ok",
+          "ratio": 6.19
+        },
+        {
+          "what": "强调文字",
+          "ratio": 8.88
+        }
+      ],
+      "counts": {
+        "wb-titlebar": 1,
+        "wb-scenebar": 1,
+        "wb-body": 1,
+        "wb-split": 1,
+        "wb-main": 1,
+        "wb-side": 1,
+        "wb-footbar": 1,
+        "wb-btn": 2,
+        "wb-input": 0,
+        "wb-textarea": 1,
+        "wb-select": 1,
+        "wb-badge": 4,
+        "wb-card": 0,
+        "wb-row": 6,
+        "wb-table": 1,
+        "wb-tabs": 0,
+        "wb-tab": 0,
+        "wb-empty": 0,
+        "wb-toast": 0,
+        "wb-switch": 0,
+        "wb-bar": 0,
+        "wb-panel": 2,
+        "wb-panel-head": 5,
+        "wb-panel-body": 2,
+        "wb-split-handle": 1
+      },
+      "fill": {
+        "gridH": 570,
+        "panelH": 568,
+        "gapBottom": 1,
+        "fillRatio": 1
+      }
+    },
+    {
+      "label": "900",
+      "url": "probe-skeleton.html",
+      "vw": 900,
+      "vh": 628,
+      "pageOverflow": false,
+      "scrollW": 900,
+      "clientW": 900,
+      "shell": {
+        "app": {
+          "x": 0,
+          "y": 0,
+          "w": 900,
+          "h": 628,
+          "right": 900,
+          "pos": "static"
+        },
+        "top": {
+          "x": 0,
+          "y": 0,
+          "w": 900,
+          "h": 34,
+          "right": 900,
+          "pos": "relative"
+        },
+        "scene": {
+          "x": 0,
+          "y": 34,
+          "w": 900,
+          "h": 28,
+          "right": 900,
+          "pos": "static"
+        },
+        "body": {
+          "x": 0,
+          "y": 62,
+          "w": 900,
+          "h": 544,
+          "right": 900,
+          "pos": "relative"
+        },
+        "main": {
+          "x": 0,
+          "y": 62,
+          "w": 615,
+          "h": 544,
+          "right": 615,
+          "pos": "relative"
+        },
+        "side": {
+          "x": 620,
+          "y": 62,
+          "w": 280,
+          "h": 544,
+          "right": 900,
+          "pos": "static"
+        },
+        "handle": {
+          "x": 615,
+          "y": 62,
+          "w": 5,
+          "h": 544,
+          "right": 620,
+          "pos": "relative"
+        },
+        "foot": {
+          "x": 0,
+          "y": 606,
+          "w": 900,
+          "h": 22,
+          "right": 900,
+          "pos": "static"
+        },
+        "grid": {
+          "x": 0,
+          "y": 62,
+          "w": 615,
+          "h": 544,
+          "right": 615,
+          "pos": "static"
+        }
+      },
+      "sideMode": "inline",
+      "sideTransform": "none",
+      "sideVisible": true,
+      "spills": [],
+      "spillCount": 0,
+      "bodyScrollLeft": 0,
+      "verticalText": [],
+      "verticalCount": 0,
+      "scale": {
+        "fonts": [
+          "11px",
+          "12px"
+        ],
+        "fontCount": 2,
+        "radii": [
+          "4px"
+        ],
+        "radiusCount": 1,
+        "shadowCount": 1
+      },
+      "contrast": [
+        {
+          "what": "正文一级",
+          "ratio": 15.58
+        },
+        {
+          "what": "正文二级",
+          "ratio": 5.58
+        },
+        {
+          "what": "正文三级",
+          "ratio": 5.97
+        },
+        {
+          "what": "表格正文",
+          "ratio": 15.58
+        },
+        {
+          "what": "徽标 ok",
+          "ratio": 6.19
+        },
+        {
+          "what": "强调文字",
+          "ratio": 8.88
+        }
+      ],
+      "counts": {
+        "wb-titlebar": 1,
+        "wb-scenebar": 1,
+        "wb-body": 1,
+        "wb-split": 1,
+        "wb-main": 1,
+        "wb-side": 1,
+        "wb-footbar": 1,
+        "wb-btn": 2,
+        "wb-input": 0,
+        "wb-textarea": 1,
+        "wb-select": 1,
+        "wb-badge": 4,
+        "wb-card": 0,
+        "wb-row": 6,
+        "wb-table": 1,
+        "wb-tabs": 0,
+        "wb-tab": 0,
+        "wb-empty": 0,
+        "wb-toast": 0,
+        "wb-switch": 0,
+        "wb-bar": 0,
+        "wb-panel": 2,
+        "wb-panel-head": 5,
+        "wb-panel-body": 2,
+        "wb-split-handle": 1
+      },
+      "fill": {
+        "gridH": 544,
+        "panelH": 542,
+        "gapBottom": 1,
+        "fillRatio": 1
+      }
+    },
+    {
+      "label": "760",
+      "url": "probe-skeleton.html",
+      "vw": 760,
+      "vh": 608,
+      "pageOverflow": false,
+      "scrollW": 760,
+      "clientW": 760,
+      "shell": {
+        "app": {
+          "x": 0,
+          "y": 0,
+          "w": 760,
+          "h": 608,
+          "right": 760,
+          "pos": "static"
+        },
+        "top": {
+          "x": 0,
+          "y": 0,
+          "w": 760,
+          "h": 34,
+          "right": 760,
+          "pos": "relative"
+        },
+        "scene": {
+          "x": 0,
+          "y": 34,
+          "w": 760,
+          "h": 28,
+          "right": 760,
+          "pos": "static"
+        },
+        "body": {
+          "x": 0,
+          "y": 62,
+          "w": 760,
+          "h": 524,
+          "right": 760,
+          "pos": "relative"
+        },
+        "main": {
+          "x": 0,
+          "y": 62,
+          "w": 760,
+          "h": 524,
+          "right": 760,
+          "pos": "relative"
+        },
+        "side": {
+          "x": 760,
+          "y": 62,
+          "w": 300,
+          "h": 524,
+          "right": 1060,
+          "pos": "absolute"
+        },
+        "handle": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "right": 0,
+          "pos": "relative"
+        },
+        "foot": {
+          "x": 0,
+          "y": 586,
+          "w": 760,
+          "h": 22,
+          "right": 760,
+          "pos": "static"
+        },
+        "grid": {
+          "x": 0,
+          "y": 62,
+          "w": 760,
+          "h": 524,
+          "right": 760,
+          "pos": "static"
+        }
+      },
+      "sideMode": "drawer",
+      "sideTransform": "translated",
+      "sideVisible": false,
+      "spills": [],
+      "spillCount": 0,
+      "bodyScrollLeft": 300,
+      "verticalText": [],
+      "verticalCount": 0,
+      "scale": {
+        "fonts": [
+          "11px",
+          "12px"
+        ],
+        "fontCount": 2,
+        "radii": [
+          "4px"
+        ],
+        "radiusCount": 1,
+        "shadowCount": 1
+      },
+      "contrast": [
+        {
+          "what": "正文一级",
+          "ratio": 15.58
+        },
+        {
+          "what": "正文二级",
+          "ratio": 5.58
+        },
+        {
+          "what": "正文三级",
+          "ratio": 5.97
+        },
+        {
+          "what": "表格正文",
+          "ratio": 15.58
+        },
+        {
+          "what": "徽标 ok",
+          "ratio": 6.19
+        },
+        {
+          "what": "强调文字",
+          "ratio": 8.88
+        }
+      ],
+      "counts": {
+        "wb-titlebar": 1,
+        "wb-scenebar": 1,
+        "wb-body": 1,
+        "wb-split": 1,
+        "wb-main": 1,
+        "wb-side": 1,
+        "wb-footbar": 1,
+        "wb-btn": 2,
+        "wb-input": 0,
+        "wb-textarea": 1,
+        "wb-select": 1,
+        "wb-badge": 4,
+        "wb-card": 0,
+        "wb-row": 6,
+        "wb-table": 1,
+        "wb-tabs": 0,
+        "wb-tab": 0,
+        "wb-empty": 0,
+        "wb-toast": 0,
+        "wb-switch": 0,
+        "wb-bar": 0,
+        "wb-panel": 2,
+        "wb-panel-head": 5,
+        "wb-panel-body": 2,
+        "wb-split-handle": 1
+      },
+      "fill": {
+        "gridH": 524,
+        "panelH": 522,
+        "gapBottom": 1,
+        "fillRatio": 1
+      }
+    },
+    {
+      "label": "720",
+      "url": "probe-skeleton.html",
+      "vw": 720,
+      "vh": 568,
+      "pageOverflow": false,
+      "scrollW": 720,
+      "clientW": 720,
+      "shell": {
+        "app": {
+          "x": 0,
+          "y": 0,
+          "w": 720,
+          "h": 568,
+          "right": 720,
+          "pos": "static"
+        },
+        "top": {
+          "x": 0,
+          "y": 0,
+          "w": 720,
+          "h": 34,
+          "right": 720,
+          "pos": "relative"
+        },
+        "scene": {
+          "x": 0,
+          "y": 34,
+          "w": 720,
+          "h": 28,
+          "right": 720,
+          "pos": "static"
+        },
+        "body": {
+          "x": 0,
+          "y": 62,
+          "w": 720,
+          "h": 484,
+          "right": 720,
+          "pos": "relative"
+        },
+        "main": {
+          "x": 0,
+          "y": 62,
+          "w": 720,
+          "h": 484,
+          "right": 720,
+          "pos": "relative"
+        },
+        "side": {
+          "x": 720,
+          "y": 62,
+          "w": 280,
+          "h": 484,
+          "right": 1000,
+          "pos": "absolute"
+        },
+        "handle": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "right": 0,
+          "pos": "relative"
+        },
+        "foot": {
+          "x": 0,
+          "y": 546,
+          "w": 720,
+          "h": 22,
+          "right": 720,
+          "pos": "static"
+        },
+        "grid": {
+          "x": 0,
+          "y": 62,
+          "w": 720,
+          "h": 484,
+          "right": 720,
+          "pos": "static"
+        }
+      },
+      "sideMode": "drawer",
+      "sideTransform": "translated",
+      "sideVisible": false,
+      "spills": [],
+      "spillCount": 0,
+      "bodyScrollLeft": 280,
+      "verticalText": [],
+      "verticalCount": 0,
+      "scale": {
+        "fonts": [
+          "11px",
+          "12px"
+        ],
+        "fontCount": 2,
+        "radii": [
+          "4px"
+        ],
+        "radiusCount": 1,
+        "shadowCount": 1
+      },
+      "contrast": [
+        {
+          "what": "正文一级",
+          "ratio": 15.58
+        },
+        {
+          "what": "正文二级",
+          "ratio": 5.58
+        },
+        {
+          "what": "正文三级",
+          "ratio": 5.97
+        },
+        {
+          "what": "表格正文",
+          "ratio": 15.58
+        },
+        {
+          "what": "徽标 ok",
+          "ratio": 6.19
+        },
+        {
+          "what": "强调文字",
+          "ratio": 8.88
+        }
+      ],
+      "counts": {
+        "wb-titlebar": 1,
+        "wb-scenebar": 1,
+        "wb-body": 1,
+        "wb-split": 1,
+        "wb-main": 1,
+        "wb-side": 1,
+        "wb-footbar": 1,
+        "wb-btn": 2,
+        "wb-input": 0,
+        "wb-textarea": 1,
+        "wb-select": 1,
+        "wb-badge": 4,
+        "wb-card": 0,
+        "wb-row": 6,
+        "wb-table": 1,
+        "wb-tabs": 0,
+        "wb-tab": 0,
+        "wb-empty": 0,
+        "wb-toast": 0,
+        "wb-switch": 0,
+        "wb-bar": 0,
+        "wb-panel": 2,
+        "wb-panel-head": 5,
+        "wb-panel-body": 2,
+        "wb-split-handle": 1
+      },
+      "fill": {
+        "gridH": 484,
+        "panelH": 482,
+        "gapBottom": 1,
+        "fillRatio": 1
+      }
+    }
+  ],
+  "preview": {
+    "url": "probe-style-preview.html",
+    "vw": 1280,
+    "vh": 2848,
+    "pageOverflow": false,
+    "scrollW": 1280,
+    "clientW": 1280,
+    "shell": {
+      "app": {
+        "x": 70,
+        "y": 2624,
+        "w": 1140,
+        "h": 420,
+        "right": 1210,
+        "pos": "static"
+      },
+      "top": {
+        "x": 70,
+        "y": 2624,
+        "w": 1140,
+        "h": 40,
+        "right": 1210,
+        "pos": "relative"
+      },
+      "scene": {
+        "x": 70,
+        "y": 2664,
+        "w": 1140,
+        "h": 34,
+        "right": 1210,
+        "pos": "static"
+      },
+      "body": {
+        "x": 70,
+        "y": 2698,
+        "w": 1140,
+        "h": 322,
+        "right": 1210,
+        "pos": "relative"
+      },
+      "main": {
+        "x": 70,
+        "y": 2698,
+        "w": 835,
+        "h": 322,
+        "right": 905,
+        "pos": "relative"
+      },
+      "side": {
+        "x": 910,
+        "y": 2698,
+        "w": 300,
+        "h": 322,
+        "right": 1210,
+        "pos": "static"
+      },
+      "handle": {
+        "x": 905,
+        "y": 2698,
+        "w": 5,
+        "h": 322,
+        "right": 910,
+        "pos": "relative"
+      },
+      "foot": {
+        "x": 70,
+        "y": 3020,
+        "w": 1140,
+        "h": 24,
+        "right": 1210,
+        "pos": "static"
+      },
+      "grid": {
+        "x": 70,
+        "y": 2698,
+        "w": 835,
+        "h": 322,
+        "right": 905,
+        "pos": "static"
+      }
+    },
+    "sideMode": "inline",
+    "sideTransform": "none",
+    "sideVisible": true,
+    "spills": [],
+    "spillCount": 0,
+    "bodyScrollLeft": 0,
+    "verticalText": [],
+    "verticalCount": 0,
+    "scale": {
+      "fonts": [
+        "11px",
+        "12px",
+        "13px",
+        "15px",
+        "18px",
+        "22px",
+        "28px"
+      ],
+      "fontCount": 7,
+      "radii": [
+        "4px",
+        "10px"
+      ],
+      "radiusCount": 2,
+      "shadowCount": 3
+    },
+    "contrast": [
+      {
+        "what": "正文一级",
+        "ratio": 15.58
+      },
+      {
+        "what": "正文二级",
+        "ratio": 5.58
+      },
+      {
+        "what": "正文三级",
+        "ratio": 5.97
+      },
+      {
+        "what": "表格正文",
+        "ratio": 16.32
+      },
+      {
+        "what": "徽标 ok",
+        "ratio": 6.19
+      },
+      {
+        "what": "强调文字",
+        "ratio": 8.88
+      }
+    ],
+    "counts": {
+      "wb-titlebar": 1,
+      "wb-scenebar": 1,
+      "wb-body": 1,
+      "wb-split": 1,
+      "wb-main": 1,
+      "wb-side": 1,
+      "wb-footbar": 1,
+      "wb-btn": 35,
+      "wb-input": 3,
+      "wb-textarea": 2,
+      "wb-select": 2,
+      "wb-badge": 15,
+      "wb-card": 6,
+      "wb-row": 14,
+      "wb-table": 2,
+      "wb-tabs": 2,
+      "wb-tab": 7,
+      "wb-empty": 4,
+      "wb-toast": 3,
+      "wb-switch": 2,
+      "wb-bar": 4,
+      "wb-panel": 4,
+      "wb-panel-head": 7,
+      "wb-panel-body": 4,
+      "wb-split-handle": 1
+    },
+    "fill": {
+      "gridH": 322,
+      "panelH": 280,
+      "gapBottom": 451,
+      "fillRatio": 0.87
+    }
+  }
+}

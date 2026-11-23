@@ -1,0 +1,844 @@
+{
+  "at": "2026-11-18T01:49:50Z",
+  "state": "PASS",
+  "source": "tools/build-topology.py（读真实文件，不编造）",
+  "concept": "拓扑连线图：节点 = 东西在哪一层，连线 = 谁读谁 / 谁写谁 / 谁兜底",
+  "layers": [
+    {
+      "id": "L0",
+      "name": "宪法",
+      "desc": "铁律；只有人能改"
+    },
+    {
+      "id": "L1",
+      "name": "共享层",
+      "desc": "所有人共用的事实"
+    },
+    {
+      "id": "L2",
+      "name": "场景私有",
+      "desc": "各自记忆与身份，互不串"
+    },
+    {
+      "id": "L3",
+      "name": "运行时",
+      "desc": "真跑的工具与界面"
+    },
+    {
+      "id": "L4",
+      "name": "归档",
+      "desc": "只进不改，可恢复"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "host",
+      "label": "宿主（唯一决策人）",
+      "layer": "L0",
+      "kind": "host",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "判断类的事只由人定：好不好 / 该不该做 / 要不要花钱"
+    },
+    {
+      "id": "constitution",
+      "label": "宪法 · 硬约束",
+      "layer": "L0",
+      "kind": "constitution",
+      "path": "prototype/hermes-agents/verify-goal.mjs",
+      "bytes": 46079,
+      "mb": 0.05,
+      "at": "2026-11-18T01:35:05Z",
+      "sub": "22 条硬要求 R1–R14 + A/B/C/D；改判据需人同意"
+    },
+    {
+      "id": "fourstate",
+      "label": "四态纪律",
+      "layer": "L0",
+      "kind": "constitution",
+      "path": "tools/evolve/audit-four-state-layers.mjs",
+      "bytes": 30744,
+      "mb": 0.03,
+      "at": "2026-11-18T01:35:34Z",
+      "sub": "PASS/WARN/FAIL/UNKNOWN；UNKNOWN 永不并入通过"
+    },
+    {
+      "id": "ledger",
+      "label": "改进台账",
+      "layer": "L1",
+      "kind": "shared",
+      "path": "research/改进台账.json",
+      "bytes": 301080,
+      "mb": 0.3,
+      "at": "2026-11-17T23:17:49Z",
+      "sub": "191 条 · 结案 11 · 独立验证 10",
+      "items": 191,
+      "closed": 11,
+      "independent": 10
+    },
+    {
+      "id": "evidence",
+      "label": "证据仓",
+      "layer": "L1",
+      "kind": "shared",
+      "path": "evidence",
+      "bytes": 88626178,
+      "mb": 88.63,
+      "at": "2026-11-18T00:08:05Z",
+      "sub": "11784 个文件"
+    },
+    {
+      "id": "collab",
+      "label": "协作请求/通知",
+      "layer": "L1",
+      "kind": "shared",
+      "path": "evidence/collab",
+      "bytes": 10782,
+      "mb": 0.01,
+      "at": "2026-11-18T00:37:29Z",
+      "sub": "派单 + 通知看板 + 回执（只追加）"
+    },
+    {
+      "id": "matrix",
+      "label": "31 维矩阵",
+      "layer": "L1",
+      "kind": "shared",
+      "path": "prototype/hermes-agents/matrix-data.json",
+      "bytes": 235389,
+      "mb": 0.24,
+      "at": "2026-11-18T01:35:05Z",
+      "sub": "23 个主体 × 31 维"
+    },
+    {
+      "id": "docs",
+      "label": "架构文档",
+      "layer": "L1",
+      "kind": "shared",
+      "path": "research/架构分层.md",
+      "bytes": 10925,
+      "mb": 0.01,
+      "at": "2026-11-14T09:07:11Z",
+      "sub": "分层与不变量"
+    },
+    {
+      "id": "sc-arch-review",
+      "label": "架构梳理",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 3 / 下游 4",
+      "sceneId": "arch-review",
+      "deg": 7,
+      "up": 3,
+      "down": 4
+    },
+    {
+      "id": "sc-backend-craft",
+      "label": "后端工坊",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 4 / 下游 0",
+      "sceneId": "backend-craft",
+      "deg": 4,
+      "up": 4,
+      "down": 0
+    },
+    {
+      "id": "sc-build-plan",
+      "label": "实施计划",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 3 / 下游 5",
+      "sceneId": "build-plan",
+      "deg": 8,
+      "up": 3,
+      "down": 5
+    },
+    {
+      "id": "sc-competitor-analyze",
+      "label": "竞品拆解",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 1 / 下游 2",
+      "sceneId": "competitor-analyze",
+      "deg": 3,
+      "up": 1,
+      "down": 2
+    },
+    {
+      "id": "sc-frontend-craft",
+      "label": "前端工坊",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 4 / 下游 0",
+      "sceneId": "frontend-craft",
+      "deg": 4,
+      "up": 4,
+      "down": 0
+    },
+    {
+      "id": "sc-hub",
+      "label": "中枢",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 7 / 下游 2",
+      "sceneId": "hub",
+      "deg": 9,
+      "up": 7,
+      "down": 2
+    },
+    {
+      "id": "sc-incident-analysis",
+      "label": "故障分析",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 1 / 下游 5",
+      "sceneId": "incident-analysis",
+      "deg": 6,
+      "up": 1,
+      "down": 5
+    },
+    {
+      "id": "sc-pc-cleanup",
+      "label": "本地电脑",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 3 / 下游 1",
+      "sceneId": "pc-cleanup",
+      "deg": 4,
+      "up": 3,
+      "down": 1
+    },
+    {
+      "id": "sc-research",
+      "label": "调研",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 0 / 下游 4",
+      "sceneId": "research",
+      "deg": 4,
+      "up": 0,
+      "down": 4
+    },
+    {
+      "id": "sc-reverse-eng",
+      "label": "逆向分析",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 1 / 下游 6",
+      "sceneId": "reverse-eng",
+      "deg": 7,
+      "up": 1,
+      "down": 6
+    },
+    {
+      "id": "sc-self-review",
+      "label": "自我复盘",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 0 / 下游 2",
+      "sceneId": "self-review",
+      "deg": 2,
+      "up": 0,
+      "down": 2
+    },
+    {
+      "id": "sc-tool-forge",
+      "label": "工具工坊",
+      "layer": "L2",
+      "kind": "scene",
+      "path": null,
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "上游 4 / 下游 0",
+      "sceneId": "tool-forge",
+      "deg": 4,
+      "up": 4,
+      "down": 0
+    },
+    {
+      "id": "identity",
+      "label": "身份索引",
+      "layer": "L2",
+      "kind": "identity",
+      "path": "apps/vouch-web/src/web-ui/src/app/scenes/workbench/scenePanels/identity.json",
+      "bytes": 3335,
+      "mb": 0.0,
+      "at": "2026-11-17T14:57:58Z",
+      "sub": "12 行 · 已绑定会话 0",
+      "bound": 0,
+      "total": 12
+    },
+    {
+      "id": "rt-verify",
+      "label": "验收器",
+      "layer": "L3",
+      "kind": "runtime",
+      "path": "prototype/agent-ui",
+      "bytes": 2419789,
+      "mb": 2.42,
+      "at": "2026-11-18T01:35:04Z",
+      "sub": "37 个 verify/audit"
+    },
+    {
+      "id": "rt-tools",
+      "label": "工具链",
+      "layer": "L3",
+      "kind": "runtime",
+      "path": "tools",
+      "bytes": 1399700,
+      "mb": 1.4,
+      "at": "2026-11-18T01:49:49Z",
+      "sub": "154 个 .mjs"
+    },
+    {
+      "id": "rt-ui",
+      "label": "界面",
+      "layer": "L3",
+      "kind": "runtime",
+      "path": "apps/vouch-web/src/web-ui/src/app/scenes",
+      "bytes": 5192214,
+      "mb": 5.19,
+      "at": "2026-11-18T01:18:16Z",
+      "sub": "场景面板与拓扑"
+    },
+    {
+      "id": "rt-productsrv",
+      "label": "产品服务器",
+      "layer": "L3",
+      "kind": "runtime",
+      "path": "tools/workbench/serve.mjs",
+      "bytes": 7077,
+      "mb": 0.01,
+      "at": "2026-11-17T17:53:51Z",
+      "sub": "9 个真接线的 API 端点"
+    },
+    {
+      "id": "ar-verify",
+      "label": "验收历史",
+      "layer": "L4",
+      "kind": "archive",
+      "path": "evidence/evolve",
+      "bytes": 1380740,
+      "mb": 1.38,
+      "at": "2026-11-17T20:58:56Z",
+      "sub": "度量证据（带时间戳，过期即 UNKNOWN）"
+    },
+    {
+      "id": "ar-backup",
+      "label": "备份",
+      "layer": "L4",
+      "kind": "archive",
+      "path": "research/competitors",
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "22 个参照项目拆解"
+    },
+    {
+      "id": "ar-cleanup",
+      "label": "清理台账",
+      "layer": "L4",
+      "kind": "archive",
+      "path": "evidence/cleanup",
+      "bytes": 0,
+      "mb": 0,
+      "at": null,
+      "sub": "只追加；本工具不删东西"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E001",
+      "from": "host",
+      "to": "constitution",
+      "how": "guards",
+      "label": "人定规则 → 机器守"
+    },
+    {
+      "id": "E002",
+      "from": "host",
+      "to": "fourstate",
+      "how": "guards",
+      "label": "人定四态 → 机器守"
+    },
+    {
+      "id": "E003",
+      "from": "constitution",
+      "to": "fourstate",
+      "how": "reads",
+      "label": "宪法引用四态纪律"
+    },
+    {
+      "id": "E004",
+      "from": "constitution",
+      "to": "ledger",
+      "how": "guards",
+      "label": "台账每条都要有基线/前后/样本量"
+    },
+    {
+      "id": "E005",
+      "from": "fourstate",
+      "to": "evidence",
+      "how": "guards",
+      "label": "证据必须带四态；UNKNOWN 不当通过"
+    },
+    {
+      "id": "E006",
+      "from": "constitution",
+      "to": "matrix",
+      "how": "guards",
+      "label": "矩阵不许假绿"
+    },
+    {
+      "id": "E007",
+      "from": "ledger",
+      "to": "evidence",
+      "how": "writes",
+      "label": "每条改进写证据"
+    },
+    {
+      "id": "E008",
+      "from": "collab",
+      "to": "ledger",
+      "how": "writes",
+      "label": "回执结论落台账（不污染：请求本身不入台账）"
+    },
+    {
+      "id": "E009",
+      "from": "matrix",
+      "to": "docs",
+      "how": "reads",
+      "label": "维度定义来自架构文档"
+    },
+    {
+      "id": "E010",
+      "from": "identity",
+      "to": "sc-hub",
+      "how": "injects",
+      "label": "身份索引查表 → 中枢知道自己是中枢"
+    },
+    {
+      "id": "E011",
+      "from": "sc-arch-review",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E012",
+      "from": "sc-backend-craft",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E013",
+      "from": "sc-build-plan",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E014",
+      "from": "sc-competitor-analyze",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E015",
+      "from": "sc-frontend-craft",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E016",
+      "from": "sc-hub",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E017",
+      "from": "sc-incident-analysis",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E018",
+      "from": "sc-pc-cleanup",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E019",
+      "from": "sc-research",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E020",
+      "from": "sc-reverse-eng",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E021",
+      "from": "sc-self-review",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E022",
+      "from": "sc-tool-forge",
+      "to": "ledger",
+      "how": "writes",
+      "label": "场景产出的改进写台账"
+    },
+    {
+      "id": "E023",
+      "from": "collab",
+      "to": "sc-self-review",
+      "how": "reads",
+      "label": "派单落到承接场景"
+    },
+    {
+      "id": "E024",
+      "from": "collab",
+      "to": "sc-tool-forge",
+      "how": "reads",
+      "label": "派单落到承接场景"
+    },
+    {
+      "id": "E025",
+      "from": "sc-arch-review",
+      "to": "sc-build-plan",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E026",
+      "from": "sc-competitor-analyze",
+      "to": "sc-arch-review",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E027",
+      "from": "sc-reverse-eng",
+      "to": "sc-arch-review",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E028",
+      "from": "sc-research",
+      "to": "sc-arch-review",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E029",
+      "from": "sc-arch-review",
+      "to": "sc-backend-craft",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E030",
+      "from": "sc-reverse-eng",
+      "to": "sc-backend-craft",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E031",
+      "from": "sc-incident-analysis",
+      "to": "sc-backend-craft",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E032",
+      "from": "sc-build-plan",
+      "to": "sc-backend-craft",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E033",
+      "from": "sc-build-plan",
+      "to": "sc-frontend-craft",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E034",
+      "from": "sc-build-plan",
+      "to": "sc-tool-forge",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E035",
+      "from": "sc-reverse-eng",
+      "to": "sc-build-plan",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E036",
+      "from": "sc-research",
+      "to": "sc-competitor-analyze",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E037",
+      "from": "sc-arch-review",
+      "to": "sc-frontend-craft",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E038",
+      "from": "sc-reverse-eng",
+      "to": "sc-frontend-craft",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E039",
+      "from": "sc-research",
+      "to": "sc-frontend-craft",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E040",
+      "from": "sc-competitor-analyze",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E041",
+      "from": "sc-reverse-eng",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E042",
+      "from": "sc-arch-review",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E043",
+      "from": "sc-build-plan",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E044",
+      "from": "sc-incident-analysis",
+      "to": "sc-build-plan",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E045",
+      "from": "sc-incident-analysis",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E046",
+      "from": "sc-hub",
+      "to": "sc-incident-analysis",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E047",
+      "from": "sc-pc-cleanup",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E048",
+      "from": "sc-hub",
+      "to": "sc-pc-cleanup",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E049",
+      "from": "sc-build-plan",
+      "to": "sc-pc-cleanup",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E050",
+      "from": "sc-incident-analysis",
+      "to": "sc-pc-cleanup",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E051",
+      "from": "sc-research",
+      "to": "sc-reverse-eng",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E052",
+      "from": "sc-self-review",
+      "to": "sc-hub",
+      "how": "flow",
+      "label": "outputs.to"
+    },
+    {
+      "id": "E053",
+      "from": "sc-self-review",
+      "to": "sc-tool-forge",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E054",
+      "from": "sc-incident-analysis",
+      "to": "sc-tool-forge",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E055",
+      "from": "sc-reverse-eng",
+      "to": "sc-tool-forge",
+      "how": "flow",
+      "label": "inputs.from"
+    },
+    {
+      "id": "E056",
+      "from": "sc-tool-forge",
+      "to": "rt-tools",
+      "how": "writes",
+      "label": "工具工坊维护工具链"
+    },
+    {
+      "id": "E057",
+      "from": "sc-arch-review",
+      "to": "docs",
+      "how": "writes",
+      "label": "架构梳理写架构文档"
+    },
+    {
+      "id": "E058",
+      "from": "sc-frontend-craft",
+      "to": "rt-ui",
+      "how": "writes",
+      "label": "前端工坊改界面"
+    },
+    {
+      "id": "E059",
+      "from": "rt-verify",
+      "to": "constitution",
+      "how": "reads",
+      "label": "验收器实现宪法判据"
+    },
+    {
+      "id": "E060",
+      "from": "rt-productsrv",
+      "to": "rt-ui",
+      "how": "serves",
+      "label": "产品服务器供给界面数据"
+    },
+    {
+      "id": "E061",
+      "from": "rt-verify",
+      "to": "ar-verify",
+      "how": "writes",
+      "label": "验收结果进证据仓"
+    },
+    {
+      "id": "E062",
+      "from": "rt-tools",
+      "to": "ar-backup",
+      "how": "writes",
+      "label": "工具产出参照拆解"
+    }
+  ],
+  "stats": {
+    "nodes": 28,
+    "edges": 62,
+    "layers": 5,
+    "byLayer": {
+      "L0": 3,
+      "L1": 5,
+      "L2": 13,
+      "L3": 4,
+      "L4": 3
+    }
+  }
+}

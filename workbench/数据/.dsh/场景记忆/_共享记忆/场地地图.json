@@ -1,0 +1,560 @@
+{
+  "_at": "2026-11-14T04:54:21.198Z",
+  "_note": "场地地图 —— \"这东西归谁\"的唯一判据出处。生成自真实目录结构。",
+  "_tiers": {
+    "A": "共享·宪法（只有宿主改）",
+    "C": "共享·工具与运行时（管理员场景改，别人提请求）",
+    "B": "共享·板与台账（各场景写自己那些行）",
+    "D": "自己的专属（自己改）",
+    "E": "别人的专属（⛔ 一个字都不许写）"
+  },
+  "sceneCount": 12,
+  "rules": [
+    {
+      "tier": "A",
+      "pattern": "workbench/数据/.dsh/AGENTS.md",
+      "owner": "宿主",
+      "desc": "全局铁律（每轮注入，只有宿主能改）"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/工具/**",
+      "owner": "管理员场景",
+      "desc": "工具脚本"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/数据/.dsh/skills/**",
+      "owner": "管理员场景",
+      "desc": "技能"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/数据/.dsh/MCP/**",
+      "owner": "管理员场景",
+      "desc": "MCP"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/数据/.dsh/plugins/**",
+      "owner": "管理员场景",
+      "desc": "插件"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/外壳/main.js",
+      "owner": "管理员场景",
+      "desc": "主进程"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/外壳/preload.js",
+      "owner": "管理员场景",
+      "desc": "预加载"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/外壳/ui/**",
+      "owner": "管理员场景",
+      "desc": "前端界面"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/数据/.dsh/场景记忆/*/AGENTS.local.md",
+      "owner": "管理员场景",
+      "desc": "场景上下文注入文件（由工具生成，引擎自动读取）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景路由.yaml",
+      "owner": "各场景写自己那些行",
+      "desc": "场景路由表（中枢判断归属的权威依据）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/A档确认.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/_待办.md",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/_跨场景通知.md",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/体检结果.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/健康度.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/关键资产.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/冲突.md",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/场地地图.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/基线.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/派单台账.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/索引.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/索引.md",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/记忆地图.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/身份索引.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/进化台账.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/项目.json",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/**",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账（通配，覆盖所有当前和未来的台账文件）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/areas/**",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账子目录（areas）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_共享记忆/基线历史/**",
+      "owner": "各场景写自己那些行",
+      "desc": "共享台账子目录（基线历史）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/外壳/scenarios/_场景身份索引.md",
+      "owner": "各场景写自己那些行",
+      "desc": "场景共享文档（_场景身份索引.md）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/外壳/scenarios/_跨场景协作.md",
+      "owner": "各场景写自己那些行",
+      "desc": "场景共享文档（_跨场景协作.md）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_待办.md",
+      "owner": "各场景写自己那些行",
+      "desc": "记忆根目录共享文件（_待办.md）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/_跨场景通知.md",
+      "owner": "各场景写自己那些行",
+      "desc": "记忆根目录共享文件（_跨场景通知.md）"
+    },
+    {
+      "tier": "B",
+      "pattern": "workbench/数据/.dsh/场景记忆/冲突.md",
+      "owner": "各场景写自己那些行",
+      "desc": "记忆根目录共享文件（冲突.md）"
+    },
+    {
+      "tier": "C",
+      "pattern": "workbench/sceneboard/pipelines/**",
+      "owner": "管理员场景",
+      "desc": "管线定义（跨场景流程编排）"
+    },
+    {
+      "tier": "D",
+      "scene": "arch-review",
+      "pattern": "workbench/外壳/scenarios/arch-review.json",
+      "owner": "arch-review",
+      "desc": "架构梳理 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "arch-review",
+      "pattern": "workbench/外壳/scenarios/arch-review-context.md",
+      "owner": "arch-review",
+      "desc": "架构梳理 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "arch-review",
+      "pattern": "workbench/数据/.dsh/场景记忆/架构梳理/**",
+      "owner": "arch-review",
+      "desc": "架构梳理 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "arch-review",
+      "pattern": "workbench/sceneboard/scenes/arch-review.json",
+      "owner": "arch-review",
+      "desc": "架构梳理 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "backend-craft",
+      "pattern": "workbench/外壳/scenarios/backend-craft.json",
+      "owner": "backend-craft",
+      "desc": "后端工坊 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "backend-craft",
+      "pattern": "workbench/外壳/scenarios/backend-craft-context.md",
+      "owner": "backend-craft",
+      "desc": "后端工坊 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "backend-craft",
+      "pattern": "workbench/数据/.dsh/场景记忆/后端工坊/**",
+      "owner": "backend-craft",
+      "desc": "后端工坊 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "backend-craft",
+      "pattern": "workbench/sceneboard/scenes/backend-craft.json",
+      "owner": "backend-craft",
+      "desc": "后端工坊 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "build-plan",
+      "pattern": "workbench/外壳/scenarios/build-plan.json",
+      "owner": "build-plan",
+      "desc": "实施计划 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "build-plan",
+      "pattern": "workbench/外壳/scenarios/build-plan-context.md",
+      "owner": "build-plan",
+      "desc": "实施计划 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "build-plan",
+      "pattern": "workbench/数据/.dsh/场景记忆/实施计划/**",
+      "owner": "build-plan",
+      "desc": "实施计划 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "build-plan",
+      "pattern": "workbench/sceneboard/scenes/build-plan.json",
+      "owner": "build-plan",
+      "desc": "实施计划 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "competitor-analyze",
+      "pattern": "workbench/外壳/scenarios/competitor-analyze.json",
+      "owner": "competitor-analyze",
+      "desc": "竞品拆解 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "competitor-analyze",
+      "pattern": "workbench/外壳/scenarios/competitor-analyze-context.md",
+      "owner": "competitor-analyze",
+      "desc": "竞品拆解 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "competitor-analyze",
+      "pattern": "workbench/数据/.dsh/场景记忆/竞品拆解/**",
+      "owner": "competitor-analyze",
+      "desc": "竞品拆解 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "competitor-analyze",
+      "pattern": "workbench/sceneboard/scenes/competitor-analyze.json",
+      "owner": "competitor-analyze",
+      "desc": "竞品拆解 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "frontend-craft",
+      "pattern": "workbench/外壳/scenarios/frontend-craft.json",
+      "owner": "frontend-craft",
+      "desc": "前端工坊 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "frontend-craft",
+      "pattern": "workbench/外壳/scenarios/frontend-craft-context.md",
+      "owner": "frontend-craft",
+      "desc": "前端工坊 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "frontend-craft",
+      "pattern": "workbench/数据/.dsh/场景记忆/前端工坊/**",
+      "owner": "frontend-craft",
+      "desc": "前端工坊 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "frontend-craft",
+      "pattern": "workbench/sceneboard/scenes/frontend-craft.json",
+      "owner": "frontend-craft",
+      "desc": "前端工坊 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "hub",
+      "pattern": "workbench/外壳/scenarios/hub.json",
+      "owner": "hub",
+      "desc": "中枢 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "hub",
+      "pattern": "workbench/外壳/scenarios/hub-context.md",
+      "owner": "hub",
+      "desc": "中枢 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "hub",
+      "pattern": "workbench/数据/.dsh/场景记忆/中枢/**",
+      "owner": "hub",
+      "desc": "中枢 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "hub",
+      "pattern": "workbench/sceneboard/scenes/hub.json",
+      "owner": "hub",
+      "desc": "中枢 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "incident-analysis",
+      "pattern": "workbench/外壳/scenarios/incident-analysis.json",
+      "owner": "incident-analysis",
+      "desc": "故障分析 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "incident-analysis",
+      "pattern": "workbench/外壳/scenarios/incident-analysis-context.md",
+      "owner": "incident-analysis",
+      "desc": "故障分析 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "incident-analysis",
+      "pattern": "workbench/数据/.dsh/场景记忆/故障分析/**",
+      "owner": "incident-analysis",
+      "desc": "故障分析 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "incident-analysis",
+      "pattern": "workbench/sceneboard/scenes/incident-analysis.json",
+      "owner": "incident-analysis",
+      "desc": "故障分析 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "pc-cleanup",
+      "pattern": "workbench/外壳/scenarios/pc-cleanup.json",
+      "owner": "pc-cleanup",
+      "desc": "本地电脑 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "pc-cleanup",
+      "pattern": "workbench/外壳/scenarios/pc-cleanup-context.md",
+      "owner": "pc-cleanup",
+      "desc": "本地电脑 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "pc-cleanup",
+      "pattern": "workbench/数据/.dsh/场景记忆/本地电脑/**",
+      "owner": "pc-cleanup",
+      "desc": "本地电脑 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "pc-cleanup",
+      "pattern": "workbench/sceneboard/scenes/pc-cleanup.json",
+      "owner": "pc-cleanup",
+      "desc": "本地电脑 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "research",
+      "pattern": "workbench/外壳/scenarios/research.json",
+      "owner": "research",
+      "desc": "调研 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "research",
+      "pattern": "workbench/外壳/scenarios/research-context.md",
+      "owner": "research",
+      "desc": "调研 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "research",
+      "pattern": "workbench/数据/.dsh/场景记忆/调研/**",
+      "owner": "research",
+      "desc": "调研 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "research",
+      "pattern": "workbench/sceneboard/scenes/research.json",
+      "owner": "research",
+      "desc": "调研 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "reverse-eng",
+      "pattern": "workbench/外壳/scenarios/reverse-eng.json",
+      "owner": "reverse-eng",
+      "desc": "逆向分析 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "reverse-eng",
+      "pattern": "workbench/外壳/scenarios/reverse-eng-context.md",
+      "owner": "reverse-eng",
+      "desc": "逆向分析 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "reverse-eng",
+      "pattern": "workbench/数据/.dsh/场景记忆/逆向分析/**",
+      "owner": "reverse-eng",
+      "desc": "逆向分析 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "reverse-eng",
+      "pattern": "workbench/sceneboard/scenes/reverse-eng.json",
+      "owner": "reverse-eng",
+      "desc": "逆向分析 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "self-review",
+      "pattern": "workbench/外壳/scenarios/self-review.json",
+      "owner": "self-review",
+      "desc": "自我复盘 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "self-review",
+      "pattern": "workbench/外壳/scenarios/self-review-context.md",
+      "owner": "self-review",
+      "desc": "自我复盘 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "self-review",
+      "pattern": "workbench/数据/.dsh/场景记忆/自我复盘/**",
+      "owner": "self-review",
+      "desc": "自我复盘 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "self-review",
+      "pattern": "workbench/sceneboard/scenes/self-review.json",
+      "owner": "self-review",
+      "desc": "自我复盘 的场景契约"
+    },
+    {
+      "tier": "D",
+      "scene": "tool-forge",
+      "pattern": "workbench/外壳/scenarios/tool-forge.json",
+      "owner": "tool-forge",
+      "desc": "工具工坊 的场景配置"
+    },
+    {
+      "tier": "D",
+      "scene": "tool-forge",
+      "pattern": "workbench/外壳/scenarios/tool-forge-context.md",
+      "owner": "tool-forge",
+      "desc": "工具工坊 的定位卡"
+    },
+    {
+      "tier": "D",
+      "scene": "tool-forge",
+      "pattern": "workbench/数据/.dsh/场景记忆/工具工坊/**",
+      "owner": "tool-forge",
+      "desc": "工具工坊 的私有记忆"
+    },
+    {
+      "tier": "D",
+      "scene": "tool-forge",
+      "pattern": "workbench/sceneboard/scenes/tool-forge.json",
+      "owner": "tool-forge",
+      "desc": "工具工坊 的场景契约"
+    }
+  ]
+}

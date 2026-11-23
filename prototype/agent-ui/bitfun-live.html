@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>念初 · 已接入（BitFun 真版）</title>
+<!--
+  念初 · 真版界面（bitfun-live）
+  ══════════════════════════════════════════════════════════════════
+  这是 bitfun-full 的「真数据」版本：所有场景不再写死 mock，
+  而是接 47124 上的念初产品服务器（tools/workbench/serve.mjs）：
+    · 会话：WebSocket /ws → start_dialog_turn（真调模型、真工具、真 usage）
+    · 代理：list_agents（4 个团队角色，真实花名册）
+    · 任务：list_sessions（真实会话）
+    · 洞察：trace_stats / list_traces（真实决策 trace）
+    · 首页：list_agents + trace_stats 汇总
+  失败时**如实显示**（state / reason），绝不伪造回复。
+-->
+<style>
+:root {
+  --nc-bg: #f7f8fa; --nc-surface: #fff; --nc-border: #e5e7eb;
+  --nc-text: #1f2329; --nc-muted: #8a919f; --nc-accent: #3370ff;
+  --nc-ok: #1aa73e; --nc-warn: #ff8c00; --nc-fail: #ec221f;
+  --nc-radius: 12px; --nc-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--nc-text); background: var(--nc-bg); font-size: 13.5px; }
+#app { display: flex; height: 100vh; }
+/* 侧栏 */
+.nc-side { width: 220px; flex: none; border-right: 1px solid var(--nc-border); background: var(--nc-surface);
+  display: flex; flex-direction: column; }
+.nc-side__title { padding: 14px 16px 8px; font-weight: 600; font-size: 14px; }
+.nc-side__title small { color: var(--nc-muted); font-weight: 400; font-size: 11px; margin-left: 4px; }
+.nc-nav { display: flex; flex-direction: column; gap: 1px; padding: 4px 8px; }
+.nc-nav button { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left;
+  border: 0; background: none; padding: 8px 10px; border-radius: 8px; cursor: pointer;
+  font: inherit; font-size: 13px; color: var(--nc-text); }
+.nc-nav button:hover { background: #f2f3f5; }
+.nc-nav button[aria-current] { background: #eaf1ff; color: var(--nc-accent); font-weight: 600; }
+.nc-side__foot { margin-top: auto; padding: 12px 16px; border-top: 1px solid var(--nc-border);
+  color: var(--nc-muted); font-size: 11px; }
+/* 主区 */
+.nc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.nc-top { display: flex; align-items: center; gap: 10px; padding: 10px 20px; border-bottom: 1px solid var(--nc-border);
+  background: var(--nc-surface); font-size: 12px; }
+.nc-top .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--nc-muted); }
+.nc-top .dot--ok { background: var(--nc-ok); }
+.nc-top .dot--fail { background: var(--nc-fail); }
+.nc-top .sp { flex: 1; }
+.nc-view { flex: 1; min-height: 0; overflow-y: auto; padding: 20px 24px 48px; }
+.nc-view--chat { display: flex; flex-direction: column; overflow: hidden; padding: 0; }
+/* 通用 */
+.nc-page { max-width: 900px; margin: 0 auto; }
+.nc-page--wide { max-width: 1080px; }
+.nc-h1 { font-size: 20px; font-weight: 600; margin: 0 0 16px; }
+.nc-muted { color: var(--nc-muted); }
+.nc-card { background: var(--nc-surface); border: 1px solid var(--nc-border); border-radius: var(--nc-radius); }
+.nc-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--nc-border);
+  border: 1px solid var(--nc-border); border-radius: var(--nc-radius); overflow: hidden; margin-bottom: 20px; }
+.nc-stats > div { background: var(--nc-surface); padding: 16px; text-align: center; }
+.nc-stats b { display: block; font-size: 20px; margin-bottom: 4px; }
+.nc-stats span { font-size: 11.5px; color: var(--nc-muted); }
+.nc-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.nc-acard { padding: 14px; }
+.nc-acard .nm { font-weight: 600; font-size: 13px; }
+.nc-acard .ds { color: var(--nc-muted); font-size: 12px; margin-top: 6px; line-height: 1.5; }
+.nc-badge { display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 8px; border-radius: 999px; font-size: 11px; }
+.nc-badge--ok { color: var(--nc-ok); background: rgba(26,167,62,.10); }
+.nc-badge--warn { color: var(--nc-warn); background: rgba(255,140,0,.10); }
+.nc-badge--fail { color: var(--nc-fail); background: rgba(236,34,31,.10); }
+.nc-badge--muted { color: var(--nc-muted); background: #f2f3f5; }
+.nc-row { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+.nc-row + .nc-row { border-top: 1px solid var(--nc-border); }
+.nc-row .t { font-weight: 500; }
+.nc-row .sp { flex: 1; }
+/* 聊天 */
+.nc-chat { flex: 1; min-height: 0; overflow-y: auto; padding: 16px 0; }
+.nc-chat-in { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+.nc-msg { margin-bottom: 18px; }
+.nc-msg .who { font-size: 12px; font-weight: 600; color: var(--nc-muted); margin-bottom: 6px; }
+.nc-msg.user .bubble { background: #eaf1ff; border-radius: 12px; padding: 8px 12px; width: fit-content; margin-left: auto; max-width: 80%; }
+.nc-msg.assistant .bubble { background: var(--nc-surface); border: 1px solid var(--nc-border);
+  border-radius: 12px; padding: 10px 12px; line-height: 1.6; white-space: pre-wrap; }
+.nc-msg.system .bubble { background: #fff7ec; border: 1px dashed var(--nc-warn); border-radius: 10px;
+  padding: 8px 12px; color: #8a5a00; font-size: 12px; white-space: pre-wrap; }
+.nc-msg .meta { font-family: var(--nc-mono); font-size: 10.5px; color: var(--nc-muted); margin-top: 5px; }
+/* 工具卡 */
+.nc-tool { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 8px;
+  background: #f2f3f5; margin: 3px 0; font-size: 12px; }
+.nc-tool .t { font-weight: 600; }
+.nc-tool .a { color: var(--nc-muted); font-family: var(--nc-mono); font-size: 11.5px;
+  flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 输入 */
+.nc-composer { flex: none; padding: 8px 24px 16px; }
+.nc-composer .surface { max-width: 780px; margin: 0 auto; border: 1px solid var(--nc-border);
+  border-radius: var(--nc-radius); background: var(--nc-surface); padding: 10px 12px 8px; }
+.nc-composer textarea { width: 100%; border: 0; outline: none; resize: none; font: inherit;
+  font-size: 13.5px; min-height: 40px; display: block; background: none; }
+.nc-composer .row { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.nc-composer .sp { flex: 1; }
+.nc-send { height: 28px; padding: 0 14px; border-radius: 999px; border: 0;
+  background: var(--nc-accent); color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
+.nc-send:disabled { opacity: .5; cursor: default; }
+.nc-empty { display: grid; place-items: center; gap: 6px; padding: 64px 0; color: var(--nc-muted); font-size: 12.5px; }
+.nc-err { margin-top: 10px; padding: 8px 12px; border-radius: 8px; background: #fdeaea;
+  color: var(--nc-fail); font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="app">
+  <aside class="nc-side">
+    <div class="nc-side__title">念初 <small>真版</small></div>
+    <div class="nc-nav" id="nav"></div>
+    <div class="nc-side__foot" id="foot">连接中…</div>
+  </aside>
+  <main class="nc-main">
+    <header class="nc-top">
+      <span class="dot" id="conn-dot"></span>
+      <span id="conn-label">WS 连接中…</span>
+      <span class="sp"></span>
+      <button class="nc-badge nc-badge--muted" id="re-connect" style="border:0;cursor:pointer">重连</button>
+    </header>
+    <section class="nc-view" id="view"></section>
+  </main>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════════════
+// 1) WebSocket JSON-RPC 客户端（对齐 tools/hostapi/ws-host.mjs）
+//    请求：{jsonrpc:'2.0', id, method, params} → 回复 {jsonrpc:'2.0', id, result}
+//    推送：{jsonrpc:'2.0', method:'agent/frontendEvent', params:{event,payload}}
+// ════════════════════════════════════════════════════════════════
+const RPC_URL = 'ws://127.0.0.1:47124/ws';
+let ws = null;
+let seq = 0;
+const pending = new Map();   // id -> {resolve, reject}
+const listeners = new Map(); // event -> Set<fn>
+let connState = 'idle';
+
+function onFrontendEvent(event, fn) {
+  if (!listeners.has(event)) listeners.set(event, new Set());
+  listeners.get(event).add(fn);
+  return () => listeners.get(event).delete(fn);
+}
+function emitFrontendEvent(event, payload) {
+  const set = listeners.get(event);
+  if (set) for (const fn of set) { try { fn(payload); } catch { /* ignore */ } }
+}
+
+function connect() {
+  if (ws && (ws.readyState === 0 || ws.readyState === 1)) return;
+  try { ws = new WebSocket(RPC_URL); } catch (e) {
+    setConn('fail', 'WS 构造失败：' + e.message);
+    return;
+  }
+  setConn('connecting', 'WS 连接中…');
+  ws.onopen = () => setConn('ok', '已连接 · ' + RPC_URL);
+  ws.onclose = () => {
+    setConn('fail', 'WS 已断开（点「重连」）');
+    for (const { reject } of pending.values()) reject(new Error('WS 断开'));
+    pending.clear();
+  };
+  ws.onerror = () => setConn('fail', 'WS 错误');
+  ws.onmessage = (ev) => {
+    let msg;
+    try { msg = JSON.parse(ev.data); } catch { return; }
+    // 推送：agent/frontendEvent
+    if (msg && msg.method === 'agent/frontendEvent' && msg.params) {
+      emitFrontendEvent(msg.params.event, msg.params.payload);
+      return;
+    }
+    // 回复：按 id 匹配
+    if (msg && msg.id != null && pending.has(msg.id)) {
+      const p = pending.get(msg.id);
+      pending.delete(msg.id);
+      if (msg.error) p.reject(new Error(msg.error.message || 'RPC error'));
+      else p.resolve(msg.result);
+    }
+  };
+}
+function setConn(kind, label) {
+  connState = kind;
+  const dot = document.getElementById('conn-dot');
+  const lb = document.getElementById('conn-label');
+  if (dot) dot.className = 'dot ' + (kind === 'ok' ? 'dot--ok' : kind === 'fail' ? 'dot--fail' : '');
+  if (lb) lb.textContent = label;
+  const foot = document.getElementById('foot');
+  if (foot) foot.textContent = kind === 'ok' ? '念初真身 · 47124' : label;
+}
+function invoke(method, params = {}) {
+  return new Promise((resolve, reject) => {
+    if (!ws || ws.readyState !== 1) {
+      reject(new Error('WS 未连接')); return;
+    }
+    const id = ++seq;
+    pending.set(id, { resolve, reject });
+    ws.send(JSON.stringify({ jsonrpc: '2.0', id, method, params }));
+    // 15s 超时（模型调用可能久，留长一点）
+    setTimeout(() => {
+      if (pending.has(id)) { pending.delete(id); reject(new Error('RPC 超时：' + method)); }
+    }, 150000);
+  });
+}
+
+// ════════════════════════════════════════════════════════════════
+// 2) 画面状态
+// ════════════════════════════════════════════════════════════════
+const state = {
+  scene: 'home',
+  sessionId: null,
+  msgs: [],
+  busy: false,
+  agents: [],
+  sessions: [],
+  traceStats: null,
+  traces: [],
+  models: null,
+  err: null,
+};
+
+// ════════════════════════════════════════════════════════════════
+// 3) 各场景渲染（全部真数据）
+// ════════════════════════════════════════════════════════════════
+const el = (id) => document.getElementById(id);
+
+function fmtTokens(n) {
+  n = Number(n) || 0;
+  if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+  return String(n);
+}
+function badge(kind, label) {
+  return `<span class="nc-badge nc-badge--${kind}">${label}</span>`;
+}
+
+async function loadHome() {
+  try {
+    const [agents, stats] = await Promise.all([
+      invoke('list_agents'),
+      invoke('trace_stats').catch(() => null),
+    ]);
+    state.agents = Array.isArray(agents) ? agents : [];
+    state.traceStats = stats;
+    state.err = null;
+  } catch (e) {
+    state.err = String(e.message || e);
+  }
+  state.traceStats = state.traceStats || { totalTraces: 0 };
+}
+
+function viewHome() {
+  const st = state.traceStats || {};
+  const agents = state.agents || [];
+  return `<div class="nc-page">
+    <h1 class="nc-h1">念初 · 工作台</h1>
+    <div class="nc-muted" style="margin-bottom:16px">本地单进程 AI agent · 真模型 · 真工具 · 真 trace</div>
+    <div class="nc-stats">
+      <div><b>${agents.length}</b><span>团队代理</span></div>
+      <div><b>${st.totalTraces ?? 0}</b><span>决策 trace</span></div>
+      <div><b>${st.totalSteps ?? 0}</b><span>步骤</span></div>
+      <div><b>${st.passRate != null ? Math.round(st.passRate * 100) + '%' : '—'}</b><span>通过率</span></div>
+    </div>
+    <div class="nc-h1" style="font-size:15px">团队代理</div>
+    <div class="nc-grid">
+      ${agents.map(a => `<div class="nc-card nc-acard">
+        <div class="nm">${a.name || a.id}</div>
+        <div class="ds">${a.role || ''}</div>
+        <div class="ds" style="margin-top:6px;font-family:var(--nc-mono);font-size:11px">${a.promptHint || ''}</div>
+      </div>`).join('')}
+    </div>
+    ${state.err ? `<div class="nc-err">加载失败：${state.err}</div>` : ''}
+  </div>`;
+}
+
+function viewChat() {
+  const msgs = state.msgs.map(m => {
+    if (m.role === 'user') return `<div class="nc-msg user"><div class="who" style="text-align:right">你</div><div class="bubble">${esc(m.content)}</div></div>`;
+    if (m.role === 'system') return `<div class="nc-msg system"><div class="bubble">${esc(m.content)}</div>${m.state ? `<div class="meta">state: ${m.state}</div>` : ''}</div>`;
+    // assistant
+    const tools = (m.tools || []).map(t => `<div class="nc-tool"><span class="t">${esc(t.name)}</span><span class="a">${esc(t.args || '')}</span></div>`).join('');
+    const usage = m.usage ? `<div class="meta">${m.model ? esc(m.model.replace(/^group\//, '')) + ' · ' : ''}in ${m.usage.prompt_tokens ?? '?'} / out ${m.usage.completion_tokens ?? '?'}</div>` : '';
+    return `<div class="nc-msg assistant"><div class="who">念初</div>${tools}<div class="bubble">${esc(m.content || '')}</div>${usage}</div>`;
+  }).join('');
+  return `<div class="nc-view--chat">
+    <div class="nc-chat"><div class="nc-chat-in">
+      ${state.msgs.length === 0 ? `<div class="nc-empty">想让念初做什么？<div style="font-size:11.5px">回复来自真实模型，失败会如实报原因</div></div>` : msgs}
+      ${state.busy ? `<div class="nc-msg assistant"><div class="bubble nc-muted">念初正在回复…</div></div>` : ''}
+      ${state.err ? `<div class="nc-err">${esc(state.err)}</div>` : ''}
+    </div></div>
+    <div class="nc-composer"><div class="surface">
+      <textarea id="chat-input" rows="1" placeholder="给念初发消息"></textarea>
+      <div class="row"><span class="sp"></span><button class="nc-send" id="chat-send" ${state.busy ? 'disabled' : ''}>发送</button></div>
+    </div></div>
+  </div>`;
+}
+
+function viewAgents() {
+  const agents = state.agents || [];
+  return `<div class="nc-page nc-page--wide">
+    <h1 class="nc-h1">Agents</h1>
+    <div class="nc-muted" style="margin-bottom:16px">团队花名册（真实：list_agents）</div>
+    <div class="nc-grid">
+      ${agents.map(a => `<div class="nc-card nc-acard">
+        <div class="nm">${a.name || a.id}</div>
+        <div class="ds">${a.role || ''}</div>
+        <div class="ds" style="margin-top:5px;font-family:var(--nc-mono);font-size:11px">${a.promptHint || ''}</div>
+      </div>`).join('')}
+    </div>
+    ${state.err ? `<div class="nc-err">${esc(state.err)}</div>` : ''}
+  </div>`;
+}
+
+function viewTasks() {
+  const sessions = state.sessions || [];
+  return `<div class="nc-page nc-page--wide">
+    <h1 class="nc-h1">Task Board</h1>
+    <div class="nc-muted" style="margin-bottom:16px">真实会话（list_sessions）</div>
+    <div class="nc-card">
+      ${sessions.length ? sessions.map(s => `<div class="nc-row">
+        ${badge('ok', 'session')}<span class="t">${esc(s.sessionName || s.sessionId)}</span>
+        <span class="sp"></span><span class="nc-muted" style="font-family:var(--nc-mono)">${esc(s.workspaceId || '')}</span>
+      </div>`).join('') : `<div class="nc-empty">暂无会话</div>`}
+    </div>
+    <div class="nc-muted" style="margin-top:12px;font-size:11.5px">会话在「对话」里发消息时自动创建</div>
+  </div>`;
+}
+
+function viewInsights() {
+  const st = state.traceStats || {};
+  const traces = state.traces || [];
+  return `<div class="nc-page nc-page--wide">
+    <h1 class="nc-h1">Insights</h1>
+    <div class="nc-muted" style="margin-bottom:16px">真实 trace 统计（trace_stats / list_traces）</div>
+    <div class="nc-stats">
+      <div><b>${st.totalTraces ?? 0}</b><span>总 trace</span></div>
+      <div><b>${st.totalSteps ?? 0}</b><span>步骤</span></div>
+      <div><b>${st.totalToolCalls ?? 0}</b><span>工具调用</span></div>
+      <div><b>${st.passRate != null ? Math.round(st.passRate * 100) + '%' : '—'}</b><span>通过率</span></div>
+    </div>
+    <div class="nc-card">
+      ${traces.length ? traces.map(t => `<div class="nc-row">
+        <span class="t" style="font-family:var(--nc-mono);font-size:12px">${esc(t.traceId || t.id || '')}</span>
+        <span class="sp"></span>${badge(t.state === 'PASS' ? 'ok' : t.state === 'FAIL' ? 'fail' : 'warn', t.state || '?')}
+        <span class="nc-muted" style="font-size:11px">${t.stopReason || ''}</span>
+      </div>`).join('') : `<div class="nc-empty">暂无 trace（先发一条消息）</div>`}
+    </div>
+  </div>`;
+}
+
+function viewSettings() {
+  const models = state.models;
+  return `<div class="nc-page">
+    <h1 class="nc-h1">Settings</h1>
+    <div class="nc-card" style="margin-bottom:12px">
+      <div class="nc-row"><span class="t">模型网关</span><span class="sp"></span><span class="nc-muted" style="font-family:var(--nc-mono)">http://127.0.0.1:3425/v1</span></div>
+      <div class="nc-row"><span class="t">产品服务</span><span class="sp"></span>${badge('ok', '47124 已连接')}</div>
+      <div class="nc-row"><span class="t">默认角色模型</span><span class="sp"></span><span class="nc-muted" style="font-family:var(--nc-mono)">${models ? esc(JSON.stringify(models).slice(0, 120)) : '加载中…'}</span></div>
+    </div>
+    <div class="nc-muted" style="font-size:11.5px">改模型 / 网关配置走真实 API（list_models / resolve_models）</div>
+  </div>`;
+}
+
+// 转义
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// ════════════════════════════════════════════════════════════════
+// 4) 路由 + 交互
+// ════════════════════════════════════════════════════════════════
+const SCENES = [
+  { id: 'home', label: 'Home', icon: '🏠' },
+  { id: 'chat', label: '对话', icon: '💬' },
+  { id: 'agents', label: 'Agents', icon: '👥' },
+  { id: 'tasks', label: 'Task Board', icon: '📋' },
+  { id: 'insights', label: 'Insights', icon: '📊' },
+  { id: 'settings', label: 'Settings', icon: '⚙️' },
+];
+
+function navHTML() {
+  return SCENES.map(s => `<button data-go="${s.id}" ${state.scene === s.id ? 'aria-current="page"' : ''}>${s.icon} ${s.label}</button>`).join('');
+}
+
+function render() {
+  el('nav').innerHTML = navHTML();
+  const view = el('view');
+  view.className = 'nc-view';
+  if (state.scene === 'chat') {
+    view.classList.add('nc-view--chat');
+    view.innerHTML = viewChat();
+    wireChat();
+  } else if (state.scene === 'home') view.innerHTML = viewHome();
+  else if (state.scene === 'agents') view.innerHTML = viewAgents();
+  else if (state.scene === 'tasks') view.innerHTML = viewTasks();
+  else if (state.scene === 'insights') view.innerHTML = viewInsights();
+  else if (state.scene === 'settings') view.innerHTML = viewSettings();
+  // 导航点击
+  document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => go(b.dataset.go)));
+}
+
+async function go(scene) {
+  state.scene = scene;
+  state.err = null;
+  if (scene === 'home') await loadHome();
+  else if (scene === 'agents') await loadHome();
+  else if (scene === 'tasks') {
+    try { state.sessions = (await invoke('list_sessions'))?.sessions || []; }
+    catch (e) { state.err = String(e.message || e); }
+  } else if (scene === 'insights') {
+    try {
+      state.traceStats = await invoke('trace_stats');
+      const r = await invoke('list_traces', { request: { limit: 20 } });
+      state.traces = Array.isArray(r) ? r : (r?.traces || []);
+    } catch (e) { state.err = String(e.message || e); }
+  } else if (scene === 'settings') {
+    try { state.models = await invoke('list_models'); } catch (e) { state.err = String(e.message || e); }
+  }
+  render();
+  history.replaceState(null, '', '#' + scene);
+}
+
+// 聊天发送：真 WS → start_dialog_turn（真 agent 循环）
+function wireChat() {
+  const ta = el('chat-input');
+  const btn = el('chat-send');
+  if (!ta) return;
+  ta.addEventListener('input', () => { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 160) + 'px'; });
+  const send = async () => {
+    const text = ta.value.trim();
+    if (!text || state.busy) return;
+    state.busy = true;
+    state.err = null;
+    state.msgs.push({ role: 'user', content: text });
+    ta.value = '';
+    render();
+    // 滚动到底
+    const chat = document.querySelector('.nc-chat');
+    if (chat) chat.scrollTop = chat.scrollHeight;
+    try {
+      // 1) 无会话则先建（create_assistant_workspace + create_session）
+      if (!state.sessionId) {
+        const ws = await invoke('create_assistant_workspace', {});
+        const made = await invoke('create_session', { request: { sessionName: text.slice(0, 20), workspaceId: ws?.id } });
+        state.sessionId = made?.sessionId || null;
+        if (!state.sessionId) throw new Error('没有可用会话');
+      }
+      // 2) 真调模型：start_dialog_turn
+      state.msgs.push({ role: 'assistant', content: '', tools: [], state: 'RUNNING' });
+      const pro = state.msgs[state.msgs.length - 1];
+      render();
+      // 订阅阶段推送
+      const off = onFrontendEvent('nianchu://agent-phase', (p) => {
+        if (p && p.stage) { pro.content = '[' + p.stage + '] ' + (pro.content || ''); render(); }
+      });
+      let r;
+      try {
+        r = await invoke('start_dialog_turn', { request: { sessionId: state.sessionId, content: text } });
+      } finally { off(); }
+      // 3) 回填真实结果
+      if (r && r.state === 'PASS' && r.content) {
+        pro.content = r.content;
+        pro.state = r.state;
+        pro.model = r.model;
+        pro.usage = r.usage;
+      } else {
+        pro.content = '没有拿到回复（' + (r?.state ?? 'UNKNOWN') + '）：' + (r?.reason ?? '未知原因');
+        pro.state = r?.state ?? 'UNKNOWN';
+      }
+    } catch (e) {
+      state.err = String(e.message || e);
+      state.msgs.push({ role: 'system', content: '请求失败：' + state.err.slice(0, 200), state: 'FAIL' });
+    } finally {
+      state.busy = false;
+      render();
+      const chat = document.querySelector('.nc-chat');
+      if (chat) chat.scrollTop = chat.scrollHeight;
+    }
+  };
+  ta.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent?.isComposing) { e.preventDefault(); send(); }
+  });
+  btn.addEventListener('click', send);
+}
+
+// ════════════════════════════════════════════════════════════════
+// 5) 启动
+// ════════════════════════════════════════════════════════════════
+document.getElementById('re-connect').addEventListener('click', () => { if (ws) { try { ws.close(); } catch {} } connect(); });
+
+async function boot() {
+  connect();
+  // 等连接建立后加载首页
+  const start = (location.hash || '').replace('#', '') || 'home';
+  state.scene = start;
+  // 首页也依赖 list_agents，等 ws 就绪再拉
+  const ready = setInterval(async () => {
+    if (connState === 'ok') {
+      clearInterval(ready);
+      await go(start);
+    }
+  }, 120);
+}
+
+// 页面可见时重连
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && (!ws || ws.readyState > 1)) connect();
+});
+
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   layout.css —— 三段式骨架 + 分栏
+
+   与 ui/layout/shell.js 生成的真实 DOM 严格对应：
+
+     div.wb-app
+       ├─ div.wb-titlebar      (40px)
+       │    ├─ div.wb-brand        span.wb-brand-dot + span
+       │    ├─ div.wb-statuses     span.wb-status > span.wb-status-dot + span
+       │    ├─ div.wb-titlebar-spacer
+       │    └─ div.wb-winbtns      button.wb-winbtn > svg.icon
+       ├─ div.wb-scenebar      (34px)   button.wb-scenetab > span.wb-scenetab-icon + span
+       ├─ div.wb-body          (1fr)
+       │    └─ div.wb-split    (grid: 1fr | 5px | sideW)
+       │         ├─ div.wb-main > div.wb-grid
+       │         ├─ div.wb-split-handle
+       │         └─ div.wb-side
+       └─ div.wb-footbar       (24px)  div.grow.truncate | div.spacer | div.nowrap
+
+   关键决策：
+     1. .wb-split 用 CSS Grid，列宽由 split.js 直接写 grid-template-columns
+        → 样式只给缺省值，不与之打架
+     2. 主列强制 minmax(0, 1fr)：窄窗口不溢出的根
+     3. 720px 硬指标分档：1100（右栏收窄）/ 900（右栏抽屉化）/ 760（只留主区）
+     4. .wb-grid 由 shell.js 动态设列数，这里只保证 minmax(0,1fr) 不被内容撑破
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══ 1. 应用骨架 ═══ */
+
+.wb-app {
+  display: grid;
+  grid-template-rows: var(--h-title) var(--h-scene) minmax(0, 1fr) var(--h-foot);
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-void);
+}
+
+/* ═══ 2. 标题栏 ═══ */
+
+.wb-titlebar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--h-title);
+  padding: 0 var(--space-2) 0 var(--space-4);
+  background: var(--color-panel);
+  border-bottom: var(--hairline) solid var(--color-line);
+  min-width: 0;
+  overflow: hidden;
+  -webkit-app-region: drag;
+  user-select: none;
+  position: relative;
+  z-index: var(--z-panel);
+}
+.wb-titlebar > * { -webkit-app-region: no-drag; }
+
+.wb-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-caps);
+  color: var(--color-txt-1);
+  padding-right: var(--space-3);
+}
+
+.wb-brand-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--r-1);
+  background: var(--color-accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(53, 190, 217, .4);
+}
+
+.wb-statuses {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.wb-titlebar-spacer { flex: 1 1 auto; min-width: var(--space-2); }
+
+/* 窗口控制（终端风格方块，不做圆点） */
+.wb-winbtns {
+  display: flex;
+  align-items: center;
+  gap: var(--hairline);
+  flex-shrink: 0;
+  background: var(--color-sunken);
+  border: var(--hairline) solid var(--color-line);
+  border-radius: var(--r-1);
+  overflow: hidden;
+}
+
+.wb-winbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-0);
+  background: transparent;
+  color: var(--color-txt-2);
+  cursor: pointer;
+  transition: background-color var(--dur-1) var(--ease-out),
+              color var(--dur-1) var(--ease-out);
+}
+.wb-winbtn:hover { background: var(--color-hover); color: var(--color-txt-1); }
+.wb-winbtn:active { background: var(--color-active); }
+
+/* 关闭按钮：悬停才红，不做常驻红点 */
+.wb-winbtn[data-act="close"]:hover {
+  background: var(--color-err-soft);
+  color: var(--color-err);
+}
+
+/* ═══ 3. 场景栏 ═══ */
+
+.wb-scenebar {
+  display: flex;
+  align-items: stretch;
+  gap: var(--hairline);
+  height: var(--h-scene);
+  padding: 0 var(--space-2);
+  background: var(--color-sunken);
+  border-bottom: var(--hairline) solid var(--color-line);
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+.wb-scenebar::-webkit-scrollbar { display: none; }
+
+.wb-scenetab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 100%;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--r-0);
+  background: transparent;
+  color: var(--color-txt-2);
+  font-family: var(--font-ui);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  transition: color var(--dur-1) var(--ease-out),
+              background-color var(--dur-1) var(--ease-out);
+}
+.wb-scenetab:hover {
+  color: var(--color-txt-1);
+  background: var(--color-hover);
+}
+
+/* 选中：底色抬起 + 2px 强调下划线（唯一「选中」视觉信号） */
+.wb-scenetab[data-active="1"] {
+  color: var(--color-txt-1);
+  background: var(--color-panel);
+}
+.wb-scenetab[data-active="1"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--bar-2);
+  background: var(--color-accent);
+}
+
+/* 忙：图标亮起 + 图标带强调色 */
+.wb-scenetab[data-busy="1"] { color: var(--color-txt-1); }
+.wb-scenetab[data-busy="1"] .wb-scenetab-icon { color: var(--color-accent); }
+
+.wb-scenetab-icon {
+  font-family: var(--font-mono);
+  font-size: var(--fs-11);
+  line-height: 1;
+  color: var(--color-txt-3);
+  flex-shrink: 0;
+}
+
+.wb-scenebar-spacer { flex: 1 1 auto; min-width: var(--space-2); }
+
+/* ═══ 4. 主体 + 分栏 ═══ */
+
+.wb-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-base);
+  position: relative;
+}
+
+/* split.js 会写 inline grid-template-columns；这里给缺省与兜底 */
+.wb-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--w-handle) 300px;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.wb-split > * { min-width: 0; min-height: 0; }
+
+/* ═══ 5. 主区 ═══ */
+
+.wb-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-base);
+  position: relative;
+}
+
+/* 场景面板网格（列数由 shell.setColumns 动态写入） */
+.wb-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(280px, 1fr));
+  grid-auto-rows: minmax(180px, 1fr);
+  gap: var(--hairline);
+  padding: var(--hairline);
+  /* ⚠ 2026-11-13 修（「粗黑线」其实不是边框，是缝隙透出的底色）
+   *
+   *   原来：background: var(--color-line)  ← 用「线色」当整块底色
+   *   面板之间有 1px gap，缝隙里透出的就是这条 color-line 底色。
+   *   而 --color-line 是个偏黑的实色，于是看起来像「面板间有粗黑线」。
+   *
+   *   ui-research 实测发现的真相：
+   *     .wb-grid 有一段 32×32 的 linear-gradient 网格纹理（见下面 .wb-main--canvas），
+   *     而 grid.js 把 gap 内联成 4px → 4px 缝里透出纹理，更像粗线。
+   *
+   *   修法：底色改成**画布色**（和周围一致，看不见接缝），
+   *        分隔感靠面板自己的半透明描边表达 —— 这是 2025 的标准做法
+   *        （用亮度差 + alpha 描边，不用实色分隔线）。
+   */
+  background: var(--color-base);
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.wb-grid > * {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* 画布型主内容：不滚动，由画布接管 */
+.wb-main--canvas .wb-grid {
+  overflow: hidden;
+  background-color: var(--color-base);
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+  padding: 0;
+}
+
+.wb-canvas-host { position: absolute; inset: 0; overflow: hidden; }
+.wb-canvas-host > canvas,
+.wb-canvas-host > svg { width: 100%; height: 100%; display: block; }
+
+/* 画布浮动 HUD（贴边，不遮内容） */
+.wb-hud {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-raised);
+  border: var(--hairline) solid var(--color-line);
+  border-radius: var(--r-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-11);
+  line-height: var(--lh-11);
+  color: var(--color-txt-2);
+  box-shadow: var(--shadow-2);
+  z-index: var(--z-overlay);
+}
+.wb-hud--tl { top: var(--space-3); left: var(--space-3); }
+.wb-hud--tr { top: var(--space-3); right: var(--space-3); }
+.wb-hud--bl { bottom: var(--space-3); left: var(--space-3); }
+.wb-hud--br { bottom: var(--space-3); right: var(--space-3); }
+
+/* ═══ 6. 右栏（主 Agent） ═══ */
+
+.wb-side {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-panel);
+  border-left: var(--hairline) solid var(--color-line);
+}
+
+/* 右栏三段：主控 42% / 子 Agent 34% / 派发 24% */
+.wb-side-stack {
+  display: grid;
+  grid-template-rows: minmax(0, 42fr) minmax(0, 34fr) minmax(0, 24fr);
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.wb-side-pane {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-bottom: var(--hairline) solid var(--color-line);
+}
+.wb-side-pane:last-child { border-bottom: 0; }
+
+.wb-side-pane-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.wb-side-pane-foot {
+  flex-shrink: 0;
+  padding: var(--space-2);
+  border-top: var(--hairline) solid var(--color-line);
+  background: var(--color-panel);
+}
+
+/* 终端/webview 宿主 */
+.wb-term-host {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  background: var(--color-sunken);
+  overflow: hidden;
+  position: relative;
+}
+.wb-term-host > * { width: 100%; height: 100%; display: block; border: 0; }
+
+/* ═══ 7. 拖拽手柄 ═══ */
+
+.wb-split-handle {
+  position: relative;
+  width: var(--w-handle);
+  align-self: stretch;
+  background: var(--color-void);
+  cursor: col-resize;
+  flex-shrink: 0;
+  touch-action: none;
+  z-index: var(--z-sticky);
+  transition: background-color var(--dur-2) var(--ease-out);
+}
+
+/* 视觉只有 1px 发丝线，命中区 5px（不改宽度本身） */
+.wb-split-handle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: var(--hairline);
+  transform: translateX(-50%);
+  background: var(--color-line);
+  transition: background-color var(--dur-2) var(--ease-out);
+}
+
+.wb-split-handle:hover::before,
+.wb-split-handle:focus-visible::before { background: var(--color-accent); }
+
+.wb-split-handle:hover,
+.wb-split-handle:focus-visible { background: var(--color-hover); }
+
+/* 拖拽中：禁用 iframe/webview 命中，光标锁定 */
+.wb-dragging::before { background: var(--color-accent); }
+.wb-dragging { background: var(--color-hover); }
+
+/* 抓手（三点，悬停才现） */
+.wb-split-handle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background: var(--color-line);
+  opacity: 0;
+  transition: opacity var(--dur-2) var(--ease-out);
+}
+.wb-split-handle:hover::after,
+.wb-split-handle:focus-visible::after { opacity: 1; }
+
+/* 拖拽期间：全局不选中 + webview 不抢事件 */
+body.wb-resizing { user-select: none; cursor: col-resize; }
+body.wb-resizing iframe,
+body.wb-resizing webview,
+body.wb-resizing .wb-term-host { pointer-events: none; }
+
+/* ═══ 8. 底部状态条 ═══ */
+
+.wb-footbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: var(--h-foot);
+  padding: 0 var(--space-3);
+  background: var(--color-panel);
+  border-top: var(--hairline) solid var(--color-line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-11);
+  line-height: 1;
+  color: var(--color-txt-3);
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.wb-footbar .is-ok   { color: var(--color-ok); }
+.wb-footbar .is-warn { color: var(--color-warn); }
+.wb-footbar .is-err  { color: var(--color-err); }
+.wb-footbar b { color: var(--color-txt-2); font-weight: var(--fw-medium); }
+
+/* ═══ 9. 左栏（可选，非 shell.js 必需） ═══ */
+
+.wb-rail {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-panel);
+  border-right: var(--hairline) solid var(--color-line);
+}
+
+.wb-rail-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
+
+.wb-rail-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--h-row-sm);
+  padding: 0 var(--space-3);
+  font-size: var(--fs-11);
+  line-height: var(--lh-11);
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--color-txt-3);
+  background: var(--color-panel);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+/* ═══ 10. 并排面板 ═══ */
+
+.wb-panel-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--hairline);
+  background: var(--color-line);
+  min-height: 0;
+  min-width: 0;
+}
+.wb-panel-split > .wb-panel { border-radius: 0; }
+
+/* ═══ 11. 抽屉（窄窗口的右栏替代形态） ═══ */
+
+.wb-drawer-scrim {
+  position: fixed;
+  inset: var(--h-title) 0 var(--h-foot) 0;
+  background: rgba(0, 0, 0, .38);
+  z-index: calc(var(--z-overlay) - 1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-3) var(--ease-out);
+}
+.wb-drawer-scrim.is-open { opacity: 1; pointer-events: auto; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   响应式
+
+   720px 是硬指标。挡位设计：
+     ≥1440  舒适（右栏 340）
+     1180-1440  默认（右栏 300）
+     1100-1180  紧凑（右栏 280）
+     900-1100   右栏收窄（260）+ 网格降列
+     760-900    右栏转抽屉（overlay）
+     ≤760       只留主区，标题栏/场景栏压缩
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1440px) {
+  .wb-split { grid-template-columns: minmax(0, 1fr) var(--w-handle) 340px; }
+}
+
+@media (max-width: 1099px) {
+  .wb-split { grid-template-columns: minmax(0, 1fr) var(--w-handle) 280px; }
+}
+
+/* 右栏转抽屉：从 grid 流中抽出，作为覆盖层贴在主区右侧 */
+@media (max-width: 899px) {
+  .wb-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .wb-split-handle { display: none; }
+  .wb-body { position: relative; }
+  .wb-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 86vw;
+    z-index: var(--z-overlay);
+    border-left: var(--hairline) solid var(--color-line);
+    box-shadow: var(--shadow-4);
+    /* 收起态：完全移出视口，且不产生横向滚动 */
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform var(--dur-4) var(--ease-out),
+      visibility 0s linear var(--dur-4);
+    will-change: transform;
+  }
+  .wb-side.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    transition:
+      transform var(--dur-4) var(--ease-out),
+      visibility 0s linear 0s;
+  }
+}
+
+/* 720-760：单列，压缩固定条与内边距，确保主区可用 */
+@media (max-width: 759px) {
+  .wb-app {
+    --h-title: 36px;
+    --h-scene: 30px;
+    --h-foot: 22px;
+  }
+  .wb-titlebar { gap: var(--space-1); padding: 0 var(--space-2); }
+  .wb-brand { padding-right: var(--space-2); }
+  .wb-footbar { gap: var(--space-3); padding: 0 var(--space-2); }
+  .wb-grid { gap: var(--hairline); padding: var(--hairline); }
+  .wb-side { width: 280px; }
+}
+
+/* 明确锁定 720px 不破版：主区必须单列，且任何子元素不得撑宽 */
+@media (min-width: 720px) and (max-width: 759px) {
+  .wb-body { grid-template-columns: minmax(0, 1fr); }
+  .wb-main,
+  .wb-grid { min-width: 0; max-width: 100%; }
+  .wb-scenetab { padding: 0 var(--space-3); }
+}
+
+/* 更窄兜底（不在指标内，但不许炸） */
+@media (max-width: 639px) {
+  .wb-brand span:not(.wb-brand-dot) { display: none; }
+  .wb-brand-dot { margin-right: 0; }
+  .wb-side { width: 100%; max-width: 100%; }
+}
+
+/* 矮窗口：压缩固定条高度 */
+@media (max-height: 640px) {
+  .wb-app {
+    --h-title: 34px;
+    --h-scene: 28px;
+    --h-foot: 22px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   弹性工具（布局层专用，不是组件）
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.wb-fill { flex: 1 1 auto; min-width: 0; min-height: 0; }
+.wb-stack-v { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.wb-stack-h { display: flex; flex-direction: row; min-width: 0; min-height: 0; }
+
+/* 长串（URL/路径/token）必须能断，不制造横向溢出 */
+.wb-force-wrap {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* 第一道防线：任何 grid/flex 子项默认可收缩 */
+.wb-app > *,
+.wb-body > *,
+.wb-split > *,
+.wb-main > *,
+.wb-side > *,
+.wb-panel > *,
+.wb-grid > * {
+  min-width: 0;
+}
